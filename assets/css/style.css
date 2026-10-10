@@ -566,3 +566,64 @@ a:hover {
     transition: none;
   }
 }
+
+
+/* --------------------------------------------------
+   Gallery editorial introduction
+   -------------------------------------------------- */
+
+.gallery-page > p {
+  max-width: 680px;
+  margin-inline: auto;
+}
+
+.gallery-intro-note {
+  margin: 2rem auto 1rem;
+  color: var(--color-muted);
+  font-size: 0.95rem;
+  line-height: 2;
+}
+
+.gallery-instruction {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+
+  margin: 1rem auto 1.5rem;
+  padding: 0.75rem 1.4rem;
+
+  background: var(--color-sand);
+  border-radius: 100px;
+
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.gallery-instruction-icon {
+  font-family: var(--font-ui);
+  font-size: 1.2rem;
+  letter-spacing: 0.1em;
+}
+
+/* --------------------------------------------------
+   Gallery closing observation
+   -------------------------------------------------- */
+
+.gallery-outro {
+  max-width: 650px;
+  margin: 6rem auto 3rem;
+  text-align: center;
+}
+
+.gallery-outro h2 {
+  margin: 1.2rem 0 1.5rem;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  line-height: 1.5;
+}
+
+.gallery-outro p:not(.eyebrow) {
+  font-size: 0.95rem;
+  line-height: 2;
+}

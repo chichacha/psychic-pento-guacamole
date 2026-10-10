@@ -8,16 +8,54 @@ format:
 
 ::: {.pento-section .gallery-page}
 
-<p class="eyebrow">MEET THE PENTOMINOES</p>
+<p class="eyebrow">MEET THE PENTOMINOES · THE CAST OF TWELVE</p>
 
-# 12人の仲間たち
+# 12人の仲間たち。
 
-みんな5つの四角でできています。気になる人を選んで、形を眺めてみましょう。
+みんな、5つの四角でできています。
 
-<div class="gallery-note">形はお父さんの姿勢データから描いています。顔や性格は、これから少しずつ増やす予定です。</div>
+まっすぐな人。曲がった人。  
+ちょっとはみ出す人。真ん中が好きな人。
 
-<div id="character-gallery" class="character-gallery" data-characters="../data/characters.json" data-postures="../data/postures.json" aria-live="polite">
+形も性格も、いろいろです。
+
+本人たちは、いたって普通のつもりです。
+
+<div class="gallery-intro-note">
+12人とも、面積は同じ。<br>
+でも、向きを変えたり、ひっくり返したりすると……？
+</div>
+
+<div class="gallery-instruction">
+  <span class="gallery-instruction-icon">↻ ⇋</span>
+  <span>ボタンを押して、くるくる、ひっくり返してみてください。</span>
+</div>
+
+<div id="character-gallery"
+     class="character-gallery"
+     data-characters="../data/characters.json"
+     data-postures="../data/postures.json"
+     aria-live="polite">
   <p>12人を呼んでいます…</p>
+</div>
+
+<div class="gallery-outro">
+
+<p class="eyebrow">A SMALL OBSERVATION</p>
+
+## 回っても、変わらない人がいます。
+
+同じ5マスなのに、向きの種類は人それぞれ。
+
+8通りの人もいれば、4通りの人も。  
+2通りの人もいます。
+
+そして、Xおじさんは1通り。
+
+回っても、回っても、同じ形。
+
+本人は、ちゃんと回っています。
+
 </div>
 
 [← ホームに戻る](../index.qmd){.pento-text-link}
