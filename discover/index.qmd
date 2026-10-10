@@ -1,0 +1,17 @@
+---
+title: "かたちのふしぎ"
+---
+
+::: {.pento-section .reading-page}
+
+<p class="eyebrow">COMING LATER · EXPERIMENTS</p>
+
+# かたちのふしぎ
+
+回転・裏返し・対称性を調べる実験室。
+
+このページは準備中です。ナビゲーションにはまだ載せていません。
+
+[← ホームに戻る](../index.qmd){.pento-button}
+
+:::

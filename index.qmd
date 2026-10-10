@@ -1,0 +1,102 @@
+---
+title: "五マスの人たち。"
+pagetitle: "五マスの人たち。 | PENTOMINO"
+---
+
+::: {.pento-home}
+
+::: {.pento-hero}
+
+<p class="eyebrow">FIVE SQUARES. TWELVE PERSONALITIES.</p>
+
+# 五マスの人たち。
+
+<div class="hero-copy">
+  <p>みんな同じ、5つの四角でできています。</p>
+  <p>それ以外は、あまり似ていません。</p>
+  <p class="hero-punchline">本人たちは、いたって普通のつもりです。</p>
+</div>
+
+[ちょっと会ってみる →](characters/index.qmd){.pento-button}
+
+<p class="hero-footnote">12 SHAPES · 5 SQUARES EACH · EVERYONE IS DIFFERENT</p>
+
+:::
+
+::: {.pento-section .pento-intro}
+
+<p class="eyebrow">THE BASIC FACTS</p>
+
+## そもそも、ペントミノって？
+
+ペントミノは、**5つの正方形を辺でつなげた形**。
+
+回したり、裏返したりして同じになるものをまとめると、全部で12種類。
+
+12人とも材料は同じ。でも、形はそれぞれ違います。
+
+:::
+
+::: {.pento-stat}
+
+<p class="eyebrow">A VERY SATISFYING EQUATION</p>
+
+<div class="stat-number">5 × 12 = 60</div>
+
+5マスずつ、12人で60マス。
+
+**6 × 10にも、5 × 12にも、4 × 15にも。**
+
+並び方が変わっても、みんな同じ12人。
+
+<p class="stat-aside">問題は、どこに誰が入るか。</p>
+
+:::
+
+
+::: {.pento-section .pento-solution}
+
+<p class="eyebrow">12 PIECES · 60 SQUARES · ONE RECTANGLE</p>
+
+## 12人、ぴったり。
+
+12人が集まると、60マス。
+
+6 × 10の長方形に並んでみました。
+
+でも、これが唯一の並び方というわけではありません。
+
+<div id="home-solution"
+     data-solutions="data/solutions.csv"
+     data-postures="data/postures.json">
+</div>
+
+<button id="reveal-solution" class="pento-button">
+  ひとりずつ登場 →
+</button>
+
+<button id="reset-solution" class="pento-button">
+  もう一度 ↺
+</button>
+
+<p class="stat-aside">
+  ちなみに、この並び方にはちゃんと正解があります。
+</p>
+
+:::
+
+<script src="assets/js/home-solution.js" defer></script>
+
+::: {.pento-section .pento-ending}
+
+<p class="eyebrow">MEET · DISCOVER · PLAY</p>
+
+## まずは、顔を見てみよう。
+
+12人の形を眺めたり、向きを変えてみたり。ちょっとした発見から始めましょう。
+
+[12人の仲間たち →](characters/index.qmd){.pento-button}
+
+:::
+
+:::

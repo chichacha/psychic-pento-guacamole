@@ -1,0 +1,39 @@
+project:
+  type: website
+  output-dir: docs
+  resources:
+    - data/
+    - assets/
+
+website:
+  title: "五マスの人たち。"
+  description: "12のペントミノと、ちょっと不思議な数学の世界。"
+  navbar:
+    background: "#FFF9F2"
+    foreground: "#302B32"
+    left:
+      - text: "HOME"
+        href: index.qmd
+      - text: "12人の仲間"
+        href: characters/index.qmd
+      - text: "ABOUT"
+        href: about.qmd
+  page-footer:
+    border: false
+    left: "五マスの人たち。"
+    right: "FIVE SQUARES. TWELVE PERSONALITIES."
+  search: false
+
+format:
+  html:
+    theme: cosmo
+    css: assets/css/style.css
+    toc: false
+    page-layout: full
+    anchor-sections: false
+    link-external-newwindow: true
+
+execute:
+  echo: false
+  warning: false
+  message: false

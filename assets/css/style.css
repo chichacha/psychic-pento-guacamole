@@ -1,0 +1,568 @@
+/* ============================================================================
+   PENTOMINO, ARE YOU OKAY?
+   Global stylesheet | psychic-pento-guacamole
+
+   Contents
+   01. Fonts
+   02. Design tokens
+   03. Base typography and links
+   04. Quarto layout overrides
+   05. Site navigation and footer
+   06. Shared components
+   07. Homepage: hero
+   08. Homepage: editorial sections
+   09. Homepage: geometry fact
+   10. Placeholder pages
+   11. Responsive adjustments
+   12. Accessibility: reduced motion
+
+   EDITING GUIDE
+   - Change site-wide colours, fonts, spacing in section 02.
+   - Use .pento-section for regular editorial sections.
+   - Use .pento-button for primary links.
+   - Put page-specific styles in separate CSS files as the site grows.
+   ============================================================================ */
+
+
+/* ---------------------------------------------------------------------------
+   01. FONTS
+   Zen Maru Gothic: Japanese editorial copy and expressive headings.
+   Noto Sans: English UI, labels, and numerals.
+   Both are served by Google Fonts; local system fonts are fallbacks.
+   --------------------------------------------------------------------------- */
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700;800;900&family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap");
+
+
+/* ---------------------------------------------------------------------------
+   02. DESIGN TOKENS
+   Edit these first when changing the overall look of the website.
+   Character-specific colours will live in their own data / styles later.
+   --------------------------------------------------------------------------- */
+
+:root {
+  /* Colour palette */
+  --color-paper: #FFF9F2;
+  --color-ink: #302B32;
+  --color-muted: #796E72;
+  --color-border: #E8DED7;
+  --color-link-hover: #386A7D;
+  --color-blue: #85D7EF;
+  --color-pink: #F0B6DF;
+  --color-sand: #F3EEE8;
+
+  /* Typography */
+  --font-jp: "Zen Maru Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+  --font-ui: "Noto Sans", Arial, sans-serif;
+
+  /* Layout */
+  --width-reading: 740px;
+  --radius-pill: 999px;
+
+  /* Animation */
+  --duration-fast: 200ms;
+}
+
+
+/* ---------------------------------------------------------------------------
+   03. BASE TYPOGRAPHY AND LINKS
+   Japanese is the default reading language; English UI opts into --font-ui.
+   --------------------------------------------------------------------------- */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-jp);
+  line-height: 1.9;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-ink);
+  font-family: var(--font-jp);
+  font-weight: 900;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: var(--color-link-hover);
+}
+
+
+/* ---------------------------------------------------------------------------
+   04. QUARTO LAYOUT OVERRIDES
+   Quarto's Cosmo theme supplies the underlying navigation / grid system.
+   These rules make the editorial pages full-width and hide the auto title.
+   --------------------------------------------------------------------------- */
+
+#quarto-content {
+  background: var(--color-paper);
+}
+
+#quarto-content main.content {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* The homepage draws its own H1, so avoid a duplicate Quarto title. */
+.quarto-title-block {
+  display: none;
+}
+
+
+/* ---------------------------------------------------------------------------
+   05. SITE NAVIGATION AND FOOTER
+   Shared across every page via _quarto.yml.
+   --------------------------------------------------------------------------- */
+
+.navbar {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+  font-family: var(--font-ui);
+  font-weight: 800;
+  letter-spacing: 0.06em;
+}
+
+.navbar .navbar-brand {
+  font-size: 0.95rem;
+}
+
+.navbar-nav .nav-link {
+  font-size: 0.78rem;
+}
+
+.nav-footer {
+  background: var(--color-paper);
+  border-top: 1px solid var(--color-border);
+  color: var(--color-muted);
+  font-size: 0.8rem;
+}
+
+
+/* ---------------------------------------------------------------------------
+   06. SHARED COMPONENTS
+   Reuse these on future pages instead of duplicating button / label rules.
+   --------------------------------------------------------------------------- */
+
+/* Small uppercase English section label. */
+.eyebrow {
+  color: var(--color-muted);
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  line-height: 1.6;
+}
+
+/* Pill-shaped call-to-action link with an intentionally cartoonish shadow. */
+.pento-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.7rem;
+  border: 2px solid var(--color-ink);
+  border-radius: var(--radius-pill);
+  background: var(--color-blue);
+  color: var(--color-ink);
+  font-weight: 900;
+  text-decoration: none;
+  transition:
+    transform var(--duration-fast) ease,
+    box-shadow var(--duration-fast) ease;
+}
+
+.pento-button:hover {
+  color: var(--color-ink);
+  transform: translateY(-3px);
+  box-shadow: 4px 4px 0 var(--color-ink);
+}
+
+.pento-button:focus-visible {
+  outline: 3px solid var(--color-link-hover);
+  outline-offset: 4px;
+}
+
+
+/* ---------------------------------------------------------------------------
+   07. HOMEPAGE: HERO
+   The deliberately serious introduction to twelve unserious characters.
+   --------------------------------------------------------------------------- */
+
+.pento-home {
+  overflow: hidden;
+}
+
+.pento-hero {
+  display: flex;
+  min-height: 82vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 1.5rem;
+  text-align: center;
+}
+
+.pento-hero h1 {
+  margin: 1.7rem 0 2.4rem;
+  font-size: clamp(2.5rem, 6vw, 5.6rem);
+  letter-spacing: -0.05em;
+  line-height: 1.3;
+}
+
+.hero-copy {
+  font-size: clamp(1rem, 1.8vw, 1.25rem);
+}
+
+.hero-copy p {
+  margin: 0.3rem 0;
+}
+
+/* The final line of the opening joke deserves its own pause. */
+.hero-punchline {
+  margin-top: 1.8rem !important;
+  font-weight: 900;
+}
+
+.pento-hero .pento-button {
+  margin-top: 2.6rem;
+}
+
+.hero-footnote {
+  margin-top: 2rem;
+  color: var(--color-muted);
+  font-family: var(--font-ui);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+
+/* ---------------------------------------------------------------------------
+   08. HOMEPAGE: EDITORIAL SECTIONS
+   Narrow reading width and generous whitespace for short-form storytelling.
+   --------------------------------------------------------------------------- */
+
+.pento-section {
+  max-width: var(--width-reading);
+  margin: 0 auto;
+  padding: 7rem 1.5rem;
+  text-align: center;
+}
+
+.pento-section h2 {
+  margin: 1.2rem 0 2rem;
+  font-size: clamp(1.7rem, 3.5vw, 2.7rem);
+}
+
+.pento-section p {
+  font-size: 1.1rem;
+}
+
+.pento-ending .pento-button {
+  margin-top: 1rem;
+}
+
+
+/* ---------------------------------------------------------------------------
+   09. HOMEPAGE: GEOMETRY FACT
+   Full-width contrast section for the 5 × 12 = 60 reveal.
+   --------------------------------------------------------------------------- */
+
+.pento-stat {
+  padding: 6rem 1.5rem;
+  background: var(--color-sand);
+  text-align: center;
+}
+
+.stat-number {
+  margin: 1rem 0 1.5rem;
+  font-family: var(--font-ui);
+  font-size: clamp(3rem, 8vw, 6.5rem);
+  font-weight: 800;
+  letter-spacing: -0.06em;
+  line-height: 1.2;
+}
+
+.stat-aside {
+  margin-top: 1.4rem;
+  color: var(--color-muted);
+  font-size: 0.92rem;
+}
+
+
+/* ---------------------------------------------------------------------------
+   10. PLACEHOLDER PAGES
+   Temporary layout used by About and Characters until they have their own.
+   --------------------------------------------------------------------------- */
+
+.placeholder-page {
+  min-height: 65vh;
+  padding-top: 8rem;
+}
+
+.placeholder-page h1 {
+  font-size: clamp(2.3rem, 5vw, 4rem);
+}
+
+.placeholder-page .pento-button {
+  margin-top: 2rem;
+}
+
+
+/* ---------------------------------------------------------------------------
+   11. RESPONSIVE ADJUSTMENTS
+   Desktop-first overrides for small screens.
+   --------------------------------------------------------------------------- */
+
+@media (max-width: 600px) {
+  .pento-hero {
+    min-height: 75vh;
+    padding: 4.5rem 1.2rem;
+  }
+
+  .pento-section {
+    padding: 5rem 1.3rem;
+  }
+
+  .hero-copy {
+    line-height: 1.85;
+  }
+}
+
+
+/* ---------------------------------------------------------------------------
+   12. ACCESSIBILITY: REDUCED MOTION
+   Respect the visitor's operating-system motion preference.
+   --------------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .pento-button {
+    transition: none;
+  }
+
+  .pento-button:hover {
+    transform: none;
+  }
+}
+
+
+/* ============================================================================
+   13. CHARACTER GALLERY
+   Twelve personalities · Five squares each
+   ============================================================================ */
+
+/* --------------------------------------------------
+   13.1 Gallery layout
+   -------------------------------------------------- */
+
+.gallery-page {
+  max-width: 1120px;
+  margin-inline: auto;
+}
+
+.gallery-note {
+  max-width: 750px;
+  margin: 1.3rem 0 2rem;
+  color: var(--color-muted);
+}
+
+.character-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.15rem;
+  margin: 2rem 0;
+}
+
+
+/* --------------------------------------------------
+   13.2 Character cards
+   -------------------------------------------------- */
+
+.character-card {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+  padding: 1.3rem;
+
+  background: #FFFDFA;
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+
+  text-align: center;
+}
+
+.character-card .character-en {
+  font: 600 0.72rem/1.5 var(--font-ui);
+  color: var(--color-muted);
+  letter-spacing: 0.08em;
+}
+
+.character-card h2 {
+  margin: 0.7rem 0 0.1rem;
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+}
+
+.character-card .character-quote {
+  min-height: 2.5em;
+  margin: 0.55rem 0;
+  font-size: 0.9rem;
+}
+
+.character-card .shape-meta {
+  font: 600 0.7rem/1.6 var(--font-ui);
+  color: var(--color-muted);
+}
+
+
+/* --------------------------------------------------
+   13.3 Pentomino display
+   Identical canvas, identical square size.
+   -------------------------------------------------- */
+
+.character-figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 200px;
+}
+
+.character-figure .character-svg {
+  display: block;
+
+  width: 180px;
+  height: 180px;
+
+  max-width: 100%;
+  max-height: 100%;
+
+  overflow: visible;
+  transform-origin: center;
+}
+
+
+/* --------------------------------------------------
+   13.4 Character controls
+   -------------------------------------------------- */
+
+.character-card .character-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  gap: 0.5rem;
+  min-height: 44px;
+  margin-top: auto;
+  padding-top: 0.65rem;
+}
+
+.character-card button {
+  cursor: pointer;
+
+  padding: 0.45rem 0.85rem;
+
+  border: 1px solid var(--color-border);
+  border-radius: 100px;
+
+  background: white;
+  color: var(--color-ink);
+
+  font: 600 0.76rem/1.5 var(--font-ui);
+
+  transition: background 180ms ease;
+}
+
+.character-card button:hover,
+.character-card button:focus-visible {
+  background: var(--color-sand);
+}
+
+.character-card button:disabled {
+  cursor: default;
+  opacity: 0.6;
+}
+
+
+/* --------------------------------------------------
+   13.5 X OJISAN
+   He rotated. Nobody noticed.
+   -------------------------------------------------- */
+
+.character-card .character-controls p.character-reaction {
+  flex: 0 0 100%;
+  width: 100%;
+
+  margin: 0.15rem 0 0;
+  padding: 0;
+
+  font-family: var(--font-jp);
+  font-size: 0.72rem;
+  line-height: 1.4;
+  font-weight: 400;
+  font-style: normal;
+
+  color: #8A817D;
+  text-align: center;
+}
+
+
+/* --------------------------------------------------
+   13.6 Other page utilities
+   -------------------------------------------------- */
+
+.reading-page {
+  max-width: 800px;
+  margin-inline: auto;
+}
+
+.pento-text-link {
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+
+/* --------------------------------------------------
+   13.7 Responsive layout
+   -------------------------------------------------- */
+
+@media (max-width: 850px) {
+  .character-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 570px) {
+  .character-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* --------------------------------------------------
+   13.8 Reduced motion
+   -------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .character-card button {
+    transition: none;
+  }
+}

@@ -1,0 +1,25 @@
+---
+title: "12人の仲間たち"
+format:
+  html:
+    include-after-body:
+      - text: '<script type="module" src="../assets/js/characters.js?v=2"></script>'
+---
+
+::: {.pento-section .gallery-page}
+
+<p class="eyebrow">MEET THE PENTOMINOES</p>
+
+# 12人の仲間たち
+
+みんな5つの四角でできています。気になる人を選んで、形を眺めてみましょう。
+
+<div class="gallery-note">形はお父さんの姿勢データから描いています。顔や性格は、これから少しずつ増やす予定です。</div>
+
+<div id="character-gallery" class="character-gallery" data-characters="../data/characters.json" data-postures="../data/postures.json" aria-live="polite">
+  <p>12人を呼んでいます…</p>
+</div>
+
+[← ホームに戻る](../index.qmd){.pento-text-link}
+
+:::

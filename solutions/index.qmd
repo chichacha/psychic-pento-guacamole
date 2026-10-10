@@ -1,0 +1,17 @@
+---
+title: "みんなで、ぴったり"
+---
+
+::: {.pento-section .reading-page}
+
+<p class="eyebrow">COMING LATER · EXPERIMENTS</p>
+
+# みんなで、ぴったり
+
+6 × 10の解答を、SVGとD3で紹介する予定です。
+
+このページは準備中です。ナビゲーションにはまだ載せていません。
+
+[← ホームに戻る](../index.qmd){.pento-button}
+
+:::

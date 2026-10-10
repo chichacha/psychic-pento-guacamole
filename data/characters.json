@@ -1,0 +1,98 @@
+[
+  {
+    "shape": "X",
+    "name_ja": "まんなかおじさん",
+    "title_en": "X-Center",
+    "color": "#F0B6DF",
+    "quote": "「ここにいるよ。」",
+    "orientation_count": 1
+  },
+  {
+    "shape": "I",
+    "name_ja": "まっすぐおじさん",
+    "title_en": "In-Line",
+    "color": "#FDCFAB",
+    "quote": "「まっすぐ行こう。」",
+    "orientation_count": 2
+  },
+  {
+    "shape": "T",
+    "name_ja": "しきりやおばさん",
+    "title_en": "Tidy",
+    "color": "#76E1D7",
+    "quote": "「はい、そこに並んで！」",
+    "orientation_count": 4
+  },
+  {
+    "shape": "U",
+    "name_ja": "ぎゅーおばさん",
+    "title_en": "U-Hug",
+    "color": "#85D7EF",
+    "quote": "「ここ、入っていいよ！」",
+    "orientation_count": 4
+  },
+  {
+    "shape": "V",
+    "name_ja": "かどっこおばさん",
+    "title_en": "V-Corner",
+    "color": "#A9C7E9",
+    "quote": "「この角、いい感じ。」",
+    "orientation_count": 4
+  },
+  {
+    "shape": "W",
+    "name_ja": "こつこつおばさん",
+    "title_en": "Wobble-Step",
+    "color": "#CBBBE8",
+    "quote": "「一段ずつでいいよ。」",
+    "orientation_count": 4
+  },
+  {
+    "shape": "Z",
+    "name_ja": "つなぎおばさん",
+    "title_en": "Zigzag",
+    "color": "#ECD2C1",
+    "quote": "「こっちと、こっちをつなげよう。」",
+    "orientation_count": 4
+  },
+  {
+    "shape": "F",
+    "name_ja": "くねくねちゃん",
+    "title_en": "Fidget",
+    "color": "#FFADA6",
+    "quote": "「こっちかな？ あ、やっぱりこっち！」",
+    "orientation_count": 8
+  },
+  {
+    "shape": "L",
+    "name_ja": "のびのびちゃん",
+    "title_en": "Longreach",
+    "color": "#FEE1A7",
+    "quote": "「あそこまで届くかな？」",
+    "orientation_count": 8
+  },
+  {
+    "shape": "N",
+    "name_ja": "ずらしくん",
+    "title_en": "Nudge",
+    "color": "#D2E3AD",
+    "quote": "「ちょっとずれると、面白いよ。」",
+    "orientation_count": 8
+  },
+  {
+    "shape": "P",
+    "name_ja": "ぎゅっとくん",
+    "title_en": "Pack-In",
+    "color": "#6BB091",
+    "quote": "「もうちょっと近くにおいで。」",
+    "orientation_count": 8
+  },
+  {
+    "shape": "Y",
+    "name_ja": "はみだしくん",
+    "title_en": "Y-Not?",
+    "color": "#FFAFD0",
+    "quote": "「ちょっと違うほうが楽しいよ。」",
+    "orientation_count": 8
+  }
+]

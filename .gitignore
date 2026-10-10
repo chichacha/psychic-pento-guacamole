@@ -1,0 +1,15 @@
+# Quarto temporary files
+.quarto/
+*_cache/
+*_files/
+
+# RStudio
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+
+# macOS
+.DS_Store
+
+/.quarto/
