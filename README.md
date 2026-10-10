@@ -1,39 +1,133 @@
-# 五マスの人たち。 — Pentomino companion site
+# 五マスの人たち。
+### Five Squares. Twelve Personalities.
 
-A small, Japanese-first Quarto website accompanying a family-made pentomino mobile app and 3D-printed puzzle pieces.
+**みんな同じ、5つの四角でできています。**
 
-## Start in RStudio
+それ以外は、あまり似ていません。
 
-1. Unzip this folder and open it as your working directory in RStudio.
-2. Ensure [Quarto](https://quarto.org/) is available (RStudio's Quarto integration is fine).
-3. In the RStudio Terminal run `quarto preview` (or `quarto render` to generate `docs/`).
-4. The working character gallery is at `/characters/` and loads the included JSON files.
+本人たちは、いたって普通のつもりです。
 
-**Important:** Don't double-click the generated HTML using `file://`; browser security can block JSON `fetch()`. Use Quarto preview or a local web server.
+---
 
-## Files
+🧩 **[ウェブサイトを見る · Visit the website](https://chichacha.github.io/psychic-pento-guacamole/)**
 
-- `_quarto.yml` — website configuration; GitHub Pages output is `docs/`.
-- `index.qmd` — home page, existing hero and introductory sections.
-- `about.qmd` — relationship between physical puzzle, mobile app, companion site.
-- `characters/index.qmd` — working gallery of 12 pieces with orientation buttons.
-- `discover/`, `neighbours/`, `solutions/` — **draft placeholders**, not in navigation yet.
-- `assets/css/style.css` — commented, reusable site-wide CSS plus gallery styles.
-- `assets/js/characters.js` — dependency-free SVG renderer for the gallery.
-- `data/postures.json` — 63 real piece postures, from `Posture_DB_revised.json`.
-- `data/solutions.csv` — 2,339 puzzle records, from `Hint_pattern_6X10.csv`.
-- `data/characters.json` — character names, palette, quotes, orientation counts.
-- `R/explore_data.R` — optional R data exploration / decoding.
+*12のペントミノと、ちょっと不思議な数学の世界。*
 
-## Design notes
+## 12人の仲間たち
 
-- Mathematical geometry and invented character personalities are kept separate.
-- The gallery currently draws **plain geometric SVGs**, not final illustrated character faces.
-- Its orientation button cycles through stored postures; it is not a physical rotation animation yet.
-- Adjacency and animated full-board solutions are **future features**. Validate placement coordinate conventions against the mobile app first.
-- The 2,339 rows are puzzle records; three belt modes offer potentially 7,017 mode × puzzle combinations, not 7,017 unique layouts.
-- Source data is bundled for local exploration. If you do not want to publish the complete solution file, remove `data/solutions.csv` from public resources before deploying.
+ペントミノは、5つの正方形を辺でつないでできる形。
 
-## GitHub Pages
+全部で12種類あります。
 
-Render with `quarto render`, commit the generated `docs/` folder, then configure Pages to deploy from your branch's `/docs` folder. Do not overwrite your existing Git repository's `.git` directory when copying these starter files.
+| 形 | 名前 |
+|---|---|
+| F | くねくねちゃん |
+| I | まっすぐおじさん |
+| L | のびのびちゃん |
+| N | ずらしくん |
+| P | ぎゅっとくん |
+| T | しきりやおばさん |
+| U | ぎゅーおばさん |
+| V | かどっこおばさん |
+| W | こつこつおばさん |
+| X | まんなかおじさん |
+| Y | はみだしくん |
+| Z | つなぎおばさん |
+
+みんな5マス。
+
+でも、回ったり、ひっくり返ったりすると、それぞれ違う表情を見せてくれます。
+
+ちなみに、Xおじさんは回っても同じ顔です。
+
+本人はちゃんと回ったと言っています。
+
+## 5 × 12 = 60
+
+12種類のペントミノを全部合わせると、60マス。
+
+この60マスを使って、6 × 10、5 × 12、4 × 15などの長方形を作ることができます。
+
+ただし、どこに誰が入るかが問題です。
+
+このサイトでは、実際のパズルの解答データを使って、12人の並び方を紹介しています。
+
+並び方は、ときどき変わります。
+
+本人たちには、まだ知らせていません。
+
+## このサイトについて · About this project
+
+This is a playful companion website for a Pentomino puzzle app created by my father.
+
+Rather than recreating the puzzle game, the website explores the twelve pieces as characters—with personalities, geometry, symmetry, rotations, reflections, and the occasional unnecessary animation.
+
+It's part mathematical playground, part interactive story, and part family creative project.
+
+The underlying shapes and puzzle arrangements come from the original app's data.
+
+The characters and their personalities are a separate, slightly less scientific interpretation.
+
+## Built with
+
+- **Quarto** — website authoring and publishing
+- **JavaScript + SVG** — interactive pentomino characters and arrangements
+- **CSS** — layout, typography, and visual identity
+- **R** — data preparation and exploration
+- **GitHub Pages** — hosting
+
+The website is intentionally lightweight. The character gallery uses plain JavaScript and SVG, without requiring a visualization framework.
+
+## Project structure
+
+```text
+.
+├── _quarto.yml             # Website configuration
+├── index.qmd               # Homepage
+├── about.qmd               # About the project
+├── characters/
+│   └── index.qmd           # Meet the twelve characters
+├── assets/
+│   ├── css/                # Styles
+│   ├── js/                 # Interactions
+│   └── images/             # Images
+├── data/                   # Character, posture, and puzzle data
+└── docs/                   # Generated site for GitHub Pages
+```
+
+## Run locally
+
+Install [Quarto](https://quarto.org/), clone the repository, and run:
+
+```bash
+quarto preview
+```
+
+To generate the published website:
+
+```bash
+quarto render
+```
+
+The output is written to `docs/`, which is configured for GitHub Pages.
+
+## What's next?
+
+This little universe is still growing.
+
+Some things I'd like to explore:
+
+- More character interactions and animations
+- Rotational and reflection symmetry
+- How the twelve pieces fit together
+- Which characters tend to become neighbours
+- Interactive visual explanations of pentomino mathematics
+- More surprising things hiding inside five little squares
+
+No promises about the order. The characters have opinions.
+
+---
+
+**Five squares. Twelve personalities. Quite a lot of possibilities.**
+
+*Made with curiosity, code, and a little family inspiration.* 🧩
