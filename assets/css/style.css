@@ -627,3 +627,22 @@ a:hover {
   font-size: 0.95rem;
   line-height: 2;
 }
+
+
+/* Mini-story: visually separate from rotate/flip */
+
+.character-story-section {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.character-story {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  font-family: var(--font-jp);
+  font-size: 0.82rem;
+  line-height: 1.9;
+  text-align: left;
+}

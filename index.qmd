@@ -11,15 +11,52 @@ pagetitle: "五マスの人たち。 | PENTOMINO"
 
 # 五マスの人たち。
 
-<div class="hero-copy">
-  <p>みんな同じ、5つの四角でできています。</p>
-  <p>それ以外は、あまり似ていません。</p>
-  <p class="hero-punchline">本人たちは、いたって普通のつもりです。</p>
-</div>
+みんな、5つの四角でできています。
 
-[ちょっと会ってみる →](characters/index.qmd){.pento-button}
+まっすぐな人。曲がった人。  
+ちょっとずれた人。なぜか真ん中にいる人。
+
+全部で12人。
+
+<p class="hero-punchline">本人たちは、いたって普通のつもりです。</p>
+
+[12人に会ってみる →](characters/index.qmd){.pento-button}
 
 <p class="hero-footnote">12 SHAPES · 5 SQUARES EACH · EVERYONE IS DIFFERENT</p>
+
+:::
+
+::: {.pento-section .pento-intro}
+
+<p class="eyebrow">A LITTLE FAMILY HISTORY</p>
+
+## 片づけるだけのはずだった。
+
+昔、父が木で作ったペントミノのパズル。
+
+妹と私は、それで遊びながら育ちました。
+
+遊ぶのは楽しい。
+
+でも、片づけるのが難しい。
+
+あと一つなのに、入らない。
+
+こっちを動かすと、あっちが入らない。
+
+結局、いつも一つだけ、盤の上に乗っかっていました。
+
+**どうやら、これが我が家の正解だったようです。**
+
+それから何十年。
+
+木から陶器へ、そして3Dプリントへ。
+
+形は進化しました。
+
+**片づけの腕前は、あまり進化しませんでした。**
+
+[このパズルの話を読む →](about.qmd){.pento-text-link}
 
 :::
 
@@ -31,9 +68,13 @@ pagetitle: "五マスの人たち。 | PENTOMINO"
 
 ペントミノは、**5つの正方形を辺でつなげた形**。
 
-回したり、裏返したりして同じになるものをまとめると、全部で12種類。
+回したり、裏返したりして同じになるものを一つと数えると、全部で12種類。
 
-12人とも材料は同じ。でも、形はそれぞれ違います。
+12人とも材料は同じ。
+
+でも、形はそれぞれ違います。
+
+そして、ちょっとした性格の違いもあるようです。
 
 :::
 
@@ -47,40 +88,42 @@ pagetitle: "五マスの人たち。 | PENTOMINO"
 
 **6 × 10にも、5 × 12にも、4 × 15にも。**
 
-並び方が変わっても、みんな同じ12人。
+全員そろえば、いろいろな長方形になれます。
 
-<p class="stat-aside">問題は、どこに誰が入るか。</p>
+<p class="stat-aside">問題は、誰がどこに入るか。</p>
 
 :::
-
 
 ::: {.pento-section .pento-solution}
 
 <p class="eyebrow">12 PIECES · 60 SQUARES · ONE RECTANGLE</p>
 
-## 12人、ぴったり。
+## 12人、なんとか収まりました。
 
-12人が集まると、60マス。
+12人が集まって、6 × 10の長方形。
 
-6 × 10の長方形に並んでみました。
+全員、ちゃんと入りました。
 
-でも、これが唯一の並び方というわけではありません。
+でも、この並び方だけが正解ではありません。
+
+実は、ほかにもいろいろあります。
 
 <div id="home-solution"
      data-solutions="data/solutions.csv"
      data-postures="data/postures.json">
 </div>
 
-<button id="reveal-solution" class="pento-button">
+<button id="reveal-solution" class="pento-button" type="button">
   ひとりずつ登場 →
 </button>
 
-<button id="reset-solution" class="pento-button">
+<button id="reset-solution" class="pento-button" type="button">
   もう一度 ↺
 </button>
 
 <p class="stat-aside">
-  ちなみに、この並び方にはちゃんと正解があります。
+  この並び方は、ときどき変わります。<br>
+  12人にも、気分があるのかもしれません。
 </p>
 
 :::
@@ -89,13 +132,21 @@ pagetitle: "五マスの人たち。 | PENTOMINO"
 
 ::: {.pento-section .pento-ending}
 
-<p class="eyebrow">MEET · DISCOVER · PLAY</p>
+<p class="eyebrow">MEET · ROTATE · DISCOVER</p>
 
-## まずは、顔を見てみよう。
+## ところで、この12人。
 
-12人の形を眺めたり、向きを変えてみたり。ちょっとした発見から始めましょう。
+回しても変わらない人がいます。
+
+ひっくり返すと、別人みたいになる人もいます。
+
+なぜでしょう。
+
+まずは、会ってみてください。
 
 [12人の仲間たち →](characters/index.qmd){.pento-button}
+
+<p class="hero-footnote">SAME FIVE SQUARES. VERY DIFFERENT OPINIONS.</p>
 
 :::
 

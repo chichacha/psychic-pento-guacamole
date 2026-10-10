@@ -311,6 +311,21 @@ async function renderGallery() {
 
         controls.append(flipButton);
       }
+      
+      // ---------------------------------------------
+      // Mini-story — always visible
+      // ---------------------------------------------
+      
+      const storySection = document.createElement("div");
+      storySection.className = "character-story-section";
+      
+      const storyPanel = document.createElement("p");
+      storyPanel.className = "character-story";
+      storyPanel.textContent = character.story || "";
+      
+      storySection.appendChild(storyPanel);
+            
+      
 
       // ---------------------------------------------
       // Assemble card
@@ -324,7 +339,8 @@ async function renderGallery() {
         name,
         quote,
         meta,
-        controls
+        controls,
+        storySection   // ← NEW! Mini-story goes below rotate/flip buttons
       );
 
       gallery.append(card);
