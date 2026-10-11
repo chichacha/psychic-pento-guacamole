@@ -1,0 +1,96 @@
+---
+title: "Do Dad's and Chi's 6×10 pentomino solutions match?"
+subtitle: "Internal research note — not part of the published 五マス村 website"
+format:
+  html:
+    toc: true
+    code-fold: true
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+## Research question
+
+Can each of Dad's 2,339 piece/posture/anchor encodings be matched to one of Chi's 2,339 board-text solutions? Does the match require whole-board rotation or reflection?
+
+## Provenance and scope
+
+- Dad's `data/solutions.csv`: `Group number`, `Level`, `Answer`. Each `Answer` has twelve seven-character piece records.
+- Dad's `data/postures.json`: five relative `[row, col, z]` cells for each posture ID.
+- Chi's `data/pentomino_solution.csv`: multiple puzzle configurations; filter to `dim == "6×10"`.
+- Both datasets currently contain 2,339 records for this configuration. **Equal counts do not prove equal solution sets.**
+
+### Data provenance — Chi's solutions
+
+- **Original source:** To be confirmed (external pentomino solution collection).
+- **Current dataset:** [Pentomino solutions CSV](https://github.com/chichacha/pentomino/blob/main/pentomino_solution.csv)
+- **Date retrieved:** October 11 2026 Sunday
+- **Dataset:** 33,008 solution records across multiple puzzle configurations, including 2,339 records for the 6×10 rectangle.
+- **Note:** This dataset was collected independently of Dad's solution database.
+
+## Method
+
+1. Decode Dad's `Answer` into twelve placements.
+2. Expand placements into sixty occupied cells using the posture database.
+3. Validate board bounds, no overlaps, and complete coverage.
+4. Serialize each solution as a row-major, 60-letter board string.
+5. Compare exact strings, then compare canonical strings across the four symmetries preserving a 6×10 rectangle (identity, left/right reflection, up/down reflection, 180° rotation).
+6. Retain **all** candidate matches and flag any non-unique relationships. Do not infer one-to-one matching from equal counts alone.
+
+## Run the comparison
+
+Run from the repository root in RStudio. The script writes derived CSVs to `data/derived/`.
+
+```{r}
+source(here::here("R", "match_6x10_solutions.R"))
+summary
+```
+
+## Inspect unmatched or ambiguous records
+
+```{r}
+list(
+  unmatched_dad = nrow(unmatched_dad),
+  unmatched_chi = nrow(unmatched_chi),
+  ambiguous_candidates = sum(!crosswalk$unique_pair)
+)
+
+library(gt)
+
+crosswalk |>
+  slice_head(n = 10) |>
+  select(group_number, sol_idx, match_type, unique_pair) |>
+  gt() |>
+  tab_header(
+    title = md("**Dad × Chi: Solution Crosswalk**"),
+    subtitle = "First 10 matched 6×10 pentomino solutions"
+  ) |>
+  cols_label(
+    group_number = "Dad's Group",
+    sol_idx = "Chi's Solution",
+    match_type = "Match Type",
+    unique_pair = "Unique Match?"
+  ) |>
+  fmt(
+    columns = unique_pair,
+    fns = function(x) ifelse(x, "✓ Yes", "No")
+  ) |>
+  opt_row_striping() |>
+  tab_source_note(
+    source_note = "Matching accounts for whole-board symmetry."
+  )
+```
+
+## Findings
+
+**Complete after running the analysis.** Distinguish exact matches, symmetry-equivalent matches, unmatched records, and ambiguous mappings.
+
+## Caveats and follow-ups
+
+- The decoding assumes Dad's JSON coordinates are `[row_offset, col_offset, z]` and anchors are encoded in tenths of a cell; validation will fail if this assumption is wrong.
+- Board symmetries here preserve 6×10 dimensions; 90° and 270° rotations would produce 10×6 boards.
+- If the source datasets were deduplicated using different symmetry conventions, multiple rows may share a canonical key.
+- `Level` describes Dad's puzzle/hint progression and is not needed for whole-board equivalence.
+- This is research documentation, not a public story or a source of authoritative puzzle enumeration counts.
