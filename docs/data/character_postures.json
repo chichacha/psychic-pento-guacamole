@@ -1,0 +1,96 @@
+{
+  "X00": {
+    "side": "front",
+    "color": "#F0B6DF",
+    "comment": "何回まわっても、わしは一人分。人口増加には貢献できんのう。"
+  },
+  "I00": {
+    "side": "front",
+    "color": "#FDCFAB",
+    "comment": "立っているわしを、一人と数えてくれたかの？"
+  },
+  "I01": {
+    "side": "front",
+    "color": "#FDCFAB",
+    "comment": "横になっただけで二人目？ ずいぶん気前のいい調査じゃ。"
+  },
+  "T00": {
+    "side": "front",
+    "color": "#76E1D7",
+    "comment": "人口調査なら、まず全員一列に並びなさい！"
+  },
+  "T01": {
+    "side": "front",
+    "color": "#76E1D7"
+  },
+  "T02": {
+    "side": "front",
+    "color": "#76E1D7",
+    "comment": "逆さまになっただけで追加の一人？ 名簿を確認して！"
+  },
+  "T03": {
+    "side": "front",
+    "color": "#76E1D7"
+  },
+  "U00": {
+    "side": "front",
+    "color": "#85D7EF",
+    "comment": "このすき間に誰か入っても、わたしは一人よね？"
+  },
+  "U01": {
+    "side": "front",
+    "color": "#85D7EF"
+  },
+  "U02": {
+    "side": "front",
+    "color": "#85D7EF",
+    "comment": "入口の向きが変わっただけで、また一人増えたの？"
+  },
+  "U03": {
+    "side": "front",
+    "color": "#85D7EF"
+  },
+  "V00": {
+    "side": "front",
+    "color": "#A9C7E9",
+    "comment": "角を変えるたびに一人増えるなら、四人になるわね。"
+  },
+  "V01": {
+    "side": "front",
+    "color": "#A9C7E9"
+  },
+  "V02": {
+    "side": "front",
+    "color": "#A9C7E9"
+  },
+  "V03": {
+    "side": "front",
+    "color": "#A9C7E9",
+    "comment": "ここでも数えられたの？ さっき別の角でも答えたわよ。"
+  },
+  "W00": {
+    "side": "front",
+    "color": "#CBBBE8",
+    "comment": "一段ずつ進んできたけど、住民票は一枚でいいよね。"
+  },
+  "W01": {
+    "side": "front",
+    "color": "#CBBBE8"
+  },
+  "W02": {
+    "side": "front",
+    "color": "#CBBBE8",
+    "comment": "逆から来ただけで、もう一人に数えられちゃった。"
+  },
+  "W03": {
+    "side": "front",
+    "color": "#CBBBE8"
+  },
+  "Z00": {
+    "side": "front",
+    "color": "#ECD2C1",
+    "comment": "わたしの表と裏、別々に登録するの？"
+  },
+  "Z01": {
+    "side": "front",
+    "color": "#ECD2C1"

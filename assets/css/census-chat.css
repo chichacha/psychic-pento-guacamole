@@ -1,0 +1,96 @@
+/* ==========================================================================
+   GOMASU PEOPLE · CENSUS CHAT
+   Standalone speech-bubble gallery for population-census.qmd
+
+   Depends on global style.css tokens; intentionally does not style census.js.
+   ========================================================================== */
+
+/* 01. Gallery: each comment gets its own speech card. */
+.census-story .census-chat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr));
+  gap: 1rem;
+  max-width: 1100px;
+  margin: 2rem auto 4rem;
+}
+
+/* 02. Card: character illustration next to their dialogue. */
+.census-story .census-chat-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  min-width: 0;
+  padding: 1.15rem;
+  background: #FFFFFF;
+  border: 1px solid var(--color-border);
+  border-radius: 18px;
+}
+
+.census-story .census-chat-figure {
+  display: grid;
+  place-items: center;
+  flex: 0 0 92px;
+  width: 92px;
+  min-height: 100px;
+  padding: 0.5rem;
+  background: var(--color-sand);
+  border-radius: 14px;
+}
+
+.census-story .census-chat-shape {
+  display: block;
+  width: 100%;
+  max-height: 88px;
+}
+
+.census-story .census-chat-content { min-width: 0; }
+
+.census-story .census-chat-name {
+  margin-bottom: 0.65rem;
+  color: var(--color-ink);
+  font-family: var(--font-jp);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.census-story .census-chat-posture-id {
+  color: var(--color-muted);
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+/* 03. Speech bubble: the little tail points toward the character. */
+.census-story .census-chat-bubble {
+  position: relative;
+  margin: 0;
+  padding: 0.8rem 1rem;
+  background: var(--color-paper);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  color: var(--color-ink);
+  font-family: var(--font-jp);
+  font-size: 0.88rem;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+
+.census-story .census-chat-bubble::before {
+  position: absolute;
+  top: 17px;
+  left: -7px;
+  width: 12px;
+  height: 12px;
+  background: var(--color-paper);
+  border-left: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  content: "";
+  transform: rotate(45deg);
+}
+
+/* 04. Narrow screens: preserve readable dialogue. */
+@media (max-width: 420px) {
+  .census-story .census-chat-card { gap: 0.75rem; padding: 0.85rem; }
+  .census-story .census-chat-figure { flex-basis: 72px; width: 72px; min-height: 80px; }
+  .census-story .census-chat-bubble { padding: 0.65rem 0.75rem; }
+}

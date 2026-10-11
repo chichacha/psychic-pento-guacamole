@@ -54,6 +54,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../assets/css/style.css">
 <link rel="stylesheet" href="../assets/css/story.css">
 <link rel="stylesheet" href="../assets/css/census.css">
+<link rel="stylesheet" href="../assets/css/census-chat.css">
 </head>
 
 <body class="nav-fixed">
@@ -131,20 +132,21 @@ ul.task-list li input[type="checkbox"] {
 <div class="pento-story-deck">
 12人しかいないのに、63人いるらしい。
 </div>
-<p>
-ペントミノ村には、五つのマスでできた12人の住人がいます。
-</p>
-<p>
-ところが、ある日。村の人口について、妙な噂が流れはじめました。
-</p>
+<p>ペントミノ村には、五つのマスでできた12人の住民が暮らしています。</p>
+<p>みんな形も性格も、ちょっとずつ違います。</p>
+<p>ところが、ある日。村の人口調査の結果が発表されました。</p>
 <div class="census-rumour">
-「この村には、63人いるらしいぞ！」
+「この村の人口は、63人です！」
 </div>
-<p>
-えっ？　そんなに増えたの？　さっそく調べてみましょう。
-</p>
+<p>……えっ？</p>
+<p>引っ越してきた人もいない。赤ちゃんが生まれたという話も聞かない。</p>
+<p>それなのに、<strong>12人が63人に。差は51人。</strong></p>
+<p>いったい、どこから現れたのでしょう？</p>
 </section>
 </div>
+<section id="まずは数えてみましょう" class="level2">
+<h2 data-anchor-id="まずは数えてみましょう">まずは、数えてみましょう。</h2>
+<p>同じ村を、三つのルールで数えてみます。下のボタンを押して、住民の数がどう変わるか見てください。</p>
 <div class="census-interactive" aria-label="ペントミノ村の人口調査">
 <div class="census-topline">
 <span>THE GREAT PENTOMINO CENSUS</span><span id="census-mode-label">FREE · 12</span>
@@ -165,33 +167,59 @@ ul.task-list li input[type="checkbox"] {
 </p>
 <noscript>
 <p>
-インタラクティブな人口調査を見るには JavaScript を有効にしてください。12 free、18 one-sided、63 fixed のペントミノがあります。
+インタラクティブな人口調査を見るには JavaScript を有効にしてください。自由ペントミノは12種類、片面ペントミノは18種類、固定ペントミノは63種類あります。
 </p>
 </noscript>
 </div>
-<section id="どうして人数が変わるの" class="level2">
-<h2 data-anchor-id="どうして人数が変わるの">どうして人数が変わるの？</h2>
-<p>実は、誰も引っ越してきていません。<strong>変わったのは「同じ人」とみなすルールだけ。</strong></p>
-<p><strong>12人 · Free（自由）</strong> — 回転しても、裏返しても、同じ形なら同じもの。</p>
-<p><strong>18人 · One-sided（片面）</strong> — 回転は同じもの。でも、鏡に映した形が回転では重ならない場合は別のもの。</p>
-<p><strong>63人 · Fixed（固定）</strong> — 回転も裏返しもせず、向きが違えば別の形として数えます。ただし、回しても見た目が変わらない形は重複して数えません。</p>
 </section>
-<section id="まんなかおじさんの場合" class="level2">
-<h2 data-anchor-id="まんなかおじさんの場合">まんなかおじさんの場合</h2>
-<p>X型のまんなかおじさんは、90度回しても、裏返しても、まったく同じ姿。だから固定の数え方でも <strong>1種類</strong> です。</p>
-<p>一方、L型には8種類の異なる向きがあります。みんなが同じだけ増えるわけではないのです。</p>
+<section id="犯人は数え方でした" class="level2">
+<h2 data-anchor-id="犯人は数え方でした">犯人は、「数え方」でした。</h2>
+<p>実は、村には誰も増えていません。</p>
+<p><strong>変わったのは、「同じ」とみなすルールだけ。</strong></p>
+<p><strong>12 · Free（自由）</strong><br>
+回しても、裏返しても、重なるなら同じ形。住民一人につき、一票です。</p>
+<p><strong>18 · One-sided（片面）</strong><br>
+回すのはOK。でも、裏返さないと重ならない形は別として数えます。ここで、鏡の向こうにもう一人現れる住民がいます。</p>
+<p><strong>63 · Fixed（固定）</strong><br>
+回すのも、裏返すのも禁止。見た目の向きが違えば別の姿として数えます。ただし、回してもまったく同じ姿なら、二重には数えません。</p>
+<p>つまり、<strong>12人の住民に、63通りの姿がある</strong>ということ。</p>
+<p>人口が増えたのではなく、記録の単位が変わったのでした。</p>
+</section>
+<section id="まんなかおじさんはいつでも一人" class="level2">
+<h2 data-anchor-id="まんなかおじさんはいつでも一人">まんなかおじさんは、いつでも一人。</h2>
+<p>X型のまんなかおじさんは、90度回しても、裏返しても、見た目が同じ。</p>
+<p>だから、いちばん細かく数えても <strong>1通り</strong>。</p>
+<p>一方、くねくねちゃん（F型）には <strong>8通り</strong> の姿があります。</p>
+<p>みんな同じように向きを変えられるのに、数えられる姿の数は同じではありません。</p>
+<p>これは、ちょっと不公平……なのでしょうか？</p>
+</section>
+<section id="住民のみなさんにも聞いてみました" class="level2">
+<h2 data-anchor-id="住民のみなさんにも聞いてみました">住民のみなさんにも聞いてみました。</h2>
+<p>人口調査の結果について、村のみなさんに聞いてみました。</p>
+<p>どうやら、言いたいことがあるようです。</p>
+<section class="census-chat-section" aria-labelledby="census-chat-title">
+<h3 id="census-chat-title">
+五マス村・住民の声
+</h3>
+<div id="census-chat" class="census-chat-grid" aria-label="住民たちのコメント">
+
+</div>
+</section>
 <div class="census-ending">
-<p>「で、結局、何人なの？」</p>
-<p><strong>「……何を『同じ』とするかによるんじゃ。」</strong></p>
-<p>誰も増えていない。変わったのは、数え方。</p>
+<p>「で、結局、この村には何人いるの？」</p>
+<p><strong>「……何を『一人』と数えるかによるんじゃ。」</strong></p>
+<p>村の住民は12人。姿は63通り。</p>
+<p>どちらの記録も間違っていません。</p>
+<p><strong>ただ、数えているものが違ったのです。</strong></p>
 </div>
 <div class="pento-story-footnote">
-<p><strong>数学のメモ：</strong> これらはポリオミノの標準的な分類です。12個の自由ペントミノ、18個の片面ペントミノ、63個の固定ペントミノ。上の図は各形の座標から回転・反転を生成し、重複を取り除いて描画しています。</p>
+<p><strong>数学のメモ：</strong> ペントミノは五つの正方形を辺でつないだ形です。回転と反転を同一視する自由ペントミノは12種類、回転だけを同一視する片面ペントミノは18種類、向きを区別する固定ペントミノは63種類あります。</p>
 <p><a href="../stories/index.html">← おはなし一覧へ</a></p>
 </div>
 </section>
 </div>
 <script src="../assets/js/census.js" defer=""></script>
+<script src="../assets/js/census-chat.js" defer=""></script>
 
 
 

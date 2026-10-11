@@ -78,6 +78,23 @@
     return points.map(([x, y]) => [-x, y]);
   }
 
+  /* A mirrored posture belongs to a different rotation-only class.
+     We compare it with the first canonical posture of the character. */
+  function isReflectedPosture(points, referencePoints) {
+    return equivalenceKey(points, "one-sided") !==
+      equivalenceKey(referencePoints, "one-sided");
+  }
+
+  /* Darken an official character color without introducing a second palette. */
+  function darkenHexColor(hex, factor = 0.82) {
+    const channels = hex.slice(1).match(/.{2}/g);
+
+    return "#" + channels
+      .map(channel => Math.round(parseInt(channel, 16) * factor)
+        .toString(16).padStart(2, "0"))
+      .join("");
+  }
+
   function equivalenceKey(points, mode) {
     if (mode === "fixed") return shapeKey(points);
 
@@ -209,6 +226,14 @@
         entries.push(posture);
       }
     }
+    // Compare each posture with the first posture for its character.
+    // Free mode intentionally shows the original character color.
+    for (const entry of entries) {
+      const reference = data.byShape.get(entry.character.shape)[0];
+      entry.isReflected = mode !== "free" &&
+        isReflectedPosture(entry.points, reference.points);
+    }
+
     return entries;
   }
 
@@ -228,7 +253,7 @@
      values into innerHTML. Character colors come from characters.json.
      ------------------------------------------------------------------------ */
 
-  function createShapeSvg(points, character) {
+  function createShapeSvg(points, character, isReflected = false) {
     const namespace = "http://www.w3.org/2000/svg";
     const svg = document.createElementNS(namespace, "svg");
     const normalized = normalize(points);
@@ -244,6 +269,10 @@
     svg.setAttribute("role", "img");
     svg.setAttribute("aria-label", `${character.name_ja}の形`);
 
+    const fillColor = isReflected
+      ? darkenHexColor(character.color)
+      : character.color;
+
     for (const [x, y] of normalized) {
       const square = document.createElementNS(namespace, "rect");
       square.setAttribute("x", offsetX + x * cellSize);
@@ -251,7 +280,7 @@
       square.setAttribute("width", "14");
       square.setAttribute("height", "14");
       square.setAttribute("rx", "2");
-      square.setAttribute("fill", character.color);
+      square.setAttribute("fill", fillColor);
       svg.appendChild(square);
     }
 
@@ -259,13 +288,17 @@
   }
 
   function createTile(entry, mode) {
-    const { character, points, id } = entry;
+    const { character, points, id, isReflected } = entry;
     const tile = document.createElement("div");
     const label = document.createElement("span");
 
     tile.className = "census-tile";
     tile.dataset.posture = id;
-    tile.appendChild(createShapeSvg(points, character));
+    if (isReflected) {
+      tile.dataset.reflected = "true";
+      tile.title = "裏返した姿（少し濃い色）";
+    }
+    tile.appendChild(createShapeSvg(points, character, isReflected));
 
     label.className = "census-tile-label";
     label.textContent = mode === "free"
