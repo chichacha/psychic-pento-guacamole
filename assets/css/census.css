@@ -1,0 +1,377 @@
+
+/* ==========================================================================
+   GOMASU PEOPLE · POPULATION CENSUS
+   ==========================================================================
+   Page: stories/population-census.qmd
+
+   Purpose:
+     Styles for the interactive population census:
+     Free (12) → One-sided (18) → Fixed (63)
+
+   Dependencies:
+     1. assets/css/style.css  — Global fonts and design tokens
+     2. assets/css/story.css  — Shared editorial styling
+     3. assets/css/census.css — This file
+
+   Scope:
+     All page-specific selectors begin with .census-story
+     to avoid affecting other pages.
+
+   Sections:
+     01. Local design tokens
+     02. Story introduction
+     03. Interactive census container
+     04. Census header and population counter
+     05. Counting controls
+     06. Explanation and pentomino grid
+     07. Status and story conclusion
+     08. Animations
+     09. Responsive adjustments
+     10. Reduced-motion accessibility
+   ========================================================================== */
+
+
+/* --------------------------------------------------------------------------
+   01. LOCAL DESIGN TOKENS
+   --------------------------------------------------------------------------
+   Reuse global design tokens wherever possible.
+
+   Define local variables only for census-specific treatments.
+   These do not affect other pages.
+   -------------------------------------------------------------------------- */
+
+.census-story {
+  --census-accent: #9D4C36;
+  --census-surface: #FFFEFA;
+  --census-tile-background: #FAF7F0;
+  --census-active-background: #302B32;
+  --census-ending-background: #F3EEE8;
+
+  --census-radius-panel: 22px;
+  --census-radius-tile: 11px;
+
+  --census-shadow: 0 18px 60px rgb(48 43 50 / 6%);
+}
+
+
+/* --------------------------------------------------------------------------
+   02. STORY INTRODUCTION
+   --------------------------------------------------------------------------
+   The deck introduces the central mystery.
+
+   The rumour is deliberately more prominent than body text.
+   -------------------------------------------------------------------------- */
+
+.census-story .pento-story-deck {
+  font-family: var(--font-jp);
+  font-size: clamp(1.35rem, 3.4vw, 2.4rem);
+  font-weight: 700;
+  line-height: 1.5;
+
+  margin-bottom: 2.5rem;
+}
+
+.census-story .census-rumour {
+  color: var(--census-accent);
+  font-family: var(--font-jp);
+
+  font-size: clamp(1.35rem, 3vw, 2rem);
+  font-weight: 800;
+  line-height: 1.6;
+
+  margin: 2rem 0;
+}
+
+
+/* --------------------------------------------------------------------------
+   03. INTERACTIVE CENSUS CONTAINER
+   --------------------------------------------------------------------------
+   Main interactive panel.
+
+   Wider than the reading column to give the pentomino
+   visualization room to breathe.
+   -------------------------------------------------------------------------- */
+
+.census-story .census-interactive {
+  max-width: 1100px;
+
+  margin: 3rem auto;
+
+  padding: clamp(1rem, 3vw, 2.5rem);
+
+  background: var(--census-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--census-radius-panel);
+
+  box-shadow: var(--census-shadow);
+}
+
+
+/* --------------------------------------------------------------------------
+   04. CENSUS HEADER AND POPULATION COUNTER
+   --------------------------------------------------------------------------
+   Header: small metadata labels.
+
+   Counter: oversized numeric display, using tabular numerals
+   to prevent the width from jumping between 12, 18 and 63.
+   -------------------------------------------------------------------------- */
+
+.census-story .census-topline {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+
+  color: var(--color-muted);
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.1em;
+}
+
+.census-story .census-total {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.5rem;
+
+  margin: 1.5rem auto;
+}
+
+.census-story #census-count {
+  font-family: var(--font-ui);
+  font-size: clamp(5rem, 17vw, 10rem);
+  font-weight: 800;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.07em;
+}
+
+.census-story .census-unit {
+  font-family: var(--font-jp);
+  font-size: clamp(1.3rem, 4vw, 2rem);
+  font-weight: 800;
+}
+
+
+/* --------------------------------------------------------------------------
+   05. COUNTING CONTROLS
+   --------------------------------------------------------------------------
+   Three interactive buttons:
+     FREE       → 12
+     ONE-SIDED  → 18
+     FIXED      → 63
+
+   Includes hover, active and keyboard-focus states.
+   -------------------------------------------------------------------------- */
+
+.census-story .census-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.55rem;
+}
+
+.census-story .census-button {
+  appearance: none;
+
+  padding: 0.8rem 1rem;
+
+  background: var(--color-sand);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+
+  color: var(--color-ink);
+  font-family: var(--font-ui);
+  font-size: 0.88rem;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background-color var(--duration-fast) ease,
+    border-color var(--duration-fast) ease,
+    color var(--duration-fast) ease;
+}
+
+.census-story .census-button:hover {
+  background: var(--color-border);
+}
+
+.census-story .census-button.is-active {
+  background: var(--census-active-background);
+  border-color: var(--census-active-background);
+  color: #FFFFFF;
+}
+
+.census-story .census-button:focus-visible {
+  outline: 3px solid var(--color-link-hover);
+  outline-offset: 3px;
+}
+
+
+/* --------------------------------------------------------------------------
+   06. EXPLANATION AND PENTOMINO GRID
+   --------------------------------------------------------------------------
+   The explanation changes with the selected counting rule.
+
+   The grid uses auto-fill so it adapts to different viewport
+   widths and the number of orientations displayed.
+   -------------------------------------------------------------------------- */
+
+.census-story .census-explanation {
+  max-width: 650px;
+
+  margin: 1.4rem auto 2rem;
+
+  color: var(--color-muted);
+  font-family: var(--font-jp);
+  line-height: 1.9;
+  text-align: center;
+}
+
+.census-story .census-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(98px, 1fr)
+  );
+
+  gap: 0.65rem;
+}
+
+.census-story .census-tile {
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 0.35rem;
+
+  min-height: 108px;
+  padding: 0.6rem 0.35rem;
+
+  background: var(--census-tile-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--census-radius-tile);
+
+  animation: census-appear 300ms ease both;
+}
+
+.census-story .census-tile svg {
+  width: 75px;
+  height: 75px;
+
+  overflow: visible;
+}
+
+.census-story .census-tile-label {
+  color: var(--color-muted);
+
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+
+/* --------------------------------------------------------------------------
+   07. STATUS AND STORY CONCLUSION
+   --------------------------------------------------------------------------
+   Status: displays feedback from the census interaction.
+
+   Ending: a distinct editorial treatment for the story's
+   final revelation or village census report.
+   -------------------------------------------------------------------------- */
+
+.census-story .census-status {
+  min-height: 1.5rem;
+
+  margin: 1.2rem 0 0;
+
+  color: var(--color-muted);
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.census-story .census-ending {
+  max-width: 850px;
+
+  margin: 3rem auto;
+  padding: 2rem;
+
+  background: var(--census-ending-background);
+
+  border-left: 5px solid var(--census-accent);
+  border-radius: 5px 15px 15px 5px;
+
+  font-family: var(--font-jp);
+  line-height: 2.3;
+}
+
+
+/* --------------------------------------------------------------------------
+   08. ANIMATIONS
+   --------------------------------------------------------------------------
+   Subtle entrance animation when the census grid updates.
+   -------------------------------------------------------------------------- */
+
+@keyframes census-appear {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* --------------------------------------------------------------------------
+   09. RESPONSIVE ADJUSTMENTS
+   --------------------------------------------------------------------------
+   Smaller tiles and full-width controls on narrow screens.
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 600px) {
+
+  .census-story .census-grid {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(74px, 1fr)
+    );
+  }
+
+  .census-story .census-tile {
+    min-height: 90px;
+  }
+
+  .census-story .census-tile svg {
+    width: 61px;
+    height: 61px;
+  }
+
+  .census-story .census-button {
+    width: 100%;
+  }
+
+}
+
+
+/* --------------------------------------------------------------------------
+   10. REDUCED-MOTION ACCESSIBILITY
+   --------------------------------------------------------------------------
+   Disable the entrance animation for visitors who prefer
+   reduced motion.
+
+   Shared transition behavior is already handled in story.css.
+   -------------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .census-story .census-tile {
+    animation: none;
+  }
+
+}

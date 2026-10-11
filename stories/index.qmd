@@ -1,0 +1,44 @@
+---
+title: "おはなし | 五マスの人たち。"
+format:
+  html:
+    toc: false
+    page-layout: full
+    css:
+      - ../assets/css/story.css
+---
+
+::: {.pento-stories}
+
+::: {.pento-story-hero}
+<span class="pento-eyebrow">PENTOMINO · STORIES</span>
+
+# 五マスの人たちのおはなし。
+
+五つのマスから生まれた、12人のちょっと不思議な仲間たち。形を変えずに向きを変えたり、並んでみたり。数学の世界には、思いがけない事件がいっぱい。
+:::
+
+::: {.pento-story-list}
+
+::: {.pento-story-card}
+<span class="pento-eyebrow">STORY 001 · 人口調査</span>
+
+## [ペントミノ村の人口調査](population-census.qmd)
+
+**12人しかいないのに、63人いるらしい。**
+
+村の住人は12人のはず。ところが数え直すと18人、さらには63人!? いったい何が起きたのでしょう。
+
+[調査に参加する →](population-census.qmd){.pento-story-link}
+:::
+
+::: {.pento-story-card .pento-story-card--future}
+<span class="pento-eyebrow">COMING SOMEDAY</span>
+
+## まんなかおじさん、真ん中にいない疑惑。
+
+自分の真ん中にはいる。でも、盤面の真ん中にいるとは限らない。
+:::
+
+:::
+:::

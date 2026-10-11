@@ -16,6 +16,8 @@ website:
         href: index.qmd
       - text: "12人の仲間"
         href: characters/index.qmd
+      - text: "おはなし"
+        href: stories/index.qmd
       - text: "ABOUT"
         href: about.qmd
   page-footer:

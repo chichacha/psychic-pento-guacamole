@@ -1,0 +1,76 @@
+---
+title: "ペントミノ村の人口調査"
+subtitle: "12人しかいないのに、63人いるらしい。"
+format:
+  html:
+    toc: false
+    page-layout: full
+    css:
+      - ../assets/css/story.css
+      - ../assets/css/census.css
+---
+
+::: {.pento-stories .census-story}
+
+::: {.pento-story-hero}
+<span class="pento-eyebrow">STORY 001 · PENTOMINO VILLAGE</span>
+
+# ペントミノ村の人口調査。
+
+<div class="pento-story-deck">12人しかいないのに、63人いるらしい。</div>
+
+<p>ペントミノ村には、五つのマスでできた12人の住人がいます。</p>
+<p>ところが、ある日。村の人口について、妙な噂が流れはじめました。</p>
+
+<div class="census-rumour">「この村には、63人いるらしいぞ！」</div>
+
+<p>えっ？　そんなに増えたの？　さっそく調べてみましょう。</p>
+:::
+
+::: {.census-interactive aria-label="ペントミノ村の人口調査"}
+<div class="census-topline"><span>THE GREAT PENTOMINO CENSUS</span><span id="census-mode-label">FREE · 12</span></div>
+<div class="census-total" aria-live="polite"><span id="census-count">12</span><span class="census-unit">人？</span></div>
+<div class="census-controls" role="group" aria-label="数え方を選ぶ">
+  <button type="button" class="census-button is-active" data-mode="free" aria-pressed="true">12 · ひっくり返しても同じ</button>
+  <button type="button" class="census-button" data-mode="one-sided" aria-pressed="false">18 · 裏返したら別</button>
+  <button type="button" class="census-button" data-mode="fixed" aria-pressed="false">63 · 向きも別</button>
+</div>
+<p id="census-explanation" class="census-explanation" aria-live="polite">回しても、裏返しても、同じ形なら同じ住人として数えます。</p>
+<div id="census-grid" class="census-grid" aria-label="ペントミノの形の一覧"></div>
+<p id="census-status" class="census-status" role="status"></p>
+<noscript><p>インタラクティブな人口調査を見るには JavaScript を有効にしてください。12 free、18 one-sided、63 fixed のペントミノがあります。</p></noscript>
+:::
+
+## どうして人数が変わるの？
+
+実は、誰も引っ越してきていません。**変わったのは「同じ人」とみなすルールだけ。**
+
+**12人 · Free（自由）** — 回転しても、裏返しても、同じ形なら同じもの。
+
+**18人 · One-sided（片面）** — 回転は同じもの。でも、鏡に映した形が回転では重ならない場合は別のもの。
+
+**63人 · Fixed（固定）** — 回転も裏返しもせず、向きが違えば別の形として数えます。ただし、回しても見た目が変わらない形は重複して数えません。
+
+## まんなかおじさんの場合
+
+X型のまんなかおじさんは、90度回しても、裏返しても、まったく同じ姿。だから固定の数え方でも **1種類** です。
+
+一方、L型には8種類の異なる向きがあります。みんなが同じだけ増えるわけではないのです。
+
+::: {.census-ending}
+「で、結局、何人なの？」
+
+**「……何を『同じ』とするかによるんじゃ。」**
+
+誰も増えていない。変わったのは、数え方。
+:::
+
+::: {.pento-story-footnote}
+**数学のメモ：** これらはポリオミノの標準的な分類です。12個の自由ペントミノ、18個の片面ペントミノ、63個の固定ペントミノ。上の図は各形の座標から回転・反転を生成し、重複を取り除いて描画しています。
+
+[← おはなし一覧へ](index.qmd)
+:::
+
+:::
+
+<script src="../assets/js/census.js" defer></script>

@@ -1,0 +1,180 @@
+
+/* ==========================================================
+   GOMASU PEOPLE · SHARED EDITORIAL STYLES
+   ----------------------------------------------------------
+   Used by:
+     stories/index.qmd
+     stories/population-census.qmd
+     future stories
+
+   Design tokens and fonts are defined in:
+     assets/css/style.css
+
+   All selectors are scoped to .pento-stories to avoid
+   interfering with other Quarto pages.
+   ========================================================== */
+
+
+/* ----------------------------------------------------------
+   01. STORY CONTAINER
+   ---------------------------------------------------------- */
+
+.pento-stories {
+  color: var(--color-ink);
+  background: var(--color-paper);
+  font-family: var(--font-jp);
+
+  min-height: 100vh;
+
+  padding:
+    clamp(1.5rem, 5vw, 5rem)
+    clamp(1.1rem, 5vw, 4rem);
+}
+
+.pento-stories *,
+.pento-stories *::before,
+.pento-stories *::after {
+  box-sizing: border-box;
+}
+
+
+/* ----------------------------------------------------------
+   02. EDITORIAL TYPOGRAPHY
+   ---------------------------------------------------------- */
+
+.pento-stories .pento-story-hero {
+  max-width: 850px;
+  margin: 2rem auto 4rem;
+}
+
+.pento-stories .pento-eyebrow {
+  display: block;
+
+  color: var(--color-link-hover);
+  font-family: var(--font-ui);
+
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+
+  margin-bottom: 1rem;
+}
+
+.pento-stories h1 {
+  color: var(--color-ink);
+  font-family: var(--font-jp);
+
+  font-size: clamp(2.3rem, 6vw, 5rem);
+  font-weight: 900;
+  line-height: 1.18;
+  letter-spacing: -0.045em;
+
+  margin: 0 0 1.5rem;
+}
+
+.pento-stories h2 {
+  color: var(--color-ink);
+  font-family: var(--font-jp);
+
+  font-size: clamp(1.55rem, 3vw, 2.25rem);
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: -0.03em;
+
+  max-width: 850px;
+  margin: 3.8rem auto 1.2rem;
+}
+
+.pento-stories p {
+  font-family: var(--font-jp);
+  line-height: 1.95;
+}
+
+.pento-stories > p,
+.pento-stories > ul {
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pento-stories a {
+  color: var(--color-link-hover);
+  text-underline-offset: 0.2em;
+
+  transition: color var(--duration-fast) ease;
+}
+
+.pento-stories a:hover {
+  color: var(--color-ink);
+}
+
+
+/* ----------------------------------------------------------
+   03. STORY INDEX / CARDS
+   ---------------------------------------------------------- */
+
+.pento-stories .pento-story-list {
+  display: grid;
+  gap: 1.2rem;
+
+  max-width: 950px;
+  margin-inline: auto;
+}
+
+.pento-stories .pento-story-card {
+  background: #FFFFFF;
+  border: 1px solid var(--color-border);
+  border-radius: 18px;
+
+  padding: clamp(1.5rem, 4vw, 2.7rem);
+}
+
+.pento-stories .pento-story-card h2 {
+  margin: 0.25rem 0 0.5rem;
+}
+
+.pento-stories .pento-story-card--future {
+  opacity: 0.68;
+}
+
+.pento-stories .pento-story-link {
+  display: inline-block;
+
+  font-family: var(--font-ui);
+  font-weight: 800;
+
+  margin-top: 0.8rem;
+}
+
+
+/* ----------------------------------------------------------
+   04. FOOTNOTES / EDITORIAL NOTES
+   ---------------------------------------------------------- */
+
+.pento-stories .pento-story-footnote {
+  max-width: 850px;
+
+  margin: 4rem auto 1rem;
+  padding-top: 1.5rem;
+
+  border-top: 1px solid var(--color-border);
+
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+
+/* ----------------------------------------------------------
+   05. ACCESSIBILITY
+   ---------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .pento-stories *,
+  .pento-stories *::before,
+  .pento-stories *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
