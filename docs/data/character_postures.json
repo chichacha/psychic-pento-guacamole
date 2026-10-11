@@ -94,3 +94,186 @@
   "Z01": {
     "side": "front",
     "color": "#ECD2C1"
+  },
+  "Z02": {
+    "side": "back",
+    "color": "#C2AC9E",
+    "comment": "裏返ったら別人だって。住民票が二枚になっちゃうわ。"
+  },
+  "Z03": {
+    "side": "back",
+    "color": "#C2AC9E"
+  },
+  "F00": {
+    "side": "front",
+    "color": "#FFADA6",
+    "comment": "一回目の点呼！ はーい、わたしです！"
+  },
+  "F01": {
+    "side": "front",
+    "color": "#FFADA6",
+    "comment": "二回目も、わたし！ えっ、また一人増えた？"
+  },
+  "F02": {
+    "side": "front",
+    "color": "#FFADA6"
+  },
+  "F03": {
+    "side": "front",
+    "color": "#FFADA6"
+  },
+  "F04": {
+    "side": "back",
+    "color": "#D18E88",
+    "comment": "顔色が悪いって、別人扱いされた。"
+  },
+  "F05": {
+    "side": "back",
+    "color": "#D18E88"
+  },
+  "F06": {
+    "side": "back",
+    "color": "#D18E88"
+  },
+  "F07": {
+    "side": "back",
+    "color": "#D18E88",
+    "comment": "八人目って言われたけど、全部わたしなんだよ！"
+  },
+  "L00": {
+    "side": "front",
+    "color": "#FEE1A7",
+    "comment": "一人で来たのに、八人分の名簿があるんだって。"
+  },
+  "L01": {
+    "side": "front",
+    "color": "#FEE1A7"
+  },
+  "L02": {
+    "side": "front",
+    "color": "#FEE1A7"
+  },
+  "L03": {
+    "side": "front",
+    "color": "#FEE1A7"
+  },
+  "L04": {
+    "side": "back",
+    "color": "#D0B889",
+    "comment": "裏返っただけで五人目？ そんなに大家族じゃないよ。"
+  },
+  "L05": {
+    "side": "back",
+    "color": "#D0B889"
+  },
+  "L06": {
+    "side": "back",
+    "color": "#D0B889"
+  },
+  "L07": {
+    "side": "back",
+    "color": "#D0B889"
+  },
+  "N00": {
+    "side": "front",
+    "color": "#D2E3AD",
+    "comment": "ちょっとずれても、同じ一人として数えてね。"
+  },
+  "N01": {
+    "side": "front",
+    "color": "#D2E3AD"
+  },
+  "N02": {
+    "side": "front",
+    "color": "#D2E3AD"
+  },
+  "N03": {
+    "side": "front",
+    "color": "#D2E3AD"
+  },
+  "N04": {
+    "side": "back",
+    "color": "#ACBA8E",
+    "comment": "裏返ったら別人扱い？ ずれてるのは数え方じゃない？"
+  },
+  "N05": {
+    "side": "back",
+    "color": "#ACBA8E"
+  },
+  "N06": {
+    "side": "back",
+    "color": "#ACBA8E"
+  },
+  "N07": {
+    "side": "back",
+    "color": "#ACBA8E"
+  },
+  "P00": {
+    "side": "front",
+    "color": "#6BB091",
+    "comment": "ぎゅっと五マスで一人です。五人じゃありません！"
+  },
+  "P01": {
+    "side": "front",
+    "color": "#6BB091"
+  },
+  "P02": {
+    "side": "front",
+    "color": "#6BB091"
+  },
+  "P03": {
+    "side": "front",
+    "color": "#6BB091"
+  },
+  "P04": {
+    "side": "back",
+    "color": "#589077",
+    "comment": "裏返っても五マスで一人。……えっ、また数えるの？"
+  },
+  "P05": {
+    "side": "back",
+    "color": "#589077"
+  },
+  "P06": {
+    "side": "back",
+    "color": "#589077"
+  },
+  "P07": {
+    "side": "back",
+    "color": "#589077"
+  },
+  "Y00": {
+    "side": "front",
+    "color": "#FFAFD0",
+    "comment": "一マスはみ出しても、住民は一人だよ。"
+  },
+  "Y01": {
+    "side": "front",
+    "color": "#FFAFD0"
+  },
+  "Y02": {
+    "side": "front",
+    "color": "#FFAFD0"
+  },
+  "Y03": {
+    "side": "front",
+    "color": "#FFAFD0"
+  },
+  "Y04": {
+    "side": "back",
+    "color": "#D190AB",
+    "comment": "裏返っただけで五人目？ はみ出しすぎたかな。"
+  },
+  "Y05": {
+    "side": "back",
+    "color": "#D190AB"
+  },
+  "Y06": {
+    "side": "back",
+    "color": "#D190AB"
+  },
+  "Y07": {
+    "side": "back",
+    "color": "#D190AB"
+  }
+}
