@@ -159,5 +159,61 @@
     "title": "おはなし | 五マスの人たち。",
     "section": "",
     "text": "自分の真ん中にはいる。でも、盤面の真ん中にいるとは限らない。"
+  },
+  {
+    "objectID": "analysis/compare_6x10_solutions.html",
+    "href": "analysis/compare_6x10_solutions.html",
+    "title": "Do Dad’s and Chi’s 6×10 pentomino solutions match?",
+    "section": "",
+    "text": "Can each of Dad’s 2,339 piece/posture/anchor encodings be matched to one of Chi’s 2,339 board-text solutions? Does the match require whole-board rotation or reflection?"
+  },
+  {
+    "objectID": "analysis/compare_6x10_solutions.html#research-question",
+    "href": "analysis/compare_6x10_solutions.html#research-question",
+    "title": "Do Dad’s and Chi’s 6×10 pentomino solutions match?",
+    "section": "",
+    "text": "Can each of Dad’s 2,339 piece/posture/anchor encodings be matched to one of Chi’s 2,339 board-text solutions? Does the match require whole-board rotation or reflection?"
+  },
+  {
+    "objectID": "analysis/compare_6x10_solutions.html#provenance-and-scope",
+    "href": "analysis/compare_6x10_solutions.html#provenance-and-scope",
+    "title": "Do Dad’s and Chi’s 6×10 pentomino solutions match?",
+    "section": "Provenance and scope",
+    "text": "Provenance and scope\n\nDad’s data/solutions.csv: Group number, Level, Answer. Each Answer has twelve seven-character piece records.\nDad’s data/postures.json: five relative [row, col, z] cells for each posture ID.\nChi’s data/pentomino_solution.csv: multiple puzzle configurations; filter to dim == \"6×10\".\nBoth datasets currently contain 2,339 records for this configuration. Equal counts do not prove equal solution sets.\n\n\nData provenance — Chi’s solutions\n\nOriginal source: To be confirmed (external pentomino solution collection).\nCurrent dataset: Pentomino solutions CSV\nDate retrieved: October 11 2026 Sunday\nDataset: 33,008 solution records across multiple puzzle configurations, including 2,339 records for the 6×10 rectangle.\nNote: This dataset was collected independently of Dad’s solution database."
+  },
+  {
+    "objectID": "analysis/compare_6x10_solutions.html#method",
+    "href": "analysis/compare_6x10_solutions.html#method",
+    "title": "Do Dad’s and Chi’s 6×10 pentomino solutions match?",
+    "section": "Method",
+    "text": "Method\n\nDecode Dad’s Answer into twelve placements.\nExpand placements into sixty occupied cells using the posture database.\nValidate board bounds, no overlaps, and complete coverage.\nSerialize each solution as a row-major, 60-letter board string.\nCompare exact strings, then compare canonical strings across the four symmetries preserving a 6×10 rectangle (identity, left/right reflection, up/down reflection, 180° rotation).\nRetain all candidate matches and flag any non-unique relationships. Do not infer one-to-one matching from equal counts alone."
+  },
+  {
+    "objectID": "analysis/compare_6x10_solutions.html#run-the-comparison",
+    "href": "analysis/compare_6x10_solutions.html#run-the-comparison",
+    "title": "Do Dad’s and Chi’s 6×10 pentomino solutions match?",
+    "section": "Run the comparison",
+    "text": "Run the comparison\nRun from the repository root in RStudio. The script writes derived CSVs to data/derived/.\n\n\nCode\nsource(here::here(\"R\", \"match_6x10_solutions.R\"))\n\n\n# A tibble: 1 × 10\n  dad_solutions chi_solutions exact_pairs symmetry_candidate_pairs matched_dad\n          &lt;int&gt;         &lt;int&gt;       &lt;int&gt;                    &lt;int&gt;       &lt;int&gt;\n1          2339          2339        1142                     2339        2339\n# ℹ 5 more variables: matched_chi &lt;int&gt;, uniquely_matched_pairs &lt;int&gt;,\n#   ambiguous_candidate_pairs &lt;int&gt;, unmatched_dad &lt;int&gt;, unmatched_chi &lt;int&gt;\n\n\nCode\nsummary\n\n\nfunction (object, ...) \nUseMethod(\"summary\")\n&lt;bytecode: 0x105c2ee38&gt;\n&lt;environment: namespace:base&gt;"
+  },
+  {
+    "objectID": "analysis/compare_6x10_solutions.html#inspect-unmatched-or-ambiguous-records",
+    "href": "analysis/compare_6x10_solutions.html#inspect-unmatched-or-ambiguous-records",
+    "title": "Do Dad’s and Chi’s 6×10 pentomino solutions match?",
+    "section": "Inspect unmatched or ambiguous records",
+    "text": "Inspect unmatched or ambiguous records\n\n\nCode\nlist(\n  unmatched_dad = nrow(unmatched_dad),\n  unmatched_chi = nrow(unmatched_chi),\n  ambiguous_candidates = sum(!crosswalk$unique_pair)\n)\n\n\n$unmatched_dad\n[1] 0\n\n$unmatched_chi\n[1] 0\n\n$ambiguous_candidates\n[1] 0\n\n\nCode\nlibrary(gt)\n\ncrosswalk |&gt;\n  slice_head(n = 10) |&gt;\n  select(group_number, sol_idx, match_type, unique_pair) |&gt;\n  gt() |&gt;\n  tab_header(\n    title = md(\"**Dad × Chi: Solution Crosswalk**\"),\n    subtitle = \"First 10 matched 6×10 pentomino solutions\"\n  ) |&gt;\n  cols_label(\n    group_number = \"Dad's Group\",\n    sol_idx = \"Chi's Solution\",\n    match_type = \"Match Type\",\n    unique_pair = \"Unique Match?\"\n  ) |&gt;\n  fmt(\n    columns = unique_pair,\n    fns = function(x) ifelse(x, \"✓ Yes\", \"No\")\n  ) |&gt;\n  opt_row_striping() |&gt;\n  tab_source_note(\n    source_note = \"Matching accounts for whole-board symmetry.\"\n  )\n\n\n\n\n\n\n\n\nDad × Chi: Solution Crosswalk\n\n\nFirst 10 matched 6×10 pentomino solutions\n\n\nDad's Group\nChi's Solution\nMatch Type\nUnique Match?\n\n\n\n\n#0001\n506\nsymmetry\n✓ Yes\n\n\n#0002\n501\nsymmetry\n✓ Yes\n\n\n#0003\n502\nsymmetry\n✓ Yes\n\n\n#0004\n507\nsymmetry\n✓ Yes\n\n\n#0005\n2032\nsymmetry\n✓ Yes\n\n\n#0006\n2104\nexact\n✓ Yes\n\n\n#0007\n2018\nexact\n✓ Yes\n\n\n#0008\n2033\nsymmetry\n✓ Yes\n\n\n#0009\n2017\nexact\n✓ Yes\n\n\n#0010\n2101\nsymmetry\n✓ Yes\n\n\n\nMatching accounts for whole-board symmetry."
+  },
+  {
+    "objectID": "analysis/compare_6x10_solutions.html#findings",
+    "href": "analysis/compare_6x10_solutions.html#findings",
+    "title": "Do Dad’s and Chi’s 6×10 pentomino solutions match?",
+    "section": "Findings",
+    "text": "Findings\nComplete after running the analysis. Distinguish exact matches, symmetry-equivalent matches, unmatched records, and ambiguous mappings."
+  },
+  {
+    "objectID": "analysis/compare_6x10_solutions.html#caveats-and-follow-ups",
+    "href": "analysis/compare_6x10_solutions.html#caveats-and-follow-ups",
+    "title": "Do Dad’s and Chi’s 6×10 pentomino solutions match?",
+    "section": "Caveats and follow-ups",
+    "text": "Caveats and follow-ups\n\nThe decoding assumes Dad’s JSON coordinates are [row_offset, col_offset, z] and anchors are encoded in tenths of a cell; validation will fail if this assumption is wrong.\nBoard symmetries here preserve 6×10 dimensions; 90° and 270° rotations would produce 10×6 boards.\nIf the source datasets were deduplicated using different symmetry conventions, multiple rows may share a canonical key.\nLevel describes Dad’s puzzle/hint progression and is not needed for whole-board equivalence.\nThis is research documentation, not a public story or a source of authoritative puzzle enumeration counts."
   }
 ]
