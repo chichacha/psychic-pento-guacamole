@@ -84,62 +84,6 @@
     "text": "回しても変わらない人がいます。\nひっくり返すと、別人みたいになる人もいます。\nなぜでしょう。\nまずは、会ってみてください。\n12人の仲間たち →\n\nSAME FIVE SQUARES. VERY DIFFERENT OPINIONS."
   },
   {
-    "objectID": "analysis/compare_6x10_solutions.html",
-    "href": "analysis/compare_6x10_solutions.html",
-    "title": "Do Dad’s and Chi’s 6×10 pentomino solutions match?",
-    "section": "",
-    "text": "Can each of Dad’s 2,339 piece/posture/anchor encodings be matched to one of Chi’s 2,339 board-text solutions? Does the match require whole-board rotation or reflection?"
-  },
-  {
-    "objectID": "analysis/compare_6x10_solutions.html#research-question",
-    "href": "analysis/compare_6x10_solutions.html#research-question",
-    "title": "Do Dad’s and Chi’s 6×10 pentomino solutions match?",
-    "section": "",
-    "text": "Can each of Dad’s 2,339 piece/posture/anchor encodings be matched to one of Chi’s 2,339 board-text solutions? Does the match require whole-board rotation or reflection?"
-  },
-  {
-    "objectID": "analysis/compare_6x10_solutions.html#provenance-and-scope",
-    "href": "analysis/compare_6x10_solutions.html#provenance-and-scope",
-    "title": "Do Dad’s and Chi’s 6×10 pentomino solutions match?",
-    "section": "Provenance and scope",
-    "text": "Provenance and scope\n\nDad’s data/solutions.csv: Group number, Level, Answer. Each Answer has twelve seven-character piece records.\nDad’s data/postures.json: five relative [row, col, z] cells for each posture ID.\nChi’s data/pentomino_solution.csv: multiple puzzle configurations; filter to dim == \"6×10\".\nBoth datasets currently contain 2,339 records for this configuration. Equal counts do not prove equal solution sets.\n\n\nData provenance — Chi’s solutions\n\nOriginal source: To be confirmed (external pentomino solution collection).\nCurrent dataset: Pentomino solutions CSV\nDate retrieved: October 11 2026 Sunday\nDataset: 33,008 solution records across multiple puzzle configurations, including 2,339 records for the 6×10 rectangle.\nNote: This dataset was collected independently of Dad’s solution database."
-  },
-  {
-    "objectID": "analysis/compare_6x10_solutions.html#method",
-    "href": "analysis/compare_6x10_solutions.html#method",
-    "title": "Do Dad’s and Chi’s 6×10 pentomino solutions match?",
-    "section": "Method",
-    "text": "Method\n\nDecode Dad’s Answer into twelve placements.\nExpand placements into sixty occupied cells using the posture database.\nValidate board bounds, no overlaps, and complete coverage.\nSerialize each solution as a row-major, 60-letter board string.\nCompare exact strings, then compare canonical strings across the four symmetries preserving a 6×10 rectangle (identity, left/right reflection, up/down reflection, 180° rotation).\nRetain all candidate matches and flag any non-unique relationships. Do not infer one-to-one matching from equal counts alone."
-  },
-  {
-    "objectID": "analysis/compare_6x10_solutions.html#run-the-comparison",
-    "href": "analysis/compare_6x10_solutions.html#run-the-comparison",
-    "title": "Do Dad’s and Chi’s 6×10 pentomino solutions match?",
-    "section": "Run the comparison",
-    "text": "Run the comparison\nRun from the repository root in RStudio. The script writes derived CSVs to data/derived/.\n\n\nCode\nsource(here::here(\"R\", \"match_6x10_solutions.R\"))\n\n\n# A tibble: 1 × 10\n  dad_solutions chi_solutions exact_pairs symmetry_candidate_pairs matched_dad\n          &lt;int&gt;         &lt;int&gt;       &lt;int&gt;                    &lt;int&gt;       &lt;int&gt;\n1          2339          2339        1142                     2339        2339\n# ℹ 5 more variables: matched_chi &lt;int&gt;, uniquely_matched_pairs &lt;int&gt;,\n#   ambiguous_candidate_pairs &lt;int&gt;, unmatched_dad &lt;int&gt;, unmatched_chi &lt;int&gt;\n\n\nCode\nsummary\n\n\nfunction (object, ...) \nUseMethod(\"summary\")\n&lt;bytecode: 0x109ee8640&gt;\n&lt;environment: namespace:base&gt;"
-  },
-  {
-    "objectID": "analysis/compare_6x10_solutions.html#inspect-unmatched-or-ambiguous-records",
-    "href": "analysis/compare_6x10_solutions.html#inspect-unmatched-or-ambiguous-records",
-    "title": "Do Dad’s and Chi’s 6×10 pentomino solutions match?",
-    "section": "Inspect unmatched or ambiguous records",
-    "text": "Inspect unmatched or ambiguous records\n\n\nCode\nlist(\n  unmatched_dad = nrow(unmatched_dad),\n  unmatched_chi = nrow(unmatched_chi),\n  ambiguous_candidates = sum(!crosswalk$unique_pair)\n)\n\n\n$unmatched_dad\n[1] 0\n\n$unmatched_chi\n[1] 0\n\n$ambiguous_candidates\n[1] 0\n\n\nCode\nlibrary(gt)\n\ncrosswalk |&gt;\n  slice_head(n = 10) |&gt;\n  select(group_number, sol_idx, match_type, unique_pair) |&gt;\n  gt() |&gt;\n  tab_header(\n    title = md(\"**Dad × Chi: Solution Crosswalk**\"),\n    subtitle = \"First 10 matched 6×10 pentomino solutions\"\n  ) |&gt;\n  cols_label(\n    group_number = \"Dad's Group\",\n    sol_idx = \"Chi's Solution\",\n    match_type = \"Match Type\",\n    unique_pair = \"Unique Match?\"\n  ) |&gt;\n  fmt(\n    columns = unique_pair,\n    fns = function(x) ifelse(x, \"✓ Yes\", \"No\")\n  ) |&gt;\n  opt_row_striping() |&gt;\n  tab_source_note(\n    source_note = \"Matching accounts for whole-board symmetry.\"\n  )\n\n\n\n\n\n\n\n\nDad × Chi: Solution Crosswalk\n\n\nFirst 10 matched 6×10 pentomino solutions\n\n\nDad's Group\nChi's Solution\nMatch Type\nUnique Match?\n\n\n\n\n#0001\n506\nsymmetry\n✓ Yes\n\n\n#0002\n501\nsymmetry\n✓ Yes\n\n\n#0003\n502\nsymmetry\n✓ Yes\n\n\n#0004\n507\nsymmetry\n✓ Yes\n\n\n#0005\n2032\nsymmetry\n✓ Yes\n\n\n#0006\n2104\nexact\n✓ Yes\n\n\n#0007\n2018\nexact\n✓ Yes\n\n\n#0008\n2033\nsymmetry\n✓ Yes\n\n\n#0009\n2017\nexact\n✓ Yes\n\n\n#0010\n2101\nsymmetry\n✓ Yes\n\n\n\nMatching accounts for whole-board symmetry."
-  },
-  {
-    "objectID": "analysis/compare_6x10_solutions.html#findings",
-    "href": "analysis/compare_6x10_solutions.html#findings",
-    "title": "Do Dad’s and Chi’s 6×10 pentomino solutions match?",
-    "section": "Findings",
-    "text": "Findings\nComplete after running the analysis. Distinguish exact matches, symmetry-equivalent matches, unmatched records, and ambiguous mappings."
-  },
-  {
-    "objectID": "analysis/compare_6x10_solutions.html#caveats-and-follow-ups",
-    "href": "analysis/compare_6x10_solutions.html#caveats-and-follow-ups",
-    "title": "Do Dad’s and Chi’s 6×10 pentomino solutions match?",
-    "section": "Caveats and follow-ups",
-    "text": "Caveats and follow-ups\n\nThe decoding assumes Dad’s JSON coordinates are [row_offset, col_offset, z] and anchors are encoded in tenths of a cell; validation will fail if this assumption is wrong.\nBoard symmetries here preserve 6×10 dimensions; 90° and 270° rotations would produce 10×6 boards.\nIf the source datasets were deduplicated using different symmetry conventions, multiple rows may share a canonical key.\nLevel describes Dad’s puzzle/hint progression and is not needed for whole-board equivalence.\nThis is research documentation, not a public story or a source of authoritative puzzle enumeration counts."
-  },
-  {
     "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html",
     "href": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html",
     "title": "How to Play Pentomino",
@@ -252,13 +196,6 @@
     "text": "最初はピースが言うことを聞いてくれなくても、大丈夫。\nポン、すいっ、シュッ。 ３つの指ワザを覚えたら、あとは少しずつ。\nさあ、Pentominoの世界で遊んでみましょう！ 🧩\n\n\n\n\n\n\nこのガイドについて\n\n\n\nこのページは現行のアプリ説明をもとに、初めて遊ぶ人にも読みやすいよう書き直したものです。操作や採点の詳細は、アプリのバージョンによって変わる場合があります。"
   },
   {
-    "objectID": "neighbours/index.html",
-    "href": "neighbours/index.html",
-    "title": "おとなりさん研究所",
-    "section": "",
-    "text": "COMING LATER · EXPERIMENTS\n\n\nおとなりさん研究所\n実際の解答データを使って、辺で接するピースを調べる場所。\nこのページは準備中です。ナビゲーションにはまだ載せていません。\n← ホームに戻る"
-  },
-  {
     "objectID": "experimental/index.html",
     "href": "experimental/index.html",
     "title": "ひみつの実験室",
@@ -266,25 +203,25 @@
     "text": "🧪 ここは、五マスの世界の実験室。\nお父さんが作ったペントミノの世界に、ちょっとした「もしも」を。\n「こんな動きがあったら？」「こんな演出はどう？」\nそんな思いつきを、まずは小さく作って試してみる場所です。\nお父さんに提案する前に、実物を作って見せちゃおう、という作戦。😏\n採用されるかどうかは、また別の話。\nここにあるものは、公式アプリの新機能ではありません。 あくまで、五マスの世界から生まれた非公式の実験です。"
   },
   {
-    "objectID": "experimental/index.html#まずは遊んでみよう",
-    "href": "experimental/index.html#まずは遊んでみよう",
+    "objectID": "experimental/index.html#実験001もっとわかりやすくできるかな",
+    "href": "experimental/index.html#実験001もっとわかりやすくできるかな",
     "title": "ひみつの実験室",
-    "section": "🧩 まずは遊んでみよう！",
-    "text": "🧩 まずは遊んでみよう！\nペントミノのピースを動かす、小さな練習場です。\nタップで、くるっ！ 90度回転。\nドラッグで、すいっ！ 好きな場所へ移動。\nフリックで、ぱたん！ ピースを裏返し。\n👉 ジェスチャーを練習する"
+    "section": "🔬 実験001：もっとわかりやすくできるかな？",
+    "text": "🔬 実験001：もっとわかりやすくできるかな？\nきっかけ：お母さんが、操作方法でちょっと迷った。\nペントミノは楽しい。でも、遊び方がわからないと、楽しさにたどり着けない。\nだったら、説明を増やすより、実際に触って覚えられる場所を作ってみよう！\n\n🧩 まずは遊んでみよう！\nペントミノのピースを動かす、小さな練習場です。\nタップで、くるっ！ 90度回転。\nドラッグで、すいっ！ 好きな場所へ移動。\nフリックで、ぱたん！ ピースを裏返し。\n👉 ジェスチャーを練習する\n\n\n📖 ペントミノの遊び方\n「白帯」から「黒帯」まで。目指せ、ペントミノ名人！🥋\n操作のコツやヒントの使い方を、ゆっくり紹介します。\n日本語で読む\nRead in English"
   },
   {
-    "objectID": "experimental/index.html#ペントミノの遊び方",
-    "href": "experimental/index.html#ペントミノの遊び方",
+    "objectID": "experimental/index.html#実験002クリアしたら何が起こる",
+    "href": "experimental/index.html#実験002クリアしたら何が起こる",
     "title": "ひみつの実験室",
-    "section": "📖 ペントミノの遊び方",
-    "text": "📖 ペントミノの遊び方\n「白帯」から「黒帯」まで。目指せ、ペントミノ名人！🥋\n操作のコツやヒントの使い方を、ゆっくり紹介します。\n日本語で読む\nRead in English"
+    "section": "🎉 実験002：クリアしたら、何が起こる？",
+    "text": "🎉 実験002：クリアしたら、何が起こる？\n状態：💡 構想中\nパズルを完成させた瞬間、五マスの仲間たちが大騒ぎ？\n紙吹雪？ ダンス？ それとも、思いがけない何か？\nまずは小さな試作品を作って、どんなお祝いが楽しいか試してみよう。\nGitHubで実験計画を見る"
   },
   {
-    "objectID": "experimental/index.html#ただいま考え中",
-    "href": "experimental/index.html#ただいま考え中",
+    "objectID": "experimental/index.html#そのほかただいま妄想中",
+    "href": "experimental/index.html#そのほかただいま妄想中",
     "title": "ひみつの実験室",
-    "section": "🔮 ただいま考え中…",
-    "text": "🔮 ただいま考え中…\n五マスの仲間たちに服を着せてみたり、 カードに変身させてみたり、 新聞を発行してみたり。\nまだ形になっていないアイデアも、ここから少しずつ育てていきます。\n\n⚠️ 実験室の中身は、ときどき予告なく変わります。そこも含めて、お楽しみに。"
+    "section": "🔮 そのほか、ただいま妄想中…",
+    "text": "🔮 そのほか、ただいま妄想中…\n五マスの仲間たちに服を着せてみたり、 カードに変身させてみたり、 新聞を発行してみたり。\nまだ形になっていないアイデアも、ここから少しずつ育てていきます。\n実験は、成功しても失敗しても、何かが残れば大成功。\n\n⚠️ この実験室は、予告なく変わったり、実験が突然なくなったりします。お父さんの公式アプリとは別の場所なので、どうぞ気楽にお楽しみください。"
   },
   {
     "objectID": "experimental/gesture-tutorial/index.html",
@@ -301,18 +238,60 @@
     "text": "できたら、パズルに挑戦！ 🎉\nまずは 初心者（白帯） から。うまくいかなくても、ゆっくりで大丈夫です。\nパズルで遊ぶ · 📖 くわしい遊び方： 日本語 / English"
   },
   {
-    "objectID": "discover/index.html",
-    "href": "discover/index.html",
-    "title": "かたちのふしぎ",
+    "objectID": "analysis/compare_6x10_solutions.html",
+    "href": "analysis/compare_6x10_solutions.html",
+    "title": "Do Dad’s and Chi’s 6×10 pentomino solutions match?",
     "section": "",
-    "text": "COMING LATER · EXPERIMENTS\n\n\nかたちのふしぎ\n回転・裏返し・対称性を調べる実験室。\nこのページは準備中です。ナビゲーションにはまだ載せていません。\n← ホームに戻る"
+    "text": "Can each of Dad’s 2,339 piece/posture/anchor encodings be matched to one of Chi’s 2,339 board-text solutions? Does the match require whole-board rotation or reflection?"
   },
   {
-    "objectID": "solutions/index.html",
-    "href": "solutions/index.html",
-    "title": "みんなで、ぴったり",
+    "objectID": "analysis/compare_6x10_solutions.html#research-question",
+    "href": "analysis/compare_6x10_solutions.html#research-question",
+    "title": "Do Dad’s and Chi’s 6×10 pentomino solutions match?",
     "section": "",
-    "text": "COMING LATER · EXPERIMENTS\n\n\nみんなで、ぴったり\n6 × 10の解答を、SVGとD3で紹介する予定です。\nこのページは準備中です。ナビゲーションにはまだ載せていません。\n← ホームに戻る"
+    "text": "Can each of Dad’s 2,339 piece/posture/anchor encodings be matched to one of Chi’s 2,339 board-text solutions? Does the match require whole-board rotation or reflection?"
+  },
+  {
+    "objectID": "analysis/compare_6x10_solutions.html#provenance-and-scope",
+    "href": "analysis/compare_6x10_solutions.html#provenance-and-scope",
+    "title": "Do Dad’s and Chi’s 6×10 pentomino solutions match?",
+    "section": "Provenance and scope",
+    "text": "Provenance and scope\n\nDad’s data/solutions.csv: Group number, Level, Answer. Each Answer has twelve seven-character piece records.\nDad’s data/postures.json: five relative [row, col, z] cells for each posture ID.\nChi’s data/pentomino_solution.csv: multiple puzzle configurations; filter to dim == \"6×10\".\nBoth datasets currently contain 2,339 records for this configuration. Equal counts do not prove equal solution sets.\n\n\nData provenance — Chi’s solutions\n\nOriginal source: To be confirmed (external pentomino solution collection).\nCurrent dataset: Pentomino solutions CSV\nDate retrieved: October 11 2026 Sunday\nDataset: 33,008 solution records across multiple puzzle configurations, including 2,339 records for the 6×10 rectangle.\nNote: This dataset was collected independently of Dad’s solution database."
+  },
+  {
+    "objectID": "analysis/compare_6x10_solutions.html#method",
+    "href": "analysis/compare_6x10_solutions.html#method",
+    "title": "Do Dad’s and Chi’s 6×10 pentomino solutions match?",
+    "section": "Method",
+    "text": "Method\n\nDecode Dad’s Answer into twelve placements.\nExpand placements into sixty occupied cells using the posture database.\nValidate board bounds, no overlaps, and complete coverage.\nSerialize each solution as a row-major, 60-letter board string.\nCompare exact strings, then compare canonical strings across the four symmetries preserving a 6×10 rectangle (identity, left/right reflection, up/down reflection, 180° rotation).\nRetain all candidate matches and flag any non-unique relationships. Do not infer one-to-one matching from equal counts alone."
+  },
+  {
+    "objectID": "analysis/compare_6x10_solutions.html#run-the-comparison",
+    "href": "analysis/compare_6x10_solutions.html#run-the-comparison",
+    "title": "Do Dad’s and Chi’s 6×10 pentomino solutions match?",
+    "section": "Run the comparison",
+    "text": "Run the comparison\nRun from the repository root in RStudio. The script writes derived CSVs to data/derived/.\n\n\nCode\nsource(here::here(\"R\", \"match_6x10_solutions.R\"))\n\n\n# A tibble: 1 × 10\n  dad_solutions chi_solutions exact_pairs symmetry_candidate_pairs matched_dad\n          &lt;int&gt;         &lt;int&gt;       &lt;int&gt;                    &lt;int&gt;       &lt;int&gt;\n1          2339          2339        1142                     2339        2339\n# ℹ 5 more variables: matched_chi &lt;int&gt;, uniquely_matched_pairs &lt;int&gt;,\n#   ambiguous_candidate_pairs &lt;int&gt;, unmatched_dad &lt;int&gt;, unmatched_chi &lt;int&gt;\n\n\nCode\nsummary\n\n\nfunction (object, ...) \nUseMethod(\"summary\")\n&lt;bytecode: 0x104a615f0&gt;\n&lt;environment: namespace:base&gt;"
+  },
+  {
+    "objectID": "analysis/compare_6x10_solutions.html#inspect-unmatched-or-ambiguous-records",
+    "href": "analysis/compare_6x10_solutions.html#inspect-unmatched-or-ambiguous-records",
+    "title": "Do Dad’s and Chi’s 6×10 pentomino solutions match?",
+    "section": "Inspect unmatched or ambiguous records",
+    "text": "Inspect unmatched or ambiguous records\n\n\nCode\nlist(\n  unmatched_dad = nrow(unmatched_dad),\n  unmatched_chi = nrow(unmatched_chi),\n  ambiguous_candidates = sum(!crosswalk$unique_pair)\n)\n\n\n$unmatched_dad\n[1] 0\n\n$unmatched_chi\n[1] 0\n\n$ambiguous_candidates\n[1] 0\n\n\nCode\nlibrary(gt)\n\ncrosswalk |&gt;\n  slice_head(n = 10) |&gt;\n  select(group_number, sol_idx, match_type, unique_pair) |&gt;\n  gt() |&gt;\n  tab_header(\n    title = md(\"**Dad × Chi: Solution Crosswalk**\"),\n    subtitle = \"First 10 matched 6×10 pentomino solutions\"\n  ) |&gt;\n  cols_label(\n    group_number = \"Dad's Group\",\n    sol_idx = \"Chi's Solution\",\n    match_type = \"Match Type\",\n    unique_pair = \"Unique Match?\"\n  ) |&gt;\n  fmt(\n    columns = unique_pair,\n    fns = function(x) ifelse(x, \"✓ Yes\", \"No\")\n  ) |&gt;\n  opt_row_striping() |&gt;\n  tab_source_note(\n    source_note = \"Matching accounts for whole-board symmetry.\"\n  )\n\n\n\n\n\n\n\n\nDad × Chi: Solution Crosswalk\n\n\nFirst 10 matched 6×10 pentomino solutions\n\n\nDad's Group\nChi's Solution\nMatch Type\nUnique Match?\n\n\n\n\n#0001\n506\nsymmetry\n✓ Yes\n\n\n#0002\n501\nsymmetry\n✓ Yes\n\n\n#0003\n502\nsymmetry\n✓ Yes\n\n\n#0004\n507\nsymmetry\n✓ Yes\n\n\n#0005\n2032\nsymmetry\n✓ Yes\n\n\n#0006\n2104\nexact\n✓ Yes\n\n\n#0007\n2018\nexact\n✓ Yes\n\n\n#0008\n2033\nsymmetry\n✓ Yes\n\n\n#0009\n2017\nexact\n✓ Yes\n\n\n#0010\n2101\nsymmetry\n✓ Yes\n\n\n\nMatching accounts for whole-board symmetry."
+  },
+  {
+    "objectID": "analysis/compare_6x10_solutions.html#findings",
+    "href": "analysis/compare_6x10_solutions.html#findings",
+    "title": "Do Dad’s and Chi’s 6×10 pentomino solutions match?",
+    "section": "Findings",
+    "text": "Findings\nComplete after running the analysis. Distinguish exact matches, symmetry-equivalent matches, unmatched records, and ambiguous mappings."
+  },
+  {
+    "objectID": "analysis/compare_6x10_solutions.html#caveats-and-follow-ups",
+    "href": "analysis/compare_6x10_solutions.html#caveats-and-follow-ups",
+    "title": "Do Dad’s and Chi’s 6×10 pentomino solutions match?",
+    "section": "Caveats and follow-ups",
+    "text": "Caveats and follow-ups\n\nThe decoding assumes Dad’s JSON coordinates are [row_offset, col_offset, z] and anchors are encoded in tenths of a cell; validation will fail if this assumption is wrong.\nBoard symmetries here preserve 6×10 dimensions; 90° and 270° rotations would produce 10×6 boards.\nIf the source datasets were deduplicated using different symmetry conventions, multiple rows may share a canonical key.\nLevel describes Dad’s puzzle/hint progression and is not needed for whole-board equivalence.\nThis is research documentation, not a public story or a source of authoritative puzzle enumeration counts."
   },
   {
     "objectID": "about.html",
@@ -369,33 +348,5 @@
     "title": "おはなし | 五マスの人たち。",
     "section": "",
     "text": "自分の真ん中にはいる。でも、盤面の真ん中にいるとは限らない。"
-  },
-  {
-    "objectID": "experimental/index.html#実験ノート",
-    "href": "experimental/index.html#実験ノート",
-    "title": "ひみつの実験室",
-    "section": "🔬 実験ノート",
-    "text": "🔬 実験ノート\n完成していなくても大丈夫。\nここでは、思いついたアイデアを小さな試作品にして、実際に触って確かめていきます。\n\n🎉 実験001：クリアしたら、何が起こる？\n状態：💡 アイデアを検討中\nパズルを完成させた瞬間、五マスの仲間たちが大騒ぎ？\n紙吹雪？ ダンス？ それとも、思いがけない何か？\n一度作れば、いろいろな場所で使える「お祝いの仕組み」を考えています。\nGitHubで実験計画を見る"
-  },
-  {
-    "objectID": "experimental/index.html#そのほかただいま妄想中",
-    "href": "experimental/index.html#そのほかただいま妄想中",
-    "title": "ひみつの実験室",
-    "section": "🔮 そのほか、ただいま妄想中…",
-    "text": "🔮 そのほか、ただいま妄想中…\n五マスの仲間たちに服を着せてみたり、 カードに変身させてみたり、 新聞を発行してみたり。\nまだ形になっていないアイデアも、ここから少しずつ育てていきます。\n実験は、成功しても失敗しても、何かが残れば大成功。\n\n⚠️ この実験室は、予告なく変わったり、実験が突然なくなったりします。お父さんの公式アプリとは別の場所なので、どうぞ気楽にお楽しみください。"
-  },
-  {
-    "objectID": "experimental/index.html#実験001もっとわかりやすくできるかな",
-    "href": "experimental/index.html#実験001もっとわかりやすくできるかな",
-    "title": "ひみつの実験室",
-    "section": "🔬 実験001：もっとわかりやすくできるかな？",
-    "text": "🔬 実験001：もっとわかりやすくできるかな？\nきっかけ：お母さんが、操作方法でちょっと迷った。\nペントミノは楽しい。でも、遊び方がわからないと、楽しさにたどり着けない。\nだったら、説明を増やすより、実際に触って覚えられる場所を作ってみよう！\n\n🧩 まずは遊んでみよう！\nペントミノのピースを動かす、小さな練習場です。\nタップで、くるっ！ 90度回転。\nドラッグで、すいっ！ 好きな場所へ移動。\nフリックで、ぱたん！ ピースを裏返し。\n👉 ジェスチャーを練習する\n\n\n📖 ペントミノの遊び方\n「白帯」から「黒帯」まで。目指せ、ペントミノ名人！🥋\n操作のコツやヒントの使い方を、ゆっくり紹介します。\n日本語で読む\nRead in English"
-  },
-  {
-    "objectID": "experimental/index.html#実験002クリアしたら何が起こる",
-    "href": "experimental/index.html#実験002クリアしたら何が起こる",
-    "title": "ひみつの実験室",
-    "section": "🎉 実験002：クリアしたら、何が起こる？",
-    "text": "🎉 実験002：クリアしたら、何が起こる？\n状態：💡 構想中\nパズルを完成させた瞬間、五マスの仲間たちが大騒ぎ？\n紙吹雪？ ダンス？ それとも、思いがけない何か？\nまずは小さな試作品を作って、どんなお祝いが楽しいか試してみよう。\nGitHubで実験計画を見る"
   }
 ]

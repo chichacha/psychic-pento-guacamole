@@ -121,9 +121,6 @@ The website is intentionally lightweight, favouring reusable components and stan
 │
 ├── characters/          # Meet the twelve characters
 ├── stories/             # Stories and editorial experiments
-├── discover/            # Explore the pentomino world
-├── neighbours/          # Explore how pieces relate
-├── solutions/           # Puzzle arrangements and solutions
 │
 ├── experimental/        # 🧪 Secret Lab
 │   ├── README.md        # Lab principles and documentation
