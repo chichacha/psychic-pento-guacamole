@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.39">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>How to Play Pentomino – 五マスの人たち。</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-970c979a4865fa39ba161ee6e42cf843.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">五マスの人たち。</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../characters/index.html"> 
+<span class="menu-text">12人の仲間</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../stories/index.html"> 
+<span class="menu-text">おはなし</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../experimental/index.html"> 
+<span class="menu-text">🧪 ひみつの実験室</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">ABOUT</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#welcome-to-the-world-of-pentomino" id="toc-welcome-to-the-world-of-pentomino" class="nav-link active" data-scroll-target="#welcome-to-the-world-of-pentomino">Welcome to the World of Pentomino! 🧩</a>
+  <ul class="collapse">
+  <li><a href="#three-little-moves-to-master" id="toc-three-little-moves-to-master" class="nav-link" data-scroll-target="#three-little-moves-to-master">Three Little Moves to Master</a></li>
+  <li><a href="#choose-your-belt" id="toc-choose-your-belt" class="nav-link" data-scroll-target="#choose-your-belt">Choose Your Belt 🥋</a></li>
+  <li><a href="#a-little-help-when-youre-stuck" id="toc-a-little-help-when-youre-stuck" class="nav-link" data-scroll-target="#a-little-help-when-youre-stuck">A Little Help When You’re Stuck</a></li>
+  <li><a href="#pick-a-puzzle-2339-to-explore" id="toc-pick-a-puzzle-2339-to-explore" class="nav-link" data-scroll-target="#pick-a-puzzle-2339-to-explore">Pick a Puzzle: 2,339 to Explore!</a></li>
+  <li><a href="#whats-behind-the-gear-icon" id="toc-whats-behind-the-gear-icon" class="nav-link" data-scroll-target="#whats-behind-the-gear-icon">What’s Behind the Gear Icon? ⚙️</a></li>
+  <li><a href="#a-peek-behind-the-puzzle" id="toc-a-peek-behind-the-puzzle" class="nav-link" data-scroll-target="#a-peek-behind-the-puzzle">A Peek Behind the Puzzle 🧠</a></li>
+  <li><a href="#ready-to-give-it-a-go" id="toc-ready-to-give-it-a-go" class="nav-link" data-scroll-target="#ready-to-give-it-a-go">Ready to Give It a Go?</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content column-page-left" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">How to Play Pentomino</h1>
+<p class="subtitle lead">Tap, slide, flick! A friendly guide to getting along with your puzzle pieces</p>
+</div>
+
+
+
+<div class="quarto-title-meta column-page-left">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="welcome-to-the-world-of-pentomino" class="level1">
+<h1>Welcome to the World of Pentomino! 🧩</h1>
+<p>Five little squares. So many possible shapes. And one very important question: <strong>where does this piece go?</strong></p>
+<p>Pentomino is a puzzle about finding the right place <em>and</em> the right orientation for each piece. Sometimes a piece needs a little turn. Sometimes it needs a flip. And sometimes it seems determined to be difficult. 😆</p>
+<p>This guide is here when you need a hand. <strong>You don’t have to read it all before playing.</strong> Jump to whatever you’re curious about.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Would you rather try it than read about it?">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Would you rather try it than read about it?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Head over to <a href="../../experimental/gesture-tutorial/index.html">Let’s Play! — Gesture Practice</a> to practice tapping, dragging, and flicking with a piece. The interactive tutorial is currently in Japanese.</p>
+</div>
+</div>
+<section id="three-little-moves-to-master" class="level2">
+<h2 data-anchor-id="three-little-moves-to-master">Three Little Moves to Master</h2>
+<section id="tap-give-it-a-twirl" class="level3">
+<h3 data-anchor-id="tap-give-it-a-twirl">① Tap: Give It a Twirl! 🔄</h3>
+<p><strong>Tap a piece that hasn’t been placed on the board</strong> to rotate it <strong>90° counterclockwise</strong>.</p>
+<p>Not quite the right angle? Tap again. And again. Round it goes!</p>
+</section>
+<section id="swipe-take-it-for-a-stroll" class="level3">
+<h3 data-anchor-id="swipe-take-it-for-a-stroll">② Swipe: Take It for a Stroll! 👆</h3>
+<p><strong>Touch and hold a piece, then drag it slowly</strong> to move it around.</p>
+<ul>
+<li>When you’ve grabbed a piece, its <strong>outline turns red</strong>.</li>
+<li>Bring it near a valid spot on the board and it <strong>snaps toward that spot; its outline turns blue</strong>.</li>
+<li>Release your finger to put it there.</li>
+</ul>
+<p><strong>Blue doesn’t mean you’ve solved it!</strong> It means the piece <em>fits there physically</em>. You can check whether it’s the correct placement later.</p>
+</section>
+<section id="flick-flip-it" class="level3">
+<h3 data-anchor-id="flick-flip-it">③ Flick: Flip It! ↔︎️</h3>
+<p>Grab a piece, then <strong>make a quick movement and release your finger</strong>. That’s a flick!</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Flick direction</th>
+<th>What happens</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>← Left or → Right</td>
+<td><strong>Flip horizontally</strong> (mirror left to right)</td>
+</tr>
+<tr class="even">
+<td>↑ Up or ↓ Down</td>
+<td><strong>Flip vertically</strong> (turn upside down)</td>
+</tr>
+</tbody>
+</table>
+<p>Don’t worry: a flick won’t send your piece flying off the screen. It flips <strong>where you release it</strong>.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Swipe or flick? What's the difference?">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Swipe or flick? What’s the difference?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The app decides based on <strong>how fast your finger is moving when you let go</strong>. Move slowly to reposition a piece; flick quickly to flip it. If the app keeps guessing wrong, try the sensitivity setting under the gear icon. The default threshold is <strong>70 mm/second</strong>.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="choose-your-belt" class="level2">
+<h2 data-anchor-id="choose-your-belt">Choose Your Belt 🥋</h2>
+<p>Pentomino has three difficulty modes. No need to earn a black belt on your first day!</p>
+<section id="white-belt-first-steps" class="level3">
+<h3 data-anchor-id="white-belt-first-steps">⚪ White Belt: First Steps</h3>
+<p><strong>Practice picking up, moving, and placing pieces.</strong></p>
+<p>The pieces are presented in placement order, with their orientations already set correctly. You can concentrate on getting comfortable with the controls.</p>
+<p><strong>Best place to start if you’re new.</strong></p>
+</section>
+<section id="yellow-belt-time-to-twist-and-flip" class="level3">
+<h3 data-anchor-id="yellow-belt-time-to-twist-and-flip">🟡 Yellow Belt: Time to Twist and Flip</h3>
+<p><strong>Practice rotating and flipping pieces into position.</strong></p>
+<p>The pieces still appear in placement order, but this time their orientations aren’t prepared for you. You’ll need your tap and flick skills!</p>
+</section>
+<section id="black-belt-the-real-challenge" class="level3">
+<h3 data-anchor-id="black-belt-the-real-challenge">⚫ Black Belt: The Real Challenge</h3>
+<p><strong>Figure out the solution for yourself.</strong></p>
+<p>The pieces appear in alphabetical order, and their orientations aren’t preset. You’ll decide which piece goes where — and how it should face.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="You can change belts whenever you like">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+You can change belts whenever you like
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Your progress is <strong>saved separately for each belt</strong>. Switch modes to suit your mood without losing your place in the others.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="a-little-help-when-youre-stuck" class="level2">
+<h2 data-anchor-id="a-little-help-when-youre-stuck">A Little Help When You’re Stuck</h2>
+<section id="check-did-i-get-it-right" class="level3">
+<h3 data-anchor-id="check-did-i-get-it-right">Check: Did I Get It Right? 🔎</h3>
+<p>Tap <strong>Check</strong> to see whether your placed pieces are correct.</p>
+<p>There’s <strong>no point deduction if everything you’ve placed is correct</strong>. Incorrect placements, however, may cost points.</p>
+</section>
+<section id="hint-just-one-little-clue" class="level3">
+<h3 data-anchor-id="hint-just-one-little-clue">Hint: Just One Little Clue! 💡</h3>
+<p>Sometimes the pieces simply refuse to cooperate. That’s what <strong>Hint</strong> is for.</p>
+<p>When you request a hint, the app first checks the board and removes incorrectly placed pieces. Then it places <strong>one remaining piece in its correct position</strong>, working backward from the end of the solution’s placement order.</p>
+<p>The point deduction covers <strong>the number of incorrectly placed pieces plus one hint</strong>. Helpful? Absolutely. Free? Not quite! 😉</p>
+</section>
+</section>
+<section id="pick-a-puzzle-2339-to-explore" class="level2">
+<h2 data-anchor-id="pick-a-puzzle-2339-to-explore">Pick a Puzzle: 2,339 to Explore!</h2>
+<p>There are <strong>10 levels, L1 through L10</strong>, with <strong>2,339 puzzles</strong> altogether. That’s enough to keep even a dedicated puzzle fan busy for a while.</p>
+<p>Use the <strong>← and →</strong> buttons to move between puzzles:</p>
+<ul>
+<li><strong>Tap:</strong> move one puzzle at a time.</li>
+<li><strong>Hold for at least 1 second:</strong> move by 10 puzzles, roughly every 0.3 seconds.</li>
+<li><strong>Keep holding beyond 3 seconds:</strong> move by 100 puzzles, roughly every 0.3 seconds.</li>
+</ul>
+<p>Puzzle numbers stay within the range <strong>1–2,339</strong>.</p>
+<section id="how-many-puzzles-are-in-each-level" class="level3">
+<h3 data-anchor-id="how-many-puzzles-are-in-each-level">How Many Puzzles Are in Each Level?</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Level</th>
+<th>Puzzle numbers</th>
+<th style="text-align: right;">Number of puzzles</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>L1</td>
+<td>1–7</td>
+<td style="text-align: right;">7</td>
+</tr>
+<tr class="even">
+<td>L2</td>
+<td>8–40</td>
+<td style="text-align: right;">33</td>
+</tr>
+<tr class="odd">
+<td>L3</td>
+<td>41–156</td>
+<td style="text-align: right;">116</td>
+</tr>
+<tr class="even">
+<td>L4</td>
+<td>157–395</td>
+<td style="text-align: right;">239</td>
+</tr>
+<tr class="odd">
+<td>L5</td>
+<td>396–668</td>
+<td style="text-align: right;">273</td>
+</tr>
+<tr class="even">
+<td>L6</td>
+<td>669–1145</td>
+<td style="text-align: right;">477</td>
+</tr>
+<tr class="odd">
+<td>L7</td>
+<td>1146–1684</td>
+<td style="text-align: right;">539</td>
+</tr>
+<tr class="even">
+<td>L8</td>
+<td>1685–2124</td>
+<td style="text-align: right;">440</td>
+</tr>
+<tr class="odd">
+<td>L9</td>
+<td>2125–2308</td>
+<td style="text-align: right;">184</td>
+</tr>
+<tr class="even">
+<td>L10</td>
+<td>2309–2339</td>
+<td style="text-align: right;">31</td>
+</tr>
+<tr class="odd">
+<td><strong>Total</strong></td>
+<td></td>
+<td style="text-align: right;"><strong>2,339</strong></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="whats-behind-the-gear-icon" class="level2">
+<h2 data-anchor-id="whats-behind-the-gear-icon">What’s Behind the Gear Icon? ⚙️</h2>
+<p>Tap the <strong>gear icon</strong> at the top of the screen to open Settings. You can also <strong>press and hold the puzzle title</strong>.</p>
+<p><strong>Language:</strong> Choose from Japanese, English, Spanish, French, German, Korean, Simplified Chinese, or Traditional Chinese. The instructions change to match your selection.</p>
+<p><strong>Completion sound:</strong> Turn the sound played when you finish a puzzle on or off.</p>
+<p><strong>Placement feedback:</strong> Depending on your device, the app uses either vibration or sound to signal a placement — not both at once.</p>
+<p><strong>Difficulty and history:</strong> Progress is stored separately for each belt. <strong>Clear History</strong> removes the record for the <em>currently selected belt only</em>. Make sure that’s what you want before clearing it.</p>
+<p><strong>Sensitivity:</strong> Adjust the threshold that separates a swipe from a flick, along with the duration or strength of placement feedback.</p>
+</section>
+<section id="a-peek-behind-the-puzzle" class="level2">
+<h2 data-anchor-id="a-peek-behind-the-puzzle">A Peek Behind the Puzzle 🧠</h2>
+<p>There’s a reason the pieces arrive in a particular order in White and Yellow Belt modes.</p>
+<p>When the app constructs a solution, it fills available spaces beginning at the <strong>top left</strong>, moving through a column before proceeding to the right. The beginner modes follow that placement order to help you learn.</p>
+<p>So yes, there <em>is</em> a method to the madness. Your puzzle pieces aren’t entirely making it up as they go!</p>
+</section>
+<section id="ready-to-give-it-a-go" class="level2">
+<h2 data-anchor-id="ready-to-give-it-a-go">Ready to Give It a Go?</h2>
+<p>If your first attempt looks like a pile of misplaced shapes, you’re in good company.</p>
+<p>Remember the three moves: <strong>tap to rotate, swipe to move, flick to flip</strong>.</p>
+<p>Then experiment. Try another angle. Ask for a hint if you need one. Most importantly, have fun discovering where those five-square pieces belong. 🧩</p>
+<div class="callout callout-style-default callout-note callout-titled" title="About this guide">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+About this guide
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This is a friendlier English adaptation of the current Japanese app instructions. Features, controls, and scoring details may change between app versions. The interactive gesture tutorial linked above is a separate prototype and may not perfectly match the app’s gesture sensitivity.</p>
+</div>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>五マスの人たち。</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>FIVE SQUARES. TWELVE PERSONALITIES.</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

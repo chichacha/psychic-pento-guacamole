@@ -6,9 +6,11 @@ format:
   html:
     toc: false
     page-layout: full
-    css: []
+    css: tutorial.css
 execute:
   echo: false
+resources:
+  - tutorial.js
 ---
 
 ::: {.gomasu-intro}
@@ -28,11 +30,16 @@ execute:
   <p id="gesture-instruction">ピースを一度タップしてみてね。90度、左に回ります。</p>
   <div class="gomasu-stage" id="gesture-stage">
     <svg id="gomasu-piece" viewBox="0 0 150 150" width="150" height="150" role="img" aria-label="操作できる五マスのピース">
+      <!-- F pentomino: asymmetry makes flipping visually obvious. -->
       <g id="piece-shape" fill="#e7aa72" stroke="#754b3a" stroke-width="2">
-        <rect x="25" y="25" width="25" height="25"/><rect x="50" y="25" width="25" height="25"/><rect x="75" y="25" width="25" height="25"/>
-        <rect x="50" y="50" width="25" height="25"/><rect x="50" y="75" width="25" height="25"/>
+        <rect x="50" y="25" width="25" height="25"/>
+        <rect x="75" y="25" width="25" height="25"/>
+        <rect x="25" y="50" width="25" height="25"/>
+        <rect x="50" y="50" width="25" height="25"/>
+        <rect x="50" y="75" width="25" height="25"/>
       </g>
-      <circle cx="58" cy="38" r="2.5" fill="#322e2b"/><circle cx="69" cy="38" r="2.5" fill="#322e2b"/>
+      <circle cx="58" cy="38" r="2.5" fill="#322e2b"/>
+      <circle cx="69" cy="38" r="2.5" fill="#322e2b"/>
       <path d="M59 44 Q64 49 69 44" fill="none" stroke="#322e2b" stroke-width="2" stroke-linecap="round"/>
     </svg>
     <div class="gomasu-target" id="gomasu-target" aria-hidden="true">ここへ！</div>
@@ -51,88 +58,12 @@ execute:
 
 まずは **初心者（白帯）** から。うまくいかなくても、ゆっくりで大丈夫です。
 
-[パズルで遊ぶ](#) · [くわしい説明を見る](#)
+[パズルで遊ぶ](#) ·
+📖 くわしい遊び方：
+[日本語](gomasu_friendly_guide_ja.qmd) /
+[English](gomasu_friendly_guide_en.qmd)
 
 <!-- TODO: Replace the two # links above with actual site/app URLs. -->
 
-<style>
-.gomasu-intro,.gomasu-tutorial{max-width:700px;margin:1.5rem auto}
-.gomasu-intro{font-size:1.1rem;line-height:1.8}
-.gomasu-tutorial{border:1px solid #e4dfd5;border-radius:20px;padding:clamp(14px,4vw,28px);background:#fffdf8;color:#292b29}
-.gomasu-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}
-.gomasu-tutorial button{font:inherit;cursor:pointer;border:1px solid #a8afa7;background:#fff;border-radius:12px;padding:12px 8px;min-height:48px;color:#242b27}
-.gomasu-steps button.is-active{background:#263f35;color:#fff;border-color:#263f35}
-.gomasu-tutorial h2{font-size:clamp(1.2rem,4vw,1.6rem);margin:24px 0 8px}
-.gomasu-tutorial p{line-height:1.7}
-.gomasu-stage{height:260px;background:repeating-linear-gradient(0deg,transparent 0 29px,#e7e6df 30px),repeating-linear-gradient(90deg,transparent 0 29px,#e7e6df 30px),#f7f5ed;border:2px solid #e3e1d7;border-radius:16px;position:relative;overflow:hidden;touch-action:none;user-select:none}
-#gomasu-piece{position:absolute;left:calc(50% - 75px);top:55px;overflow:visible;touch-action:none;cursor:grab;transform-origin:center;will-change:transform}
-#gomasu-piece:active{cursor:grabbing}
-.gomasu-target{display:none;position:absolute;right:8%;top:90px;border:3px dashed #6a9d89;border-radius:12px;width:100px;height:100px;place-items:center;color:#436c5b;font-weight:700;pointer-events:none}
-.gomasu-feedback{text-align:center;min-height:2.4rem;font-weight:700;color:#315f50}
-.gomasu-actions{display:flex;gap:10px}.gomasu-actions button{flex:1}
-#gesture-next{background:#263f35;color:white;border-color:#263f35}
-.gomasu-note{font-size:.8rem;color:#666}
-@media(max-width:420px){.gomasu-stage{height:235px}.gomasu-actions{flex-direction:column}}
-</style>
 
-<script>
-(() => {
-  const root=document.getElementById('gomasu-tutorial');
-  if(!root) return;
-  const piece=root.querySelector('#gomasu-piece'), stage=root.querySelector('#gesture-stage');
-  const title=root.querySelector('#gesture-title'), instruction=root.querySelector('#gesture-instruction');
-  const feedback=root.querySelector('#gesture-feedback'), target=root.querySelector('#gomasu-target');
-  const buttons=[...root.querySelectorAll('[data-step]')];
-  const lessons=[
-    ['① トン、とさわって回そう','ピースを一度タップしてみてね。90度、左に回ります。','☝️ ピースにさわってみよう'],
-    ['② すーっと動かそう','ピースを指で押さえたまま、右の「ここへ！」まで動かしてね。','👆 押さえたまま、ゆっくり移動しよう'],
-    ['③ シュッ！ とひっくり返そう','ピースを横か縦に、すばやく払って指を離してね。','👉 すばやくフリックしてみよう']
-  ];
-  let step=0, angle=0, flipX=1, flipY=1, x=0, y=0, gesture=null;
-  const render=()=>{piece.style.transform=`translate(${x}px,${y}px) rotate(${angle}deg) scale(${flipX},${flipY})`};
-  const success=msg=>{feedback.textContent='🎉 '+msg};
-  function setStep(n){
-    step=n;angle=0;flipX=1;flipY=1;x=0;y=0;gesture=null;render();
-    title.textContent=lessons[n][0];instruction.textContent=lessons[n][1];feedback.textContent=lessons[n][2];
-    target.style.display=n===1?'grid':'none';
-    buttons.forEach((b,i)=>{b.classList.toggle('is-active',i===n);b.setAttribute('aria-pressed',String(i===n))});
-    root.querySelector('#gesture-next').textContent=n===2?'最初から練習 ↺':'次の練習へ →';
-  }
-  buttons.forEach(b=>b.addEventListener('click',()=>setStep(Number(b.dataset.step))));
-  root.querySelector('#gesture-reset').addEventListener('click',()=>setStep(step));
-  root.querySelector('#gesture-next').addEventListener('click',()=>setStep((step+1)%3));
-  piece.addEventListener('pointerdown',e=>{
-    if(!e.isPrimary)return;
-    e.preventDefault();piece.setPointerCapture(e.pointerId);
-    gesture={id:e.pointerId,sx:e.clientX,sy:e.clientY,px:e.clientX,py:e.clientY,at:performance.now(),lastAt:performance.now(),vx:0,vy:0,moved:false};
-  });
-  piece.addEventListener('pointermove',e=>{
-    if(!gesture||e.pointerId!==gesture.id)return;
-    const now=performance.now(),dt=Math.max(now-gesture.lastAt,1),dx=e.clientX-gesture.px,dy=e.clientY-gesture.py;
-    gesture.vx=dx/dt;gesture.vy=dy/dt;gesture.px=e.clientX;gesture.py=e.clientY;gesture.lastAt=now;
-    if(Math.hypot(e.clientX-gesture.sx,e.clientY-gesture.sy)>9)gesture.moved=true;
-    if(step===1){x+=dx;y+=dy;render()}
-  });
-  piece.addEventListener('pointerup',e=>{
-    if(!gesture||e.pointerId!==gesture.id)return;
-    const g=gesture;gesture=null;
-    const dx=e.clientX-g.sx,dy=e.clientY-g.sy,dist=Math.hypot(dx,dy),elapsed=Math.max(performance.now()-g.at,1);
-    if(step===0){if(dist<12){angle-=90;render();success('回ったね！')}else feedback.textContent='ゆっくり一度タップしてみよう';return}
-    if(step===1){
-      const a=piece.getBoundingClientRect(),b=target.getBoundingClientRect();
-      const overlap=a.left<b.right&&a.right>b.left&&a.top<b.bottom&&a.bottom>b.top;
-      if(overlap)success('上手に動かせたね！');else feedback.textContent='もう少し右の「ここへ！」まで動かしてみよう';
-      return;
-    }
-    // Demo heuristic only: distance + overall gesture speed; tune against the real app.
-    const speed=dist/elapsed;
-    if(dist>45&&speed>0.45){
-      if(Math.abs(dx)>Math.abs(dy)){flipX*=-1;success('左右にひっくり返った！')}
-      else{flipY*=-1;success('上下にひっくり返った！')}
-      render();
-    }else feedback.textContent='もう少し速く、シュッと払ってみよう！';
-  });
-  piece.addEventListener('pointercancel',()=>{gesture=null});
-  setStep(0);
-})();
-</script>
+<script src="tutorial.js"></script>

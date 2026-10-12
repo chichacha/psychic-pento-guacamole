@@ -116,7 +116,7 @@
     "href": "analysis/compare_6x10_solutions.html#run-the-comparison",
     "title": "Do Dad’s and Chi’s 6×10 pentomino solutions match?",
     "section": "Run the comparison",
-    "text": "Run the comparison\nRun from the repository root in RStudio. The script writes derived CSVs to data/derived/.\n\n\nCode\nsource(here::here(\"R\", \"match_6x10_solutions.R\"))\n\n\n# A tibble: 1 × 10\n  dad_solutions chi_solutions exact_pairs symmetry_candidate_pairs matched_dad\n          &lt;int&gt;         &lt;int&gt;       &lt;int&gt;                    &lt;int&gt;       &lt;int&gt;\n1          2339          2339        1142                     2339        2339\n# ℹ 5 more variables: matched_chi &lt;int&gt;, uniquely_matched_pairs &lt;int&gt;,\n#   ambiguous_candidate_pairs &lt;int&gt;, unmatched_dad &lt;int&gt;, unmatched_chi &lt;int&gt;\n\n\nCode\nsummary\n\n\nfunction (object, ...) \nUseMethod(\"summary\")\n&lt;bytecode: 0x11888cc50&gt;\n&lt;environment: namespace:base&gt;"
+    "text": "Run the comparison\nRun from the repository root in RStudio. The script writes derived CSVs to data/derived/.\n\n\nCode\nsource(here::here(\"R\", \"match_6x10_solutions.R\"))\n\n\n# A tibble: 1 × 10\n  dad_solutions chi_solutions exact_pairs symmetry_candidate_pairs matched_dad\n          &lt;int&gt;         &lt;int&gt;       &lt;int&gt;                    &lt;int&gt;       &lt;int&gt;\n1          2339          2339        1142                     2339        2339\n# ℹ 5 more variables: matched_chi &lt;int&gt;, uniquely_matched_pairs &lt;int&gt;,\n#   ambiguous_candidate_pairs &lt;int&gt;, unmatched_dad &lt;int&gt;, unmatched_chi &lt;int&gt;\n\n\nCode\nsummary\n\n\nfunction (object, ...) \nUseMethod(\"summary\")\n&lt;bytecode: 0x125f4fed8&gt;\n&lt;environment: namespace:base&gt;"
   },
   {
     "objectID": "analysis/compare_6x10_solutions.html#inspect-unmatched-or-ambiguous-records",
@@ -140,6 +140,153 @@
     "text": "Caveats and follow-ups\n\nThe decoding assumes Dad’s JSON coordinates are [row_offset, col_offset, z] and anchors are encoded in tenths of a cell; validation will fail if this assumption is wrong.\nBoard symmetries here preserve 6×10 dimensions; 90° and 270° rotations would produce 10×6 boards.\nIf the source datasets were deduplicated using different symmetry conventions, multiple rows may share a canonical key.\nLevel describes Dad’s puzzle/hint progression and is not needed for whole-board equivalence.\nThis is research documentation, not a public story or a source of authoritative puzzle enumeration counts."
   },
   {
+    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html",
+    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html",
+    "title": "How to Play Pentomino",
+    "section": "",
+    "text": "Five little squares. So many possible shapes. And one very important question: where does this piece go?\nPentomino is a puzzle about finding the right place and the right orientation for each piece. Sometimes a piece needs a little turn. Sometimes it needs a flip. And sometimes it seems determined to be difficult. 😆\nThis guide is here when you need a hand. You don’t have to read it all before playing. Jump to whatever you’re curious about.\n\n\n\n\n\n\nWould you rather try it than read about it?\n\n\n\nHead over to Let’s Play! — Gesture Practice to practice tapping, dragging, and flicking with a piece. The interactive tutorial is currently in Japanese.\n\n\n\n\n\n\nTap a piece that hasn’t been placed on the board to rotate it 90° counterclockwise.\nNot quite the right angle? Tap again. And again. Round it goes!\n\n\n\nTouch and hold a piece, then drag it slowly to move it around.\n\nWhen you’ve grabbed a piece, its outline turns red.\nBring it near a valid spot on the board and it snaps toward that spot; its outline turns blue.\nRelease your finger to put it there.\n\nBlue doesn’t mean you’ve solved it! It means the piece fits there physically. You can check whether it’s the correct placement later.\n\n\n\nGrab a piece, then make a quick movement and release your finger. That’s a flick!\n\n\n\nFlick direction\nWhat happens\n\n\n\n\n← Left or → Right\nFlip horizontally (mirror left to right)\n\n\n↑ Up or ↓ Down\nFlip vertically (turn upside down)\n\n\n\nDon’t worry: a flick won’t send your piece flying off the screen. It flips where you release it.\n\n\n\n\n\n\nSwipe or flick? What’s the difference?\n\n\n\nThe app decides based on how fast your finger is moving when you let go. Move slowly to reposition a piece; flick quickly to flip it. If the app keeps guessing wrong, try the sensitivity setting under the gear icon. The default threshold is 70 mm/second.\n\n\n\n\n\n\nPentomino has three difficulty modes. No need to earn a black belt on your first day!\n\n\nPractice picking up, moving, and placing pieces.\nThe pieces are presented in placement order, with their orientations already set correctly. You can concentrate on getting comfortable with the controls.\nBest place to start if you’re new.\n\n\n\nPractice rotating and flipping pieces into position.\nThe pieces still appear in placement order, but this time their orientations aren’t prepared for you. You’ll need your tap and flick skills!\n\n\n\nFigure out the solution for yourself.\nThe pieces appear in alphabetical order, and their orientations aren’t preset. You’ll decide which piece goes where — and how it should face.\n\n\n\n\n\n\nYou can change belts whenever you like\n\n\n\nYour progress is saved separately for each belt. Switch modes to suit your mood without losing your place in the others.\n\n\n\n\n\n\n\n\nTap Check to see whether your placed pieces are correct.\nThere’s no point deduction if everything you’ve placed is correct. Incorrect placements, however, may cost points.\n\n\n\nSometimes the pieces simply refuse to cooperate. That’s what Hint is for.\nWhen you request a hint, the app first checks the board and removes incorrectly placed pieces. Then it places one remaining piece in its correct position, working backward from the end of the solution’s placement order.\nThe point deduction covers the number of incorrectly placed pieces plus one hint. Helpful? Absolutely. Free? Not quite! 😉\n\n\n\n\nThere are 10 levels, L1 through L10, with 2,339 puzzles altogether. That’s enough to keep even a dedicated puzzle fan busy for a while.\nUse the ← and → buttons to move between puzzles:\n\nTap: move one puzzle at a time.\nHold for at least 1 second: move by 10 puzzles, roughly every 0.3 seconds.\nKeep holding beyond 3 seconds: move by 100 puzzles, roughly every 0.3 seconds.\n\nPuzzle numbers stay within the range 1–2,339.\n\n\n\n\n\nLevel\nPuzzle numbers\nNumber of puzzles\n\n\n\n\nL1\n1–7\n7\n\n\nL2\n8–40\n33\n\n\nL3\n41–156\n116\n\n\nL4\n157–395\n239\n\n\nL5\n396–668\n273\n\n\nL6\n669–1145\n477\n\n\nL7\n1146–1684\n539\n\n\nL8\n1685–2124\n440\n\n\nL9\n2125–2308\n184\n\n\nL10\n2309–2339\n31\n\n\nTotal\n\n2,339\n\n\n\n\n\n\n\nTap the gear icon at the top of the screen to open Settings. You can also press and hold the puzzle title.\nLanguage: Choose from Japanese, English, Spanish, French, German, Korean, Simplified Chinese, or Traditional Chinese. The instructions change to match your selection.\nCompletion sound: Turn the sound played when you finish a puzzle on or off.\nPlacement feedback: Depending on your device, the app uses either vibration or sound to signal a placement — not both at once.\nDifficulty and history: Progress is stored separately for each belt. Clear History removes the record for the currently selected belt only. Make sure that’s what you want before clearing it.\nSensitivity: Adjust the threshold that separates a swipe from a flick, along with the duration or strength of placement feedback.\n\n\n\nThere’s a reason the pieces arrive in a particular order in White and Yellow Belt modes.\nWhen the app constructs a solution, it fills available spaces beginning at the top left, moving through a column before proceeding to the right. The beginner modes follow that placement order to help you learn.\nSo yes, there is a method to the madness. Your puzzle pieces aren’t entirely making it up as they go!\n\n\n\nIf your first attempt looks like a pile of misplaced shapes, you’re in good company.\nRemember the three moves: tap to rotate, swipe to move, flick to flip.\nThen experiment. Try another angle. Ask for a hint if you need one. Most importantly, have fun discovering where those five-square pieces belong. 🧩\n\n\n\n\n\n\nAbout this guide\n\n\n\nThis is a friendlier English adaptation of the current Japanese app instructions. Features, controls, and scoring details may change between app versions. The interactive gesture tutorial linked above is a separate prototype and may not perfectly match the app’s gesture sensitivity."
+  },
+  {
+    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#three-little-moves-to-master",
+    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#three-little-moves-to-master",
+    "title": "How to Play Pentomino",
+    "section": "",
+    "text": "Tap a piece that hasn’t been placed on the board to rotate it 90° counterclockwise.\nNot quite the right angle? Tap again. And again. Round it goes!\n\n\n\nTouch and hold a piece, then drag it slowly to move it around.\n\nWhen you’ve grabbed a piece, its outline turns red.\nBring it near a valid spot on the board and it snaps toward that spot; its outline turns blue.\nRelease your finger to put it there.\n\nBlue doesn’t mean you’ve solved it! It means the piece fits there physically. You can check whether it’s the correct placement later.\n\n\n\nGrab a piece, then make a quick movement and release your finger. That’s a flick!\n\n\n\nFlick direction\nWhat happens\n\n\n\n\n← Left or → Right\nFlip horizontally (mirror left to right)\n\n\n↑ Up or ↓ Down\nFlip vertically (turn upside down)\n\n\n\nDon’t worry: a flick won’t send your piece flying off the screen. It flips where you release it.\n\n\n\n\n\n\nSwipe or flick? What’s the difference?\n\n\n\nThe app decides based on how fast your finger is moving when you let go. Move slowly to reposition a piece; flick quickly to flip it. If the app keeps guessing wrong, try the sensitivity setting under the gear icon. The default threshold is 70 mm/second."
+  },
+  {
+    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#choose-your-belt",
+    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#choose-your-belt",
+    "title": "How to Play Pentomino",
+    "section": "",
+    "text": "Pentomino has three difficulty modes. No need to earn a black belt on your first day!\n\n\nPractice picking up, moving, and placing pieces.\nThe pieces are presented in placement order, with their orientations already set correctly. You can concentrate on getting comfortable with the controls.\nBest place to start if you’re new.\n\n\n\nPractice rotating and flipping pieces into position.\nThe pieces still appear in placement order, but this time their orientations aren’t prepared for you. You’ll need your tap and flick skills!\n\n\n\nFigure out the solution for yourself.\nThe pieces appear in alphabetical order, and their orientations aren’t preset. You’ll decide which piece goes where — and how it should face.\n\n\n\n\n\n\nYou can change belts whenever you like\n\n\n\nYour progress is saved separately for each belt. Switch modes to suit your mood without losing your place in the others."
+  },
+  {
+    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#a-little-help-when-youre-stuck",
+    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#a-little-help-when-youre-stuck",
+    "title": "How to Play Pentomino",
+    "section": "",
+    "text": "Tap Check to see whether your placed pieces are correct.\nThere’s no point deduction if everything you’ve placed is correct. Incorrect placements, however, may cost points.\n\n\n\nSometimes the pieces simply refuse to cooperate. That’s what Hint is for.\nWhen you request a hint, the app first checks the board and removes incorrectly placed pieces. Then it places one remaining piece in its correct position, working backward from the end of the solution’s placement order.\nThe point deduction covers the number of incorrectly placed pieces plus one hint. Helpful? Absolutely. Free? Not quite! 😉"
+  },
+  {
+    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#pick-a-puzzle-2339-to-explore",
+    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#pick-a-puzzle-2339-to-explore",
+    "title": "How to Play Pentomino",
+    "section": "",
+    "text": "There are 10 levels, L1 through L10, with 2,339 puzzles altogether. That’s enough to keep even a dedicated puzzle fan busy for a while.\nUse the ← and → buttons to move between puzzles:\n\nTap: move one puzzle at a time.\nHold for at least 1 second: move by 10 puzzles, roughly every 0.3 seconds.\nKeep holding beyond 3 seconds: move by 100 puzzles, roughly every 0.3 seconds.\n\nPuzzle numbers stay within the range 1–2,339.\n\n\n\n\n\nLevel\nPuzzle numbers\nNumber of puzzles\n\n\n\n\nL1\n1–7\n7\n\n\nL2\n8–40\n33\n\n\nL3\n41–156\n116\n\n\nL4\n157–395\n239\n\n\nL5\n396–668\n273\n\n\nL6\n669–1145\n477\n\n\nL7\n1146–1684\n539\n\n\nL8\n1685–2124\n440\n\n\nL9\n2125–2308\n184\n\n\nL10\n2309–2339\n31\n\n\nTotal\n\n2,339"
+  },
+  {
+    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#whats-behind-the-gear-icon",
+    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#whats-behind-the-gear-icon",
+    "title": "How to Play Pentomino",
+    "section": "",
+    "text": "Tap the gear icon at the top of the screen to open Settings. You can also press and hold the puzzle title.\nLanguage: Choose from Japanese, English, Spanish, French, German, Korean, Simplified Chinese, or Traditional Chinese. The instructions change to match your selection.\nCompletion sound: Turn the sound played when you finish a puzzle on or off.\nPlacement feedback: Depending on your device, the app uses either vibration or sound to signal a placement — not both at once.\nDifficulty and history: Progress is stored separately for each belt. Clear History removes the record for the currently selected belt only. Make sure that’s what you want before clearing it.\nSensitivity: Adjust the threshold that separates a swipe from a flick, along with the duration or strength of placement feedback."
+  },
+  {
+    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#a-peek-behind-the-puzzle",
+    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#a-peek-behind-the-puzzle",
+    "title": "How to Play Pentomino",
+    "section": "",
+    "text": "There’s a reason the pieces arrive in a particular order in White and Yellow Belt modes.\nWhen the app constructs a solution, it fills available spaces beginning at the top left, moving through a column before proceeding to the right. The beginner modes follow that placement order to help you learn.\nSo yes, there is a method to the madness. Your puzzle pieces aren’t entirely making it up as they go!"
+  },
+  {
+    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#ready-to-give-it-a-go",
+    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#ready-to-give-it-a-go",
+    "title": "How to Play Pentomino",
+    "section": "",
+    "text": "If your first attempt looks like a pile of misplaced shapes, you’re in good company.\nRemember the three moves: tap to rotate, swipe to move, flick to flip.\nThen experiment. Try another angle. Ask for a hint if you need one. Most importantly, have fun discovering where those five-square pieces belong. 🧩\n\n\n\n\n\n\nAbout this guide\n\n\n\nThis is a friendlier English adaptation of the current Japanese app instructions. Features, controls, and scoring details may change between app versions. The interactive gesture tutorial linked above is a separate prototype and may not perfectly match the app’s gesture sensitivity."
+  },
+  {
+    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html",
+    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html",
+    "title": "Pentominoの遊び方",
+    "section": "",
+    "text": "形も向きも、ちょっとずつ違うピースたち。うまく収まる場所を探して、パズルを完成させましょう。\n「どこに置けばいいの？」「回したいのに動いちゃった！」——そんなときのための遊び方ガイドです。最初から全部読む必要はありません。困ったところだけ、のぞいてみてください。\n\n\n\n\n\n\n読むより先に、さわってみたい？\n\n\n\nまずは遊んでみよう！ で、タップ・スワイプ・フリックを練習できます。\n\n\n\n\n\n\nまだ盤面にはめていないピースをポンとタップすると、反時計回りに90度回転します。\n一度で合わなければ、もう一度。くるっ、くるっ。向きを変えてみましょう。\n\n\n\nピースに指を置いたまま、ゆっくり動かすと移動できます。\n\nつかんでいる間は、ピースの輪郭が赤色になります。\n盤面の置ける場所に近づくと、ピースがそこに吸い寄せられ、輪郭が青色になります。\nそのまま指を離すと、そこに置けます。\n\n青くなった＝正解！ ではありません。 「そこには置けるよ」という合図です。正解かどうかは、あとでチェックできます。\n\n\n\nピースをつかんだら、すばやく払って指を離す。これがフリックです。\n\n\n\n指の動き\nピースの変化\n\n\n\n\n← または → にシュッ\n左右反転\n\n\n↑ または ↓ にシュッ\n上下反転\n\n\n\nフリックしても、ピースは画面の外へ飛んでいきません。指を離した場所でひっくり返ります。\n\n\n\n\n\n\nスワイプとフリック、どう違うの？\n\n\n\nアプリは、指を離すときの速さで判断しています。ゆっくりなら移動、すばやく払えば反転。うまく区別されないときは、歯車マークの「感度調整」を試してください。初期設定の境目は 70 mm/秒 です。\n\n\n\n\n\n\nPentominoには、３つの難易度があります。最初から黒帯に挑む必要はありません！\n\n\nピースを動かして、はめる練習。\nピースは置く順番に並び、向きも最初から合っています。まずは「つかむ」「運ぶ」「置く」に慣れましょう。はじめての人におすすめです。\n\n\n\n回転と反転を使って、向きを合わせる練習。\nピースの順番は白帯と同じですが、向きはそろっていません。タップやフリックの出番です。\n\n\n\n自分で考えて、パズルを解きます。\nピースはアルファベット順で、向きもそろっていません。どこに何を置くか、腕の見せどころです。\n\n\n\n\n\n\n途中で帯を変えても大丈夫\n\n\n\n白帯・黄帯・黒帯の途中経過は別々に保存されます。気分に合わせて切り替えてください。\n\n\n\n\n\n\n\n\n今置いているピースが正しいかどうかを調べます。自信がなくなったら、遠慮なくチェック！\n正しく置けていれば減点されません。 ただし、間違いがある場合は減点の対象になります。\n\n\n\nどうしても先に進めないときは、ヒントを使いましょう。\nヒントを押すと、まず検査が行われ、間違った配置が取り除かれます。その後、まだ置いていないピースのうち、解答の後ろ側から順に１つを正しい場所へ置いてくれます。\n間違っていたピースの数＋ヒント１回分が減点されます。頼れる助っ人ですが、ちょっぴり代償もあります。\n\n\n\n\n問題は L1〜L10 の10レベル。全部で 2,339問 あります。なかなかの長旅です。😆\n画面の ← → ボタンで問題を切り替えます。\n\nポンと押す： １問ずつ移動\n１秒以上押し続ける： 約0.3秒ごとに10問ずつ移動\n３秒を超えて押し続ける： 約0.3秒ごとに100問ずつ移動\n\n問題番号は１〜2,339の範囲で切り替わります。\n\n\n\n\n\nレベル\n問題番号\n問題数\n\n\n\n\nL1\n1–7\n7\n\n\nL2\n8–40\n33\n\n\nL3\n41–156\n116\n\n\nL4\n157–395\n239\n\n\nL5\n396–668\n273\n\n\nL6\n669–1145\n477\n\n\nL7\n1146–1684\n539\n\n\nL8\n1685–2124\n440\n\n\nL9\n2125–2308\n184\n\n\nL10\n2309–2339\n31\n\n\n合計\n\n2,339\n\n\n\n\n\n\n\n画面上部の歯車マークを押すと、設定が開きます。パズル名を長押ししても開けます。\n言語： 日本語、English、Español、Français、Deutsch、한국어、简体中文、繁體中文の８言語から選べます。説明文も選んだ言語に切り替わります。\n完成の音： 完成時の音をオン・オフできます。\nはめ込みの合図： 機種によって振動か音のどちらかで知らせます。両方同時には鳴りません。\n難易度と履歴： 帯ごとに進み具合が保存されます。「履歴を消す」を押すと、その帯の記録だけを消せます。消す前に確認しましょう。\n感度調整： スワイプとフリックの判定の境目や、はめ込みの合図の長さ・強さを調整できます。\n\n\n\nこのアプリでは、解答を組み立てるとき、左上から順に空いた場所を埋めていきます。その列が埋まったら、右へ進みます。\n白帯と黄帯のピースが「置く順番」に並んでいるのは、この仕組みに合わせているから。ちゃんと理由があるんです。\n\n\n\n最初はピースが言うことを聞いてくれなくても、大丈夫。\nポン、すいっ、シュッ。 ３つの指ワザを覚えたら、あとは少しずつ。\nさあ、Pentominoの世界で遊んでみましょう！ 🧩\n\n\n\n\n\n\nこのガイドについて\n\n\n\nこのページは現行のアプリ説明をもとに、初めて遊ぶ人にも読みやすいよう書き直したものです。操作や採点の詳細は、アプリのバージョンによって変わる場合があります。"
+  },
+  {
+    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#まず覚えたい３つの指ワザ",
+    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#まず覚えたい３つの指ワザ",
+    "title": "Pentominoの遊び方",
+    "section": "",
+    "text": "まだ盤面にはめていないピースをポンとタップすると、反時計回りに90度回転します。\n一度で合わなければ、もう一度。くるっ、くるっ。向きを変えてみましょう。\n\n\n\nピースに指を置いたまま、ゆっくり動かすと移動できます。\n\nつかんでいる間は、ピースの輪郭が赤色になります。\n盤面の置ける場所に近づくと、ピースがそこに吸い寄せられ、輪郭が青色になります。\nそのまま指を離すと、そこに置けます。\n\n青くなった＝正解！ ではありません。 「そこには置けるよ」という合図です。正解かどうかは、あとでチェックできます。\n\n\n\nピースをつかんだら、すばやく払って指を離す。これがフリックです。\n\n\n\n指の動き\nピースの変化\n\n\n\n\n← または → にシュッ\n左右反転\n\n\n↑ または ↓ にシュッ\n上下反転\n\n\n\nフリックしても、ピースは画面の外へ飛んでいきません。指を離した場所でひっくり返ります。\n\n\n\n\n\n\nスワイプとフリック、どう違うの？\n\n\n\nアプリは、指を離すときの速さで判断しています。ゆっくりなら移動、すばやく払えば反転。うまく区別されないときは、歯車マークの「感度調整」を試してください。初期設定の境目は 70 mm/秒 です。"
+  },
+  {
+    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#どの帯から始める",
+    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#どの帯から始める",
+    "title": "Pentominoの遊び方",
+    "section": "",
+    "text": "Pentominoには、３つの難易度があります。最初から黒帯に挑む必要はありません！\n\n\nピースを動かして、はめる練習。\nピースは置く順番に並び、向きも最初から合っています。まずは「つかむ」「運ぶ」「置く」に慣れましょう。はじめての人におすすめです。\n\n\n\n回転と反転を使って、向きを合わせる練習。\nピースの順番は白帯と同じですが、向きはそろっていません。タップやフリックの出番です。\n\n\n\n自分で考えて、パズルを解きます。\nピースはアルファベット順で、向きもそろっていません。どこに何を置くか、腕の見せどころです。\n\n\n\n\n\n\n途中で帯を変えても大丈夫\n\n\n\n白帯・黄帯・黒帯の途中経過は別々に保存されます。気分に合わせて切り替えてください。"
+  },
+  {
+    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#困ったときのお助けボタン",
+    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#困ったときのお助けボタン",
+    "title": "Pentominoの遊び方",
+    "section": "",
+    "text": "今置いているピースが正しいかどうかを調べます。自信がなくなったら、遠慮なくチェック！\n正しく置けていれば減点されません。 ただし、間違いがある場合は減点の対象になります。\n\n\n\nどうしても先に進めないときは、ヒントを使いましょう。\nヒントを押すと、まず検査が行われ、間違った配置が取り除かれます。その後、まだ置いていないピースのうち、解答の後ろ側から順に１つを正しい場所へ置いてくれます。\n間違っていたピースの数＋ヒント１回分が減点されます。頼れる助っ人ですが、ちょっぴり代償もあります。"
+  },
+  {
+    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#問題を選ぼう全部で2339問",
+    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#問題を選ぼう全部で2339問",
+    "title": "Pentominoの遊び方",
+    "section": "",
+    "text": "問題は L1〜L10 の10レベル。全部で 2,339問 あります。なかなかの長旅です。😆\n画面の ← → ボタンで問題を切り替えます。\n\nポンと押す： １問ずつ移動\n１秒以上押し続ける： 約0.3秒ごとに10問ずつ移動\n３秒を超えて押し続ける： 約0.3秒ごとに100問ずつ移動\n\n問題番号は１〜2,339の範囲で切り替わります。\n\n\n\n\n\nレベル\n問題番号\n問題数\n\n\n\n\nL1\n1–7\n7\n\n\nL2\n8–40\n33\n\n\nL3\n41–156\n116\n\n\nL4\n157–395\n239\n\n\nL5\n396–668\n273\n\n\nL6\n669–1145\n477\n\n\nL7\n1146–1684\n539\n\n\nL8\n1685–2124\n440\n\n\nL9\n2125–2308\n184\n\n\nL10\n2309–2339\n31\n\n\n合計\n\n2,339"
+  },
+  {
+    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#歯車マークの中には何がある",
+    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#歯車マークの中には何がある",
+    "title": "Pentominoの遊び方",
+    "section": "",
+    "text": "画面上部の歯車マークを押すと、設定が開きます。パズル名を長押ししても開けます。\n言語： 日本語、English、Español、Français、Deutsch、한국어、简体中文、繁體中文の８言語から選べます。説明文も選んだ言語に切り替わります。\n完成の音： 完成時の音をオン・オフできます。\nはめ込みの合図： 機種によって振動か音のどちらかで知らせます。両方同時には鳴りません。\n難易度と履歴： 帯ごとに進み具合が保存されます。「履歴を消す」を押すと、その帯の記録だけを消せます。消す前に確認しましょう。\n感度調整： スワイプとフリックの判定の境目や、はめ込みの合図の長さ・強さを調整できます。"
+  },
+  {
+    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#ちょっとだけパズルの裏話",
+    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#ちょっとだけパズルの裏話",
+    "title": "Pentominoの遊び方",
+    "section": "",
+    "text": "このアプリでは、解答を組み立てるとき、左上から順に空いた場所を埋めていきます。その列が埋まったら、右へ進みます。\n白帯と黄帯のピースが「置く順番」に並んでいるのは、この仕組みに合わせているから。ちゃんと理由があるんです。"
+  },
+  {
+    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#さいごに",
+    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#さいごに",
+    "title": "Pentominoの遊び方",
+    "section": "",
+    "text": "最初はピースが言うことを聞いてくれなくても、大丈夫。\nポン、すいっ、シュッ。 ３つの指ワザを覚えたら、あとは少しずつ。\nさあ、Pentominoの世界で遊んでみましょう！ 🧩\n\n\n\n\n\n\nこのガイドについて\n\n\n\nこのページは現行のアプリ説明をもとに、初めて遊ぶ人にも読みやすいよう書き直したものです。操作や採点の詳細は、アプリのバージョンによって変わる場合があります。"
+  },
+  {
+    "objectID": "neighbours/index.html",
+    "href": "neighbours/index.html",
+    "title": "おとなりさん研究所",
+    "section": "",
+    "text": "COMING LATER · EXPERIMENTS\n\n\nおとなりさん研究所\n実際の解答データを使って、辺で接するピースを調べる場所。\nこのページは準備中です。ナビゲーションにはまだ載せていません。\n← ホームに戻る"
+  },
+  {
+    "objectID": "experimental/index.html",
+    "href": "experimental/index.html",
+    "title": "ひみつの実験室",
+    "section": "",
+    "text": "🧪 ここは、五マスの世界の実験室。\n思いついたことを、まずは作ってみる場所です。 まだ完成していないものも、ちょっとおかしなものもあります。\n「これ、おもしろい！」も「ここ、わからない！」も大歓迎。 みんなのひとことで、次の発明が生まれるかも？"
+  },
+  {
+    "objectID": "experimental/index.html#まずは遊んでみよう",
+    "href": "experimental/index.html#まずは遊んでみよう",
+    "title": "ひみつの実験室",
+    "section": "🧩 まずは遊んでみよう！",
+    "text": "🧩 まずは遊んでみよう！\nペントミノのピースを動かす、小さな練習場です。\nタップで、くるっ！ 90度回転。\nドラッグで、すいっ！ 好きな場所へ移動。\nフリックで、ぱたん！ ピースを裏返し。\n👉 ジェスチャーを練習する"
+  },
+  {
+    "objectID": "experimental/index.html#ペントミノの遊び方",
+    "href": "experimental/index.html#ペントミノの遊び方",
+    "title": "ひみつの実験室",
+    "section": "📖 ペントミノの遊び方",
+    "text": "📖 ペントミノの遊び方\n「白帯」から「黒帯」まで。目指せ、ペントミノ名人！🥋\n操作のコツやヒントの使い方を、ゆっくり紹介します。\n日本語で読む Read in English"
+  },
+  {
+    "objectID": "experimental/index.html#ただいま考え中",
+    "href": "experimental/index.html#ただいま考え中",
+    "title": "ひみつの実験室",
+    "section": "🔮 ただいま考え中…",
+    "text": "🔮 ただいま考え中…\n五マスの仲間たちに服を着せてみたり、 カードに変身させてみたり、 新聞を発行してみたり。\nまだ形になっていないアイデアも、ここから少しずつ育てていきます。\n\n⚠️ 実験室の中身は、ときどき予告なく変わります。そこも含めて、お楽しみに。"
+  },
+  {
     "objectID": "experimental/gesture-tutorial/index.html",
     "href": "experimental/gesture-tutorial/index.html",
     "title": "まずは遊んでみよう！",
@@ -151,14 +298,7 @@
     "href": "experimental/gesture-tutorial/index.html#できたらパズルに挑戦",
     "title": "まずは遊んでみよう！",
     "section": "できたら、パズルに挑戦！ 🎉",
-    "text": "できたら、パズルに挑戦！ 🎉\nまずは 初心者（白帯） から。うまくいかなくても、ゆっくりで大丈夫です。\nパズルで遊ぶ · くわしい説明を見る"
-  },
-  {
-    "objectID": "neighbours/index.html",
-    "href": "neighbours/index.html",
-    "title": "おとなりさん研究所",
-    "section": "",
-    "text": "COMING LATER · EXPERIMENTS\n\n\nおとなりさん研究所\n実際の解答データを使って、辺で接するピースを調べる場所。\nこのページは準備中です。ナビゲーションにはまだ載せていません。\n← ホームに戻る"
+    "text": "できたら、パズルに挑戦！ 🎉\nまずは 初心者（白帯） から。うまくいかなくても、ゆっくりで大丈夫です。\nパズルで遊ぶ · 📖 くわしい遊び方： 日本語 / English"
   },
   {
     "objectID": "discover/index.html",

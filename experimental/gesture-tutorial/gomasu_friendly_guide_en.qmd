@@ -1,0 +1,163 @@
+---
+title: "How to Play Pentomino"
+subtitle: "Tap, slide, flick! A friendly guide to getting along with your puzzle pieces"
+lang: en
+format:
+  html:
+    toc: true
+    toc-title: "On this page"
+    toc-depth: 2
+    smooth-scroll: true
+    code-copy: false
+---
+
+# Welcome to the World of Pentomino! 🧩
+
+Five little squares. So many possible shapes. And one very important question: **where does this piece go?**
+
+Pentomino is a puzzle about finding the right place *and* the right orientation for each piece. Sometimes a piece needs a little turn. Sometimes it needs a flip. And sometimes it seems determined to be difficult. 😆
+
+This guide is here when you need a hand. **You don't have to read it all before playing.** Jump to whatever you're curious about.
+
+::: {.callout-tip title="Would you rather try it than read about it?"}
+Head over to [Let's Play! — Gesture Practice](index.qmd) to practice tapping, dragging, and flicking with a piece. The interactive tutorial is currently in Japanese.
+:::
+
+## Three Little Moves to Master
+
+### ① Tap: Give It a Twirl! 🔄
+
+**Tap a piece that hasn't been placed on the board** to rotate it **90° counterclockwise**.
+
+Not quite the right angle? Tap again. And again. Round it goes!
+
+### ② Swipe: Take It for a Stroll! 👆
+
+**Touch and hold a piece, then drag it slowly** to move it around.
+
+- When you've grabbed a piece, its **outline turns red**.
+- Bring it near a valid spot on the board and it **snaps toward that spot; its outline turns blue**.
+- Release your finger to put it there.
+
+**Blue doesn't mean you've solved it!** It means the piece *fits there physically*. You can check whether it's the correct placement later.
+
+### ③ Flick: Flip It! ↔️
+
+Grab a piece, then **make a quick movement and release your finger**. That's a flick!
+
+| Flick direction | What happens |
+|---|---|
+| ← Left or → Right | **Flip horizontally** (mirror left to right) |
+| ↑ Up or ↓ Down | **Flip vertically** (turn upside down) |
+
+Don't worry: a flick won't send your piece flying off the screen. It flips **where you release it**.
+
+::: {.callout-note title="Swipe or flick? What's the difference?"}
+The app decides based on **how fast your finger is moving when you let go**. Move slowly to reposition a piece; flick quickly to flip it. If the app keeps guessing wrong, try the sensitivity setting under the gear icon. The default threshold is **70 mm/second**.
+:::
+
+## Choose Your Belt 🥋
+
+Pentomino has three difficulty modes. No need to earn a black belt on your first day!
+
+### ⚪ White Belt: First Steps
+
+**Practice picking up, moving, and placing pieces.**
+
+The pieces are presented in placement order, with their orientations already set correctly. You can concentrate on getting comfortable with the controls.
+
+**Best place to start if you're new.**
+
+### 🟡 Yellow Belt: Time to Twist and Flip
+
+**Practice rotating and flipping pieces into position.**
+
+The pieces still appear in placement order, but this time their orientations aren't prepared for you. You'll need your tap and flick skills!
+
+### ⚫ Black Belt: The Real Challenge
+
+**Figure out the solution for yourself.**
+
+The pieces appear in alphabetical order, and their orientations aren't preset. You'll decide which piece goes where — and how it should face.
+
+::: {.callout-tip title="You can change belts whenever you like"}
+Your progress is **saved separately for each belt**. Switch modes to suit your mood without losing your place in the others.
+:::
+
+## A Little Help When You're Stuck
+
+### Check: Did I Get It Right? 🔎
+
+Tap **Check** to see whether your placed pieces are correct.
+
+There's **no point deduction if everything you've placed is correct**. Incorrect placements, however, may cost points.
+
+### Hint: Just One Little Clue! 💡
+
+Sometimes the pieces simply refuse to cooperate. That's what **Hint** is for.
+
+When you request a hint, the app first checks the board and removes incorrectly placed pieces. Then it places **one remaining piece in its correct position**, working backward from the end of the solution's placement order.
+
+The point deduction covers **the number of incorrectly placed pieces plus one hint**. Helpful? Absolutely. Free? Not quite! 😉
+
+## Pick a Puzzle: 2,339 to Explore!
+
+There are **10 levels, L1 through L10**, with **2,339 puzzles** altogether. That's enough to keep even a dedicated puzzle fan busy for a while.
+
+Use the **← and →** buttons to move between puzzles:
+
+- **Tap:** move one puzzle at a time.
+- **Hold for at least 1 second:** move by 10 puzzles, roughly every 0.3 seconds.
+- **Keep holding beyond 3 seconds:** move by 100 puzzles, roughly every 0.3 seconds.
+
+Puzzle numbers stay within the range **1–2,339**.
+
+### How Many Puzzles Are in Each Level?
+
+| Level | Puzzle numbers | Number of puzzles |
+|---|---|---:|
+| L1 | 1–7 | 7 |
+| L2 | 8–40 | 33 |
+| L3 | 41–156 | 116 |
+| L4 | 157–395 | 239 |
+| L5 | 396–668 | 273 |
+| L6 | 669–1145 | 477 |
+| L7 | 1146–1684 | 539 |
+| L8 | 1685–2124 | 440 |
+| L9 | 2125–2308 | 184 |
+| L10 | 2309–2339 | 31 |
+| **Total** | | **2,339** |
+
+## What's Behind the Gear Icon? ⚙️
+
+Tap the **gear icon** at the top of the screen to open Settings. You can also **press and hold the puzzle title**.
+
+**Language:** Choose from Japanese, English, Spanish, French, German, Korean, Simplified Chinese, or Traditional Chinese. The instructions change to match your selection.
+
+**Completion sound:** Turn the sound played when you finish a puzzle on or off.
+
+**Placement feedback:** Depending on your device, the app uses either vibration or sound to signal a placement — not both at once.
+
+**Difficulty and history:** Progress is stored separately for each belt. **Clear History** removes the record for the *currently selected belt only*. Make sure that's what you want before clearing it.
+
+**Sensitivity:** Adjust the threshold that separates a swipe from a flick, along with the duration or strength of placement feedback.
+
+## A Peek Behind the Puzzle 🧠
+
+There's a reason the pieces arrive in a particular order in White and Yellow Belt modes.
+
+When the app constructs a solution, it fills available spaces beginning at the **top left**, moving through a column before proceeding to the right. The beginner modes follow that placement order to help you learn.
+
+So yes, there *is* a method to the madness. Your puzzle pieces aren't entirely making it up as they go!
+
+## Ready to Give It a Go?
+
+If your first attempt looks like a pile of misplaced shapes, you're in good company.
+
+Remember the three moves: **tap to rotate, swipe to move, flick to flip**.
+
+Then experiment. Try another angle. Ask for a hint if you need one. Most importantly, have fun discovering where those five-square pieces belong. 🧩
+
+::: {.callout-note title="About this guide"}
+This is a friendlier English adaptation of the current Japanese app instructions. Features, controls, and scoring details may change between app versions. The interactive gesture tutorial linked above is a separate prototype and may not perfectly match the app's gesture sensitivity.
+:::
