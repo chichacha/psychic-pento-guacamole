@@ -1,128 +1,26 @@
-.gomasu-intro,
-.gomasu-tutorial {
-    max-width: 700px;
-    margin: 1.5rem auto
-}
-
-.gomasu-intro {
-    font-size: 1.1rem;
-    line-height: 1.8
-}
-
-.gomasu-tutorial {
-    border: 1px solid #e4dfd5;
-    border-radius: 20px;
-    padding: clamp(14px, 4vw, 28px);
-    background: #fffdf8;
-    color: #292b29
-}
-
-.gomasu-steps {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 7px
-}
-
-.gomasu-tutorial button {
-    font: inherit;
-    cursor: pointer;
-    border: 1px solid #a8afa7;
-    background: #fff;
-    border-radius: 12px;
-    padding: 12px 8px;
-    min-height: 48px;
-    color: #242b27
-}
-
-.gomasu-steps button.is-active {
-    background: #263f35;
-    color: #fff;
-    border-color: #263f35
-}
-
-.gomasu-tutorial h2 {
-    font-size: clamp(1.2rem, 4vw, 1.6rem);
-    margin: 24px 0 8px
-}
-
-.gomasu-tutorial p {
-    line-height: 1.7
-}
-
-.gomasu-stage {
-    height: 260px;
-    background: repeating-linear-gradient(0deg, transparent 0 29px, #e7e6df 30px), repeating-linear-gradient(90deg, transparent 0 29px, #e7e6df 30px), #f7f5ed;
-    border: 2px solid #e3e1d7;
-    border-radius: 16px;
-    position: relative;
-    overflow: hidden;
-    touch-action: none;
-    user-select: none
-}
-
-#gomasu-piece {
-    position: absolute;
-    left: calc(50% - 75px);
-    top: 55px;
-    overflow: visible;
-    touch-action: none;
-    cursor: grab;
-    transform-origin: center;
-    will-change: transform
-}
-
-#gomasu-piece:active {
-    cursor: grabbing
-}
-
-.gomasu-target {
-    display: none;
-    position: absolute;
-    right: 8%;
-    top: 90px;
-    border: 3px dashed #6a9d89;
-    border-radius: 12px;
-    width: 100px;
-    height: 100px;
-    place-items: center;
-    color: #436c5b;
-    font-weight: 700;
-    pointer-events: none
-}
-
-.gomasu-feedback {
-    text-align: center;
-    min-height: 2.4rem;
-    font-weight: 700;
-    color: #315f50
-}
-
-.gomasu-actions {
-    display: flex;
-    gap: 10px
-}
-
-.gomasu-actions button {
-    flex: 1
-}
-
-#gesture-next {
-    background: #263f35;
-    color: white;
-    border-color: #263f35
-}
-
-.gomasu-note {
-    font-size: .8rem;
-    color: #666
-}
-
-@media(max-width:420px) {
-    .gomasu-stage {
-        height: 235px
-    }
-
-    .gomasu-actions {
-        flex-direction: column
-    }
-}
+.gomasu-intro,.gomasu-tutorial{max-width:700px;margin:1.5rem auto}
+.gomasu-intro{font-size:1.1rem;line-height:1.8}
+.gomasu-tutorial{border:1px solid #e4dfd5;border-radius:20px;padding:clamp(14px,4vw,28px);background:#fffdf8;color:#292b29}
+.gomasu-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}
+.gomasu-tutorial button{font:inherit;cursor:pointer;border:1px solid #a8afa7;background:#fff;border-radius:12px;padding:12px 8px;min-height:48px;color:#242b27}
+.gomasu-steps button.is-active{background:#263f35;color:#fff;border-color:#263f35}
+.gomasu-tutorial h2{font-size:clamp(1.2rem,4vw,1.6rem);margin:24px 0 8px}
+.gomasu-tutorial p{line-height:1.7}
+.gomasu-stage{height:260px;background:repeating-linear-gradient(0deg,transparent 0 29px,#e7e6df 30px),repeating-linear-gradient(90deg,transparent 0 29px,#e7e6df 30px),#f7f5ed;border:2px solid #e3e1d7;border-radius:16px;position:relative;overflow:hidden;touch-action:none;user-select:none}
+#gomasu-piece,#gomasu-goal{position:absolute;width:150px;height:150px;left:calc(50% - 75px);top:55px;overflow:visible;transform-origin:center}
+#gomasu-piece{touch-action:none;cursor:grab;will-change:transform;z-index:2}
+#gomasu-piece:active{cursor:grabbing}
+#gomasu-goal{pointer-events:none;z-index:1;transition:opacity .2s}
+.gomasu-goal-label{position:absolute;top:15px;left:50%;transform:translateX(-50%);padding:3px 12px;border-radius:20px;background:#fffdf8;color:#466f60;border:1px dashed #6a9d89;font-weight:700;font-size:.85rem;white-space:nowrap;z-index:3;pointer-events:none}
+.gomasu-target{display:none;position:absolute;right:8%;top:90px;border:3px dashed #6a9d89;border-radius:12px;width:100px;height:100px;place-items:center;color:#436c5b;font-weight:700;pointer-events:none}
+.gomasu-gesture-cue{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);padding:5px 12px;border-radius:20px;background:#fffdf8e8;color:#315f50;font-weight:700;font-size:.85rem;white-space:nowrap;pointer-events:none;z-index:3}
+.gomasu-stage[data-lesson="drag"] #gomasu-goal,.gomasu-stage[data-lesson="drag"] .gomasu-goal-label{display:none}
+.gomasu-stage[data-lesson="drag"] .gomasu-target{display:grid}
+.gomasu-stage.is-complete #gomasu-goal{opacity:.25}
+.gomasu-stage.is-complete .gomasu-gesture-cue{background:#d9f3e4}
+.gomasu-feedback{text-align:center;min-height:2.4rem;font-weight:700;color:#315f50}
+.gomasu-actions{display:flex;gap:10px}
+.gomasu-actions button{flex:1}
+#gesture-next{background:#263f35;color:white;border-color:#263f35}
+.gomasu-note{font-size:.8rem;color:#666}
+@media(max-width:420px){.gomasu-stage{height:235px}.gomasu-actions{flex-direction:column}.gomasu-steps button{padding:10px 3px;font-size:.87rem}#gomasu-piece,#gomasu-goal{top:43px}.gomasu-target{right:5%;top:75px;width:85px;height:85px}}

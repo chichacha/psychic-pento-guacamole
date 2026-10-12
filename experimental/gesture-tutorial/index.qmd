@@ -23,14 +23,15 @@ resources:
 <div class="gomasu-tutorial" id="gomasu-tutorial">
   <div class="gomasu-steps" role="group" aria-label="練習を選ぶ">
     <button type="button" class="is-active" data-step="0">① タップ</button>
-    <button type="button" data-step="1">② スワイプ</button>
+    <button type="button" data-step="1">② ドラッグ</button>
     <button type="button" data-step="2">③ フリック</button>
   </div>
   <h2 id="gesture-title">① トン、とさわって回そう</h2>
-  <p id="gesture-instruction">ピースを一度タップしてみてね。90度、左に回ります。</p>
-  <div class="gomasu-stage" id="gesture-stage">
+  <p id="gesture-instruction">ピースを一度タップして、点線の形にしてみよう。</p>
+  <div class="gomasu-stage" id="gesture-stage" data-lesson="tap">
+    <div class="gomasu-goal-label" id="goal-label" aria-hidden="true">めざす形</div>
+    <svg id="gomasu-goal" viewBox="0 0 150 150" width="150" height="150" aria-hidden="true"></svg>
     <svg id="gomasu-piece" viewBox="0 0 150 150" width="150" height="150" role="img" aria-label="操作できる五マスのピース">
-      <!-- F pentomino: asymmetry makes flipping visually obvious. -->
       <g id="piece-shape" fill="#e7aa72" stroke="#754b3a" stroke-width="2">
         <rect x="50" y="25" width="25" height="25"/>
         <rect x="75" y="25" width="25" height="25"/>
@@ -43,6 +44,7 @@ resources:
       <path d="M59 44 Q64 49 69 44" fill="none" stroke="#322e2b" stroke-width="2" stroke-linecap="round"/>
     </svg>
     <div class="gomasu-target" id="gomasu-target" aria-hidden="true">ここへ！</div>
+    <div class="gomasu-gesture-cue" id="gesture-cue" aria-hidden="true"></div>
   </div>
   <p class="gomasu-feedback" id="gesture-feedback" role="status" aria-live="polite">☝️ ピースにさわってみよう</p>
   <div class="gomasu-actions">
@@ -51,7 +53,6 @@ resources:
   </div>
   <p class="gomasu-note">※ このページは練習用のミニ体験です。実際のパズルとは操作の感度が少し異なる場合があります。</p>
 </div>
-
 ```
 
 ## できたら、パズルに挑戦！ 🎉
@@ -63,7 +64,6 @@ resources:
 [日本語](gomasu_friendly_guide_ja.qmd) /
 [English](gomasu_friendly_guide_en.qmd)
 
-<!-- TODO: Replace the two # links above with actual site/app URLs. -->
-
+<!-- TODO: Replace the # app link above with the actual URL. -->
 
 <script src="tutorial.js"></script>

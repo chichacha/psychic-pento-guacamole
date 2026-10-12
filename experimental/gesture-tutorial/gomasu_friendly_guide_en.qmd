@@ -23,7 +23,11 @@ This guide is here when you need a hand. **You don't have to read it all before 
 Head over to [Let's Play! — Gesture Practice](index.qmd) to practice tapping, dragging, and flicking with a piece. The interactive tutorial is currently in Japanese.
 :::
 
-## Three Little Moves to Master
+## Three Little Moves to Master 🖐️
+
+Just three gestures to get you started!
+
+**Tap, draaaag, flick!** Master these three moves, and you're ready to play.
 
 ### ① Tap: Give It a Twirl! 🔄
 
@@ -31,30 +35,52 @@ Head over to [Let's Play! — Gesture Practice](index.qmd) to practice tapping, 
 
 Not quite the right angle? Tap again. And again. Round it goes!
 
-### ② Swipe: Take It for a Stroll! 👆
+### ② Drag: Take It for a Stroll! 👆
 
 **Touch and hold a piece, then drag it slowly** to move it around.
 
-- When you've grabbed a piece, its **outline turns red**.
-- Bring it near a valid spot on the board and it **snaps toward that spot; its outline turns blue**.
-- Release your finger to put it there.
+- **Red outline:** You've got hold of the piece!
+- **Blue outline:** Here's a spot where it can go!
+- **Release your finger:** Place the piece there.
 
-**Blue doesn't mean you've solved it!** It means the piece *fits there physically*. You can check whether it's the correct placement later.
+Bring the piece near a valid spot on the board, and it'll **snap right into position**.
+
+But there's one little catch!
+
+**Blue doesn't mean you've solved it!**
+
+It simply means the piece fits in that spot. You can check whether it's the correct placement later.
 
 ### ③ Flick: Flip It! ↔️
 
-Grab a piece, then **make a quick movement and release your finger**. That's a flick!
+Grab a piece, then **give it a quick flick and release your finger!**
+
+The piece flips like a mirror image.
 
 | Flick direction | What happens |
 |---|---|
 | ← Left or → Right | **Flip horizontally** (mirror left to right) |
-| ↑ Up or ↓ Down | **Flip vertically** (turn upside down) |
+| ↑ Up or ↓ Down | **Flip vertically** (mirror top to bottom) |
 
-Don't worry: a flick won't send your piece flying off the screen. It flips **where you release it**.
+Don't worry! Your piece won't go flying off the screen. 😄
 
-::: {.callout-note title="Swipe or flick? What's the difference?"}
-The app decides based on **how fast your finger is moving when you let go**. Move slowly to reposition a piece; flick quickly to flip it. If the app keeps guessing wrong, try the sensitivity setting under the gear icon. The default threshold is **70 mm/second**.
+It flips **right where you release it**.
+
+::: {.callout-note title="Drag or flick? What's the difference?"}
+It's all about **speed when you release your finger**!
+
+**Drag slowly** to move a piece. **Flick quickly** to flip it.
+
+If the app keeps mistaking one for the other, try adjusting the gesture sensitivity under the gear icon ⚙️.
+
+The default threshold is **70 mm/second**.
 :::
+
+---
+
+**Tap to rotate. Drag to move. Flick to flip!**
+
+Three little moves. A whole world of puzzles! 🧩
 
 ## Choose Your Belt 🥋
 
