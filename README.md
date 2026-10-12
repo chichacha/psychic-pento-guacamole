@@ -58,44 +58,99 @@
 
 ## このサイトについて · About this project
 
-This is a playful companion website for a Pentomino puzzle app created by my father.
+**五マスの人たち。** is a playful universe inspired by the pentomino puzzle app created by my father.
 
-Rather than recreating the puzzle game, the website explores the twelve pieces as characters—with personalities, geometry, symmetry, rotations, reflections, and the occasional unnecessary animation.
+Twelve shapes, each made of five squares, become characters with their own personalities, relationships, and occasionally questionable behaviour.
 
-It's part mathematical playground, part interactive story, and part family creative project.
+What started as a small companion website has grown into a creative playground for:
 
-The underlying shapes and puzzle arrangements come from the original app's data.
+- **Characters & Stories** — Bringing the twelve pentominoes to life.
+- **Mathematical Discoveries** — Exploring geometry, symmetry, solutions, and surprising relationships.
+- **Interactive Experiences** — Turning abstract ideas into things people can see, touch, and play with.
+- **Experiments 🧪** — Building small prototypes to explore new possibilities, including potential improvements to Dad's puzzle app.
 
-The characters and their personalities are a separate, slightly less scientific interpretation.
+The original puzzle app provides the inspiration and mathematical foundation. This website is an independent creative project, not its official development roadmap.
 
-## Built with
+Some ideas might eventually find their way into the app.
 
-- **Quarto** — website authoring and publishing
-- **JavaScript + SVG** — interactive pentomino characters and arrangements
-- **CSS** — layout, typography, and visual identity
-- **R** — data preparation and exploration
-- **GitHub Pages** — hosting
+Others might remain gloriously unnecessary experiments.
 
-The website is intentionally lightweight. The character gallery uses plain JavaScript and SVG, without requiring a visualization framework.
+Both outcomes are perfectly acceptable.
 
-## Project structure
+## 🧪 How we work
+
+**Prototype first. Propose later.**
+
+Instead of debating every possibility, we make small things and see what happens.
+
+A question becomes an experiment. An experiment becomes something playable. Feedback leads to another iteration.
+
+Sometimes the inspiration comes from mathematics.
+
+Sometimes it comes from family members trying to figure out how the puzzle works. 😄
+
+Our guiding principles:
+
+1. **Play first.** Curiosity is a valid starting point.
+2. **Build small.** Make something tangible before making it complicated.
+3. **Learn in public.** Document experiments, discoveries, and decisions.
+4. **Design for reuse.** Build components that can support multiple experiences and platforms.
+5. **Keep the mathematics honest.** The stories can be absurd. The geometry cannot.
+6. **Invite feedback.** An experiment is a question, not a final answer.
+
+Explore [ひみつの実験室](https://chichacha.github.io/psychic-pento-guacamole/experimental/) to see what we're trying.
+
+## 🛠️ Built with
+
+- **Quarto** — Website authoring, mathematical stories, and publishing
+- **JavaScript + SVG** — Interactive characters, puzzles, and visualizations
+- **CSS** — Layout, typography, animation, and visual identity
+- **R** — Data preparation, analysis, and exploration
+- **GitHub** — Version control, issues, pull requests, and project planning
+- **GitHub Pages** — Public website hosting
+
+The website is intentionally lightweight, favouring reusable components and standard web technologies.
+
+## 📁 Project structure
 
 ```text
 .
-├── _quarto.yml             # Website configuration
-├── index.qmd               # Homepage
-├── about.qmd               # About the project
-├── characters/
-│   └── index.qmd           # Meet the twelve characters
+├── _quarto.yml          # Quarto website configuration
+├── index.qmd            # Homepage
+├── about.qmd            # About the project
+│
+├── characters/          # Meet the twelve characters
+├── stories/             # Stories and editorial experiments
+├── discover/            # Explore the pentomino world
+├── neighbours/          # Explore how pieces relate
+├── solutions/           # Puzzle arrangements and solutions
+│
+├── experimental/        # 🧪 Secret Lab
+│   ├── README.md        # Lab principles and documentation
+│   └── gesture-tutorial/
+│                         # Interactive gesture tutorial
+│                         # Japanese and English guides
+│
 ├── assets/
-│   ├── css/                # Styles
-│   ├── js/                 # Interactions
-│   └── images/             # Images
-├── data/                   # Character, posture, and puzzle data
-└── docs/                   # Generated site for GitHub Pages
+│   ├── css/             # Shared and page-specific styles
+│   ├── js/              # Interactive behaviours
+│   └── images/          # Images and visual assets
+│
+├── data/
+│   ├── README.md        # Data documentation
+│   └── derived/         # Generated analytical datasets
+│
+├── R/                   # Data preparation and matching scripts
+├── analysis/            # Research and analytical documents
+│
+└── docs/                # Rendered website for GitHub Pages
 ```
 
-## Run locally
+Each area has its own purpose, but they share the same pentomino universe.
+
+As the project grows, reusable components may eventually become independent packages or repositories. For now, keeping everything together makes experimentation easier.
+
+## 🚀 Run locally
 
 Install [Quarto](https://quarto.org/), clone the repository, and run:
 
@@ -111,23 +166,26 @@ quarto render
 
 The output is written to `docs/`, which is configured for GitHub Pages.
 
-## What's next?
+## 🗂️ Follow the development
 
-This little universe is still growing.
+Ideas, experiments, improvements, and bugs are tracked through [GitHub Issues](https://github.com/chichacha/psychic-pento-guacamole/issues).
 
-Some things I'd like to explore:
+**Gomasu Studio**, our GitHub Project, helps organize the work from early ideas through finished experiments.
 
-- More character interactions and animations
-- Rotational and reflection symmetry
-- How the twelve pieces fit together
-- Which characters tend to become neighbours
-- Interactive visual explanations of pentomino mathematics
-- More surprising things hiding inside five little squares
+Not every idea will be built. Not every experiment will succeed.
 
-No promises about the order. The characters have opinions.
+That's part of the fun.
+
+## 🔮 What's next?
+
+More stories. More mathematical discoveries. More interactive characters.
+
+Maybe an avatar maker. Maybe a newspaper. Maybe a puzzle celebration so ridiculous that Dad refuses to include it.
+
+We'll build it and find out.
 
 ---
 
-**Five squares. Twelve personalities. Quite a lot of possibilities.**
+**Five squares. Twelve personalities. Unlimited trouble.**
 
 *Made with curiosity, code, and a little family inspiration.* 🧩
