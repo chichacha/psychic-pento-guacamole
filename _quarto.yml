@@ -12,12 +12,12 @@ website:
     background: "#FFF9F2"
     foreground: "#302B32"
     left:
-      - text: "HOME"
-        href: index.qmd
       - text: "12人の仲間"
         href: characters/index.qmd
       - text: "おはなし"
         href: stories/index.qmd
+      - text: "🧪 ひみつの実験室"
+        href: experimental/index.qmd
       - text: "ABOUT"
         href: about.qmd
   page-footer:
