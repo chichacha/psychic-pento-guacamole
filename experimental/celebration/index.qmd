@@ -38,4 +38,7 @@ format:
 
 ```
 
+
+[📖 お祝いのしくみを見る](./how-it-works.qmd)
+
 <script src="../../assets/js/celebration.js" defer></script>

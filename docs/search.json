@@ -676,7 +676,7 @@
     "href": "experimental/celebration/index.html",
     "title": "お祝いシミュレーター",
     "section": "",
-    "text": "🧪 SECRET LAB · EXPERIMENT 002ピースと遊び方で、お祝いが変わる。みんな、完成おめでとう！\n  \n    \n      ことば日本語English\n      最後に置いたピース\n      レベル1\n      Hint 回数0\n      Check 回数0\n      🎉 完成！\n      もう一回！\n      これは試作品です。実際のゲームとは接続していません。\n    \n    \n      \n      どんなお祝いになるかな？"
+    "text": "🧪 SECRET LAB · EXPERIMENT 002ピースと遊び方で、お祝いが変わる。みんな、完成おめでとう！\n  \n    \n      ことば日本語English\n      最後に置いたピース\n      レベル1\n      Hint 回数0\n      Check 回数0\n      🎉 完成！\n      もう一回！\n      これは試作品です。実際のゲームとは接続していません。\n    \n    \n      \n      どんなお祝いになるかな？\n      \n      \n      \n      \n    \n  \n\n\n📖 お祝いのしくみを見る"
   },
   {
     "objectID": "experimental/gesture-tutorial/index.html",
@@ -1265,5 +1265,68 @@
     "title": "Y — はみだしくん",
     "section": "",
     "text": "きっかけ：形から性格や物語を考える実験。\n関連Issue：#37\n次に試したいこと：会話や小さな物語にして、キャラクターらしさを確かめる。"
+  },
+  {
+    "objectID": "experimental/celebration/how-it-works.html",
+    "href": "experimental/celebration/how-it-works.html",
+    "title": "お祝いのしくみ",
+    "section": "",
+    "text": "← お祝いシミュレーターに戻る"
+  },
+  {
+    "objectID": "experimental/celebration/how-it-works.html#まずは４つのお祝い",
+    "href": "experimental/celebration/how-it-works.html#まずは４つのお祝い",
+    "title": "お祝いのしくみ",
+    "section": "まずは、４つのお祝い",
+    "text": "まずは、４つのお祝い\nシミュレーターでは、Hint を使ったか？ と Check を使ったか？ の２つを見ています。\n\n\n\n\n\n\n\n\n\nHint\nCheck\nお祝いのことば\n登場するもの\n\n\n\n\n0\n0\nひらめいた！\n🍬 キャンディが大サービス（46個）\n\n\n1回以上\n0\n助けてもらって、できた！\n🐛 いもむし + キャンディ（20個）\n\n\n0\n1回以上\nたしかめながら、できた！\n🦋 ちょうちょ + キャンディ（20個）\n\n\n1回以上\n1回以上\nじっくり、できた！\n🐛 いもむし + 🦋 ちょうちょ + キャンディ（20個）\n\n\n\nどの組み合わせでも「完成おめでとう！」 という気持ちは同じ。ヒントやチェックを使ったからといって、失敗ではありません。"
+  },
+  {
+    "objectID": "experimental/celebration/how-it-works.html#javascript-はどうやって決めるの",
+    "href": "experimental/celebration/how-it-works.html#javascript-はどうやって決めるの",
+    "title": "お祝いのしくみ",
+    "section": "JavaScript はどうやって決めるの？",
+    "text": "JavaScript はどうやって決めるの？\n次の図は、assets/js/celebration.js の celebrate() が行っている分岐を、読みやすくしたものです。\n\n\n\n\n\nflowchart TD\n    A[\"🎉 完成ボタンを押す\"] --&gt; B{\"Hint は 1回以上？\"}\n    B --&gt;|いいえ| C{\"Check は 1回以上？\"}\n    B --&gt;|はい| D{\"Check は 1回以上？\"}\n    C --&gt;|いいえ| E[\"🍬 ひらめいた！&lt;br/&gt;キャンディ 46個\"]\n    C --&gt;|はい| F[\"🦋 たしかめながら、できた！&lt;br/&gt;ちょうちょ + キャンディ 20個\"]\n    D --&gt;|いいえ| G[\"🐛 助けてもらって、できた！&lt;br/&gt;いもむし + キャンディ 20個\"]\n    D --&gt;|はい| H[\"🐛🦋 じっくり、できた！&lt;br/&gt;両方 + キャンディ 20個\"]\n    classDef decision fill:#fff5e9,stroke:#c69c83,color:#34302e\n    classDef result fill:#f3f7f0,stroke:#7a9e8c,color:#34302e\n    class B,C,D decision\n    class E,F,G,H result\n\n\n\n\n\n\nここで大事なのは、回数そのものではなく、0回か1回以上かでメッセージが決まること。たとえば Hint が1回でも8回でも、Check が0回なら「助けてもらって、できた！」になります。\nコードの中心は、こんな考え方です。\nconst perfect = hints === 0 && checks === 0;\n\nconst messageKey = perfect\n  ? \"brilliant\"\n  : hints &gt; 0 && checks &gt; 0\n  ? \"both\"\n  : hints &gt; 0\n  ? \"caterpillars\"\n  : \"butterflies\";\nこれは理解のために変数名を読みやすくした抜粋です。実際のコードでは h、c、key という名前を使っています。"
+  },
+  {
+    "objectID": "experimental/celebration/how-it-works.html#ことばと演出は別々に決まる",
+    "href": "experimental/celebration/how-it-works.html#ことばと演出は別々に決まる",
+    "title": "お祝いのしくみ",
+    "section": "ことばと演出は、別々に決まる",
+    "text": "ことばと演出は、別々に決まる\n「どのことばを表示するか」を決めたあと、JavaScript は演出を作ります。\n\nHint が1回以上 → 地面にいもむしが登場。最大5匹まで表示し、それ以上は +3 のように残りの数を示します。\nCheck が1回以上 → 空中にちょうちょが登場。こちらも最大5匹まで描画します。\nHint も Check も0回 → キャンディの数が20個から46個に増えます。\nどの場合も → キャンディの色は12人のペントミノの色から選ばれます。\n\n\n\n\n\n\n\nレベルを変えると？\n\n\n\nレベルはメッセージを変えません。キャンディの形の種類を変えます。\n\n\n\nレベル\nキャンディの形\n\n\n\n\n1–3\n四角\n\n\n4–6\n四角・丸\n\n\n7–8\n四角・丸・ひし形\n\n\n9–10\n四角・丸・ひし形・キャンディ型"
+  },
+  {
+    "objectID": "experimental/celebration/how-it-works.html#最後に置いたピースは",
+    "href": "experimental/celebration/how-it-works.html#最後に置いたピースは",
+    "title": "お祝いのしくみ",
+    "section": "最後に置いたピースは？",
+    "text": "最後に置いたピースは？\n「最後に置いたピース」を選ぶと、画面中央の五マスのキャラクターが変わります。\nJavaScript は5つの正方形をSVGで描き、その上に小さな目と口をつけます。色と名前は data/characters.json から読み込みます。つまり、キャラクターを選んでも Hint × Check の判定は変わりません。"
+  },
+  {
+    "objectID": "experimental/celebration/how-it-works.html#ことばはどこに書いてある",
+    "href": "experimental/celebration/how-it-works.html#ことばはどこに書いてある",
+    "title": "お祝いのしくみ",
+    "section": "ことばはどこに書いてある？",
+    "text": "ことばはどこに書いてある？\nお祝いの日本語と英語は、JavaScript の中に直接書き込むのではなく、data/celebration.json にまとめています。\n\"brilliant\": {\n  \"ja\": \"ひらめいた！\",\n  \"en\": \"Brilliant!\"\n}\nJavaScript が brilliant などのメッセージキーを選び、選択中の言語に対応する文章を取り出します。翻訳がない場合は、設定された英語の文章にフォールバックします。"
+  },
+  {
+    "objectID": "experimental/celebration/how-it-works.html#ファイルたちの役割",
+    "href": "experimental/celebration/how-it-works.html#ファイルたちの役割",
+    "title": "お祝いのしくみ",
+    "section": "ファイルたちの役割",
+    "text": "ファイルたちの役割\n\n\n\n\n\nflowchart TB\n    Q[\"index.qmd&lt;br/&gt;画面・操作パネル\"] --&gt; J[\"celebration.js&lt;br/&gt;条件を判断して絵を作る\"]\n    M[\"celebration.json&lt;br/&gt;ことば・設定\"] --&gt; J\n    C[\"characters.json&lt;br/&gt;12人の名前・色\"] --&gt; J\n    J --&gt; V[\"画面のキャラクター・ことば・演出\"]\n    S[\"celebration.css&lt;br/&gt;見た目・アニメーション\"] --&gt; V\n    classDef data fill:#fff2df,stroke:#c7a178,color:#34302e\n    classDef code fill:#e9f3f4,stroke:#7da8ac,color:#34302e\n    classDef view fill:#f1edf9,stroke:#9d91ba,color:#34302e\n    class M,C data\n    class J code\n    class Q,S,V view\n\n\n\n\n\n\n\n\n\nファイル\nひとことで言うと\n\n\n\n\nexperimental/celebration/index.qmd\nシミュレーターの画面を用意する\n\n\nassets/js/celebration.js\n入力を読み、条件を判断し、絵とことばを表示する\n\n\ndata/celebration.json\n日本語・英語の文章や表示上限を保存する\n\n\ndata/characters.json\n12人の色と名前を保存する\n\n\nassets/css/celebration.css\n配置、重なり順、動きを決める"
+  },
+  {
+    "objectID": "experimental/celebration/how-it-works.html#もう一回を押すと",
+    "href": "experimental/celebration/how-it-works.html#もう一回を押すと",
+    "title": "お祝いのしくみ",
+    "section": "「もう一回！」を押すと？",
+    "text": "「もう一回！」を押すと？\n「完成！」と「もう一回！」は、どちらも celebrate() を呼び出します。現在の設定を読み直し、前の演出を消して、新しいキャンディやちょうちょを作り直します。\n一方、スライダーやキャラクターを変更したときは、いったんプレビューをリセットします。新しい設定で「完成！」を押してみてください。"
+  },
+  {
+    "objectID": "experimental/celebration/how-it-works.html#次の実験は",
+    "href": "experimental/celebration/how-it-works.html#次の実験は",
+    "title": "お祝いのしくみ",
+    "section": "次の実験は？ 🌈",
+    "text": "次の実験は？ 🌈\n実験003：五マスのにじ では、Hint も Check も使わずに完成したとき、５色の虹をキャラクターの後ろに出すアイデアを探っています。これはまだこの実験002には入っていません。\n\n🎉 お祝いシミュレーターで遊ぶ\n← ひみつの実験室へ"
   }
 ]

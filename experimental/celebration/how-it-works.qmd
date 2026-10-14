@@ -1,0 +1,152 @@
+---
+title: "お祝いのしくみ"
+subtitle: "ひみつの実験室 · 実験002 の舞台裏"
+lang: ja
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    page-layout: article
+---
+
+[← お祝いシミュレーターに戻る](./index.qmd){.btn .btn-outline-primary}
+
+::: {.callout-note appearance="simple"}
+## これは何のページ？
+
+[お祝いシミュレーター](./index.qmd)の裏側を、図とことばでのぞくページです。実際のゲームとは接続していない、**ひみつの実験室の試作品**です。
+
+パズルが完成したとき、最後のピースや Hint・Check の回数をもとに、JavaScript がメッセージとお祝いの演出を組み立てています。
+:::
+
+## まずは、４つのお祝い
+
+シミュレーターでは、**Hint を使ったか？** と **Check を使ったか？** の２つを見ています。
+
+| Hint | Check | お祝いのことば | 登場するもの |
+|:---:|:---:|---|---|
+| 0 | 0 | **ひらめいた！** | 🍬 キャンディが大サービス（46個） |
+| 1回以上 | 0 | **助けてもらって、できた！** | 🐛 いもむし + キャンディ（20個） |
+| 0 | 1回以上 | **たしかめながら、できた！** | 🦋 ちょうちょ + キャンディ（20個） |
+| 1回以上 | 1回以上 | **じっくり、できた！** | 🐛 いもむし + 🦋 ちょうちょ + キャンディ（20個） |
+
+**どの組み合わせでも「完成おめでとう！」** という気持ちは同じ。ヒントやチェックを使ったからといって、失敗ではありません。
+
+## JavaScript はどうやって決めるの？
+
+次の図は、`assets/js/celebration.js` の `celebrate()` が行っている分岐を、読みやすくしたものです。
+
+```{mermaid}
+flowchart TD
+    A["🎉 完成ボタンを押す"] --> B{"Hint は 1回以上？"}
+    B -->|いいえ| C{"Check は 1回以上？"}
+    B -->|はい| D{"Check は 1回以上？"}
+    C -->|いいえ| E["🍬 ひらめいた！<br/>キャンディ 46個"]
+    C -->|はい| F["🦋 たしかめながら、できた！<br/>ちょうちょ + キャンディ 20個"]
+    D -->|いいえ| G["🐛 助けてもらって、できた！<br/>いもむし + キャンディ 20個"]
+    D -->|はい| H["🐛🦋 じっくり、できた！<br/>両方 + キャンディ 20個"]
+    classDef decision fill:#fff5e9,stroke:#c69c83,color:#34302e
+    classDef result fill:#f3f7f0,stroke:#7a9e8c,color:#34302e
+    class B,C,D decision
+    class E,F,G,H result
+```
+
+ここで大事なのは、**回数そのものではなく、0回か1回以上か**でメッセージが決まること。たとえば Hint が1回でも8回でも、Check が0回なら「助けてもらって、できた！」になります。
+
+コードの中心は、こんな考え方です。
+
+```js
+const perfect = hints === 0 && checks === 0;
+
+const messageKey = perfect
+  ? "brilliant"
+  : hints > 0 && checks > 0
+  ? "both"
+  : hints > 0
+  ? "caterpillars"
+  : "butterflies";
+```
+
+これは**理解のために変数名を読みやすくした抜粋**です。実際のコードでは `h`、`c`、`key` という名前を使っています。
+
+## ことばと演出は、別々に決まる
+
+「どのことばを表示するか」を決めたあと、JavaScript は演出を作ります。
+
+- **Hint が1回以上** → 地面にいもむしが登場。最大5匹まで表示し、それ以上は `+3` のように残りの数を示します。
+- **Check が1回以上** → 空中にちょうちょが登場。こちらも最大5匹まで描画します。
+- **Hint も Check も0回** → キャンディの数が20個から46個に増えます。
+- **どの場合も** → キャンディの色は12人のペントミノの色から選ばれます。
+
+::: {.callout-tip appearance="simple"}
+## レベルを変えると？
+
+レベルは**メッセージを変えません**。キャンディの形の種類を変えます。
+
+| レベル | キャンディの形 |
+|---|---|
+| 1–3 | 四角 |
+| 4–6 | 四角・丸 |
+| 7–8 | 四角・丸・ひし形 |
+| 9–10 | 四角・丸・ひし形・キャンディ型 |
+:::
+
+## 最後に置いたピースは？
+
+「最後に置いたピース」を選ぶと、画面中央の**五マスのキャラクター**が変わります。
+
+JavaScript は5つの正方形をSVGで描き、その上に小さな目と口をつけます。色と名前は `data/characters.json` から読み込みます。つまり、キャラクターを選んでも Hint × Check の判定は変わりません。
+
+## ことばはどこに書いてある？
+
+お祝いの日本語と英語は、JavaScript の中に直接書き込むのではなく、`data/celebration.json` にまとめています。
+
+```json
+"brilliant": {
+  "ja": "ひらめいた！",
+  "en": "Brilliant!"
+}
+```
+
+JavaScript が `brilliant` などの**メッセージキー**を選び、選択中の言語に対応する文章を取り出します。翻訳がない場合は、設定された英語の文章にフォールバックします。
+
+## ファイルたちの役割
+
+```{mermaid}
+flowchart TB
+    Q["index.qmd<br/>画面・操作パネル"] --> J["celebration.js<br/>条件を判断して絵を作る"]
+    M["celebration.json<br/>ことば・設定"] --> J
+    C["characters.json<br/>12人の名前・色"] --> J
+    J --> V["画面のキャラクター・ことば・演出"]
+    S["celebration.css<br/>見た目・アニメーション"] --> V
+    classDef data fill:#fff2df,stroke:#c7a178,color:#34302e
+    classDef code fill:#e9f3f4,stroke:#7da8ac,color:#34302e
+    classDef view fill:#f1edf9,stroke:#9d91ba,color:#34302e
+    class M,C data
+    class J code
+    class Q,S,V view
+```
+
+| ファイル | ひとことで言うと |
+|---|---|
+| [`experimental/celebration/index.qmd`](./index.qmd) | シミュレーターの画面を用意する |
+| [`assets/js/celebration.js`](https://github.com/chichacha/psychic-pento-guacamole/blob/main/assets/js/celebration.js) | 入力を読み、条件を判断し、絵とことばを表示する |
+| [`data/celebration.json`](https://github.com/chichacha/psychic-pento-guacamole/blob/main/data/celebration.json) | 日本語・英語の文章や表示上限を保存する |
+| [`data/characters.json`](https://github.com/chichacha/psychic-pento-guacamole/blob/main/data/characters.json) | 12人の色と名前を保存する |
+| [`assets/css/celebration.css`](https://github.com/chichacha/psychic-pento-guacamole/blob/main/assets/css/celebration.css) | 配置、重なり順、動きを決める |
+
+## 「もう一回！」を押すと？
+
+「完成！」と「もう一回！」は、どちらも `celebrate()` を呼び出します。現在の設定を読み直し、前の演出を消して、新しいキャンディやちょうちょを作り直します。
+
+一方、スライダーやキャラクターを変更したときは、いったんプレビューをリセットします。新しい設定で「完成！」を押してみてください。
+
+## 次の実験は？ 🌈
+
+[実験003：五マスのにじ](https://github.com/chichacha/psychic-pento-guacamole/issues/47) では、Hint も Check も使わずに完成したとき、**５色の虹**をキャラクターの後ろに出すアイデアを探っています。これは**まだこの実験002には入っていません**。
+
+---
+
+[🎉 お祝いシミュレーターで遊ぶ](./index.qmd){.btn .btn-primary}
+
+[← ひみつの実験室へ](../index.qmd)
