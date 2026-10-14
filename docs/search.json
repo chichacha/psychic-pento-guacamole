@@ -14,6 +14,454 @@
     "text": "同じ5マスなのに、向きの種類は人それぞれ。\n8通りの人もいれば、4通りの人も。\n2通りの人もいます。\nそして、Xおじさんは1通り。\n回っても、回っても、同じ形。\n本人は、ちゃんと回っています。"
   },
   {
+    "objectID": "characters/development/X.html",
+    "href": "characters/development/X.html",
+    "title": "X — まんなかおじさん",
+    "section": "",
+    "text": "「ここにいるよ。」\n\nCharacter status: 発展途上 🌱\nCharacter data: data/characters.json\n\n\n\n名前：まんなかおじさん\n形：Xペントミノ\n特徴：いつも真ん中にいる。回転しても、裏返しても、見た目は同じ。\n向きの数：1\n\n\n\n\n\n何が起きても、まず真ん中に立とうとする。\n落ち着いているように見えるが、実は本人なりに忙しい。\n「自分は変わった」と思っているのに、誰にも気づいてもらえない。\nみんなの話を聞くのが好き。でも、いつの間にか話の中心になっている。\n変化が見えないことと、変化していないことは違う、と考えている。\n\n\n\n\n\n「ここにいるよ。」\n「ちゃんと回ったんだけどなあ。」\n「変わってないように見える？」\n「真ん中って、どこから見ても真ん中なのかな。」\n「ぼくが動いたのか、世界が動いたのか。」\n\n\n\n\nまんなかおじさんも、Pくんに対抗して7つの心得を考えました。\nただし、英語のスペルには少し独自の解釈があるようです。\n\n\n\nX\nWhat it means\n\n\n\n\nXamine\nよく観察する。\n\n\nXplore\n知らない世界を探す。\n\n\nXperience\n自分で体験する。\n\n\nXperiment\nちょっと試してみる。\n\n\nXpress\n自分の気持ちを伝える。\n\n\nXchange\n他の人と考えを交換する。\n\n\nXist\nただ、ここにいる。\n\n\n\nXamine → Xplore → Xperience → Xperiment → Xpress → Xchange → Xist\nXおじさん：「最初のEは、心の中にあるんだよ。」\nFちゃん：「それ、スペル間違いじゃない？」\nXおじさん：「見えないものにも意味があるんだ。」\n\n\n\n\nXペントミノは、中心の一マスから上下左右に一マスずつ伸びている。\n回転・反転しても、異なる形の向きは一つだけ。\nただし、回転という動作そのものができないわけではない。\nここから「本人は動いているのに、周囲からは変わらなく見える」というジョークが生まれる。\n上下左右に伸びているので、四方の話を同時に聞こうとする性格も面白いかもしれない。\n\n\n\n\nまだ実験中。\n\nPくん：Seven P’sを発表するたびに、「そんなに必要なの？」と質問する。\nFちゃん：八通りの姿を見せてくれるが、途中で目が回りそうになる。\nUおばさん：いつも誰かを迎えようとしている姿を、少し離れた真ん中から見守る。\nIおじさん：まっすぐ進む彼に「真ん中に戻ってきたら？」と言ってしまう。\n\n\n\n\n\nXおじさん、回転を証明する。 一回転して「どう？」と聞くが、誰も違いに気づかない。\n真ん中争奪戦。 全員が真ん中に立ちたがったら、真ん中は誰のもの？\nXおじさんの変身ショー。 四回転して四つのポーズを披露する。観客には全部同じに見える。\n変わらない人の成長物語。 外見は同じでも、考え方は少しずつ変わっていく。\n\n\n\n\n\n名前は「まんなかおじさん」。\n基本のセリフは「ここにいるよ。」\n回転・反転しても見た目が同じで、本人の努力が周囲に伝わらない。\n\n\n\n\n\nXおじさんは村の長老？ それとも年齢不詳？\nいつも中心にいたいのか、たまたま中心にいるのか？\n変化を認めてもらいたい？ それとも本当は気にしていない？\nXおじさんにとって「成長する」とはどういうこと？\n\n\n\n\n\n\nきっかけ：向きが一つしかないという幾何学的特徴から、見た目と本人の認識のズレを考えた。\n次に試したいこと：Xおじさんの「回転したのに誰も気づかない」短い漫画。"
+  },
+  {
+    "objectID": "characters/development/X.html#基本設定-established-character",
+    "href": "characters/development/X.html#基本設定-established-character",
+    "title": "X — まんなかおじさん",
+    "section": "",
+    "text": "名前：まんなかおじさん\n形：Xペントミノ\n特徴：いつも真ん中にいる。回転しても、裏返しても、見た目は同じ。\n向きの数：1"
+  },
+  {
+    "objectID": "characters/development/X.html#性格のアイデア-personality-experiments",
+    "href": "characters/development/X.html#性格のアイデア-personality-experiments",
+    "title": "X — まんなかおじさん",
+    "section": "",
+    "text": "何が起きても、まず真ん中に立とうとする。\n落ち着いているように見えるが、実は本人なりに忙しい。\n「自分は変わった」と思っているのに、誰にも気づいてもらえない。\nみんなの話を聞くのが好き。でも、いつの間にか話の中心になっている。\n変化が見えないことと、変化していないことは違う、と考えている。"
+  },
+  {
+    "objectID": "characters/development/X.html#名言仮-possible-quotes",
+    "href": "characters/development/X.html#名言仮-possible-quotes",
+    "title": "X — まんなかおじさん",
+    "section": "",
+    "text": "「ここにいるよ。」\n「ちゃんと回ったんだけどなあ。」\n「変わってないように見える？」\n「真ん中って、どこから見ても真ん中なのかな。」\n「ぼくが動いたのか、世界が動いたのか。」"
+  },
+  {
+    "objectID": "characters/development/X.html#xおじさんの-seven-xs",
+    "href": "characters/development/X.html#xおじさんの-seven-xs",
+    "title": "X — まんなかおじさん",
+    "section": "",
+    "text": "まんなかおじさんも、Pくんに対抗して7つの心得を考えました。\nただし、英語のスペルには少し独自の解釈があるようです。\n\n\n\nX\nWhat it means\n\n\n\n\nXamine\nよく観察する。\n\n\nXplore\n知らない世界を探す。\n\n\nXperience\n自分で体験する。\n\n\nXperiment\nちょっと試してみる。\n\n\nXpress\n自分の気持ちを伝える。\n\n\nXchange\n他の人と考えを交換する。\n\n\nXist\nただ、ここにいる。\n\n\n\nXamine → Xplore → Xperience → Xperiment → Xpress → Xchange → Xist\nXおじさん：「最初のEは、心の中にあるんだよ。」\nFちゃん：「それ、スペル間違いじゃない？」\nXおじさん：「見えないものにも意味があるんだ。」"
+  },
+  {
+    "objectID": "characters/development/X.html#形から生まれる発見-geometry-inspired-ideas",
+    "href": "characters/development/X.html#形から生まれる発見-geometry-inspired-ideas",
+    "title": "X — まんなかおじさん",
+    "section": "",
+    "text": "Xペントミノは、中心の一マスから上下左右に一マスずつ伸びている。\n回転・反転しても、異なる形の向きは一つだけ。\nただし、回転という動作そのものができないわけではない。\nここから「本人は動いているのに、周囲からは変わらなく見える」というジョークが生まれる。\n上下左右に伸びているので、四方の話を同時に聞こうとする性格も面白いかもしれない。"
+  },
+  {
+    "objectID": "characters/development/X.html#他の住民との関係-relationships",
+    "href": "characters/development/X.html#他の住民との関係-relationships",
+    "title": "X — まんなかおじさん",
+    "section": "",
+    "text": "まだ実験中。\n\nPくん：Seven P’sを発表するたびに、「そんなに必要なの？」と質問する。\nFちゃん：八通りの姿を見せてくれるが、途中で目が回りそうになる。\nUおばさん：いつも誰かを迎えようとしている姿を、少し離れた真ん中から見守る。\nIおじさん：まっすぐ進む彼に「真ん中に戻ってきたら？」と言ってしまう。"
+  },
+  {
+    "objectID": "characters/development/X.html#ネタ帳-story-seeds",
+    "href": "characters/development/X.html#ネタ帳-story-seeds",
+    "title": "X — まんなかおじさん",
+    "section": "",
+    "text": "Xおじさん、回転を証明する。 一回転して「どう？」と聞くが、誰も違いに気づかない。\n真ん中争奪戦。 全員が真ん中に立ちたがったら、真ん中は誰のもの？\nXおじさんの変身ショー。 四回転して四つのポーズを披露する。観客には全部同じに見える。\n変わらない人の成長物語。 外見は同じでも、考え方は少しずつ変わっていく。"
+  },
+  {
+    "objectID": "characters/development/X.html#採用済み-canon",
+    "href": "characters/development/X.html#採用済み-canon",
+    "title": "X — まんなかおじさん",
+    "section": "",
+    "text": "名前は「まんなかおじさん」。\n基本のセリフは「ここにいるよ。」\n回転・反転しても見た目が同じで、本人の努力が周囲に伝わらない。"
+  },
+  {
+    "objectID": "characters/development/X.html#保留中-open-questions",
+    "href": "characters/development/X.html#保留中-open-questions",
+    "title": "X — まんなかおじさん",
+    "section": "",
+    "text": "Xおじさんは村の長老？ それとも年齢不詳？\nいつも中心にいたいのか、たまたま中心にいるのか？\n変化を認めてもらいたい？ それとも本当は気にしていない？\nXおじさんにとって「成長する」とはどういうこと？"
+  },
+  {
+    "objectID": "characters/development/X.html#開発メモ-development-notes",
+    "href": "characters/development/X.html#開発メモ-development-notes",
+    "title": "X — まんなかおじさん",
+    "section": "",
+    "text": "きっかけ：向きが一つしかないという幾何学的特徴から、見た目と本人の認識のズレを考えた。\n次に試したいこと：Xおじさんの「回転したのに誰も気づかない」短い漫画。"
+  },
+  {
+    "objectID": "characters/development/V.html",
+    "href": "characters/development/V.html",
+    "title": "V — かどっこおばさん",
+    "section": "",
+    "text": "「この角、いい感じ。」\n\nCharacter status: 発展途上 🌱\nCharacter data: data/characters.json\n\n\n\n名前：かどっこおばさん\n形：Vペントミノ\n特徴：五マスが直角の二本の腕をつくる。\n向きの数：4\n\n\n\n\nまだ実験中。性格は物語とともに育っていきます。\n\n部屋に入ると、まず落ち着く角を探す。\n角を守るのは得意。でも、角の外にある景色にも興味がある。\n静かな場所が好きで、みんなの観察が上手。\n\n\n\n\n\n「この角、いい感じ。」\n「角があると、ほっとするの。」\n「たまには真ん中も悪くないわね。」\n\n\n\n\nかどっこおばさんは、お気に入りの角から世界を眺めて七つのVを見つけました。\n角にいるからこそ、見えるものもあるようです。\n\n\n\nV\nWhat it means\n\n\n\n\nView\nまず角から景色を眺める。\n\n\nValue\n自分の落ち着く場所を大切にする。\n\n\nVerify\nここが本当にいい角か確かめる。\n\n\nVenture\nときには角の外へ出かけてみる。\n\n\nVisit\n別の角にもおじゃましてみる。\n\n\nVariety\n角が違えば、景色も違う。\n\n\nVoice\nお気に入りの場所を自分の言葉で伝える。\n\n\n\nView → Value → Verify → Venture → Visit → Variety → Voice\nXおじさん：「真ん中のほうがいいよ。」\nVおばさん：「角から見た真ん中も、なかなかいいわよ。」\nXおじさん：「それは考えたことなかったな。」\n\n\n\n\nVペントミノは直角をなす二本の腕を持ち、異なる向きは四通り。\n角を安全地帯にも、出発点にもできる。\n\n\n\n\nまだ実験中。\n\nXおじさん：真ん中派と角派。どちらが落ち着くか話が尽きない。\nLちゃん：曲がり角で困ったときに相談される。\nUおばさん：そっとしておいてほしいときの距離感を教える。\n\n\n\n\n\n角のない部屋。 かどっこおばさん、どこに座る？\n四つの角をめぐる旅。 角ごとに違う景色を見つける。\n\n\n\n\n\n名前は「かどっこおばさん」。\n基本のセリフは「この角、いい感じ。」\n形と向きの数は data/characters.json に準拠。\n\n\n\n\n\n角が好きなのは安心するから？ 観察しやすいから？\nお気に入りの角を誰かに譲れる？\n\n\n\n\n\n\nきっかけ：形から性格や物語を考える実験。\n関連Issue：#37\n次に試したいこと：会話や小さな物語にして、キャラクターらしさを確かめる。"
+  },
+  {
+    "objectID": "characters/development/V.html#基本設定-established-character",
+    "href": "characters/development/V.html#基本設定-established-character",
+    "title": "V — かどっこおばさん",
+    "section": "",
+    "text": "名前：かどっこおばさん\n形：Vペントミノ\n特徴：五マスが直角の二本の腕をつくる。\n向きの数：4"
+  },
+  {
+    "objectID": "characters/development/V.html#性格のアイデア-personality-experiments",
+    "href": "characters/development/V.html#性格のアイデア-personality-experiments",
+    "title": "V — かどっこおばさん",
+    "section": "",
+    "text": "まだ実験中。性格は物語とともに育っていきます。\n\n部屋に入ると、まず落ち着く角を探す。\n角を守るのは得意。でも、角の外にある景色にも興味がある。\n静かな場所が好きで、みんなの観察が上手。"
+  },
+  {
+    "objectID": "characters/development/V.html#名言仮-possible-quotes",
+    "href": "characters/development/V.html#名言仮-possible-quotes",
+    "title": "V — かどっこおばさん",
+    "section": "",
+    "text": "「この角、いい感じ。」\n「角があると、ほっとするの。」\n「たまには真ん中も悪くないわね。」"
+  },
+  {
+    "objectID": "characters/development/V.html#vおばさんの-seven-vs",
+    "href": "characters/development/V.html#vおばさんの-seven-vs",
+    "title": "V — かどっこおばさん",
+    "section": "",
+    "text": "かどっこおばさんは、お気に入りの角から世界を眺めて七つのVを見つけました。\n角にいるからこそ、見えるものもあるようです。\n\n\n\nV\nWhat it means\n\n\n\n\nView\nまず角から景色を眺める。\n\n\nValue\n自分の落ち着く場所を大切にする。\n\n\nVerify\nここが本当にいい角か確かめる。\n\n\nVenture\nときには角の外へ出かけてみる。\n\n\nVisit\n別の角にもおじゃましてみる。\n\n\nVariety\n角が違えば、景色も違う。\n\n\nVoice\nお気に入りの場所を自分の言葉で伝える。\n\n\n\nView → Value → Verify → Venture → Visit → Variety → Voice\nXおじさん：「真ん中のほうがいいよ。」\nVおばさん：「角から見た真ん中も、なかなかいいわよ。」\nXおじさん：「それは考えたことなかったな。」"
+  },
+  {
+    "objectID": "characters/development/V.html#形から生まれる発見-geometry-inspired-ideas",
+    "href": "characters/development/V.html#形から生まれる発見-geometry-inspired-ideas",
+    "title": "V — かどっこおばさん",
+    "section": "",
+    "text": "Vペントミノは直角をなす二本の腕を持ち、異なる向きは四通り。\n角を安全地帯にも、出発点にもできる。"
+  },
+  {
+    "objectID": "characters/development/V.html#他の住民との関係-relationships",
+    "href": "characters/development/V.html#他の住民との関係-relationships",
+    "title": "V — かどっこおばさん",
+    "section": "",
+    "text": "まだ実験中。\n\nXおじさん：真ん中派と角派。どちらが落ち着くか話が尽きない。\nLちゃん：曲がり角で困ったときに相談される。\nUおばさん：そっとしておいてほしいときの距離感を教える。"
+  },
+  {
+    "objectID": "characters/development/V.html#ネタ帳-story-seeds",
+    "href": "characters/development/V.html#ネタ帳-story-seeds",
+    "title": "V — かどっこおばさん",
+    "section": "",
+    "text": "角のない部屋。 かどっこおばさん、どこに座る？\n四つの角をめぐる旅。 角ごとに違う景色を見つける。"
+  },
+  {
+    "objectID": "characters/development/V.html#採用済み-canon",
+    "href": "characters/development/V.html#採用済み-canon",
+    "title": "V — かどっこおばさん",
+    "section": "",
+    "text": "名前は「かどっこおばさん」。\n基本のセリフは「この角、いい感じ。」\n形と向きの数は data/characters.json に準拠。"
+  },
+  {
+    "objectID": "characters/development/V.html#保留中-open-questions",
+    "href": "characters/development/V.html#保留中-open-questions",
+    "title": "V — かどっこおばさん",
+    "section": "",
+    "text": "角が好きなのは安心するから？ 観察しやすいから？\nお気に入りの角を誰かに譲れる？"
+  },
+  {
+    "objectID": "characters/development/V.html#開発メモ-development-notes",
+    "href": "characters/development/V.html#開発メモ-development-notes",
+    "title": "V — かどっこおばさん",
+    "section": "",
+    "text": "きっかけ：形から性格や物語を考える実験。\n関連Issue：#37\n次に試したいこと：会話や小さな物語にして、キャラクターらしさを確かめる。"
+  },
+  {
+    "objectID": "characters/development/I.html",
+    "href": "characters/development/I.html",
+    "title": "I — まっすぐおじさん",
+    "section": "",
+    "text": "「まっすぐ行こう。」\n\nCharacter status: 発展途上 🌱\nCharacter data: data/characters.json\n\n\n\n名前：まっすぐおじさん\n形：Iペントミノ\n特徴：五マスが一直線。曲がるのは苦手だが、横になることはできる。\n向きの数：2\n\n\n\n\nまだ実験中。性格は物語とともに育っていきます。\n\n決めた道を疑わない。頼もしいけれど、壁にぶつかるまで止まらない。\n遠回りを無駄だと思っていたが、寄り道にも発見があると知り始める。\n頑固そうに見えて、困っている人には真っ先に手を伸ばす。\n\n\n\n\n\n「まっすぐ行こう。」\n「曲がらなくても、向きは変えられるぞ。」\n「横になるのも、前進の準備だ。」\n\n\n\n\nまっすぐおじさんが、曲がらずに生きるための七か条を考えました。\nただし、途中で少し考えが変わったようです。\n\n\n\nI\nWhat it means\n\n\n\n\nIntegrity\n自分の信念を大切にする。\n\n\nIntention\nどこへ向かうか、まず決める。\n\n\nInitiative\n誰かを待たずに一歩踏み出す。\n\n\nInvestigate\n壁にぶつかったら、ちゃんと調べる。\n\n\nImagine\nまっすぐ以外の道も想像してみる。\n\n\nInvert\n縦がだめなら、横になってみる。\n\n\nImprove\n向きを変えても、自分らしく進む。\n\n\n\nIntegrity → Intention → Initiative → Investigate → Imagine → Invert → Improve\nIおじさん：「ほら、全部まっすぐつながっているだろう。」\nFちゃん：「途中で横になってるよ？」\nIおじさん：「それは……柔軟な一直線だ。」\n\n\n\n\n五つの正方形が一直線に並び、異なる向きは縦と横の二通り。\n曲がれないという形の制約が、頑固さと柔軟さの対比になる。\n\n\n\n\nまだ実験中。\n\nUおばさん：くぼみに入ろうとするが、五マス全部は入らない。\nFちゃん：八通りの姿を見せられて少し混乱する。\nLちゃん：同じく長いのに、最後で曲がれることが不思議。\n\n\n\n\n\n壁の向こう。 まっすぐ進んで壁に到着。横になったら何が変わる？\n初めての寄り道。 Fちゃんに誘われ、目的地のない散歩に挑戦する。\n\n\n\n\n\n名前は「まっすぐおじさん」。\n基本のセリフは「まっすぐ行こう。」\n形と向きの数は data/characters.json に準拠。\n\n\n\n\n\n信念を曲げないことと、進む方向を変えることは両立する？\n横になって休むのは得意？ それとも苦手？\n\n\n\n\n\n\nきっかけ：形から性格や物語を考える実験。\n関連Issue：#37\n次に試したいこと：会話や小さな物語にして、キャラクターらしさを確かめる。"
+  },
+  {
+    "objectID": "characters/development/I.html#基本設定-established-character",
+    "href": "characters/development/I.html#基本設定-established-character",
+    "title": "I — まっすぐおじさん",
+    "section": "",
+    "text": "名前：まっすぐおじさん\n形：Iペントミノ\n特徴：五マスが一直線。曲がるのは苦手だが、横になることはできる。\n向きの数：2"
+  },
+  {
+    "objectID": "characters/development/I.html#性格のアイデア-personality-experiments",
+    "href": "characters/development/I.html#性格のアイデア-personality-experiments",
+    "title": "I — まっすぐおじさん",
+    "section": "",
+    "text": "まだ実験中。性格は物語とともに育っていきます。\n\n決めた道を疑わない。頼もしいけれど、壁にぶつかるまで止まらない。\n遠回りを無駄だと思っていたが、寄り道にも発見があると知り始める。\n頑固そうに見えて、困っている人には真っ先に手を伸ばす。"
+  },
+  {
+    "objectID": "characters/development/I.html#名言仮-possible-quotes",
+    "href": "characters/development/I.html#名言仮-possible-quotes",
+    "title": "I — まっすぐおじさん",
+    "section": "",
+    "text": "「まっすぐ行こう。」\n「曲がらなくても、向きは変えられるぞ。」\n「横になるのも、前進の準備だ。」"
+  },
+  {
+    "objectID": "characters/development/I.html#iおじさんの-seven-is",
+    "href": "characters/development/I.html#iおじさんの-seven-is",
+    "title": "I — まっすぐおじさん",
+    "section": "",
+    "text": "まっすぐおじさんが、曲がらずに生きるための七か条を考えました。\nただし、途中で少し考えが変わったようです。\n\n\n\nI\nWhat it means\n\n\n\n\nIntegrity\n自分の信念を大切にする。\n\n\nIntention\nどこへ向かうか、まず決める。\n\n\nInitiative\n誰かを待たずに一歩踏み出す。\n\n\nInvestigate\n壁にぶつかったら、ちゃんと調べる。\n\n\nImagine\nまっすぐ以外の道も想像してみる。\n\n\nInvert\n縦がだめなら、横になってみる。\n\n\nImprove\n向きを変えても、自分らしく進む。\n\n\n\nIntegrity → Intention → Initiative → Investigate → Imagine → Invert → Improve\nIおじさん：「ほら、全部まっすぐつながっているだろう。」\nFちゃん：「途中で横になってるよ？」\nIおじさん：「それは……柔軟な一直線だ。」"
+  },
+  {
+    "objectID": "characters/development/I.html#形から生まれる発見-geometry-inspired-ideas",
+    "href": "characters/development/I.html#形から生まれる発見-geometry-inspired-ideas",
+    "title": "I — まっすぐおじさん",
+    "section": "",
+    "text": "五つの正方形が一直線に並び、異なる向きは縦と横の二通り。\n曲がれないという形の制約が、頑固さと柔軟さの対比になる。"
+  },
+  {
+    "objectID": "characters/development/I.html#他の住民との関係-relationships",
+    "href": "characters/development/I.html#他の住民との関係-relationships",
+    "title": "I — まっすぐおじさん",
+    "section": "",
+    "text": "まだ実験中。\n\nUおばさん：くぼみに入ろうとするが、五マス全部は入らない。\nFちゃん：八通りの姿を見せられて少し混乱する。\nLちゃん：同じく長いのに、最後で曲がれることが不思議。"
+  },
+  {
+    "objectID": "characters/development/I.html#ネタ帳-story-seeds",
+    "href": "characters/development/I.html#ネタ帳-story-seeds",
+    "title": "I — まっすぐおじさん",
+    "section": "",
+    "text": "壁の向こう。 まっすぐ進んで壁に到着。横になったら何が変わる？\n初めての寄り道。 Fちゃんに誘われ、目的地のない散歩に挑戦する。"
+  },
+  {
+    "objectID": "characters/development/I.html#採用済み-canon",
+    "href": "characters/development/I.html#採用済み-canon",
+    "title": "I — まっすぐおじさん",
+    "section": "",
+    "text": "名前は「まっすぐおじさん」。\n基本のセリフは「まっすぐ行こう。」\n形と向きの数は data/characters.json に準拠。"
+  },
+  {
+    "objectID": "characters/development/I.html#保留中-open-questions",
+    "href": "characters/development/I.html#保留中-open-questions",
+    "title": "I — まっすぐおじさん",
+    "section": "",
+    "text": "信念を曲げないことと、進む方向を変えることは両立する？\n横になって休むのは得意？ それとも苦手？"
+  },
+  {
+    "objectID": "characters/development/I.html#開発メモ-development-notes",
+    "href": "characters/development/I.html#開発メモ-development-notes",
+    "title": "I — まっすぐおじさん",
+    "section": "",
+    "text": "きっかけ：形から性格や物語を考える実験。\n関連Issue：#37\n次に試したいこと：会話や小さな物語にして、キャラクターらしさを確かめる。"
+  },
+  {
+    "objectID": "characters/development/T.html",
+    "href": "characters/development/T.html",
+    "title": "T — しきりやおばさん",
+    "section": "",
+    "text": "「はい、そこに並んで！」\n\nCharacter status: 発展途上 🌱\nCharacter data: data/characters.json\n\n\n\n名前：しきりやおばさん\n形：Tペントミノ\n特徴：三マスの横棒と、中央から伸びる二マスの軸。\n向きの数：4\n\n\n\n\nまだ実験中。性格は物語とともに育っていきます。\n\n場を整えるのが得意。誰も頼んでいないのに司会を始める。\nみんなが安心できる場所を作りたいのに、並べ方を決めすぎる。\n予定外の出来事が苦手。でも子どもたちから即興を学ぶかもしれない。\n\n\n\n\n\n「はい、そこに並んで！」\n「順番を決めれば、きっとうまくいくわ。」\n「……今日は自由席にしてみようかしら。」\n\n\n\n\nしきりやおばさんは、もちろん七つのTにも順番をつけました。\n問題は、ほかの住民がその順番を守るかどうかです。\n\n\n\nT\nWhat it means\n\n\n\n\nTime\nまず集合時間を決めましょう。\n\n\nTeam\n全員そろっているか確認！\n\n\nTask\nそれぞれの役割を決めます。\n\n\nTidy\nきちんと並べて、準備完了。\n\n\nTrack\n進み具合を確認しましょう。\n\n\nTrust\n……たまにはみんなに任せてみる。\n\n\nTogether\n予定と違っても、一緒なら大丈夫。\n\n\n\nTime → Team → Task → Tidy → Track → Trust → Together\nTおばさん：「七つのT、全員確認！」\nFちゃん：「八つ目のTは？」\nTおばさん：「ないわよ！」\nFちゃん：「Try again!」\n\n\n\n\nTペントミノは左右対称。異なる向きは四通り。\n中央の軸と左右の腕が、仕切り役・交通整理役の印象につながる。\n\n\n\n\nまだ実験中。\n\nNくん：並べた途端に一マスずれるので気になる。\nFちゃん：説明の途中で次の向きを試し始める。\nXおじさん：真ん中に立ちたがるので、配置が決めやすいようで決めにくい。\n\n\n\n\n\n五マス村の席替え。 Tおばさんが完璧な配置表を作るが、誰も同意していない。\n自由時間の時間割。 自由時間まで管理しようとしてしまう。\n\n\n\n\n\n名前は「しきりやおばさん」。\n基本のセリフは「はい、そこに並んで！」\n形と向きの数は data/characters.json に準拠。\n\n\n\n\n\n仕切るのは好きだから？ 不安を減らすため？\n他人に任せられるようになる日は来る？\n\n\n\n\n\n\nきっかけ：形から性格や物語を考える実験。\n関連Issue：#37\n次に試したいこと：会話や小さな物語にして、キャラクターらしさを確かめる。"
+  },
+  {
+    "objectID": "characters/development/T.html#基本設定-established-character",
+    "href": "characters/development/T.html#基本設定-established-character",
+    "title": "T — しきりやおばさん",
+    "section": "",
+    "text": "名前：しきりやおばさん\n形：Tペントミノ\n特徴：三マスの横棒と、中央から伸びる二マスの軸。\n向きの数：4"
+  },
+  {
+    "objectID": "characters/development/T.html#性格のアイデア-personality-experiments",
+    "href": "characters/development/T.html#性格のアイデア-personality-experiments",
+    "title": "T — しきりやおばさん",
+    "section": "",
+    "text": "まだ実験中。性格は物語とともに育っていきます。\n\n場を整えるのが得意。誰も頼んでいないのに司会を始める。\nみんなが安心できる場所を作りたいのに、並べ方を決めすぎる。\n予定外の出来事が苦手。でも子どもたちから即興を学ぶかもしれない。"
+  },
+  {
+    "objectID": "characters/development/T.html#名言仮-possible-quotes",
+    "href": "characters/development/T.html#名言仮-possible-quotes",
+    "title": "T — しきりやおばさん",
+    "section": "",
+    "text": "「はい、そこに並んで！」\n「順番を決めれば、きっとうまくいくわ。」\n「……今日は自由席にしてみようかしら。」"
+  },
+  {
+    "objectID": "characters/development/T.html#tおばさんの-seven-ts",
+    "href": "characters/development/T.html#tおばさんの-seven-ts",
+    "title": "T — しきりやおばさん",
+    "section": "",
+    "text": "しきりやおばさんは、もちろん七つのTにも順番をつけました。\n問題は、ほかの住民がその順番を守るかどうかです。\n\n\n\nT\nWhat it means\n\n\n\n\nTime\nまず集合時間を決めましょう。\n\n\nTeam\n全員そろっているか確認！\n\n\nTask\nそれぞれの役割を決めます。\n\n\nTidy\nきちんと並べて、準備完了。\n\n\nTrack\n進み具合を確認しましょう。\n\n\nTrust\n……たまにはみんなに任せてみる。\n\n\nTogether\n予定と違っても、一緒なら大丈夫。\n\n\n\nTime → Team → Task → Tidy → Track → Trust → Together\nTおばさん：「七つのT、全員確認！」\nFちゃん：「八つ目のTは？」\nTおばさん：「ないわよ！」\nFちゃん：「Try again!」"
+  },
+  {
+    "objectID": "characters/development/T.html#形から生まれる発見-geometry-inspired-ideas",
+    "href": "characters/development/T.html#形から生まれる発見-geometry-inspired-ideas",
+    "title": "T — しきりやおばさん",
+    "section": "",
+    "text": "Tペントミノは左右対称。異なる向きは四通り。\n中央の軸と左右の腕が、仕切り役・交通整理役の印象につながる。"
+  },
+  {
+    "objectID": "characters/development/T.html#他の住民との関係-relationships",
+    "href": "characters/development/T.html#他の住民との関係-relationships",
+    "title": "T — しきりやおばさん",
+    "section": "",
+    "text": "まだ実験中。\n\nNくん：並べた途端に一マスずれるので気になる。\nFちゃん：説明の途中で次の向きを試し始める。\nXおじさん：真ん中に立ちたがるので、配置が決めやすいようで決めにくい。"
+  },
+  {
+    "objectID": "characters/development/T.html#ネタ帳-story-seeds",
+    "href": "characters/development/T.html#ネタ帳-story-seeds",
+    "title": "T — しきりやおばさん",
+    "section": "",
+    "text": "五マス村の席替え。 Tおばさんが完璧な配置表を作るが、誰も同意していない。\n自由時間の時間割。 自由時間まで管理しようとしてしまう。"
+  },
+  {
+    "objectID": "characters/development/T.html#採用済み-canon",
+    "href": "characters/development/T.html#採用済み-canon",
+    "title": "T — しきりやおばさん",
+    "section": "",
+    "text": "名前は「しきりやおばさん」。\n基本のセリフは「はい、そこに並んで！」\n形と向きの数は data/characters.json に準拠。"
+  },
+  {
+    "objectID": "characters/development/T.html#保留中-open-questions",
+    "href": "characters/development/T.html#保留中-open-questions",
+    "title": "T — しきりやおばさん",
+    "section": "",
+    "text": "仕切るのは好きだから？ 不安を減らすため？\n他人に任せられるようになる日は来る？"
+  },
+  {
+    "objectID": "characters/development/T.html#開発メモ-development-notes",
+    "href": "characters/development/T.html#開発メモ-development-notes",
+    "title": "T — しきりやおばさん",
+    "section": "",
+    "text": "きっかけ：形から性格や物語を考える実験。\n関連Issue：#37\n次に試したいこと：会話や小さな物語にして、キャラクターらしさを確かめる。"
+  },
+  {
+    "objectID": "characters/development/P.html",
+    "href": "characters/development/P.html",
+    "title": "P — ぎゅっとくん",
+    "section": "",
+    "text": "「なんでもかんでも、ぎゅっとしなくていいんだよ。」\n\nCharacter status: 発展途上 🌱\n\n\n\n名前：ぎゅっとくん\n形：Pペントミノ\n特徴：小さくまとまるのが得意\n\n\n\n\n\n何でもコンパクトにまとめたがる。\nでも、実は必要以上にまとめるのは好きじゃない。\n整理整頓は得意。でも完璧主義ではない。\n意外と物事の本質を見抜く。\n\n\n\n\n\n「ぎゅっとすれば、いいってもんじゃない。」\n「大事なものだけ、ぎゅっと。」\n「Document With Purpose!」\n\n\n\n\nぎゅっとくんが、キャラクター開発の心得を7つにまとめてくれました。\n本人は「Pで始まる言葉しか使ってはいけない」と思っているようです。\n\n\n\nP\nWhat it means\n\n\n\n\nPlay\n遊び心から始める。\n\n\nPersonify\n五つの四角に人格を与える。\n\n\nPonder\nこの子なら、どうする？\n\n\nProvoke\nちょっと困らせてみる。\n\n\nPrototype\nまず小さく作ってみる。\n\n\nPublish\n面白くなったら、みんなに見せる。\n\n\nPreserve\n残す価値のあるものだけ記録する。\n\n\n\nPlay → Personify → Ponder → Provoke → Prototype → Publish → Preserve\nPくん：「全部Pでそろえたよ！」\nXおじさん：「7つも必要なの？」\nPくん：「……ぎゅっとまとめたつもりなんだけど。」\n\n\n\nまだ実験中。\n\nUおばさん：同じ「ぎゅっ」でも、ちょっと意味が違う？\nIおじさん：まっすぐすぎる考え方を、ぎゅっとまとめてあげたい。\n\n\n\n\n\nPくん、プロジェクトマネージャーになる。\n五マス村に謎の「Pが多すぎる問題」が発生。\nPF・PL・DWPを唱えるPくん。\n\n\n\n\nまだ決まっていません。\n\n\n\n\nぎゅっとくんは几帳面？ それとも単に省エネ？\nPくんの得意技は何？\n他のキャラクターとの相性は？"
+  },
+  {
+    "objectID": "characters/development/P.html#基本設定-established-character",
+    "href": "characters/development/P.html#基本設定-established-character",
+    "title": "P — ぎゅっとくん",
+    "section": "",
+    "text": "名前：ぎゅっとくん\n形：Pペントミノ\n特徴：小さくまとまるのが得意"
+  },
+  {
+    "objectID": "characters/development/P.html#性格のアイデア-personality-experiments",
+    "href": "characters/development/P.html#性格のアイデア-personality-experiments",
+    "title": "P — ぎゅっとくん",
+    "section": "",
+    "text": "何でもコンパクトにまとめたがる。\nでも、実は必要以上にまとめるのは好きじゃない。\n整理整頓は得意。でも完璧主義ではない。\n意外と物事の本質を見抜く。"
+  },
+  {
+    "objectID": "characters/development/P.html#名言仮-possible-quotes",
+    "href": "characters/development/P.html#名言仮-possible-quotes",
+    "title": "P — ぎゅっとくん",
+    "section": "",
+    "text": "「ぎゅっとすれば、いいってもんじゃない。」\n「大事なものだけ、ぎゅっと。」\n「Document With Purpose!」"
+  },
+  {
+    "objectID": "characters/development/P.html#pくんの-seven-ps",
+    "href": "characters/development/P.html#pくんの-seven-ps",
+    "title": "P — ぎゅっとくん",
+    "section": "",
+    "text": "ぎゅっとくんが、キャラクター開発の心得を7つにまとめてくれました。\n本人は「Pで始まる言葉しか使ってはいけない」と思っているようです。\n\n\n\nP\nWhat it means\n\n\n\n\nPlay\n遊び心から始める。\n\n\nPersonify\n五つの四角に人格を与える。\n\n\nPonder\nこの子なら、どうする？\n\n\nProvoke\nちょっと困らせてみる。\n\n\nPrototype\nまず小さく作ってみる。\n\n\nPublish\n面白くなったら、みんなに見せる。\n\n\nPreserve\n残す価値のあるものだけ記録する。\n\n\n\nPlay → Personify → Ponder → Provoke → Prototype → Publish → Preserve\nPくん：「全部Pでそろえたよ！」\nXおじさん：「7つも必要なの？」\nPくん：「……ぎゅっとまとめたつもりなんだけど。」"
+  },
+  {
+    "objectID": "characters/development/P.html#他の住民との関係-relationships",
+    "href": "characters/development/P.html#他の住民との関係-relationships",
+    "title": "P — ぎゅっとくん",
+    "section": "",
+    "text": "まだ実験中。\n\nUおばさん：同じ「ぎゅっ」でも、ちょっと意味が違う？\nIおじさん：まっすぐすぎる考え方を、ぎゅっとまとめてあげたい。"
+  },
+  {
+    "objectID": "characters/development/P.html#ネタ帳-story-seeds",
+    "href": "characters/development/P.html#ネタ帳-story-seeds",
+    "title": "P — ぎゅっとくん",
+    "section": "",
+    "text": "Pくん、プロジェクトマネージャーになる。\n五マス村に謎の「Pが多すぎる問題」が発生。\nPF・PL・DWPを唱えるPくん。"
+  },
+  {
+    "objectID": "characters/development/P.html#採用済み-canon",
+    "href": "characters/development/P.html#採用済み-canon",
+    "title": "P — ぎゅっとくん",
+    "section": "",
+    "text": "まだ決まっていません。"
+  },
+  {
+    "objectID": "characters/development/P.html#保留中-open-questions",
+    "href": "characters/development/P.html#保留中-open-questions",
+    "title": "P — ぎゅっとくん",
+    "section": "",
+    "text": "ぎゅっとくんは几帳面？ それとも単に省エネ？\nPくんの得意技は何？\n他のキャラクターとの相性は？"
+  },
+  {
+    "objectID": "characters/development/Z.html",
+    "href": "characters/development/Z.html",
+    "title": "Z — つなぎおばさん",
+    "section": "",
+    "text": "「こっちと、こっちをつなげよう。」\n\nCharacter status: 発展途上 🌱\nCharacter data: data/characters.json\n\n\n\n名前：つなぎおばさん\n形：Zペントミノ\n特徴：二つの側をずらしてつなぐ、橋のような形。\n向きの数：4\n\n\n\n\nまだ実験中。性格は物語とともに育っていきます。\n\n違う考えを持つ人同士をつなげるのが得意。\n表と裏で見え方が違っても、どちらも自分だと思っている。\n仲裁役になりがちだが、本人にも譲れない意見がある。\n\n\n\n\n\n「こっちと、こっちをつなげよう。」\n「表も裏も、わたしです。」\n「違っているから、つなげられるのよ。」\n\n\n\n\nつなぎおばさんは、七つのZをつなげてみました。\nZから始まる言葉が少ないので、少しだけ無理をしています。本人も認めています。\n\n\n\nZ\nWhat it means\n\n\n\n\nZigzag\nまっすぐでなくても、道はつながる。\n\n\nZoom\n近づいて、相手の話を聞いてみる。\n\n\nZone\nそれぞれの居場所を尊重する。\n\n\nZest\n違いを面白がる元気を持つ。\n\n\nZen\nすぐに結論を出さず、静かに考える。\n\n\nZero\n最初から決めつけず、ゼロから話す。\n\n\nZzz\nつなぎ役だって、たまには休む。\n\n\n\nZigzag → Zoom → Zone → Zest → Zen → Zero → Zzz\nTおばさん：「最後のZzzって、心得なの？」\nZおばさん：「ええ。休まないと、橋も疲れるのよ。」\nNくん：「それ、いいね。ぼくも一マス休もう。」\n\n\n\n\nZペントミノは半回転で同じ形になる一方、反転すると別の向きになる。異なる向きは四通り。\n『つなぐ』ことと『違いを残す』ことを両立できる形。\n\n\n\n\nまだ実験中。\n\nNくん：ずれたものをどうつなぐか一緒に考える。\nUおばさん：迎える人とつなぐ人。役割が似ているようで違う。\nTおばさん：秩序をつくる方法について意見が分かれる。\n\n\n\n\n\n表と裏の自己紹介。 ひっくり返ったZおばさんに、みんなが別人だと思って挨拶する。\n橋をかける日。 仲の悪い二人を無理に同じにせず、会話の道を作る。\n\n\n\n\n\n名前は「つなぎおばさん」。\n基本のセリフは「こっちと、こっちをつなげよう。」\n形と向きの数は data/characters.json に準拠。\n\n\n\n\n\n誰かをつなぐ役目に疲れることはある？\n自分の表と裏を、誰に見せたい？\n\n\n\n\n\n\nきっかけ：形から性格や物語を考える実験。\n関連Issue：#37\n次に試したいこと：会話や小さな物語にして、キャラクターらしさを確かめる。"
+  },
+  {
+    "objectID": "characters/development/Z.html#基本設定-established-character",
+    "href": "characters/development/Z.html#基本設定-established-character",
+    "title": "Z — つなぎおばさん",
+    "section": "",
+    "text": "名前：つなぎおばさん\n形：Zペントミノ\n特徴：二つの側をずらしてつなぐ、橋のような形。\n向きの数：4"
+  },
+  {
+    "objectID": "characters/development/Z.html#性格のアイデア-personality-experiments",
+    "href": "characters/development/Z.html#性格のアイデア-personality-experiments",
+    "title": "Z — つなぎおばさん",
+    "section": "",
+    "text": "まだ実験中。性格は物語とともに育っていきます。\n\n違う考えを持つ人同士をつなげるのが得意。\n表と裏で見え方が違っても、どちらも自分だと思っている。\n仲裁役になりがちだが、本人にも譲れない意見がある。"
+  },
+  {
+    "objectID": "characters/development/Z.html#名言仮-possible-quotes",
+    "href": "characters/development/Z.html#名言仮-possible-quotes",
+    "title": "Z — つなぎおばさん",
+    "section": "",
+    "text": "「こっちと、こっちをつなげよう。」\n「表も裏も、わたしです。」\n「違っているから、つなげられるのよ。」"
+  },
+  {
+    "objectID": "characters/development/Z.html#zおばさんの-seven-zs",
+    "href": "characters/development/Z.html#zおばさんの-seven-zs",
+    "title": "Z — つなぎおばさん",
+    "section": "",
+    "text": "つなぎおばさんは、七つのZをつなげてみました。\nZから始まる言葉が少ないので、少しだけ無理をしています。本人も認めています。\n\n\n\nZ\nWhat it means\n\n\n\n\nZigzag\nまっすぐでなくても、道はつながる。\n\n\nZoom\n近づいて、相手の話を聞いてみる。\n\n\nZone\nそれぞれの居場所を尊重する。\n\n\nZest\n違いを面白がる元気を持つ。\n\n\nZen\nすぐに結論を出さず、静かに考える。\n\n\nZero\n最初から決めつけず、ゼロから話す。\n\n\nZzz\nつなぎ役だって、たまには休む。\n\n\n\nZigzag → Zoom → Zone → Zest → Zen → Zero → Zzz\nTおばさん：「最後のZzzって、心得なの？」\nZおばさん：「ええ。休まないと、橋も疲れるのよ。」\nNくん：「それ、いいね。ぼくも一マス休もう。」"
+  },
+  {
+    "objectID": "characters/development/Z.html#形から生まれる発見-geometry-inspired-ideas",
+    "href": "characters/development/Z.html#形から生まれる発見-geometry-inspired-ideas",
+    "title": "Z — つなぎおばさん",
+    "section": "",
+    "text": "Zペントミノは半回転で同じ形になる一方、反転すると別の向きになる。異なる向きは四通り。\n『つなぐ』ことと『違いを残す』ことを両立できる形。"
+  },
+  {
+    "objectID": "characters/development/Z.html#他の住民との関係-relationships",
+    "href": "characters/development/Z.html#他の住民との関係-relationships",
+    "title": "Z — つなぎおばさん",
+    "section": "",
+    "text": "まだ実験中。\n\nNくん：ずれたものをどうつなぐか一緒に考える。\nUおばさん：迎える人とつなぐ人。役割が似ているようで違う。\nTおばさん：秩序をつくる方法について意見が分かれる。"
+  },
+  {
+    "objectID": "characters/development/Z.html#ネタ帳-story-seeds",
+    "href": "characters/development/Z.html#ネタ帳-story-seeds",
+    "title": "Z — つなぎおばさん",
+    "section": "",
+    "text": "表と裏の自己紹介。 ひっくり返ったZおばさんに、みんなが別人だと思って挨拶する。\n橋をかける日。 仲の悪い二人を無理に同じにせず、会話の道を作る。"
+  },
+  {
+    "objectID": "characters/development/Z.html#採用済み-canon",
+    "href": "characters/development/Z.html#採用済み-canon",
+    "title": "Z — つなぎおばさん",
+    "section": "",
+    "text": "名前は「つなぎおばさん」。\n基本のセリフは「こっちと、こっちをつなげよう。」\n形と向きの数は data/characters.json に準拠。"
+  },
+  {
+    "objectID": "characters/development/Z.html#保留中-open-questions",
+    "href": "characters/development/Z.html#保留中-open-questions",
+    "title": "Z — つなぎおばさん",
+    "section": "",
+    "text": "誰かをつなぐ役目に疲れることはある？\n自分の表と裏を、誰に見せたい？"
+  },
+  {
+    "objectID": "characters/development/Z.html#開発メモ-development-notes",
+    "href": "characters/development/Z.html#開発メモ-development-notes",
+    "title": "Z — つなぎおばさん",
+    "section": "",
+    "text": "きっかけ：形から性格や物語を考える実験。\n関連Issue：#37\n次に試したいこと：会話や小さな物語にして、キャラクターらしさを確かめる。"
+  },
+  {
     "objectID": "stories/population-census.html",
     "href": "stories/population-census.html",
     "title": "ペントミノ村の人口調査",
@@ -214,7 +662,7 @@
     "href": "experimental/index.html#実験002クリアしたら何が起こる",
     "title": "ひみつの実験室",
     "section": "🎉 実験002：クリアしたら、何が起こる？",
-    "text": "🎉 実験002：クリアしたら、何が起こる？\n状態：💡 構想中\nパズルを完成させた瞬間、五マスの仲間たちが大騒ぎ？\n紙吹雪？ ダンス？ それとも、思いがけない何か？\nまずは小さな試作品を作って、どんなお祝いが楽しいか試してみよう。\nGitHubで実験計画を見る"
+    "text": "🎉 実験002：クリアしたら、何が起こる？\n状態：🧪 試作公開中\nパズルが完成した！\nさて、五マスの仲間たちはどうやってお祝いする？\nヒントを使ったら、いもむしたちが登場。🐛\n答えをチェックしたら、ちょうちょがひらひら。🦋\nどちらも使わずにクリアしたら、お菓子の紙吹雪が大サービス！ 🍬\n最後にはめたピースや難易度を変えて、いろんな「おめでとう！」を実験してみよう。\n👉 お祝いシミュレーターで遊んでみる\nGitHubで実験の記録を見る"
   },
   {
     "objectID": "experimental/index.html#そのほかただいま妄想中",
@@ -222,6 +670,13 @@
     "title": "ひみつの実験室",
     "section": "🔮 そのほか、ただいま妄想中…",
     "text": "🔮 そのほか、ただいま妄想中…\n五マスの仲間たちに服を着せてみたり、 カードに変身させてみたり、 新聞を発行してみたり。\nまだ形になっていないアイデアも、ここから少しずつ育てていきます。\n実験は、成功しても失敗しても、何かが残れば大成功。\n\n⚠️ この実験室は、予告なく変わったり、実験が突然なくなったりします。お父さんの公式アプリとは別の場所なので、どうぞ気楽にお楽しみください。"
+  },
+  {
+    "objectID": "experimental/celebration/index.html",
+    "href": "experimental/celebration/index.html",
+    "title": "お祝いシミュレーター",
+    "section": "",
+    "text": "🧪 SECRET LAB · EXPERIMENT 002ピースと遊び方で、お祝いが変わる。みんな、完成おめでとう！\n  \n    \n      ことば日本語English\n      最後に置いたピース\n      レベル1\n      Hint 回数0\n      Check 回数0\n      🎉 完成！\n      もう一回！\n      これは試作品です。実際のゲームとは接続していません。\n    \n    \n      \n      どんなお祝いになるかな？"
   },
   {
     "objectID": "experimental/gesture-tutorial/index.html",
@@ -270,7 +725,7 @@
     "href": "analysis/compare_6x10_solutions.html#run-the-comparison",
     "title": "Do Dad’s and Chi’s 6×10 pentomino solutions match?",
     "section": "Run the comparison",
-    "text": "Run the comparison\nRun from the repository root in RStudio. The script writes derived CSVs to data/derived/.\n\n\nCode\nsource(here::here(\"R\", \"match_6x10_solutions.R\"))\n\n\n# A tibble: 1 × 10\n  dad_solutions chi_solutions exact_pairs symmetry_candidate_pairs matched_dad\n          &lt;int&gt;         &lt;int&gt;       &lt;int&gt;                    &lt;int&gt;       &lt;int&gt;\n1          2339          2339        1142                     2339        2339\n# ℹ 5 more variables: matched_chi &lt;int&gt;, uniquely_matched_pairs &lt;int&gt;,\n#   ambiguous_candidate_pairs &lt;int&gt;, unmatched_dad &lt;int&gt;, unmatched_chi &lt;int&gt;\n\n\nCode\nsummary\n\n\nfunction (object, ...) \nUseMethod(\"summary\")\n&lt;bytecode: 0x104a615f0&gt;\n&lt;environment: namespace:base&gt;"
+    "text": "Run the comparison\nRun from the repository root in RStudio. The script writes derived CSVs to data/derived/.\n\n\nCode\nsource(here::here(\"R\", \"match_6x10_solutions.R\"))\n\n\n# A tibble: 1 × 10\n  dad_solutions chi_solutions exact_pairs symmetry_candidate_pairs matched_dad\n          &lt;int&gt;         &lt;int&gt;       &lt;int&gt;                    &lt;int&gt;       &lt;int&gt;\n1          2339          2339        1142                     2339        2339\n# ℹ 5 more variables: matched_chi &lt;int&gt;, uniquely_matched_pairs &lt;int&gt;,\n#   ambiguous_candidate_pairs &lt;int&gt;, unmatched_dad &lt;int&gt;, unmatched_chi &lt;int&gt;\n\n\nCode\nsummary\n\n\nfunction (object, ...) \nUseMethod(\"summary\")\n&lt;bytecode: 0x11d6d54a0&gt;\n&lt;environment: namespace:base&gt;"
   },
   {
     "objectID": "analysis/compare_6x10_solutions.html#inspect-unmatched-or-ambiguous-records",
@@ -350,233 +805,156 @@
     "text": "自分の真ん中にはいる。でも、盤面の真ん中にいるとは限らない。"
   },
   {
-    "objectID": "characters/development/Y.html",
-    "href": "characters/development/Y.html",
-    "title": "Y — はみだしくん",
+    "objectID": "characters/development/F.html",
+    "href": "characters/development/F.html",
+    "title": "F — くねくねちゃん",
     "section": "",
-    "text": "「ちょっと違うほうが楽しいよ。」\n\nCharacter status: 発展途上 🌱\nCharacter data: data/characters.json\n\n\n\n名前：はみだしくん\n形：Yペントミノ\n特徴：四マスの直線から、一マスだけ横にはみ出している。\n向きの数：8\n\n\n\n\nまだ実験中。性格は物語とともに育っていきます。\n\n列に並ぶのは嫌いじゃない。でも、横の景色が気になる。\nはみ出すことを反抗とは思っていない。\n自分だけの違いを楽しむ一方、仲間外れにはなりたくない。\n\n\n\n\n\n「ちょっと違うほうが楽しいよ。」\n「ここから見えるもの、知ってる？」\n「一マスだけ、寄り道していい？」\n\n\n\n\nはみだしくんは、七つのYを考えるつもりが、最初の一つで質問を始めました。\nもちろん、一マスだけ横にはみ出しながら。\n\n\n\nY\nWhat it means\n\n\n\n\nWhy\nどうして、みんな同じ向きなの？\n\n\nYearn\nまだ見たことのない景色が気になる。\n\n\nYonder\nあっちのほうにも行ってみたい。\n\n\nYes\n面白そうなら、やってみよう！\n\n\nYield\nでも、ときには道を譲る。\n\n\nYou\n自分と違う君の話も聞いてみる。\n\n\nYet\nまだできない。でも、まだ終わりじゃない。\n\n\n\nWhy → Yearn → Yonder → Yes → Yield → You → Yet\nIおじさん：「どうして一マスだけはみ出すんだ？」\nYくん：「Why not?」\nIおじさん：「……それもYなのか。」\n\n\n\n\n四マスの直線から横に一マス伸び、異なる向きは八通り。\n一マスの逸脱が、好奇心や個性の比喩になる。\n\n\n\n\nまだ実験中。\n\nIおじさん：まっすぐな四マスには共感。でも最後の一マスが気になる。\nNくん：『ずれる』と『はみだす』の違いを議論する。\nLちゃん：遠くへ伸びる夢を共有する。\n\n\n\n\n\nはみだした一マスの冒険。 横を見たら、誰も知らない小道があった。\nまっすぐコンテスト。 Yくんも参加するが、一マスだけ違う。\n\n\n\n\n\n名前は「はみだしくん」。\n基本のセリフは「ちょっと違うほうが楽しいよ。」\n形と向きの数は data/characters.json に準拠。\n\n\n\n\n\nはみだすのは勇気？ 好奇心？ それとも癖？\nみんなと同じになりたい日はある？\n\n\n\n\n\n\nきっかけ：形から性格や物語を考える実験。\n関連Issue：#37\n次に試したいこと：会話や小さな物語にして、キャラクターらしさを確かめる。"
+    "text": "「こっちかな？ あ、やっぱりこっち！」\n\nCharacter status: 発展途上 🌱\nCharacter data: data/characters.json\n\n\n\n名前：くねくねちゃん\n形：Fペントミノ\n特徴：じっとしているのが苦手。いろいろな向きを試してみたい。\n向きの数：8\n\n\n\n\n\nとりあえず試してから考えるタイプ。\n迷っているように見えて、実は選択肢を楽しんでいる。\n「決められない」と「まだ決めたくない」は違うと思っている。\n失敗しても、すぐ別の方法を試す。\nみんなが当たり前だと思っていることを、ひっくり返してみたくなる。\n子どもなので、昨日の自分と今日の自分が違っていても平気。\n\n\n\n\n\n「こっちかな？ あ、やっぱりこっち！」\n「まだ試してない向きがあるよ！」\n「ひっくり返したら、どうなるかな？」\n「決めるのは、全部やってから！」\n「昨日のわたしも、わたしだよ。」\n\n\n\n\nくねくねちゃんも、7つの心得を考えてみました。\nでも、本人はまだ7つで終わるつもりがありません。\n\n\n\nF\nWhat it means\n\n\n\n\nFidget\nじっとしていられない。\n\n\nFlip\nひっくり返してみる。\n\n\nFind\n新しい可能性を見つける。\n\n\nFail\n失敗しても大丈夫。\n\n\nFigure out\nどうしてそうなるか考える。\n\n\nFollow\n気になるものを追いかける。\n\n\nFly\nまだ知らない自分に会いに行く。\n\n\n\nFidget → Flip → Find → Fail → Figure out → Follow → Fly\nFちゃん：「あれ？ もう七つ終わっちゃった？」\nPくん：「七つで十分だよ。」\nFちゃん：「じゃあ、もう一回最初から！」\n\n\n\n\nFペントミノには、回転と反転を合わせて八通りの異なる向きがある。\n回転だけでは出会えない、鏡映した姿もある。\n八通りすべてを試しても、最初の向きが一番好きな日があるかもしれない。\n形の非対称性を、好奇心や変化への柔軟さとして表現できそう。\n八通りの姿は八人の別人ではなく、全部同じくねくねちゃん。\n\n\n\n\nまだ実験中。\n\nXおじさん：一つしか向きがないと聞いて驚く。「えっ、飽きないの？」\nIおじさん：まっすぐ進む方法以外にも、いろいろあることを教えたがる。\nYくん：寄り道仲間。でも寄り道の理由は少し違う。\nPくん：七つのPを聞いて、「八つ目も作れば？」と提案する。\n\n\n\n\n\nくねくねちゃんのファッションショー。 八通りの姿を披露する。Xおじさんは一通りで参加する。\n八番目のわたし。 七通りを試したあと、最後の一つがなかなか見つからない。\nどっちが表？ ひっくり返った自分を見て、新しい可能性に気づく。\n決めない勇気。 みんなが早く答えを出す中、Fちゃんだけはもう一度試したい。\n\n\n\n\n\n名前は「くねくねちゃん」。\n基本のセリフは「こっちかな？ あ、やっぱりこっち！」\n八通りの姿を試して、結局最初に戻ることもある。\n\n\n\n\n\nくねくねちゃんは優柔不断？ それとも実験好き？\n八通りの向きに、それぞれ気分や名前をつける？\nどんなときに「これだ！」と決めるのか？\n失敗を楽しむ子？ それとも悔しくて何度も挑戦する子？\n\n\n\n\n\n\nきっかけ：八通りの向きから、試行錯誤と自己発見を結びつけた。\n次に試したいこと：八つの姿を順番に切り替える、Fちゃんの小さなインタラクティブ物語。"
   },
   {
-    "objectID": "characters/development/Y.html#基本設定-established-character",
-    "href": "characters/development/Y.html#基本設定-established-character",
-    "title": "Y — はみだしくん",
+    "objectID": "characters/development/F.html#基本設定-established-character",
+    "href": "characters/development/F.html#基本設定-established-character",
+    "title": "F — くねくねちゃん",
     "section": "",
-    "text": "名前：はみだしくん\n形：Yペントミノ\n特徴：四マスの直線から、一マスだけ横にはみ出している。\n向きの数：8"
+    "text": "名前：くねくねちゃん\n形：Fペントミノ\n特徴：じっとしているのが苦手。いろいろな向きを試してみたい。\n向きの数：8"
   },
   {
-    "objectID": "characters/development/Y.html#性格のアイデア-personality-experiments",
-    "href": "characters/development/Y.html#性格のアイデア-personality-experiments",
-    "title": "Y — はみだしくん",
+    "objectID": "characters/development/F.html#性格のアイデア-personality-experiments",
+    "href": "characters/development/F.html#性格のアイデア-personality-experiments",
+    "title": "F — くねくねちゃん",
     "section": "",
-    "text": "まだ実験中。性格は物語とともに育っていきます。\n\n列に並ぶのは嫌いじゃない。でも、横の景色が気になる。\nはみ出すことを反抗とは思っていない。\n自分だけの違いを楽しむ一方、仲間外れにはなりたくない。"
+    "text": "とりあえず試してから考えるタイプ。\n迷っているように見えて、実は選択肢を楽しんでいる。\n「決められない」と「まだ決めたくない」は違うと思っている。\n失敗しても、すぐ別の方法を試す。\nみんなが当たり前だと思っていることを、ひっくり返してみたくなる。\n子どもなので、昨日の自分と今日の自分が違っていても平気。"
   },
   {
-    "objectID": "characters/development/Y.html#名言仮-possible-quotes",
-    "href": "characters/development/Y.html#名言仮-possible-quotes",
-    "title": "Y — はみだしくん",
+    "objectID": "characters/development/F.html#名言仮-possible-quotes",
+    "href": "characters/development/F.html#名言仮-possible-quotes",
+    "title": "F — くねくねちゃん",
     "section": "",
-    "text": "「ちょっと違うほうが楽しいよ。」\n「ここから見えるもの、知ってる？」\n「一マスだけ、寄り道していい？」"
+    "text": "「こっちかな？ あ、やっぱりこっち！」\n「まだ試してない向きがあるよ！」\n「ひっくり返したら、どうなるかな？」\n「決めるのは、全部やってから！」\n「昨日のわたしも、わたしだよ。」"
   },
   {
-    "objectID": "characters/development/Y.html#yくんの-seven-ys",
-    "href": "characters/development/Y.html#yくんの-seven-ys",
-    "title": "Y — はみだしくん",
+    "objectID": "characters/development/F.html#fちゃんの-seven-fs",
+    "href": "characters/development/F.html#fちゃんの-seven-fs",
+    "title": "F — くねくねちゃん",
     "section": "",
-    "text": "はみだしくんは、七つのYを考えるつもりが、最初の一つで質問を始めました。\nもちろん、一マスだけ横にはみ出しながら。\n\n\n\nY\nWhat it means\n\n\n\n\nWhy\nどうして、みんな同じ向きなの？\n\n\nYearn\nまだ見たことのない景色が気になる。\n\n\nYonder\nあっちのほうにも行ってみたい。\n\n\nYes\n面白そうなら、やってみよう！\n\n\nYield\nでも、ときには道を譲る。\n\n\nYou\n自分と違う君の話も聞いてみる。\n\n\nYet\nまだできない。でも、まだ終わりじゃない。\n\n\n\nWhy → Yearn → Yonder → Yes → Yield → You → Yet\nIおじさん：「どうして一マスだけはみ出すんだ？」\nYくん：「Why not?」\nIおじさん：「……それもYなのか。」"
+    "text": "くねくねちゃんも、7つの心得を考えてみました。\nでも、本人はまだ7つで終わるつもりがありません。\n\n\n\nF\nWhat it means\n\n\n\n\nFidget\nじっとしていられない。\n\n\nFlip\nひっくり返してみる。\n\n\nFind\n新しい可能性を見つける。\n\n\nFail\n失敗しても大丈夫。\n\n\nFigure out\nどうしてそうなるか考える。\n\n\nFollow\n気になるものを追いかける。\n\n\nFly\nまだ知らない自分に会いに行く。\n\n\n\nFidget → Flip → Find → Fail → Figure out → Follow → Fly\nFちゃん：「あれ？ もう七つ終わっちゃった？」\nPくん：「七つで十分だよ。」\nFちゃん：「じゃあ、もう一回最初から！」"
   },
   {
-    "objectID": "characters/development/Y.html#形から生まれる発見-geometry-inspired-ideas",
-    "href": "characters/development/Y.html#形から生まれる発見-geometry-inspired-ideas",
-    "title": "Y — はみだしくん",
+    "objectID": "characters/development/F.html#形から生まれる発見-geometry-inspired-ideas",
+    "href": "characters/development/F.html#形から生まれる発見-geometry-inspired-ideas",
+    "title": "F — くねくねちゃん",
     "section": "",
-    "text": "四マスの直線から横に一マス伸び、異なる向きは八通り。\n一マスの逸脱が、好奇心や個性の比喩になる。"
+    "text": "Fペントミノには、回転と反転を合わせて八通りの異なる向きがある。\n回転だけでは出会えない、鏡映した姿もある。\n八通りすべてを試しても、最初の向きが一番好きな日があるかもしれない。\n形の非対称性を、好奇心や変化への柔軟さとして表現できそう。\n八通りの姿は八人の別人ではなく、全部同じくねくねちゃん。"
   },
   {
-    "objectID": "characters/development/Y.html#他の住民との関係-relationships",
-    "href": "characters/development/Y.html#他の住民との関係-relationships",
-    "title": "Y — はみだしくん",
+    "objectID": "characters/development/F.html#他の住民との関係-relationships",
+    "href": "characters/development/F.html#他の住民との関係-relationships",
+    "title": "F — くねくねちゃん",
     "section": "",
-    "text": "まだ実験中。\n\nIおじさん：まっすぐな四マスには共感。でも最後の一マスが気になる。\nNくん：『ずれる』と『はみだす』の違いを議論する。\nLちゃん：遠くへ伸びる夢を共有する。"
+    "text": "まだ実験中。\n\nXおじさん：一つしか向きがないと聞いて驚く。「えっ、飽きないの？」\nIおじさん：まっすぐ進む方法以外にも、いろいろあることを教えたがる。\nYくん：寄り道仲間。でも寄り道の理由は少し違う。\nPくん：七つのPを聞いて、「八つ目も作れば？」と提案する。"
   },
   {
-    "objectID": "characters/development/Y.html#ネタ帳-story-seeds",
-    "href": "characters/development/Y.html#ネタ帳-story-seeds",
-    "title": "Y — はみだしくん",
+    "objectID": "characters/development/F.html#ネタ帳-story-seeds",
+    "href": "characters/development/F.html#ネタ帳-story-seeds",
+    "title": "F — くねくねちゃん",
     "section": "",
-    "text": "はみだした一マスの冒険。 横を見たら、誰も知らない小道があった。\nまっすぐコンテスト。 Yくんも参加するが、一マスだけ違う。"
+    "text": "くねくねちゃんのファッションショー。 八通りの姿を披露する。Xおじさんは一通りで参加する。\n八番目のわたし。 七通りを試したあと、最後の一つがなかなか見つからない。\nどっちが表？ ひっくり返った自分を見て、新しい可能性に気づく。\n決めない勇気。 みんなが早く答えを出す中、Fちゃんだけはもう一度試したい。"
   },
   {
-    "objectID": "characters/development/Y.html#採用済み-canon",
-    "href": "characters/development/Y.html#採用済み-canon",
-    "title": "Y — はみだしくん",
+    "objectID": "characters/development/F.html#採用済み-canon",
+    "href": "characters/development/F.html#採用済み-canon",
+    "title": "F — くねくねちゃん",
     "section": "",
-    "text": "名前は「はみだしくん」。\n基本のセリフは「ちょっと違うほうが楽しいよ。」\n形と向きの数は data/characters.json に準拠。"
+    "text": "名前は「くねくねちゃん」。\n基本のセリフは「こっちかな？ あ、やっぱりこっち！」\n八通りの姿を試して、結局最初に戻ることもある。"
   },
   {
-    "objectID": "characters/development/Y.html#保留中-open-questions",
-    "href": "characters/development/Y.html#保留中-open-questions",
-    "title": "Y — はみだしくん",
+    "objectID": "characters/development/F.html#保留中-open-questions",
+    "href": "characters/development/F.html#保留中-open-questions",
+    "title": "F — くねくねちゃん",
     "section": "",
-    "text": "はみだすのは勇気？ 好奇心？ それとも癖？\nみんなと同じになりたい日はある？"
+    "text": "くねくねちゃんは優柔不断？ それとも実験好き？\n八通りの向きに、それぞれ気分や名前をつける？\nどんなときに「これだ！」と決めるのか？\n失敗を楽しむ子？ それとも悔しくて何度も挑戦する子？"
   },
   {
-    "objectID": "characters/development/Y.html#開発メモ-development-notes",
-    "href": "characters/development/Y.html#開発メモ-development-notes",
-    "title": "Y — はみだしくん",
+    "objectID": "characters/development/F.html#開発メモ-development-notes",
+    "href": "characters/development/F.html#開発メモ-development-notes",
+    "title": "F — くねくねちゃん",
     "section": "",
-    "text": "きっかけ：形から性格や物語を考える実験。\n関連Issue：#37\n次に試したいこと：会話や小さな物語にして、キャラクターらしさを確かめる。"
+    "text": "きっかけ：八通りの向きから、試行錯誤と自己発見を結びつけた。\n次に試したいこと：八つの姿を順番に切り替える、Fちゃんの小さなインタラクティブ物語。"
   },
   {
-    "objectID": "characters/development/W.html",
-    "href": "characters/development/W.html",
-    "title": "W — こつこつおばさん",
+    "objectID": "characters/development/L.html",
+    "href": "characters/development/L.html",
+    "title": "L — のびのびちゃん",
     "section": "",
-    "text": "「一段ずつでいいよ。」\n\nCharacter status: 発展途上 🌱\nCharacter data: data/characters.json\n\n\n\n名前：こつこつおばさん\n形：Wペントミノ\n特徴：階段のように五マスが連なる形。\n向きの数：4\n\n\n\n\nまだ実験中。性格は物語とともに育っていきます。\n\n焦らず、毎日少しずつ進む。\n近道よりも、続けられる道を大切にする。\n急ぐ子どもたちを止めず、後ろから見守る。\n\n\n\n\n\n「一段ずつでいいよ。」\n「昨日より一マス進めたね。」\n「遠回りでも、ちゃんと進んでいるよ。」\n\n\n\n\nこつこつおばさんの七つのWは、急いで覚える必要がありません。\n一段ずつでいいのです。\n\n\n\nW\nWhat it means\n\n\n\n\nWake\n今日も新しい一日が始まる。\n\n\nWalk\nまずは一歩、歩いてみる。\n\n\nWork\nできることを少しずつ積み重ねる。\n\n\nWait\n急がず、育つ時間を待つ。\n\n\nWatch\n途中の小さな変化を見つける。\n\n\nWelcome\n遅れてきた子も迎え入れる。\n\n\nWonder\n歩いてきた道に、まだ驚きがある。\n\n\n\nWake → Walk → Work → Wait → Watch → Welcome → Wonder\nFちゃん：「まだ三つ目なの？」\nWおばさん：「そうよ。三つも進んだね。」\nFちゃん：「……なんか、うれしい！」\n\n\n\n\nWペントミノは階段状の形で、異なる向きは四通り。\n一段ずつの構造が、積み重ねや忍耐の物語につながる。\n\n\n\n\nまだ実験中。\n\nFちゃん：くるくる動く姿を見て、急がなくてもいいと伝える。\nNくん：ずれた配置を見て『階段みたいね』と喜ぶ。\nIおじさん：一直線ではない進み方を教える。\n\n\n\n\n\nいちばん遅い競走。 最後に着いたWおばさんだけが、途中の花を全部覚えている。\n五段の階段。 小さな一歩が誰かの橋になる。\n\n\n\n\n\n名前は「こつこつおばさん」。\n基本のセリフは「一段ずつでいいよ。」\n形と向きの数は data/characters.json に準拠。\n\n\n\n\n\n本当は急いでみたい日もある？\n進歩が見えない日には何をする？\n\n\n\n\n\n\nきっかけ：形から性格や物語を考える実験。\n関連Issue：#37\n次に試したいこと：会話や小さな物語にして、キャラクターらしさを確かめる。"
+    "text": "「あそこまで届くかな？」\n\nCharacter status: 発展途上 🌱\nCharacter data: data/characters.json\n\n\n\n名前：のびのびちゃん\n形：Lペントミノ\n特徴：四マスの長い部分と、端から横に出る一マス。\n向きの数：8\n\n\n\n\nまだ実験中。性格は物語とともに育っていきます。\n\n高いところや遠いものが気になる、背伸びの名人。\nできないと聞くほど、もう一マス伸びたくなる。\n助けようと手を伸ばしすぎて、自分が曲がり角で引っかかる。\n\n\n\n\n\n「あそこまで届くかな？」\n「背伸びしたら、違う景色が見えた！」\n「届かなくても、近づけたよ。」\n\n\n\n\nのびのびちゃんは、届かないものに手を伸ばすための七つのLを集めました。\n最後の一つは、ちょっと予想外。\n\n\n\nL\nWhat it means\n\n\n\n\nLook\nまず遠くを見てみる。\n\n\nLong\nもう少し先まで伸びてみたい。\n\n\nLeap\n届かなければ、思いきって挑戦する。\n\n\nLearn\n失敗した場所にも発見がある。\n\n\nLean\n困ったときは誰かに寄りかかってもいい。\n\n\nLift\n今度は誰かを持ち上げてあげる。\n\n\nLaugh\n届かなくても、笑える日がある。\n\n\n\nLook → Long → Leap → Learn → Lean → Lift → Laugh\nLちゃん：「あと一マス伸びたら、星に届くかな？」\nIおじさん：「五マスまでだぞ。」\nLちゃん：「じゃあ、夢だけ伸ばしとく！」\n\n\n\n\n四マスの直線と端の一マスからなるL形。回転・反転で八通り。\n長さと曲がり角を、好奇心や挑戦の比喩にできる。\n\n\n\n\nまだ実験中。\n\nIおじさん：まっすぐ仲間。でもLちゃんには曲がる一マスがある。\nVおばさん：角の使い方を教わりたい。\nYくん：はみ出した一マスをめぐって意気投合。\n\n\n\n\n\n届かない星。 何度向きを変えても届かない。でも見上げる友達が増える。\n角で立ち往生。 長い体をどう動かせば通れる？\n\n\n\n\n\n名前は「のびのびちゃん」。\n基本のセリフは「あそこまで届くかな？」\n形と向きの数は data/characters.json に準拠。\n\n\n\n\n\n届きたいのは物？ 場所？ それとも誰かの気持ち？\nできないことに出会ったとき、どう気持ちを切り替える？\n\n\n\n\n\n\nきっかけ：形から性格や物語を考える実験。\n関連Issue：#37\n次に試したいこと：会話や小さな物語にして、キャラクターらしさを確かめる。"
   },
   {
-    "objectID": "characters/development/W.html#基本設定-established-character",
-    "href": "characters/development/W.html#基本設定-established-character",
-    "title": "W — こつこつおばさん",
+    "objectID": "characters/development/L.html#基本設定-established-character",
+    "href": "characters/development/L.html#基本設定-established-character",
+    "title": "L — のびのびちゃん",
     "section": "",
-    "text": "名前：こつこつおばさん\n形：Wペントミノ\n特徴：階段のように五マスが連なる形。\n向きの数：4"
+    "text": "名前：のびのびちゃん\n形：Lペントミノ\n特徴：四マスの長い部分と、端から横に出る一マス。\n向きの数：8"
   },
   {
-    "objectID": "characters/development/W.html#性格のアイデア-personality-experiments",
-    "href": "characters/development/W.html#性格のアイデア-personality-experiments",
-    "title": "W — こつこつおばさん",
+    "objectID": "characters/development/L.html#性格のアイデア-personality-experiments",
+    "href": "characters/development/L.html#性格のアイデア-personality-experiments",
+    "title": "L — のびのびちゃん",
     "section": "",
-    "text": "まだ実験中。性格は物語とともに育っていきます。\n\n焦らず、毎日少しずつ進む。\n近道よりも、続けられる道を大切にする。\n急ぐ子どもたちを止めず、後ろから見守る。"
+    "text": "まだ実験中。性格は物語とともに育っていきます。\n\n高いところや遠いものが気になる、背伸びの名人。\nできないと聞くほど、もう一マス伸びたくなる。\n助けようと手を伸ばしすぎて、自分が曲がり角で引っかかる。"
   },
   {
-    "objectID": "characters/development/W.html#名言仮-possible-quotes",
-    "href": "characters/development/W.html#名言仮-possible-quotes",
-    "title": "W — こつこつおばさん",
+    "objectID": "characters/development/L.html#名言仮-possible-quotes",
+    "href": "characters/development/L.html#名言仮-possible-quotes",
+    "title": "L — のびのびちゃん",
     "section": "",
-    "text": "「一段ずつでいいよ。」\n「昨日より一マス進めたね。」\n「遠回りでも、ちゃんと進んでいるよ。」"
+    "text": "「あそこまで届くかな？」\n「背伸びしたら、違う景色が見えた！」\n「届かなくても、近づけたよ。」"
   },
   {
-    "objectID": "characters/development/W.html#wおばさんの-seven-ws",
-    "href": "characters/development/W.html#wおばさんの-seven-ws",
-    "title": "W — こつこつおばさん",
+    "objectID": "characters/development/L.html#lちゃんの-seven-ls",
+    "href": "characters/development/L.html#lちゃんの-seven-ls",
+    "title": "L — のびのびちゃん",
     "section": "",
-    "text": "こつこつおばさんの七つのWは、急いで覚える必要がありません。\n一段ずつでいいのです。\n\n\n\nW\nWhat it means\n\n\n\n\nWake\n今日も新しい一日が始まる。\n\n\nWalk\nまずは一歩、歩いてみる。\n\n\nWork\nできることを少しずつ積み重ねる。\n\n\nWait\n急がず、育つ時間を待つ。\n\n\nWatch\n途中の小さな変化を見つける。\n\n\nWelcome\n遅れてきた子も迎え入れる。\n\n\nWonder\n歩いてきた道に、まだ驚きがある。\n\n\n\nWake → Walk → Work → Wait → Watch → Welcome → Wonder\nFちゃん：「まだ三つ目なの？」\nWおばさん：「そうよ。三つも進んだね。」\nFちゃん：「……なんか、うれしい！」"
+    "text": "のびのびちゃんは、届かないものに手を伸ばすための七つのLを集めました。\n最後の一つは、ちょっと予想外。\n\n\n\nL\nWhat it means\n\n\n\n\nLook\nまず遠くを見てみる。\n\n\nLong\nもう少し先まで伸びてみたい。\n\n\nLeap\n届かなければ、思いきって挑戦する。\n\n\nLearn\n失敗した場所にも発見がある。\n\n\nLean\n困ったときは誰かに寄りかかってもいい。\n\n\nLift\n今度は誰かを持ち上げてあげる。\n\n\nLaugh\n届かなくても、笑える日がある。\n\n\n\nLook → Long → Leap → Learn → Lean → Lift → Laugh\nLちゃん：「あと一マス伸びたら、星に届くかな？」\nIおじさん：「五マスまでだぞ。」\nLちゃん：「じゃあ、夢だけ伸ばしとく！」"
   },
   {
-    "objectID": "characters/development/W.html#形から生まれる発見-geometry-inspired-ideas",
-    "href": "characters/development/W.html#形から生まれる発見-geometry-inspired-ideas",
-    "title": "W — こつこつおばさん",
+    "objectID": "characters/development/L.html#形から生まれる発見-geometry-inspired-ideas",
+    "href": "characters/development/L.html#形から生まれる発見-geometry-inspired-ideas",
+    "title": "L — のびのびちゃん",
     "section": "",
-    "text": "Wペントミノは階段状の形で、異なる向きは四通り。\n一段ずつの構造が、積み重ねや忍耐の物語につながる。"
+    "text": "四マスの直線と端の一マスからなるL形。回転・反転で八通り。\n長さと曲がり角を、好奇心や挑戦の比喩にできる。"
   },
   {
-    "objectID": "characters/development/W.html#他の住民との関係-relationships",
-    "href": "characters/development/W.html#他の住民との関係-relationships",
-    "title": "W — こつこつおばさん",
+    "objectID": "characters/development/L.html#他の住民との関係-relationships",
+    "href": "characters/development/L.html#他の住民との関係-relationships",
+    "title": "L — のびのびちゃん",
     "section": "",
-    "text": "まだ実験中。\n\nFちゃん：くるくる動く姿を見て、急がなくてもいいと伝える。\nNくん：ずれた配置を見て『階段みたいね』と喜ぶ。\nIおじさん：一直線ではない進み方を教える。"
+    "text": "まだ実験中。\n\nIおじさん：まっすぐ仲間。でもLちゃんには曲がる一マスがある。\nVおばさん：角の使い方を教わりたい。\nYくん：はみ出した一マスをめぐって意気投合。"
   },
   {
-    "objectID": "characters/development/W.html#ネタ帳-story-seeds",
-    "href": "characters/development/W.html#ネタ帳-story-seeds",
-    "title": "W — こつこつおばさん",
+    "objectID": "characters/development/L.html#ネタ帳-story-seeds",
+    "href": "characters/development/L.html#ネタ帳-story-seeds",
+    "title": "L — のびのびちゃん",
     "section": "",
-    "text": "いちばん遅い競走。 最後に着いたWおばさんだけが、途中の花を全部覚えている。\n五段の階段。 小さな一歩が誰かの橋になる。"
+    "text": "届かない星。 何度向きを変えても届かない。でも見上げる友達が増える。\n角で立ち往生。 長い体をどう動かせば通れる？"
   },
   {
-    "objectID": "characters/development/W.html#採用済み-canon",
-    "href": "characters/development/W.html#採用済み-canon",
-    "title": "W — こつこつおばさん",
+    "objectID": "characters/development/L.html#採用済み-canon",
+    "href": "characters/development/L.html#採用済み-canon",
+    "title": "L — のびのびちゃん",
     "section": "",
-    "text": "名前は「こつこつおばさん」。\n基本のセリフは「一段ずつでいいよ。」\n形と向きの数は data/characters.json に準拠。"
+    "text": "名前は「のびのびちゃん」。\n基本のセリフは「あそこまで届くかな？」\n形と向きの数は data/characters.json に準拠。"
   },
   {
-    "objectID": "characters/development/W.html#保留中-open-questions",
-    "href": "characters/development/W.html#保留中-open-questions",
-    "title": "W — こつこつおばさん",
+    "objectID": "characters/development/L.html#保留中-open-questions",
+    "href": "characters/development/L.html#保留中-open-questions",
+    "title": "L — のびのびちゃん",
     "section": "",
-    "text": "本当は急いでみたい日もある？\n進歩が見えない日には何をする？"
+    "text": "届きたいのは物？ 場所？ それとも誰かの気持ち？\nできないことに出会ったとき、どう気持ちを切り替える？"
   },
   {
-    "objectID": "characters/development/W.html#開発メモ-development-notes",
-    "href": "characters/development/W.html#開発メモ-development-notes",
-    "title": "W — こつこつおばさん",
-    "section": "",
-    "text": "きっかけ：形から性格や物語を考える実験。\n関連Issue：#37\n次に試したいこと：会話や小さな物語にして、キャラクターらしさを確かめる。"
-  },
-  {
-    "objectID": "characters/development/N.html",
-    "href": "characters/development/N.html",
-    "title": "N — ずらしくん",
-    "section": "",
-    "text": "「ちょっとずれると、面白いよ。」\n\nCharacter status: 発展途上 🌱\nCharacter data: data/characters.json\n\n\n\n名前：ずらしくん\n形：Nペントミノ\n特徴：二つのまとまりが一マスずれたような形。\n向きの数：8\n\n\n\n\nまだ実験中。性格は物語とともに育っていきます。\n\nみんなと同じ場所に並ぶと、つい少しずらしたくなる。\n反抗しているのではなく、別の視点を見つけたい。\n自分は普通だと思っている。周囲のほうがずれて見える。\n\n\n\n\n\n「ちょっとずれると、面白いよ。」\n「同じ景色でも、一マス違うと別世界。」\n「ぼくがずれた？ そっちが動いたんじゃない？」\n\n\n\n\nずらしくんは、みんなと少し違う角度から七つのNを選びました。\n並べたはずなのに、本人だけ一マスずれています。\n\n\n\nN\nWhat it means\n\n\n\n\nNotice\nみんなが見逃した違いに気づく。\n\n\nNudge\nほんの一マス、動かしてみる。\n\n\nNavigate\nいつもの道から少し外れてみる。\n\n\nNew\n違う場所には新しい景色がある。\n\n\nNuance\n同じか違うかだけでは決められない。\n\n\nNegotiate\nぴったり合わなくても話し合う。\n\n\nNext\n次はどこをずらしてみよう？\n\n\n\nNotice → Nudge → Navigate → New → Nuance → Negotiate → Next\nTおばさん：「Nくん、七つをきれいに並べて！」\nNくん：「並べたよ。一つだけずらしたけど。」\nTおばさん：「それが問題なの！」\n\n\n\n\nNペントミノは非対称で、回転・反転による異なる向きが八通り。\nずれを欠点ではなく、視点の差として描ける。\n\n\n\n\nまだ実験中。\n\nTおばさん：きれいに並べたい人と、少しずらしたい子。\nYくん：似ているようで、ずらす理由は違う。\nWおばさん：一段ずつの歩き方に親近感を覚える。\n\n\n\n\n\n一マスずれた集合写真。 全員そろったのに、Nくんだけ位置が気になる。\nずれた地図。 間違いに見えた地図から、新しい道を発見する。\n\n\n\n\n\n名前は「ずらしくん」。\n基本のセリフは「ちょっとずれると、面白いよ。」\n形と向きの数は data/characters.json に準拠。\n\n\n\n\n\nずれるのは本人の意思？ 無意識の癖？\n誰かとぴったり合う瞬間はある？\n\n\n\n\n\n\nきっかけ：形から性格や物語を考える実験。\n関連Issue：#37\n次に試したいこと：会話や小さな物語にして、キャラクターらしさを確かめる。"
-  },
-  {
-    "objectID": "characters/development/N.html#基本設定-established-character",
-    "href": "characters/development/N.html#基本設定-established-character",
-    "title": "N — ずらしくん",
-    "section": "",
-    "text": "名前：ずらしくん\n形：Nペントミノ\n特徴：二つのまとまりが一マスずれたような形。\n向きの数：8"
-  },
-  {
-    "objectID": "characters/development/N.html#性格のアイデア-personality-experiments",
-    "href": "characters/development/N.html#性格のアイデア-personality-experiments",
-    "title": "N — ずらしくん",
-    "section": "",
-    "text": "まだ実験中。性格は物語とともに育っていきます。\n\nみんなと同じ場所に並ぶと、つい少しずらしたくなる。\n反抗しているのではなく、別の視点を見つけたい。\n自分は普通だと思っている。周囲のほうがずれて見える。"
-  },
-  {
-    "objectID": "characters/development/N.html#名言仮-possible-quotes",
-    "href": "characters/development/N.html#名言仮-possible-quotes",
-    "title": "N — ずらしくん",
-    "section": "",
-    "text": "「ちょっとずれると、面白いよ。」\n「同じ景色でも、一マス違うと別世界。」\n「ぼくがずれた？ そっちが動いたんじゃない？」"
-  },
-  {
-    "objectID": "characters/development/N.html#nくんの-seven-ns",
-    "href": "characters/development/N.html#nくんの-seven-ns",
-    "title": "N — ずらしくん",
-    "section": "",
-    "text": "ずらしくんは、みんなと少し違う角度から七つのNを選びました。\n並べたはずなのに、本人だけ一マスずれています。\n\n\n\nN\nWhat it means\n\n\n\n\nNotice\nみんなが見逃した違いに気づく。\n\n\nNudge\nほんの一マス、動かしてみる。\n\n\nNavigate\nいつもの道から少し外れてみる。\n\n\nNew\n違う場所には新しい景色がある。\n\n\nNuance\n同じか違うかだけでは決められない。\n\n\nNegotiate\nぴったり合わなくても話し合う。\n\n\nNext\n次はどこをずらしてみよう？\n\n\n\nNotice → Nudge → Navigate → New → Nuance → Negotiate → Next\nTおばさん：「Nくん、七つをきれいに並べて！」\nNくん：「並べたよ。一つだけずらしたけど。」\nTおばさん：「それが問題なの！」"
-  },
-  {
-    "objectID": "characters/development/N.html#形から生まれる発見-geometry-inspired-ideas",
-    "href": "characters/development/N.html#形から生まれる発見-geometry-inspired-ideas",
-    "title": "N — ずらしくん",
-    "section": "",
-    "text": "Nペントミノは非対称で、回転・反転による異なる向きが八通り。\nずれを欠点ではなく、視点の差として描ける。"
-  },
-  {
-    "objectID": "characters/development/N.html#他の住民との関係-relationships",
-    "href": "characters/development/N.html#他の住民との関係-relationships",
-    "title": "N — ずらしくん",
-    "section": "",
-    "text": "まだ実験中。\n\nTおばさん：きれいに並べたい人と、少しずらしたい子。\nYくん：似ているようで、ずらす理由は違う。\nWおばさん：一段ずつの歩き方に親近感を覚える。"
-  },
-  {
-    "objectID": "characters/development/N.html#ネタ帳-story-seeds",
-    "href": "characters/development/N.html#ネタ帳-story-seeds",
-    "title": "N — ずらしくん",
-    "section": "",
-    "text": "一マスずれた集合写真。 全員そろったのに、Nくんだけ位置が気になる。\nずれた地図。 間違いに見えた地図から、新しい道を発見する。"
-  },
-  {
-    "objectID": "characters/development/N.html#採用済み-canon",
-    "href": "characters/development/N.html#採用済み-canon",
-    "title": "N — ずらしくん",
-    "section": "",
-    "text": "名前は「ずらしくん」。\n基本のセリフは「ちょっとずれると、面白いよ。」\n形と向きの数は data/characters.json に準拠。"
-  },
-  {
-    "objectID": "characters/development/N.html#保留中-open-questions",
-    "href": "characters/development/N.html#保留中-open-questions",
-    "title": "N — ずらしくん",
-    "section": "",
-    "text": "ずれるのは本人の意思？ 無意識の癖？\n誰かとぴったり合う瞬間はある？"
-  },
-  {
-    "objectID": "characters/development/N.html#開発メモ-development-notes",
-    "href": "characters/development/N.html#開発メモ-development-notes",
-    "title": "N — ずらしくん",
+    "objectID": "characters/development/L.html#開発メモ-development-notes",
+    "href": "characters/development/L.html#開発メモ-development-notes",
+    "title": "L — のびのびちゃん",
     "section": "",
     "text": "きっかけ：形から性格や物語を考える実験。\n関連Issue：#37\n次に試したいこと：会話や小さな物語にして、キャラクターらしさを確かめる。"
   },
@@ -658,612 +1036,234 @@
     "text": "きっかけ：Uの一マスのくぼみと「ぎゅー」という名前から、包容力と物理的制約のギャップを考えた。\n次に試したいこと：Iおじさんを迎えようとして四方向すべて試す、短いコメディ。"
   },
   {
-    "objectID": "characters/development/L.html",
-    "href": "characters/development/L.html",
-    "title": "L — のびのびちゃん",
+    "objectID": "characters/development/N.html",
+    "href": "characters/development/N.html",
+    "title": "N — ずらしくん",
     "section": "",
-    "text": "「あそこまで届くかな？」\n\nCharacter status: 発展途上 🌱\nCharacter data: data/characters.json\n\n\n\n名前：のびのびちゃん\n形：Lペントミノ\n特徴：四マスの長い部分と、端から横に出る一マス。\n向きの数：8\n\n\n\n\nまだ実験中。性格は物語とともに育っていきます。\n\n高いところや遠いものが気になる、背伸びの名人。\nできないと聞くほど、もう一マス伸びたくなる。\n助けようと手を伸ばしすぎて、自分が曲がり角で引っかかる。\n\n\n\n\n\n「あそこまで届くかな？」\n「背伸びしたら、違う景色が見えた！」\n「届かなくても、近づけたよ。」\n\n\n\n\nのびのびちゃんは、届かないものに手を伸ばすための七つのLを集めました。\n最後の一つは、ちょっと予想外。\n\n\n\nL\nWhat it means\n\n\n\n\nLook\nまず遠くを見てみる。\n\n\nLong\nもう少し先まで伸びてみたい。\n\n\nLeap\n届かなければ、思いきって挑戦する。\n\n\nLearn\n失敗した場所にも発見がある。\n\n\nLean\n困ったときは誰かに寄りかかってもいい。\n\n\nLift\n今度は誰かを持ち上げてあげる。\n\n\nLaugh\n届かなくても、笑える日がある。\n\n\n\nLook → Long → Leap → Learn → Lean → Lift → Laugh\nLちゃん：「あと一マス伸びたら、星に届くかな？」\nIおじさん：「五マスまでだぞ。」\nLちゃん：「じゃあ、夢だけ伸ばしとく！」\n\n\n\n\n四マスの直線と端の一マスからなるL形。回転・反転で八通り。\n長さと曲がり角を、好奇心や挑戦の比喩にできる。\n\n\n\n\nまだ実験中。\n\nIおじさん：まっすぐ仲間。でもLちゃんには曲がる一マスがある。\nVおばさん：角の使い方を教わりたい。\nYくん：はみ出した一マスをめぐって意気投合。\n\n\n\n\n\n届かない星。 何度向きを変えても届かない。でも見上げる友達が増える。\n角で立ち往生。 長い体をどう動かせば通れる？\n\n\n\n\n\n名前は「のびのびちゃん」。\n基本のセリフは「あそこまで届くかな？」\n形と向きの数は data/characters.json に準拠。\n\n\n\n\n\n届きたいのは物？ 場所？ それとも誰かの気持ち？\nできないことに出会ったとき、どう気持ちを切り替える？\n\n\n\n\n\n\nきっかけ：形から性格や物語を考える実験。\n関連Issue：#37\n次に試したいこと：会話や小さな物語にして、キャラクターらしさを確かめる。"
+    "text": "「ちょっとずれると、面白いよ。」\n\nCharacter status: 発展途上 🌱\nCharacter data: data/characters.json\n\n\n\n名前：ずらしくん\n形：Nペントミノ\n特徴：二つのまとまりが一マスずれたような形。\n向きの数：8\n\n\n\n\nまだ実験中。性格は物語とともに育っていきます。\n\nみんなと同じ場所に並ぶと、つい少しずらしたくなる。\n反抗しているのではなく、別の視点を見つけたい。\n自分は普通だと思っている。周囲のほうがずれて見える。\n\n\n\n\n\n「ちょっとずれると、面白いよ。」\n「同じ景色でも、一マス違うと別世界。」\n「ぼくがずれた？ そっちが動いたんじゃない？」\n\n\n\n\nずらしくんは、みんなと少し違う角度から七つのNを選びました。\n並べたはずなのに、本人だけ一マスずれています。\n\n\n\nN\nWhat it means\n\n\n\n\nNotice\nみんなが見逃した違いに気づく。\n\n\nNudge\nほんの一マス、動かしてみる。\n\n\nNavigate\nいつもの道から少し外れてみる。\n\n\nNew\n違う場所には新しい景色がある。\n\n\nNuance\n同じか違うかだけでは決められない。\n\n\nNegotiate\nぴったり合わなくても話し合う。\n\n\nNext\n次はどこをずらしてみよう？\n\n\n\nNotice → Nudge → Navigate → New → Nuance → Negotiate → Next\nTおばさん：「Nくん、七つをきれいに並べて！」\nNくん：「並べたよ。一つだけずらしたけど。」\nTおばさん：「それが問題なの！」\n\n\n\n\nNペントミノは非対称で、回転・反転による異なる向きが八通り。\nずれを欠点ではなく、視点の差として描ける。\n\n\n\n\nまだ実験中。\n\nTおばさん：きれいに並べたい人と、少しずらしたい子。\nYくん：似ているようで、ずらす理由は違う。\nWおばさん：一段ずつの歩き方に親近感を覚える。\n\n\n\n\n\n一マスずれた集合写真。 全員そろったのに、Nくんだけ位置が気になる。\nずれた地図。 間違いに見えた地図から、新しい道を発見する。\n\n\n\n\n\n名前は「ずらしくん」。\n基本のセリフは「ちょっとずれると、面白いよ。」\n形と向きの数は data/characters.json に準拠。\n\n\n\n\n\nずれるのは本人の意思？ 無意識の癖？\n誰かとぴったり合う瞬間はある？\n\n\n\n\n\n\nきっかけ：形から性格や物語を考える実験。\n関連Issue：#37\n次に試したいこと：会話や小さな物語にして、キャラクターらしさを確かめる。"
   },
   {
-    "objectID": "characters/development/L.html#基本設定-established-character",
-    "href": "characters/development/L.html#基本設定-established-character",
-    "title": "L — のびのびちゃん",
+    "objectID": "characters/development/N.html#基本設定-established-character",
+    "href": "characters/development/N.html#基本設定-established-character",
+    "title": "N — ずらしくん",
     "section": "",
-    "text": "名前：のびのびちゃん\n形：Lペントミノ\n特徴：四マスの長い部分と、端から横に出る一マス。\n向きの数：8"
+    "text": "名前：ずらしくん\n形：Nペントミノ\n特徴：二つのまとまりが一マスずれたような形。\n向きの数：8"
   },
   {
-    "objectID": "characters/development/L.html#性格のアイデア-personality-experiments",
-    "href": "characters/development/L.html#性格のアイデア-personality-experiments",
-    "title": "L — のびのびちゃん",
+    "objectID": "characters/development/N.html#性格のアイデア-personality-experiments",
+    "href": "characters/development/N.html#性格のアイデア-personality-experiments",
+    "title": "N — ずらしくん",
     "section": "",
-    "text": "まだ実験中。性格は物語とともに育っていきます。\n\n高いところや遠いものが気になる、背伸びの名人。\nできないと聞くほど、もう一マス伸びたくなる。\n助けようと手を伸ばしすぎて、自分が曲がり角で引っかかる。"
+    "text": "まだ実験中。性格は物語とともに育っていきます。\n\nみんなと同じ場所に並ぶと、つい少しずらしたくなる。\n反抗しているのではなく、別の視点を見つけたい。\n自分は普通だと思っている。周囲のほうがずれて見える。"
   },
   {
-    "objectID": "characters/development/L.html#名言仮-possible-quotes",
-    "href": "characters/development/L.html#名言仮-possible-quotes",
-    "title": "L — のびのびちゃん",
+    "objectID": "characters/development/N.html#名言仮-possible-quotes",
+    "href": "characters/development/N.html#名言仮-possible-quotes",
+    "title": "N — ずらしくん",
     "section": "",
-    "text": "「あそこまで届くかな？」\n「背伸びしたら、違う景色が見えた！」\n「届かなくても、近づけたよ。」"
+    "text": "「ちょっとずれると、面白いよ。」\n「同じ景色でも、一マス違うと別世界。」\n「ぼくがずれた？ そっちが動いたんじゃない？」"
   },
   {
-    "objectID": "characters/development/L.html#lちゃんの-seven-ls",
-    "href": "characters/development/L.html#lちゃんの-seven-ls",
-    "title": "L — のびのびちゃん",
+    "objectID": "characters/development/N.html#nくんの-seven-ns",
+    "href": "characters/development/N.html#nくんの-seven-ns",
+    "title": "N — ずらしくん",
     "section": "",
-    "text": "のびのびちゃんは、届かないものに手を伸ばすための七つのLを集めました。\n最後の一つは、ちょっと予想外。\n\n\n\nL\nWhat it means\n\n\n\n\nLook\nまず遠くを見てみる。\n\n\nLong\nもう少し先まで伸びてみたい。\n\n\nLeap\n届かなければ、思いきって挑戦する。\n\n\nLearn\n失敗した場所にも発見がある。\n\n\nLean\n困ったときは誰かに寄りかかってもいい。\n\n\nLift\n今度は誰かを持ち上げてあげる。\n\n\nLaugh\n届かなくても、笑える日がある。\n\n\n\nLook → Long → Leap → Learn → Lean → Lift → Laugh\nLちゃん：「あと一マス伸びたら、星に届くかな？」\nIおじさん：「五マスまでだぞ。」\nLちゃん：「じゃあ、夢だけ伸ばしとく！」"
+    "text": "ずらしくんは、みんなと少し違う角度から七つのNを選びました。\n並べたはずなのに、本人だけ一マスずれています。\n\n\n\nN\nWhat it means\n\n\n\n\nNotice\nみんなが見逃した違いに気づく。\n\n\nNudge\nほんの一マス、動かしてみる。\n\n\nNavigate\nいつもの道から少し外れてみる。\n\n\nNew\n違う場所には新しい景色がある。\n\n\nNuance\n同じか違うかだけでは決められない。\n\n\nNegotiate\nぴったり合わなくても話し合う。\n\n\nNext\n次はどこをずらしてみよう？\n\n\n\nNotice → Nudge → Navigate → New → Nuance → Negotiate → Next\nTおばさん：「Nくん、七つをきれいに並べて！」\nNくん：「並べたよ。一つだけずらしたけど。」\nTおばさん：「それが問題なの！」"
   },
   {
-    "objectID": "characters/development/L.html#形から生まれる発見-geometry-inspired-ideas",
-    "href": "characters/development/L.html#形から生まれる発見-geometry-inspired-ideas",
-    "title": "L — のびのびちゃん",
+    "objectID": "characters/development/N.html#形から生まれる発見-geometry-inspired-ideas",
+    "href": "characters/development/N.html#形から生まれる発見-geometry-inspired-ideas",
+    "title": "N — ずらしくん",
     "section": "",
-    "text": "四マスの直線と端の一マスからなるL形。回転・反転で八通り。\n長さと曲がり角を、好奇心や挑戦の比喩にできる。"
+    "text": "Nペントミノは非対称で、回転・反転による異なる向きが八通り。\nずれを欠点ではなく、視点の差として描ける。"
   },
   {
-    "objectID": "characters/development/L.html#他の住民との関係-relationships",
-    "href": "characters/development/L.html#他の住民との関係-relationships",
-    "title": "L — のびのびちゃん",
+    "objectID": "characters/development/N.html#他の住民との関係-relationships",
+    "href": "characters/development/N.html#他の住民との関係-relationships",
+    "title": "N — ずらしくん",
     "section": "",
-    "text": "まだ実験中。\n\nIおじさん：まっすぐ仲間。でもLちゃんには曲がる一マスがある。\nVおばさん：角の使い方を教わりたい。\nYくん：はみ出した一マスをめぐって意気投合。"
+    "text": "まだ実験中。\n\nTおばさん：きれいに並べたい人と、少しずらしたい子。\nYくん：似ているようで、ずらす理由は違う。\nWおばさん：一段ずつの歩き方に親近感を覚える。"
   },
   {
-    "objectID": "characters/development/L.html#ネタ帳-story-seeds",
-    "href": "characters/development/L.html#ネタ帳-story-seeds",
-    "title": "L — のびのびちゃん",
+    "objectID": "characters/development/N.html#ネタ帳-story-seeds",
+    "href": "characters/development/N.html#ネタ帳-story-seeds",
+    "title": "N — ずらしくん",
     "section": "",
-    "text": "届かない星。 何度向きを変えても届かない。でも見上げる友達が増える。\n角で立ち往生。 長い体をどう動かせば通れる？"
+    "text": "一マスずれた集合写真。 全員そろったのに、Nくんだけ位置が気になる。\nずれた地図。 間違いに見えた地図から、新しい道を発見する。"
   },
   {
-    "objectID": "characters/development/L.html#採用済み-canon",
-    "href": "characters/development/L.html#採用済み-canon",
-    "title": "L — のびのびちゃん",
+    "objectID": "characters/development/N.html#採用済み-canon",
+    "href": "characters/development/N.html#採用済み-canon",
+    "title": "N — ずらしくん",
     "section": "",
-    "text": "名前は「のびのびちゃん」。\n基本のセリフは「あそこまで届くかな？」\n形と向きの数は data/characters.json に準拠。"
+    "text": "名前は「ずらしくん」。\n基本のセリフは「ちょっとずれると、面白いよ。」\n形と向きの数は data/characters.json に準拠。"
   },
   {
-    "objectID": "characters/development/L.html#保留中-open-questions",
-    "href": "characters/development/L.html#保留中-open-questions",
-    "title": "L — のびのびちゃん",
+    "objectID": "characters/development/N.html#保留中-open-questions",
+    "href": "characters/development/N.html#保留中-open-questions",
+    "title": "N — ずらしくん",
     "section": "",
-    "text": "届きたいのは物？ 場所？ それとも誰かの気持ち？\nできないことに出会ったとき、どう気持ちを切り替える？"
+    "text": "ずれるのは本人の意思？ 無意識の癖？\n誰かとぴったり合う瞬間はある？"
   },
   {
-    "objectID": "characters/development/L.html#開発メモ-development-notes",
-    "href": "characters/development/L.html#開発メモ-development-notes",
-    "title": "L — のびのびちゃん",
-    "section": "",
-    "text": "きっかけ：形から性格や物語を考える実験。\n関連Issue：#37\n次に試したいこと：会話や小さな物語にして、キャラクターらしさを確かめる。"
-  },
-  {
-    "objectID": "characters/development/F.html",
-    "href": "characters/development/F.html",
-    "title": "F — くねくねちゃん",
-    "section": "",
-    "text": "「こっちかな？ あ、やっぱりこっち！」\n\nCharacter status: 発展途上 🌱\nCharacter data: data/characters.json\n\n\n\n名前：くねくねちゃん\n形：Fペントミノ\n特徴：じっとしているのが苦手。いろいろな向きを試してみたい。\n向きの数：8\n\n\n\n\n\nとりあえず試してから考えるタイプ。\n迷っているように見えて、実は選択肢を楽しんでいる。\n「決められない」と「まだ決めたくない」は違うと思っている。\n失敗しても、すぐ別の方法を試す。\nみんなが当たり前だと思っていることを、ひっくり返してみたくなる。\n子どもなので、昨日の自分と今日の自分が違っていても平気。\n\n\n\n\n\n「こっちかな？ あ、やっぱりこっち！」\n「まだ試してない向きがあるよ！」\n「ひっくり返したら、どうなるかな？」\n「決めるのは、全部やってから！」\n「昨日のわたしも、わたしだよ。」\n\n\n\n\nくねくねちゃんも、7つの心得を考えてみました。\nでも、本人はまだ7つで終わるつもりがありません。\n\n\n\nF\nWhat it means\n\n\n\n\nFidget\nじっとしていられない。\n\n\nFlip\nひっくり返してみる。\n\n\nFind\n新しい可能性を見つける。\n\n\nFail\n失敗しても大丈夫。\n\n\nFigure out\nどうしてそうなるか考える。\n\n\nFollow\n気になるものを追いかける。\n\n\nFly\nまだ知らない自分に会いに行く。\n\n\n\nFidget → Flip → Find → Fail → Figure out → Follow → Fly\nFちゃん：「あれ？ もう七つ終わっちゃった？」\nPくん：「七つで十分だよ。」\nFちゃん：「じゃあ、もう一回最初から！」\n\n\n\n\nFペントミノには、回転と反転を合わせて八通りの異なる向きがある。\n回転だけでは出会えない、鏡映した姿もある。\n八通りすべてを試しても、最初の向きが一番好きな日があるかもしれない。\n形の非対称性を、好奇心や変化への柔軟さとして表現できそう。\n八通りの姿は八人の別人ではなく、全部同じくねくねちゃん。\n\n\n\n\nまだ実験中。\n\nXおじさん：一つしか向きがないと聞いて驚く。「えっ、飽きないの？」\nIおじさん：まっすぐ進む方法以外にも、いろいろあることを教えたがる。\nYくん：寄り道仲間。でも寄り道の理由は少し違う。\nPくん：七つのPを聞いて、「八つ目も作れば？」と提案する。\n\n\n\n\n\nくねくねちゃんのファッションショー。 八通りの姿を披露する。Xおじさんは一通りで参加する。\n八番目のわたし。 七通りを試したあと、最後の一つがなかなか見つからない。\nどっちが表？ ひっくり返った自分を見て、新しい可能性に気づく。\n決めない勇気。 みんなが早く答えを出す中、Fちゃんだけはもう一度試したい。\n\n\n\n\n\n名前は「くねくねちゃん」。\n基本のセリフは「こっちかな？ あ、やっぱりこっち！」\n八通りの姿を試して、結局最初に戻ることもある。\n\n\n\n\n\nくねくねちゃんは優柔不断？ それとも実験好き？\n八通りの向きに、それぞれ気分や名前をつける？\nどんなときに「これだ！」と決めるのか？\n失敗を楽しむ子？ それとも悔しくて何度も挑戦する子？\n\n\n\n\n\n\nきっかけ：八通りの向きから、試行錯誤と自己発見を結びつけた。\n次に試したいこと：八つの姿を順番に切り替える、Fちゃんの小さなインタラクティブ物語。"
-  },
-  {
-    "objectID": "characters/development/F.html#基本設定-established-character",
-    "href": "characters/development/F.html#基本設定-established-character",
-    "title": "F — くねくねちゃん",
-    "section": "",
-    "text": "名前：くねくねちゃん\n形：Fペントミノ\n特徴：じっとしているのが苦手。いろいろな向きを試してみたい。\n向きの数：8"
-  },
-  {
-    "objectID": "characters/development/F.html#性格のアイデア-personality-experiments",
-    "href": "characters/development/F.html#性格のアイデア-personality-experiments",
-    "title": "F — くねくねちゃん",
-    "section": "",
-    "text": "とりあえず試してから考えるタイプ。\n迷っているように見えて、実は選択肢を楽しんでいる。\n「決められない」と「まだ決めたくない」は違うと思っている。\n失敗しても、すぐ別の方法を試す。\nみんなが当たり前だと思っていることを、ひっくり返してみたくなる。\n子どもなので、昨日の自分と今日の自分が違っていても平気。"
-  },
-  {
-    "objectID": "characters/development/F.html#名言仮-possible-quotes",
-    "href": "characters/development/F.html#名言仮-possible-quotes",
-    "title": "F — くねくねちゃん",
-    "section": "",
-    "text": "「こっちかな？ あ、やっぱりこっち！」\n「まだ試してない向きがあるよ！」\n「ひっくり返したら、どうなるかな？」\n「決めるのは、全部やってから！」\n「昨日のわたしも、わたしだよ。」"
-  },
-  {
-    "objectID": "characters/development/F.html#fちゃんの-seven-fs",
-    "href": "characters/development/F.html#fちゃんの-seven-fs",
-    "title": "F — くねくねちゃん",
-    "section": "",
-    "text": "くねくねちゃんも、7つの心得を考えてみました。\nでも、本人はまだ7つで終わるつもりがありません。\n\n\n\nF\nWhat it means\n\n\n\n\nFidget\nじっとしていられない。\n\n\nFlip\nひっくり返してみる。\n\n\nFind\n新しい可能性を見つける。\n\n\nFail\n失敗しても大丈夫。\n\n\nFigure out\nどうしてそうなるか考える。\n\n\nFollow\n気になるものを追いかける。\n\n\nFly\nまだ知らない自分に会いに行く。\n\n\n\nFidget → Flip → Find → Fail → Figure out → Follow → Fly\nFちゃん：「あれ？ もう七つ終わっちゃった？」\nPくん：「七つで十分だよ。」\nFちゃん：「じゃあ、もう一回最初から！」"
-  },
-  {
-    "objectID": "characters/development/F.html#形から生まれる発見-geometry-inspired-ideas",
-    "href": "characters/development/F.html#形から生まれる発見-geometry-inspired-ideas",
-    "title": "F — くねくねちゃん",
-    "section": "",
-    "text": "Fペントミノには、回転と反転を合わせて八通りの異なる向きがある。\n回転だけでは出会えない、鏡映した姿もある。\n八通りすべてを試しても、最初の向きが一番好きな日があるかもしれない。\n形の非対称性を、好奇心や変化への柔軟さとして表現できそう。\n八通りの姿は八人の別人ではなく、全部同じくねくねちゃん。"
-  },
-  {
-    "objectID": "characters/development/F.html#他の住民との関係-relationships",
-    "href": "characters/development/F.html#他の住民との関係-relationships",
-    "title": "F — くねくねちゃん",
-    "section": "",
-    "text": "まだ実験中。\n\nXおじさん：一つしか向きがないと聞いて驚く。「えっ、飽きないの？」\nIおじさん：まっすぐ進む方法以外にも、いろいろあることを教えたがる。\nYくん：寄り道仲間。でも寄り道の理由は少し違う。\nPくん：七つのPを聞いて、「八つ目も作れば？」と提案する。"
-  },
-  {
-    "objectID": "characters/development/F.html#ネタ帳-story-seeds",
-    "href": "characters/development/F.html#ネタ帳-story-seeds",
-    "title": "F — くねくねちゃん",
-    "section": "",
-    "text": "くねくねちゃんのファッションショー。 八通りの姿を披露する。Xおじさんは一通りで参加する。\n八番目のわたし。 七通りを試したあと、最後の一つがなかなか見つからない。\nどっちが表？ ひっくり返った自分を見て、新しい可能性に気づく。\n決めない勇気。 みんなが早く答えを出す中、Fちゃんだけはもう一度試したい。"
-  },
-  {
-    "objectID": "characters/development/F.html#採用済み-canon",
-    "href": "characters/development/F.html#採用済み-canon",
-    "title": "F — くねくねちゃん",
-    "section": "",
-    "text": "名前は「くねくねちゃん」。\n基本のセリフは「こっちかな？ あ、やっぱりこっち！」\n八通りの姿を試して、結局最初に戻ることもある。"
-  },
-  {
-    "objectID": "characters/development/F.html#保留中-open-questions",
-    "href": "characters/development/F.html#保留中-open-questions",
-    "title": "F — くねくねちゃん",
-    "section": "",
-    "text": "くねくねちゃんは優柔不断？ それとも実験好き？\n八通りの向きに、それぞれ気分や名前をつける？\nどんなときに「これだ！」と決めるのか？\n失敗を楽しむ子？ それとも悔しくて何度も挑戦する子？"
-  },
-  {
-    "objectID": "characters/development/F.html#開発メモ-development-notes",
-    "href": "characters/development/F.html#開発メモ-development-notes",
-    "title": "F — くねくねちゃん",
-    "section": "",
-    "text": "きっかけ：八通りの向きから、試行錯誤と自己発見を結びつけた。\n次に試したいこと：八つの姿を順番に切り替える、Fちゃんの小さなインタラクティブ物語。"
-  },
-  {
-    "objectID": "experimental/celebration/index.html",
-    "href": "experimental/celebration/index.html",
-    "title": "お祝いシミュレーター",
-    "section": "",
-    "text": "🧪 SECRET LAB · EXPERIMENT 002ピースと遊び方で、お祝いが変わる。みんな、完成おめでとう！\n  \n    \n      ことば日本語English\n      最後に置いたピース\n      レベル1\n      Hint 回数0\n      Check 回数0\n      🎉 完成！\n      もう一回！\n      これは試作品です。実際のゲームとは接続していません。\n    \n    \n      \n      どんなお祝いになるかな？"
-  },
-  {
-    "objectID": "characters/development/Z.html",
-    "href": "characters/development/Z.html",
-    "title": "Z — つなぎおばさん",
-    "section": "",
-    "text": "「こっちと、こっちをつなげよう。」\n\nCharacter status: 発展途上 🌱\nCharacter data: data/characters.json\n\n\n\n名前：つなぎおばさん\n形：Zペントミノ\n特徴：二つの側をずらしてつなぐ、橋のような形。\n向きの数：4\n\n\n\n\nまだ実験中。性格は物語とともに育っていきます。\n\n違う考えを持つ人同士をつなげるのが得意。\n表と裏で見え方が違っても、どちらも自分だと思っている。\n仲裁役になりがちだが、本人にも譲れない意見がある。\n\n\n\n\n\n「こっちと、こっちをつなげよう。」\n「表も裏も、わたしです。」\n「違っているから、つなげられるのよ。」\n\n\n\n\nつなぎおばさんは、七つのZをつなげてみました。\nZから始まる言葉が少ないので、少しだけ無理をしています。本人も認めています。\n\n\n\nZ\nWhat it means\n\n\n\n\nZigzag\nまっすぐでなくても、道はつながる。\n\n\nZoom\n近づいて、相手の話を聞いてみる。\n\n\nZone\nそれぞれの居場所を尊重する。\n\n\nZest\n違いを面白がる元気を持つ。\n\n\nZen\nすぐに結論を出さず、静かに考える。\n\n\nZero\n最初から決めつけず、ゼロから話す。\n\n\nZzz\nつなぎ役だって、たまには休む。\n\n\n\nZigzag → Zoom → Zone → Zest → Zen → Zero → Zzz\nTおばさん：「最後のZzzって、心得なの？」\nZおばさん：「ええ。休まないと、橋も疲れるのよ。」\nNくん：「それ、いいね。ぼくも一マス休もう。」\n\n\n\n\nZペントミノは半回転で同じ形になる一方、反転すると別の向きになる。異なる向きは四通り。\n『つなぐ』ことと『違いを残す』ことを両立できる形。\n\n\n\n\nまだ実験中。\n\nNくん：ずれたものをどうつなぐか一緒に考える。\nUおばさん：迎える人とつなぐ人。役割が似ているようで違う。\nTおばさん：秩序をつくる方法について意見が分かれる。\n\n\n\n\n\n表と裏の自己紹介。 ひっくり返ったZおばさんに、みんなが別人だと思って挨拶する。\n橋をかける日。 仲の悪い二人を無理に同じにせず、会話の道を作る。\n\n\n\n\n\n名前は「つなぎおばさん」。\n基本のセリフは「こっちと、こっちをつなげよう。」\n形と向きの数は data/characters.json に準拠。\n\n\n\n\n\n誰かをつなぐ役目に疲れることはある？\n自分の表と裏を、誰に見せたい？\n\n\n\n\n\n\nきっかけ：形から性格や物語を考える実験。\n関連Issue：#37\n次に試したいこと：会話や小さな物語にして、キャラクターらしさを確かめる。"
-  },
-  {
-    "objectID": "characters/development/Z.html#基本設定-established-character",
-    "href": "characters/development/Z.html#基本設定-established-character",
-    "title": "Z — つなぎおばさん",
-    "section": "",
-    "text": "名前：つなぎおばさん\n形：Zペントミノ\n特徴：二つの側をずらしてつなぐ、橋のような形。\n向きの数：4"
-  },
-  {
-    "objectID": "characters/development/Z.html#性格のアイデア-personality-experiments",
-    "href": "characters/development/Z.html#性格のアイデア-personality-experiments",
-    "title": "Z — つなぎおばさん",
-    "section": "",
-    "text": "まだ実験中。性格は物語とともに育っていきます。\n\n違う考えを持つ人同士をつなげるのが得意。\n表と裏で見え方が違っても、どちらも自分だと思っている。\n仲裁役になりがちだが、本人にも譲れない意見がある。"
-  },
-  {
-    "objectID": "characters/development/Z.html#名言仮-possible-quotes",
-    "href": "characters/development/Z.html#名言仮-possible-quotes",
-    "title": "Z — つなぎおばさん",
-    "section": "",
-    "text": "「こっちと、こっちをつなげよう。」\n「表も裏も、わたしです。」\n「違っているから、つなげられるのよ。」"
-  },
-  {
-    "objectID": "characters/development/Z.html#zおばさんの-seven-zs",
-    "href": "characters/development/Z.html#zおばさんの-seven-zs",
-    "title": "Z — つなぎおばさん",
-    "section": "",
-    "text": "つなぎおばさんは、七つのZをつなげてみました。\nZから始まる言葉が少ないので、少しだけ無理をしています。本人も認めています。\n\n\n\nZ\nWhat it means\n\n\n\n\nZigzag\nまっすぐでなくても、道はつながる。\n\n\nZoom\n近づいて、相手の話を聞いてみる。\n\n\nZone\nそれぞれの居場所を尊重する。\n\n\nZest\n違いを面白がる元気を持つ。\n\n\nZen\nすぐに結論を出さず、静かに考える。\n\n\nZero\n最初から決めつけず、ゼロから話す。\n\n\nZzz\nつなぎ役だって、たまには休む。\n\n\n\nZigzag → Zoom → Zone → Zest → Zen → Zero → Zzz\nTおばさん：「最後のZzzって、心得なの？」\nZおばさん：「ええ。休まないと、橋も疲れるのよ。」\nNくん：「それ、いいね。ぼくも一マス休もう。」"
-  },
-  {
-    "objectID": "characters/development/Z.html#形から生まれる発見-geometry-inspired-ideas",
-    "href": "characters/development/Z.html#形から生まれる発見-geometry-inspired-ideas",
-    "title": "Z — つなぎおばさん",
-    "section": "",
-    "text": "Zペントミノは半回転で同じ形になる一方、反転すると別の向きになる。異なる向きは四通り。\n『つなぐ』ことと『違いを残す』ことを両立できる形。"
-  },
-  {
-    "objectID": "characters/development/Z.html#他の住民との関係-relationships",
-    "href": "characters/development/Z.html#他の住民との関係-relationships",
-    "title": "Z — つなぎおばさん",
-    "section": "",
-    "text": "まだ実験中。\n\nNくん：ずれたものをどうつなぐか一緒に考える。\nUおばさん：迎える人とつなぐ人。役割が似ているようで違う。\nTおばさん：秩序をつくる方法について意見が分かれる。"
-  },
-  {
-    "objectID": "characters/development/Z.html#ネタ帳-story-seeds",
-    "href": "characters/development/Z.html#ネタ帳-story-seeds",
-    "title": "Z — つなぎおばさん",
-    "section": "",
-    "text": "表と裏の自己紹介。 ひっくり返ったZおばさんに、みんなが別人だと思って挨拶する。\n橋をかける日。 仲の悪い二人を無理に同じにせず、会話の道を作る。"
-  },
-  {
-    "objectID": "characters/development/Z.html#採用済み-canon",
-    "href": "characters/development/Z.html#採用済み-canon",
-    "title": "Z — つなぎおばさん",
-    "section": "",
-    "text": "名前は「つなぎおばさん」。\n基本のセリフは「こっちと、こっちをつなげよう。」\n形と向きの数は data/characters.json に準拠。"
-  },
-  {
-    "objectID": "characters/development/Z.html#保留中-open-questions",
-    "href": "characters/development/Z.html#保留中-open-questions",
-    "title": "Z — つなぎおばさん",
-    "section": "",
-    "text": "誰かをつなぐ役目に疲れることはある？\n自分の表と裏を、誰に見せたい？"
-  },
-  {
-    "objectID": "characters/development/Z.html#開発メモ-development-notes",
-    "href": "characters/development/Z.html#開発メモ-development-notes",
-    "title": "Z — つなぎおばさん",
+    "objectID": "characters/development/N.html#開発メモ-development-notes",
+    "href": "characters/development/N.html#開発メモ-development-notes",
+    "title": "N — ずらしくん",
     "section": "",
     "text": "きっかけ：形から性格や物語を考える実験。\n関連Issue：#37\n次に試したいこと：会話や小さな物語にして、キャラクターらしさを確かめる。"
   },
   {
-    "objectID": "characters/development/P.html",
-    "href": "characters/development/P.html",
-    "title": "P — ぎゅっとくん",
+    "objectID": "characters/development/W.html",
+    "href": "characters/development/W.html",
+    "title": "W — こつこつおばさん",
     "section": "",
-    "text": "「なんでもかんでも、ぎゅっとしなくていいんだよ。」\n\nCharacter status: 発展途上 🌱\n\n\n\n名前：ぎゅっとくん\n形：Pペントミノ\n特徴：小さくまとまるのが得意\n\n\n\n\n\n何でもコンパクトにまとめたがる。\nでも、実は必要以上にまとめるのは好きじゃない。\n整理整頓は得意。でも完璧主義ではない。\n意外と物事の本質を見抜く。\n\n\n\n\n\n「ぎゅっとすれば、いいってもんじゃない。」\n「大事なものだけ、ぎゅっと。」\n「Document With Purpose!」\n\n\n\n\nぎゅっとくんが、キャラクター開発の心得を7つにまとめてくれました。\n本人は「Pで始まる言葉しか使ってはいけない」と思っているようです。\n\n\n\nP\nWhat it means\n\n\n\n\nPlay\n遊び心から始める。\n\n\nPersonify\n五つの四角に人格を与える。\n\n\nPonder\nこの子なら、どうする？\n\n\nProvoke\nちょっと困らせてみる。\n\n\nPrototype\nまず小さく作ってみる。\n\n\nPublish\n面白くなったら、みんなに見せる。\n\n\nPreserve\n残す価値のあるものだけ記録する。\n\n\n\nPlay → Personify → Ponder → Provoke → Prototype → Publish → Preserve\nPくん：「全部Pでそろえたよ！」\nXおじさん：「7つも必要なの？」\nPくん：「……ぎゅっとまとめたつもりなんだけど。」\n\n\n\nまだ実験中。\n\nUおばさん：同じ「ぎゅっ」でも、ちょっと意味が違う？\nIおじさん：まっすぐすぎる考え方を、ぎゅっとまとめてあげたい。\n\n\n\n\n\nPくん、プロジェクトマネージャーになる。\n五マス村に謎の「Pが多すぎる問題」が発生。\nPF・PL・DWPを唱えるPくん。\n\n\n\n\nまだ決まっていません。\n\n\n\n\nぎゅっとくんは几帳面？ それとも単に省エネ？\nPくんの得意技は何？\n他のキャラクターとの相性は？"
+    "text": "「一段ずつでいいよ。」\n\nCharacter status: 発展途上 🌱\nCharacter data: data/characters.json\n\n\n\n名前：こつこつおばさん\n形：Wペントミノ\n特徴：階段のように五マスが連なる形。\n向きの数：4\n\n\n\n\nまだ実験中。性格は物語とともに育っていきます。\n\n焦らず、毎日少しずつ進む。\n近道よりも、続けられる道を大切にする。\n急ぐ子どもたちを止めず、後ろから見守る。\n\n\n\n\n\n「一段ずつでいいよ。」\n「昨日より一マス進めたね。」\n「遠回りでも、ちゃんと進んでいるよ。」\n\n\n\n\nこつこつおばさんの七つのWは、急いで覚える必要がありません。\n一段ずつでいいのです。\n\n\n\nW\nWhat it means\n\n\n\n\nWake\n今日も新しい一日が始まる。\n\n\nWalk\nまずは一歩、歩いてみる。\n\n\nWork\nできることを少しずつ積み重ねる。\n\n\nWait\n急がず、育つ時間を待つ。\n\n\nWatch\n途中の小さな変化を見つける。\n\n\nWelcome\n遅れてきた子も迎え入れる。\n\n\nWonder\n歩いてきた道に、まだ驚きがある。\n\n\n\nWake → Walk → Work → Wait → Watch → Welcome → Wonder\nFちゃん：「まだ三つ目なの？」\nWおばさん：「そうよ。三つも進んだね。」\nFちゃん：「……なんか、うれしい！」\n\n\n\n\nWペントミノは階段状の形で、異なる向きは四通り。\n一段ずつの構造が、積み重ねや忍耐の物語につながる。\n\n\n\n\nまだ実験中。\n\nFちゃん：くるくる動く姿を見て、急がなくてもいいと伝える。\nNくん：ずれた配置を見て『階段みたいね』と喜ぶ。\nIおじさん：一直線ではない進み方を教える。\n\n\n\n\n\nいちばん遅い競走。 最後に着いたWおばさんだけが、途中の花を全部覚えている。\n五段の階段。 小さな一歩が誰かの橋になる。\n\n\n\n\n\n名前は「こつこつおばさん」。\n基本のセリフは「一段ずつでいいよ。」\n形と向きの数は data/characters.json に準拠。\n\n\n\n\n\n本当は急いでみたい日もある？\n進歩が見えない日には何をする？\n\n\n\n\n\n\nきっかけ：形から性格や物語を考える実験。\n関連Issue：#37\n次に試したいこと：会話や小さな物語にして、キャラクターらしさを確かめる。"
   },
   {
-    "objectID": "characters/development/P.html#基本設定-established-character",
-    "href": "characters/development/P.html#基本設定-established-character",
-    "title": "P — ぎゅっとくん",
+    "objectID": "characters/development/W.html#基本設定-established-character",
+    "href": "characters/development/W.html#基本設定-established-character",
+    "title": "W — こつこつおばさん",
     "section": "",
-    "text": "名前：ぎゅっとくん\n形：Pペントミノ\n特徴：小さくまとまるのが得意"
+    "text": "名前：こつこつおばさん\n形：Wペントミノ\n特徴：階段のように五マスが連なる形。\n向きの数：4"
   },
   {
-    "objectID": "characters/development/P.html#性格のアイデア-personality-experiments",
-    "href": "characters/development/P.html#性格のアイデア-personality-experiments",
-    "title": "P — ぎゅっとくん",
+    "objectID": "characters/development/W.html#性格のアイデア-personality-experiments",
+    "href": "characters/development/W.html#性格のアイデア-personality-experiments",
+    "title": "W — こつこつおばさん",
     "section": "",
-    "text": "何でもコンパクトにまとめたがる。\nでも、実は必要以上にまとめるのは好きじゃない。\n整理整頓は得意。でも完璧主義ではない。\n意外と物事の本質を見抜く。"
+    "text": "まだ実験中。性格は物語とともに育っていきます。\n\n焦らず、毎日少しずつ進む。\n近道よりも、続けられる道を大切にする。\n急ぐ子どもたちを止めず、後ろから見守る。"
   },
   {
-    "objectID": "characters/development/P.html#名言仮-possible-quotes",
-    "href": "characters/development/P.html#名言仮-possible-quotes",
-    "title": "P — ぎゅっとくん",
+    "objectID": "characters/development/W.html#名言仮-possible-quotes",
+    "href": "characters/development/W.html#名言仮-possible-quotes",
+    "title": "W — こつこつおばさん",
     "section": "",
-    "text": "「ぎゅっとすれば、いいってもんじゃない。」\n「大事なものだけ、ぎゅっと。」\n「Document With Purpose!」"
+    "text": "「一段ずつでいいよ。」\n「昨日より一マス進めたね。」\n「遠回りでも、ちゃんと進んでいるよ。」"
   },
   {
-    "objectID": "characters/development/P.html#pくんの-seven-ps",
-    "href": "characters/development/P.html#pくんの-seven-ps",
-    "title": "P — ぎゅっとくん",
+    "objectID": "characters/development/W.html#wおばさんの-seven-ws",
+    "href": "characters/development/W.html#wおばさんの-seven-ws",
+    "title": "W — こつこつおばさん",
     "section": "",
-    "text": "ぎゅっとくんが、キャラクター開発の心得を7つにまとめてくれました。\n本人は「Pで始まる言葉しか使ってはいけない」と思っているようです。\n\n\n\nP\nWhat it means\n\n\n\n\nPlay\n遊び心から始める。\n\n\nPersonify\n五つの四角に人格を与える。\n\n\nPonder\nこの子なら、どうする？\n\n\nProvoke\nちょっと困らせてみる。\n\n\nPrototype\nまず小さく作ってみる。\n\n\nPublish\n面白くなったら、みんなに見せる。\n\n\nPreserve\n残す価値のあるものだけ記録する。\n\n\n\nPlay → Personify → Ponder → Provoke → Prototype → Publish → Preserve\nPくん：「全部Pでそろえたよ！」\nXおじさん：「7つも必要なの？」\nPくん：「……ぎゅっとまとめたつもりなんだけど。」"
+    "text": "こつこつおばさんの七つのWは、急いで覚える必要がありません。\n一段ずつでいいのです。\n\n\n\nW\nWhat it means\n\n\n\n\nWake\n今日も新しい一日が始まる。\n\n\nWalk\nまずは一歩、歩いてみる。\n\n\nWork\nできることを少しずつ積み重ねる。\n\n\nWait\n急がず、育つ時間を待つ。\n\n\nWatch\n途中の小さな変化を見つける。\n\n\nWelcome\n遅れてきた子も迎え入れる。\n\n\nWonder\n歩いてきた道に、まだ驚きがある。\n\n\n\nWake → Walk → Work → Wait → Watch → Welcome → Wonder\nFちゃん：「まだ三つ目なの？」\nWおばさん：「そうよ。三つも進んだね。」\nFちゃん：「……なんか、うれしい！」"
   },
   {
-    "objectID": "characters/development/P.html#他の住民との関係-relationships",
-    "href": "characters/development/P.html#他の住民との関係-relationships",
-    "title": "P — ぎゅっとくん",
+    "objectID": "characters/development/W.html#形から生まれる発見-geometry-inspired-ideas",
+    "href": "characters/development/W.html#形から生まれる発見-geometry-inspired-ideas",
+    "title": "W — こつこつおばさん",
     "section": "",
-    "text": "まだ実験中。\n\nUおばさん：同じ「ぎゅっ」でも、ちょっと意味が違う？\nIおじさん：まっすぐすぎる考え方を、ぎゅっとまとめてあげたい。"
+    "text": "Wペントミノは階段状の形で、異なる向きは四通り。\n一段ずつの構造が、積み重ねや忍耐の物語につながる。"
   },
   {
-    "objectID": "characters/development/P.html#ネタ帳-story-seeds",
-    "href": "characters/development/P.html#ネタ帳-story-seeds",
-    "title": "P — ぎゅっとくん",
+    "objectID": "characters/development/W.html#他の住民との関係-relationships",
+    "href": "characters/development/W.html#他の住民との関係-relationships",
+    "title": "W — こつこつおばさん",
     "section": "",
-    "text": "Pくん、プロジェクトマネージャーになる。\n五マス村に謎の「Pが多すぎる問題」が発生。\nPF・PL・DWPを唱えるPくん。"
+    "text": "まだ実験中。\n\nFちゃん：くるくる動く姿を見て、急がなくてもいいと伝える。\nNくん：ずれた配置を見て『階段みたいね』と喜ぶ。\nIおじさん：一直線ではない進み方を教える。"
   },
   {
-    "objectID": "characters/development/P.html#採用済み-canon",
-    "href": "characters/development/P.html#採用済み-canon",
-    "title": "P — ぎゅっとくん",
+    "objectID": "characters/development/W.html#ネタ帳-story-seeds",
+    "href": "characters/development/W.html#ネタ帳-story-seeds",
+    "title": "W — こつこつおばさん",
     "section": "",
-    "text": "まだ決まっていません。"
+    "text": "いちばん遅い競走。 最後に着いたWおばさんだけが、途中の花を全部覚えている。\n五段の階段。 小さな一歩が誰かの橋になる。"
   },
   {
-    "objectID": "characters/development/P.html#保留中-open-questions",
-    "href": "characters/development/P.html#保留中-open-questions",
-    "title": "P — ぎゅっとくん",
+    "objectID": "characters/development/W.html#採用済み-canon",
+    "href": "characters/development/W.html#採用済み-canon",
+    "title": "W — こつこつおばさん",
     "section": "",
-    "text": "ぎゅっとくんは几帳面？ それとも単に省エネ？\nPくんの得意技は何？\n他のキャラクターとの相性は？"
+    "text": "名前は「こつこつおばさん」。\n基本のセリフは「一段ずつでいいよ。」\n形と向きの数は data/characters.json に準拠。"
   },
   {
-    "objectID": "characters/development/T.html",
-    "href": "characters/development/T.html",
-    "title": "T — しきりやおばさん",
+    "objectID": "characters/development/W.html#保留中-open-questions",
+    "href": "characters/development/W.html#保留中-open-questions",
+    "title": "W — こつこつおばさん",
     "section": "",
-    "text": "「はい、そこに並んで！」\n\nCharacter status: 発展途上 🌱\nCharacter data: data/characters.json\n\n\n\n名前：しきりやおばさん\n形：Tペントミノ\n特徴：三マスの横棒と、中央から伸びる二マスの軸。\n向きの数：4\n\n\n\n\nまだ実験中。性格は物語とともに育っていきます。\n\n場を整えるのが得意。誰も頼んでいないのに司会を始める。\nみんなが安心できる場所を作りたいのに、並べ方を決めすぎる。\n予定外の出来事が苦手。でも子どもたちから即興を学ぶかもしれない。\n\n\n\n\n\n「はい、そこに並んで！」\n「順番を決めれば、きっとうまくいくわ。」\n「……今日は自由席にしてみようかしら。」\n\n\n\n\nしきりやおばさんは、もちろん七つのTにも順番をつけました。\n問題は、ほかの住民がその順番を守るかどうかです。\n\n\n\nT\nWhat it means\n\n\n\n\nTime\nまず集合時間を決めましょう。\n\n\nTeam\n全員そろっているか確認！\n\n\nTask\nそれぞれの役割を決めます。\n\n\nTidy\nきちんと並べて、準備完了。\n\n\nTrack\n進み具合を確認しましょう。\n\n\nTrust\n……たまにはみんなに任せてみる。\n\n\nTogether\n予定と違っても、一緒なら大丈夫。\n\n\n\nTime → Team → Task → Tidy → Track → Trust → Together\nTおばさん：「七つのT、全員確認！」\nFちゃん：「八つ目のTは？」\nTおばさん：「ないわよ！」\nFちゃん：「Try again!」\n\n\n\n\nTペントミノは左右対称。異なる向きは四通り。\n中央の軸と左右の腕が、仕切り役・交通整理役の印象につながる。\n\n\n\n\nまだ実験中。\n\nNくん：並べた途端に一マスずれるので気になる。\nFちゃん：説明の途中で次の向きを試し始める。\nXおじさん：真ん中に立ちたがるので、配置が決めやすいようで決めにくい。\n\n\n\n\n\n五マス村の席替え。 Tおばさんが完璧な配置表を作るが、誰も同意していない。\n自由時間の時間割。 自由時間まで管理しようとしてしまう。\n\n\n\n\n\n名前は「しきりやおばさん」。\n基本のセリフは「はい、そこに並んで！」\n形と向きの数は data/characters.json に準拠。\n\n\n\n\n\n仕切るのは好きだから？ 不安を減らすため？\n他人に任せられるようになる日は来る？\n\n\n\n\n\n\nきっかけ：形から性格や物語を考える実験。\n関連Issue：#37\n次に試したいこと：会話や小さな物語にして、キャラクターらしさを確かめる。"
+    "text": "本当は急いでみたい日もある？\n進歩が見えない日には何をする？"
   },
   {
-    "objectID": "characters/development/T.html#基本設定-established-character",
-    "href": "characters/development/T.html#基本設定-established-character",
-    "title": "T — しきりやおばさん",
-    "section": "",
-    "text": "名前：しきりやおばさん\n形：Tペントミノ\n特徴：三マスの横棒と、中央から伸びる二マスの軸。\n向きの数：4"
-  },
-  {
-    "objectID": "characters/development/T.html#性格のアイデア-personality-experiments",
-    "href": "characters/development/T.html#性格のアイデア-personality-experiments",
-    "title": "T — しきりやおばさん",
-    "section": "",
-    "text": "まだ実験中。性格は物語とともに育っていきます。\n\n場を整えるのが得意。誰も頼んでいないのに司会を始める。\nみんなが安心できる場所を作りたいのに、並べ方を決めすぎる。\n予定外の出来事が苦手。でも子どもたちから即興を学ぶかもしれない。"
-  },
-  {
-    "objectID": "characters/development/T.html#名言仮-possible-quotes",
-    "href": "characters/development/T.html#名言仮-possible-quotes",
-    "title": "T — しきりやおばさん",
-    "section": "",
-    "text": "「はい、そこに並んで！」\n「順番を決めれば、きっとうまくいくわ。」\n「……今日は自由席にしてみようかしら。」"
-  },
-  {
-    "objectID": "characters/development/T.html#tおばさんの-seven-ts",
-    "href": "characters/development/T.html#tおばさんの-seven-ts",
-    "title": "T — しきりやおばさん",
-    "section": "",
-    "text": "しきりやおばさんは、もちろん七つのTにも順番をつけました。\n問題は、ほかの住民がその順番を守るかどうかです。\n\n\n\nT\nWhat it means\n\n\n\n\nTime\nまず集合時間を決めましょう。\n\n\nTeam\n全員そろっているか確認！\n\n\nTask\nそれぞれの役割を決めます。\n\n\nTidy\nきちんと並べて、準備完了。\n\n\nTrack\n進み具合を確認しましょう。\n\n\nTrust\n……たまにはみんなに任せてみる。\n\n\nTogether\n予定と違っても、一緒なら大丈夫。\n\n\n\nTime → Team → Task → Tidy → Track → Trust → Together\nTおばさん：「七つのT、全員確認！」\nFちゃん：「八つ目のTは？」\nTおばさん：「ないわよ！」\nFちゃん：「Try again!」"
-  },
-  {
-    "objectID": "characters/development/T.html#形から生まれる発見-geometry-inspired-ideas",
-    "href": "characters/development/T.html#形から生まれる発見-geometry-inspired-ideas",
-    "title": "T — しきりやおばさん",
-    "section": "",
-    "text": "Tペントミノは左右対称。異なる向きは四通り。\n中央の軸と左右の腕が、仕切り役・交通整理役の印象につながる。"
-  },
-  {
-    "objectID": "characters/development/T.html#他の住民との関係-relationships",
-    "href": "characters/development/T.html#他の住民との関係-relationships",
-    "title": "T — しきりやおばさん",
-    "section": "",
-    "text": "まだ実験中。\n\nNくん：並べた途端に一マスずれるので気になる。\nFちゃん：説明の途中で次の向きを試し始める。\nXおじさん：真ん中に立ちたがるので、配置が決めやすいようで決めにくい。"
-  },
-  {
-    "objectID": "characters/development/T.html#ネタ帳-story-seeds",
-    "href": "characters/development/T.html#ネタ帳-story-seeds",
-    "title": "T — しきりやおばさん",
-    "section": "",
-    "text": "五マス村の席替え。 Tおばさんが完璧な配置表を作るが、誰も同意していない。\n自由時間の時間割。 自由時間まで管理しようとしてしまう。"
-  },
-  {
-    "objectID": "characters/development/T.html#採用済み-canon",
-    "href": "characters/development/T.html#採用済み-canon",
-    "title": "T — しきりやおばさん",
-    "section": "",
-    "text": "名前は「しきりやおばさん」。\n基本のセリフは「はい、そこに並んで！」\n形と向きの数は data/characters.json に準拠。"
-  },
-  {
-    "objectID": "characters/development/T.html#保留中-open-questions",
-    "href": "characters/development/T.html#保留中-open-questions",
-    "title": "T — しきりやおばさん",
-    "section": "",
-    "text": "仕切るのは好きだから？ 不安を減らすため？\n他人に任せられるようになる日は来る？"
-  },
-  {
-    "objectID": "characters/development/T.html#開発メモ-development-notes",
-    "href": "characters/development/T.html#開発メモ-development-notes",
-    "title": "T — しきりやおばさん",
+    "objectID": "characters/development/W.html#開発メモ-development-notes",
+    "href": "characters/development/W.html#開発メモ-development-notes",
+    "title": "W — こつこつおばさん",
     "section": "",
     "text": "きっかけ：形から性格や物語を考える実験。\n関連Issue：#37\n次に試したいこと：会話や小さな物語にして、キャラクターらしさを確かめる。"
   },
   {
-    "objectID": "characters/development/I.html",
-    "href": "characters/development/I.html",
-    "title": "I — まっすぐおじさん",
+    "objectID": "characters/development/Y.html",
+    "href": "characters/development/Y.html",
+    "title": "Y — はみだしくん",
     "section": "",
-    "text": "「まっすぐ行こう。」\n\nCharacter status: 発展途上 🌱\nCharacter data: data/characters.json\n\n\n\n名前：まっすぐおじさん\n形：Iペントミノ\n特徴：五マスが一直線。曲がるのは苦手だが、横になることはできる。\n向きの数：2\n\n\n\n\nまだ実験中。性格は物語とともに育っていきます。\n\n決めた道を疑わない。頼もしいけれど、壁にぶつかるまで止まらない。\n遠回りを無駄だと思っていたが、寄り道にも発見があると知り始める。\n頑固そうに見えて、困っている人には真っ先に手を伸ばす。\n\n\n\n\n\n「まっすぐ行こう。」\n「曲がらなくても、向きは変えられるぞ。」\n「横になるのも、前進の準備だ。」\n\n\n\n\nまっすぐおじさんが、曲がらずに生きるための七か条を考えました。\nただし、途中で少し考えが変わったようです。\n\n\n\nI\nWhat it means\n\n\n\n\nIntegrity\n自分の信念を大切にする。\n\n\nIntention\nどこへ向かうか、まず決める。\n\n\nInitiative\n誰かを待たずに一歩踏み出す。\n\n\nInvestigate\n壁にぶつかったら、ちゃんと調べる。\n\n\nImagine\nまっすぐ以外の道も想像してみる。\n\n\nInvert\n縦がだめなら、横になってみる。\n\n\nImprove\n向きを変えても、自分らしく進む。\n\n\n\nIntegrity → Intention → Initiative → Investigate → Imagine → Invert → Improve\nIおじさん：「ほら、全部まっすぐつながっているだろう。」\nFちゃん：「途中で横になってるよ？」\nIおじさん：「それは……柔軟な一直線だ。」\n\n\n\n\n五つの正方形が一直線に並び、異なる向きは縦と横の二通り。\n曲がれないという形の制約が、頑固さと柔軟さの対比になる。\n\n\n\n\nまだ実験中。\n\nUおばさん：くぼみに入ろうとするが、五マス全部は入らない。\nFちゃん：八通りの姿を見せられて少し混乱する。\nLちゃん：同じく長いのに、最後で曲がれることが不思議。\n\n\n\n\n\n壁の向こう。 まっすぐ進んで壁に到着。横になったら何が変わる？\n初めての寄り道。 Fちゃんに誘われ、目的地のない散歩に挑戦する。\n\n\n\n\n\n名前は「まっすぐおじさん」。\n基本のセリフは「まっすぐ行こう。」\n形と向きの数は data/characters.json に準拠。\n\n\n\n\n\n信念を曲げないことと、進む方向を変えることは両立する？\n横になって休むのは得意？ それとも苦手？\n\n\n\n\n\n\nきっかけ：形から性格や物語を考える実験。\n関連Issue：#37\n次に試したいこと：会話や小さな物語にして、キャラクターらしさを確かめる。"
+    "text": "「ちょっと違うほうが楽しいよ。」\n\nCharacter status: 発展途上 🌱\nCharacter data: data/characters.json\n\n\n\n名前：はみだしくん\n形：Yペントミノ\n特徴：四マスの直線から、一マスだけ横にはみ出している。\n向きの数：8\n\n\n\n\nまだ実験中。性格は物語とともに育っていきます。\n\n列に並ぶのは嫌いじゃない。でも、横の景色が気になる。\nはみ出すことを反抗とは思っていない。\n自分だけの違いを楽しむ一方、仲間外れにはなりたくない。\n\n\n\n\n\n「ちょっと違うほうが楽しいよ。」\n「ここから見えるもの、知ってる？」\n「一マスだけ、寄り道していい？」\n\n\n\n\nはみだしくんは、七つのYを考えるつもりが、最初の一つで質問を始めました。\nもちろん、一マスだけ横にはみ出しながら。\n\n\n\nY\nWhat it means\n\n\n\n\nWhy\nどうして、みんな同じ向きなの？\n\n\nYearn\nまだ見たことのない景色が気になる。\n\n\nYonder\nあっちのほうにも行ってみたい。\n\n\nYes\n面白そうなら、やってみよう！\n\n\nYield\nでも、ときには道を譲る。\n\n\nYou\n自分と違う君の話も聞いてみる。\n\n\nYet\nまだできない。でも、まだ終わりじゃない。\n\n\n\nWhy → Yearn → Yonder → Yes → Yield → You → Yet\nIおじさん：「どうして一マスだけはみ出すんだ？」\nYくん：「Why not?」\nIおじさん：「……それもYなのか。」\n\n\n\n\n四マスの直線から横に一マス伸び、異なる向きは八通り。\n一マスの逸脱が、好奇心や個性の比喩になる。\n\n\n\n\nまだ実験中。\n\nIおじさん：まっすぐな四マスには共感。でも最後の一マスが気になる。\nNくん：『ずれる』と『はみだす』の違いを議論する。\nLちゃん：遠くへ伸びる夢を共有する。\n\n\n\n\n\nはみだした一マスの冒険。 横を見たら、誰も知らない小道があった。\nまっすぐコンテスト。 Yくんも参加するが、一マスだけ違う。\n\n\n\n\n\n名前は「はみだしくん」。\n基本のセリフは「ちょっと違うほうが楽しいよ。」\n形と向きの数は data/characters.json に準拠。\n\n\n\n\n\nはみだすのは勇気？ 好奇心？ それとも癖？\nみんなと同じになりたい日はある？\n\n\n\n\n\n\nきっかけ：形から性格や物語を考える実験。\n関連Issue：#37\n次に試したいこと：会話や小さな物語にして、キャラクターらしさを確かめる。"
   },
   {
-    "objectID": "characters/development/I.html#基本設定-established-character",
-    "href": "characters/development/I.html#基本設定-established-character",
-    "title": "I — まっすぐおじさん",
+    "objectID": "characters/development/Y.html#基本設定-established-character",
+    "href": "characters/development/Y.html#基本設定-established-character",
+    "title": "Y — はみだしくん",
     "section": "",
-    "text": "名前：まっすぐおじさん\n形：Iペントミノ\n特徴：五マスが一直線。曲がるのは苦手だが、横になることはできる。\n向きの数：2"
+    "text": "名前：はみだしくん\n形：Yペントミノ\n特徴：四マスの直線から、一マスだけ横にはみ出している。\n向きの数：8"
   },
   {
-    "objectID": "characters/development/I.html#性格のアイデア-personality-experiments",
-    "href": "characters/development/I.html#性格のアイデア-personality-experiments",
-    "title": "I — まっすぐおじさん",
+    "objectID": "characters/development/Y.html#性格のアイデア-personality-experiments",
+    "href": "characters/development/Y.html#性格のアイデア-personality-experiments",
+    "title": "Y — はみだしくん",
     "section": "",
-    "text": "まだ実験中。性格は物語とともに育っていきます。\n\n決めた道を疑わない。頼もしいけれど、壁にぶつかるまで止まらない。\n遠回りを無駄だと思っていたが、寄り道にも発見があると知り始める。\n頑固そうに見えて、困っている人には真っ先に手を伸ばす。"
+    "text": "まだ実験中。性格は物語とともに育っていきます。\n\n列に並ぶのは嫌いじゃない。でも、横の景色が気になる。\nはみ出すことを反抗とは思っていない。\n自分だけの違いを楽しむ一方、仲間外れにはなりたくない。"
   },
   {
-    "objectID": "characters/development/I.html#名言仮-possible-quotes",
-    "href": "characters/development/I.html#名言仮-possible-quotes",
-    "title": "I — まっすぐおじさん",
+    "objectID": "characters/development/Y.html#名言仮-possible-quotes",
+    "href": "characters/development/Y.html#名言仮-possible-quotes",
+    "title": "Y — はみだしくん",
     "section": "",
-    "text": "「まっすぐ行こう。」\n「曲がらなくても、向きは変えられるぞ。」\n「横になるのも、前進の準備だ。」"
+    "text": "「ちょっと違うほうが楽しいよ。」\n「ここから見えるもの、知ってる？」\n「一マスだけ、寄り道していい？」"
   },
   {
-    "objectID": "characters/development/I.html#iおじさんの-seven-is",
-    "href": "characters/development/I.html#iおじさんの-seven-is",
-    "title": "I — まっすぐおじさん",
+    "objectID": "characters/development/Y.html#yくんの-seven-ys",
+    "href": "characters/development/Y.html#yくんの-seven-ys",
+    "title": "Y — はみだしくん",
     "section": "",
-    "text": "まっすぐおじさんが、曲がらずに生きるための七か条を考えました。\nただし、途中で少し考えが変わったようです。\n\n\n\nI\nWhat it means\n\n\n\n\nIntegrity\n自分の信念を大切にする。\n\n\nIntention\nどこへ向かうか、まず決める。\n\n\nInitiative\n誰かを待たずに一歩踏み出す。\n\n\nInvestigate\n壁にぶつかったら、ちゃんと調べる。\n\n\nImagine\nまっすぐ以外の道も想像してみる。\n\n\nInvert\n縦がだめなら、横になってみる。\n\n\nImprove\n向きを変えても、自分らしく進む。\n\n\n\nIntegrity → Intention → Initiative → Investigate → Imagine → Invert → Improve\nIおじさん：「ほら、全部まっすぐつながっているだろう。」\nFちゃん：「途中で横になってるよ？」\nIおじさん：「それは……柔軟な一直線だ。」"
+    "text": "はみだしくんは、七つのYを考えるつもりが、最初の一つで質問を始めました。\nもちろん、一マスだけ横にはみ出しながら。\n\n\n\nY\nWhat it means\n\n\n\n\nWhy\nどうして、みんな同じ向きなの？\n\n\nYearn\nまだ見たことのない景色が気になる。\n\n\nYonder\nあっちのほうにも行ってみたい。\n\n\nYes\n面白そうなら、やってみよう！\n\n\nYield\nでも、ときには道を譲る。\n\n\nYou\n自分と違う君の話も聞いてみる。\n\n\nYet\nまだできない。でも、まだ終わりじゃない。\n\n\n\nWhy → Yearn → Yonder → Yes → Yield → You → Yet\nIおじさん：「どうして一マスだけはみ出すんだ？」\nYくん：「Why not?」\nIおじさん：「……それもYなのか。」"
   },
   {
-    "objectID": "characters/development/I.html#形から生まれる発見-geometry-inspired-ideas",
-    "href": "characters/development/I.html#形から生まれる発見-geometry-inspired-ideas",
-    "title": "I — まっすぐおじさん",
+    "objectID": "characters/development/Y.html#形から生まれる発見-geometry-inspired-ideas",
+    "href": "characters/development/Y.html#形から生まれる発見-geometry-inspired-ideas",
+    "title": "Y — はみだしくん",
     "section": "",
-    "text": "五つの正方形が一直線に並び、異なる向きは縦と横の二通り。\n曲がれないという形の制約が、頑固さと柔軟さの対比になる。"
+    "text": "四マスの直線から横に一マス伸び、異なる向きは八通り。\n一マスの逸脱が、好奇心や個性の比喩になる。"
   },
   {
-    "objectID": "characters/development/I.html#他の住民との関係-relationships",
-    "href": "characters/development/I.html#他の住民との関係-relationships",
-    "title": "I — まっすぐおじさん",
+    "objectID": "characters/development/Y.html#他の住民との関係-relationships",
+    "href": "characters/development/Y.html#他の住民との関係-relationships",
+    "title": "Y — はみだしくん",
     "section": "",
-    "text": "まだ実験中。\n\nUおばさん：くぼみに入ろうとするが、五マス全部は入らない。\nFちゃん：八通りの姿を見せられて少し混乱する。\nLちゃん：同じく長いのに、最後で曲がれることが不思議。"
+    "text": "まだ実験中。\n\nIおじさん：まっすぐな四マスには共感。でも最後の一マスが気になる。\nNくん：『ずれる』と『はみだす』の違いを議論する。\nLちゃん：遠くへ伸びる夢を共有する。"
   },
   {
-    "objectID": "characters/development/I.html#ネタ帳-story-seeds",
-    "href": "characters/development/I.html#ネタ帳-story-seeds",
-    "title": "I — まっすぐおじさん",
+    "objectID": "characters/development/Y.html#ネタ帳-story-seeds",
+    "href": "characters/development/Y.html#ネタ帳-story-seeds",
+    "title": "Y — はみだしくん",
     "section": "",
-    "text": "壁の向こう。 まっすぐ進んで壁に到着。横になったら何が変わる？\n初めての寄り道。 Fちゃんに誘われ、目的地のない散歩に挑戦する。"
+    "text": "はみだした一マスの冒険。 横を見たら、誰も知らない小道があった。\nまっすぐコンテスト。 Yくんも参加するが、一マスだけ違う。"
   },
   {
-    "objectID": "characters/development/I.html#採用済み-canon",
-    "href": "characters/development/I.html#採用済み-canon",
-    "title": "I — まっすぐおじさん",
+    "objectID": "characters/development/Y.html#採用済み-canon",
+    "href": "characters/development/Y.html#採用済み-canon",
+    "title": "Y — はみだしくん",
     "section": "",
-    "text": "名前は「まっすぐおじさん」。\n基本のセリフは「まっすぐ行こう。」\n形と向きの数は data/characters.json に準拠。"
+    "text": "名前は「はみだしくん」。\n基本のセリフは「ちょっと違うほうが楽しいよ。」\n形と向きの数は data/characters.json に準拠。"
   },
   {
-    "objectID": "characters/development/I.html#保留中-open-questions",
-    "href": "characters/development/I.html#保留中-open-questions",
-    "title": "I — まっすぐおじさん",
+    "objectID": "characters/development/Y.html#保留中-open-questions",
+    "href": "characters/development/Y.html#保留中-open-questions",
+    "title": "Y — はみだしくん",
     "section": "",
-    "text": "信念を曲げないことと、進む方向を変えることは両立する？\n横になって休むのは得意？ それとも苦手？"
+    "text": "はみだすのは勇気？ 好奇心？ それとも癖？\nみんなと同じになりたい日はある？"
   },
   {
-    "objectID": "characters/development/I.html#開発メモ-development-notes",
-    "href": "characters/development/I.html#開発メモ-development-notes",
-    "title": "I — まっすぐおじさん",
+    "objectID": "characters/development/Y.html#開発メモ-development-notes",
+    "href": "characters/development/Y.html#開発メモ-development-notes",
+    "title": "Y — はみだしくん",
     "section": "",
     "text": "きっかけ：形から性格や物語を考える実験。\n関連Issue：#37\n次に試したいこと：会話や小さな物語にして、キャラクターらしさを確かめる。"
-  },
-  {
-    "objectID": "characters/development/V.html",
-    "href": "characters/development/V.html",
-    "title": "V — かどっこおばさん",
-    "section": "",
-    "text": "「この角、いい感じ。」\n\nCharacter status: 発展途上 🌱\nCharacter data: data/characters.json\n\n\n\n名前：かどっこおばさん\n形：Vペントミノ\n特徴：五マスが直角の二本の腕をつくる。\n向きの数：4\n\n\n\n\nまだ実験中。性格は物語とともに育っていきます。\n\n部屋に入ると、まず落ち着く角を探す。\n角を守るのは得意。でも、角の外にある景色にも興味がある。\n静かな場所が好きで、みんなの観察が上手。\n\n\n\n\n\n「この角、いい感じ。」\n「角があると、ほっとするの。」\n「たまには真ん中も悪くないわね。」\n\n\n\n\nかどっこおばさんは、お気に入りの角から世界を眺めて七つのVを見つけました。\n角にいるからこそ、見えるものもあるようです。\n\n\n\nV\nWhat it means\n\n\n\n\nView\nまず角から景色を眺める。\n\n\nValue\n自分の落ち着く場所を大切にする。\n\n\nVerify\nここが本当にいい角か確かめる。\n\n\nVenture\nときには角の外へ出かけてみる。\n\n\nVisit\n別の角にもおじゃましてみる。\n\n\nVariety\n角が違えば、景色も違う。\n\n\nVoice\nお気に入りの場所を自分の言葉で伝える。\n\n\n\nView → Value → Verify → Venture → Visit → Variety → Voice\nXおじさん：「真ん中のほうがいいよ。」\nVおばさん：「角から見た真ん中も、なかなかいいわよ。」\nXおじさん：「それは考えたことなかったな。」\n\n\n\n\nVペントミノは直角をなす二本の腕を持ち、異なる向きは四通り。\n角を安全地帯にも、出発点にもできる。\n\n\n\n\nまだ実験中。\n\nXおじさん：真ん中派と角派。どちらが落ち着くか話が尽きない。\nLちゃん：曲がり角で困ったときに相談される。\nUおばさん：そっとしておいてほしいときの距離感を教える。\n\n\n\n\n\n角のない部屋。 かどっこおばさん、どこに座る？\n四つの角をめぐる旅。 角ごとに違う景色を見つける。\n\n\n\n\n\n名前は「かどっこおばさん」。\n基本のセリフは「この角、いい感じ。」\n形と向きの数は data/characters.json に準拠。\n\n\n\n\n\n角が好きなのは安心するから？ 観察しやすいから？\nお気に入りの角を誰かに譲れる？\n\n\n\n\n\n\nきっかけ：形から性格や物語を考える実験。\n関連Issue：#37\n次に試したいこと：会話や小さな物語にして、キャラクターらしさを確かめる。"
-  },
-  {
-    "objectID": "characters/development/V.html#基本設定-established-character",
-    "href": "characters/development/V.html#基本設定-established-character",
-    "title": "V — かどっこおばさん",
-    "section": "",
-    "text": "名前：かどっこおばさん\n形：Vペントミノ\n特徴：五マスが直角の二本の腕をつくる。\n向きの数：4"
-  },
-  {
-    "objectID": "characters/development/V.html#性格のアイデア-personality-experiments",
-    "href": "characters/development/V.html#性格のアイデア-personality-experiments",
-    "title": "V — かどっこおばさん",
-    "section": "",
-    "text": "まだ実験中。性格は物語とともに育っていきます。\n\n部屋に入ると、まず落ち着く角を探す。\n角を守るのは得意。でも、角の外にある景色にも興味がある。\n静かな場所が好きで、みんなの観察が上手。"
-  },
-  {
-    "objectID": "characters/development/V.html#名言仮-possible-quotes",
-    "href": "characters/development/V.html#名言仮-possible-quotes",
-    "title": "V — かどっこおばさん",
-    "section": "",
-    "text": "「この角、いい感じ。」\n「角があると、ほっとするの。」\n「たまには真ん中も悪くないわね。」"
-  },
-  {
-    "objectID": "characters/development/V.html#vおばさんの-seven-vs",
-    "href": "characters/development/V.html#vおばさんの-seven-vs",
-    "title": "V — かどっこおばさん",
-    "section": "",
-    "text": "かどっこおばさんは、お気に入りの角から世界を眺めて七つのVを見つけました。\n角にいるからこそ、見えるものもあるようです。\n\n\n\nV\nWhat it means\n\n\n\n\nView\nまず角から景色を眺める。\n\n\nValue\n自分の落ち着く場所を大切にする。\n\n\nVerify\nここが本当にいい角か確かめる。\n\n\nVenture\nときには角の外へ出かけてみる。\n\n\nVisit\n別の角にもおじゃましてみる。\n\n\nVariety\n角が違えば、景色も違う。\n\n\nVoice\nお気に入りの場所を自分の言葉で伝える。\n\n\n\nView → Value → Verify → Venture → Visit → Variety → Voice\nXおじさん：「真ん中のほうがいいよ。」\nVおばさん：「角から見た真ん中も、なかなかいいわよ。」\nXおじさん：「それは考えたことなかったな。」"
-  },
-  {
-    "objectID": "characters/development/V.html#形から生まれる発見-geometry-inspired-ideas",
-    "href": "characters/development/V.html#形から生まれる発見-geometry-inspired-ideas",
-    "title": "V — かどっこおばさん",
-    "section": "",
-    "text": "Vペントミノは直角をなす二本の腕を持ち、異なる向きは四通り。\n角を安全地帯にも、出発点にもできる。"
-  },
-  {
-    "objectID": "characters/development/V.html#他の住民との関係-relationships",
-    "href": "characters/development/V.html#他の住民との関係-relationships",
-    "title": "V — かどっこおばさん",
-    "section": "",
-    "text": "まだ実験中。\n\nXおじさん：真ん中派と角派。どちらが落ち着くか話が尽きない。\nLちゃん：曲がり角で困ったときに相談される。\nUおばさん：そっとしておいてほしいときの距離感を教える。"
-  },
-  {
-    "objectID": "characters/development/V.html#ネタ帳-story-seeds",
-    "href": "characters/development/V.html#ネタ帳-story-seeds",
-    "title": "V — かどっこおばさん",
-    "section": "",
-    "text": "角のない部屋。 かどっこおばさん、どこに座る？\n四つの角をめぐる旅。 角ごとに違う景色を見つける。"
-  },
-  {
-    "objectID": "characters/development/V.html#採用済み-canon",
-    "href": "characters/development/V.html#採用済み-canon",
-    "title": "V — かどっこおばさん",
-    "section": "",
-    "text": "名前は「かどっこおばさん」。\n基本のセリフは「この角、いい感じ。」\n形と向きの数は data/characters.json に準拠。"
-  },
-  {
-    "objectID": "characters/development/V.html#保留中-open-questions",
-    "href": "characters/development/V.html#保留中-open-questions",
-    "title": "V — かどっこおばさん",
-    "section": "",
-    "text": "角が好きなのは安心するから？ 観察しやすいから？\nお気に入りの角を誰かに譲れる？"
-  },
-  {
-    "objectID": "characters/development/V.html#開発メモ-development-notes",
-    "href": "characters/development/V.html#開発メモ-development-notes",
-    "title": "V — かどっこおばさん",
-    "section": "",
-    "text": "きっかけ：形から性格や物語を考える実験。\n関連Issue：#37\n次に試したいこと：会話や小さな物語にして、キャラクターらしさを確かめる。"
-  },
-  {
-    "objectID": "characters/development/X.html",
-    "href": "characters/development/X.html",
-    "title": "X — まんなかおじさん",
-    "section": "",
-    "text": "「ここにいるよ。」\n\nCharacter status: 発展途上 🌱\nCharacter data: data/characters.json\n\n\n\n名前：まんなかおじさん\n形：Xペントミノ\n特徴：いつも真ん中にいる。回転しても、裏返しても、見た目は同じ。\n向きの数：1\n\n\n\n\n\n何が起きても、まず真ん中に立とうとする。\n落ち着いているように見えるが、実は本人なりに忙しい。\n「自分は変わった」と思っているのに、誰にも気づいてもらえない。\nみんなの話を聞くのが好き。でも、いつの間にか話の中心になっている。\n変化が見えないことと、変化していないことは違う、と考えている。\n\n\n\n\n\n「ここにいるよ。」\n「ちゃんと回ったんだけどなあ。」\n「変わってないように見える？」\n「真ん中って、どこから見ても真ん中なのかな。」\n「ぼくが動いたのか、世界が動いたのか。」\n\n\n\n\nまんなかおじさんも、Pくんに対抗して7つの心得を考えました。\nただし、英語のスペルには少し独自の解釈があるようです。\n\n\n\nX\nWhat it means\n\n\n\n\nXamine\nよく観察する。\n\n\nXplore\n知らない世界を探す。\n\n\nXperience\n自分で体験する。\n\n\nXperiment\nちょっと試してみる。\n\n\nXpress\n自分の気持ちを伝える。\n\n\nXchange\n他の人と考えを交換する。\n\n\nXist\nただ、ここにいる。\n\n\n\nXamine → Xplore → Xperience → Xperiment → Xpress → Xchange → Xist\nXおじさん：「最初のEは、心の中にあるんだよ。」\nFちゃん：「それ、スペル間違いじゃない？」\nXおじさん：「見えないものにも意味があるんだ。」\n\n\n\n\nXペントミノは、中心の一マスから上下左右に一マスずつ伸びている。\n回転・反転しても、異なる形の向きは一つだけ。\nただし、回転という動作そのものができないわけではない。\nここから「本人は動いているのに、周囲からは変わらなく見える」というジョークが生まれる。\n上下左右に伸びているので、四方の話を同時に聞こうとする性格も面白いかもしれない。\n\n\n\n\nまだ実験中。\n\nPくん：Seven P’sを発表するたびに、「そんなに必要なの？」と質問する。\nFちゃん：八通りの姿を見せてくれるが、途中で目が回りそうになる。\nUおばさん：いつも誰かを迎えようとしている姿を、少し離れた真ん中から見守る。\nIおじさん：まっすぐ進む彼に「真ん中に戻ってきたら？」と言ってしまう。\n\n\n\n\n\nXおじさん、回転を証明する。 一回転して「どう？」と聞くが、誰も違いに気づかない。\n真ん中争奪戦。 全員が真ん中に立ちたがったら、真ん中は誰のもの？\nXおじさんの変身ショー。 四回転して四つのポーズを披露する。観客には全部同じに見える。\n変わらない人の成長物語。 外見は同じでも、考え方は少しずつ変わっていく。\n\n\n\n\n\n名前は「まんなかおじさん」。\n基本のセリフは「ここにいるよ。」\n回転・反転しても見た目が同じで、本人の努力が周囲に伝わらない。\n\n\n\n\n\nXおじさんは村の長老？ それとも年齢不詳？\nいつも中心にいたいのか、たまたま中心にいるのか？\n変化を認めてもらいたい？ それとも本当は気にしていない？\nXおじさんにとって「成長する」とはどういうこと？\n\n\n\n\n\n\nきっかけ：向きが一つしかないという幾何学的特徴から、見た目と本人の認識のズレを考えた。\n次に試したいこと：Xおじさんの「回転したのに誰も気づかない」短い漫画。"
-  },
-  {
-    "objectID": "characters/development/X.html#基本設定-established-character",
-    "href": "characters/development/X.html#基本設定-established-character",
-    "title": "X — まんなかおじさん",
-    "section": "",
-    "text": "名前：まんなかおじさん\n形：Xペントミノ\n特徴：いつも真ん中にいる。回転しても、裏返しても、見た目は同じ。\n向きの数：1"
-  },
-  {
-    "objectID": "characters/development/X.html#性格のアイデア-personality-experiments",
-    "href": "characters/development/X.html#性格のアイデア-personality-experiments",
-    "title": "X — まんなかおじさん",
-    "section": "",
-    "text": "何が起きても、まず真ん中に立とうとする。\n落ち着いているように見えるが、実は本人なりに忙しい。\n「自分は変わった」と思っているのに、誰にも気づいてもらえない。\nみんなの話を聞くのが好き。でも、いつの間にか話の中心になっている。\n変化が見えないことと、変化していないことは違う、と考えている。"
-  },
-  {
-    "objectID": "characters/development/X.html#名言仮-possible-quotes",
-    "href": "characters/development/X.html#名言仮-possible-quotes",
-    "title": "X — まんなかおじさん",
-    "section": "",
-    "text": "「ここにいるよ。」\n「ちゃんと回ったんだけどなあ。」\n「変わってないように見える？」\n「真ん中って、どこから見ても真ん中なのかな。」\n「ぼくが動いたのか、世界が動いたのか。」"
-  },
-  {
-    "objectID": "characters/development/X.html#xおじさんの-seven-xs",
-    "href": "characters/development/X.html#xおじさんの-seven-xs",
-    "title": "X — まんなかおじさん",
-    "section": "",
-    "text": "まんなかおじさんも、Pくんに対抗して7つの心得を考えました。\nただし、英語のスペルには少し独自の解釈があるようです。\n\n\n\nX\nWhat it means\n\n\n\n\nXamine\nよく観察する。\n\n\nXplore\n知らない世界を探す。\n\n\nXperience\n自分で体験する。\n\n\nXperiment\nちょっと試してみる。\n\n\nXpress\n自分の気持ちを伝える。\n\n\nXchange\n他の人と考えを交換する。\n\n\nXist\nただ、ここにいる。\n\n\n\nXamine → Xplore → Xperience → Xperiment → Xpress → Xchange → Xist\nXおじさん：「最初のEは、心の中にあるんだよ。」\nFちゃん：「それ、スペル間違いじゃない？」\nXおじさん：「見えないものにも意味があるんだ。」"
-  },
-  {
-    "objectID": "characters/development/X.html#形から生まれる発見-geometry-inspired-ideas",
-    "href": "characters/development/X.html#形から生まれる発見-geometry-inspired-ideas",
-    "title": "X — まんなかおじさん",
-    "section": "",
-    "text": "Xペントミノは、中心の一マスから上下左右に一マスずつ伸びている。\n回転・反転しても、異なる形の向きは一つだけ。\nただし、回転という動作そのものができないわけではない。\nここから「本人は動いているのに、周囲からは変わらなく見える」というジョークが生まれる。\n上下左右に伸びているので、四方の話を同時に聞こうとする性格も面白いかもしれない。"
-  },
-  {
-    "objectID": "characters/development/X.html#他の住民との関係-relationships",
-    "href": "characters/development/X.html#他の住民との関係-relationships",
-    "title": "X — まんなかおじさん",
-    "section": "",
-    "text": "まだ実験中。\n\nPくん：Seven P’sを発表するたびに、「そんなに必要なの？」と質問する。\nFちゃん：八通りの姿を見せてくれるが、途中で目が回りそうになる。\nUおばさん：いつも誰かを迎えようとしている姿を、少し離れた真ん中から見守る。\nIおじさん：まっすぐ進む彼に「真ん中に戻ってきたら？」と言ってしまう。"
-  },
-  {
-    "objectID": "characters/development/X.html#ネタ帳-story-seeds",
-    "href": "characters/development/X.html#ネタ帳-story-seeds",
-    "title": "X — まんなかおじさん",
-    "section": "",
-    "text": "Xおじさん、回転を証明する。 一回転して「どう？」と聞くが、誰も違いに気づかない。\n真ん中争奪戦。 全員が真ん中に立ちたがったら、真ん中は誰のもの？\nXおじさんの変身ショー。 四回転して四つのポーズを披露する。観客には全部同じに見える。\n変わらない人の成長物語。 外見は同じでも、考え方は少しずつ変わっていく。"
-  },
-  {
-    "objectID": "characters/development/X.html#採用済み-canon",
-    "href": "characters/development/X.html#採用済み-canon",
-    "title": "X — まんなかおじさん",
-    "section": "",
-    "text": "名前は「まんなかおじさん」。\n基本のセリフは「ここにいるよ。」\n回転・反転しても見た目が同じで、本人の努力が周囲に伝わらない。"
-  },
-  {
-    "objectID": "characters/development/X.html#保留中-open-questions",
-    "href": "characters/development/X.html#保留中-open-questions",
-    "title": "X — まんなかおじさん",
-    "section": "",
-    "text": "Xおじさんは村の長老？ それとも年齢不詳？\nいつも中心にいたいのか、たまたま中心にいるのか？\n変化を認めてもらいたい？ それとも本当は気にしていない？\nXおじさんにとって「成長する」とはどういうこと？"
-  },
-  {
-    "objectID": "characters/development/X.html#開発メモ-development-notes",
-    "href": "characters/development/X.html#開発メモ-development-notes",
-    "title": "X — まんなかおじさん",
-    "section": "",
-    "text": "きっかけ：向きが一つしかないという幾何学的特徴から、見た目と本人の認識のズレを考えた。\n次に試したいこと：Xおじさんの「回転したのに誰も気づかない」短い漫画。"
   }
 ]
