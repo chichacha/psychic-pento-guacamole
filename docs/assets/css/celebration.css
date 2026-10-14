@@ -12,3 +12,9 @@
 .lab-color-dot{width:12px;height:12px;border-radius:4px;border:1px solid #0002}
 .lab-props img[src*="caterpillar"]{width:56px;height:42px}
 @media(prefers-reduced-motion:reduce){.lab-particles{display:block}.lab-particle{top:auto;bottom:12px;left:var(--x);transform:translateX(var(--drift))}}
+
+/* Suspended candy and butterflies: stop in midair and remain visible. */
+.lab-particle{z-index:1}
+.lab-butterfly-particle{width:var(--size);height:var(--size)}
+.lab-butterfly-particle svg{filter:drop-shadow(0 2px 1px #00000012)}
+@media(prefers-reduced-motion:reduce){.lab-particle{top:var(--landing);bottom:auto;left:var(--x);transform:translateX(var(--drift))}}
