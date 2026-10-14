@@ -24,6 +24,8 @@
   const language = () => $('lab-lang').value;
   const t = key => { const msg = config.messages[key]; return msg?.[language()] ?? msg?.[config.fallbackLanguage] ?? key; };
   const num = id => Number($(id).value);
+  const selectedColors = () => [...root.querySelectorAll('.lab-color-input:checked')].map(el => byShape[el.value].color);
+  const palette = () => selectedColors().length ? selectedColors() : [byShape[piece()].color];
   const piece = () => $('lab-piece').value;
   const svg = shape => {
     const coords = cells[shape]; const maxX = Math.max(...coords.map(c => c[0])) + 1;
@@ -42,6 +44,7 @@
     root.querySelectorAll('[data-i18n]').forEach(el => { el.textContent = t(el.dataset.i18n); });
     $('lab-hints-value').textContent = num('lab-hints');
     $('lab-checks-value').textContent = num('lab-checks');
+    $('lab-level-value').textContent = num('lab-level');
     renderPiece();
   }
   function addProps(count, file) {
@@ -52,25 +55,41 @@
     }
     if (count > limit) { const extra = document.createElement('span'); extra.textContent = `+${count-limit}`; $('lab-props').append(extra); }
   }
+  function candySVG(kind, color) {
+    const shape = kind === 'circle' ? '<circle cx="12" cy="12" r="7"/>'
+      : kind === 'diamond' ? '<path d="M12 3 L21 12 L12 21 L3 12 Z"/>'
+      : kind === 'candy' ? '<path d="M6 9 L1 5 L1 19 L6 15 M18 9 L23 5 L23 19 L18 15"/><rect x="6" y="7" width="12" height="10" rx="4"/>'
+      : '<rect x="5" y="8" width="14" height="8" rx="2"/>';
+    return `<svg viewBox="0 0 24 24" width="100%" height="100%" aria-hidden="true" fill="${color}" stroke="#655d61" stroke-width=".8">${shape}</svg>`;
+  }
   function celebrate() {
     const h = num('lab-hints'), c = num('lab-checks'), perfect = !h && !c;
-    const key = perfect ? 'brilliant' : h && c ? 'both' : h ? 'books' : 'butterflies';
+    const key = perfect ? 'brilliant' : h && c ? 'both' : h ? 'caterpillars' : 'butterflies';
     $('lab-message').textContent = t(key);
-    $('lab-description').textContent = perfect ? t('confettiDescription') : [h ? t('booksDescription') : '', c ? t('butterfliesDescription') : ''].filter(Boolean).join(' ');
+    $('lab-description').textContent = perfect ? t('confettiDescription') : [h ? t('caterpillarsDescription') : '', c ? t('butterfliesDescription') : ''].filter(Boolean).join(' ');
     $('lab-props').replaceChildren(); $('lab-particles').replaceChildren();
-    if (h) addProps(h, 'book');
+    if (h) addProps(h, 'caterpillar');
     if (c) addProps(c, 'butterfly');
-    const symbols = perfect ? ['🎊','🍬','✨','🎉','🍭'] : ['✨','🎉','⭐'];
-    for (let i=0; i<(perfect?48:16); i++) {
-      const el = document.createElement('span'); el.className = 'lab-particle';
-      el.textContent = symbols[Math.floor(Math.random()*symbols.length)];
-      el.style.setProperty('--x', `${Math.random()*100}%`);
-      el.style.setProperty('--size', `${14+Math.random()*13}px`);
-      el.style.setProperty('--duration', `${2+Math.random()*1.5}s`);
+    const colors = palette(), level = num('lab-level');
+    const count = perfect ? 46 : 20;
+    // Level changes shape variety, not the identity of the character colors.
+    const kinds = level <= 3 ? ['rectangle'] : level <= 6 ? ['rectangle','circle'] : level <= 8 ? ['rectangle','circle','diamond'] : ['rectangle','circle','diamond','candy'];
+    const stageHeight = $('lab-stage').clientHeight;
+    const floor = Math.max(75, stageHeight - 32);
+    for (let i = 0; i < count; i++) {
+      const kind = kinds[Math.floor(Math.random()*kinds.length)];
+      const color = colors[Math.floor(Math.random()*colors.length)];
+      const x = 5 + Math.random()*90, drift = (Math.random()-.5)*75;
+      const landing = floor - Math.random()*28;
+      const el = document.createElement('span');
+      el.className = 'lab-particle';
+      el.innerHTML = candySVG(kind, color);
+      el.style.setProperty('--x', `${x}%`);
+      el.style.setProperty('--size', `${9+Math.random()*9}px`);
+      el.style.setProperty('--duration', `${1.6+Math.random()*1.5}s`);
       el.style.setProperty('--delay', `${Math.random()*.9}s`);
-      el.style.setProperty('--drift', `${(Math.random()-.5)*100}px`);
-      // Settle on the stage floor instead of fading away.
-      el.style.setProperty('--landing', `${$('lab-stage').clientHeight - 30 - Math.random()*32}px`);
+      el.style.setProperty('--drift', `${drift}px`);
+      el.style.setProperty('--landing', `${landing}px`);
       $('lab-particles').append(el);
     }
     $('lab-stage').classList.remove('is-celebrating');
@@ -88,9 +107,19 @@
     $('lab-piece').append(option);
   });
   $('lab-piece').value = 'F';
+  // All twelve pieces selected by default; toggle to simulate a partial palette.
+  order.forEach(shape => {
+    const label = document.createElement('label'); label.className = 'lab-color-chip';
+    const input = document.createElement('input'); input.type = 'checkbox'; input.className = 'lab-color-input';
+    input.value = shape; input.checked = true;
+    const dot = document.createElement('span'); dot.className = 'lab-color-dot'; dot.style.background = byShape[shape].color;
+    const text = document.createElement('span'); text.textContent = shape;
+    label.append(input, dot, text); $('lab-colors').append(label);
+    input.addEventListener('change', resetPreview);
+  });
   $('lab-lang').addEventListener('change', resetPreview);
   $('lab-piece').addEventListener('change', resetPreview);
-  ['lab-hints','lab-checks'].forEach(id => $(id).addEventListener('input', resetPreview));
+  ['lab-hints','lab-checks','lab-level'].forEach(id => $(id).addEventListener('input', resetPreview));
   $('lab-celebrate').addEventListener('click', celebrate);
   $('lab-replay').addEventListener('click', celebrate);
   resetPreview();
