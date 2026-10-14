@@ -1,0 +1,87 @@
+{
+  "defaultLanguage": "ja",
+  "fallbackLanguage": "en",
+  "messages": {
+    "intro": {
+      "ja": "ピースと遊び方で、お祝いが変わる。いもむしは地面、蝶とキャンディは空中に。",
+      "en": "Change the inputs: caterpillars stay on the ground, butterflies and candy float in the air."
+    },
+    "language": {
+      "ja": "ことば",
+      "en": "Language"
+    },
+    "piece": {
+      "ja": "最後に置いたピース",
+      "en": "Last piece placed"
+    },
+    "hints": {
+      "ja": "Hint 回数",
+      "en": "Hints used"
+    },
+    "checks": {
+      "ja": "Check 回数",
+      "en": "Checks used"
+    },
+    "celebrate": {
+      "ja": "🎉 完成！",
+      "en": "🎉 Celebrate!"
+    },
+    "replay": {
+      "ja": "もう一回！",
+      "en": "Again!"
+    },
+    "note": {
+      "ja": "これは試作品です。実際のゲームとは接続していません。",
+      "en": "This is a prototype, not connected to the real game."
+    },
+    "ready": {
+      "ja": "どんなお祝いになるかな？",
+      "en": "What will your celebration look like?"
+    },
+    "done": {
+      "ja": "できた！",
+      "en": "You did it!"
+    },
+    "brilliant": {
+      "ja": "ひらめいた！",
+      "en": "Brilliant!"
+    },
+    "books": {
+      "ja": "助けてもらって、できた！",
+      "en": "A helping hand!"
+    },
+    "butterflies": {
+      "ja": "たしかめながら、できた！",
+      "en": "Steady and sure!"
+    },
+    "both": {
+      "ja": "じっくり、できた！",
+      "en": "Made it!"
+    },
+    "booksDescription": {
+      "ja": "本はヒントの数。",
+      "en": "Books represent hints."
+    },
+    "butterfliesDescription": {
+      "ja": "蝶はチェックの数。",
+      "en": "Butterflies represent checks."
+    },
+    "confettiDescription": {
+      "ja": "ヒントもチェックもなし！キャンディがいっぱい。",
+      "en": "No hints or checks! Extra candy confetti."
+    },
+    "level": {
+      "ja": "レベル",
+      "en": "Level"
+    },
+    "caterpillars": {
+      "ja": "助けてもらって、できた！",
+      "en": "A helping hand!"
+    },
+    "caterpillarsDescription": {
+      "ja": "いもむしはヒントの数。",
+      "en": "Caterpillars represent hints."
+    }
+  },
+  "maxVisibleProps": 5
+}

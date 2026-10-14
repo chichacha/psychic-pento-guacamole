@@ -1,0 +1,41 @@
+---
+title: "お祝いシミュレーター"
+subtitle: "完成したら、どんなお祝い？"
+format:
+  html:
+    toc: false
+    page-layout: full
+    include-in-header:
+      text: |
+        <link rel="stylesheet" href="../../assets/css/celebration.css">
+---
+
+```{=html}
+
+<div class="celebration-lab" id="celebration-lab">
+  <div class="lab-intro"><span class="lab-kicker">🧪 SECRET LAB · EXPERIMENT 002</span><p data-i18n="intro">ピースと遊び方で、お祝いが変わる。みんな、完成おめでとう！</p></div>
+  <div class="lab-layout">
+    <section class="lab-controls" aria-label="Simulation controls">
+      <div class="lab-field"><label for="lab-lang" data-i18n="language">ことば</label><select id="lab-lang"><option value="ja">日本語</option><option value="en">English</option></select></div>
+      <div class="lab-field"><label for="lab-piece" data-i18n="piece">最後に置いたピース</label><select id="lab-piece"></select></div>
+      <div class="lab-field"><label for="lab-level" data-i18n="level">レベル</label><div class="lab-range"><input id="lab-level" type="range" min="1" max="10" value="1"><output id="lab-level-value" for="lab-level">1</output></div></div>
+      <div class="lab-field"><label for="lab-hints" data-i18n="hints">Hint 回数</label><div class="lab-range"><input id="lab-hints" type="range" min="0" max="8" value="0"><output id="lab-hints-value" for="lab-hints">0</output></div></div>
+      <div class="lab-field"><label for="lab-checks" data-i18n="checks">Check 回数</label><div class="lab-range"><input id="lab-checks" type="range" min="0" max="8" value="0"><output id="lab-checks-value" for="lab-checks">0</output></div></div>
+      <button class="lab-primary" id="lab-celebrate" type="button" data-i18n="celebrate">🎉 完成！</button>
+      <button class="lab-secondary" id="lab-replay" type="button" data-i18n="replay">もう一回！</button>
+      <p class="lab-note" data-i18n="note">これは試作品です。実際のゲームとは接続していません。</p>
+    </section>
+    <section class="lab-stage" id="lab-stage" aria-label="Celebration preview">
+      <div class="lab-particles" id="lab-particles" aria-hidden="true"></div>
+      <div class="lab-message" id="lab-message" role="status" aria-live="polite">どんなお祝いになるかな？</div>
+      <div class="lab-character" id="lab-character" aria-hidden="true"></div>
+      <div class="lab-props" id="lab-props" aria-hidden="true"></div>
+      <div class="lab-piece-name" id="lab-piece-name"></div>
+      <div class="lab-description" id="lab-description"></div>
+    </section>
+  </div>
+</div>
+
+```
+
+<script src="../../assets/js/celebration.js" defer></script>
