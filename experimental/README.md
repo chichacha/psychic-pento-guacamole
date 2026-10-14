@@ -10,6 +10,18 @@
 > [!NOTE]
 > This is an **open, unofficial prototyping space** for exploring possible improvements to Dad's Unity pentomino app. It is **not** an approved roadmap or a commitment to change the original app. The repository is public; “secret” is part of the joke.
 
+## How this lab differs from the other sections
+
+| Section | What visitors come to do | Editorial voice |
+| --- | --- | --- |
+| [📖 おはなし](../stories/README.md) | Enjoy character stories, the census, and 五マス新聞 | Playfully sensational; never invent real statistics |
+| [🔍 五マス研究室](../research/README.md) | Investigate and explain puzzle patterns | Factual, reproducible, transparent |
+| **🧪 ひみつの実験室** | Try animations, interactions, and possible app features | Curious, hands-on, iterative |
+
+**研究室が発見する。新聞社が大騒ぎする。実験室が作ってみる。** 😆
+
+An experiment is not a validated research finding or an approved feature. The three sections can share data and ideas without sharing the same editorial voice.
+
 ## Why it exists
 
 Dad built the puzzles and the Unity mobile app. Here we can test small, playful alternatives **before** asking him to consider them. A prototype might be adopted, modified, or rejected. All three outcomes are useful.
