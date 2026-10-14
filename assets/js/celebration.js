@@ -68,7 +68,9 @@
       el.style.setProperty('--size', `${14+Math.random()*13}px`);
       el.style.setProperty('--duration', `${2+Math.random()*1.5}s`);
       el.style.setProperty('--delay', `${Math.random()*.9}s`);
-      el.style.setProperty('--drift', `${(Math.random()-.5)*130}px`);
+      el.style.setProperty('--drift', `${(Math.random()-.5)*100}px`);
+      // Settle on the stage floor instead of fading away.
+      el.style.setProperty('--landing', `${$('lab-stage').clientHeight - 30 - Math.random()*32}px`);
       $('lab-particles').append(el);
     }
     $('lab-stage').classList.remove('is-celebrating');
