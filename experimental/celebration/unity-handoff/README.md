@@ -30,6 +30,14 @@ HintとCheckの回数によって、お祝いのメッセージと演出が変�
 
 詳しい仕組みは[お祝いのしくみ](https://chichacha.github.io/psychic-pento-guacamole/experimental/celebration/how-it-works.html)を参照してください。
 
+## 🌍 多言語対応
+
+お祝いメッセージは現在、日本語と英語に対応しています。JSONに言語を追加できる構造です。
+
+Unityアプリで選択されている言語に合わせて表示し、対応する翻訳がない場合は英語にフォールバックしてください。
+
+既存アプリの言語設定をそのまま利用してください。
+
 ## Claude Codeへのお願い
 
 このZIPには、Webで試作したお祝いシーンのJavaScript、CSS、JSONなどが入っています。
