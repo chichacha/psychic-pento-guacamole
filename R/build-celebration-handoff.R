@@ -47,6 +47,13 @@ for (file in files) {
   file_copy(file, destination)
 }
 
+###. Adding extra step for usability.  README should be at top level
+fs::file_copy(
+  "experimental/celebration/unity-handoff/README.md",
+  fs::path(staging, "README.md"),
+  overwrite = TRUE
+)
+
 # 5. Create ZIP
 zip_file <- path_abs(
   path("dist", "gomasu-celebration-v0.1.0.zip")
