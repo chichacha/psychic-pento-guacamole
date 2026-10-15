@@ -1,99 +1,59 @@
-# 🎉 Gomasu Celebration — Unity Handoff
+# 🎉 お祝いシーン — Unityへの引き継ぎ
 
-**Status:** Reference package for a Unity prototype, not production-ready Unity code  
-**Source:** [Gomasu Studio celebration experiment](https://chichacha.github.io/psychic-pento-guacamole/experimental/celebration/)  
-**Tracking:** [Issue #68](https://github.com/chichacha/psychic-pento-guacamole/issues/68)
+五マスの人たちの「お祝いシーン」を、Unityアプリでも使ってみるための参考資料です。
+
+[**動くお祝いシミュレーターはこちら**](https://chichacha.github.io/psychic-pento-guacamole/experimental/celebration/)
 
 ## お父さんへ
 
-これは「お祝いシーン」の **見た目と動き、そして条件分岐** を Unity で再現するための参考資料です。JavaScript や CSS を Unity にそのまま移すのではなく、Claude と一緒に C# / Unity UI / Particle System で作り直してください。パズルの判定・保存機能は変更しないでください。
+Webで作ったお祝いシミュレーターのソースをまとめました！🎉
 
-## What to recreate
+今のUnityアプリにある「パズル完成時のお祝い画面」を、このデザインに置き換えるための参考にしてね。
 
-Every completed puzzle deserves a celebration. Hints and checks change the *personality* of the celebration, not whether the player deserves congratulations.
+JavaScriptやCSSをそのままUnityで動かすのではなく、Claude Codeに渡して、Unity用に作り直してもらう想定です。
 
-| Hints | Checks | Message (JA) | Scene |
-| --- | --- | --- | --- |
-| 0 | 0 | ひらめいた！ | 46 confetti pieces, no caterpillars/butterflies |
-| >0 | 0 | 助けてもらって、できた！ | 20 confetti pieces + ground caterpillars |
-| 0 | >0 | たしかめながら、できた！ | 20 confetti pieces + butterflies |
-| >0 | >0 | じっくり、できた！ | 20 confetti pieces + both |
+## お祝いのしくみ
 
-These are the documented values for the current web experiment; verify against packaged source before implementation. Display up to five caterpillars and five butterflies. Character identity is the last successfully placed pentomino. Level changes the confetti shape variety: 1–3 squares; 4–6 squares/circles; 7–8 add diamonds; 9–10 add candy shapes. Colors come from the 12-character palette. Particles settle around the middle of the scene and stay visible; keep the character's face readable.
+HintとCheckの回数によって、お祝いのメッセージと演出が変わります。
 
-## Package manifest
+| Hint    | Check   | メッセージ               | 演出                          |
+|---------|---------|--------------------------|-------------------------------|
+| 0       | 0       | ひらめいた！             | キャンディ46個 🍬             |
+| 1回以上 | 0       | 助けてもらって、できた！ | いもむし＋キャンディ20個 🐛   |
+| 0       | 1回以上 | たしかめながら、できた！ | ちょうちょ＋キャンディ20個 🦋 |
+| 1回以上 | 1回以上 | じっくり、できた！       | 両方＋キャンディ20個 🐛🦋     |
 
-Copy these files from the **same repository commit**, preserving their relative paths:
+- 最後に置いたピースのキャラクターが中央に登場
+- レベルによってキャンディの形が変化
+- 12人のキャラクターの色を使用
+- **どの解き方でも、お祝い！**
 
-```text
-experimental/celebration/index.qmd
-experimental/celebration/README.md
-experimental/celebration/how-it-works.qmd
-assets/js/celebration.js
-assets/css/celebration.css
-data/celebration.json
-data/characters.json
-assets/svg/caterpillar.svg
-assets/svg/butterfly.svg
-```
+詳しい仕組みは[お祝いのしくみ](https://chichacha.github.io/psychic-pento-guacamole/experimental/celebration/how-it-works.html)を参照してください。
 
-Check the live source for any additional dependencies before finalizing the ZIP. The JavaScript currently generates candy and butterfly SVG inline; the external butterfly asset may not control the displayed butterfly. Include a screenshot or recording of the browser scene, and optionally a standalone rendered HTML demo with its dependencies. The `.qmd` file requires Quarto to render; it is **not** a standalone HTML file.
+## Claude Codeへのお願い
 
-**Package version:** TBD  
-**Source commit SHA:** TBD  
-**Verified file manifest:** Pending  
-**Unity version / UI framework:** To be determined by Dad
+このZIPには、Webで試作したお祝いシーンのJavaScript、CSS、JSONなどが入っています。
 
-## Behavioral interface (illustrative, not Dad's save schema)
+**目的は、既存のUnityアプリの「パズル完成時のお祝い画面」を、新しいデザインと演出に置き換えることです。**
 
-```json
-{
-  "mode": "white_belt",
-  "puzzleId": "example",
-  "level": 5,
-  "lastPlacedPiece": "F",
-  "hintCount": 2,
-  "checkCount": 1
-}
-```
+まず現在のお祝い画面、PNG素材、画面サイズ、完成時の処理を確認してください。
 
-Confirm the actual mode identifiers, counter reset semantics, last-piece tracking and puzzle-completion event with the Unity code. The web page uses manual simulator controls, not game save data.
+Webの動く見本とソースコードを参考に、UnityのC#、UI、アニメーションで再現してください。
 
-## Unity architecture suggestion
+Hint × Checkの4種類のお祝いと、キャラクター・キャンディ・いもむし・ちょうちょの演出を再現したいです。
 
-1. **Completion adapter:** Read the game's existing completion event and map values to a small celebration input object; do not alter puzzle validation or saved state.
-2. **Rules:** A testable C# function chooses the message key and prop/confetti counts based on Hint × Check and level.
-3. **Content:** Load localized phrases and canonical character colors separately from the rules.
-4. **Presentation:** Use Unity UI, animation and/or particles to recreate character, candy/confetti, caterpillars and butterflies. Recreate layering, movement, settling and replay behavior.
-5. **Testing:** Exercise all four Hint × Check combinations, all 12 characters, levels 1–10, Japanese/English fallback, small screens and repeated celebrations.
+既存のパズル判定・保存データ・画面遷移はそのままに、お祝い画面のデザインと演出を新しいものに置き換えてください。
 
-### Rules diagram
+実装方法は、現在のUnityアプリの構成に合わせて判断してください。
 
-```mermaid
-flowchart TD
-  A[Puzzle completed] --> B{Hint count > 0?}
-  B -->|No| C{Check count > 0?}
-  B -->|Yes| D{Check count > 0?}
-  C -->|No| E[Brilliant: 46 confetti]
-  C -->|Yes| F[Butterflies: 20 confetti]
-  D -->|No| G[Caterpillars: 20 confetti]
-  D -->|Yes| H[Both: 20 confetti]
-```
+## 主なファイル
 
-## Suggested prompt for Claude Code
+- `celebration.js` — 動きと条件分岐
+- `celebration.css` — 見た目とアニメーション
+- `celebration.json` — メッセージと設定
+- `characters.json` — キャラクター情報と色
+- `assets/svg/` — イラスト素材
 
-> Inspect the existing Unity project before making changes. Treat this ZIP and the live Gomasu celebration page as **behavioral and visual references**, not directly portable Unity code. Propose a small, isolated C# implementation with separate input adapter, pure celebration rules, localized data and presentation. Preserve puzzle completion logic and existing saved states. Identify any missing assets or assumptions, then build one reversible prototype and test all four Hint × Check outcomes. Do not refactor unrelated game code.
+------------------------------------------------------------------------
 
-## Boundaries and ownership
-
-This is a family collaboration handoff, **not** a blanket license for redistribution, merchandising, or publication of Gomasu characters. Confirm repository and asset licensing before sharing outside the intended collaborators.
-
-## Before sending
-
-- [ ] Copy all required source files and transitive assets from one commit
-- [ ] Record commit SHA and version above
-- [ ] Include reference screenshots/video
-- [ ] Extract the ZIP and verify manifest paths
-- [ ] Confirm Dad can open the files in Claude and see the live demo
-
-**ひみつの実験室より。まず作る。あとで相談。** 🥑
+**ひみつの実験室より。まず作る。Unityへの移植は、お任せワカモレ！🥑**
