@@ -3,6 +3,9 @@
 *_cache/
 *_files/
 
+# Keep generated figure assets for GitHub Pages
+!docs/**/*_files/
+
 # RStudio
 .Rproj.user/
 .Rhistory
