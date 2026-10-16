@@ -19,7 +19,9 @@ website:
         href: characters/index.qmd
       - text: "おはなし"
         href: stories/index.qmd
-      - text: "🧪 ひみつの実験室"
+      - text: "🧪 研究室"
+        href: research/index.qmd
+      - text: "🔧 ひみつの実験室"
         href: experimental/index.qmd
       - text: "ABOUT"
         href: about.qmd

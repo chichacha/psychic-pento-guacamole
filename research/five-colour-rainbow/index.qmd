@@ -32,18 +32,30 @@ library(tidyr)
 library(purrr)
 library(stringr)
 library(ggplot2)
+library(jsonlite)
 
-# Supports rendering from the project root or this QMD's folder.
-solutions_path <- if (file.exists("data/solutions.csv")) {
-  "data/solutions.csv"
-} else {
-  "../../data/solutions.csv"
-}
 
-solutions <- read_csv(solutions_path, show_col_types = FALSE) %>%
-  rename(group_number = `Group number`, level = Level, answer = Answer)
+solutions <- readr::read_csv(
+  here::here("data", "solutions.csv"),
+  show_col_types = FALSE
+) %>%
+  dplyr::rename(
+    group_number = `Group number`,
+    level = Level,
+    answer = Answer
+  )
 
 glimpse(solutions)
+
+characters <- jsonlite::fromJSON(
+  here::here("data", "characters.json")
+)
+
+character_colors <- setNames(
+  characters$color,
+  characters$shape
+)
+
 ```
 
 ## Extract character sequence, ignoring posture
@@ -78,6 +90,44 @@ rainbows %>%
   select(group_number, level, permutation, combination) %>%
   slice_head(n = 12) %>%
   knitr::kable(caption = "Final five pieces: source order versus alphabetical order")
+
+
+```
+
+```{r}
+#| label: rainbow-helpers
+#| echo: false
+
+library(gt)
+library(htmltools)
+
+rainbow_swatch <- function(sequence, colors = character_colors) {
+  pieces <- strsplit(sequence, "")[[1]]
+
+  swatches <- vapply(pieces, function(piece) {
+    color <- unname(colors[[piece]])
+
+    sprintf(
+      paste0(
+        '<span title="%s" style="',
+        'display:inline-block;',
+        'width:36px;height:24px;',
+        'background:%s;',
+        'border-radius:4px;',
+        'margin-right:3px;',
+        'border:1px solid rgba(0,0,0,.08);',
+        '"></span>'
+      ),
+      piece, color
+    )
+  }, character(1))
+
+  paste0(
+    '<span style="display:inline-flex;align-items:center;">',
+    paste(swatches, collapse = ""),
+    '</span>'
+  )
+}
 ```
 
 For example, the first solution has the sequence `r paste(rainbows$piece_sequence[[1]], collapse = " → ")`; the last-five permutation is `r rainbows$permutation[[1]]`, and its combination key is `r rainbows$combination[[1]]`.
@@ -105,7 +155,26 @@ combination_counts <- rainbows %>%
   count(combination, sort = TRUE, name = "n") %>%
   mutate(pct = n / sum(n))
 
-combination_counts %>% slice_head(n = 20) %>% knitr::kable(digits = 4)
+combination_counts <- rainbows %>%
+  count(combination, sort = TRUE, name = "n") %>%
+  mutate(pct = n / sum(n))
+
+combination_counts %>%
+  slice_head(n = 20) %>%
+  mutate(rainbow = vapply(combination, rainbow_swatch, character(1))) %>%
+  select(combination, rainbow, n, pct) %>%
+  gt() %>%
+  fmt_markdown(columns = rainbow) %>%
+  fmt_percent(columns = pct, decimals = 2) %>%
+  cols_label(
+    combination = "Combination",
+    rainbow = "Five colours",
+    n = "Count",
+    pct = "Share"
+  ) %>%
+  opt_row_striping() 
+
+#combination_counts %>% slice_head(n = 20) %>% knitr::kable(digits = 4)
 ```
 
 ## Most frequent permutations
@@ -116,7 +185,21 @@ permutation_counts <- rainbows %>%
   count(permutation, sort = TRUE, name = "n") %>%
   mutate(pct = n / sum(n))
 
-permutation_counts %>% slice_head(n = 20) %>% knitr::kable(digits = 4)
+permutation_counts %>%
+  slice_head(n = 20) %>%
+  mutate(rainbow = vapply(permutation, rainbow_swatch, character(1))) %>%
+  select(permutation, rainbow, n, pct) %>%
+  gt() %>%
+  fmt_markdown(columns = rainbow) %>%
+  fmt_percent(columns = pct, decimals = 2) %>%
+  cols_label(
+    permutation = "Permutation",
+    rainbow = "Five colours",
+    n = "Count",
+    pct = "Share"
+  ) %>%
+  opt_row_striping() 
+
 ```
 
 ## Who appears in the last five?
@@ -135,14 +218,29 @@ piece_frequency <- rainbows %>%
 
 knitr::kable(piece_frequency, digits = 3)
 
-ggplot(piece_frequency, aes(x = reorder(piece, n), y = proportion_of_solutions)) +
-  geom_col() +
-  geom_hline(yintercept = 5 / 12, linetype = "dashed") +
+#names(character_colors)
+#unique(piece_frequency$piece)
+
+ggplot(
+  piece_frequency,
+  aes(
+    x = reorder(piece, n),
+    y = proportion_of_solutions,
+    fill = piece
+  )
+) +
+  geom_col(width = 0.75, colour = "#55555500", linewidth = 0.25) +
+  geom_hline(
+    yintercept = 5 / 12,
+    linetype = "dashed",
+    colour = "#555555"
+  ) +
+  scale_fill_manual(values = character_colors) +
   coord_flip() +
-  labs(x = "Pentomino", y = "Share of solutions",
-       title = "Who appears in the last five?",
-       subtitle = "Dashed line: 5/12 under a uniformly random ordering") +
-  theme_minimal()
+  theme_minimal() +
+  theme(legend.position = "none")
+
+
 ```
 
 ## By puzzle level
@@ -159,6 +257,58 @@ rainbows %>%
   ) %>%
   knitr::kable()
 ```
+
+## The most common rainbow
+
+The most frequently observed five-character combination is
+`r combination_counts$combination[[1]]`,
+appearing in `r combination_counts$n[[1]]` solutions.
+
+```{r}
+#| label: popular-rainbow
+#| echo: false
+#| results: asis
+
+draw_rainbow <- function(sequence, colors) {
+  pieces <- strsplit(sequence, "")[[1]]
+
+  stopifnot(length(pieces) == 5)
+  stopifnot(all(pieces %in% names(colors)))
+
+  paths <- vapply(seq_along(pieces), function(i) {
+    radius <- 240 - (i - 1) * 27
+
+    sprintf(
+      '<path d="M %d 270 A %d %d 0 0 1 %d 270"
+         fill="none" stroke="%s" stroke-width="26"/>',
+      300 - radius,
+      radius,
+      radius,
+      300 + radius,
+      unname(colors[[pieces[i]]])
+    )
+  }, character(1))
+
+  svg <- paste0(
+    '<svg viewBox="0 0 600 290" ',
+    'xmlns="http://www.w3.org/2000/svg" ',
+    'role="img" aria-label="Five-colour rainbow: ',
+    sequence, '" ',
+    'style="display:block;width:100%;max-width:700px;',
+    'height:auto;margin:2rem auto;">',
+    paste(paths, collapse = "\n"),
+    '</svg>'
+  )
+
+  cat(svg, "\n")
+}
+
+draw_rainbow(
+  combination_counts$combination[[1]],
+  character_colors
+)
+```
+
 
 ## Research notes
 

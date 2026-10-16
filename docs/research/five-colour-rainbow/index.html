@@ -114,8 +114,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">おはなし</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="../../research/index.html"> 
+<span class="menu-text">🧪 研究室</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link" href="../../experimental/index.html"> 
-<span class="menu-text">🧪 ひみつの実験室</span></a>
+<span class="menu-text">🔧 ひみつの実験室</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../about.html"> 
@@ -145,6 +149,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#most-frequent-permutations" id="toc-most-frequent-permutations" class="nav-link" data-scroll-target="#most-frequent-permutations">Most frequent permutations</a></li>
   <li><a href="#who-appears-in-the-last-five" id="toc-who-appears-in-the-last-five" class="nav-link" data-scroll-target="#who-appears-in-the-last-five">Who appears in the last five?</a></li>
   <li><a href="#by-puzzle-level" id="toc-by-puzzle-level" class="nav-link" data-scroll-target="#by-puzzle-level">By puzzle level</a></li>
+  <li><a href="#the-most-common-rainbow" id="toc-the-most-common-rainbow" class="nav-link" data-scroll-target="#the-most-common-rainbow">The most common rainbow</a></li>
   <li><a href="#research-notes" id="toc-research-notes" class="nav-link" data-scroll-target="#research-notes">Research notes</a></li>
   </ul>
 </nav>
@@ -335,117 +340,590 @@ $ answer       &lt;chr&gt; "Y060000N044000F050010Z015010U010030P034030X003040I00
 <h2 data-anchor-id="most-frequent-combinations">Most frequent combinations</h2>
 <div class="cell">
 <div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
+<div id="qazwolmsgv" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#qazwolmsgv table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#qazwolmsgv thead, #qazwolmsgv tbody, #qazwolmsgv tfoot, #qazwolmsgv tr, #qazwolmsgv td, #qazwolmsgv th {
+  border-style: none;
+}
+
+#qazwolmsgv p {
+  margin: 0;
+  padding: 0;
+}
+
+#qazwolmsgv .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#qazwolmsgv .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#qazwolmsgv .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#qazwolmsgv .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#qazwolmsgv .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#qazwolmsgv .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#qazwolmsgv .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#qazwolmsgv .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#qazwolmsgv .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#qazwolmsgv .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#qazwolmsgv .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#qazwolmsgv .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#qazwolmsgv .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#qazwolmsgv .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#qazwolmsgv .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#qazwolmsgv .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#qazwolmsgv .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#qazwolmsgv .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#qazwolmsgv .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#qazwolmsgv .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#qazwolmsgv .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#qazwolmsgv .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#qazwolmsgv .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#qazwolmsgv .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#qazwolmsgv .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#qazwolmsgv .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#qazwolmsgv .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#qazwolmsgv .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#qazwolmsgv .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#qazwolmsgv .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#qazwolmsgv .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#qazwolmsgv .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#qazwolmsgv .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#qazwolmsgv .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#qazwolmsgv .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#qazwolmsgv .gt_left {
+  text-align: left;
+}
+
+#qazwolmsgv .gt_center {
+  text-align: center;
+}
+
+#qazwolmsgv .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#qazwolmsgv .gt_font_normal {
+  font-weight: normal;
+}
+
+#qazwolmsgv .gt_font_bold {
+  font-weight: bold;
+}
+
+#qazwolmsgv .gt_font_italic {
+  font-style: italic;
+}
+
+#qazwolmsgv .gt_super {
+  font-size: 65%;
+}
+
+#qazwolmsgv .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#qazwolmsgv .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#qazwolmsgv .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#qazwolmsgv .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#qazwolmsgv .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#qazwolmsgv .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#qazwolmsgv .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#qazwolmsgv .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#qazwolmsgv div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
 <thead>
-<tr class="header">
-<th style="text-align: left;">combination</th>
-<th style="text-align: right;">n</th>
-<th style="text-align: right;">pct</th>
+<tr class="gt_col_headings header">
+<th id="combination" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Combination</th>
+<th id="rainbow" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Five colours</th>
+<th id="n" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Count</th>
+<th id="pct" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Share</th>
 </tr>
 </thead>
-<tbody>
+<tbody class="gt_table_body">
 <tr class="odd">
-<td style="text-align: left;">FITUX</td>
-<td style="text-align: right;">55</td>
-<td style="text-align: right;">0.0235</td>
+<td class="gt_row gt_left" headers="combination">FITUX</td>
+<td class="gt_row gt_left" headers="rainbow"><span style="display:inline-flex;align-items:center;"><span title="F" style="display:inline-block;width:36px;height:24px;background:#FFADA6;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="I" style="display:inline-block;width:36px;height:24px;background:#FDCFAB;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="T" style="display:inline-block;width:36px;height:24px;background:#76E1D7;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="U" style="display:inline-block;width:36px;height:24px;background:#85D7EF;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="X" style="display:inline-block;width:36px;height:24px;background:#F0B6DF;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span></span></td>
+<td class="gt_row gt_right" headers="n">55</td>
+<td class="gt_row gt_right" headers="pct">2.35%</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">PUVXZ</td>
-<td style="text-align: right;">51</td>
-<td style="text-align: right;">0.0218</td>
+<td class="gt_row gt_left gt_striped" headers="combination">PUVXZ</td>
+<td class="gt_row gt_left gt_striped" headers="rainbow"><span style="display:inline-flex;align-items:center;"><span title="P" style="display:inline-block;width:36px;height:24px;background:#6BB091;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="U" style="display:inline-block;width:36px;height:24px;background:#85D7EF;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="V" style="display:inline-block;width:36px;height:24px;background:#A9C7E9;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="X" style="display:inline-block;width:36px;height:24px;background:#F0B6DF;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="Z" style="display:inline-block;width:36px;height:24px;background:#ECD2C1;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span></span></td>
+<td class="gt_row gt_right gt_striped" headers="n">51</td>
+<td class="gt_row gt_right gt_striped" headers="pct">2.18%</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">LNUVZ</td>
-<td style="text-align: right;">42</td>
-<td style="text-align: right;">0.0180</td>
+<td class="gt_row gt_left" headers="combination">LNUVZ</td>
+<td class="gt_row gt_left" headers="rainbow"><span style="display:inline-flex;align-items:center;"><span title="L" style="display:inline-block;width:36px;height:24px;background:#FEE1A7;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="N" style="display:inline-block;width:36px;height:24px;background:#D2E3AD;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="U" style="display:inline-block;width:36px;height:24px;background:#85D7EF;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="V" style="display:inline-block;width:36px;height:24px;background:#A9C7E9;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="Z" style="display:inline-block;width:36px;height:24px;background:#ECD2C1;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span></span></td>
+<td class="gt_row gt_right" headers="n">42</td>
+<td class="gt_row gt_right" headers="pct">1.80%</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">UVWXZ</td>
-<td style="text-align: right;">34</td>
-<td style="text-align: right;">0.0145</td>
+<td class="gt_row gt_left gt_striped" headers="combination">UVWXZ</td>
+<td class="gt_row gt_left gt_striped" headers="rainbow"><span style="display:inline-flex;align-items:center;"><span title="U" style="display:inline-block;width:36px;height:24px;background:#85D7EF;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="V" style="display:inline-block;width:36px;height:24px;background:#A9C7E9;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="W" style="display:inline-block;width:36px;height:24px;background:#CBBBE8;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="X" style="display:inline-block;width:36px;height:24px;background:#F0B6DF;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="Z" style="display:inline-block;width:36px;height:24px;background:#ECD2C1;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span></span></td>
+<td class="gt_row gt_right gt_striped" headers="n">34</td>
+<td class="gt_row gt_right gt_striped" headers="pct">1.45%</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">LUVXZ</td>
-<td style="text-align: right;">33</td>
-<td style="text-align: right;">0.0141</td>
+<td class="gt_row gt_left" headers="combination">LUVXZ</td>
+<td class="gt_row gt_left" headers="rainbow"><span style="display:inline-flex;align-items:center;"><span title="L" style="display:inline-block;width:36px;height:24px;background:#FEE1A7;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="U" style="display:inline-block;width:36px;height:24px;background:#85D7EF;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="V" style="display:inline-block;width:36px;height:24px;background:#A9C7E9;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="X" style="display:inline-block;width:36px;height:24px;background:#F0B6DF;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="Z" style="display:inline-block;width:36px;height:24px;background:#ECD2C1;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span></span></td>
+<td class="gt_row gt_right" headers="n">33</td>
+<td class="gt_row gt_right" headers="pct">1.41%</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">FTUXY</td>
-<td style="text-align: right;">31</td>
-<td style="text-align: right;">0.0133</td>
+<td class="gt_row gt_left gt_striped" headers="combination">FTUXY</td>
+<td class="gt_row gt_left gt_striped" headers="rainbow"><span style="display:inline-flex;align-items:center;"><span title="F" style="display:inline-block;width:36px;height:24px;background:#FFADA6;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="T" style="display:inline-block;width:36px;height:24px;background:#76E1D7;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="U" style="display:inline-block;width:36px;height:24px;background:#85D7EF;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="X" style="display:inline-block;width:36px;height:24px;background:#F0B6DF;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="Y" style="display:inline-block;width:36px;height:24px;background:#FFAFD0;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span></span></td>
+<td class="gt_row gt_right gt_striped" headers="n">31</td>
+<td class="gt_row gt_right gt_striped" headers="pct">1.33%</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">UVWXY</td>
-<td style="text-align: right;">29</td>
-<td style="text-align: right;">0.0124</td>
+<td class="gt_row gt_left" headers="combination">UVWXY</td>
+<td class="gt_row gt_left" headers="rainbow"><span style="display:inline-flex;align-items:center;"><span title="U" style="display:inline-block;width:36px;height:24px;background:#85D7EF;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="V" style="display:inline-block;width:36px;height:24px;background:#A9C7E9;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="W" style="display:inline-block;width:36px;height:24px;background:#CBBBE8;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="X" style="display:inline-block;width:36px;height:24px;background:#F0B6DF;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="Y" style="display:inline-block;width:36px;height:24px;background:#FFAFD0;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span></span></td>
+<td class="gt_row gt_right" headers="n">29</td>
+<td class="gt_row gt_right" headers="pct">1.24%</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">ILNUX</td>
-<td style="text-align: right;">25</td>
-<td style="text-align: right;">0.0107</td>
+<td class="gt_row gt_left gt_striped" headers="combination">ILNUX</td>
+<td class="gt_row gt_left gt_striped" headers="rainbow"><span style="display:inline-flex;align-items:center;"><span title="I" style="display:inline-block;width:36px;height:24px;background:#FDCFAB;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="L" style="display:inline-block;width:36px;height:24px;background:#FEE1A7;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="N" style="display:inline-block;width:36px;height:24px;background:#D2E3AD;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="U" style="display:inline-block;width:36px;height:24px;background:#85D7EF;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="X" style="display:inline-block;width:36px;height:24px;background:#F0B6DF;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span></span></td>
+<td class="gt_row gt_right gt_striped" headers="n">25</td>
+<td class="gt_row gt_right gt_striped" headers="pct">1.07%</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">PVWXZ</td>
-<td style="text-align: right;">22</td>
-<td style="text-align: right;">0.0094</td>
+<td class="gt_row gt_left" headers="combination">PVWXZ</td>
+<td class="gt_row gt_left" headers="rainbow"><span style="display:inline-flex;align-items:center;"><span title="P" style="display:inline-block;width:36px;height:24px;background:#6BB091;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="V" style="display:inline-block;width:36px;height:24px;background:#A9C7E9;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="W" style="display:inline-block;width:36px;height:24px;background:#CBBBE8;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="X" style="display:inline-block;width:36px;height:24px;background:#F0B6DF;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="Z" style="display:inline-block;width:36px;height:24px;background:#ECD2C1;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span></span></td>
+<td class="gt_row gt_right" headers="n">22</td>
+<td class="gt_row gt_right" headers="pct">0.94%</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">UVXYZ</td>
-<td style="text-align: right;">22</td>
-<td style="text-align: right;">0.0094</td>
+<td class="gt_row gt_left gt_striped" headers="combination">UVXYZ</td>
+<td class="gt_row gt_left gt_striped" headers="rainbow"><span style="display:inline-flex;align-items:center;"><span title="U" style="display:inline-block;width:36px;height:24px;background:#85D7EF;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="V" style="display:inline-block;width:36px;height:24px;background:#A9C7E9;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="X" style="display:inline-block;width:36px;height:24px;background:#F0B6DF;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="Y" style="display:inline-block;width:36px;height:24px;background:#FFAFD0;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="Z" style="display:inline-block;width:36px;height:24px;background:#ECD2C1;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span></span></td>
+<td class="gt_row gt_right gt_striped" headers="n">22</td>
+<td class="gt_row gt_right gt_striped" headers="pct">0.94%</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">FPUVX</td>
-<td style="text-align: right;">21</td>
-<td style="text-align: right;">0.0090</td>
+<td class="gt_row gt_left" headers="combination">FPUVX</td>
+<td class="gt_row gt_left" headers="rainbow"><span style="display:inline-flex;align-items:center;"><span title="F" style="display:inline-block;width:36px;height:24px;background:#FFADA6;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="P" style="display:inline-block;width:36px;height:24px;background:#6BB091;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="U" style="display:inline-block;width:36px;height:24px;background:#85D7EF;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="V" style="display:inline-block;width:36px;height:24px;background:#A9C7E9;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="X" style="display:inline-block;width:36px;height:24px;background:#F0B6DF;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span></span></td>
+<td class="gt_row gt_right" headers="n">21</td>
+<td class="gt_row gt_right" headers="pct">0.90%</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">UVWYZ</td>
-<td style="text-align: right;">21</td>
-<td style="text-align: right;">0.0090</td>
+<td class="gt_row gt_left gt_striped" headers="combination">UVWYZ</td>
+<td class="gt_row gt_left gt_striped" headers="rainbow"><span style="display:inline-flex;align-items:center;"><span title="U" style="display:inline-block;width:36px;height:24px;background:#85D7EF;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="V" style="display:inline-block;width:36px;height:24px;background:#A9C7E9;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="W" style="display:inline-block;width:36px;height:24px;background:#CBBBE8;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="Y" style="display:inline-block;width:36px;height:24px;background:#FFAFD0;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="Z" style="display:inline-block;width:36px;height:24px;background:#ECD2C1;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span></span></td>
+<td class="gt_row gt_right gt_striped" headers="n">21</td>
+<td class="gt_row gt_right gt_striped" headers="pct">0.90%</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">IPUVZ</td>
-<td style="text-align: right;">19</td>
-<td style="text-align: right;">0.0081</td>
+<td class="gt_row gt_left" headers="combination">IPUVZ</td>
+<td class="gt_row gt_left" headers="rainbow"><span style="display:inline-flex;align-items:center;"><span title="I" style="display:inline-block;width:36px;height:24px;background:#FDCFAB;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="P" style="display:inline-block;width:36px;height:24px;background:#6BB091;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="U" style="display:inline-block;width:36px;height:24px;background:#85D7EF;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="V" style="display:inline-block;width:36px;height:24px;background:#A9C7E9;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="Z" style="display:inline-block;width:36px;height:24px;background:#ECD2C1;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span></span></td>
+<td class="gt_row gt_right" headers="n">19</td>
+<td class="gt_row gt_right" headers="pct">0.81%</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">FILTX</td>
-<td style="text-align: right;">18</td>
-<td style="text-align: right;">0.0077</td>
+<td class="gt_row gt_left gt_striped" headers="combination">FILTX</td>
+<td class="gt_row gt_left gt_striped" headers="rainbow"><span style="display:inline-flex;align-items:center;"><span title="F" style="display:inline-block;width:36px;height:24px;background:#FFADA6;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="I" style="display:inline-block;width:36px;height:24px;background:#FDCFAB;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="L" style="display:inline-block;width:36px;height:24px;background:#FEE1A7;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="T" style="display:inline-block;width:36px;height:24px;background:#76E1D7;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="X" style="display:inline-block;width:36px;height:24px;background:#F0B6DF;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span></span></td>
+<td class="gt_row gt_right gt_striped" headers="n">18</td>
+<td class="gt_row gt_right gt_striped" headers="pct">0.77%</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">FPTXY</td>
-<td style="text-align: right;">18</td>
-<td style="text-align: right;">0.0077</td>
+<td class="gt_row gt_left" headers="combination">FPTXY</td>
+<td class="gt_row gt_left" headers="rainbow"><span style="display:inline-flex;align-items:center;"><span title="F" style="display:inline-block;width:36px;height:24px;background:#FFADA6;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="P" style="display:inline-block;width:36px;height:24px;background:#6BB091;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="T" style="display:inline-block;width:36px;height:24px;background:#76E1D7;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="X" style="display:inline-block;width:36px;height:24px;background:#F0B6DF;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="Y" style="display:inline-block;width:36px;height:24px;background:#FFAFD0;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span></span></td>
+<td class="gt_row gt_right" headers="n">18</td>
+<td class="gt_row gt_right" headers="pct">0.77%</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">LVWYZ</td>
-<td style="text-align: right;">17</td>
-<td style="text-align: right;">0.0073</td>
+<td class="gt_row gt_left gt_striped" headers="combination">LVWYZ</td>
+<td class="gt_row gt_left gt_striped" headers="rainbow"><span style="display:inline-flex;align-items:center;"><span title="L" style="display:inline-block;width:36px;height:24px;background:#FEE1A7;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="V" style="display:inline-block;width:36px;height:24px;background:#A9C7E9;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="W" style="display:inline-block;width:36px;height:24px;background:#CBBBE8;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="Y" style="display:inline-block;width:36px;height:24px;background:#FFAFD0;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="Z" style="display:inline-block;width:36px;height:24px;background:#ECD2C1;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span></span></td>
+<td class="gt_row gt_right gt_striped" headers="n">17</td>
+<td class="gt_row gt_right gt_striped" headers="pct">0.73%</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">NTVWZ</td>
-<td style="text-align: right;">17</td>
-<td style="text-align: right;">0.0073</td>
+<td class="gt_row gt_left" headers="combination">NTVWZ</td>
+<td class="gt_row gt_left" headers="rainbow"><span style="display:inline-flex;align-items:center;"><span title="N" style="display:inline-block;width:36px;height:24px;background:#D2E3AD;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="T" style="display:inline-block;width:36px;height:24px;background:#76E1D7;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="V" style="display:inline-block;width:36px;height:24px;background:#A9C7E9;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="W" style="display:inline-block;width:36px;height:24px;background:#CBBBE8;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="Z" style="display:inline-block;width:36px;height:24px;background:#ECD2C1;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span></span></td>
+<td class="gt_row gt_right" headers="n">17</td>
+<td class="gt_row gt_right" headers="pct">0.73%</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">FLUVX</td>
-<td style="text-align: right;">16</td>
-<td style="text-align: right;">0.0068</td>
+<td class="gt_row gt_left gt_striped" headers="combination">FLUVX</td>
+<td class="gt_row gt_left gt_striped" headers="rainbow"><span style="display:inline-flex;align-items:center;"><span title="F" style="display:inline-block;width:36px;height:24px;background:#FFADA6;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="L" style="display:inline-block;width:36px;height:24px;background:#FEE1A7;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="U" style="display:inline-block;width:36px;height:24px;background:#85D7EF;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="V" style="display:inline-block;width:36px;height:24px;background:#A9C7E9;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="X" style="display:inline-block;width:36px;height:24px;background:#F0B6DF;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span></span></td>
+<td class="gt_row gt_right gt_striped" headers="n">16</td>
+<td class="gt_row gt_right gt_striped" headers="pct">0.68%</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">LTWYZ</td>
-<td style="text-align: right;">16</td>
-<td style="text-align: right;">0.0068</td>
+<td class="gt_row gt_left" headers="combination">LTWYZ</td>
+<td class="gt_row gt_left" headers="rainbow"><span style="display:inline-flex;align-items:center;"><span title="L" style="display:inline-block;width:36px;height:24px;background:#FEE1A7;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="T" style="display:inline-block;width:36px;height:24px;background:#76E1D7;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="W" style="display:inline-block;width:36px;height:24px;background:#CBBBE8;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="Y" style="display:inline-block;width:36px;height:24px;background:#FFAFD0;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="Z" style="display:inline-block;width:36px;height:24px;background:#ECD2C1;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span></span></td>
+<td class="gt_row gt_right" headers="n">16</td>
+<td class="gt_row gt_right" headers="pct">0.68%</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">PUVYZ</td>
-<td style="text-align: right;">16</td>
-<td style="text-align: right;">0.0068</td>
+<td class="gt_row gt_left gt_striped" headers="combination">PUVYZ</td>
+<td class="gt_row gt_left gt_striped" headers="rainbow"><span style="display:inline-flex;align-items:center;"><span title="P" style="display:inline-block;width:36px;height:24px;background:#6BB091;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="U" style="display:inline-block;width:36px;height:24px;background:#85D7EF;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="V" style="display:inline-block;width:36px;height:24px;background:#A9C7E9;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="Y" style="display:inline-block;width:36px;height:24px;background:#FFAFD0;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="Z" style="display:inline-block;width:36px;height:24px;background:#ECD2C1;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span></span></td>
+<td class="gt_row gt_right gt_striped" headers="n">16</td>
+<td class="gt_row gt_right gt_striped" headers="pct">0.68%</td>
 </tr>
 </tbody>
 </table>
+
+</div>
 </div>
 </div>
 </section>
@@ -453,117 +931,590 @@ $ answer       &lt;chr&gt; "Y060000N044000F050010Z015010U010030P034030X003040I00
 <h2 data-anchor-id="most-frequent-permutations">Most frequent permutations</h2>
 <div class="cell">
 <div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
+<div id="fsfvtalokb" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#fsfvtalokb table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#fsfvtalokb thead, #fsfvtalokb tbody, #fsfvtalokb tfoot, #fsfvtalokb tr, #fsfvtalokb td, #fsfvtalokb th {
+  border-style: none;
+}
+
+#fsfvtalokb p {
+  margin: 0;
+  padding: 0;
+}
+
+#fsfvtalokb .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#fsfvtalokb .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#fsfvtalokb .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#fsfvtalokb .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#fsfvtalokb .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#fsfvtalokb .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#fsfvtalokb .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#fsfvtalokb .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#fsfvtalokb .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#fsfvtalokb .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#fsfvtalokb .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#fsfvtalokb .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#fsfvtalokb .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#fsfvtalokb .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#fsfvtalokb .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#fsfvtalokb .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#fsfvtalokb .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#fsfvtalokb .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#fsfvtalokb .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#fsfvtalokb .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#fsfvtalokb .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#fsfvtalokb .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#fsfvtalokb .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#fsfvtalokb .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#fsfvtalokb .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#fsfvtalokb .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#fsfvtalokb .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#fsfvtalokb .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#fsfvtalokb .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#fsfvtalokb .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#fsfvtalokb .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#fsfvtalokb .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#fsfvtalokb .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#fsfvtalokb .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#fsfvtalokb .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#fsfvtalokb .gt_left {
+  text-align: left;
+}
+
+#fsfvtalokb .gt_center {
+  text-align: center;
+}
+
+#fsfvtalokb .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#fsfvtalokb .gt_font_normal {
+  font-weight: normal;
+}
+
+#fsfvtalokb .gt_font_bold {
+  font-weight: bold;
+}
+
+#fsfvtalokb .gt_font_italic {
+  font-style: italic;
+}
+
+#fsfvtalokb .gt_super {
+  font-size: 65%;
+}
+
+#fsfvtalokb .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#fsfvtalokb .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#fsfvtalokb .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#fsfvtalokb .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#fsfvtalokb .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#fsfvtalokb .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#fsfvtalokb .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#fsfvtalokb .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#fsfvtalokb div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
 <thead>
-<tr class="header">
-<th style="text-align: left;">permutation</th>
-<th style="text-align: right;">n</th>
-<th style="text-align: right;">pct</th>
+<tr class="gt_col_headings header">
+<th id="permutation" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Permutation</th>
+<th id="rainbow" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Five colours</th>
+<th id="n" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Count</th>
+<th id="pct" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Share</th>
 </tr>
 </thead>
-<tbody>
+<tbody class="gt_table_body">
 <tr class="odd">
-<td style="text-align: left;">FYUXT</td>
-<td style="text-align: right;">16</td>
-<td style="text-align: right;">0.0068</td>
+<td class="gt_row gt_left" headers="permutation">FYUXT</td>
+<td class="gt_row gt_left" headers="rainbow"><span style="display:inline-flex;align-items:center;"><span title="F" style="display:inline-block;width:36px;height:24px;background:#FFADA6;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="Y" style="display:inline-block;width:36px;height:24px;background:#FFAFD0;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="U" style="display:inline-block;width:36px;height:24px;background:#85D7EF;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="X" style="display:inline-block;width:36px;height:24px;background:#F0B6DF;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="T" style="display:inline-block;width:36px;height:24px;background:#76E1D7;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span></span></td>
+<td class="gt_row gt_right" headers="n">16</td>
+<td class="gt_row gt_right" headers="pct">0.68%</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">IFUXT</td>
-<td style="text-align: right;">15</td>
-<td style="text-align: right;">0.0064</td>
+<td class="gt_row gt_left gt_striped" headers="permutation">IFUXT</td>
+<td class="gt_row gt_left gt_striped" headers="rainbow"><span style="display:inline-flex;align-items:center;"><span title="I" style="display:inline-block;width:36px;height:24px;background:#FDCFAB;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="F" style="display:inline-block;width:36px;height:24px;background:#FFADA6;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="U" style="display:inline-block;width:36px;height:24px;background:#85D7EF;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="X" style="display:inline-block;width:36px;height:24px;background:#F0B6DF;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="T" style="display:inline-block;width:36px;height:24px;background:#76E1D7;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span></span></td>
+<td class="gt_row gt_right gt_striped" headers="n">15</td>
+<td class="gt_row gt_right gt_striped" headers="pct">0.64%</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">FXUTI</td>
-<td style="text-align: right;">14</td>
-<td style="text-align: right;">0.0060</td>
+<td class="gt_row gt_left" headers="permutation">FXUTI</td>
+<td class="gt_row gt_left" headers="rainbow"><span style="display:inline-flex;align-items:center;"><span title="F" style="display:inline-block;width:36px;height:24px;background:#FFADA6;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="X" style="display:inline-block;width:36px;height:24px;background:#F0B6DF;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="U" style="display:inline-block;width:36px;height:24px;background:#85D7EF;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="T" style="display:inline-block;width:36px;height:24px;background:#76E1D7;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="I" style="display:inline-block;width:36px;height:24px;background:#FDCFAB;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span></span></td>
+<td class="gt_row gt_right" headers="n">14</td>
+<td class="gt_row gt_right" headers="pct">0.60%</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">WZVUY</td>
-<td style="text-align: right;">14</td>
-<td style="text-align: right;">0.0060</td>
+<td class="gt_row gt_left gt_striped" headers="permutation">WZVUY</td>
+<td class="gt_row gt_left gt_striped" headers="rainbow"><span style="display:inline-flex;align-items:center;"><span title="W" style="display:inline-block;width:36px;height:24px;background:#CBBBE8;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="Z" style="display:inline-block;width:36px;height:24px;background:#ECD2C1;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="V" style="display:inline-block;width:36px;height:24px;background:#A9C7E9;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="U" style="display:inline-block;width:36px;height:24px;background:#85D7EF;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="Y" style="display:inline-block;width:36px;height:24px;background:#FFAFD0;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span></span></td>
+<td class="gt_row gt_right gt_striped" headers="n">14</td>
+<td class="gt_row gt_right gt_striped" headers="pct">0.60%</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">WZXVU</td>
-<td style="text-align: right;">14</td>
-<td style="text-align: right;">0.0060</td>
+<td class="gt_row gt_left" headers="permutation">WZXVU</td>
+<td class="gt_row gt_left" headers="rainbow"><span style="display:inline-flex;align-items:center;"><span title="W" style="display:inline-block;width:36px;height:24px;background:#CBBBE8;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="Z" style="display:inline-block;width:36px;height:24px;background:#ECD2C1;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="X" style="display:inline-block;width:36px;height:24px;background:#F0B6DF;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="V" style="display:inline-block;width:36px;height:24px;background:#A9C7E9;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="U" style="display:inline-block;width:36px;height:24px;background:#85D7EF;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span></span></td>
+<td class="gt_row gt_right" headers="n">14</td>
+<td class="gt_row gt_right" headers="pct">0.60%</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">PZXVU</td>
-<td style="text-align: right;">13</td>
-<td style="text-align: right;">0.0056</td>
+<td class="gt_row gt_left gt_striped" headers="permutation">PZXVU</td>
+<td class="gt_row gt_left gt_striped" headers="rainbow"><span style="display:inline-flex;align-items:center;"><span title="P" style="display:inline-block;width:36px;height:24px;background:#6BB091;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="Z" style="display:inline-block;width:36px;height:24px;background:#ECD2C1;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="X" style="display:inline-block;width:36px;height:24px;background:#F0B6DF;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="V" style="display:inline-block;width:36px;height:24px;background:#A9C7E9;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="U" style="display:inline-block;width:36px;height:24px;background:#85D7EF;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span></span></td>
+<td class="gt_row gt_right gt_striped" headers="n">13</td>
+<td class="gt_row gt_right gt_striped" headers="pct">0.56%</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">YXZVU</td>
-<td style="text-align: right;">13</td>
-<td style="text-align: right;">0.0056</td>
+<td class="gt_row gt_left" headers="permutation">YXZVU</td>
+<td class="gt_row gt_left" headers="rainbow"><span style="display:inline-flex;align-items:center;"><span title="Y" style="display:inline-block;width:36px;height:24px;background:#FFAFD0;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="X" style="display:inline-block;width:36px;height:24px;background:#F0B6DF;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="Z" style="display:inline-block;width:36px;height:24px;background:#ECD2C1;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="V" style="display:inline-block;width:36px;height:24px;background:#A9C7E9;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="U" style="display:inline-block;width:36px;height:24px;background:#85D7EF;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span></span></td>
+<td class="gt_row gt_right" headers="n">13</td>
+<td class="gt_row gt_right" headers="pct">0.56%</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">WXZUI</td>
-<td style="text-align: right;">11</td>
-<td style="text-align: right;">0.0047</td>
+<td class="gt_row gt_left gt_striped" headers="permutation">WXZUI</td>
+<td class="gt_row gt_left gt_striped" headers="rainbow"><span style="display:inline-flex;align-items:center;"><span title="W" style="display:inline-block;width:36px;height:24px;background:#CBBBE8;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="X" style="display:inline-block;width:36px;height:24px;background:#F0B6DF;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="Z" style="display:inline-block;width:36px;height:24px;background:#ECD2C1;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="U" style="display:inline-block;width:36px;height:24px;background:#85D7EF;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="I" style="display:inline-block;width:36px;height:24px;background:#FDCFAB;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span></span></td>
+<td class="gt_row gt_right gt_striped" headers="n">11</td>
+<td class="gt_row gt_right gt_striped" headers="pct">0.47%</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">XINUL</td>
-<td style="text-align: right;">11</td>
-<td style="text-align: right;">0.0047</td>
+<td class="gt_row gt_left" headers="permutation">XINUL</td>
+<td class="gt_row gt_left" headers="rainbow"><span style="display:inline-flex;align-items:center;"><span title="X" style="display:inline-block;width:36px;height:24px;background:#F0B6DF;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="I" style="display:inline-block;width:36px;height:24px;background:#FDCFAB;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="N" style="display:inline-block;width:36px;height:24px;background:#D2E3AD;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="U" style="display:inline-block;width:36px;height:24px;background:#85D7EF;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="L" style="display:inline-block;width:36px;height:24px;background:#FEE1A7;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span></span></td>
+<td class="gt_row gt_right" headers="n">11</td>
+<td class="gt_row gt_right" headers="pct">0.47%</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">XYUFT</td>
-<td style="text-align: right;">11</td>
-<td style="text-align: right;">0.0047</td>
+<td class="gt_row gt_left gt_striped" headers="permutation">XYUFT</td>
+<td class="gt_row gt_left gt_striped" headers="rainbow"><span style="display:inline-flex;align-items:center;"><span title="X" style="display:inline-block;width:36px;height:24px;background:#F0B6DF;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="Y" style="display:inline-block;width:36px;height:24px;background:#FFAFD0;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="U" style="display:inline-block;width:36px;height:24px;background:#85D7EF;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="F" style="display:inline-block;width:36px;height:24px;background:#FFADA6;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="T" style="display:inline-block;width:36px;height:24px;background:#76E1D7;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span></span></td>
+<td class="gt_row gt_right gt_striped" headers="n">11</td>
+<td class="gt_row gt_right gt_striped" headers="pct">0.47%</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">LVNZU</td>
-<td style="text-align: right;">10</td>
-<td style="text-align: right;">0.0043</td>
+<td class="gt_row gt_left" headers="permutation">LVNZU</td>
+<td class="gt_row gt_left" headers="rainbow"><span style="display:inline-flex;align-items:center;"><span title="L" style="display:inline-block;width:36px;height:24px;background:#FEE1A7;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="V" style="display:inline-block;width:36px;height:24px;background:#A9C7E9;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="N" style="display:inline-block;width:36px;height:24px;background:#D2E3AD;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="Z" style="display:inline-block;width:36px;height:24px;background:#ECD2C1;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="U" style="display:inline-block;width:36px;height:24px;background:#85D7EF;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span></span></td>
+<td class="gt_row gt_right" headers="n">10</td>
+<td class="gt_row gt_right" headers="pct">0.43%</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">PFUXV</td>
-<td style="text-align: right;">10</td>
-<td style="text-align: right;">0.0043</td>
+<td class="gt_row gt_left gt_striped" headers="permutation">PFUXV</td>
+<td class="gt_row gt_left gt_striped" headers="rainbow"><span style="display:inline-flex;align-items:center;"><span title="P" style="display:inline-block;width:36px;height:24px;background:#6BB091;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="F" style="display:inline-block;width:36px;height:24px;background:#FFADA6;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="U" style="display:inline-block;width:36px;height:24px;background:#85D7EF;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="X" style="display:inline-block;width:36px;height:24px;background:#F0B6DF;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="V" style="display:inline-block;width:36px;height:24px;background:#A9C7E9;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span></span></td>
+<td class="gt_row gt_right gt_striped" headers="n">10</td>
+<td class="gt_row gt_right gt_striped" headers="pct">0.43%</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">PUVZI</td>
-<td style="text-align: right;">10</td>
-<td style="text-align: right;">0.0043</td>
+<td class="gt_row gt_left" headers="permutation">PUVZI</td>
+<td class="gt_row gt_left" headers="rainbow"><span style="display:inline-flex;align-items:center;"><span title="P" style="display:inline-block;width:36px;height:24px;background:#6BB091;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="U" style="display:inline-block;width:36px;height:24px;background:#85D7EF;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="V" style="display:inline-block;width:36px;height:24px;background:#A9C7E9;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="Z" style="display:inline-block;width:36px;height:24px;background:#ECD2C1;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="I" style="display:inline-block;width:36px;height:24px;background:#FDCFAB;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span></span></td>
+<td class="gt_row gt_right" headers="n">10</td>
+<td class="gt_row gt_right" headers="pct">0.43%</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">UVNZL</td>
-<td style="text-align: right;">10</td>
-<td style="text-align: right;">0.0043</td>
+<td class="gt_row gt_left gt_striped" headers="permutation">UVNZL</td>
+<td class="gt_row gt_left gt_striped" headers="rainbow"><span style="display:inline-flex;align-items:center;"><span title="U" style="display:inline-block;width:36px;height:24px;background:#85D7EF;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="V" style="display:inline-block;width:36px;height:24px;background:#A9C7E9;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="N" style="display:inline-block;width:36px;height:24px;background:#D2E3AD;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="Z" style="display:inline-block;width:36px;height:24px;background:#ECD2C1;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="L" style="display:inline-block;width:36px;height:24px;background:#FEE1A7;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span></span></td>
+<td class="gt_row gt_right gt_striped" headers="n">10</td>
+<td class="gt_row gt_right gt_striped" headers="pct">0.43%</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">FXPTY</td>
-<td style="text-align: right;">9</td>
-<td style="text-align: right;">0.0038</td>
+<td class="gt_row gt_left" headers="permutation">FXPTY</td>
+<td class="gt_row gt_left" headers="rainbow"><span style="display:inline-flex;align-items:center;"><span title="F" style="display:inline-block;width:36px;height:24px;background:#FFADA6;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="X" style="display:inline-block;width:36px;height:24px;background:#F0B6DF;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="P" style="display:inline-block;width:36px;height:24px;background:#6BB091;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="T" style="display:inline-block;width:36px;height:24px;background:#76E1D7;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="Y" style="display:inline-block;width:36px;height:24px;background:#FFAFD0;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span></span></td>
+<td class="gt_row gt_right" headers="n">9</td>
+<td class="gt_row gt_right" headers="pct">0.38%</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">LZXVU</td>
-<td style="text-align: right;">9</td>
-<td style="text-align: right;">0.0038</td>
+<td class="gt_row gt_left gt_striped" headers="permutation">LZXVU</td>
+<td class="gt_row gt_left gt_striped" headers="rainbow"><span style="display:inline-flex;align-items:center;"><span title="L" style="display:inline-block;width:36px;height:24px;background:#FEE1A7;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="Z" style="display:inline-block;width:36px;height:24px;background:#ECD2C1;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="X" style="display:inline-block;width:36px;height:24px;background:#F0B6DF;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="V" style="display:inline-block;width:36px;height:24px;background:#A9C7E9;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="U" style="display:inline-block;width:36px;height:24px;background:#85D7EF;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span></span></td>
+<td class="gt_row gt_right gt_striped" headers="n">9</td>
+<td class="gt_row gt_right gt_striped" headers="pct">0.38%</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">NXZVU</td>
-<td style="text-align: right;">9</td>
-<td style="text-align: right;">0.0038</td>
+<td class="gt_row gt_left" headers="permutation">NXZVU</td>
+<td class="gt_row gt_left" headers="rainbow"><span style="display:inline-flex;align-items:center;"><span title="N" style="display:inline-block;width:36px;height:24px;background:#D2E3AD;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="X" style="display:inline-block;width:36px;height:24px;background:#F0B6DF;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="Z" style="display:inline-block;width:36px;height:24px;background:#ECD2C1;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="V" style="display:inline-block;width:36px;height:24px;background:#A9C7E9;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="U" style="display:inline-block;width:36px;height:24px;background:#85D7EF;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span></span></td>
+<td class="gt_row gt_right" headers="n">9</td>
+<td class="gt_row gt_right" headers="pct">0.38%</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">WXUVY</td>
-<td style="text-align: right;">9</td>
-<td style="text-align: right;">0.0038</td>
+<td class="gt_row gt_left gt_striped" headers="permutation">WXUVY</td>
+<td class="gt_row gt_left gt_striped" headers="rainbow"><span style="display:inline-flex;align-items:center;"><span title="W" style="display:inline-block;width:36px;height:24px;background:#CBBBE8;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="X" style="display:inline-block;width:36px;height:24px;background:#F0B6DF;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="U" style="display:inline-block;width:36px;height:24px;background:#85D7EF;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="V" style="display:inline-block;width:36px;height:24px;background:#A9C7E9;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="Y" style="display:inline-block;width:36px;height:24px;background:#FFAFD0;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span></span></td>
+<td class="gt_row gt_right gt_striped" headers="n">9</td>
+<td class="gt_row gt_right gt_striped" headers="pct">0.38%</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">XFPTY</td>
-<td style="text-align: right;">9</td>
-<td style="text-align: right;">0.0038</td>
+<td class="gt_row gt_left" headers="permutation">XFPTY</td>
+<td class="gt_row gt_left" headers="rainbow"><span style="display:inline-flex;align-items:center;"><span title="X" style="display:inline-block;width:36px;height:24px;background:#F0B6DF;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="F" style="display:inline-block;width:36px;height:24px;background:#FFADA6;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="P" style="display:inline-block;width:36px;height:24px;background:#6BB091;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="T" style="display:inline-block;width:36px;height:24px;background:#76E1D7;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="Y" style="display:inline-block;width:36px;height:24px;background:#FFAFD0;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span></span></td>
+<td class="gt_row gt_right" headers="n">9</td>
+<td class="gt_row gt_right" headers="pct">0.38%</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">YFVXU</td>
-<td style="text-align: right;">9</td>
-<td style="text-align: right;">0.0038</td>
+<td class="gt_row gt_left gt_striped" headers="permutation">YFVXU</td>
+<td class="gt_row gt_left gt_striped" headers="rainbow"><span style="display:inline-flex;align-items:center;"><span title="Y" style="display:inline-block;width:36px;height:24px;background:#FFAFD0;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="F" style="display:inline-block;width:36px;height:24px;background:#FFADA6;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="V" style="display:inline-block;width:36px;height:24px;background:#A9C7E9;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="X" style="display:inline-block;width:36px;height:24px;background:#F0B6DF;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span><span title="U" style="display:inline-block;width:36px;height:24px;background:#85D7EF;border-radius:4px;margin-right:3px;border:1px solid rgba(0,0,0,.08);"></span></span></td>
+<td class="gt_row gt_right gt_striped" headers="n">9</td>
+<td class="gt_row gt_right gt_striped" headers="pct">0.38%</td>
 </tr>
 </tbody>
 </table>
+
+</div>
 </div>
 </div>
 </section>
@@ -743,6 +1694,13 @@ $ answer       &lt;chr&gt; "Y060000N044000F050010Z015010U010030P034030X003040I00
 </table>
 </div>
 </div>
+</section>
+<section id="the-most-common-rainbow" class="level2">
+<h2 data-anchor-id="the-most-common-rainbow">The most common rainbow</h2>
+<p>The most frequently observed five-character combination is FITUX, appearing in 55 solutions.</p>
+<svg viewbox="0 0 600 290" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Five-colour rainbow: FITUX" style="display:block;width:100%;max-width:700px;height:auto;margin:2rem auto;">
+<path d="M 60 270 A 240 240 0 0 1 540 270" fill="none" stroke="#FFADA6" stroke-width="26"></path> <path d="M 87 270 A 213 213 0 0 1 513 270" fill="none" stroke="#FDCFAB" stroke-width="26"></path> <path d="M 114 270 A 186 186 0 0 1 486 270" fill="none" stroke="#76E1D7" stroke-width="26"></path> <path d="M 141 270 A 159 159 0 0 1 459 270" fill="none" stroke="#85D7EF" stroke-width="26"></path> <path d="M 168 270 A 132 132 0 0 1 432 270" fill="none" stroke="#F0B6DF" stroke-width="26"></path>
+</svg>
 </section>
 <section id="research-notes" class="level2">
 <h2 data-anchor-id="research-notes">Research notes</h2>
@@ -1260,142 +2218,292 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(purrr)</span>
 <span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stringr)</span>
 <span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a><span class="co"># Supports rendering from the project root or this QMD's folder.</span></span>
-<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>solutions_path <span class="ot">&lt;-</span> <span class="cf">if</span> (<span class="fu">file.exists</span>(<span class="st">"data/solutions.csv"</span>)) {</span>
-<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>  <span class="st">"data/solutions.csv"</span></span>
-<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
-<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>  <span class="st">"../../data/solutions.csv"</span></span>
-<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>solutions <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(solutions_path, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">group_number =</span> <span class="st">`</span><span class="at">Group number</span><span class="st">`</span>, <span class="at">level =</span> Level, <span class="at">answer =</span> Answer)</span>
-<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(solutions)</span>
-<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a><span class="fu">## Extract character sequence, ignoring posture</span></span>
-<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>Each <span class="in">`Answer`</span> consists of twelve seven-character records: a pentomino letter followed by six digits (e.g. <span class="in">`Y060000`</span>). We keep the first character of each record and discard the six digits. We **do not** reorder the original sequence.</span>
-<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: parse-answer</span></span>
-<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>expected_pieces <span class="ot">&lt;-</span> <span class="fu">sort</span>(<span class="fu">c</span>(<span class="st">"F"</span>, <span class="st">"I"</span>, <span class="st">"L"</span>, <span class="st">"N"</span>, <span class="st">"P"</span>, <span class="st">"T"</span>, <span class="st">"U"</span>, <span class="st">"V"</span>, <span class="st">"W"</span>, <span class="st">"X"</span>, <span class="st">"Y"</span>, <span class="st">"Z"</span>))</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(jsonlite)</span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>solutions <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>  here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"solutions.csv"</span>),</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>  <span class="at">show_col_types =</span> <span class="cn">FALSE</span></span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span></span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">rename</span>(</span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>    <span class="at">group_number =</span> <span class="st">`</span><span class="at">Group number</span><span class="st">`</span>,</span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>    <span class="at">level =</span> Level,</span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>    <span class="at">answer =</span> Answer</span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(solutions)</span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>characters <span class="ot">&lt;-</span> jsonlite<span class="sc">::</span><span class="fu">fromJSON</span>(</span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>  here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"characters.json"</span>)</span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>character_colors <span class="ot">&lt;-</span> <span class="fu">setNames</span>(</span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>  characters<span class="sc">$</span>color,</span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>  characters<span class="sc">$</span>shape</span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>extract_piece_sequence <span class="ot">&lt;-</span> <span class="cf">function</span>(answer) {</span>
-<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">is.na</span>(answer) <span class="sc">||</span> <span class="sc">!</span><span class="fu">str_detect</span>(answer, <span class="st">"^(?:[FILNPTUVWXYZ][0-9]{6}){12}$"</span>)) {</span>
-<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>    <span class="fu">stop</span>(<span class="st">"Invalid Answer encoding: expected twelve letter + six-digit records"</span>)</span>
-<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>  starts <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">1</span>L, <span class="dv">84</span>L, <span class="at">by =</span> <span class="dv">7</span>L)</span>
-<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a>  pieces <span class="ot">&lt;-</span> <span class="fu">str_sub</span>(answer, starts, starts)</span>
-<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="sc">!</span><span class="fu">identical</span>(<span class="fu">sort</span>(pieces), expected_pieces)) {</span>
-<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a>    <span class="fu">stop</span>(<span class="st">"Invalid solution: expected all twelve pentominoes exactly once"</span>)</span>
-<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a>  pieces</span>
-<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a><span class="fu">## Extract character sequence, ignoring posture</span></span>
+<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>Each <span class="in">`Answer`</span> consists of twelve seven-character records: a pentomino letter followed by six digits (e.g. <span class="in">`Y060000`</span>). We keep the first character of each record and discard the six digits. We **do not** reorder the original sequence.</span>
+<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: parse-answer</span></span>
+<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a>expected_pieces <span class="ot">&lt;-</span> <span class="fu">sort</span>(<span class="fu">c</span>(<span class="st">"F"</span>, <span class="st">"I"</span>, <span class="st">"L"</span>, <span class="st">"N"</span>, <span class="st">"P"</span>, <span class="st">"T"</span>, <span class="st">"U"</span>, <span class="st">"V"</span>, <span class="st">"W"</span>, <span class="st">"X"</span>, <span class="st">"Y"</span>, <span class="st">"Z"</span>))</span>
 <span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a>rainbows <span class="ot">&lt;-</span> solutions <span class="sc">%&gt;%</span></span>
-<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a>    <span class="at">piece_sequence =</span> <span class="fu">map</span>(answer, extract_piece_sequence),</span>
-<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a>    <span class="at">last_five =</span> <span class="fu">map</span>(piece_sequence, tail, <span class="dv">5</span>L),</span>
-<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a>    <span class="at">permutation =</span> <span class="fu">map_chr</span>(last_five, paste0, <span class="at">collapse =</span> <span class="st">""</span>),</span>
-<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a>    <span class="at">combination =</span> <span class="fu">map_chr</span>(last_five, <span class="sc">~</span> <span class="fu">paste0</span>(<span class="fu">sort</span>(.x), <span class="at">collapse =</span> <span class="st">""</span>))</span>
-<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a>rainbows <span class="sc">%&gt;%</span></span>
-<span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(group_number, level, permutation, combination) <span class="sc">%&gt;%</span></span>
-<span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">12</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="at">caption =</span> <span class="st">"Final five pieces: source order versus alphabetical order"</span>)</span>
-<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a>For example, the first solution has the sequence <span class="in">`r paste(rainbows$piece_sequence[[1]], collapse = " → ")`</span>; the last-five permutation is <span class="in">`r rainbows$permutation[[1]]`</span>, and its combination key is <span class="in">`r rainbows$combination[[1]]`</span>.</span>
-<span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a><span class="fu">## How many possibilities?</span></span>
-<span id="cb2-90"><a href="#cb2-90" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-91"><a href="#cb2-91" aria-hidden="true" tabindex="-1"></a>There are <span class="sc">\\</span>(<span class="sc">\\</span>binom{12}{5}=792<span class="sc">\\</span>) possible unordered selections of five distinct pieces, and <span class="sc">\\</span>(12!/7!=95,040<span class="sc">\\</span>) possible ordered selections. Neither count implies the solution file samples these uniformly.</span>
+<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a>extract_piece_sequence <span class="ot">&lt;-</span> <span class="cf">function</span>(answer) {</span>
+<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">is.na</span>(answer) <span class="sc">||</span> <span class="sc">!</span><span class="fu">str_detect</span>(answer, <span class="st">"^(?:[FILNPTUVWXYZ][0-9]{6}){12}$"</span>)) {</span>
+<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a>    <span class="fu">stop</span>(<span class="st">"Invalid Answer encoding: expected twelve letter + six-digit records"</span>)</span>
+<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a>  starts <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">1</span>L, <span class="dv">84</span>L, <span class="at">by =</span> <span class="dv">7</span>L)</span>
+<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a>  pieces <span class="ot">&lt;-</span> <span class="fu">str_sub</span>(answer, starts, starts)</span>
+<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="sc">!</span><span class="fu">identical</span>(<span class="fu">sort</span>(pieces), expected_pieces)) {</span>
+<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a>    <span class="fu">stop</span>(<span class="st">"Invalid solution: expected all twelve pentominoes exactly once"</span>)</span>
+<span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a>  pieces</span>
+<span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a>rainbows <span class="ot">&lt;-</span> solutions <span class="sc">%&gt;%</span></span>
+<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a>    <span class="at">piece_sequence =</span> <span class="fu">map</span>(answer, extract_piece_sequence),</span>
+<span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a>    <span class="at">last_five =</span> <span class="fu">map</span>(piece_sequence, tail, <span class="dv">5</span>L),</span>
+<span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a>    <span class="at">permutation =</span> <span class="fu">map_chr</span>(last_five, paste0, <span class="at">collapse =</span> <span class="st">""</span>),</span>
+<span id="cb2-90"><a href="#cb2-90" aria-hidden="true" tabindex="-1"></a>    <span class="at">combination =</span> <span class="fu">map_chr</span>(last_five, <span class="sc">~</span> <span class="fu">paste0</span>(<span class="fu">sort</span>(.x), <span class="at">collapse =</span> <span class="st">""</span>))</span>
+<span id="cb2-91"><a href="#cb2-91" aria-hidden="true" tabindex="-1"></a>  )</span>
 <span id="cb2-92"><a href="#cb2-92" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-95"><a href="#cb2-95" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-96"><a href="#cb2-96" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: overview</span></span>
-<span id="cb2-97"><a href="#cb2-97" aria-hidden="true" tabindex="-1"></a><span class="fu">tibble</span>(</span>
-<span id="cb2-98"><a href="#cb2-98" aria-hidden="true" tabindex="-1"></a>  <span class="at">metric =</span> <span class="fu">c</span>(<span class="st">"Solutions"</span>, <span class="st">"Observed permutations"</span>, <span class="st">"Observed combinations"</span>,</span>
-<span id="cb2-99"><a href="#cb2-99" aria-hidden="true" tabindex="-1"></a>             <span class="st">"Possible permutations"</span>, <span class="st">"Possible combinations"</span>),</span>
-<span id="cb2-100"><a href="#cb2-100" aria-hidden="true" tabindex="-1"></a>  <span class="at">value =</span> <span class="fu">c</span>(<span class="fu">nrow</span>(rainbows), <span class="fu">n_distinct</span>(rainbows<span class="sc">$</span>permutation),</span>
-<span id="cb2-101"><a href="#cb2-101" aria-hidden="true" tabindex="-1"></a>            <span class="fu">n_distinct</span>(rainbows<span class="sc">$</span>combination),</span>
-<span id="cb2-102"><a href="#cb2-102" aria-hidden="true" tabindex="-1"></a>            <span class="fu">factorial</span>(<span class="dv">12</span>) <span class="sc">/</span> <span class="fu">factorial</span>(<span class="dv">7</span>), <span class="fu">choose</span>(<span class="dv">12</span>, <span class="dv">5</span>))</span>
-<span id="cb2-103"><a href="#cb2-103" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span> knitr<span class="sc">::</span><span class="fu">kable</span>()</span>
-<span id="cb2-104"><a href="#cb2-104" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-105"><a href="#cb2-105" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-106"><a href="#cb2-106" aria-hidden="true" tabindex="-1"></a><span class="fu">## Most frequent combinations</span></span>
-<span id="cb2-107"><a href="#cb2-107" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-110"><a href="#cb2-110" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-111"><a href="#cb2-111" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: combinations</span></span>
-<span id="cb2-112"><a href="#cb2-112" aria-hidden="true" tabindex="-1"></a>combination_counts <span class="ot">&lt;-</span> rainbows <span class="sc">%&gt;%</span></span>
-<span id="cb2-113"><a href="#cb2-113" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(combination, <span class="at">sort =</span> <span class="cn">TRUE</span>, <span class="at">name =</span> <span class="st">"n"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb2-114"><a href="#cb2-114" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">pct =</span> n <span class="sc">/</span> <span class="fu">sum</span>(n))</span>
+<span id="cb2-93"><a href="#cb2-93" aria-hidden="true" tabindex="-1"></a>rainbows <span class="sc">%&gt;%</span></span>
+<span id="cb2-94"><a href="#cb2-94" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(group_number, level, permutation, combination) <span class="sc">%&gt;%</span></span>
+<span id="cb2-95"><a href="#cb2-95" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">12</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb2-96"><a href="#cb2-96" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="at">caption =</span> <span class="st">"Final five pieces: source order versus alphabetical order"</span>)</span>
+<span id="cb2-97"><a href="#cb2-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-98"><a href="#cb2-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-99"><a href="#cb2-99" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-100"><a href="#cb2-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-103"><a href="#cb2-103" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb2-104"><a href="#cb2-104" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: rainbow-helpers</span></span>
+<span id="cb2-105"><a href="#cb2-105" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb2-106"><a href="#cb2-106" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-107"><a href="#cb2-107" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)</span>
+<span id="cb2-108"><a href="#cb2-108" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(htmltools)</span>
+<span id="cb2-109"><a href="#cb2-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-110"><a href="#cb2-110" aria-hidden="true" tabindex="-1"></a>rainbow_swatch <span class="ot">&lt;-</span> <span class="cf">function</span>(sequence, <span class="at">colors =</span> character_colors) {</span>
+<span id="cb2-111"><a href="#cb2-111" aria-hidden="true" tabindex="-1"></a>  pieces <span class="ot">&lt;-</span> <span class="fu">strsplit</span>(sequence, <span class="st">""</span>)[[<span class="dv">1</span>]]</span>
+<span id="cb2-112"><a href="#cb2-112" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-113"><a href="#cb2-113" aria-hidden="true" tabindex="-1"></a>  swatches <span class="ot">&lt;-</span> <span class="fu">vapply</span>(pieces, <span class="cf">function</span>(piece) {</span>
+<span id="cb2-114"><a href="#cb2-114" aria-hidden="true" tabindex="-1"></a>    color <span class="ot">&lt;-</span> <span class="fu">unname</span>(colors[[piece]])</span>
 <span id="cb2-115"><a href="#cb2-115" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-116"><a href="#cb2-116" aria-hidden="true" tabindex="-1"></a>combination_counts <span class="sc">%&gt;%</span> <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">20</span>) <span class="sc">%&gt;%</span> knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="at">digits =</span> <span class="dv">4</span>)</span>
-<span id="cb2-117"><a href="#cb2-117" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-118"><a href="#cb2-118" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-119"><a href="#cb2-119" aria-hidden="true" tabindex="-1"></a><span class="fu">## Most frequent permutations</span></span>
-<span id="cb2-120"><a href="#cb2-120" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-123"><a href="#cb2-123" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-124"><a href="#cb2-124" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: permutations</span></span>
-<span id="cb2-125"><a href="#cb2-125" aria-hidden="true" tabindex="-1"></a>permutation_counts <span class="ot">&lt;-</span> rainbows <span class="sc">%&gt;%</span></span>
-<span id="cb2-126"><a href="#cb2-126" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(permutation, <span class="at">sort =</span> <span class="cn">TRUE</span>, <span class="at">name =</span> <span class="st">"n"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb2-127"><a href="#cb2-127" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">pct =</span> n <span class="sc">/</span> <span class="fu">sum</span>(n))</span>
-<span id="cb2-128"><a href="#cb2-128" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-129"><a href="#cb2-129" aria-hidden="true" tabindex="-1"></a>permutation_counts <span class="sc">%&gt;%</span> <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">20</span>) <span class="sc">%&gt;%</span> knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="at">digits =</span> <span class="dv">4</span>)</span>
-<span id="cb2-130"><a href="#cb2-130" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-131"><a href="#cb2-131" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-132"><a href="#cb2-132" aria-hidden="true" tabindex="-1"></a><span class="fu">## Who appears in the last five?</span></span>
-<span id="cb2-133"><a href="#cb2-133" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-136"><a href="#cb2-136" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-137"><a href="#cb2-137" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: piece-frequency</span></span>
-<span id="cb2-138"><a href="#cb2-138" aria-hidden="true" tabindex="-1"></a>piece_frequency <span class="ot">&lt;-</span> rainbows <span class="sc">%&gt;%</span></span>
-<span id="cb2-139"><a href="#cb2-139" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(group_number, last_five) <span class="sc">%&gt;%</span></span>
-<span id="cb2-140"><a href="#cb2-140" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unnest_longer</span>(last_five, <span class="at">values_to =</span> <span class="st">"piece"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb2-141"><a href="#cb2-141" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(piece, <span class="at">name =</span> <span class="st">"n"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb2-142"><a href="#cb2-142" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb2-143"><a href="#cb2-143" aria-hidden="true" tabindex="-1"></a>    <span class="at">proportion_of_solutions =</span> n <span class="sc">/</span> <span class="fu">nrow</span>(rainbows),</span>
-<span id="cb2-144"><a href="#cb2-144" aria-hidden="true" tabindex="-1"></a>    <span class="at">random_order_reference =</span> <span class="dv">5</span> <span class="sc">/</span> <span class="dv">12</span></span>
-<span id="cb2-145"><a href="#cb2-145" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb2-146"><a href="#cb2-146" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(n))</span>
-<span id="cb2-147"><a href="#cb2-147" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-148"><a href="#cb2-148" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(piece_frequency, <span class="at">digits =</span> <span class="dv">3</span>)</span>
-<span id="cb2-149"><a href="#cb2-149" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-150"><a href="#cb2-150" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(piece_frequency, <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">reorder</span>(piece, n), <span class="at">y =</span> proportion_of_solutions)) <span class="sc">+</span></span>
-<span id="cb2-151"><a href="#cb2-151" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>() <span class="sc">+</span></span>
-<span id="cb2-152"><a href="#cb2-152" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">5</span> <span class="sc">/</span> <span class="dv">12</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>) <span class="sc">+</span></span>
-<span id="cb2-153"><a href="#cb2-153" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
-<span id="cb2-154"><a href="#cb2-154" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Pentomino"</span>, <span class="at">y =</span> <span class="st">"Share of solutions"</span>,</span>
-<span id="cb2-155"><a href="#cb2-155" aria-hidden="true" tabindex="-1"></a>       <span class="at">title =</span> <span class="st">"Who appears in the last five?"</span>,</span>
-<span id="cb2-156"><a href="#cb2-156" aria-hidden="true" tabindex="-1"></a>       <span class="at">subtitle =</span> <span class="st">"Dashed line: 5/12 under a uniformly random ordering"</span>) <span class="sc">+</span></span>
-<span id="cb2-157"><a href="#cb2-157" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span>
-<span id="cb2-158"><a href="#cb2-158" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-116"><a href="#cb2-116" aria-hidden="true" tabindex="-1"></a>    <span class="fu">sprintf</span>(</span>
+<span id="cb2-117"><a href="#cb2-117" aria-hidden="true" tabindex="-1"></a>      <span class="fu">paste0</span>(</span>
+<span id="cb2-118"><a href="#cb2-118" aria-hidden="true" tabindex="-1"></a>        <span class="st">'&lt;span title="%s" style="'</span>,</span>
+<span id="cb2-119"><a href="#cb2-119" aria-hidden="true" tabindex="-1"></a>        <span class="st">'display:inline-block;'</span>,</span>
+<span id="cb2-120"><a href="#cb2-120" aria-hidden="true" tabindex="-1"></a>        <span class="st">'width:36px;height:24px;'</span>,</span>
+<span id="cb2-121"><a href="#cb2-121" aria-hidden="true" tabindex="-1"></a>        <span class="st">'background:%s;'</span>,</span>
+<span id="cb2-122"><a href="#cb2-122" aria-hidden="true" tabindex="-1"></a>        <span class="st">'border-radius:4px;'</span>,</span>
+<span id="cb2-123"><a href="#cb2-123" aria-hidden="true" tabindex="-1"></a>        <span class="st">'margin-right:3px;'</span>,</span>
+<span id="cb2-124"><a href="#cb2-124" aria-hidden="true" tabindex="-1"></a>        <span class="st">'border:1px solid rgba(0,0,0,.08);'</span>,</span>
+<span id="cb2-125"><a href="#cb2-125" aria-hidden="true" tabindex="-1"></a>        <span class="st">'"&gt;&lt;/span&gt;'</span></span>
+<span id="cb2-126"><a href="#cb2-126" aria-hidden="true" tabindex="-1"></a>      ),</span>
+<span id="cb2-127"><a href="#cb2-127" aria-hidden="true" tabindex="-1"></a>      piece, color</span>
+<span id="cb2-128"><a href="#cb2-128" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb2-129"><a href="#cb2-129" aria-hidden="true" tabindex="-1"></a>  }, <span class="fu">character</span>(<span class="dv">1</span>))</span>
+<span id="cb2-130"><a href="#cb2-130" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-131"><a href="#cb2-131" aria-hidden="true" tabindex="-1"></a>  <span class="fu">paste0</span>(</span>
+<span id="cb2-132"><a href="#cb2-132" aria-hidden="true" tabindex="-1"></a>    <span class="st">'&lt;span style="display:inline-flex;align-items:center;"&gt;'</span>,</span>
+<span id="cb2-133"><a href="#cb2-133" aria-hidden="true" tabindex="-1"></a>    <span class="fu">paste</span>(swatches, <span class="at">collapse =</span> <span class="st">""</span>),</span>
+<span id="cb2-134"><a href="#cb2-134" aria-hidden="true" tabindex="-1"></a>    <span class="st">'&lt;/span&gt;'</span></span>
+<span id="cb2-135"><a href="#cb2-135" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb2-136"><a href="#cb2-136" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-137"><a href="#cb2-137" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-138"><a href="#cb2-138" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-139"><a href="#cb2-139" aria-hidden="true" tabindex="-1"></a>For example, the first solution has the sequence <span class="in">`r paste(rainbows$piece_sequence[[1]], collapse = " → ")`</span>; the last-five permutation is <span class="in">`r rainbows$permutation[[1]]`</span>, and its combination key is <span class="in">`r rainbows$combination[[1]]`</span>.</span>
+<span id="cb2-140"><a href="#cb2-140" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-141"><a href="#cb2-141" aria-hidden="true" tabindex="-1"></a><span class="fu">## How many possibilities?</span></span>
+<span id="cb2-142"><a href="#cb2-142" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-143"><a href="#cb2-143" aria-hidden="true" tabindex="-1"></a>There are <span class="sc">\\</span>(<span class="sc">\\</span>binom{12}{5}=792<span class="sc">\\</span>) possible unordered selections of five distinct pieces, and <span class="sc">\\</span>(12!/7!=95,040<span class="sc">\\</span>) possible ordered selections. Neither count implies the solution file samples these uniformly.</span>
+<span id="cb2-144"><a href="#cb2-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-147"><a href="#cb2-147" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb2-148"><a href="#cb2-148" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: overview</span></span>
+<span id="cb2-149"><a href="#cb2-149" aria-hidden="true" tabindex="-1"></a><span class="fu">tibble</span>(</span>
+<span id="cb2-150"><a href="#cb2-150" aria-hidden="true" tabindex="-1"></a>  <span class="at">metric =</span> <span class="fu">c</span>(<span class="st">"Solutions"</span>, <span class="st">"Observed permutations"</span>, <span class="st">"Observed combinations"</span>,</span>
+<span id="cb2-151"><a href="#cb2-151" aria-hidden="true" tabindex="-1"></a>             <span class="st">"Possible permutations"</span>, <span class="st">"Possible combinations"</span>),</span>
+<span id="cb2-152"><a href="#cb2-152" aria-hidden="true" tabindex="-1"></a>  <span class="at">value =</span> <span class="fu">c</span>(<span class="fu">nrow</span>(rainbows), <span class="fu">n_distinct</span>(rainbows<span class="sc">$</span>permutation),</span>
+<span id="cb2-153"><a href="#cb2-153" aria-hidden="true" tabindex="-1"></a>            <span class="fu">n_distinct</span>(rainbows<span class="sc">$</span>combination),</span>
+<span id="cb2-154"><a href="#cb2-154" aria-hidden="true" tabindex="-1"></a>            <span class="fu">factorial</span>(<span class="dv">12</span>) <span class="sc">/</span> <span class="fu">factorial</span>(<span class="dv">7</span>), <span class="fu">choose</span>(<span class="dv">12</span>, <span class="dv">5</span>))</span>
+<span id="cb2-155"><a href="#cb2-155" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span> knitr<span class="sc">::</span><span class="fu">kable</span>()</span>
+<span id="cb2-156"><a href="#cb2-156" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-157"><a href="#cb2-157" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-158"><a href="#cb2-158" aria-hidden="true" tabindex="-1"></a><span class="fu">## Most frequent combinations</span></span>
 <span id="cb2-159"><a href="#cb2-159" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-160"><a href="#cb2-160" aria-hidden="true" tabindex="-1"></a><span class="fu">## By puzzle level</span></span>
-<span id="cb2-161"><a href="#cb2-161" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-164"><a href="#cb2-164" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb2-165"><a href="#cb2-165" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: by-level</span></span>
-<span id="cb2-166"><a href="#cb2-166" aria-hidden="true" tabindex="-1"></a>rainbows <span class="sc">%&gt;%</span></span>
-<span id="cb2-167"><a href="#cb2-167" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(level) <span class="sc">%&gt;%</span></span>
-<span id="cb2-168"><a href="#cb2-168" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
-<span id="cb2-169"><a href="#cb2-169" aria-hidden="true" tabindex="-1"></a>    <span class="at">solutions =</span> <span class="fu">n</span>(),</span>
-<span id="cb2-170"><a href="#cb2-170" aria-hidden="true" tabindex="-1"></a>    <span class="at">unique_permutations =</span> <span class="fu">n_distinct</span>(permutation),</span>
-<span id="cb2-171"><a href="#cb2-171" aria-hidden="true" tabindex="-1"></a>    <span class="at">unique_combinations =</span> <span class="fu">n_distinct</span>(combination),</span>
-<span id="cb2-172"><a href="#cb2-172" aria-hidden="true" tabindex="-1"></a>    <span class="at">.groups =</span> <span class="st">"drop"</span></span>
-<span id="cb2-173"><a href="#cb2-173" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb2-174"><a href="#cb2-174" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span>
-<span id="cb2-175"><a href="#cb2-175" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-176"><a href="#cb2-176" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-177"><a href="#cb2-177" aria-hidden="true" tabindex="-1"></a><span class="fu">## Research notes</span></span>
-<span id="cb2-178"><a href="#cb2-178" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-179"><a href="#cb2-179" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Does the source serialize pieces by board position, solver search order, or another rule?</span>
-<span id="cb2-180"><a href="#cb2-180" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>How many solutions share the same final five-piece combination despite different postures?</span>
-<span id="cb2-181"><a href="#cb2-181" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>How does the distribution compare with selecting five pieces uniformly at random?</span>
-<span id="cb2-182"><a href="#cb2-182" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Should reversed colour sequences count as visually equivalent rainbows?</span>
-<span id="cb2-183"><a href="#cb2-183" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-184"><a href="#cb2-184" aria-hidden="true" tabindex="-1"></a>**Interpretation caution:** A skew in these results may reflect serialization or enumeration rather than any intrinsic property of pentomino tilings.</span>
+<span id="cb2-162"><a href="#cb2-162" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb2-163"><a href="#cb2-163" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: combinations</span></span>
+<span id="cb2-164"><a href="#cb2-164" aria-hidden="true" tabindex="-1"></a>combination_counts <span class="ot">&lt;-</span> rainbows <span class="sc">%&gt;%</span></span>
+<span id="cb2-165"><a href="#cb2-165" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(combination, <span class="at">sort =</span> <span class="cn">TRUE</span>, <span class="at">name =</span> <span class="st">"n"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb2-166"><a href="#cb2-166" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">pct =</span> n <span class="sc">/</span> <span class="fu">sum</span>(n))</span>
+<span id="cb2-167"><a href="#cb2-167" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-168"><a href="#cb2-168" aria-hidden="true" tabindex="-1"></a>combination_counts <span class="ot">&lt;-</span> rainbows <span class="sc">%&gt;%</span></span>
+<span id="cb2-169"><a href="#cb2-169" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(combination, <span class="at">sort =</span> <span class="cn">TRUE</span>, <span class="at">name =</span> <span class="st">"n"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb2-170"><a href="#cb2-170" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">pct =</span> n <span class="sc">/</span> <span class="fu">sum</span>(n))</span>
+<span id="cb2-171"><a href="#cb2-171" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-172"><a href="#cb2-172" aria-hidden="true" tabindex="-1"></a>combination_counts <span class="sc">%&gt;%</span></span>
+<span id="cb2-173"><a href="#cb2-173" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">20</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb2-174"><a href="#cb2-174" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">rainbow =</span> <span class="fu">vapply</span>(combination, rainbow_swatch, <span class="fu">character</span>(<span class="dv">1</span>))) <span class="sc">%&gt;%</span></span>
+<span id="cb2-175"><a href="#cb2-175" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(combination, rainbow, n, pct) <span class="sc">%&gt;%</span></span>
+<span id="cb2-176"><a href="#cb2-176" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb2-177"><a href="#cb2-177" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fmt_markdown</span>(<span class="at">columns =</span> rainbow) <span class="sc">%&gt;%</span></span>
+<span id="cb2-178"><a href="#cb2-178" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fmt_percent</span>(<span class="at">columns =</span> pct, <span class="at">decimals =</span> <span class="dv">2</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb2-179"><a href="#cb2-179" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cols_label</span>(</span>
+<span id="cb2-180"><a href="#cb2-180" aria-hidden="true" tabindex="-1"></a>    <span class="at">combination =</span> <span class="st">"Combination"</span>,</span>
+<span id="cb2-181"><a href="#cb2-181" aria-hidden="true" tabindex="-1"></a>    <span class="at">rainbow =</span> <span class="st">"Five colours"</span>,</span>
+<span id="cb2-182"><a href="#cb2-182" aria-hidden="true" tabindex="-1"></a>    <span class="at">n =</span> <span class="st">"Count"</span>,</span>
+<span id="cb2-183"><a href="#cb2-183" aria-hidden="true" tabindex="-1"></a>    <span class="at">pct =</span> <span class="st">"Share"</span></span>
+<span id="cb2-184"><a href="#cb2-184" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb2-185"><a href="#cb2-185" aria-hidden="true" tabindex="-1"></a>  <span class="fu">opt_row_striping</span>() </span>
+<span id="cb2-186"><a href="#cb2-186" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-187"><a href="#cb2-187" aria-hidden="true" tabindex="-1"></a><span class="co">#combination_counts %&gt;% slice_head(n = 20) %&gt;% knitr::kable(digits = 4)</span></span>
+<span id="cb2-188"><a href="#cb2-188" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-189"><a href="#cb2-189" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-190"><a href="#cb2-190" aria-hidden="true" tabindex="-1"></a><span class="fu">## Most frequent permutations</span></span>
+<span id="cb2-191"><a href="#cb2-191" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-194"><a href="#cb2-194" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb2-195"><a href="#cb2-195" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: permutations</span></span>
+<span id="cb2-196"><a href="#cb2-196" aria-hidden="true" tabindex="-1"></a>permutation_counts <span class="ot">&lt;-</span> rainbows <span class="sc">%&gt;%</span></span>
+<span id="cb2-197"><a href="#cb2-197" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(permutation, <span class="at">sort =</span> <span class="cn">TRUE</span>, <span class="at">name =</span> <span class="st">"n"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb2-198"><a href="#cb2-198" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">pct =</span> n <span class="sc">/</span> <span class="fu">sum</span>(n))</span>
+<span id="cb2-199"><a href="#cb2-199" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-200"><a href="#cb2-200" aria-hidden="true" tabindex="-1"></a>permutation_counts <span class="sc">%&gt;%</span></span>
+<span id="cb2-201"><a href="#cb2-201" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">20</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb2-202"><a href="#cb2-202" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">rainbow =</span> <span class="fu">vapply</span>(permutation, rainbow_swatch, <span class="fu">character</span>(<span class="dv">1</span>))) <span class="sc">%&gt;%</span></span>
+<span id="cb2-203"><a href="#cb2-203" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(permutation, rainbow, n, pct) <span class="sc">%&gt;%</span></span>
+<span id="cb2-204"><a href="#cb2-204" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb2-205"><a href="#cb2-205" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fmt_markdown</span>(<span class="at">columns =</span> rainbow) <span class="sc">%&gt;%</span></span>
+<span id="cb2-206"><a href="#cb2-206" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fmt_percent</span>(<span class="at">columns =</span> pct, <span class="at">decimals =</span> <span class="dv">2</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb2-207"><a href="#cb2-207" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cols_label</span>(</span>
+<span id="cb2-208"><a href="#cb2-208" aria-hidden="true" tabindex="-1"></a>    <span class="at">permutation =</span> <span class="st">"Permutation"</span>,</span>
+<span id="cb2-209"><a href="#cb2-209" aria-hidden="true" tabindex="-1"></a>    <span class="at">rainbow =</span> <span class="st">"Five colours"</span>,</span>
+<span id="cb2-210"><a href="#cb2-210" aria-hidden="true" tabindex="-1"></a>    <span class="at">n =</span> <span class="st">"Count"</span>,</span>
+<span id="cb2-211"><a href="#cb2-211" aria-hidden="true" tabindex="-1"></a>    <span class="at">pct =</span> <span class="st">"Share"</span></span>
+<span id="cb2-212"><a href="#cb2-212" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb2-213"><a href="#cb2-213" aria-hidden="true" tabindex="-1"></a>  <span class="fu">opt_row_striping</span>() </span>
+<span id="cb2-214"><a href="#cb2-214" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-215"><a href="#cb2-215" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-216"><a href="#cb2-216" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-217"><a href="#cb2-217" aria-hidden="true" tabindex="-1"></a><span class="fu">## Who appears in the last five?</span></span>
+<span id="cb2-218"><a href="#cb2-218" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-221"><a href="#cb2-221" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb2-222"><a href="#cb2-222" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: piece-frequency</span></span>
+<span id="cb2-223"><a href="#cb2-223" aria-hidden="true" tabindex="-1"></a>piece_frequency <span class="ot">&lt;-</span> rainbows <span class="sc">%&gt;%</span></span>
+<span id="cb2-224"><a href="#cb2-224" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(group_number, last_five) <span class="sc">%&gt;%</span></span>
+<span id="cb2-225"><a href="#cb2-225" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unnest_longer</span>(last_five, <span class="at">values_to =</span> <span class="st">"piece"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb2-226"><a href="#cb2-226" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(piece, <span class="at">name =</span> <span class="st">"n"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb2-227"><a href="#cb2-227" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb2-228"><a href="#cb2-228" aria-hidden="true" tabindex="-1"></a>    <span class="at">proportion_of_solutions =</span> n <span class="sc">/</span> <span class="fu">nrow</span>(rainbows),</span>
+<span id="cb2-229"><a href="#cb2-229" aria-hidden="true" tabindex="-1"></a>    <span class="at">random_order_reference =</span> <span class="dv">5</span> <span class="sc">/</span> <span class="dv">12</span></span>
+<span id="cb2-230"><a href="#cb2-230" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb2-231"><a href="#cb2-231" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(n))</span>
+<span id="cb2-232"><a href="#cb2-232" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-233"><a href="#cb2-233" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(piece_frequency, <span class="at">digits =</span> <span class="dv">3</span>)</span>
+<span id="cb2-234"><a href="#cb2-234" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-235"><a href="#cb2-235" aria-hidden="true" tabindex="-1"></a><span class="co">#names(character_colors)</span></span>
+<span id="cb2-236"><a href="#cb2-236" aria-hidden="true" tabindex="-1"></a><span class="co">#unique(piece_frequency$piece)</span></span>
+<span id="cb2-237"><a href="#cb2-237" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-238"><a href="#cb2-238" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(</span>
+<span id="cb2-239"><a href="#cb2-239" aria-hidden="true" tabindex="-1"></a>  piece_frequency,</span>
+<span id="cb2-240"><a href="#cb2-240" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(</span>
+<span id="cb2-241"><a href="#cb2-241" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="fu">reorder</span>(piece, n),</span>
+<span id="cb2-242"><a href="#cb2-242" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> proportion_of_solutions,</span>
+<span id="cb2-243"><a href="#cb2-243" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> piece</span>
+<span id="cb2-244"><a href="#cb2-244" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb2-245"><a href="#cb2-245" aria-hidden="true" tabindex="-1"></a>) <span class="sc">+</span></span>
+<span id="cb2-246"><a href="#cb2-246" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">width =</span> <span class="fl">0.75</span>, <span class="at">colour =</span> <span class="st">"#55555500"</span>, <span class="at">linewidth =</span> <span class="fl">0.25</span>) <span class="sc">+</span></span>
+<span id="cb2-247"><a href="#cb2-247" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(</span>
+<span id="cb2-248"><a href="#cb2-248" aria-hidden="true" tabindex="-1"></a>    <span class="at">yintercept =</span> <span class="dv">5</span> <span class="sc">/</span> <span class="dv">12</span>,</span>
+<span id="cb2-249"><a href="#cb2-249" aria-hidden="true" tabindex="-1"></a>    <span class="at">linetype =</span> <span class="st">"dashed"</span>,</span>
+<span id="cb2-250"><a href="#cb2-250" aria-hidden="true" tabindex="-1"></a>    <span class="at">colour =</span> <span class="st">"#555555"</span></span>
+<span id="cb2-251"><a href="#cb2-251" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb2-252"><a href="#cb2-252" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> character_colors) <span class="sc">+</span></span>
+<span id="cb2-253"><a href="#cb2-253" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
+<span id="cb2-254"><a href="#cb2-254" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb2-255"><a href="#cb2-255" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>)</span>
+<span id="cb2-256"><a href="#cb2-256" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-257"><a href="#cb2-257" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-258"><a href="#cb2-258" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-259"><a href="#cb2-259" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-260"><a href="#cb2-260" aria-hidden="true" tabindex="-1"></a><span class="fu">## By puzzle level</span></span>
+<span id="cb2-261"><a href="#cb2-261" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-264"><a href="#cb2-264" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb2-265"><a href="#cb2-265" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: by-level</span></span>
+<span id="cb2-266"><a href="#cb2-266" aria-hidden="true" tabindex="-1"></a>rainbows <span class="sc">%&gt;%</span></span>
+<span id="cb2-267"><a href="#cb2-267" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(level) <span class="sc">%&gt;%</span></span>
+<span id="cb2-268"><a href="#cb2-268" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb2-269"><a href="#cb2-269" aria-hidden="true" tabindex="-1"></a>    <span class="at">solutions =</span> <span class="fu">n</span>(),</span>
+<span id="cb2-270"><a href="#cb2-270" aria-hidden="true" tabindex="-1"></a>    <span class="at">unique_permutations =</span> <span class="fu">n_distinct</span>(permutation),</span>
+<span id="cb2-271"><a href="#cb2-271" aria-hidden="true" tabindex="-1"></a>    <span class="at">unique_combinations =</span> <span class="fu">n_distinct</span>(combination),</span>
+<span id="cb2-272"><a href="#cb2-272" aria-hidden="true" tabindex="-1"></a>    <span class="at">.groups =</span> <span class="st">"drop"</span></span>
+<span id="cb2-273"><a href="#cb2-273" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb2-274"><a href="#cb2-274" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span>
+<span id="cb2-275"><a href="#cb2-275" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-276"><a href="#cb2-276" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-277"><a href="#cb2-277" aria-hidden="true" tabindex="-1"></a><span class="fu">## The most common rainbow</span></span>
+<span id="cb2-278"><a href="#cb2-278" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-279"><a href="#cb2-279" aria-hidden="true" tabindex="-1"></a>The most frequently observed five-character combination is</span>
+<span id="cb2-280"><a href="#cb2-280" aria-hidden="true" tabindex="-1"></a><span class="in">`r combination_counts$combination[[1]]`</span>,</span>
+<span id="cb2-281"><a href="#cb2-281" aria-hidden="true" tabindex="-1"></a>appearing in <span class="in">`r combination_counts$n[[1]]`</span> solutions.</span>
+<span id="cb2-282"><a href="#cb2-282" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-285"><a href="#cb2-285" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb2-286"><a href="#cb2-286" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: popular-rainbow</span></span>
+<span id="cb2-287"><a href="#cb2-287" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb2-288"><a href="#cb2-288" aria-hidden="true" tabindex="-1"></a><span class="co">#| results: asis</span></span>
+<span id="cb2-289"><a href="#cb2-289" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-290"><a href="#cb2-290" aria-hidden="true" tabindex="-1"></a>draw_rainbow <span class="ot">&lt;-</span> <span class="cf">function</span>(sequence, colors) {</span>
+<span id="cb2-291"><a href="#cb2-291" aria-hidden="true" tabindex="-1"></a>  pieces <span class="ot">&lt;-</span> <span class="fu">strsplit</span>(sequence, <span class="st">""</span>)[[<span class="dv">1</span>]]</span>
+<span id="cb2-292"><a href="#cb2-292" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-293"><a href="#cb2-293" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stopifnot</span>(<span class="fu">length</span>(pieces) <span class="sc">==</span> <span class="dv">5</span>)</span>
+<span id="cb2-294"><a href="#cb2-294" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stopifnot</span>(<span class="fu">all</span>(pieces <span class="sc">%in%</span> <span class="fu">names</span>(colors)))</span>
+<span id="cb2-295"><a href="#cb2-295" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-296"><a href="#cb2-296" aria-hidden="true" tabindex="-1"></a>  paths <span class="ot">&lt;-</span> <span class="fu">vapply</span>(<span class="fu">seq_along</span>(pieces), <span class="cf">function</span>(i) {</span>
+<span id="cb2-297"><a href="#cb2-297" aria-hidden="true" tabindex="-1"></a>    radius <span class="ot">&lt;-</span> <span class="dv">240</span> <span class="sc">-</span> (i <span class="sc">-</span> <span class="dv">1</span>) <span class="sc">*</span> <span class="dv">27</span></span>
+<span id="cb2-298"><a href="#cb2-298" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-299"><a href="#cb2-299" aria-hidden="true" tabindex="-1"></a>    <span class="fu">sprintf</span>(</span>
+<span id="cb2-300"><a href="#cb2-300" aria-hidden="true" tabindex="-1"></a>      <span class="st">'&lt;path d="M %d 270 A %d %d 0 0 1 %d 270"</span></span>
+<span id="cb2-301"><a href="#cb2-301" aria-hidden="true" tabindex="-1"></a><span class="st">         fill="none" stroke="%s" stroke-width="26"/&gt;'</span>,</span>
+<span id="cb2-302"><a href="#cb2-302" aria-hidden="true" tabindex="-1"></a>      <span class="dv">300</span> <span class="sc">-</span> radius,</span>
+<span id="cb2-303"><a href="#cb2-303" aria-hidden="true" tabindex="-1"></a>      radius,</span>
+<span id="cb2-304"><a href="#cb2-304" aria-hidden="true" tabindex="-1"></a>      radius,</span>
+<span id="cb2-305"><a href="#cb2-305" aria-hidden="true" tabindex="-1"></a>      <span class="dv">300</span> <span class="sc">+</span> radius,</span>
+<span id="cb2-306"><a href="#cb2-306" aria-hidden="true" tabindex="-1"></a>      <span class="fu">unname</span>(colors[[pieces[i]]])</span>
+<span id="cb2-307"><a href="#cb2-307" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb2-308"><a href="#cb2-308" aria-hidden="true" tabindex="-1"></a>  }, <span class="fu">character</span>(<span class="dv">1</span>))</span>
+<span id="cb2-309"><a href="#cb2-309" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-310"><a href="#cb2-310" aria-hidden="true" tabindex="-1"></a>  svg <span class="ot">&lt;-</span> <span class="fu">paste0</span>(</span>
+<span id="cb2-311"><a href="#cb2-311" aria-hidden="true" tabindex="-1"></a>    <span class="st">'&lt;svg viewBox="0 0 600 290" '</span>,</span>
+<span id="cb2-312"><a href="#cb2-312" aria-hidden="true" tabindex="-1"></a>    <span class="st">'xmlns="http://www.w3.org/2000/svg" '</span>,</span>
+<span id="cb2-313"><a href="#cb2-313" aria-hidden="true" tabindex="-1"></a>    <span class="st">'role="img" aria-label="Five-colour rainbow: '</span>,</span>
+<span id="cb2-314"><a href="#cb2-314" aria-hidden="true" tabindex="-1"></a>    sequence, <span class="st">'" '</span>,</span>
+<span id="cb2-315"><a href="#cb2-315" aria-hidden="true" tabindex="-1"></a>    <span class="st">'style="display:block;width:100%;max-width:700px;'</span>,</span>
+<span id="cb2-316"><a href="#cb2-316" aria-hidden="true" tabindex="-1"></a>    <span class="st">'height:auto;margin:2rem auto;"&gt;'</span>,</span>
+<span id="cb2-317"><a href="#cb2-317" aria-hidden="true" tabindex="-1"></a>    <span class="fu">paste</span>(paths, <span class="at">collapse =</span> <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>),</span>
+<span id="cb2-318"><a href="#cb2-318" aria-hidden="true" tabindex="-1"></a>    <span class="st">'&lt;/svg&gt;'</span></span>
+<span id="cb2-319"><a href="#cb2-319" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb2-320"><a href="#cb2-320" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-321"><a href="#cb2-321" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(svg, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb2-322"><a href="#cb2-322" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-323"><a href="#cb2-323" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-324"><a href="#cb2-324" aria-hidden="true" tabindex="-1"></a><span class="fu">draw_rainbow</span>(</span>
+<span id="cb2-325"><a href="#cb2-325" aria-hidden="true" tabindex="-1"></a>  combination_counts<span class="sc">$</span>combination[[<span class="dv">1</span>]],</span>
+<span id="cb2-326"><a href="#cb2-326" aria-hidden="true" tabindex="-1"></a>  character_colors</span>
+<span id="cb2-327"><a href="#cb2-327" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb2-328"><a href="#cb2-328" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-329"><a href="#cb2-329" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-330"><a href="#cb2-330" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-331"><a href="#cb2-331" aria-hidden="true" tabindex="-1"></a><span class="fu">## Research notes</span></span>
+<span id="cb2-332"><a href="#cb2-332" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-333"><a href="#cb2-333" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Does the source serialize pieces by board position, solver search order, or another rule?</span>
+<span id="cb2-334"><a href="#cb2-334" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>How many solutions share the same final five-piece combination despite different postures?</span>
+<span id="cb2-335"><a href="#cb2-335" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>How does the distribution compare with selecting five pieces uniformly at random?</span>
+<span id="cb2-336"><a href="#cb2-336" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>Should reversed colour sequences count as visually equivalent rainbows?</span>
+<span id="cb2-337"><a href="#cb2-337" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-338"><a href="#cb2-338" aria-hidden="true" tabindex="-1"></a>**Interpretation caution:** A skew in these results may reflect serialization or enumeration rather than any intrinsic property of pentomino tilings.</span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

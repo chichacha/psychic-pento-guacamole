@@ -91,109 +91,221 @@
     "text": "Caveats and follow-ups\n\nThe decoding assumes Dad’s JSON coordinates are [row_offset, col_offset, z] and anchors are encoded in tenths of a cell; validation will fail if this assumption is wrong.\nBoard symmetries here preserve 6×10 dimensions; 90° and 270° rotations would produce 10×6 boards.\nIf the source datasets were deduplicated using different symmetry conventions, multiple rows may share a canonical key.\nLevel describes Dad’s puzzle/hint progression and is not needed for whole-board equivalence.\nThis is research documentation, not a public story or a source of authoritative puzzle enumeration counts."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "五マスの人たち。",
+    "objectID": "research/five-colour-rainbow/index.html",
+    "href": "research/five-colour-rainbow/index.html",
+    "title": "五色の虹は、本当にランダムなのか？",
     "section": "",
-    "text": "FIVE SQUARES. TWELVE PERSONALITIES.\n\n\n\nみんな、5つの四角でできています。\nまっすぐな人。曲がった人。\nちょっとずれた人。なぜか真ん中にいる人。\n全部で12人。\n\n本人たちは、いたって普通のつもりです。\n\n12人に会ってみる →\n\n12 SHAPES · 5 SQUARES EACH · EVERYONE IS DIFFERENT\n\n\n\n\n\nA LITTLE FAMILY HISTORY\n\n\n\n昔、父が木で作ったペントミノのパズル。\n妹と私は、それで遊びながら育ちました。\n遊ぶのは楽しい。\nでも、片づけるのが難しい。\nあと一つなのに、入らない。\nこっちを動かすと、あっちが入らない。\n結局、いつも一つだけ、盤の上に乗っかっていました。\nどうやら、これが我が家の正解だったようです。\nそれから何十年。\n木から陶器へ、そして3Dプリントへ。\n形は進化しました。\n片づけの腕前は、あまり進化しませんでした。\nこのパズルの話を読む →\n\n\n\n\nTHE BASIC FACTS\n\n\n\nペントミノは、5つの正方形を辺でつなげた形。\n回したり、裏返したりして同じになるものを一つと数えると、全部で12種類。\n12人とも材料は同じ。\nでも、形はそれぞれ違います。\nそして、ちょっとした性格の違いもあるようです。\n\n\n\n\nA VERY SATISFYING EQUATION\n\n\n5 × 12 = 60\n\n5マスずつ、12人で60マス。\n6 × 10にも、5 × 12にも、4 × 15にも。\n全員そろえば、いろいろな長方形になれます。\n\n問題は、誰がどこに入るか。\n\n\n\n\n12 PIECES · 60 SQUARES · ONE RECTANGLE\n\n\n\n12人が集まって、6 × 10の長方形。\n全員、ちゃんと入りました。\nでも、この並び方だけが正解ではありません。\n実は、ほかにもいろいろあります。\n\n\n\n\nひとりずつ登場 →\n\n\nもう一度 ↺\n\n\nこの並び方は、ときどき変わります。 12人にも、気分があるのかもしれません。\n\n\n\n\n\n\nMEET · ROTATE · DISCOVER\n\n\n\n回しても変わらない人がいます。\nひっくり返すと、別人みたいになる人もいます。\nなぜでしょう。\nまずは、会ってみてください。\n12人の仲間たち →\n\nSAME FIVE SQUARES. VERY DIFFERENT OPINIONS."
+    "text": "Each row of data/solutions.csv contains twelve pentominoes in an encoded sequence. If we take the last five characters, how often do the same ordered sequences and unordered selections occur?\n\nPermutation key: preserve the source order of the final five characters.\nCombination key: sort those five characters alphabetically.\n\nImportant: The encoded sequence does not necessarily represent the chronological order in which a person placed pieces."
   },
   {
-    "objectID": "index.html#片づけるだけのはずだった",
-    "href": "index.html#片づけるだけのはずだった",
-    "title": "五マスの人たち。",
+    "objectID": "research/five-colour-rainbow/index.html#research-question",
+    "href": "research/five-colour-rainbow/index.html#research-question",
+    "title": "五色の虹は、本当にランダムなのか？",
     "section": "",
-    "text": "昔、父が木で作ったペントミノのパズル。\n妹と私は、それで遊びながら育ちました。\n遊ぶのは楽しい。\nでも、片づけるのが難しい。\nあと一つなのに、入らない。\nこっちを動かすと、あっちが入らない。\n結局、いつも一つだけ、盤の上に乗っかっていました。\nどうやら、これが我が家の正解だったようです。\nそれから何十年。\n木から陶器へ、そして3Dプリントへ。\n形は進化しました。\n片づけの腕前は、あまり進化しませんでした。\nこのパズルの話を読む →"
+    "text": "Each row of data/solutions.csv contains twelve pentominoes in an encoded sequence. If we take the last five characters, how often do the same ordered sequences and unordered selections occur?\n\nPermutation key: preserve the source order of the final five characters.\nCombination key: sort those five characters alphabetically.\n\nImportant: The encoded sequence does not necessarily represent the chronological order in which a person placed pieces."
   },
   {
-    "objectID": "index.html#そもそもペントミノって",
-    "href": "index.html#そもそもペントミノって",
-    "title": "五マスの人たち。",
-    "section": "",
-    "text": "ペントミノは、5つの正方形を辺でつなげた形。\n回したり、裏返したりして同じになるものを一つと数えると、全部で12種類。\n12人とも材料は同じ。\nでも、形はそれぞれ違います。\nそして、ちょっとした性格の違いもあるようです。"
+    "objectID": "research/five-colour-rainbow/index.html#read-the-solutions",
+    "href": "research/five-colour-rainbow/index.html#read-the-solutions",
+    "title": "五色の虹は、本当にランダムなのか？",
+    "section": "Read the solutions",
+    "text": "Read the solutions\n\n\nRows: 2,339\nColumns: 3\n$ group_number &lt;chr&gt; \"#0001\", \"#0002\", \"#0003\", \"#0004\", \"#0005\", \"#0006\", \"#0…\n$ level        &lt;dbl&gt; 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, …\n$ answer       &lt;chr&gt; \"Y060000N044000F050010Z015010U010030P034030X003040I000050…"
   },
   {
-    "objectID": "index.html#人なんとか収まりました",
-    "href": "index.html#人なんとか収まりました",
-    "title": "五マスの人たち。",
-    "section": "",
-    "text": "12人が集まって、6 × 10の長方形。\n全員、ちゃんと入りました。\nでも、この並び方だけが正解ではありません。\n実は、ほかにもいろいろあります。\n\n\n\n\nひとりずつ登場 →\n\n\nもう一度 ↺\n\n\nこの並び方は、ときどき変わります。 12人にも、気分があるのかもしれません。"
+    "objectID": "research/five-colour-rainbow/index.html#extract-character-sequence-ignoring-posture",
+    "href": "research/five-colour-rainbow/index.html#extract-character-sequence-ignoring-posture",
+    "title": "五色の虹は、本当にランダムなのか？",
+    "section": "Extract character sequence, ignoring posture",
+    "text": "Extract character sequence, ignoring posture\nEach Answer consists of twelve seven-character records: a pentomino letter followed by six digits (e.g. Y060000). We keep the first character of each record and discard the six digits. We do not reorder the original sequence.\n\n\n\nFinal five pieces: source order versus alphabetical order\n\n\ngroup_number\nlevel\npermutation\ncombination\n\n\n\n\n#0001\n1\nIWLTV\nILTVW\n\n\n#0002\n1\nWILVT\nILTVW\n\n\n#0003\n1\nUZFYN\nFNUYZ\n\n\n#0004\n1\nUZFNY\nFNUYZ\n\n\n#0005\n2\nZXVTP\nPTVXZ\n\n\n#0006\n2\nZXVTP\nPTVXZ\n\n\n#0007\n2\nZXVTP\nPTVXZ\n\n\n#0008\n2\nZXTVP\nPTVXZ\n\n\n#0009\n2\nZXTVP\nPTVXZ\n\n\n#0010\n2\nIUNFY\nFINUY\n\n\n#0011\n3\nINVTZ\nINTVZ\n\n\n#0012\n3\nNZYUP\nNPUYZ\n\n\n\n\n\nFor example, the first solution has the sequence Y → N → F → Z → U → P → X → I → W → L → T → V; the last-five permutation is IWLTV, and its combination key is ILTVW."
   },
   {
-    "objectID": "index.html#ところでこの12人",
-    "href": "index.html#ところでこの12人",
-    "title": "五マスの人たち。",
-    "section": "",
-    "text": "回しても変わらない人がいます。\nひっくり返すと、別人みたいになる人もいます。\nなぜでしょう。\nまずは、会ってみてください。\n12人の仲間たち →\n\nSAME FIVE SQUARES. VERY DIFFERENT OPINIONS."
+    "objectID": "research/five-colour-rainbow/index.html#how-many-possibilities",
+    "href": "research/five-colour-rainbow/index.html#how-many-possibilities",
+    "title": "五色の虹は、本当にランダムなのか？",
+    "section": "How many possibilities?",
+    "text": "How many possibilities?\nThere are \\(\\binom{12}{5}=792\\) possible unordered selections of five distinct pieces, and \\(12!/7!=95,040\\) possible ordered selections. Neither count implies the solution file samples these uniformly.\n\n\n\n\n\nmetric\nvalue\n\n\n\n\nSolutions\n2339\n\n\nObserved permutations\n1016\n\n\nObserved combinations\n421\n\n\nPossible permutations\n95040\n\n\nPossible combinations\n792"
   },
   {
-    "objectID": "experimental/gesture-tutorial/index.html",
-    "href": "experimental/gesture-tutorial/index.html",
-    "title": "まずは遊んでみよう！",
-    "section": "",
-    "text": "説明を読むより、まずはひとつ動かしてみよう！\n指一本で遊べます。ここでは、ピースを 回す・動かす・ひっくり返す 練習をします。失敗しても大丈夫。何度でも試せます。"
+    "objectID": "research/five-colour-rainbow/index.html#most-frequent-combinations",
+    "href": "research/five-colour-rainbow/index.html#most-frequent-combinations",
+    "title": "五色の虹は、本当にランダムなのか？",
+    "section": "Most frequent combinations",
+    "text": "Most frequent combinations\n\n\n\n\n\n\n\n\nCombination\nFive colours\nCount\nShare\n\n\n\n\nFITUX\n\n55\n2.35%\n\n\nPUVXZ\n\n51\n2.18%\n\n\nLNUVZ\n\n42\n1.80%\n\n\nUVWXZ\n\n34\n1.45%\n\n\nLUVXZ\n\n33\n1.41%\n\n\nFTUXY\n\n31\n1.33%\n\n\nUVWXY\n\n29\n1.24%\n\n\nILNUX\n\n25\n1.07%\n\n\nPVWXZ\n\n22\n0.94%\n\n\nUVXYZ\n\n22\n0.94%\n\n\nFPUVX\n\n21\n0.90%\n\n\nUVWYZ\n\n21\n0.90%\n\n\nIPUVZ\n\n19\n0.81%\n\n\nFILTX\n\n18\n0.77%\n\n\nFPTXY\n\n18\n0.77%\n\n\nLVWYZ\n\n17\n0.73%\n\n\nNTVWZ\n\n17\n0.73%\n\n\nFLUVX\n\n16\n0.68%\n\n\nLTWYZ\n\n16\n0.68%\n\n\nPUVYZ\n\n16\n0.68%"
   },
   {
-    "objectID": "experimental/gesture-tutorial/index.html#できたらパズルに挑戦",
-    "href": "experimental/gesture-tutorial/index.html#できたらパズルに挑戦",
-    "title": "まずは遊んでみよう！",
-    "section": "できたら、パズルに挑戦！ 🎉",
-    "text": "できたら、パズルに挑戦！ 🎉\nまずは 初心者（白帯） から。うまくいかなくても、ゆっくりで大丈夫です。\nパズルで遊ぶ · 📖 くわしい遊び方： 日本語 / English"
+    "objectID": "research/five-colour-rainbow/index.html#most-frequent-permutations",
+    "href": "research/five-colour-rainbow/index.html#most-frequent-permutations",
+    "title": "五色の虹は、本当にランダムなのか？",
+    "section": "Most frequent permutations",
+    "text": "Most frequent permutations\n\n\n\n\n\n\n\n\nPermutation\nFive colours\nCount\nShare\n\n\n\n\nFYUXT\n\n16\n0.68%\n\n\nIFUXT\n\n15\n0.64%\n\n\nFXUTI\n\n14\n0.60%\n\n\nWZVUY\n\n14\n0.60%\n\n\nWZXVU\n\n14\n0.60%\n\n\nPZXVU\n\n13\n0.56%\n\n\nYXZVU\n\n13\n0.56%\n\n\nWXZUI\n\n11\n0.47%\n\n\nXINUL\n\n11\n0.47%\n\n\nXYUFT\n\n11\n0.47%\n\n\nLVNZU\n\n10\n0.43%\n\n\nPFUXV\n\n10\n0.43%\n\n\nPUVZI\n\n10\n0.43%\n\n\nUVNZL\n\n10\n0.43%\n\n\nFXPTY\n\n9\n0.38%\n\n\nLZXVU\n\n9\n0.38%\n\n\nNXZVU\n\n9\n0.38%\n\n\nWXUVY\n\n9\n0.38%\n\n\nXFPTY\n\n9\n0.38%\n\n\nYFVXU\n\n9\n0.38%"
   },
   {
-    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html",
-    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html",
-    "title": "How to Play Pentomino",
-    "section": "",
-    "text": "Five little squares. So many possible shapes. And one very important question: where does this piece go?\nPentomino is a puzzle about finding the right place and the right orientation for each piece. Sometimes a piece needs a little turn. Sometimes it needs a flip. And sometimes it seems determined to be difficult. 😆\nThis guide is here when you need a hand. You don’t have to read it all before playing. Jump to whatever you’re curious about.\n\n\n\n\n\n\nWould you rather try it than read about it?\n\n\n\nHead over to Let’s Play! — Gesture Practice to practice tapping, dragging, and flicking with a piece. The interactive tutorial is currently in Japanese.\n\n\n\n\nJust three gestures to get you started!\nTap, draaaag, flick! Master these three moves, and you’re ready to play.\n\n\nTap a piece that hasn’t been placed on the board to rotate it 90° counterclockwise.\nNot quite the right angle? Tap again. And again. Round it goes!\n\n\n\nTouch and hold a piece, then drag it slowly to move it around.\n\nRed outline: You’ve got hold of the piece!\nBlue outline: Here’s a spot where it can go!\nRelease your finger: Place the piece there.\n\nBring the piece near a valid spot on the board, and it’ll snap right into position.\nBut there’s one little catch!\nBlue doesn’t mean you’ve solved it!\nIt simply means the piece fits in that spot. You can check whether it’s the correct placement later.\n\n\n\nGrab a piece, then give it a quick flick and release your finger!\nThe piece flips like a mirror image.\n\n\n\nFlick direction\nWhat happens\n\n\n\n\n← Left or → Right\nFlip horizontally (mirror left to right)\n\n\n↑ Up or ↓ Down\nFlip vertically (mirror top to bottom)\n\n\n\nDon’t worry! Your piece won’t go flying off the screen. 😄\nIt flips right where you release it.\n\n\n\n\n\n\nDrag or flick? What’s the difference?\n\n\n\nIt’s all about speed when you release your finger!\nDrag slowly to move a piece. Flick quickly to flip it.\nIf the app keeps mistaking one for the other, try adjusting the gesture sensitivity under the gear icon ⚙️.\nThe default threshold is 70 mm/second.\n\n\n\nTap to rotate. Drag to move. Flick to flip!\nThree little moves. A whole world of puzzles! 🧩\n\n\n\n\nPentomino has three difficulty modes. No need to earn a black belt on your first day!\n\n\nPractice picking up, moving, and placing pieces.\nThe pieces are presented in placement order, with their orientations already set correctly. You can concentrate on getting comfortable with the controls.\nBest place to start if you’re new.\n\n\n\nPractice rotating and flipping pieces into position.\nThe pieces still appear in placement order, but this time their orientations aren’t prepared for you. You’ll need your tap and flick skills!\n\n\n\nFigure out the solution for yourself.\nThe pieces appear in alphabetical order, and their orientations aren’t preset. You’ll decide which piece goes where — and how it should face.\n\n\n\n\n\n\nYou can change belts whenever you like\n\n\n\nYour progress is saved separately for each belt. Switch modes to suit your mood without losing your place in the others.\n\n\n\n\n\n\n\n\nTap Check to see whether your placed pieces are correct.\nThere’s no point deduction if everything you’ve placed is correct. Incorrect placements, however, may cost points.\n\n\n\nSometimes the pieces simply refuse to cooperate. That’s what Hint is for.\nWhen you request a hint, the app first checks the board and removes incorrectly placed pieces. Then it places one remaining piece in its correct position, working backward from the end of the solution’s placement order.\nThe point deduction covers the number of incorrectly placed pieces plus one hint. Helpful? Absolutely. Free? Not quite! 😉\n\n\n\n\nThere are 10 levels, L1 through L10, with 2,339 puzzles altogether. That’s enough to keep even a dedicated puzzle fan busy for a while.\nUse the ← and → buttons to move between puzzles:\n\nTap: move one puzzle at a time.\nHold for at least 1 second: move by 10 puzzles, roughly every 0.3 seconds.\nKeep holding beyond 3 seconds: move by 100 puzzles, roughly every 0.3 seconds.\n\nPuzzle numbers stay within the range 1–2,339.\n\n\n\n\n\nLevel\nPuzzle numbers\nNumber of puzzles\n\n\n\n\nL1\n1–7\n7\n\n\nL2\n8–40\n33\n\n\nL3\n41–156\n116\n\n\nL4\n157–395\n239\n\n\nL5\n396–668\n273\n\n\nL6\n669–1145\n477\n\n\nL7\n1146–1684\n539\n\n\nL8\n1685–2124\n440\n\n\nL9\n2125–2308\n184\n\n\nL10\n2309–2339\n31\n\n\nTotal\n\n2,339\n\n\n\n\n\n\n\nTap the gear icon at the top of the screen to open Settings. You can also press and hold the puzzle title.\nLanguage: Choose from Japanese, English, Spanish, French, German, Korean, Simplified Chinese, or Traditional Chinese. The instructions change to match your selection.\nCompletion sound: Turn the sound played when you finish a puzzle on or off.\nPlacement feedback: Depending on your device, the app uses either vibration or sound to signal a placement — not both at once.\nDifficulty and history: Progress is stored separately for each belt. Clear History removes the record for the currently selected belt only. Make sure that’s what you want before clearing it.\nSensitivity: Adjust the threshold that separates a swipe from a flick, along with the duration or strength of placement feedback.\n\n\n\nThere’s a reason the pieces arrive in a particular order in White and Yellow Belt modes.\nWhen the app constructs a solution, it fills available spaces beginning at the top left, moving through a column before proceeding to the right. The beginner modes follow that placement order to help you learn.\nSo yes, there is a method to the madness. Your puzzle pieces aren’t entirely making it up as they go!\n\n\n\nIf your first attempt looks like a pile of misplaced shapes, you’re in good company.\nRemember the three moves: tap to rotate, swipe to move, flick to flip.\nThen experiment. Try another angle. Ask for a hint if you need one. Most importantly, have fun discovering where those five-square pieces belong. 🧩\n\n\n\n\n\n\nAbout this guide\n\n\n\nThis is a friendlier English adaptation of the current Japanese app instructions. Features, controls, and scoring details may change between app versions. The interactive gesture tutorial linked above is a separate prototype and may not perfectly match the app’s gesture sensitivity."
+    "objectID": "research/five-colour-rainbow/index.html#who-appears-in-the-last-five",
+    "href": "research/five-colour-rainbow/index.html#who-appears-in-the-last-five",
+    "title": "五色の虹は、本当にランダムなのか？",
+    "section": "Who appears in the last five?",
+    "text": "Who appears in the last five?\n\n\n\n\n\npiece\nn\nproportion_of_solutions\nrandom_order_reference\n\n\n\n\nU\n1320\n0.564\n0.417\n\n\nX\n1193\n0.510\n0.417\n\n\nZ\n1176\n0.503\n0.417\n\n\nV\n1174\n0.502\n0.417\n\n\nT\n934\n0.399\n0.417\n\n\nY\n915\n0.391\n0.417\n\n\nL\n910\n0.389\n0.417\n\n\nW\n864\n0.369\n0.417\n\n\nN\n838\n0.358\n0.417\n\n\nF\n808\n0.345\n0.417\n\n\nI\n804\n0.344\n0.417\n\n\nP\n759\n0.324\n0.417"
   },
   {
-    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#three-little-moves-to-master",
-    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#three-little-moves-to-master",
-    "title": "How to Play Pentomino",
-    "section": "",
-    "text": "Just three gestures to get you started!\nTap, draaaag, flick! Master these three moves, and you’re ready to play.\n\n\nTap a piece that hasn’t been placed on the board to rotate it 90° counterclockwise.\nNot quite the right angle? Tap again. And again. Round it goes!\n\n\n\nTouch and hold a piece, then drag it slowly to move it around.\n\nRed outline: You’ve got hold of the piece!\nBlue outline: Here’s a spot where it can go!\nRelease your finger: Place the piece there.\n\nBring the piece near a valid spot on the board, and it’ll snap right into position.\nBut there’s one little catch!\nBlue doesn’t mean you’ve solved it!\nIt simply means the piece fits in that spot. You can check whether it’s the correct placement later.\n\n\n\nGrab a piece, then give it a quick flick and release your finger!\nThe piece flips like a mirror image.\n\n\n\nFlick direction\nWhat happens\n\n\n\n\n← Left or → Right\nFlip horizontally (mirror left to right)\n\n\n↑ Up or ↓ Down\nFlip vertically (mirror top to bottom)\n\n\n\nDon’t worry! Your piece won’t go flying off the screen. 😄\nIt flips right where you release it.\n\n\n\n\n\n\nDrag or flick? What’s the difference?\n\n\n\nIt’s all about speed when you release your finger!\nDrag slowly to move a piece. Flick quickly to flip it.\nIf the app keeps mistaking one for the other, try adjusting the gesture sensitivity under the gear icon ⚙️.\nThe default threshold is 70 mm/second.\n\n\n\nTap to rotate. Drag to move. Flick to flip!\nThree little moves. A whole world of puzzles! 🧩"
+    "objectID": "research/five-colour-rainbow/index.html#by-puzzle-level",
+    "href": "research/five-colour-rainbow/index.html#by-puzzle-level",
+    "title": "五色の虹は、本当にランダムなのか？",
+    "section": "By puzzle level",
+    "text": "By puzzle level\n\n\n\n\n\nlevel\nsolutions\nunique_permutations\nunique_combinations\n\n\n\n\n1\n4\n4\n2\n\n\n2\n6\n3\n2\n\n\n3\n140\n60\n30\n\n\n4\n242\n88\n33\n\n\n5\n273\n135\n110\n\n\n6\n477\n274\n192\n\n\n7\n540\n337\n213\n\n\n8\n442\n316\n207\n\n\n9\n184\n144\n116\n\n\n10\n31\n28\n27"
   },
   {
-    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#choose-your-belt",
-    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#choose-your-belt",
-    "title": "How to Play Pentomino",
-    "section": "",
-    "text": "Pentomino has three difficulty modes. No need to earn a black belt on your first day!\n\n\nPractice picking up, moving, and placing pieces.\nThe pieces are presented in placement order, with their orientations already set correctly. You can concentrate on getting comfortable with the controls.\nBest place to start if you’re new.\n\n\n\nPractice rotating and flipping pieces into position.\nThe pieces still appear in placement order, but this time their orientations aren’t prepared for you. You’ll need your tap and flick skills!\n\n\n\nFigure out the solution for yourself.\nThe pieces appear in alphabetical order, and their orientations aren’t preset. You’ll decide which piece goes where — and how it should face.\n\n\n\n\n\n\nYou can change belts whenever you like\n\n\n\nYour progress is saved separately for each belt. Switch modes to suit your mood without losing your place in the others."
+    "objectID": "research/five-colour-rainbow/index.html#the-most-common-rainbow",
+    "href": "research/five-colour-rainbow/index.html#the-most-common-rainbow",
+    "title": "五色の虹は、本当にランダムなのか？",
+    "section": "The most common rainbow",
+    "text": "The most common rainbow\nThe most frequently observed five-character combination is FITUX, appearing in 55 solutions."
   },
   {
-    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#a-little-help-when-youre-stuck",
-    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#a-little-help-when-youre-stuck",
-    "title": "How to Play Pentomino",
-    "section": "",
-    "text": "Tap Check to see whether your placed pieces are correct.\nThere’s no point deduction if everything you’ve placed is correct. Incorrect placements, however, may cost points.\n\n\n\nSometimes the pieces simply refuse to cooperate. That’s what Hint is for.\nWhen you request a hint, the app first checks the board and removes incorrectly placed pieces. Then it places one remaining piece in its correct position, working backward from the end of the solution’s placement order.\nThe point deduction covers the number of incorrectly placed pieces plus one hint. Helpful? Absolutely. Free? Not quite! 😉"
+    "objectID": "research/five-colour-rainbow/index.html#research-notes",
+    "href": "research/five-colour-rainbow/index.html#research-notes",
+    "title": "五色の虹は、本当にランダムなのか？",
+    "section": "Research notes",
+    "text": "Research notes\n\nDoes the source serialize pieces by board position, solver search order, or another rule?\nHow many solutions share the same final five-piece combination despite different postures?\nHow does the distribution compare with selecting five pieces uniformly at random?\nShould reversed colour sequences count as visually equivalent rainbows?\n\nInterpretation caution: A skew in these results may reflect serialization or enumeration rather than any intrinsic property of pentomino tilings."
   },
   {
-    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#pick-a-puzzle-2339-to-explore",
-    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#pick-a-puzzle-2339-to-explore",
-    "title": "How to Play Pentomino",
+    "objectID": "experimental/index.html",
+    "href": "experimental/index.html",
+    "title": "ひみつの実験室",
     "section": "",
-    "text": "There are 10 levels, L1 through L10, with 2,339 puzzles altogether. That’s enough to keep even a dedicated puzzle fan busy for a while.\nUse the ← and → buttons to move between puzzles:\n\nTap: move one puzzle at a time.\nHold for at least 1 second: move by 10 puzzles, roughly every 0.3 seconds.\nKeep holding beyond 3 seconds: move by 100 puzzles, roughly every 0.3 seconds.\n\nPuzzle numbers stay within the range 1–2,339.\n\n\n\n\n\nLevel\nPuzzle numbers\nNumber of puzzles\n\n\n\n\nL1\n1–7\n7\n\n\nL2\n8–40\n33\n\n\nL3\n41–156\n116\n\n\nL4\n157–395\n239\n\n\nL5\n396–668\n273\n\n\nL6\n669–1145\n477\n\n\nL7\n1146–1684\n539\n\n\nL8\n1685–2124\n440\n\n\nL9\n2125–2308\n184\n\n\nL10\n2309–2339\n31\n\n\nTotal\n\n2,339"
+    "text": "🧪 ここは、五マスの世界の実験室。\nお父さんが作ったペントミノの世界に、ちょっとした「もしも」を。\n「こんな動きがあったら？」「こんな演出はどう？」\nそんな思いつきを、まずは小さく作って試してみる場所です。\nお父さんに提案する前に、実物を作って見せちゃおう、という作戦。😏\n採用されるかどうかは、また別の話。\nここにあるものは、公式アプリの新機能ではありません。 あくまで、五マスの世界から生まれた非公式の実験です。"
   },
   {
-    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#whats-behind-the-gear-icon",
-    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#whats-behind-the-gear-icon",
-    "title": "How to Play Pentomino",
-    "section": "",
-    "text": "Tap the gear icon at the top of the screen to open Settings. You can also press and hold the puzzle title.\nLanguage: Choose from Japanese, English, Spanish, French, German, Korean, Simplified Chinese, or Traditional Chinese. The instructions change to match your selection.\nCompletion sound: Turn the sound played when you finish a puzzle on or off.\nPlacement feedback: Depending on your device, the app uses either vibration or sound to signal a placement — not both at once.\nDifficulty and history: Progress is stored separately for each belt. Clear History removes the record for the currently selected belt only. Make sure that’s what you want before clearing it.\nSensitivity: Adjust the threshold that separates a swipe from a flick, along with the duration or strength of placement feedback."
+    "objectID": "experimental/index.html#実験001もっとわかりやすくできるかな",
+    "href": "experimental/index.html#実験001もっとわかりやすくできるかな",
+    "title": "ひみつの実験室",
+    "section": "🔬 実験001：もっとわかりやすくできるかな？",
+    "text": "🔬 実験001：もっとわかりやすくできるかな？\nきっかけ：お母さんが、操作方法でちょっと迷った。\nペントミノは楽しい。でも、遊び方がわからないと、楽しさにたどり着けない。\nだったら、説明を増やすより、実際に触って覚えられる場所を作ってみよう！\n\n🧩 まずは遊んでみよう！\nペントミノのピースを動かす、小さな練習場です。\nタップで、くるっ！ 90度回転。\nドラッグで、すいっ！ 好きな場所へ移動。\nフリックで、ぱたん！ ピースを裏返し。\n👉 ジェスチャーを練習する\n\n\n📖 ペントミノの遊び方\n「白帯」から「黒帯」まで。目指せ、ペントミノ名人！🥋\n操作のコツやヒントの使い方を、ゆっくり紹介します。\n日本語で読む\nRead in English"
   },
   {
-    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#a-peek-behind-the-puzzle",
-    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#a-peek-behind-the-puzzle",
-    "title": "How to Play Pentomino",
-    "section": "",
-    "text": "There’s a reason the pieces arrive in a particular order in White and Yellow Belt modes.\nWhen the app constructs a solution, it fills available spaces beginning at the top left, moving through a column before proceeding to the right. The beginner modes follow that placement order to help you learn.\nSo yes, there is a method to the madness. Your puzzle pieces aren’t entirely making it up as they go!"
+    "objectID": "experimental/index.html#実験002クリアしたら何が起こる",
+    "href": "experimental/index.html#実験002クリアしたら何が起こる",
+    "title": "ひみつの実験室",
+    "section": "🎉 実験002：クリアしたら、何が起こる？",
+    "text": "🎉 実験002：クリアしたら、何が起こる？\n状態：🧪 試作公開中\nパズルが完成した！\nさて、五マスの仲間たちはどうやってお祝いする？\nヒントを使ったら、いもむしたちが登場。🐛\n答えをチェックしたら、ちょうちょがひらひら。🦋\nどちらも使わずにクリアしたら、お菓子の紙吹雪が大サービス！ 🍬\n最後にはめたピースや難易度を変えて、いろんな「おめでとう！」を実験してみよう。\n👉 お祝いシミュレーターで遊んでみる\nGitHubで実験の記録を見る"
   },
   {
-    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#ready-to-give-it-a-go",
-    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#ready-to-give-it-a-go",
-    "title": "How to Play Pentomino",
+    "objectID": "experimental/index.html#そのほかただいま妄想中",
+    "href": "experimental/index.html#そのほかただいま妄想中",
+    "title": "ひみつの実験室",
+    "section": "🔮 そのほか、ただいま妄想中…",
+    "text": "🔮 そのほか、ただいま妄想中…\n五マスの仲間たちに服を着せてみたり、 カードに変身させてみたり、 新聞を発行してみたり。\nまだ形になっていないアイデアも、ここから少しずつ育てていきます。\n実験は、成功しても失敗しても、何かが残れば大成功。\n\n⚠️ この実験室は、予告なく変わったり、実験が突然なくなったりします。お父さんの公式アプリとは別の場所なので、どうぞ気楽にお楽しみください。"
+  },
+  {
+    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html",
+    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html",
+    "title": "Pentominoの遊び方",
     "section": "",
-    "text": "If your first attempt looks like a pile of misplaced shapes, you’re in good company.\nRemember the three moves: tap to rotate, swipe to move, flick to flip.\nThen experiment. Try another angle. Ask for a hint if you need one. Most importantly, have fun discovering where those five-square pieces belong. 🧩\n\n\n\n\n\n\nAbout this guide\n\n\n\nThis is a friendlier English adaptation of the current Japanese app instructions. Features, controls, and scoring details may change between app versions. The interactive gesture tutorial linked above is a separate prototype and may not perfectly match the app’s gesture sensitivity."
+    "text": "形も向きも、ちょっとずつ違うピースたち。うまく収まる場所を探して、パズルを完成させましょう。\n「どこに置けばいいの？」「回したいのに動いちゃった！」——そんなときのための遊び方ガイドです。最初から全部読む必要はありません。困ったところだけ、のぞいてみてください。\n\n\n\n\n\n\n読むより先に、さわってみたい？\n\n\n\nまずは遊んでみよう！ で、タップ・スワイプ・フリックを練習できます。\n\n\n\n\nペントミノの基本操作は、たったの３つ！\nトン・すーっと・シュッ！ この３つを覚えれば、準備はばっちりです。\n\n\nまだ盤面にはめていないピースをトンッとタップ！\nピースが反時計回りに90度、くるっと回転します。\n一度で向きが合わなければ、もう一度。\nくるっ、くるっ。何度でも回してみましょう！\n\n\n\nピースに指を置いたまま、すーっと動かす。これがドラッグです。\n\n赤い輪郭：ピースをつかんでいるよ！\n青い輪郭：ここなら置けるよ！\n指を離す：その場所にピースを置きます。\n\nピースが置ける場所に近づくと、ピタッと吸い寄せられます。\nただし、ここでひとつ注意！\n青い輪郭＝正解！ ではありません。\n青は「ここに置けるよ」の合図。正解かどうかは、あとでチェックしてみましょう。\n\n\n\nピースをつかんで、シュッとすばやく払って指を離す！\nこれがフリック。ピースが鏡に映ったように、ぱたんと裏返ります。\n\n\n\n指の動き\nピースの変化\n\n\n\n\n← または → にシュッ！\n左右反転\n\n\n↑ または ↓ にシュッ！\n上下反転\n\n\n\n大丈夫。ピースが画面の外まで飛んでいくわけではありません。😄\n指を離した場所で、ぱたんと反転します。\n\nトンで回転。すーっと移動。シュッで反転！\nさあ、３つの指ワザを使って、ペントミノに挑戦してみましょう！ 🧩\n\n\n\n\n\n\nドラッグとフリック、どう違うの？\n\n\n\n違いは、指を離すときの速さ！\nゆっくり動かせばドラッグ（移動）、シュッと払えばフリック（反転） です。\nうまく区別されないときは、歯車マーク ⚙️ の「感度調整」を試してみてください。\n初期設定では、70 mm/秒 が判定の境目です。\n\n\n\n\n\n\nPentominoには、３つの難易度があります。最初から黒帯に挑む必要はありません！\n\n\nピースを動かして、はめる練習。\nピースは置く順番に並び、向きも最初から合っています。まずは「つかむ」「運ぶ」「置く」に慣れましょう。はじめての人におすすめです。\n\n\n\n回転と反転を使って、向きを合わせる練習。\nピースの順番は白帯と同じですが、向きはそろっていません。タップやフリックの出番です。\n\n\n\n自分で考えて、パズルを解きます。\nピースはアルファベット順で、向きもそろっていません。どこに何を置くか、腕の見せどころです。\n\n\n\n\n\n\n途中で帯を変えても大丈夫\n\n\n\n白帯・黄帯・黒帯の途中経過は別々に保存されます。気分に合わせて切り替えてください。\n\n\n\n\n\n\n\n\n今置いているピースが正しいかどうかを調べます。自信がなくなったら、遠慮なくチェック！\n正しく置けていれば減点されません。 ただし、間違いがある場合は減点の対象になります。\n\n\n\nどうしても先に進めないときは、ヒントを使いましょう。\nヒントを押すと、まず検査が行われ、間違った配置が取り除かれます。その後、まだ置いていないピースのうち、解答の後ろ側から順に１つを正しい場所へ置いてくれます。\n間違っていたピースの数＋ヒント１回分が減点されます。頼れる助っ人ですが、ちょっぴり代償もあります。\n\n\n\n\n問題は L1〜L10 の10レベル。全部で 2,339問 あります。なかなかの長旅です。😆\n画面の ← → ボタンで問題を切り替えます。\n\nポンと押す： １問ずつ移動\n１秒以上押し続ける： 約0.3秒ごとに10問ずつ移動\n３秒を超えて押し続ける： 約0.3秒ごとに100問ずつ移動\n\n問題番号は１〜2,339の範囲で切り替わります。\n\n\n\n\n\nレベル\n問題番号\n問題数\n\n\n\n\nL1\n1–7\n7\n\n\nL2\n8–40\n33\n\n\nL3\n41–156\n116\n\n\nL4\n157–395\n239\n\n\nL5\n396–668\n273\n\n\nL6\n669–1145\n477\n\n\nL7\n1146–1684\n539\n\n\nL8\n1685–2124\n440\n\n\nL9\n2125–2308\n184\n\n\nL10\n2309–2339\n31\n\n\n合計\n\n2,339\n\n\n\n\n\n\n\n画面上部の歯車マークを押すと、設定が開きます。パズル名を長押ししても開けます。\n言語： 日本語、English、Español、Français、Deutsch、한국어、简体中文、繁體中文の８言語から選べます。説明文も選んだ言語に切り替わります。\n完成の音： 完成時の音をオン・オフできます。\nはめ込みの合図： 機種によって振動か音のどちらかで知らせます。両方同時には鳴りません。\n難易度と履歴： 帯ごとに進み具合が保存されます。「履歴を消す」を押すと、その帯の記録だけを消せます。消す前に確認しましょう。\n感度調整： スワイプとフリックの判定の境目や、はめ込みの合図の長さ・強さを調整できます。\n\n\n\nこのアプリでは、解答を組み立てるとき、左上から順に空いた場所を埋めていきます。その列が埋まったら、右へ進みます。\n白帯と黄帯のピースが「置く順番」に並んでいるのは、この仕組みに合わせているから。ちゃんと理由があるんです。\n\n\n\n最初はピースが言うことを聞いてくれなくても、大丈夫。\nポン、すいっ、シュッ。 ３つの指ワザを覚えたら、あとは少しずつ。\nさあ、Pentominoの世界で遊んでみましょう！ 🧩\n\n\n\n\n\n\nこのガイドについて\n\n\n\nこのページは現行のアプリ説明をもとに、初めて遊ぶ人にも読みやすいよう書き直したものです。操作や採点の詳細は、アプリのバージョンによって変わる場合があります。"
+  },
+  {
+    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#まず覚えたい３つの指ワザ",
+    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#まず覚えたい３つの指ワザ",
+    "title": "Pentominoの遊び方",
+    "section": "",
+    "text": "ペントミノの基本操作は、たったの３つ！\nトン・すーっと・シュッ！ この３つを覚えれば、準備はばっちりです。\n\n\nまだ盤面にはめていないピースをトンッとタップ！\nピースが反時計回りに90度、くるっと回転します。\n一度で向きが合わなければ、もう一度。\nくるっ、くるっ。何度でも回してみましょう！\n\n\n\nピースに指を置いたまま、すーっと動かす。これがドラッグです。\n\n赤い輪郭：ピースをつかんでいるよ！\n青い輪郭：ここなら置けるよ！\n指を離す：その場所にピースを置きます。\n\nピースが置ける場所に近づくと、ピタッと吸い寄せられます。\nただし、ここでひとつ注意！\n青い輪郭＝正解！ ではありません。\n青は「ここに置けるよ」の合図。正解かどうかは、あとでチェックしてみましょう。\n\n\n\nピースをつかんで、シュッとすばやく払って指を離す！\nこれがフリック。ピースが鏡に映ったように、ぱたんと裏返ります。\n\n\n\n指の動き\nピースの変化\n\n\n\n\n← または → にシュッ！\n左右反転\n\n\n↑ または ↓ にシュッ！\n上下反転\n\n\n\n大丈夫。ピースが画面の外まで飛んでいくわけではありません。😄\n指を離した場所で、ぱたんと反転します。\n\nトンで回転。すーっと移動。シュッで反転！\nさあ、３つの指ワザを使って、ペントミノに挑戦してみましょう！ 🧩\n\n\n\n\n\n\nドラッグとフリック、どう違うの？\n\n\n\n違いは、指を離すときの速さ！\nゆっくり動かせばドラッグ（移動）、シュッと払えばフリック（反転） です。\nうまく区別されないときは、歯車マーク ⚙️ の「感度調整」を試してみてください。\n初期設定では、70 mm/秒 が判定の境目です。"
+  },
+  {
+    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#どの帯から始める",
+    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#どの帯から始める",
+    "title": "Pentominoの遊び方",
+    "section": "",
+    "text": "Pentominoには、３つの難易度があります。最初から黒帯に挑む必要はありません！\n\n\nピースを動かして、はめる練習。\nピースは置く順番に並び、向きも最初から合っています。まずは「つかむ」「運ぶ」「置く」に慣れましょう。はじめての人におすすめです。\n\n\n\n回転と反転を使って、向きを合わせる練習。\nピースの順番は白帯と同じですが、向きはそろっていません。タップやフリックの出番です。\n\n\n\n自分で考えて、パズルを解きます。\nピースはアルファベット順で、向きもそろっていません。どこに何を置くか、腕の見せどころです。\n\n\n\n\n\n\n途中で帯を変えても大丈夫\n\n\n\n白帯・黄帯・黒帯の途中経過は別々に保存されます。気分に合わせて切り替えてください。"
+  },
+  {
+    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#困ったときのお助けボタン",
+    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#困ったときのお助けボタン",
+    "title": "Pentominoの遊び方",
+    "section": "",
+    "text": "今置いているピースが正しいかどうかを調べます。自信がなくなったら、遠慮なくチェック！\n正しく置けていれば減点されません。 ただし、間違いがある場合は減点の対象になります。\n\n\n\nどうしても先に進めないときは、ヒントを使いましょう。\nヒントを押すと、まず検査が行われ、間違った配置が取り除かれます。その後、まだ置いていないピースのうち、解答の後ろ側から順に１つを正しい場所へ置いてくれます。\n間違っていたピースの数＋ヒント１回分が減点されます。頼れる助っ人ですが、ちょっぴり代償もあります。"
+  },
+  {
+    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#問題を選ぼう全部で2339問",
+    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#問題を選ぼう全部で2339問",
+    "title": "Pentominoの遊び方",
+    "section": "",
+    "text": "問題は L1〜L10 の10レベル。全部で 2,339問 あります。なかなかの長旅です。😆\n画面の ← → ボタンで問題を切り替えます。\n\nポンと押す： １問ずつ移動\n１秒以上押し続ける： 約0.3秒ごとに10問ずつ移動\n３秒を超えて押し続ける： 約0.3秒ごとに100問ずつ移動\n\n問題番号は１〜2,339の範囲で切り替わります。\n\n\n\n\n\nレベル\n問題番号\n問題数\n\n\n\n\nL1\n1–7\n7\n\n\nL2\n8–40\n33\n\n\nL3\n41–156\n116\n\n\nL4\n157–395\n239\n\n\nL5\n396–668\n273\n\n\nL6\n669–1145\n477\n\n\nL7\n1146–1684\n539\n\n\nL8\n1685–2124\n440\n\n\nL9\n2125–2308\n184\n\n\nL10\n2309–2339\n31\n\n\n合計\n\n2,339"
+  },
+  {
+    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#歯車マークの中には何がある",
+    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#歯車マークの中には何がある",
+    "title": "Pentominoの遊び方",
+    "section": "",
+    "text": "画面上部の歯車マークを押すと、設定が開きます。パズル名を長押ししても開けます。\n言語： 日本語、English、Español、Français、Deutsch、한국어、简体中文、繁體中文の８言語から選べます。説明文も選んだ言語に切り替わります。\n完成の音： 完成時の音をオン・オフできます。\nはめ込みの合図： 機種によって振動か音のどちらかで知らせます。両方同時には鳴りません。\n難易度と履歴： 帯ごとに進み具合が保存されます。「履歴を消す」を押すと、その帯の記録だけを消せます。消す前に確認しましょう。\n感度調整： スワイプとフリックの判定の境目や、はめ込みの合図の長さ・強さを調整できます。"
+  },
+  {
+    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#ちょっとだけパズルの裏話",
+    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#ちょっとだけパズルの裏話",
+    "title": "Pentominoの遊び方",
+    "section": "",
+    "text": "このアプリでは、解答を組み立てるとき、左上から順に空いた場所を埋めていきます。その列が埋まったら、右へ進みます。\n白帯と黄帯のピースが「置く順番」に並んでいるのは、この仕組みに合わせているから。ちゃんと理由があるんです。"
+  },
+  {
+    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#さいごに",
+    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#さいごに",
+    "title": "Pentominoの遊び方",
+    "section": "",
+    "text": "最初はピースが言うことを聞いてくれなくても、大丈夫。\nポン、すいっ、シュッ。 ３つの指ワザを覚えたら、あとは少しずつ。\nさあ、Pentominoの世界で遊んでみましょう！ 🧩\n\n\n\n\n\n\nこのガイドについて\n\n\n\nこのページは現行のアプリ説明をもとに、初めて遊ぶ人にも読みやすいよう書き直したものです。操作や採点の詳細は、アプリのバージョンによって変わる場合があります。"
+  },
+  {
+    "objectID": "experimental/celebration/index.html",
+    "href": "experimental/celebration/index.html",
+    "title": "お祝いシミュレーター",
+    "section": "",
+    "text": "🧪 SECRET LAB · EXPERIMENT 002ピースと遊び方で、お祝いが変わる。みんな、完成おめでとう！\n  \n    \n      ことば日本語English\n      最後に置いたピース\n      レベル1\n      Hint 回数0\n      Check 回数0\n      🎉 完成！\n      もう一回！\n      これは試作品です。実際のゲームとは接続していません。\n    \n    \n      \n      どんなお祝いになるかな？\n      \n      \n      \n      \n    \n  \n\n\n📖 お祝いのしくみを見る"
+  },
+  {
+    "objectID": "characters/index.html",
+    "href": "characters/index.html",
+    "title": "12人の仲間たち",
+    "section": "",
+    "text": "MEET THE PENTOMINOES · THE CAST OF TWELVE\n\n\n\nみんな、5つの四角でできています。\nまっすぐな人。曲がった人。\nちょっとはみ出す人。真ん中が好きな人。\n形も性格も、いろいろです。\n本人たちは、いたって普通のつもりです。\n\n12人とも、面積は同じ。 でも、向きを変えたり、ひっくり返したりすると……？\n\n\n↻ ⇋ ボタンを押して、くるくる、ひっくり返してみてください。\n\n\n\n12人を呼んでいます…\n\n\n\n\nA SMALL OBSERVATION\n\n\n\n同じ5マスなのに、向きの種類は人それぞれ。\n8通りの人もいれば、4通りの人も。\n2通りの人もいます。\nそして、Xおじさんは1通り。\n回っても、回っても、同じ形。\n本人は、ちゃんと回っています。\n\n\n← ホームに戻る"
+  },
+  {
+    "objectID": "characters/index.html#回っても変わらない人がいます",
+    "href": "characters/index.html#回っても変わらない人がいます",
+    "title": "12人の仲間たち",
+    "section": "",
+    "text": "同じ5マスなのに、向きの種類は人それぞれ。\n8通りの人もいれば、4通りの人も。\n2通りの人もいます。\nそして、Xおじさんは1通り。\n回っても、回っても、同じ形。\n本人は、ちゃんと回っています。"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "このサイトについて",
+    "section": "",
+    "text": "ABOUT THIS LITTLE PROJECT\n\n\n\nむかしむかし、といっても、そんなに昔ではないころ。\n父が、木でペントミノのパズルを作りました。\n5つの四角をつなげた、12種類のピース。\n妹と私は、そのパズルで遊びながら育ちました。\n遊ぶのは楽しい。\nでも、ひとつ問題がありました。\nきれいに並べて、しまえない。\nあと一つなのに、入らない。\nこっちを動かすと、あっちが入らない。\n結局、いつも一つだけ、盤の上にちょこんと乗っかっていました。\n片づいているような、片づいていないような。\nでも、それが我が家では普通の光景でした。\nどうやら、これが我が家の正解だったようです。\n\n\nその後、母がペントミノを陶器で作りました。\n今度は、小さなアート作品です。\nさらに時がたち、父は3Dプリンターでもペントミノを作りました。\n木になっても、陶器になっても、プラスチックになっても。\n形は、やっぱり同じ12種類。\nそして、問題も同じでした。\nやっぱり、きれいにしまえない。\nペントミノは、なかなか手ごわいのです。\n\n\n\nそこで父は考えました。\nちゃんと片づけられるように、解答集を作ろうか。\nでも、答えをそのまま見せてしまったら、パズルの楽しさがなくなってしまう。\n自分で考えて、試して、やっと最後の一つが収まる。\nその瞬間こそが、面白いのです。\nだったら、答えではなく、ヒントをあげたらどうだろう？\nそうして生まれたのが、\n\n\nAmazonで本を見る ↗\n答えを教えるのではなく、答えにたどり着く楽しさを残すための本です。\n\n\n\n\nそんなペントミノを、今度は少し違う角度から眺めてみました。\nまっすぐな人。\n曲がった人。\n角が好きな人。\nちょっと、はみ出す人。\n同じ5つの四角なのに、なんだか性格が違うように見えてきます。\n気づいたら、12種類の形に、12人分の名前がついていました。\n父はパズルの解き方を考えています。\n私は、パズルの住人たちのことを考えています。\nどちらも、同じ5つの四角から始まりました。\n\n\n\n12人の仲間たちに会ったり、形を回したり、ひっくり返したり。\nどうして向きの種類が違うのか。\nどうして同じ形に見えるのか。\nどうやったら、みんなで60マスの長方形に収まるのか。\n数学のふしぎを、遊びながら少しずつ探していきます。\nちなみに、形とマス目の数は本物です。\n名前と性格は、創作です。\n本人たちに確認は取っていません。\n12人に会う →\n\n\nFIVE SQUARES. TWELVE PERSONALITIES.\n\n何十年たっても、まだ遊べる。\n今度こそ、12人全員、きれいに収まるでしょうか。\nそれとも、また誰かが一人だけ、外にいるのでしょうか。"
+  },
+  {
+    "objectID": "about.html#木から陶器へそして3dプリントへ",
+    "href": "about.html#木から陶器へそして3dプリントへ",
+    "title": "このサイトについて",
+    "section": "",
+    "text": "その後、母がペントミノを陶器で作りました。\n今度は、小さなアート作品です。\nさらに時がたち、父は3Dプリンターでもペントミノを作りました。\n木になっても、陶器になっても、プラスチックになっても。\n形は、やっぱり同じ12種類。\nそして、問題も同じでした。\nやっぱり、きれいにしまえない。\nペントミノは、なかなか手ごわいのです。"
+  },
+  {
+    "objectID": "about.html#答えを教えるだけじゃつまらない",
+    "href": "about.html#答えを教えるだけじゃつまらない",
+    "title": "このサイトについて",
+    "section": "",
+    "text": "そこで父は考えました。\nちゃんと片づけられるように、解答集を作ろうか。\nでも、答えをそのまま見せてしまったら、パズルの楽しさがなくなってしまう。\n自分で考えて、試して、やっと最後の一つが収まる。\nその瞬間こそが、面白いのです。\nだったら、答えではなく、ヒントをあげたらどうだろう？\nそうして生まれたのが、\n\n\nAmazonで本を見る ↗\n答えを教えるのではなく、答えにたどり着く楽しさを残すための本です。"
+  },
+  {
+    "objectID": "about.html#そして12人が生まれました",
+    "href": "about.html#そして12人が生まれました",
+    "title": "このサイトについて",
+    "section": "",
+    "text": "そんなペントミノを、今度は少し違う角度から眺めてみました。\nまっすぐな人。\n曲がった人。\n角が好きな人。\nちょっと、はみ出す人。\n同じ5つの四角なのに、なんだか性格が違うように見えてきます。\n気づいたら、12種類の形に、12人分の名前がついていました。\n父はパズルの解き方を考えています。\n私は、パズルの住人たちのことを考えています。\nどちらも、同じ5つの四角から始まりました。"
+  },
+  {
+    "objectID": "about.html#このサイトでできること",
+    "href": "about.html#このサイトでできること",
+    "title": "このサイトについて",
+    "section": "",
+    "text": "12人の仲間たちに会ったり、形を回したり、ひっくり返したり。\nどうして向きの種類が違うのか。\nどうして同じ形に見えるのか。\nどうやったら、みんなで60マスの長方形に収まるのか。\n数学のふしぎを、遊びながら少しずつ探していきます。\nちなみに、形とマス目の数は本物です。\n名前と性格は、創作です。\n本人たちに確認は取っていません。\n12人に会う →\n\n\nFIVE SQUARES. TWELVE PERSONALITIES.\n\n何十年たっても、まだ遊べる。\n今度こそ、12人全員、きれいに収まるでしょうか。\nそれとも、また誰かが一人だけ、外にいるのでしょうか。"
   },
   {
     "objectID": "experimental/celebration/how-it-works.html",
@@ -259,214 +371,130 @@
     "text": "次の実験は？ 🌈\n実験003：五マスのにじ では、Hint も Check も使わずに完成したとき、５色の虹をキャラクターの後ろに出すアイデアを探っています。これはまだこの実験002には入っていません。\n\n🎉 お祝いシミュレーターで遊ぶ\n← ひみつの実験室へ"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "このサイトについて",
+    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html",
+    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html",
+    "title": "How to Play Pentomino",
     "section": "",
-    "text": "ABOUT THIS LITTLE PROJECT\n\n\n\nむかしむかし、といっても、そんなに昔ではないころ。\n父が、木でペントミノのパズルを作りました。\n5つの四角をつなげた、12種類のピース。\n妹と私は、そのパズルで遊びながら育ちました。\n遊ぶのは楽しい。\nでも、ひとつ問題がありました。\nきれいに並べて、しまえない。\nあと一つなのに、入らない。\nこっちを動かすと、あっちが入らない。\n結局、いつも一つだけ、盤の上にちょこんと乗っかっていました。\n片づいているような、片づいていないような。\nでも、それが我が家では普通の光景でした。\nどうやら、これが我が家の正解だったようです。\n\n\nその後、母がペントミノを陶器で作りました。\n今度は、小さなアート作品です。\nさらに時がたち、父は3Dプリンターでもペントミノを作りました。\n木になっても、陶器になっても、プラスチックになっても。\n形は、やっぱり同じ12種類。\nそして、問題も同じでした。\nやっぱり、きれいにしまえない。\nペントミノは、なかなか手ごわいのです。\n\n\n\nそこで父は考えました。\nちゃんと片づけられるように、解答集を作ろうか。\nでも、答えをそのまま見せてしまったら、パズルの楽しさがなくなってしまう。\n自分で考えて、試して、やっと最後の一つが収まる。\nその瞬間こそが、面白いのです。\nだったら、答えではなく、ヒントをあげたらどうだろう？\nそうして生まれたのが、\n\n\nAmazonで本を見る ↗\n答えを教えるのではなく、答えにたどり着く楽しさを残すための本です。\n\n\n\n\nそんなペントミノを、今度は少し違う角度から眺めてみました。\nまっすぐな人。\n曲がった人。\n角が好きな人。\nちょっと、はみ出す人。\n同じ5つの四角なのに、なんだか性格が違うように見えてきます。\n気づいたら、12種類の形に、12人分の名前がついていました。\n父はパズルの解き方を考えています。\n私は、パズルの住人たちのことを考えています。\nどちらも、同じ5つの四角から始まりました。\n\n\n\n12人の仲間たちに会ったり、形を回したり、ひっくり返したり。\nどうして向きの種類が違うのか。\nどうして同じ形に見えるのか。\nどうやったら、みんなで60マスの長方形に収まるのか。\n数学のふしぎを、遊びながら少しずつ探していきます。\nちなみに、形とマス目の数は本物です。\n名前と性格は、創作です。\n本人たちに確認は取っていません。\n12人に会う →\n\n\nFIVE SQUARES. TWELVE PERSONALITIES.\n\n何十年たっても、まだ遊べる。\n今度こそ、12人全員、きれいに収まるでしょうか。\nそれとも、また誰かが一人だけ、外にいるのでしょうか。"
+    "text": "Five little squares. So many possible shapes. And one very important question: where does this piece go?\nPentomino is a puzzle about finding the right place and the right orientation for each piece. Sometimes a piece needs a little turn. Sometimes it needs a flip. And sometimes it seems determined to be difficult. 😆\nThis guide is here when you need a hand. You don’t have to read it all before playing. Jump to whatever you’re curious about.\n\n\n\n\n\n\nWould you rather try it than read about it?\n\n\n\nHead over to Let’s Play! — Gesture Practice to practice tapping, dragging, and flicking with a piece. The interactive tutorial is currently in Japanese.\n\n\n\n\nJust three gestures to get you started!\nTap, draaaag, flick! Master these three moves, and you’re ready to play.\n\n\nTap a piece that hasn’t been placed on the board to rotate it 90° counterclockwise.\nNot quite the right angle? Tap again. And again. Round it goes!\n\n\n\nTouch and hold a piece, then drag it slowly to move it around.\n\nRed outline: You’ve got hold of the piece!\nBlue outline: Here’s a spot where it can go!\nRelease your finger: Place the piece there.\n\nBring the piece near a valid spot on the board, and it’ll snap right into position.\nBut there’s one little catch!\nBlue doesn’t mean you’ve solved it!\nIt simply means the piece fits in that spot. You can check whether it’s the correct placement later.\n\n\n\nGrab a piece, then give it a quick flick and release your finger!\nThe piece flips like a mirror image.\n\n\n\nFlick direction\nWhat happens\n\n\n\n\n← Left or → Right\nFlip horizontally (mirror left to right)\n\n\n↑ Up or ↓ Down\nFlip vertically (mirror top to bottom)\n\n\n\nDon’t worry! Your piece won’t go flying off the screen. 😄\nIt flips right where you release it.\n\n\n\n\n\n\nDrag or flick? What’s the difference?\n\n\n\nIt’s all about speed when you release your finger!\nDrag slowly to move a piece. Flick quickly to flip it.\nIf the app keeps mistaking one for the other, try adjusting the gesture sensitivity under the gear icon ⚙️.\nThe default threshold is 70 mm/second.\n\n\n\nTap to rotate. Drag to move. Flick to flip!\nThree little moves. A whole world of puzzles! 🧩\n\n\n\n\nPentomino has three difficulty modes. No need to earn a black belt on your first day!\n\n\nPractice picking up, moving, and placing pieces.\nThe pieces are presented in placement order, with their orientations already set correctly. You can concentrate on getting comfortable with the controls.\nBest place to start if you’re new.\n\n\n\nPractice rotating and flipping pieces into position.\nThe pieces still appear in placement order, but this time their orientations aren’t prepared for you. You’ll need your tap and flick skills!\n\n\n\nFigure out the solution for yourself.\nThe pieces appear in alphabetical order, and their orientations aren’t preset. You’ll decide which piece goes where — and how it should face.\n\n\n\n\n\n\nYou can change belts whenever you like\n\n\n\nYour progress is saved separately for each belt. Switch modes to suit your mood without losing your place in the others.\n\n\n\n\n\n\n\n\nTap Check to see whether your placed pieces are correct.\nThere’s no point deduction if everything you’ve placed is correct. Incorrect placements, however, may cost points.\n\n\n\nSometimes the pieces simply refuse to cooperate. That’s what Hint is for.\nWhen you request a hint, the app first checks the board and removes incorrectly placed pieces. Then it places one remaining piece in its correct position, working backward from the end of the solution’s placement order.\nThe point deduction covers the number of incorrectly placed pieces plus one hint. Helpful? Absolutely. Free? Not quite! 😉\n\n\n\n\nThere are 10 levels, L1 through L10, with 2,339 puzzles altogether. That’s enough to keep even a dedicated puzzle fan busy for a while.\nUse the ← and → buttons to move between puzzles:\n\nTap: move one puzzle at a time.\nHold for at least 1 second: move by 10 puzzles, roughly every 0.3 seconds.\nKeep holding beyond 3 seconds: move by 100 puzzles, roughly every 0.3 seconds.\n\nPuzzle numbers stay within the range 1–2,339.\n\n\n\n\n\nLevel\nPuzzle numbers\nNumber of puzzles\n\n\n\n\nL1\n1–7\n7\n\n\nL2\n8–40\n33\n\n\nL3\n41–156\n116\n\n\nL4\n157–395\n239\n\n\nL5\n396–668\n273\n\n\nL6\n669–1145\n477\n\n\nL7\n1146–1684\n539\n\n\nL8\n1685–2124\n440\n\n\nL9\n2125–2308\n184\n\n\nL10\n2309–2339\n31\n\n\nTotal\n\n2,339\n\n\n\n\n\n\n\nTap the gear icon at the top of the screen to open Settings. You can also press and hold the puzzle title.\nLanguage: Choose from Japanese, English, Spanish, French, German, Korean, Simplified Chinese, or Traditional Chinese. The instructions change to match your selection.\nCompletion sound: Turn the sound played when you finish a puzzle on or off.\nPlacement feedback: Depending on your device, the app uses either vibration or sound to signal a placement — not both at once.\nDifficulty and history: Progress is stored separately for each belt. Clear History removes the record for the currently selected belt only. Make sure that’s what you want before clearing it.\nSensitivity: Adjust the threshold that separates a swipe from a flick, along with the duration or strength of placement feedback.\n\n\n\nThere’s a reason the pieces arrive in a particular order in White and Yellow Belt modes.\nWhen the app constructs a solution, it fills available spaces beginning at the top left, moving through a column before proceeding to the right. The beginner modes follow that placement order to help you learn.\nSo yes, there is a method to the madness. Your puzzle pieces aren’t entirely making it up as they go!\n\n\n\nIf your first attempt looks like a pile of misplaced shapes, you’re in good company.\nRemember the three moves: tap to rotate, swipe to move, flick to flip.\nThen experiment. Try another angle. Ask for a hint if you need one. Most importantly, have fun discovering where those five-square pieces belong. 🧩\n\n\n\n\n\n\nAbout this guide\n\n\n\nThis is a friendlier English adaptation of the current Japanese app instructions. Features, controls, and scoring details may change between app versions. The interactive gesture tutorial linked above is a separate prototype and may not perfectly match the app’s gesture sensitivity."
   },
   {
-    "objectID": "about.html#木から陶器へそして3dプリントへ",
-    "href": "about.html#木から陶器へそして3dプリントへ",
-    "title": "このサイトについて",
+    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#three-little-moves-to-master",
+    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#three-little-moves-to-master",
+    "title": "How to Play Pentomino",
     "section": "",
-    "text": "その後、母がペントミノを陶器で作りました。\n今度は、小さなアート作品です。\nさらに時がたち、父は3Dプリンターでもペントミノを作りました。\n木になっても、陶器になっても、プラスチックになっても。\n形は、やっぱり同じ12種類。\nそして、問題も同じでした。\nやっぱり、きれいにしまえない。\nペントミノは、なかなか手ごわいのです。"
+    "text": "Just three gestures to get you started!\nTap, draaaag, flick! Master these three moves, and you’re ready to play.\n\n\nTap a piece that hasn’t been placed on the board to rotate it 90° counterclockwise.\nNot quite the right angle? Tap again. And again. Round it goes!\n\n\n\nTouch and hold a piece, then drag it slowly to move it around.\n\nRed outline: You’ve got hold of the piece!\nBlue outline: Here’s a spot where it can go!\nRelease your finger: Place the piece there.\n\nBring the piece near a valid spot on the board, and it’ll snap right into position.\nBut there’s one little catch!\nBlue doesn’t mean you’ve solved it!\nIt simply means the piece fits in that spot. You can check whether it’s the correct placement later.\n\n\n\nGrab a piece, then give it a quick flick and release your finger!\nThe piece flips like a mirror image.\n\n\n\nFlick direction\nWhat happens\n\n\n\n\n← Left or → Right\nFlip horizontally (mirror left to right)\n\n\n↑ Up or ↓ Down\nFlip vertically (mirror top to bottom)\n\n\n\nDon’t worry! Your piece won’t go flying off the screen. 😄\nIt flips right where you release it.\n\n\n\n\n\n\nDrag or flick? What’s the difference?\n\n\n\nIt’s all about speed when you release your finger!\nDrag slowly to move a piece. Flick quickly to flip it.\nIf the app keeps mistaking one for the other, try adjusting the gesture sensitivity under the gear icon ⚙️.\nThe default threshold is 70 mm/second.\n\n\n\nTap to rotate. Drag to move. Flick to flip!\nThree little moves. A whole world of puzzles! 🧩"
   },
   {
-    "objectID": "about.html#答えを教えるだけじゃつまらない",
-    "href": "about.html#答えを教えるだけじゃつまらない",
-    "title": "このサイトについて",
+    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#choose-your-belt",
+    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#choose-your-belt",
+    "title": "How to Play Pentomino",
     "section": "",
-    "text": "そこで父は考えました。\nちゃんと片づけられるように、解答集を作ろうか。\nでも、答えをそのまま見せてしまったら、パズルの楽しさがなくなってしまう。\n自分で考えて、試して、やっと最後の一つが収まる。\nその瞬間こそが、面白いのです。\nだったら、答えではなく、ヒントをあげたらどうだろう？\nそうして生まれたのが、\n\n\nAmazonで本を見る ↗\n答えを教えるのではなく、答えにたどり着く楽しさを残すための本です。"
+    "text": "Pentomino has three difficulty modes. No need to earn a black belt on your first day!\n\n\nPractice picking up, moving, and placing pieces.\nThe pieces are presented in placement order, with their orientations already set correctly. You can concentrate on getting comfortable with the controls.\nBest place to start if you’re new.\n\n\n\nPractice rotating and flipping pieces into position.\nThe pieces still appear in placement order, but this time their orientations aren’t prepared for you. You’ll need your tap and flick skills!\n\n\n\nFigure out the solution for yourself.\nThe pieces appear in alphabetical order, and their orientations aren’t preset. You’ll decide which piece goes where — and how it should face.\n\n\n\n\n\n\nYou can change belts whenever you like\n\n\n\nYour progress is saved separately for each belt. Switch modes to suit your mood without losing your place in the others."
   },
   {
-    "objectID": "about.html#そして12人が生まれました",
-    "href": "about.html#そして12人が生まれました",
-    "title": "このサイトについて",
+    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#a-little-help-when-youre-stuck",
+    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#a-little-help-when-youre-stuck",
+    "title": "How to Play Pentomino",
     "section": "",
-    "text": "そんなペントミノを、今度は少し違う角度から眺めてみました。\nまっすぐな人。\n曲がった人。\n角が好きな人。\nちょっと、はみ出す人。\n同じ5つの四角なのに、なんだか性格が違うように見えてきます。\n気づいたら、12種類の形に、12人分の名前がついていました。\n父はパズルの解き方を考えています。\n私は、パズルの住人たちのことを考えています。\nどちらも、同じ5つの四角から始まりました。"
+    "text": "Tap Check to see whether your placed pieces are correct.\nThere’s no point deduction if everything you’ve placed is correct. Incorrect placements, however, may cost points.\n\n\n\nSometimes the pieces simply refuse to cooperate. That’s what Hint is for.\nWhen you request a hint, the app first checks the board and removes incorrectly placed pieces. Then it places one remaining piece in its correct position, working backward from the end of the solution’s placement order.\nThe point deduction covers the number of incorrectly placed pieces plus one hint. Helpful? Absolutely. Free? Not quite! 😉"
   },
   {
-    "objectID": "about.html#このサイトでできること",
-    "href": "about.html#このサイトでできること",
-    "title": "このサイトについて",
+    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#pick-a-puzzle-2339-to-explore",
+    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#pick-a-puzzle-2339-to-explore",
+    "title": "How to Play Pentomino",
     "section": "",
-    "text": "12人の仲間たちに会ったり、形を回したり、ひっくり返したり。\nどうして向きの種類が違うのか。\nどうして同じ形に見えるのか。\nどうやったら、みんなで60マスの長方形に収まるのか。\n数学のふしぎを、遊びながら少しずつ探していきます。\nちなみに、形とマス目の数は本物です。\n名前と性格は、創作です。\n本人たちに確認は取っていません。\n12人に会う →\n\n\nFIVE SQUARES. TWELVE PERSONALITIES.\n\n何十年たっても、まだ遊べる。\n今度こそ、12人全員、きれいに収まるでしょうか。\nそれとも、また誰かが一人だけ、外にいるのでしょうか。"
+    "text": "There are 10 levels, L1 through L10, with 2,339 puzzles altogether. That’s enough to keep even a dedicated puzzle fan busy for a while.\nUse the ← and → buttons to move between puzzles:\n\nTap: move one puzzle at a time.\nHold for at least 1 second: move by 10 puzzles, roughly every 0.3 seconds.\nKeep holding beyond 3 seconds: move by 100 puzzles, roughly every 0.3 seconds.\n\nPuzzle numbers stay within the range 1–2,339.\n\n\n\n\n\nLevel\nPuzzle numbers\nNumber of puzzles\n\n\n\n\nL1\n1–7\n7\n\n\nL2\n8–40\n33\n\n\nL3\n41–156\n116\n\n\nL4\n157–395\n239\n\n\nL5\n396–668\n273\n\n\nL6\n669–1145\n477\n\n\nL7\n1146–1684\n539\n\n\nL8\n1685–2124\n440\n\n\nL9\n2125–2308\n184\n\n\nL10\n2309–2339\n31\n\n\nTotal\n\n2,339"
   },
   {
-    "objectID": "characters/index.html",
-    "href": "characters/index.html",
-    "title": "12人の仲間たち",
+    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#whats-behind-the-gear-icon",
+    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#whats-behind-the-gear-icon",
+    "title": "How to Play Pentomino",
     "section": "",
-    "text": "MEET THE PENTOMINOES · THE CAST OF TWELVE\n\n\n\nみんな、5つの四角でできています。\nまっすぐな人。曲がった人。\nちょっとはみ出す人。真ん中が好きな人。\n形も性格も、いろいろです。\n本人たちは、いたって普通のつもりです。\n\n12人とも、面積は同じ。 でも、向きを変えたり、ひっくり返したりすると……？\n\n\n↻ ⇋ ボタンを押して、くるくる、ひっくり返してみてください。\n\n\n\n12人を呼んでいます…\n\n\n\n\nA SMALL OBSERVATION\n\n\n\n同じ5マスなのに、向きの種類は人それぞれ。\n8通りの人もいれば、4通りの人も。\n2通りの人もいます。\nそして、Xおじさんは1通り。\n回っても、回っても、同じ形。\n本人は、ちゃんと回っています。\n\n\n← ホームに戻る"
+    "text": "Tap the gear icon at the top of the screen to open Settings. You can also press and hold the puzzle title.\nLanguage: Choose from Japanese, English, Spanish, French, German, Korean, Simplified Chinese, or Traditional Chinese. The instructions change to match your selection.\nCompletion sound: Turn the sound played when you finish a puzzle on or off.\nPlacement feedback: Depending on your device, the app uses either vibration or sound to signal a placement — not both at once.\nDifficulty and history: Progress is stored separately for each belt. Clear History removes the record for the currently selected belt only. Make sure that’s what you want before clearing it.\nSensitivity: Adjust the threshold that separates a swipe from a flick, along with the duration or strength of placement feedback."
   },
   {
-    "objectID": "characters/index.html#回っても変わらない人がいます",
-    "href": "characters/index.html#回っても変わらない人がいます",
-    "title": "12人の仲間たち",
+    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#a-peek-behind-the-puzzle",
+    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#a-peek-behind-the-puzzle",
+    "title": "How to Play Pentomino",
     "section": "",
-    "text": "同じ5マスなのに、向きの種類は人それぞれ。\n8通りの人もいれば、4通りの人も。\n2通りの人もいます。\nそして、Xおじさんは1通り。\n回っても、回っても、同じ形。\n本人は、ちゃんと回っています。"
+    "text": "There’s a reason the pieces arrive in a particular order in White and Yellow Belt modes.\nWhen the app constructs a solution, it fills available spaces beginning at the top left, moving through a column before proceeding to the right. The beginner modes follow that placement order to help you learn.\nSo yes, there is a method to the madness. Your puzzle pieces aren’t entirely making it up as they go!"
   },
   {
-    "objectID": "experimental/celebration/index.html",
-    "href": "experimental/celebration/index.html",
-    "title": "お祝いシミュレーター",
+    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#ready-to-give-it-a-go",
+    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#ready-to-give-it-a-go",
+    "title": "How to Play Pentomino",
     "section": "",
-    "text": "🧪 SECRET LAB · EXPERIMENT 002ピースと遊び方で、お祝いが変わる。みんな、完成おめでとう！\n  \n    \n      ことば日本語English\n      最後に置いたピース\n      レベル1\n      Hint 回数0\n      Check 回数0\n      🎉 完成！\n      もう一回！\n      これは試作品です。実際のゲームとは接続していません。\n    \n    \n      \n      どんなお祝いになるかな？\n      \n      \n      \n      \n    \n  \n\n\n📖 お祝いのしくみを見る"
+    "text": "If your first attempt looks like a pile of misplaced shapes, you’re in good company.\nRemember the three moves: tap to rotate, swipe to move, flick to flip.\nThen experiment. Try another angle. Ask for a hint if you need one. Most importantly, have fun discovering where those five-square pieces belong. 🧩\n\n\n\n\n\n\nAbout this guide\n\n\n\nThis is a friendlier English adaptation of the current Japanese app instructions. Features, controls, and scoring details may change between app versions. The interactive gesture tutorial linked above is a separate prototype and may not perfectly match the app’s gesture sensitivity."
   },
   {
-    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html",
-    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html",
-    "title": "Pentominoの遊び方",
+    "objectID": "experimental/gesture-tutorial/index.html",
+    "href": "experimental/gesture-tutorial/index.html",
+    "title": "まずは遊んでみよう！",
     "section": "",
-    "text": "形も向きも、ちょっとずつ違うピースたち。うまく収まる場所を探して、パズルを完成させましょう。\n「どこに置けばいいの？」「回したいのに動いちゃった！」——そんなときのための遊び方ガイドです。最初から全部読む必要はありません。困ったところだけ、のぞいてみてください。\n\n\n\n\n\n\n読むより先に、さわってみたい？\n\n\n\nまずは遊んでみよう！ で、タップ・スワイプ・フリックを練習できます。\n\n\n\n\nペントミノの基本操作は、たったの３つ！\nトン・すーっと・シュッ！ この３つを覚えれば、準備はばっちりです。\n\n\nまだ盤面にはめていないピースをトンッとタップ！\nピースが反時計回りに90度、くるっと回転します。\n一度で向きが合わなければ、もう一度。\nくるっ、くるっ。何度でも回してみましょう！\n\n\n\nピースに指を置いたまま、すーっと動かす。これがドラッグです。\n\n赤い輪郭：ピースをつかんでいるよ！\n青い輪郭：ここなら置けるよ！\n指を離す：その場所にピースを置きます。\n\nピースが置ける場所に近づくと、ピタッと吸い寄せられます。\nただし、ここでひとつ注意！\n青い輪郭＝正解！ ではありません。\n青は「ここに置けるよ」の合図。正解かどうかは、あとでチェックしてみましょう。\n\n\n\nピースをつかんで、シュッとすばやく払って指を離す！\nこれがフリック。ピースが鏡に映ったように、ぱたんと裏返ります。\n\n\n\n指の動き\nピースの変化\n\n\n\n\n← または → にシュッ！\n左右反転\n\n\n↑ または ↓ にシュッ！\n上下反転\n\n\n\n大丈夫。ピースが画面の外まで飛んでいくわけではありません。😄\n指を離した場所で、ぱたんと反転します。\n\nトンで回転。すーっと移動。シュッで反転！\nさあ、３つの指ワザを使って、ペントミノに挑戦してみましょう！ 🧩\n\n\n\n\n\n\nドラッグとフリック、どう違うの？\n\n\n\n違いは、指を離すときの速さ！\nゆっくり動かせばドラッグ（移動）、シュッと払えばフリック（反転） です。\nうまく区別されないときは、歯車マーク ⚙️ の「感度調整」を試してみてください。\n初期設定では、70 mm/秒 が判定の境目です。\n\n\n\n\n\n\nPentominoには、３つの難易度があります。最初から黒帯に挑む必要はありません！\n\n\nピースを動かして、はめる練習。\nピースは置く順番に並び、向きも最初から合っています。まずは「つかむ」「運ぶ」「置く」に慣れましょう。はじめての人におすすめです。\n\n\n\n回転と反転を使って、向きを合わせる練習。\nピースの順番は白帯と同じですが、向きはそろっていません。タップやフリックの出番です。\n\n\n\n自分で考えて、パズルを解きます。\nピースはアルファベット順で、向きもそろっていません。どこに何を置くか、腕の見せどころです。\n\n\n\n\n\n\n途中で帯を変えても大丈夫\n\n\n\n白帯・黄帯・黒帯の途中経過は別々に保存されます。気分に合わせて切り替えてください。\n\n\n\n\n\n\n\n\n今置いているピースが正しいかどうかを調べます。自信がなくなったら、遠慮なくチェック！\n正しく置けていれば減点されません。 ただし、間違いがある場合は減点の対象になります。\n\n\n\nどうしても先に進めないときは、ヒントを使いましょう。\nヒントを押すと、まず検査が行われ、間違った配置が取り除かれます。その後、まだ置いていないピースのうち、解答の後ろ側から順に１つを正しい場所へ置いてくれます。\n間違っていたピースの数＋ヒント１回分が減点されます。頼れる助っ人ですが、ちょっぴり代償もあります。\n\n\n\n\n問題は L1〜L10 の10レベル。全部で 2,339問 あります。なかなかの長旅です。😆\n画面の ← → ボタンで問題を切り替えます。\n\nポンと押す： １問ずつ移動\n１秒以上押し続ける： 約0.3秒ごとに10問ずつ移動\n３秒を超えて押し続ける： 約0.3秒ごとに100問ずつ移動\n\n問題番号は１〜2,339の範囲で切り替わります。\n\n\n\n\n\nレベル\n問題番号\n問題数\n\n\n\n\nL1\n1–7\n7\n\n\nL2\n8–40\n33\n\n\nL3\n41–156\n116\n\n\nL4\n157–395\n239\n\n\nL5\n396–668\n273\n\n\nL6\n669–1145\n477\n\n\nL7\n1146–1684\n539\n\n\nL8\n1685–2124\n440\n\n\nL9\n2125–2308\n184\n\n\nL10\n2309–2339\n31\n\n\n合計\n\n2,339\n\n\n\n\n\n\n\n画面上部の歯車マークを押すと、設定が開きます。パズル名を長押ししても開けます。\n言語： 日本語、English、Español、Français、Deutsch、한국어、简体中文、繁體中文の８言語から選べます。説明文も選んだ言語に切り替わります。\n完成の音： 完成時の音をオン・オフできます。\nはめ込みの合図： 機種によって振動か音のどちらかで知らせます。両方同時には鳴りません。\n難易度と履歴： 帯ごとに進み具合が保存されます。「履歴を消す」を押すと、その帯の記録だけを消せます。消す前に確認しましょう。\n感度調整： スワイプとフリックの判定の境目や、はめ込みの合図の長さ・強さを調整できます。\n\n\n\nこのアプリでは、解答を組み立てるとき、左上から順に空いた場所を埋めていきます。その列が埋まったら、右へ進みます。\n白帯と黄帯のピースが「置く順番」に並んでいるのは、この仕組みに合わせているから。ちゃんと理由があるんです。\n\n\n\n最初はピースが言うことを聞いてくれなくても、大丈夫。\nポン、すいっ、シュッ。 ３つの指ワザを覚えたら、あとは少しずつ。\nさあ、Pentominoの世界で遊んでみましょう！ 🧩\n\n\n\n\n\n\nこのガイドについて\n\n\n\nこのページは現行のアプリ説明をもとに、初めて遊ぶ人にも読みやすいよう書き直したものです。操作や採点の詳細は、アプリのバージョンによって変わる場合があります。"
+    "text": "説明を読むより、まずはひとつ動かしてみよう！\n指一本で遊べます。ここでは、ピースを 回す・動かす・ひっくり返す 練習をします。失敗しても大丈夫。何度でも試せます。"
   },
   {
-    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#まず覚えたい３つの指ワザ",
-    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#まず覚えたい３つの指ワザ",
-    "title": "Pentominoの遊び方",
+    "objectID": "experimental/gesture-tutorial/index.html#できたらパズルに挑戦",
+    "href": "experimental/gesture-tutorial/index.html#できたらパズルに挑戦",
+    "title": "まずは遊んでみよう！",
+    "section": "できたら、パズルに挑戦！ 🎉",
+    "text": "できたら、パズルに挑戦！ 🎉\nまずは 初心者（白帯） から。うまくいかなくても、ゆっくりで大丈夫です。\nパズルで遊ぶ · 📖 くわしい遊び方： 日本語 / English"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "五マスの人たち。",
     "section": "",
-    "text": "ペントミノの基本操作は、たったの３つ！\nトン・すーっと・シュッ！ この３つを覚えれば、準備はばっちりです。\n\n\nまだ盤面にはめていないピースをトンッとタップ！\nピースが反時計回りに90度、くるっと回転します。\n一度で向きが合わなければ、もう一度。\nくるっ、くるっ。何度でも回してみましょう！\n\n\n\nピースに指を置いたまま、すーっと動かす。これがドラッグです。\n\n赤い輪郭：ピースをつかんでいるよ！\n青い輪郭：ここなら置けるよ！\n指を離す：その場所にピースを置きます。\n\nピースが置ける場所に近づくと、ピタッと吸い寄せられます。\nただし、ここでひとつ注意！\n青い輪郭＝正解！ ではありません。\n青は「ここに置けるよ」の合図。正解かどうかは、あとでチェックしてみましょう。\n\n\n\nピースをつかんで、シュッとすばやく払って指を離す！\nこれがフリック。ピースが鏡に映ったように、ぱたんと裏返ります。\n\n\n\n指の動き\nピースの変化\n\n\n\n\n← または → にシュッ！\n左右反転\n\n\n↑ または ↓ にシュッ！\n上下反転\n\n\n\n大丈夫。ピースが画面の外まで飛んでいくわけではありません。😄\n指を離した場所で、ぱたんと反転します。\n\nトンで回転。すーっと移動。シュッで反転！\nさあ、３つの指ワザを使って、ペントミノに挑戦してみましょう！ 🧩\n\n\n\n\n\n\nドラッグとフリック、どう違うの？\n\n\n\n違いは、指を離すときの速さ！\nゆっくり動かせばドラッグ（移動）、シュッと払えばフリック（反転） です。\nうまく区別されないときは、歯車マーク ⚙️ の「感度調整」を試してみてください。\n初期設定では、70 mm/秒 が判定の境目です。"
+    "text": "FIVE SQUARES. TWELVE PERSONALITIES.\n\n\n\nみんな、5つの四角でできています。\nまっすぐな人。曲がった人。\nちょっとずれた人。なぜか真ん中にいる人。\n全部で12人。\n\n本人たちは、いたって普通のつもりです。\n\n12人に会ってみる →\n\n12 SHAPES · 5 SQUARES EACH · EVERYONE IS DIFFERENT\n\n\n\n\n\nA LITTLE FAMILY HISTORY\n\n\n\n昔、父が木で作ったペントミノのパズル。\n妹と私は、それで遊びながら育ちました。\n遊ぶのは楽しい。\nでも、片づけるのが難しい。\nあと一つなのに、入らない。\nこっちを動かすと、あっちが入らない。\n結局、いつも一つだけ、盤の上に乗っかっていました。\nどうやら、これが我が家の正解だったようです。\nそれから何十年。\n木から陶器へ、そして3Dプリントへ。\n形は進化しました。\n片づけの腕前は、あまり進化しませんでした。\nこのパズルの話を読む →\n\n\n\n\nTHE BASIC FACTS\n\n\n\nペントミノは、5つの正方形を辺でつなげた形。\n回したり、裏返したりして同じになるものを一つと数えると、全部で12種類。\n12人とも材料は同じ。\nでも、形はそれぞれ違います。\nそして、ちょっとした性格の違いもあるようです。\n\n\n\n\nA VERY SATISFYING EQUATION\n\n\n5 × 12 = 60\n\n5マスずつ、12人で60マス。\n6 × 10にも、5 × 12にも、4 × 15にも。\n全員そろえば、いろいろな長方形になれます。\n\n問題は、誰がどこに入るか。\n\n\n\n\n12 PIECES · 60 SQUARES · ONE RECTANGLE\n\n\n\n12人が集まって、6 × 10の長方形。\n全員、ちゃんと入りました。\nでも、この並び方だけが正解ではありません。\n実は、ほかにもいろいろあります。\n\n\n\n\nひとりずつ登場 →\n\n\nもう一度 ↺\n\n\nこの並び方は、ときどき変わります。 12人にも、気分があるのかもしれません。\n\n\n\n\n\n\nMEET · ROTATE · DISCOVER\n\n\n\n回しても変わらない人がいます。\nひっくり返すと、別人みたいになる人もいます。\nなぜでしょう。\nまずは、会ってみてください。\n12人の仲間たち →\n\nSAME FIVE SQUARES. VERY DIFFERENT OPINIONS."
   },
   {
-    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#どの帯から始める",
-    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#どの帯から始める",
-    "title": "Pentominoの遊び方",
+    "objectID": "index.html#片づけるだけのはずだった",
+    "href": "index.html#片づけるだけのはずだった",
+    "title": "五マスの人たち。",
     "section": "",
-    "text": "Pentominoには、３つの難易度があります。最初から黒帯に挑む必要はありません！\n\n\nピースを動かして、はめる練習。\nピースは置く順番に並び、向きも最初から合っています。まずは「つかむ」「運ぶ」「置く」に慣れましょう。はじめての人におすすめです。\n\n\n\n回転と反転を使って、向きを合わせる練習。\nピースの順番は白帯と同じですが、向きはそろっていません。タップやフリックの出番です。\n\n\n\n自分で考えて、パズルを解きます。\nピースはアルファベット順で、向きもそろっていません。どこに何を置くか、腕の見せどころです。\n\n\n\n\n\n\n途中で帯を変えても大丈夫\n\n\n\n白帯・黄帯・黒帯の途中経過は別々に保存されます。気分に合わせて切り替えてください。"
+    "text": "昔、父が木で作ったペントミノのパズル。\n妹と私は、それで遊びながら育ちました。\n遊ぶのは楽しい。\nでも、片づけるのが難しい。\nあと一つなのに、入らない。\nこっちを動かすと、あっちが入らない。\n結局、いつも一つだけ、盤の上に乗っかっていました。\nどうやら、これが我が家の正解だったようです。\nそれから何十年。\n木から陶器へ、そして3Dプリントへ。\n形は進化しました。\n片づけの腕前は、あまり進化しませんでした。\nこのパズルの話を読む →"
   },
   {
-    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#困ったときのお助けボタン",
-    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#困ったときのお助けボタン",
-    "title": "Pentominoの遊び方",
+    "objectID": "index.html#そもそもペントミノって",
+    "href": "index.html#そもそもペントミノって",
+    "title": "五マスの人たち。",
     "section": "",
-    "text": "今置いているピースが正しいかどうかを調べます。自信がなくなったら、遠慮なくチェック！\n正しく置けていれば減点されません。 ただし、間違いがある場合は減点の対象になります。\n\n\n\nどうしても先に進めないときは、ヒントを使いましょう。\nヒントを押すと、まず検査が行われ、間違った配置が取り除かれます。その後、まだ置いていないピースのうち、解答の後ろ側から順に１つを正しい場所へ置いてくれます。\n間違っていたピースの数＋ヒント１回分が減点されます。頼れる助っ人ですが、ちょっぴり代償もあります。"
+    "text": "ペントミノは、5つの正方形を辺でつなげた形。\n回したり、裏返したりして同じになるものを一つと数えると、全部で12種類。\n12人とも材料は同じ。\nでも、形はそれぞれ違います。\nそして、ちょっとした性格の違いもあるようです。"
   },
   {
-    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#問題を選ぼう全部で2339問",
-    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#問題を選ぼう全部で2339問",
-    "title": "Pentominoの遊び方",
+    "objectID": "index.html#人なんとか収まりました",
+    "href": "index.html#人なんとか収まりました",
+    "title": "五マスの人たち。",
     "section": "",
-    "text": "問題は L1〜L10 の10レベル。全部で 2,339問 あります。なかなかの長旅です。😆\n画面の ← → ボタンで問題を切り替えます。\n\nポンと押す： １問ずつ移動\n１秒以上押し続ける： 約0.3秒ごとに10問ずつ移動\n３秒を超えて押し続ける： 約0.3秒ごとに100問ずつ移動\n\n問題番号は１〜2,339の範囲で切り替わります。\n\n\n\n\n\nレベル\n問題番号\n問題数\n\n\n\n\nL1\n1–7\n7\n\n\nL2\n8–40\n33\n\n\nL3\n41–156\n116\n\n\nL4\n157–395\n239\n\n\nL5\n396–668\n273\n\n\nL6\n669–1145\n477\n\n\nL7\n1146–1684\n539\n\n\nL8\n1685–2124\n440\n\n\nL9\n2125–2308\n184\n\n\nL10\n2309–2339\n31\n\n\n合計\n\n2,339"
+    "text": "12人が集まって、6 × 10の長方形。\n全員、ちゃんと入りました。\nでも、この並び方だけが正解ではありません。\n実は、ほかにもいろいろあります。\n\n\n\n\nひとりずつ登場 →\n\n\nもう一度 ↺\n\n\nこの並び方は、ときどき変わります。 12人にも、気分があるのかもしれません。"
   },
   {
-    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#歯車マークの中には何がある",
-    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#歯車マークの中には何がある",
-    "title": "Pentominoの遊び方",
+    "objectID": "index.html#ところでこの12人",
+    "href": "index.html#ところでこの12人",
+    "title": "五マスの人たち。",
     "section": "",
-    "text": "画面上部の歯車マークを押すと、設定が開きます。パズル名を長押ししても開けます。\n言語： 日本語、English、Español、Français、Deutsch、한국어、简体中文、繁體中文の８言語から選べます。説明文も選んだ言語に切り替わります。\n完成の音： 完成時の音をオン・オフできます。\nはめ込みの合図： 機種によって振動か音のどちらかで知らせます。両方同時には鳴りません。\n難易度と履歴： 帯ごとに進み具合が保存されます。「履歴を消す」を押すと、その帯の記録だけを消せます。消す前に確認しましょう。\n感度調整： スワイプとフリックの判定の境目や、はめ込みの合図の長さ・強さを調整できます。"
+    "text": "回しても変わらない人がいます。\nひっくり返すと、別人みたいになる人もいます。\nなぜでしょう。\nまずは、会ってみてください。\n12人の仲間たち →\n\nSAME FIVE SQUARES. VERY DIFFERENT OPINIONS."
   },
   {
-    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#ちょっとだけパズルの裏話",
-    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#ちょっとだけパズルの裏話",
-    "title": "Pentominoの遊び方",
+    "objectID": "research/index.html",
+    "href": "research/index.html",
+    "title": "五マス研究室",
     "section": "",
-    "text": "このアプリでは、解答を組み立てるとき、左上から順に空いた場所を埋めていきます。その列が埋まったら、右へ進みます。\n白帯と黄帯のピースが「置く順番」に並んでいるのは、この仕組みに合わせているから。ちゃんと理由があるんです。"
+    "text": "ペントミノは、たった5つの正方形からできています。\nでも、調べはじめると、疑問はどんどん増えていきます。\nなぜ、この形はここに来るのか？\nなぜ、同じ組み合わせが何度も現れるのか？\nそもそも、偶然ってなんだろう？\nここは、そんな疑問を持ち寄って、データを眺めたり、計算したり、ときどき予想を外したりする場所です。\n答えが見つからなくても、面白い疑問が見つかれば、それは立派な発見。"
   },
   {
-    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#さいごに",
-    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#さいごに",
-    "title": "Pentominoの遊び方",
+    "objectID": "research/index.html#ようこそ五マス研究室へ",
+    "href": "research/index.html#ようこそ五マス研究室へ",
+    "title": "五マス研究室",
     "section": "",
-    "text": "最初はピースが言うことを聞いてくれなくても、大丈夫。\nポン、すいっ、シュッ。 ３つの指ワザを覚えたら、あとは少しずつ。\nさあ、Pentominoの世界で遊んでみましょう！ 🧩\n\n\n\n\n\n\nこのガイドについて\n\n\n\nこのページは現行のアプリ説明をもとに、初めて遊ぶ人にも読みやすいよう書き直したものです。操作や採点の詳細は、アプリのバージョンによって変わる場合があります。"
+    "text": "ペントミノは、たった5つの正方形からできています。\nでも、調べはじめると、疑問はどんどん増えていきます。\nなぜ、この形はここに来るのか？\nなぜ、同じ組み合わせが何度も現れるのか？\nそもそも、偶然ってなんだろう？\nここは、そんな疑問を持ち寄って、データを眺めたり、計算したり、ときどき予想を外したりする場所です。\n答えが見つからなくても、面白い疑問が見つかれば、それは立派な発見。"
   },
   {
-    "objectID": "experimental/index.html",
-    "href": "experimental/index.html",
-    "title": "ひみつの実験室",
-    "section": "",
-    "text": "🧪 ここは、五マスの世界の実験室。\nお父さんが作ったペントミノの世界に、ちょっとした「もしも」を。\n「こんな動きがあったら？」「こんな演出はどう？」\nそんな思いつきを、まずは小さく作って試してみる場所です。\nお父さんに提案する前に、実物を作って見せちゃおう、という作戦。😏\n採用されるかどうかは、また別の話。\nここにあるものは、公式アプリの新機能ではありません。 あくまで、五マスの世界から生まれた非公式の実験です。"
-  },
-  {
-    "objectID": "experimental/index.html#実験001もっとわかりやすくできるかな",
-    "href": "experimental/index.html#実験001もっとわかりやすくできるかな",
-    "title": "ひみつの実験室",
-    "section": "🔬 実験001：もっとわかりやすくできるかな？",
-    "text": "🔬 実験001：もっとわかりやすくできるかな？\nきっかけ：お母さんが、操作方法でちょっと迷った。\nペントミノは楽しい。でも、遊び方がわからないと、楽しさにたどり着けない。\nだったら、説明を増やすより、実際に触って覚えられる場所を作ってみよう！\n\n🧩 まずは遊んでみよう！\nペントミノのピースを動かす、小さな練習場です。\nタップで、くるっ！ 90度回転。\nドラッグで、すいっ！ 好きな場所へ移動。\nフリックで、ぱたん！ ピースを裏返し。\n👉 ジェスチャーを練習する\n\n\n📖 ペントミノの遊び方\n「白帯」から「黒帯」まで。目指せ、ペントミノ名人！🥋\n操作のコツやヒントの使い方を、ゆっくり紹介します。\n日本語で読む\nRead in English"
-  },
-  {
-    "objectID": "experimental/index.html#実験002クリアしたら何が起こる",
-    "href": "experimental/index.html#実験002クリアしたら何が起こる",
-    "title": "ひみつの実験室",
-    "section": "🎉 実験002：クリアしたら、何が起こる？",
-    "text": "🎉 実験002：クリアしたら、何が起こる？\n状態：🧪 試作公開中\nパズルが完成した！\nさて、五マスの仲間たちはどうやってお祝いする？\nヒントを使ったら、いもむしたちが登場。🐛\n答えをチェックしたら、ちょうちょがひらひら。🦋\nどちらも使わずにクリアしたら、お菓子の紙吹雪が大サービス！ 🍬\n最後にはめたピースや難易度を変えて、いろんな「おめでとう！」を実験してみよう。\n👉 お祝いシミュレーターで遊んでみる\nGitHubで実験の記録を見る"
-  },
-  {
-    "objectID": "experimental/index.html#そのほかただいま妄想中",
-    "href": "experimental/index.html#そのほかただいま妄想中",
-    "title": "ひみつの実験室",
-    "section": "🔮 そのほか、ただいま妄想中…",
-    "text": "🔮 そのほか、ただいま妄想中…\n五マスの仲間たちに服を着せてみたり、 カードに変身させてみたり、 新聞を発行してみたり。\nまだ形になっていないアイデアも、ここから少しずつ育てていきます。\n実験は、成功しても失敗しても、何かが残れば大成功。\n\n⚠️ この実験室は、予告なく変わったり、実験が突然なくなったりします。お父さんの公式アプリとは別の場所なので、どうぞ気楽にお楽しみください。"
-  },
-  {
-    "objectID": "research/five-colour-rainbow/index.html",
-    "href": "research/five-colour-rainbow/index.html",
-    "title": "五色の虹は、本当にランダムなのか？",
-    "section": "",
-    "text": "Each row of data/solutions.csv contains twelve pentominoes in an encoded sequence. If we take the last five characters, how often do the same ordered sequences and unordered selections occur?\n\nPermutation key: preserve the source order of the final five characters.\nCombination key: sort those five characters alphabetically.\n\nImportant: The encoded sequence does not necessarily represent the chronological order in which a person placed pieces."
-  },
-  {
-    "objectID": "research/five-colour-rainbow/index.html#research-question",
-    "href": "research/five-colour-rainbow/index.html#research-question",
-    "title": "五色の虹は、本当にランダムなのか？",
-    "section": "",
-    "text": "Each row of data/solutions.csv contains twelve pentominoes in an encoded sequence. If we take the last five characters, how often do the same ordered sequences and unordered selections occur?\n\nPermutation key: preserve the source order of the final five characters.\nCombination key: sort those five characters alphabetically.\n\nImportant: The encoded sequence does not necessarily represent the chronological order in which a person placed pieces."
-  },
-  {
-    "objectID": "research/five-colour-rainbow/index.html#read-the-solutions",
-    "href": "research/five-colour-rainbow/index.html#read-the-solutions",
-    "title": "五色の虹は、本当にランダムなのか？",
-    "section": "Read the solutions",
-    "text": "Read the solutions\n\n\nRows: 2,339\nColumns: 3\n$ group_number &lt;chr&gt; \"#0001\", \"#0002\", \"#0003\", \"#0004\", \"#0005\", \"#0006\", \"#0…\n$ level        &lt;dbl&gt; 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, …\n$ answer       &lt;chr&gt; \"Y060000N044000F050010Z015010U010030P034030X003040I000050…"
-  },
-  {
-    "objectID": "research/five-colour-rainbow/index.html#extract-character-sequence-ignoring-posture",
-    "href": "research/five-colour-rainbow/index.html#extract-character-sequence-ignoring-posture",
-    "title": "五色の虹は、本当にランダムなのか？",
-    "section": "Extract character sequence, ignoring posture",
-    "text": "Extract character sequence, ignoring posture\nEach Answer consists of twelve seven-character records: a pentomino letter followed by six digits (e.g. Y060000). We keep the first character of each record and discard the six digits. We do not reorder the original sequence.\n\n\n\nFinal five pieces: source order versus alphabetical order\n\n\ngroup_number\nlevel\npermutation\ncombination\n\n\n\n\n#0001\n1\nIWLTV\nILTVW\n\n\n#0002\n1\nWILVT\nILTVW\n\n\n#0003\n1\nUZFYN\nFNUYZ\n\n\n#0004\n1\nUZFNY\nFNUYZ\n\n\n#0005\n2\nZXVTP\nPTVXZ\n\n\n#0006\n2\nZXVTP\nPTVXZ\n\n\n#0007\n2\nZXVTP\nPTVXZ\n\n\n#0008\n2\nZXTVP\nPTVXZ\n\n\n#0009\n2\nZXTVP\nPTVXZ\n\n\n#0010\n2\nIUNFY\nFINUY\n\n\n#0011\n3\nINVTZ\nINTVZ\n\n\n#0012\n3\nNZYUP\nNPUYZ\n\n\n\n\n\nFor example, the first solution has the sequence Y → N → F → Z → U → P → X → I → W → L → T → V; the last-five permutation is IWLTV, and its combination key is ILTVW."
-  },
-  {
-    "objectID": "research/five-colour-rainbow/index.html#how-many-possibilities",
-    "href": "research/five-colour-rainbow/index.html#how-many-possibilities",
-    "title": "五色の虹は、本当にランダムなのか？",
-    "section": "How many possibilities?",
-    "text": "How many possibilities?\nThere are \\(\\binom{12}{5}=792\\) possible unordered selections of five distinct pieces, and \\(12!/7!=95,040\\) possible ordered selections. Neither count implies the solution file samples these uniformly.\n\n\n\n\n\nmetric\nvalue\n\n\n\n\nSolutions\n2339\n\n\nObserved permutations\n1016\n\n\nObserved combinations\n421\n\n\nPossible permutations\n95040\n\n\nPossible combinations\n792"
-  },
-  {
-    "objectID": "research/five-colour-rainbow/index.html#most-frequent-combinations",
-    "href": "research/five-colour-rainbow/index.html#most-frequent-combinations",
-    "title": "五色の虹は、本当にランダムなのか？",
-    "section": "Most frequent combinations",
-    "text": "Most frequent combinations\n\n\n\n\n\ncombination\nn\npct\n\n\n\n\nFITUX\n55\n0.0235\n\n\nPUVXZ\n51\n0.0218\n\n\nLNUVZ\n42\n0.0180\n\n\nUVWXZ\n34\n0.0145\n\n\nLUVXZ\n33\n0.0141\n\n\nFTUXY\n31\n0.0133\n\n\nUVWXY\n29\n0.0124\n\n\nILNUX\n25\n0.0107\n\n\nPVWXZ\n22\n0.0094\n\n\nUVXYZ\n22\n0.0094\n\n\nFPUVX\n21\n0.0090\n\n\nUVWYZ\n21\n0.0090\n\n\nIPUVZ\n19\n0.0081\n\n\nFILTX\n18\n0.0077\n\n\nFPTXY\n18\n0.0077\n\n\nLVWYZ\n17\n0.0073\n\n\nNTVWZ\n17\n0.0073\n\n\nFLUVX\n16\n0.0068\n\n\nLTWYZ\n16\n0.0068\n\n\nPUVYZ\n16\n0.0068"
-  },
-  {
-    "objectID": "research/five-colour-rainbow/index.html#most-frequent-permutations",
-    "href": "research/five-colour-rainbow/index.html#most-frequent-permutations",
-    "title": "五色の虹は、本当にランダムなのか？",
-    "section": "Most frequent permutations",
-    "text": "Most frequent permutations\n\n\n\n\n\npermutation\nn\npct\n\n\n\n\nFYUXT\n16\n0.0068\n\n\nIFUXT\n15\n0.0064\n\n\nFXUTI\n14\n0.0060\n\n\nWZVUY\n14\n0.0060\n\n\nWZXVU\n14\n0.0060\n\n\nPZXVU\n13\n0.0056\n\n\nYXZVU\n13\n0.0056\n\n\nWXZUI\n11\n0.0047\n\n\nXINUL\n11\n0.0047\n\n\nXYUFT\n11\n0.0047\n\n\nLVNZU\n10\n0.0043\n\n\nPFUXV\n10\n0.0043\n\n\nPUVZI\n10\n0.0043\n\n\nUVNZL\n10\n0.0043\n\n\nFXPTY\n9\n0.0038\n\n\nLZXVU\n9\n0.0038\n\n\nNXZVU\n9\n0.0038\n\n\nWXUVY\n9\n0.0038\n\n\nXFPTY\n9\n0.0038\n\n\nYFVXU\n9\n0.0038"
-  },
-  {
-    "objectID": "research/five-colour-rainbow/index.html#who-appears-in-the-last-five",
-    "href": "research/five-colour-rainbow/index.html#who-appears-in-the-last-five",
-    "title": "五色の虹は、本当にランダムなのか？",
-    "section": "Who appears in the last five?",
-    "text": "Who appears in the last five?\n\n\n\n\n\npiece\nn\nproportion_of_solutions\nrandom_order_reference\n\n\n\n\nU\n1320\n0.564\n0.417\n\n\nX\n1193\n0.510\n0.417\n\n\nZ\n1176\n0.503\n0.417\n\n\nV\n1174\n0.502\n0.417\n\n\nT\n934\n0.399\n0.417\n\n\nY\n915\n0.391\n0.417\n\n\nL\n910\n0.389\n0.417\n\n\nW\n864\n0.369\n0.417\n\n\nN\n838\n0.358\n0.417\n\n\nF\n808\n0.345\n0.417\n\n\nI\n804\n0.344\n0.417\n\n\nP\n759\n0.324\n0.417"
-  },
-  {
-    "objectID": "research/five-colour-rainbow/index.html#by-puzzle-level",
-    "href": "research/five-colour-rainbow/index.html#by-puzzle-level",
-    "title": "五色の虹は、本当にランダムなのか？",
-    "section": "By puzzle level",
-    "text": "By puzzle level\n\n\n\n\n\nlevel\nsolutions\nunique_permutations\nunique_combinations\n\n\n\n\n1\n4\n4\n2\n\n\n2\n6\n3\n2\n\n\n3\n140\n60\n30\n\n\n4\n242\n88\n33\n\n\n5\n273\n135\n110\n\n\n6\n477\n274\n192\n\n\n7\n540\n337\n213\n\n\n8\n442\n316\n207\n\n\n9\n184\n144\n116\n\n\n10\n31\n28\n27"
-  },
-  {
-    "objectID": "research/five-colour-rainbow/index.html#research-notes",
-    "href": "research/five-colour-rainbow/index.html#research-notes",
-    "title": "五色の虹は、本当にランダムなのか？",
-    "section": "Research notes",
-    "text": "Research notes\n\nDoes the source serialize pieces by board position, solver search order, or another rule?\nHow many solutions share the same final five-piece combination despite different postures?\nHow does the distribution compare with selecting five pieces uniformly at random?\nShould reversed colour sequences count as visually equivalent rainbows?\n\nInterpretation caution: A skew in these results may reflect serialization or enumeration rather than any intrinsic property of pentomino tilings."
+    "objectID": "research/index.html#研究ノート",
+    "href": "research/index.html#研究ノート",
+    "title": "五マス研究室",
+    "section": "研究ノート",
+    "text": "研究ノート\n\n🌈 五色の虹は、本当にランダムなのか？\n12人のペントミノから選ばれる5人。\n2,339個の解答データを調べてみたら、虹によく登場する人と、そうでもない人がいることがわかりました。\n順列と組み合わせを使って、虹の色にひそむ偏りを探ります。\n\n研究はつづく。たぶん、寄り道もしながら。"
   },
   {
     "objectID": "stories/index.html",
