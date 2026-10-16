@@ -1,0 +1,170 @@
+---
+title: "五色の虹は、本当にランダムなのか？"
+subtitle: "12人から選ぶ5人 — 順列と組み合わせの観察"
+author: "五マス研究室"
+format:
+  html:
+    toc: true
+    code-fold: true
+    code-tools: true
+execute:
+  warning: false
+  message: false
+  freeze: auto
+---
+
+## Research question
+
+Each row of `data/solutions.csv` contains twelve pentominoes in an encoded sequence. If we take the **last five characters**, how often do the same ordered sequences and unordered selections occur?
+
+- **Permutation key:** preserve the source order of the final five characters.
+- **Combination key:** sort those five characters alphabetically.
+
+**Important:** The encoded sequence does not necessarily represent the chronological order in which a person placed pieces.
+
+## Read the solutions
+
+```{r}
+#| label: setup
+library(dplyr)
+library(readr)
+library(tidyr)
+library(purrr)
+library(stringr)
+library(ggplot2)
+
+# Supports rendering from the project root or this QMD's folder.
+solutions_path <- if (file.exists("data/solutions.csv")) {
+  "data/solutions.csv"
+} else {
+  "../../data/solutions.csv"
+}
+
+solutions <- read_csv(solutions_path, show_col_types = FALSE) %>%
+  rename(group_number = `Group number`, level = Level, answer = Answer)
+
+glimpse(solutions)
+```
+
+## Extract character sequence, ignoring posture
+
+Each `Answer` consists of twelve seven-character records: a pentomino letter followed by six digits (e.g. `Y060000`). We keep the first character of each record and discard the six digits. We **do not** reorder the original sequence.
+
+```{r}
+#| label: parse-answer
+expected_pieces <- sort(c("F", "I", "L", "N", "P", "T", "U", "V", "W", "X", "Y", "Z"))
+
+extract_piece_sequence <- function(answer) {
+  if (is.na(answer) || !str_detect(answer, "^(?:[FILNPTUVWXYZ][0-9]{6}){12}$")) {
+    stop("Invalid Answer encoding: expected twelve letter + six-digit records")
+  }
+  starts <- seq(1L, 84L, by = 7L)
+  pieces <- str_sub(answer, starts, starts)
+  if (!identical(sort(pieces), expected_pieces)) {
+    stop("Invalid solution: expected all twelve pentominoes exactly once")
+  }
+  pieces
+}
+
+rainbows <- solutions %>%
+  mutate(
+    piece_sequence = map(answer, extract_piece_sequence),
+    last_five = map(piece_sequence, tail, 5L),
+    permutation = map_chr(last_five, paste0, collapse = ""),
+    combination = map_chr(last_five, ~ paste0(sort(.x), collapse = ""))
+  )
+
+rainbows %>%
+  select(group_number, level, permutation, combination) %>%
+  slice_head(n = 12) %>%
+  knitr::kable(caption = "Final five pieces: source order versus alphabetical order")
+```
+
+For example, the first solution has the sequence `r paste(rainbows$piece_sequence[[1]], collapse = " → ")`; the last-five permutation is `r rainbows$permutation[[1]]`, and its combination key is `r rainbows$combination[[1]]`.
+
+## How many possibilities?
+
+There are \\(\\binom{12}{5}=792\\) possible unordered selections of five distinct pieces, and \\(12!/7!=95,040\\) possible ordered selections. Neither count implies the solution file samples these uniformly.
+
+```{r}
+#| label: overview
+tibble(
+  metric = c("Solutions", "Observed permutations", "Observed combinations",
+             "Possible permutations", "Possible combinations"),
+  value = c(nrow(rainbows), n_distinct(rainbows$permutation),
+            n_distinct(rainbows$combination),
+            factorial(12) / factorial(7), choose(12, 5))
+) %>% knitr::kable()
+```
+
+## Most frequent combinations
+
+```{r}
+#| label: combinations
+combination_counts <- rainbows %>%
+  count(combination, sort = TRUE, name = "n") %>%
+  mutate(pct = n / sum(n))
+
+combination_counts %>% slice_head(n = 20) %>% knitr::kable(digits = 4)
+```
+
+## Most frequent permutations
+
+```{r}
+#| label: permutations
+permutation_counts <- rainbows %>%
+  count(permutation, sort = TRUE, name = "n") %>%
+  mutate(pct = n / sum(n))
+
+permutation_counts %>% slice_head(n = 20) %>% knitr::kable(digits = 4)
+```
+
+## Who appears in the last five?
+
+```{r}
+#| label: piece-frequency
+piece_frequency <- rainbows %>%
+  select(group_number, last_five) %>%
+  unnest_longer(last_five, values_to = "piece") %>%
+  count(piece, name = "n") %>%
+  mutate(
+    proportion_of_solutions = n / nrow(rainbows),
+    random_order_reference = 5 / 12
+  ) %>%
+  arrange(desc(n))
+
+knitr::kable(piece_frequency, digits = 3)
+
+ggplot(piece_frequency, aes(x = reorder(piece, n), y = proportion_of_solutions)) +
+  geom_col() +
+  geom_hline(yintercept = 5 / 12, linetype = "dashed") +
+  coord_flip() +
+  labs(x = "Pentomino", y = "Share of solutions",
+       title = "Who appears in the last five?",
+       subtitle = "Dashed line: 5/12 under a uniformly random ordering") +
+  theme_minimal()
+```
+
+## By puzzle level
+
+```{r}
+#| label: by-level
+rainbows %>%
+  group_by(level) %>%
+  summarise(
+    solutions = n(),
+    unique_permutations = n_distinct(permutation),
+    unique_combinations = n_distinct(combination),
+    .groups = "drop"
+  ) %>%
+  knitr::kable()
+```
+
+## Research notes
+
+1. Does the source serialize pieces by board position, solver search order, or another rule?
+2. How many solutions share the same final five-piece combination despite different postures?
+3. How does the distribution compare with selecting five pieces uniformly at random?
+4. Should reversed colour sequences count as visually equivalent rainbows?
+
+**Interpretation caution:** A skew in these results may reflect serialization or enumeration rather than any intrinsic property of pentomino tilings.
