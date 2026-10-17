@@ -34,7 +34,9 @@ website:
 format:
   html:
     theme: cosmo
-    css: assets/css/style.css
+    css:
+      - assets/css/style.css
+      - research/research.css
     toc: false
     page-layout: full
     anchor-sections: false
