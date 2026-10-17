@@ -1,6 +1,6 @@
 ---
 title: "霧が晴れたら、ゴマス村。"
-subtitle: "iPhone お祝い画面・デザイン実験"
+subtitle: "Unity の画面構成を尊重した iPhone お祝い画面の試作"
 format:
   html:
     toc: false
@@ -8,42 +8,49 @@ format:
     css: victory-scene.css
 ---
 
-これは Unity アプリの変更ではなく、**スマートフォン画面のデザイン試作**です。山の生成は[研究室 #84](../../research/mountain-generator/index.qmd)の考え方を再利用しています。
+**現在の Unity 画面の配置をそのまま使う**デザイン実験です。パズル盤面は上、お祝いの風景は下。山の生成は[研究室 #84](../../research/mountain-generator/index.qmd)の数式を再利用しています。
 
 ```{=html}
 <div class="victory-lab" id="victory-lab">
   <div class="victory-settings" aria-label="実験の設定">
+    <strong>🧪 実験のつまみ</strong>
     <label>帯 <select id="v-belt"><option value="white">⚪ 白帯</option><option value="yellow">🟡 黄帯</option><option value="black">⚫ 黒帯</option></select></label>
-    <label>パズル番号 <input id="v-seed" type="number" min="1" max="2339" value="84"></label>
-    <label>最後のピース <select id="v-piece"><option>X</option><option>I</option><option>F</option><option>L</option><option>P</option><option>N</option><option>T</option><option>U</option><option>V</option><option>W</option><option>Y</option><option>Z</option></select></label>
+    <label>パズル番号 <input id="v-seed" type="number" min="1" max="2339" value="43"></label>
+    <label>最後のピース <select id="v-piece"><option>F</option><option>X</option><option>I</option><option>L</option><option>P</option><option>N</option><option>T</option><option>U</option><option>V</option><option>W</option><option>Y</option><option>Z</option></select></label>
     <label>ヒント <input id="v-hints" type="range" min="0" max="5" value="0"><output id="v-hints-value">0</output></label>
     <label>チェック <input id="v-checks" type="range" min="0" max="5" value="0"><output id="v-checks-value">0</output></label>
     <div class="v-actions"><button type="button" id="v-play">▶ プレイ中</button><button type="button" id="v-win">🌈 完成！</button></div>
     <p>ヒント → 雲 ☁️ ／ チェック → カラス 🐦‍⬛ ／ どちらも0回 → 虹 🌈</p>
+    <p class="v-caveat">盤面はスクリーンショットの #0043 を参考にした固定レイアウト例です。番号を変えても実際の解答には切り替わりません。</p>
   </div>
-  <div class="v-phone" aria-label="iPhone sized puzzle and celebration preview">
+  <div class="v-phone" aria-label="Unity layout inspired iPhone puzzle preview">
     <div class="v-screen">
-      <div class="v-status"><span>9:41</span><span>●●● ▰</span></div>
-      <div class="v-head"><span>五マスの人たち。</span><button type="button" id="v-gear" aria-label="設定（試作）">⚙</button></div>
-      <div class="v-scene">
-        <svg id="v-landscape" viewBox="0 0 360 390" preserveAspectRatio="xMidYMid slice" aria-label="山と空"></svg>
-        <div class="v-sky" id="v-sky" aria-hidden="true"></div>
-        <div class="v-victory" id="v-victory" aria-live="polite"><div class="v-character" id="v-character">X</div><strong>完成、おめでとう！</strong><small id="v-victory-note">きれいな虹が出たよ。</small></div>
+      <div class="v-topbar"><button type="button" id="v-gear" aria-label="設定">⚙</button></div>
+      <div class="v-game-title">Pentomino 6x10</div>
+      <div class="v-toolbar">
+        <div class="v-tool-buttons"><button type="button" id="v-check-button">Check</button><button type="button" id="v-hint-button">Hint</button><button type="button" id="v-prev">◀</button><button type="button" id="v-next">▶</button></div>
+        <strong id="v-belt-label">White Belt</strong>
       </div>
-      <div class="v-puzzle-wrap"><div class="v-puzzle-heading"><span id="v-title">パズル #84</span><span id="v-state">挑戦中</span></div><div class="v-board" id="v-board" aria-label="完成パズルのイメージ"></div></div>
-      <div class="v-game-controls"><button type="button" id="v-prev">‹ 前へ</button><button type="button" id="v-hint-button">💡 ヒント</button><button type="button" id="v-check-button">✓ チェック</button><button type="button" id="v-next">次へ ›</button></div>
-      <div class="v-footer">ひみつの実験室 · UI CONCEPT</div>
+      <div class="v-info"><span id="v-check-score">-1</span><span id="v-hint-score">-1</span><span id="v-puzzle-number">0043</span><strong id="v-level-label">Level 3</strong></div>
+      <div class="v-board" id="v-board" aria-label="6 by 10 puzzle layout example"></div>
+      <div class="v-celebration">
+        <svg id="v-landscape" viewBox="0 0 360 320" preserveAspectRatio="xMidYMid slice" aria-label="生成した山の風景"></svg>
+        <div class="v-sky" id="v-sky" aria-hidden="true"></div>
+        <div class="v-victory" id="v-victory" aria-live="polite"><strong id="v-message">Made it!</strong><div class="v-character" id="v-character">F</div><small id="v-victory-note"></small></div>
+        <div class="v-playing" id="v-playing">霧の向こうに、山がある。</div>
+      </div>
     </div>
   </div>
 </div>
 ```
 
-## この試作で確かめたいこと
+## この実験で守ること
 
-- **完成した盤面は残す**。お祝いの文字やキャラクターは盤面の上ではなく、風景の中に配置する。
-- **霧が晴れること自体がお祝い**。プレイ中は山が淡く、完成時に遠景まで見える。
-- **虹・雲・カラスは累積の記録**。ヒントとチェックを使った場合でも、完成は必ず祝う。
-- **パズルのルールは変更しない**。盤面はレイアウト確認用の仮の模様で、実際の解答データではない。
+- **Unity の構成を維持**：タイトル・操作ボタン・帯・番号・レベル → 6×10盤面 → お祝い。
+- **完成した盤面を残す**：お祝いは盤面の下に表示し、盤面を覆わない。
+- **霧の変化**：プレイ中は濃い霧、完成すると薄くなる。
+- **空に残る記録**：ヒント数は雲、チェック数はカラス、どちらもゼロなら虹。
+- **デザイン試作**：盤面の操作や実際の問題番号との対応は未実装。
 
 [研究室：山は、数式でできている。](../../research/mountain-generator/index.qmd) · [Issue #81](https://github.com/chichacha/psychic-pento-guacamole/issues/81) · [Issue #84](https://github.com/chichacha/psychic-pento-guacamole/issues/84)
 
