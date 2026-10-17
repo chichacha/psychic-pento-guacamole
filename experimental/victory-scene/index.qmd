@@ -45,7 +45,7 @@ format:
     <label>チェック <input id="v-checks" type="range" min="0" max="5" value="0"><output id="v-checks-value">0</output></label>
     <div class="v-actions"><button type="button" id="v-play">▶ プレイ中</button><button type="button" id="v-win">🌈 完成！</button></div>
     <p>ヒント → 雲 ☁️ ／ チェック → カラス 🐦‍⬛ ／ どちらも0回 → 虹 🌈</p>
-    <p class="v-caveat">盤面はスクリーンショットの #0043 を参考にした固定レイアウト例です。番号を変えても実際の解答には切り替わりません。</p>
+    <p class="v-caveat">プレイ中は #0672 の途中経過を参考にした未完成の盤面と残りのピース、完成後は完成配置の見本を表示します。番号を変えても実際の解答には切り替わりません。</p>
   </div>
   <div class="v-phone" aria-label="Unity layout inspired iPhone puzzle preview">
     <div class="v-screen">
@@ -59,6 +59,7 @@ format:
       <div class="v-info"><span id="v-check-score">-1</span><span id="v-hint-score">-1</span><span id="v-puzzle-number">0043</span><strong id="v-level-label">Level 3</strong></div>
       <div class="v-board" id="v-board" aria-label="6 by 10 puzzle layout example"></div>
       <div class="v-celebration">
+        <div class="v-loose-pieces" id="v-loose-pieces" aria-label="まだ盤面に置いていないピース"></div>
         <div class="v-sky" id="v-sky" aria-hidden="true"></div>
         <div class="v-victory" id="v-victory" aria-live="polite"><strong id="v-message">Made it!</strong><div class="v-character" id="v-character">F</div><small id="v-victory-note"></small></div>
         <div class="v-playing" id="v-playing">霧の向こうに、山がある。</div>
@@ -153,7 +154,7 @@ format:
 
 このページは**完成したデザインではなく、検討用の試作品**です。山を**画面全体の背景**として描き、盤面と操作ボタンをその手前に置いています。山の配置・霧の濃さ・文字の読みやすさは、これから調整します。
 
-また、盤面はスクリーンショットを参考にした固定の見本です。パズル番号を変えても実際の解答配置には切り替わりません。ヒント・チェックの回数も実際のゲーム記録とは連動していません。
+また、プレイ中と完成後の盤面は、それぞれスクリーンショットを参考にした固定の見本です。パズル番号を変えても実際の解答配置には切り替わりません。ヒント・チェックの回数も実際のゲーム記録とは連動していません。
 
 ## 関連する実験と記録
 
