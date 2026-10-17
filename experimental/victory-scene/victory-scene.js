@@ -1,1 +1,277 @@
-(()=>{"use strict";const root=document.getElementById("victory-lab");if(!root)return;const el=id=>root.querySelector("#"+id);const screen=root.querySelector(".v-screen");const colors={I:"#FDCFAB",F:"#FFADA6",L:"#FEE1A7",P:"#6BB091",N:"#D2E3AD",T:"#76E1D7",U:"#85D7EF",V:"#A9C7E9",W:"#CBBBE8",X:"#F0B6DF",Y:"#FFAFD0",Z:"#ECD2C1"};const palettes={white:["#F2F7FA","#DCEAF2","#BCD5E5","#91B8D0",2],yellow:["#FBF4E7","#F1E7CA","#E6D6AC","#D5C08D",8],black:["#E5EAE5","#BACDBF","#83A38C","#4D775E",16]};let won=false;const hash=n=>{let x=(n>>>0)+0x9e3779b9;x=Math.imul(x^(x>>>16),0x21f0aaad);x=Math.imul(x^(x>>>15),0x735a2d97);return ((x^(x>>>15))>>>0)/4294967296};const phase=(seed,layer,component)=>hash(seed*101+layer*17+component*7919)*2*Math.PI;const clamp=(n,a,b)=>Math.max(a,Math.min(b,n));const svg=(tag,attrs)=>{const node=document.createElementNS("http://www.w3.org/2000/svg",tag);Object.entries(attrs).forEach(([k,v])=>node.setAttribute(k,v));return node};const blend=(a,b,f)=>"#"+[1,3,5].map(i=>Math.round(parseInt(a.slice(i,i+2),16)*(1-f)+parseInt(b.slice(i,i+2),16)*f).toString(16).padStart(2,"0")).join("");function render(){const seed=clamp(Math.round(Number(el("v-seed").value)||84),1,2339),belt=el("v-belt").value,p=palettes[belt],hints=+el("v-hints").value,checks=+el("v-checks").value,piece=el("v-piece").value;el("v-hints-value").textContent=hints;el("v-checks-value").textContent=checks;el("v-puzzle-number").textContent=String(seed).padStart(4,"0");el("v-belt-label").textContent={white:"White Belt",yellow:"Yellow Belt",black:"Black Belt"}[belt];el("v-check-score").textContent=checks||"-1";el("v-hint-score").textContent=hints||"-1";screen.classList.toggle("is-won",won);const canvas=el("v-landscape");canvas.replaceChildren(svg("rect",{width:360,height:760,fill:p[0]}));for(let layer=0;layer<3;layer++){const base=[370,525,665][layer],scale=[.65,.84,1][layer];let d="";for(let x=0;x<=360;x+=3){const t=x/360,level=4;const broad=35*Math.sin(2*Math.PI*(1.2+level*.055)*t+phase(seed,layer,1)+level*.14);const small=14*Math.sin(2*Math.PI*5*t+phase(seed,layer,2));const fine=p[4]*Math.sin(2*Math.PI*13*t+phase(seed,layer,3));d+=(x?" L":"M")+x+" "+(base-scale*(broad+small+fine)).toFixed(2)}const mist=(won?.20:.92)*[.90,.78,.66][layer];canvas.append(svg("path",{d:d+" L360 760 L0 760 Z",fill:blend(p[layer+1],p[0],mist)}))}const sky=el("v-sky");sky.replaceChildren();if(won){if(!hints&&!checks){const rainbow=document.createElement("div");rainbow.className="v-rainbow";sky.append(rainbow)}for(let i=0;i<hints;i++){const cloud=document.createElement("span");cloud.className="v-decor";cloud.textContent="☁️";cloud.style.left=(6+(i*21)%78)+"%";cloud.style.top=(10+(i%3)*15)+"%";sky.append(cloud)}for(let i=0;i<checks;i++){const crow=document.createElement("span");crow.className="v-decor";crow.textContent="🐦‍⬛";crow.style.left=(12+(i*19)%75)+"%";crow.style.top=(9+(i%3)*18)+"%";sky.append(crow)}}el("v-character").textContent=piece;el("v-character").style.background=colors[piece];el("v-victory-note").textContent=!hints&&!checks?"ヒントもチェックもなし！虹が出たよ。":hints+"つの雲と "+checks+"羽のカラスが見にきたよ。";const board=el("v-board");board.replaceChildren();const rows=won?["PPZZNNNTTT","PPZVVVNNTL","PZZVWWFFTL","UUUVXWWFFL","UYUXXXWFLL","YYYYXIIIII"]:["TTTX......","ITXXX.....","ITUXU.....","IVUUU.....","IVYYYY....","IVVVY....."];for(let row=0;row<6;row++)for(let col=0;col<10;col++){const cell=document.createElement("div"),letter=rows[row][col];cell.className="v-cell";cell.textContent=letter;cell.style.background=letter==="."?"#f6f7f7b8":colors[letter];if(letter===".")cell.classList.add("is-empty");if(col===9||rows[row][col+1]!==letter)cell.classList.add("boundary-right");if(row===5||rows[row+1][col]!==letter)cell.classList.add("boundary-bottom");board.append(cell)}const loose=el("v-loose-pieces");loose.replaceChildren();if(!won){const shapes={F:[[1,0],[0,1],[1,1],[2,1],[2,2]],L:[[0,0],[0,1],[0,2],[0,3],[1,3]],N:[[0,0],[0,1],[0,2],[1,2],[1,3]],P:[[0,0],[0,1],[1,1],[0,2],[1,2]],W:[[0,0],[0,1],[1,1],[1,2],[2,2]],Z:[[0,0],[0,1],[1,1],[2,1],[2,2]]};const positions={F:[1,2],L:[35,1],N:[65,2],P:[79,33],W:[2,57],Z:[37,64]};for(const [name,cells] of Object.entries(shapes)){const pieceNode=document.createElement("div");pieceNode.className="v-loose-piece";pieceNode.style.setProperty("--piece-size","34%");pieceNode.style.setProperty("--piece-left",positions[name][0]+"%");pieceNode.style.setProperty("--piece-top",positions[name][1]+"%");pieceNode.style.setProperty("--tile-color",colors[name]);for(const [x,y] of cells){const tile=document.createElement("span");tile.className="v-loose-tile";tile.textContent=name;tile.style.gridColumn=x+1;tile.style.gridRow=y+1;pieceNode.append(tile)}loose.append(pieceNode)}}}function setWon(value){won=value;render()}el("v-play").addEventListener("click",()=>setWon(false));el("v-win").addEventListener("click",()=>setWon(true));for(const id of ["v-belt","v-seed","v-piece","v-hints","v-checks"])el(id).addEventListener("input",render);el("v-hint-button").addEventListener("click",()=>{if(won)return;el("v-hints").value=Math.min(5,+el("v-hints").value+1);render()});el("v-check-button").addEventListener("click",()=>{if(won)return;el("v-checks").value=Math.min(5,+el("v-checks").value+1);render()});for(const [id,delta] of [["v-prev",-1],["v-next",1]])el(id).addEventListener("click",()=>{el("v-seed").value=clamp((+el("v-seed").value||84)+delta,1,2339);setWon(false)});el("v-gear").addEventListener("click",()=>root.querySelector(".victory-settings").scrollIntoView({behavior:"smooth",block:"center"}));render()})();
+(() => {
+  "use strict";
+  const root = document.getElementById("victory-lab");
+  if (!root) return;
+  const el = (id) => root.querySelector("#" + id);
+  const screen = root.querySelector(".v-screen");
+  const colors = {
+    I: "#FDCFAB",
+    F: "#FFADA6",
+    L: "#FEE1A7",
+    P: "#6BB091",
+    N: "#D2E3AD",
+    T: "#76E1D7",
+    U: "#85D7EF",
+    V: "#A9C7E9",
+    W: "#CBBBE8",
+    X: "#F0B6DF",
+    Y: "#FFAFD0",
+    Z: "#ECD2C1",
+  };
+  const palettes = {
+    white: ["#F2F7FA", "#DCEAF2", "#BCD5E5", "#91B8D0", 2],
+    yellow: ["#FBF4E7", "#F1E7CA", "#E6D6AC", "#D5C08D", 8],
+    black: ["#E5EAE5", "#BACDBF", "#83A38C", "#4D775E", 16],
+  };
+  let won = false;
+  const hash = (n) => {
+    let x = (n >>> 0) + 0x9e3779b9;
+    x = Math.imul(x ^ (x >>> 16), 0x21f0aaad);
+    x = Math.imul(x ^ (x >>> 15), 0x735a2d97);
+    return ((x ^ (x >>> 15)) >>> 0) / 4294967296;
+  };
+  const phase = (seed, layer, component) =>
+    hash(seed * 101 + layer * 17 + component * 7919) * 2 * Math.PI;
+  const clamp = (n, a, b) => Math.max(a, Math.min(b, n));
+  const svg = (tag, attrs) => {
+    const node = document.createElementNS("http://www.w3.org/2000/svg", tag);
+    Object.entries(attrs).forEach(([k, v]) => node.setAttribute(k, v));
+    return node;
+  };
+  const blend = (a, b, f) =>
+    "#" +
+    [1, 3, 5]
+      .map((i) =>
+        Math.round(
+          parseInt(a.slice(i, i + 2), 16) * (1 - f) +
+            parseInt(b.slice(i, i + 2), 16) * f
+        )
+          .toString(16)
+          .padStart(2, "0")
+      )
+      .join("");
+  function render() {
+    const seed = clamp(Math.round(Number(el("v-seed").value) || 84), 1, 2339),
+      belt = el("v-belt").value,
+      p = palettes[belt],
+      hints = +el("v-hints").value,
+      checks = +el("v-checks").value,
+      piece = el("v-piece").value;
+    el("v-hints-value").textContent = hints;
+    el("v-checks-value").textContent = checks;
+    el("v-puzzle-number").textContent = String(seed).padStart(4, "0");
+    el("v-belt-label").textContent = {
+      white: "White Belt",
+      yellow: "Yellow Belt",
+      black: "Black Belt",
+    }[belt];
+    el("v-check-score").textContent = checks || "-1";
+    el("v-hint-score").textContent = hints || "-1";
+    screen.classList.toggle("is-won", won);
+    const canvas = el("v-landscape");
+    canvas.replaceChildren(
+      svg("rect", { width: 360, height: 760, fill: p[0] })
+    );
+    for (let layer = 0; layer < 3; layer++) {
+      const base = [370, 525, 665][layer],
+        scale = [0.65, 0.84, 1][layer];
+      let d = "";
+      for (let x = 0; x <= 360; x += 3) {
+        const t = x / 360,
+          level = 4;
+        const broad =
+          35 *
+          Math.sin(
+            2 * Math.PI * (1.2 + level * 0.055) * t +
+              phase(seed, layer, 1) +
+              level * 0.14
+          );
+        const small =
+          14 * Math.sin(2 * Math.PI * 5 * t + phase(seed, layer, 2));
+        const fine =
+          p[4] * Math.sin(2 * Math.PI * 13 * t + phase(seed, layer, 3));
+        d +=
+          (x ? " L" : "M") +
+          x +
+          " " +
+          (base - scale * (broad + small + fine)).toFixed(2);
+      }
+      const mist = (won ? 0.2 : 0.92) * [0.9, 0.78, 0.66][layer];
+      canvas.append(
+        svg("path", {
+          d: d + " L360 760 L0 760 Z",
+          fill: blend(p[layer + 1], p[0], mist),
+        })
+      );
+    }
+    const sky = el("v-sky");
+    sky.replaceChildren();
+    if (won) {
+      if (!hints && !checks) {
+        const rainbow = document.createElement("div");
+        rainbow.className = "v-rainbow";
+        sky.append(rainbow);
+      }
+      for (let i = 0; i < hints; i++) {
+        const cloud = document.createElement("span");
+        cloud.className = "v-decor";
+        cloud.textContent = "☁️";
+        cloud.style.left = 6 + ((i * 21) % 78) + "%";
+        cloud.style.top = 10 + (i % 3) * 15 + "%";
+        sky.append(cloud);
+      }
+      for (let i = 0; i < checks; i++) {
+        const crow = document.createElement("span");
+        crow.className = "v-decor";
+        crow.textContent = "🐦‍⬛";
+        crow.style.left = 12 + ((i * 19) % 75) + "%";
+        crow.style.top = 9 + (i % 3) * 18 + "%";
+        sky.append(crow);
+      }
+    }
+    el("v-character").textContent = piece;
+    el("v-character").style.background = colors[piece];
+    el("v-victory-note").textContent =
+      !hints && !checks
+        ? "ヒントもチェックもなし！虹が出たよ。"
+        : hints + "つの雲と " + checks + "羽のカラスが見にきたよ。";
+    const board = el("v-board");
+    board.replaceChildren();
+    const rows = won
+      ? [
+          "PPZZNNNTTT",
+          "PPZVVVNNTL",
+          "PZZVWWFFTL",
+          "UUUVXWWFFL",
+          "UYUXXXWFLL",
+          "YYYYXIIIII",
+        ]
+      : [
+          "TTTX......",
+          "ITXXX.....",
+          "ITUXU.....",
+          "IVUUU.....",
+          "IVYYYY....",
+          "IVVVY.....",
+        ];
+    for (let row = 0; row < 6; row++)
+      for (let col = 0; col < 10; col++) {
+        const cell = document.createElement("div"),
+          letter = rows[row][col];
+        cell.className = "v-cell";
+        cell.textContent = letter;
+        cell.style.background = letter === "." ? "#f6f7f7b8" : colors[letter];
+        if (letter === ".") cell.classList.add("is-empty");
+        if (col === 9 || rows[row][col + 1] !== letter)
+          cell.classList.add("boundary-right");
+        if (row === 5 || rows[row + 1][col] !== letter)
+          cell.classList.add("boundary-bottom");
+        board.append(cell);
+      }
+    const loose = el("v-loose-pieces");
+    loose.replaceChildren();
+    if (!won) {
+      const shapes = {
+        F: [
+          [1, 0],
+          [0, 1],
+          [1, 1],
+          [2, 1],
+          [2, 2],
+        ],
+        L: [
+          [0, 0],
+          [0, 1],
+          [0, 2],
+          [0, 3],
+          [1, 3],
+        ],
+        N: [
+          [0, 0],
+          [0, 1],
+          [0, 2],
+          [1, 2],
+          [1, 3],
+        ],
+        P: [
+          [0, 0],
+          [0, 1],
+          [1, 1],
+          [0, 2],
+          [1, 2],
+        ],
+        W: [
+          [0, 0],
+          [0, 1],
+          [1, 1],
+          [1, 2],
+          [2, 2],
+        ],
+        Z: [
+          [0, 0],
+          [0, 1],
+          [1, 1],
+          [2, 1],
+          [2, 2],
+        ],
+      };
+      const positions = {
+        F: [1, 2],
+        L: [35, 1],
+        N: [65, 2],
+        P: [79, 33],
+        W: [2, 57],
+        Z: [37, 64],
+      };
+      for (const [name, cells] of Object.entries(shapes)) {
+        const pieceNode = document.createElement("div");
+        pieceNode.className = "v-loose-piece";
+        pieceNode.style.setProperty("--piece-size", "34%");
+        pieceNode.style.setProperty("--piece-left", positions[name][0] + "%");
+        pieceNode.style.setProperty("--piece-top", positions[name][1] + "%");
+        pieceNode.style.setProperty("--tile-color", colors[name]);
+        for (const [x, y] of cells) {
+          const tile = document.createElement("span");
+          tile.className = "v-loose-tile";
+          tile.textContent = name;
+          tile.style.gridColumn = x + 1;
+          tile.style.gridRow = y + 1;
+          pieceNode.append(tile);
+        }
+        loose.append(pieceNode);
+      }
+    }
+  }
+  function setWon(value) {
+    won = value;
+    render();
+  }
+  el("v-play").addEventListener("click", () => setWon(false));
+  el("v-win").addEventListener("click", () => setWon(true));
+  for (const id of ["v-belt", "v-seed", "v-piece", "v-hints", "v-checks"])
+    el(id).addEventListener("input", render);
+  el("v-hint-button").addEventListener("click", () => {
+    if (won) return;
+    el("v-hints").value = Math.min(5, +el("v-hints").value + 1);
+    render();
+  });
+  el("v-check-button").addEventListener("click", () => {
+    if (won) return;
+    el("v-checks").value = Math.min(5, +el("v-checks").value + 1);
+    render();
+  });
+  for (const [id, delta] of [
+    ["v-prev", -1],
+    ["v-next", 1],
+  ])
+    el(id).addEventListener("click", () => {
+      el("v-seed").value = clamp((+el("v-seed").value || 84) + delta, 1, 2339);
+      setWon(false);
+    });
+  el("v-gear").addEventListener("click", () =>
+    root
+      .querySelector(".victory-settings")
+      .scrollIntoView({ behavior: "smooth", block: "center" })
+  );
+  render();
+})();
