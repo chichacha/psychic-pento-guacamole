@@ -32,7 +32,7 @@ format:
 
 帯・パズル番号・最後のピース・ヒント・チェックの回数を変えて、「プレイ中」と「完成！」を見比べてみてください。
 
-**画面の順序は変えません。** 上にタイトルと操作ボタン、その下に6×10の盤面、さらに下にお祝いの領域を残します。
+**画面の順序は変えません。** 上にタイトルと操作ボタン、その下に6×10の盤面、さらに下にお祝いの領域を残します。**山の背景は画面全体に広がり**、プレイ中と完成後で霧の濃さが変わります。
 
 ```{=html}
 <div class="victory-lab" id="victory-lab">
@@ -49,6 +49,7 @@ format:
   </div>
   <div class="v-phone" aria-label="Unity layout inspired iPhone puzzle preview">
     <div class="v-screen">
+      <svg id="v-landscape" class="v-background" viewBox="0 0 360 760" preserveAspectRatio="xMidYMid slice" aria-label="画面全体に広がる生成された山の背景"></svg>
       <div class="v-topbar"><button type="button" id="v-gear" aria-label="設定">⚙</button></div>
       <div class="v-game-title">Pentomino 6x10</div>
       <div class="v-toolbar">
@@ -58,7 +59,6 @@ format:
       <div class="v-info"><span id="v-check-score">-1</span><span id="v-hint-score">-1</span><span id="v-puzzle-number">0043</span><strong id="v-level-label">Level 3</strong></div>
       <div class="v-board" id="v-board" aria-label="6 by 10 puzzle layout example"></div>
       <div class="v-celebration">
-        <svg id="v-landscape" viewBox="0 0 360 320" preserveAspectRatio="xMidYMid slice" aria-label="生成した山の風景"></svg>
         <div class="v-sky" id="v-sky" aria-hidden="true"></div>
         <div class="v-victory" id="v-victory" aria-live="polite"><strong id="v-message">Made it!</strong><div class="v-character" id="v-character">F</div><small id="v-victory-note"></small></div>
         <div class="v-playing" id="v-playing">霧の向こうに、山がある。</div>
@@ -151,7 +151,7 @@ format:
 
 ## この試作の現在地
 
-このページは**完成したデザインではなく、検討用の試作品**です。現状のシミュレーターでは山を主に盤面下のお祝い領域に描いていますが、**最終的な提案は、山の背景を画面全体に敷くこと**です。背景の配置や濃さは次の試作で検証します。
+このページは**完成したデザインではなく、検討用の試作品**です。山を**画面全体の背景**として描き、盤面と操作ボタンをその手前に置いています。山の配置・霧の濃さ・文字の読みやすさは、これから調整します。
 
 また、盤面はスクリーンショットを参考にした固定の見本です。パズル番号を変えても実際の解答配置には切り替わりません。ヒント・チェックの回数も実際のゲーム記録とは連動していません。
 
