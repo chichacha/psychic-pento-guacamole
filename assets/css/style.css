@@ -114,7 +114,7 @@ a:hover {
 }
 
 /* Custom-layout pages draw their own headings; research articles use Quarto's title block. */
-body:not(.research-article) .quarto-title-block {
+body:not(.research-article):not(.experimental-article) .quarto-title-block {
   display: none;
 }
 
