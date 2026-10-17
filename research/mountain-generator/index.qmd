@@ -1,0 +1,363 @@
+---
+title: "山は、数式でできている。"
+subtitle: "12人の背景に、無限の風景をつくる。"
+author: "五マス研究室"
+format:
+  html:
+    toc: true
+    page-layout: full
+    css: mountain.css
+    include-after-body:
+      - text: '<script src="mountain.js" defer></script>'
+---
+
+山を描きたい。でも、山を一枚ずつ描く代わりに、**数式に描いてもらう**ことはできるだろうか？
+
+ここでは波を重ねて、山の輪郭をつくってみます。絵の才能は必要ありません。必要なのは、ちょっとした好奇心です。
+
+## 1. 波をひとつ描いてみる。
+
+まずは、横方向の位置を `t = x / width` で **0〜1** にそろえます。すると、画面が広くても狭くても同じ計算を使えます。
+
+$$h_1(t) = A\sin(2\pi f_1t + \phi_1)$$
+
+```{=html}
+<div class="single-wave" id="single-wave">
+  <div class="single-wave-heading">
+    <strong>波を描く実験 🌊</strong>
+    <span>スライダーを動かすと、数式が描く線も変わります。</span>
+  </div>
+  <svg id="single-wave-svg" viewBox="0 0 800 270" role="img" aria-label="サイン波と、現在の位置 t に対応する点" preserveAspectRatio="xMidYMid meet"></svg>
+  <div class="single-wave-controls">
+    <label>振幅 A <input id="wave-amplitude" type="range" min="0" max="85" value="48" step="1"><output id="wave-amplitude-value">48</output></label>
+    <label>周波数 f <input id="wave-frequency" type="range" min="0.5" max="4" value="1" step="0.5"><output id="wave-frequency-value">1</output></label>
+    <label>位相 φ <input id="wave-phase" type="range" min="-3.14" max="3.14" value="0" step="0.157"><output id="wave-phase-value">0</output></label>
+    <label>位置 t <input id="wave-position" type="range" min="0" max="1" value="0.25" step="0.01"><output id="wave-position-value">0.25</output></label>
+  </div>
+  <p id="single-wave-readout" class="single-wave-readout" aria-live="polite"></p>
+  <button id="single-wave-reset" type="button">波を元に戻す ↺</button>
+</div>
+
+```
+
+- **振幅（しんぷく / amplitude）** $A$：波の高さ。数値を大きくすると、山は高く、谷は深くなる。
+- **周波数（しゅうはすう / frequency）** $f_1$：横幅の中で波が何回繰り返されるか。数値を大きくすると、山と谷の数が増える。
+- **位相（いそう / phase）** $\phi_1$：波の始まる位置。数値を変えると、波の形や高さはそのままで、左右にずれる。
+
+波がゆっくり上下すると、大きくなだらかな丘になります。
+
+## 2. 波を重ねてみる。
+
+次は、もっと細かい波を足してみましょう。
+
+最初の波 **A** は、大きくなだらかな丘。
+
+そこに、少し細かい波 **B** を重ねると、小さな丘や谷が生まれます。
+
+さらに、もっと細かい波 **C** を加えると、山の輪郭がでこぼこしてきます。
+
+実は、3つとも同じ `sin()` という数式。違うのは、波の高さ（振幅）と、繰り返す回数（周波数）だけです。
+
+**大きな丘 ＋ 小さな丘 ＋ でこぼこ ＝ ちょっと山らしい形！**
+
+$$
+h(t) =
+\underbrace{A\sin(2\pi f_1t+\phi_1)}_{\text{大きな丘}}
++
+\underbrace{B\sin(2\pi f_2t+\phi_2)}_{\text{小さな丘}}
++
+\underbrace{C\sin(2\pi f_3t+\phi_3)}_{\text{でこぼこ}}
+$$
+
+**大きな丘 + 小さな丘 + 細かなでこぼこ。** それぞれを別々に見てから、重ね合わせた形を観察できます。
+
+## 3. 山の研究装置 🧪
+
+
+```{=html}
+<div class="mountain-lab" id="mountain-lab">
+
+  <div class="lab-toolbar">
+
+    <div class="lab-field">
+      <div class="lab-field-heading">
+        <label for="belt">帯</label>
+        <details class="math-tip">
+          <summary aria-label="帯の説明">ⓘ</summary>
+          <div class="math-tip-content">
+            <strong>帯の種類</strong>
+            <p>山の色と凹凸の初期設定を切り替えます。数式の変数ではありません。</p>
+          </div>
+        </details>
+      </div>
+      <select id="belt">
+        <option value="white">⚪ 白帯</option>
+        <option value="yellow">🟡 黄帯</option>
+        <option value="black">⚫ 黒帯</option>
+      </select>
+    </div>
+
+    <div class="lab-field">
+      <div class="lab-field-heading">
+        <label for="level">レベル</label>
+        <details class="math-tip">
+          <summary aria-label="レベルの説明">ⓘ</summary>
+          <div class="math-tip-content">
+            <strong>地形の複雑さ</strong>
+            <p>レベルに応じて山の形を変化させます。数式の特定の一文字ではなく、生成ルールに関わる設定です。</p>
+          </div>
+        </details>
+      </div>
+      <div class="lab-input-row">
+        <input id="level" type="range" min="1" max="10" value="4">
+        <output id="level-value" for="level">4</output>
+      </div>
+    </div>
+
+    <div class="lab-field">
+      <div class="lab-field-heading">
+        <label for="seed">パズル番号</label>
+        <details class="math-tip">
+          <summary aria-label="パズル番号の説明">ⓘ</summary>
+          <div class="math-tip-content">
+            <strong>乱数の種（seed）</strong>
+            <p>山の個性を決める番号。同じ番号と同じ設定なら、同じ風景を再現できます。位相 φ などの生成に利用します。</p>
+          </div>
+        </details>
+      </div>
+      <input id="seed" type="number" min="1" max="999999" step="1" value="84">
+    </div>
+
+  </div>
+
+  <div class="lab-figure">
+    <svg
+      id="mountain-scene"
+      viewBox="0 0 900 400"
+      role="img"
+      aria-label="数式で生成した山の風景"
+      preserveAspectRatio="xMidYMid meet"
+    ></svg>
+    <p class="scene-note" id="scene-note" aria-live="polite"></p>
+  </div>
+
+  <div class="lab-controls">
+
+    <div class="lab-field">
+      <div class="lab-field-heading">
+        <label for="broad">大きな丘の高さ <span class="math-symbol">A</span></label>
+        <details class="math-tip">
+          <summary aria-label="振幅 A の説明">ⓘ</summary>
+          <div class="math-tip-content">
+            <strong>振幅 A（しんぷく）</strong>
+            <p>大きな波の高さ。数値を大きくすると、山は高く、谷は深くなります。</p>
+          </div>
+        </details>
+      </div>
+      <div class="lab-input-row">
+        <input id="broad" type="range" min="0" max="75" value="35">
+        <output id="broad-value" for="broad">35</output>
+      </div>
+    </div>
+
+    <div class="lab-field">
+      <div class="lab-field-heading">
+        <label for="small">小さな丘の高さ <span class="math-symbol">B</span></label>
+        <details class="math-tip">
+          <summary aria-label="振幅 B の説明">ⓘ</summary>
+          <div class="math-tip-content">
+            <strong>振幅 B（しんぷく）</strong>
+            <p>小さな波の高さ。数値を大きくすると、小さな丘や谷の影響が強くなります。</p>
+          </div>
+        </details>
+      </div>
+      <div class="lab-input-row">
+        <input id="small" type="range" min="0" max="35" value="14">
+        <output id="small-value" for="small">14</output>
+      </div>
+    </div>
+
+    <div class="lab-field">
+      <div class="lab-field-heading">
+        <label for="rough">細かな凹凸 <span class="math-symbol">C</span></label>
+        <details class="math-tip">
+          <summary aria-label="振幅 C の説明">ⓘ</summary>
+          <div class="math-tip-content">
+            <strong>振幅 C（しんぷく）</strong>
+            <p>細かい波の高さ。数値を大きくすると、山の輪郭がでこぼこしてきます。</p>
+          </div>
+        </details>
+      </div>
+      <div class="lab-input-row">
+        <input id="rough" type="range" min="0" max="24" value="5">
+        <output id="rough-value" for="rough">5</output>
+      </div>
+    </div>
+
+    <div class="lab-field">
+      <div class="lab-field-heading">
+        <label for="frequency">小さな丘の数 <span class="math-symbol">f₂</span></label>
+        <details class="math-tip">
+          <summary aria-label="周波数 f2 の説明">ⓘ</summary>
+          <div class="math-tip-content">
+            <strong>周波数 f₂（しゅうはすう）</strong>
+            <p>横幅の中で小さな波が何回繰り返されるか。数値を大きくすると、波の間隔が狭くなります。</p>
+          </div>
+        </details>
+      </div>
+      <div class="lab-input-row">
+        <input id="frequency" type="range" min="2" max="12" value="5">
+        <output id="frequency-value" for="frequency">5</output>
+      </div>
+    </div>
+
+    <div class="lab-field">
+      <div class="lab-field-heading">
+        <label for="mist">霧の濃さ <span class="math-symbol">mist</span></label>
+        <details class="math-tip">
+          <summary aria-label="霧の濃さの説明">ⓘ</summary>
+          <div class="math-tip-content">
+            <strong>大気遠近法</strong>
+            <p>山の形ではなく、色の見え方を変えます。遠くの山ほど空の色に近づけて、奥行きを表現します。</p>
+          </div>
+        </details>
+      </div>
+      <div class="lab-input-row">
+        <input id="mist" type="range" min="0" max="90" value="35">
+        <output id="mist-value" for="mist">35</output>
+      </div>
+    </div>
+
+  </div>
+
+  <fieldset class="wave-choices">
+    <legend>どの波を見たい？</legend>
+    <label><input type="radio" name="wave" value="combined" checked> 合成</label>
+    <label><input type="radio" name="wave" value="broad"> 大きな丘</label>
+    <label><input type="radio" name="wave" value="small"> 小さな丘</label>
+    <label><input type="radio" name="wave" value="fine"> 細かな凹凸</label>
+  </fieldset>
+
+  <div class="lab-actions">
+    <button id="reset" type="button">初期値に戻す</button>
+    <button id="next-seed" type="button">別の山を見に行く ↗</button>
+  </div>
+
+  <p class="lab-explain" id="lab-explain" aria-live="polite"></p>
+
+</div>
+```
+
+
+## 4. 3つの波から、3つの山へ。
+
+ここまで、3つの波を足して、ひとつの山の輪郭をつくりました。
+
+でも、ゴマス村の風景には、山が1本しかないわけではありません。
+
+**遠くの山、中くらいの距離の山、手前の山。**
+
+実は、どの山も同じ数式から生まれています。
+
+違うのは、波の高さ、繰り返す回数、始まる位置。そして、画面の中での高さです。
+
+それぞれの山の輪郭を、次のように呼ぶことにします。
+
+- $h_{\text{back}}(t)$：遠くの山（遠景）
+- $h_{\text{middle}}(t)$：中くらいの距離の山（中景）
+- $h_{\text{front}}(t)$：手前の山（前景）
+
+つまり、**同じ数式を3回使って、3本の異なる輪郭をつくっている**のです。
+
+そして、遠くの山から順番に描いて、手前の山を重ねます。
+
+ここには、2種類の「重ねる」があります。
+
+- **波を足す**：3つの波を計算で足して、1本の山の輪郭をつくる。
+- **山を重ねる**：3本の輪郭をそれぞれ塗りつぶして、遠くから手前へ描く。
+
+波は数式の中で足し算。山は画面の上で重ね描き。
+
+似ているようで、ちょっと違います。
+
+## 5. 白帯から黒帯へ。
+
+帯によって、山の**色**と**険しさ**を変えることにしました。
+
+白帯は、青みがかった穏やかな山。黄帯は、あたたかな黄金色の丘。黒帯は、深い森の色をした険しい山。
+
+色だけでなく、細かな波の強さも変えています。
+
+ただし、山の険しさは、本当のパズルの難易度を測定したものではありません。
+
+**これは、ゴマス村の風景を楽しくするためのデザイン上の約束です。**
+
+レベルを変えると、山の輪郭も少しずつ変わります。
+
+ここでは、3つの役割を分けています。
+
+- **帯**：色のパレットと基本の険しさ
+- **レベル**：山の形の変化
+- **パズル番号**：再現可能な山の個性
+
+ちなみに、この実験室ではレベルとパズル番号を自由に組み合わせられます。実際のパズルでは、問題番号ごとにレベルが決まっています。
+
+実験室だからこそ、同じ番号の山を、違うレベルで眺めてみることもできるのです。
+
+## 6. 同じ山に、もう一度会える？
+
+山の形を毎回完全にランダムに決めてしまうと、同じ風景にもう一度出会えるとは限りません。
+
+そこで、パズル番号を**乱数の種（seed）**に使います。
+
+この種から**疑似乱数（ぎじらんすう / pseudorandom numbers）**をつくって、波の位相（いそう）を決めています。
+
+疑似乱数とは、ランダムに見えるけれど、決まった計算から生まれる数のこと。
+
+例えば、波の位相を決めるために、こんな計算を使っています。
+
+`hash(seed * 101 + layer * 17 + component * 7919) * 2 * Math.PI`
+
+ここで、`seed` はパズル番号、`layer` は遠景・中景・前景の区別、`component` はどの波を計算しているかを表します。
+
+101、17、7919は、入力を混ぜ合わせるために選んだ数字。特別な山の法則ではありません。
+
+同じ番号・帯・レベル・設定なら、同じ風景を再現できます。
+
+`Math.random()` は使いません。
+
+**偶然に見える。でも、偶然ではない。**
+
+## 7. 霧は何をしている？
+
+遠くの山ほど、背景に近い色になり、輪郭が淡くなる。
+
+こうした奥行きの表現を**大気遠近法（たいきえんきんほう）**といいます。
+
+霧は、山の形そのものを変えません。
+
+変えているのは、山の*見え方*です。
+
+同じ3本の山でも、色の重なり方を変えるだけで、ずいぶん違う風景になります。
+
+もちろん、霧の濃さはパズルの成績とは無関係です。
+
+## おわりに
+
+ひとつの波から始めて、3つの波を足してみる。
+
+できた輪郭を3本重ねて、色をつける。
+
+そこに、パズル番号から生まれた疑似乱数と、少しの霧を加える。
+
+すると、数式から風景が生まれました。
+
+もちろん、これは地質学的な山のシミュレーションではありません。
+
+**数式を使った、ちょっと不思議な風景のデザイン**です。
+
+ゴマス村の山は、今日も計算されています。🌄
+
+[ひみつの実験室](../../experimental/index.qmd)では、こうした発見をゲームの背景に応用できるか試しています（[UI facelift issue #81](https://github.com/chichacha/psychic-pento-guacamole/issues/81)）。
+
+*役に立つかどうかは、調べてから考えよう。* 🌈

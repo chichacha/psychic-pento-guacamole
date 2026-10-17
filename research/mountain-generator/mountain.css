@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap');
+
+.mountain-lab {
+    --forest: #335d4c;
+    --line: #d7dbd2;
+    font-family: 'Zen Maru Gothic', system-ui, sans-serif;
+    background: #fffefa;
+    color: #263b31;
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    padding: clamp(14px, 3vw, 28px);
+    margin: 2rem auto;
+    max-width: 1000px;
+    box-shadow: 0 10px 36px #253b2a0d;
+}
+
+.mountain-lab * {
+    box-sizing: border-box;
+}
+
+.mountain-lab .lab-toolbar,
+.mountain-lab .lab-controls {
+    display: grid;
+    gap: 16px;
+}
+
+.mountain-lab .lab-toolbar {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-bottom: 20px;
+}
+
+.mountain-lab .lab-controls {
+    grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+    margin-top: 24px;
+}
+
+.mountain-lab label {
+    font-size: .9rem;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.mountain-lab input[type=range] {
+    width: 100%;
+    accent-color: var(--forest);
+    cursor: pointer;
+}
+
+.mountain-lab select,
+.mountain-lab input[type=number] {
+    width: 100%;
+    min-width: 0;
+    padding: 9px 10px;
+    border: 1px solid #c7d1c9;
+    border-radius: 9px;
+    background: white;
+    color: #263b31;
+}
+
+.mountain-lab output {
+    font-size: .8rem;
+    color: #536b5e;
+    font-variant-numeric: tabular-nums;
+}
+
+.mountain-lab .lab-figure {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    background: #f5f3ed;
+}
+
+.mountain-lab svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.mountain-lab .scene-note {
+    position: absolute;
+    top: 12px;
+    left: 14px;
+    background: #fffefad9;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: .8rem;
+    margin: 0;
+}
+
+.mountain-lab .wave-choices {
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    margin-top: 22px;
+    padding: 12px 16px;
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.mountain-lab .wave-choices legend {
+    font-weight: 700;
+    font-size: .9rem;
+    padding: 0 5px;
+}
+
+.mountain-lab .wave-choices label {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+    font-weight: 500;
+}
+
+.mountain-lab .wave-choices input {
+    accent-color: var(--forest);
+}
+
+.mountain-lab .lab-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.mountain-lab button {
+    border: 1px solid #9fb8a7;
+    border-radius: 999px;
+    background: #eff5ef;
+    padding: 9px 16px;
+    color: #294b39;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.mountain-lab button:hover {
+    background: #deecdf;
+}
+
+.mountain-lab button:focus-visible,
+.mountain-lab input:focus-visible,
+.mountain-lab select:focus-visible {
+    outline: 3px solid #6bb091;
+    outline-offset: 3px;
+}
+
+.mountain-lab .lab-explain {
+    color: #536b5e;
+    margin: 16px 0 0;
+    line-height: 1.7;
+}
+
+@media(max-width:650px) {
+    .mountain-lab .lab-toolbar {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .mountain-lab .lab-toolbar label:last-child {
+        grid-column: 1/-1;
+    }
+
+    .mountain-lab .lab-controls {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(max-width:430px) {
+    .mountain-lab .lab-controls {
+        grid-template-columns: 1fr;
+    }
+
+    .mountain-lab .scene-note {
+        font-size: .68rem;
+    }
+}
+
+/* Section 1: one sine wave */
+.single-wave {
+    max-width: 1000px;
+    margin: 1.5rem auto 2rem;
+    padding: clamp(14px, 3vw, 26px);
+    border: 1px solid #d7dbd2;
+    border-radius: 22px;
+    background: #fffefa;
+    color: #263b31;
+    font-family: 'Zen Maru Gothic', system-ui, sans-serif;
+}
+
+.single-wave * {
+    box-sizing: border-box;
+}
+
+.single-wave-heading {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 8px 16px;
+    margin-bottom: 15px;
+}
+
+.single-wave-heading strong {
+    font-size: 1.15rem;
+}
+
+.single-wave-heading span,
+.single-wave-readout {
+    color: #536b5e;
+    font-size: .9rem;
+}
+
+.single-wave svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.single-wave-controls {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px 24px;
+    margin: 20px 0 12px;
+}
+
+.single-wave label {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: .9rem;
+    font-weight: 700;
+}
+
+.single-wave input[type=range] {
+    width: 100%;
+    accent-color: #335d4c;
+    cursor: pointer;
+}
+
+.single-wave output {
+    color: #536b5e;
+    font-variant-numeric: tabular-nums;
+    font-size: .85rem;
+}
+
+.single-wave-readout {
+    min-height: 1.5em;
+    line-height: 1.6;
+}
+
+.single-wave button {
+    border: 1px solid #9fb8a7;
+    border-radius: 999px;
+    background: #eff5ef;
+    padding: 9px 16px;
+    color: #294b39;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.single-wave button:focus-visible,
+.single-wave input:focus-visible {
+    outline: 3px solid #6bb091;
+    outline-offset: 3px;
+}
+
+@media(max-width:550px) {
+    .single-wave-controls {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+/* -----------------------------------
+   Mountain Lab: labels and math tips
+   ----------------------------------- */
+
+.mountain-lab .lab-field {
+  min-width: 0;
+}
+
+.mountain-lab .lab-field-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.mountain-lab .lab-field-heading > label {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.mountain-lab .math-symbol {
+  display: inline-block;
+  padding: 0.1rem 0.4rem;
+  border-radius: 5px;
+  background: #e8eee9;
+  color: #335d4c;
+  font-family: ui-monospace, monospace;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.mountain-lab .lab-input-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.mountain-lab .lab-input-row input[type="range"] {
+  flex: 1;
+  min-width: 0;
+}
+
+.mountain-lab .lab-input-row output {
+  min-width: 2.5ch;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Click / tap to reveal a mathematical explanation */
+
+.mountain-lab .math-tip {
+  display: inline-block;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.mountain-lab .math-tip summary {
+  display: inline-grid;
+  place-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid #9caea3;
+  border-radius: 50%;
+  color: #335d4c;
+  background: #fffefa;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  list-style: none;
+  user-select: none;
+}
+
+.mountain-lab .math-tip summary::-webkit-details-marker {
+  display: none;
+}
+
+.mountain-lab .math-tip summary:hover,
+.mountain-lab .math-tip summary:focus-visible {
+  background: #e8eee9;
+  border-color: #335d4c;
+}
+
+.mountain-lab .math-tip summary:focus-visible {
+  outline: 2px solid #335d4c;
+  outline-offset: 3px;
+}
+
+.mountain-lab .math-tip-content {
+  position: absolute;
+  z-index: 30;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  width: min(260px, 75vw);
+  padding: 0.9rem 1rem;
+  border: 1px solid #d7dbd2;
+  border-radius: 10px;
+  background: #fffefa;
+  color: #252b29;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  font-size: 0.85rem;
+  line-height: 1.65;
+}
+
+.mountain-lab .math-tip-content strong {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: #335d4c;
+}
+
+.mountain-lab .math-tip-content p {
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .mountain-lab .math-tip-content {
+    width: min(240px, 70vw);
+  }
+}
