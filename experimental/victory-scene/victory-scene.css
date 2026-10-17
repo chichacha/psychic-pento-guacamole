@@ -7,3 +7,12 @@
 .v-board{box-shadow:0 3px 12px #253d4929}
 .v-topbar button,.v-game-title,.v-toolbar strong,.v-info strong,.v-info span:nth-child(3){color:#253d3a;text-shadow:0 1px 3px #ffffffba}
 .v-playing{background:#ffffffa8;display:table;margin:auto;left:50%;right:auto;transform:translateX(-50%);white-space:nowrap;padding:5px 11px;border-radius:12px}
+
+/* Playing state: loose pentominoes on the shared mountain landscape */
+.v-loose-pieces{position:absolute;inset:8px 2px 12px;display:block;pointer-events:none}
+.v-loose-piece{position:absolute;display:grid;grid-template-columns:repeat(5,1fr);grid-template-rows:repeat(5,1fr);width:var(--piece-size);height:var(--piece-size);left:var(--piece-left);top:var(--piece-top)}
+.v-loose-tile{display:grid;place-items:center;background:var(--tile-color);border:1.5px solid #171717;color:#151515;font-size:clamp(11px,2.7vw,17px);line-height:1}
+.v-screen.is-won .v-loose-pieces{display:none}
+.v-screen:not(.is-won) .v-celebration{border:0}
+.v-screen:not(.is-won) .v-playing{display:none}
+.v-cell.is-empty{background:#f6f7f7b8;color:transparent}
