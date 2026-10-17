@@ -473,77 +473,77 @@
     "href": "research/five-colour-rainbow/index.html",
     "title": "五色の虹は、本当にランダムなのか？",
     "section": "",
-    "text": "Each row of data/solutions.csv contains twelve pentominoes in an encoded sequence. If we take the last five characters, how often do the same ordered sequences and unordered selections occur?\n\nPermutation key: preserve the source order of the final five characters.\nCombination key: sort those five characters alphabetically.\n\nImportant: The encoded sequence does not necessarily represent the chronological order in which a person placed pieces."
+    "text": "data/solutions.csv には、12種類のペントミノの並びが記録されています。\n今回は、そのうち 最後に登場する5人 に注目してみます。\n同じ5人組は、どれくらいの頻度で登場するのでしょうか？ また、5人の並ぶ順番まで考えると、どんな違いが見えてくるのでしょうか？\nここで登場するのが、数学の2つの考え方です。\n\n組み合わせ（Combination）順列（Permutation）\n\n\n誰が選ばれたか？\nI・F・L・N・P と P・N・L・F・I は、 並び順が違っても同じ組み合わせです。\n\n\nどの順番で並んだか？\nI・F・L・N・P と P・N・L・F・I は、 異なる順列です。\n\n\n\n今回の分析では、組み合わせは5人をアルファベット順に並べて表し、順列は元データに記録された順番をそのまま使います。\nひとつ注意！ データに記録された順番が、実際に人間がピースを置いた順番とは限りません。\n\n\n\n\n\n\n🌱 豆知識：英語の語源\n\n\n\n\n\nCombination はラテン語の combinare （結び合わせる）に由来します。\nPermutation はラテン語の permutare （交換する、すっかり変える）に由来します。\n「誰を組み合わせるか」と 「どう並び替えるか」。\n言葉の成り立ちにも違いがあります！"
   },
   {
-    "objectID": "research/five-colour-rainbow/index.html#research-question",
-    "href": "research/five-colour-rainbow/index.html#research-question",
+    "objectID": "research/five-colour-rainbow/index.html#研究の問い",
+    "href": "research/five-colour-rainbow/index.html#研究の問い",
     "title": "五色の虹は、本当にランダムなのか？",
     "section": "",
-    "text": "Each row of data/solutions.csv contains twelve pentominoes in an encoded sequence. If we take the last five characters, how often do the same ordered sequences and unordered selections occur?\n\nPermutation key: preserve the source order of the final five characters.\nCombination key: sort those five characters alphabetically.\n\nImportant: The encoded sequence does not necessarily represent the chronological order in which a person placed pieces."
+    "text": "data/solutions.csv には、12種類のペントミノの並びが記録されています。\n今回は、そのうち 最後に登場する5人 に注目してみます。\n同じ5人組は、どれくらいの頻度で登場するのでしょうか？ また、5人の並ぶ順番まで考えると、どんな違いが見えてくるのでしょうか？\nここで登場するのが、数学の2つの考え方です。\n\n組み合わせ（Combination）順列（Permutation）\n\n\n誰が選ばれたか？\nI・F・L・N・P と P・N・L・F・I は、 並び順が違っても同じ組み合わせです。\n\n\nどの順番で並んだか？\nI・F・L・N・P と P・N・L・F・I は、 異なる順列です。\n\n\n\n今回の分析では、組み合わせは5人をアルファベット順に並べて表し、順列は元データに記録された順番をそのまま使います。\nひとつ注意！ データに記録された順番が、実際に人間がピースを置いた順番とは限りません。\n\n\n\n\n\n\n🌱 豆知識：英語の語源\n\n\n\n\n\nCombination はラテン語の combinare （結び合わせる）に由来します。\nPermutation はラテン語の permutare （交換する、すっかり変える）に由来します。\n「誰を組み合わせるか」と 「どう並び替えるか」。\n言葉の成り立ちにも違いがあります！"
   },
   {
-    "objectID": "research/five-colour-rainbow/index.html#read-the-solutions",
-    "href": "research/five-colour-rainbow/index.html#read-the-solutions",
+    "objectID": "research/five-colour-rainbow/index.html#解答データを読み込む",
+    "href": "research/five-colour-rainbow/index.html#解答データを読み込む",
     "title": "五色の虹は、本当にランダムなのか？",
-    "section": "Read the solutions",
-    "text": "Read the solutions\n\n\nRows: 2,339\nColumns: 3\n$ group_number &lt;chr&gt; \"#0001\", \"#0002\", \"#0003\", \"#0004\", \"#0005\", \"#0006\", \"#0…\n$ level        &lt;dbl&gt; 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, …\n$ answer       &lt;chr&gt; \"Y060000N044000F050010Z015010U010030P034030X003040I000050…"
+    "section": "解答データを読み込む",
+    "text": "解答データを読み込む\n\n\nRows: 2,339\nColumns: 3\n$ group_number &lt;chr&gt; \"#0001\", \"#0002\", \"#0003\", \"#0004\", \"#0005\", \"#0006\", \"#0…\n$ level        &lt;dbl&gt; 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, …\n$ answer       &lt;chr&gt; \"Y060000N044000F050010Z015010U010030P034030X003040I000050…"
   },
   {
-    "objectID": "research/five-colour-rainbow/index.html#extract-character-sequence-ignoring-posture",
-    "href": "research/five-colour-rainbow/index.html#extract-character-sequence-ignoring-posture",
+    "objectID": "research/five-colour-rainbow/index.html#向きや位置を除き登場順だけを取り出す",
+    "href": "research/five-colour-rainbow/index.html#向きや位置を除き登場順だけを取り出す",
     "title": "五色の虹は、本当にランダムなのか？",
-    "section": "Extract character sequence, ignoring posture",
-    "text": "Extract character sequence, ignoring posture\nEach Answer consists of twelve seven-character records: a pentomino letter followed by six digits (e.g. Y060000). We keep the first character of each record and discard the six digits. We do not reorder the original sequence.\n\n\n\nFinal five pieces: source order versus alphabetical order\n\n\ngroup_number\nlevel\npermutation\ncombination\n\n\n\n\n#0001\n1\nIWLTV\nILTVW\n\n\n#0002\n1\nWILVT\nILTVW\n\n\n#0003\n1\nUZFYN\nFNUYZ\n\n\n#0004\n1\nUZFNY\nFNUYZ\n\n\n#0005\n2\nZXVTP\nPTVXZ\n\n\n#0006\n2\nZXVTP\nPTVXZ\n\n\n#0007\n2\nZXVTP\nPTVXZ\n\n\n#0008\n2\nZXTVP\nPTVXZ\n\n\n#0009\n2\nZXTVP\nPTVXZ\n\n\n#0010\n2\nIUNFY\nFINUY\n\n\n#0011\n3\nINVTZ\nINTVZ\n\n\n#0012\n3\nNZYUP\nNPUYZ\n\n\n\n\n\nFor example, the first solution has the sequence Y → N → F → Z → U → P → X → I → W → L → T → V; the last-five permutation is IWLTV, and its combination key is ILTVW."
+    "section": "向きや位置を除き、登場順だけを取り出す",
+    "text": "向きや位置を除き、登場順だけを取り出す\n各 Answer は、ペントミノを表す英字1文字と数字6桁（例：Y060000）の7文字を、12個つなげたものです。ここでは各記録の先頭の英字だけを取り出し、数字6桁は使いません。元の並び順は変更しません。\n\n\n\n最後の5人：記録順とアルファベット順の比較\n\n\ngroup_number\nlevel\npermutation\ncombination\n\n\n\n\n#0001\n1\nIWLTV\nILTVW\n\n\n#0002\n1\nWILVT\nILTVW\n\n\n#0003\n1\nUZFYN\nFNUYZ\n\n\n#0004\n1\nUZFNY\nFNUYZ\n\n\n#0005\n2\nZXVTP\nPTVXZ\n\n\n#0006\n2\nZXVTP\nPTVXZ\n\n\n#0007\n2\nZXVTP\nPTVXZ\n\n\n#0008\n2\nZXTVP\nPTVXZ\n\n\n#0009\n2\nZXTVP\nPTVXZ\n\n\n#0010\n2\nIUNFY\nFINUY\n\n\n#0011\n3\nINVTZ\nINTVZ\n\n\n#0012\n3\nNZYUP\nNPUYZ\n\n\n\n\n\n例えば最初の解答の登場順は Y → N → F → Z → U → P → X → I → W → L → T → V です。最後の5人を順番どおりに並べると IWLTV、アルファベット順に並べると ILTVW になります。"
   },
   {
-    "objectID": "research/five-colour-rainbow/index.html#how-many-possibilities",
-    "href": "research/five-colour-rainbow/index.html#how-many-possibilities",
+    "objectID": "research/five-colour-rainbow/index.html#何通りの可能性がある",
+    "href": "research/five-colour-rainbow/index.html#何通りの可能性がある",
     "title": "五色の虹は、本当にランダムなのか？",
-    "section": "How many possibilities?",
-    "text": "How many possibilities?\nThere are \\(\\binom{12}{5}=792\\) possible unordered selections of five distinct pieces, and \\(12!/7!=95,040\\) possible ordered selections. Neither count implies the solution file samples these uniformly.\n\n\n\n\n\nmetric\nvalue\n\n\n\n\nSolutions\n2339\n\n\nObserved permutations\n1016\n\n\nObserved combinations\n421\n\n\nPossible permutations\n95040\n\n\nPossible combinations\n792"
+    "section": "何通りの可能性がある？",
+    "text": "何通りの可能性がある？\n12人から異なる5人を選ぶ 組み合わせ は \\(\\binom{12}{5}=792\\) 通り。並ぶ順番まで区別する 順列 は \\(12!/7!=95,040\\) 通りあります。ただし、実際の解答データにこれらが均等に登場するという意味ではありません。\n\n\n\n\n\nmetric\nvalue\n\n\n\n\n解答数\n2339\n\n\n観測された順列の種類\n1016\n\n\n観測された組み合わせの種類\n421\n\n\n理論上の順列の種類\n95040\n\n\n理論上の組み合わせの種類\n792"
   },
   {
-    "objectID": "research/five-colour-rainbow/index.html#most-frequent-combinations",
-    "href": "research/five-colour-rainbow/index.html#most-frequent-combinations",
+    "objectID": "research/five-colour-rainbow/index.html#よく登場する5人組",
+    "href": "research/five-colour-rainbow/index.html#よく登場する5人組",
     "title": "五色の虹は、本当にランダムなのか？",
-    "section": "Most frequent combinations",
-    "text": "Most frequent combinations\n\n\n\n\n\n\n\n\nCombination\nFive colours\nCount\nShare\n\n\n\n\nFITUX\n\n55\n2.35%\n\n\nPUVXZ\n\n51\n2.18%\n\n\nLNUVZ\n\n42\n1.80%\n\n\nUVWXZ\n\n34\n1.45%\n\n\nLUVXZ\n\n33\n1.41%\n\n\nFTUXY\n\n31\n1.33%\n\n\nUVWXY\n\n29\n1.24%\n\n\nILNUX\n\n25\n1.07%\n\n\nPVWXZ\n\n22\n0.94%\n\n\nUVXYZ\n\n22\n0.94%\n\n\nFPUVX\n\n21\n0.90%\n\n\nUVWYZ\n\n21\n0.90%\n\n\nIPUVZ\n\n19\n0.81%\n\n\nFILTX\n\n18\n0.77%\n\n\nFPTXY\n\n18\n0.77%\n\n\nLVWYZ\n\n17\n0.73%\n\n\nNTVWZ\n\n17\n0.73%\n\n\nFLUVX\n\n16\n0.68%\n\n\nLTWYZ\n\n16\n0.68%\n\n\nPUVYZ\n\n16\n0.68%"
+    "section": "よく登場する5人組",
+    "text": "よく登場する5人組\n\n\n\n\n\n\n\n\n組み合わせ\n五色の並び\n回数\n割合\n\n\n\n\nFITUX\n\n55\n2.35%\n\n\nPUVXZ\n\n51\n2.18%\n\n\nLNUVZ\n\n42\n1.80%\n\n\nUVWXZ\n\n34\n1.45%\n\n\nLUVXZ\n\n33\n1.41%\n\n\nFTUXY\n\n31\n1.33%\n\n\nUVWXY\n\n29\n1.24%\n\n\nILNUX\n\n25\n1.07%\n\n\nPVWXZ\n\n22\n0.94%\n\n\nUVXYZ\n\n22\n0.94%\n\n\nFPUVX\n\n21\n0.90%\n\n\nUVWYZ\n\n21\n0.90%\n\n\nIPUVZ\n\n19\n0.81%\n\n\nFILTX\n\n18\n0.77%\n\n\nFPTXY\n\n18\n0.77%\n\n\nLVWYZ\n\n17\n0.73%\n\n\nNTVWZ\n\n17\n0.73%\n\n\nFLUVX\n\n16\n0.68%\n\n\nLTWYZ\n\n16\n0.68%\n\n\nPUVYZ\n\n16\n0.68%"
   },
   {
-    "objectID": "research/five-colour-rainbow/index.html#most-frequent-permutations",
-    "href": "research/five-colour-rainbow/index.html#most-frequent-permutations",
+    "objectID": "research/five-colour-rainbow/index.html#よく登場する並び順",
+    "href": "research/five-colour-rainbow/index.html#よく登場する並び順",
     "title": "五色の虹は、本当にランダムなのか？",
-    "section": "Most frequent permutations",
-    "text": "Most frequent permutations\n\n\n\n\n\n\n\n\nPermutation\nFive colours\nCount\nShare\n\n\n\n\nFYUXT\n\n16\n0.68%\n\n\nIFUXT\n\n15\n0.64%\n\n\nFXUTI\n\n14\n0.60%\n\n\nWZVUY\n\n14\n0.60%\n\n\nWZXVU\n\n14\n0.60%\n\n\nPZXVU\n\n13\n0.56%\n\n\nYXZVU\n\n13\n0.56%\n\n\nWXZUI\n\n11\n0.47%\n\n\nXINUL\n\n11\n0.47%\n\n\nXYUFT\n\n11\n0.47%\n\n\nLVNZU\n\n10\n0.43%\n\n\nPFUXV\n\n10\n0.43%\n\n\nPUVZI\n\n10\n0.43%\n\n\nUVNZL\n\n10\n0.43%\n\n\nFXPTY\n\n9\n0.38%\n\n\nLZXVU\n\n9\n0.38%\n\n\nNXZVU\n\n9\n0.38%\n\n\nWXUVY\n\n9\n0.38%\n\n\nXFPTY\n\n9\n0.38%\n\n\nYFVXU\n\n9\n0.38%"
+    "section": "よく登場する並び順",
+    "text": "よく登場する並び順\n\n\n\n\n\n\n\n\n順列\n五色の並び\n回数\n割合\n\n\n\n\nFYUXT\n\n16\n0.68%\n\n\nIFUXT\n\n15\n0.64%\n\n\nFXUTI\n\n14\n0.60%\n\n\nWZVUY\n\n14\n0.60%\n\n\nWZXVU\n\n14\n0.60%\n\n\nPZXVU\n\n13\n0.56%\n\n\nYXZVU\n\n13\n0.56%\n\n\nWXZUI\n\n11\n0.47%\n\n\nXINUL\n\n11\n0.47%\n\n\nXYUFT\n\n11\n0.47%\n\n\nLVNZU\n\n10\n0.43%\n\n\nPFUXV\n\n10\n0.43%\n\n\nPUVZI\n\n10\n0.43%\n\n\nUVNZL\n\n10\n0.43%\n\n\nFXPTY\n\n9\n0.38%\n\n\nLZXVU\n\n9\n0.38%\n\n\nNXZVU\n\n9\n0.38%\n\n\nWXUVY\n\n9\n0.38%\n\n\nXFPTY\n\n9\n0.38%\n\n\nYFVXU\n\n9\n0.38%"
   },
   {
-    "objectID": "research/five-colour-rainbow/index.html#who-appears-in-the-last-five",
-    "href": "research/five-colour-rainbow/index.html#who-appears-in-the-last-five",
+    "objectID": "research/five-colour-rainbow/index.html#最後の5人に登場しやすいのは誰",
+    "href": "research/five-colour-rainbow/index.html#最後の5人に登場しやすいのは誰",
     "title": "五色の虹は、本当にランダムなのか？",
-    "section": "Who appears in the last five?",
-    "text": "Who appears in the last five?\n\n\n\n\n\npiece\nn\nproportion_of_solutions\nrandom_order_reference\n\n\n\n\nU\n1320\n0.564\n0.417\n\n\nX\n1193\n0.510\n0.417\n\n\nZ\n1176\n0.503\n0.417\n\n\nV\n1174\n0.502\n0.417\n\n\nT\n934\n0.399\n0.417\n\n\nY\n915\n0.391\n0.417\n\n\nL\n910\n0.389\n0.417\n\n\nW\n864\n0.369\n0.417\n\n\nN\n838\n0.358\n0.417\n\n\nF\n808\n0.345\n0.417\n\n\nI\n804\n0.344\n0.417\n\n\nP\n759\n0.324\n0.417"
+    "section": "最後の5人に登場しやすいのは誰？",
+    "text": "最後の5人に登場しやすいのは誰？\n\n\n\n\n\npiece\nn\nproportion_of_solutions\nrandom_order_reference\n\n\n\n\nU\n1320\n0.564\n0.417\n\n\nX\n1193\n0.510\n0.417\n\n\nZ\n1176\n0.503\n0.417\n\n\nV\n1174\n0.502\n0.417\n\n\nT\n934\n0.399\n0.417\n\n\nY\n915\n0.391\n0.417\n\n\nL\n910\n0.389\n0.417\n\n\nW\n864\n0.369\n0.417\n\n\nN\n838\n0.358\n0.417\n\n\nF\n808\n0.345\n0.417\n\n\nI\n804\n0.344\n0.417\n\n\nP\n759\n0.324\n0.417"
   },
   {
-    "objectID": "research/five-colour-rainbow/index.html#by-puzzle-level",
-    "href": "research/five-colour-rainbow/index.html#by-puzzle-level",
+    "objectID": "research/five-colour-rainbow/index.html#パズルのレベル別に見る",
+    "href": "research/five-colour-rainbow/index.html#パズルのレベル別に見る",
     "title": "五色の虹は、本当にランダムなのか？",
-    "section": "By puzzle level",
-    "text": "By puzzle level\n\n\n\n\n\nlevel\nsolutions\nunique_permutations\nunique_combinations\n\n\n\n\n1\n4\n4\n2\n\n\n2\n6\n3\n2\n\n\n3\n140\n60\n30\n\n\n4\n242\n88\n33\n\n\n5\n273\n135\n110\n\n\n6\n477\n274\n192\n\n\n7\n540\n337\n213\n\n\n8\n442\n316\n207\n\n\n9\n184\n144\n116\n\n\n10\n31\n28\n27"
+    "section": "パズルのレベル別に見る",
+    "text": "パズルのレベル別に見る\n\n\n\n\n\nlevel\nsolutions\nunique_permutations\nunique_combinations\n\n\n\n\n1\n4\n4\n2\n\n\n2\n6\n3\n2\n\n\n3\n140\n60\n30\n\n\n4\n242\n88\n33\n\n\n5\n273\n135\n110\n\n\n6\n477\n274\n192\n\n\n7\n540\n337\n213\n\n\n8\n442\n316\n207\n\n\n9\n184\n144\n116\n\n\n10\n31\n28\n27"
   },
   {
-    "objectID": "research/five-colour-rainbow/index.html#the-most-common-rainbow",
-    "href": "research/five-colour-rainbow/index.html#the-most-common-rainbow",
+    "objectID": "research/five-colour-rainbow/index.html#いちばんよく登場する虹",
+    "href": "research/five-colour-rainbow/index.html#いちばんよく登場する虹",
     "title": "五色の虹は、本当にランダムなのか？",
-    "section": "The most common rainbow",
-    "text": "The most common rainbow\nThe most frequently observed five-character combination is FITUX, appearing in 55 solutions."
+    "section": "いちばんよく登場する虹",
+    "text": "いちばんよく登場する虹\nもっとも頻繁に登場した5人の組み合わせは FITUX で、55 件の解答に含まれていました。"
   },
   {
-    "objectID": "research/five-colour-rainbow/index.html#research-notes",
-    "href": "research/five-colour-rainbow/index.html#research-notes",
+    "objectID": "research/five-colour-rainbow/index.html#研究メモ次に調べたいこと",
+    "href": "research/five-colour-rainbow/index.html#研究メモ次に調べたいこと",
     "title": "五色の虹は、本当にランダムなのか？",
-    "section": "Research notes",
-    "text": "Research notes\n\nDoes the source serialize pieces by board position, solver search order, or another rule?\nHow many solutions share the same final five-piece combination despite different postures?\nHow does the distribution compare with selecting five pieces uniformly at random?\nShould reversed colour sequences count as visually equivalent rainbows?\n\nInterpretation caution: A skew in these results may reflect serialization or enumeration rather than any intrinsic property of pentomino tilings."
+    "section": "研究メモ：次に調べたいこと",
+    "text": "研究メモ：次に調べたいこと\n\n元データの記録順は、盤面上の位置、探索アルゴリズムの順番、それとも別の規則で決まっているのでしょうか？\nピースの向きや位置が違っても、最後の5人の組み合わせが同じ解答は何件あるのでしょうか？\n12人から無作為に5人を選んだ場合と比べると、登場頻度はどれくらい違うのでしょうか？\n色の並びを逆にした虹は、見た目が同じ虹として数えるべきでしょうか？\n\n解釈するときの注意： 登場頻度に偏りがあっても、それがペントミノの敷き詰め方そのものの性質とは限りません。解答の記録順や列挙方法による影響かもしれません。"
   },
   {
     "objectID": "research/mountain-generator/index.html",
