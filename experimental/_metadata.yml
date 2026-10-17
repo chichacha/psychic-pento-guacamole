@@ -1,0 +1,5 @@
+# Shared Quarto title styling for experimental pages.
+# Existing page-specific CSS, layouts and JavaScript remain unchanged.
+format:
+  html:
+    body-classes: experimental-article
