@@ -1,0 +1,5 @@
+# Shared defaults for research articles.
+# Individual articles retain their own title, subtitle, author and execution settings.
+format:
+  html:
+    body-classes: research-article

@@ -113,8 +113,8 @@ a:hover {
   padding: 0;
 }
 
-/* The homepage draws its own H1, so avoid a duplicate Quarto title. */
-.quarto-title-block {
+/* Custom-layout pages draw their own headings; research articles use Quarto's title block. */
+body:not(.research-article):not(.experimental-article) .quarto-title-block {
   display: none;
 }
 
