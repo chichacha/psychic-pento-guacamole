@@ -1,0 +1,166 @@
+---
+title: "霧が晴れたら、ゴマス村。"
+subtitle: "背景のデザインから、お祝いまで。iPhone 画面の試作"
+format:
+  html:
+    toc: false
+    page-layout: full
+    css: victory-scene.css
+---
+
+## この実験は何を変えたい？
+
+お父さんのペントミノアプリには、12種類の色とりどりのピースが登場します。
+
+でも、今の画面では、白帯・黄帯・黒帯ごとの単色の背景が強く主張していて、**本来主役であるはずのピースよりも、背景の色のほうが目立っている**ように感じます。
+
+そこで、背景をもう少し明るく、やわらかな色合いにして、数式から生まれる山の風景をさりげなく取り入れてみたいと考えました。
+
+**主役はペントミノ。背景は、その魅力を引き立てる舞台です。**
+
+そこで、今回のアイデアを言葉だけでなく、実際に見て、触って確かめられるように、iPhoneサイズの試作品を作ってみました。
+
+**「こんな雰囲気に変えてみたらどうだろう？」を試すための実験です。**
+
+まだ完成形ではありません。お父さんだけでなく、お母さんやあっちゃんにも見てもらって、感想やアイデアを聞いてみたいと思っています。
+
+「こっちの色が好き！」「山はもっと控えめがいい」「今のままのほうがいい！」など、どんな意見でも大歓迎。
+
+**ゴマス村のデザイン会議、開催中です。🌈🏔️**
+
+## 🧪 まずは触ってみよう
+
+帯・パズル番号・最後のピース・ヒント・チェックの回数を変えて、「プレイ中」と「完成！」を見比べてみてください。
+
+**画面の順序は変えません。** 上にタイトルと操作ボタン、その下に6×10の盤面、さらに下にお祝いの領域を残します。**山の背景は画面全体に広がり**、プレイ中と完成後で霧の濃さが変わります。
+
+```{=html}
+<div class="victory-lab" id="victory-lab">
+  <div class="victory-settings" aria-label="実験の設定">
+    <strong>🧪 実験のつまみ</strong>
+    <label>帯 <select id="v-belt"><option value="white">⚪ 白帯</option><option value="yellow">🟡 黄帯</option><option value="black">⚫ 黒帯</option></select></label>
+    <label>パズル番号 <input id="v-seed" type="number" min="1" max="2339" value="43"></label>
+    <label>最後のピース <select id="v-piece"><option>F</option><option>X</option><option>I</option><option>L</option><option>P</option><option>N</option><option>T</option><option>U</option><option>V</option><option>W</option><option>Y</option><option>Z</option></select></label>
+    <label>ヒント <input id="v-hints" type="range" min="0" max="5" value="0"><output id="v-hints-value">0</output></label>
+    <label>チェック <input id="v-checks" type="range" min="0" max="5" value="0"><output id="v-checks-value">0</output></label>
+    <div class="v-actions"><button type="button" id="v-play">▶ プレイ中</button><button type="button" id="v-win">🌈 完成！</button></div>
+    <p>ヒント → 雲 ☁️ ／ チェック → カラス 🐦‍⬛ ／ どちらも0回 → 虹 🌈</p>
+    <p class="v-caveat">プレイ中は #0672 の途中経過を参考にした未完成の盤面と残りのピース、完成後は完成配置の見本を表示します。番号を変えても実際の解答には切り替わりません。</p>
+  </div>
+  <div class="v-phone" aria-label="Unity layout inspired iPhone puzzle preview">
+    <div class="v-screen">
+      <svg id="v-landscape" class="v-background" viewBox="0 0 360 760" preserveAspectRatio="xMidYMid slice" aria-label="画面全体に広がる生成された山の背景"></svg>
+      <div class="v-topbar"><button type="button" id="v-gear" aria-label="設定">⚙</button></div>
+      <div class="v-game-title">Pentomino 6x10</div>
+      <div class="v-toolbar">
+        <div class="v-tool-buttons"><button type="button" id="v-check-button">Check</button><button type="button" id="v-hint-button">Hint</button><button type="button" id="v-prev">◀</button><button type="button" id="v-next">▶</button></div>
+        <strong id="v-belt-label">White Belt</strong>
+      </div>
+      <div class="v-info"><span id="v-check-score">-1</span><span id="v-hint-score">-1</span><span id="v-puzzle-number">0043</span><strong id="v-level-label">Level 3</strong></div>
+      <div class="v-board" id="v-board" aria-label="6 by 10 puzzle layout example"></div>
+      <div class="v-celebration">
+        <div class="v-loose-pieces" id="v-loose-pieces" aria-label="まだ盤面に置いていないピース"></div>
+        <div class="v-sky" id="v-sky" aria-hidden="true"></div>
+        <div class="v-victory" id="v-victory" aria-live="polite"><strong id="v-message">Made it!</strong><div class="v-character" id="v-character">F</div><small id="v-victory-note"></small></div>
+        <div class="v-playing" id="v-playing">霧の向こうに、山がある。</div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+## 🎨 デザインの提案書
+
+### 1. なぜ背景を変えたいの？
+
+パズルのアプリでいちばん見てほしいのは、12種類の色を持つペントミノのピースです。
+背景を少し明るく、やわらかくすると、盤面の色と形に視線が集まりやすくなるのではないか、と考えました。
+
+白帯・黄帯・黒帯の違いは残します。
+ただし、**画面全体を強い単色で塗り分けるのではなく、空と山の淡い配色で表現する**方針です。
+
+| 帯 | 背景のイメージ | 山の表情 |
+|---|---|---|
+| ⚪ 白帯 | 霧がかった淡い青 | なだらか |
+| 🟡 黄帯 | やわらかなクリーム・金色 | 少し変化のある丘 |
+| ⚫ 黒帯 | 明るい灰緑と深緑 | 細かな凹凸のある山 |
+
+黒帯でも、背景を真っ黒にする必要はありません。**難しさは山の輪郭で表し、盤面の読みやすさを優先**します。
+
+### 2. 山は毎回同じ？
+
+パズル番号を**乱数の種（seed）**として、遠景・中景・前景の3本の山を生成します。
+
+同じパズル番号と帯・生成設定なら、同じ山が再現されます。番号が変わると風景も変わります。山はパズルの難易度を計算した結果ではなく、**その問題に添えられた小さな景色**です。
+
+数式と実験は [研究室「山は、数式でできている。」](../../research/mountain-generator/index.qmd) にまとめました（[#84](https://github.com/chichacha/psychic-pento-guacamole/issues/84)）。
+
+### 3. プレイ中と完成後で、何が変わる？
+
+| | プレイ中 | 完成後 |
+|---|---|---|
+| 山 | 霧を濃くして目立たせない | 霧が少し晴れ、輪郭が見える |
+| 盤面 | いつもどおり操作できる | **完成した配置をそのまま表示** |
+| お祝い | まだ表示しない | 最後のピースのキャラクターが登場 |
+| 空 | 静かな風景 | 虹・雲・カラスが登場 |
+
+大切なのは、**完成時に別の山を生成しない**こと。プレイしていた風景の霧が晴れるから、同じ場所で完成した気持ちになります。
+
+### 4. 新しいお祝いのルール（案）
+
+- **ヒント0回・チェック0回**：空に虹がかかる 🌈
+- **ヒントを使った**：使った回数に応じて雲が増える ☁️
+- **チェックを使った**：使った回数に応じてカラスが増える 🐦‍⬛
+- **どの完成でも**：最後に置いたピースのキャラクターが登場し、お祝いは画面に残る
+
+雲やカラスは「失敗」の印ではありません。**その問題をどう解いたかを、空の景色にしてみる**遊びです。ヒントやチェックを使っても、完成はちゃんとおめでたい。
+
+### 5. ほかのペントミノアプリでも使える？
+
+今回の山の背景は、6×10専用のイラストではありません。**数式から風景を生成する仕組み**なので、ほかのペントミノアプリにも応用できるのではないかと考えています。
+
+例えば、**Pentomino 6×10・Pentomino 4×15・Pentomino 4×5×3**。パズルの形や問題数は違っても、白帯・黄帯・黒帯という共通の仕組みがあります。
+
+**山の生成ルールと帯ごとの配色を共通化**すれば、アプリごと・問題ごとに背景画像を一から作る必要がありません。同じ仕組みを使いながら、それぞれの問題に固有の風景を持たせられます。
+
+また、パズル番号はアプリごとに管理されるため、**アプリの種類とパズル番号を組み合わせて**山の種（seed）を決めれば、例えば6×10の43番と4×15の43番に別々の風景を割り当てることもできます。
+
+### 6. iPhone以外の画面でも使える？
+
+もうひとつの利点は、**画面サイズに合わせて山を描き直せること**です。
+
+一枚の背景画像を引き伸ばすのではなく、画面の幅や高さに合わせて山の輪郭を計算します。iPhoneだけでなく、iPadなどのタブレットや、ほかの画面サイズにも応用できます。
+
+ただし、どんな画面でも同じような景色に見えるように、山の座標や縦横比、盤面・ボタンとの重なり方を工夫する必要があります。**同じ問題の山らしさを保ちながら、表示領域に合わせて描く**ことが目標です。
+
+**目指すのは、一枚の背景画像ではなく、ペントミノアプリ共通で使える「風景を描く仕組み」です。** まずは6×10で試し、よさそうならほかのアプリや画面サイズにも広げてみたいと思っています。🌄
+
+### 7. 変えないもの
+
+- タイトル・設定・Check・Hint・前後移動・帯・レベル・問題番号の**基本的な配置**
+- **6×10の盤面が上、祝いの領域が下**という画面構成
+- 12種類のピースの色と形、ゲームのルール
+- パズル番号に対応する実際の解答データ
+
+### 8. Unity で実装するなら（将来の相談）
+
+背景の山は盤面やボタンとは**別の描画レイヤー**に置き、文字とピースのコントラストを確保したいです。山の生成に必要な入力は、少なくともアプリの種類・パズル番号・帯・描画サイズ。霧の濃さはプレイ状態で変えます。
+
+山の形を再生成せずに霧だけ変えられるようにすれば、完成時の演出もシンプルになります。キャラクターや虹・雲・カラスは別の前景レイヤーに分けると、後から変更しやすくなります。
+
+**今すぐアプリに組み込むという話ではありません。** まずは画面の印象と遊び心を比較して、よさそうなら Unity 向けの仕様に落とし込む、という順番です。
+
+## この試作の現在地
+
+このページは**完成したデザインではなく、検討用の試作品**です。山を**画面全体の背景**として描き、盤面と操作ボタンをその手前に置いています。山の配置・霧の濃さ・文字の読みやすさは、これから調整します。
+
+また、プレイ中と完成後の盤面は、それぞれスクリーンショットを参考にした固定の見本です。パズル番号を変えても実際の解答配置には切り替わりません。ヒント・チェックの回数も実際のゲーム記録とは連動していません。
+
+## 関連する実験と記録
+
+- [研究室：山は、数式でできている。](../../research/mountain-generator/index.qmd) — 山の生成の仕組み
+- [実験002：お祝いシミュレーター](../celebration/index.qmd) — 以前のお祝い演出の実験
+- [Issue #81：UI facelift](https://github.com/chichacha/psychic-pento-guacamole/issues/81) — このデザイン検討
+- [Issue #84：山の生成](https://github.com/chichacha/psychic-pento-guacamole/issues/84) — 数式と再現可能な風景
+
+<script src="victory-scene.js" defer></script>

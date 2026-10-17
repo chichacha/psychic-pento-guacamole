@@ -75,6 +75,24 @@ format:
 
 ---
 
+## 🌄 実験003：霧が晴れたら、ゴマス村。
+
+**状態：🧪 iPhone画面のデザイン試作**
+
+プレイ中は霧に包まれた山。完成すると霧が晴れ、景色がひらけます。
+
+ヒントを使ったら雲がふわり。☁️  
+チェックを使ったらカラスが飛んでくる。🐦‍⬛  
+どちらも使わずに完成したら、虹がかかる。🌈
+
+完成したパズルはそのまま残して、最後のピースも一緒にお祝い！
+
+**👉 [iPhone お祝い画面を試してみる](victory-scene/index.qmd)**
+
+[GitHub Issue #81](https://github.com/chichacha/psychic-pento-guacamole/issues/81) · [山の研究 #84](../research/mountain-generator/index.qmd)
+
+---
+
 ## 🔮 そのほか、ただいま妄想中…
 
 五マスの仲間たちに服を着せてみたり、
