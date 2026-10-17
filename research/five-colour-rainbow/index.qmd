@@ -13,16 +13,16 @@ execute:
   freeze: auto
 ---
 
-## Research question
+## 研究の問い
 
-Each row of `data/solutions.csv` contains twelve pentominoes in an encoded sequence. If we take the **last five characters**, how often do the same ordered sequences and unordered selections occur?
+`data/solutions.csv` の各行には、12種類のペントミノが一定の形式で記録されています。そのうち **最後の5人** に注目すると、同じ並び順や、同じ5人の組み合わせはどれくらい登場するのでしょうか？
 
-- **Permutation key:** preserve the source order of the final five characters.
-- **Combination key:** sort those five characters alphabetically.
+- **順列（並び順あり）：** 元データに記録された最後の5人の順序をそのまま使います。
+- **組み合わせ（並び順なし）：** 最後の5人をアルファベット順に並べ、同じ顔ぶれをひとまとめにします。
 
-**Important:** The encoded sequence does not necessarily represent the chronological order in which a person placed pieces.
+**大事な注意：** データに記録された順番が、人間が実際にピースを置いた順番とは限りません。
 
-## Read the solutions
+## 解答データを読み込む
 
 ```{r}
 #| label: setup
@@ -58,9 +58,9 @@ character_colors <- setNames(
 
 ```
 
-## Extract character sequence, ignoring posture
+## 向きや位置を除き、登場順だけを取り出す
 
-Each `Answer` consists of twelve seven-character records: a pentomino letter followed by six digits (e.g. `Y060000`). We keep the first character of each record and discard the six digits. We **do not** reorder the original sequence.
+各 `Answer` は、ペントミノを表す英字1文字と数字6桁（例：`Y060000`）の7文字を、12個つなげたものです。ここでは各記録の先頭の英字だけを取り出し、数字6桁は使いません。**元の並び順は変更しません。**
 
 ```{r}
 #| label: parse-answer
@@ -89,7 +89,7 @@ rainbows <- solutions %>%
 rainbows %>%
   select(group_number, level, permutation, combination) %>%
   slice_head(n = 12) %>%
-  knitr::kable(caption = "Final five pieces: source order versus alphabetical order")
+  knitr::kable(caption = "最後の5人：記録順とアルファベット順の比較")
 
 
 ```
@@ -130,24 +130,24 @@ rainbow_swatch <- function(sequence, colors = character_colors) {
 }
 ```
 
-For example, the first solution has the sequence `r paste(rainbows$piece_sequence[[1]], collapse = " → ")`; the last-five permutation is `r rainbows$permutation[[1]]`, and its combination key is `r rainbows$combination[[1]]`.
+例えば最初の解答の登場順は `r paste(rainbows$piece_sequence[[1]], collapse = " → ")` です。最後の5人を順番どおりに並べると `r rainbows$permutation[[1]]`、アルファベット順に並べると `r rainbows$combination[[1]]` になります。
 
-## How many possibilities?
+## 何通りの可能性がある？
 
-There are \\(\\binom{12}{5}=792\\) possible unordered selections of five distinct pieces, and \\(12!/7!=95,040\\) possible ordered selections. Neither count implies the solution file samples these uniformly.
+12人から異なる5人を選ぶ **組み合わせ** は \\(\\binom{12}{5}=792\\) 通り。並ぶ順番まで区別する **順列** は \\(12!/7!=95,040\\) 通りあります。ただし、実際の解答データにこれらが均等に登場するという意味ではありません。
 
 ```{r}
 #| label: overview
 tibble(
-  metric = c("Solutions", "Observed permutations", "Observed combinations",
-             "Possible permutations", "Possible combinations"),
+  metric = c("解答数", "観測された順列の種類", "観測された組み合わせの種類",
+             "理論上の順列の種類", "理論上の組み合わせの種類"),
   value = c(nrow(rainbows), n_distinct(rainbows$permutation),
             n_distinct(rainbows$combination),
             factorial(12) / factorial(7), choose(12, 5))
 ) %>% knitr::kable()
 ```
 
-## Most frequent combinations
+## よく登場する5人組
 
 ```{r}
 #| label: combinations
@@ -167,17 +167,17 @@ combination_counts %>%
   fmt_markdown(columns = rainbow) %>%
   fmt_percent(columns = pct, decimals = 2) %>%
   cols_label(
-    combination = "Combination",
-    rainbow = "Five colours",
-    n = "Count",
-    pct = "Share"
+    combination = "組み合わせ",
+    rainbow = "五色の並び",
+    n = "回数",
+    pct = "割合"
   ) %>%
   opt_row_striping() 
 
 #combination_counts %>% slice_head(n = 20) %>% knitr::kable(digits = 4)
 ```
 
-## Most frequent permutations
+## よく登場する並び順
 
 ```{r}
 #| label: permutations
@@ -193,16 +193,16 @@ permutation_counts %>%
   fmt_markdown(columns = rainbow) %>%
   fmt_percent(columns = pct, decimals = 2) %>%
   cols_label(
-    permutation = "Permutation",
-    rainbow = "Five colours",
-    n = "Count",
-    pct = "Share"
+    permutation = "順列",
+    rainbow = "五色の並び",
+    n = "回数",
+    pct = "割合"
   ) %>%
   opt_row_striping() 
 
 ```
 
-## Who appears in the last five?
+## 最後の5人に登場しやすいのは誰？
 
 ```{r}
 #| label: piece-frequency
@@ -243,7 +243,7 @@ ggplot(
 
 ```
 
-## By puzzle level
+## パズルのレベル別に見る
 
 ```{r}
 #| label: by-level
@@ -258,11 +258,9 @@ rainbows %>%
   knitr::kable()
 ```
 
-## The most common rainbow
+## いちばんよく登場する虹
 
-The most frequently observed five-character combination is
-`r combination_counts$combination[[1]]`,
-appearing in `r combination_counts$n[[1]]` solutions.
+もっとも頻繁に登場した5人の組み合わせは **`r combination_counts$combination[[1]]`** で、`r combination_counts$n[[1]]` 件の解答に含まれていました。
 
 ```{r}
 #| label: popular-rainbow
@@ -292,7 +290,7 @@ draw_rainbow <- function(sequence, colors) {
   svg <- paste0(
     '<svg viewBox="0 0 600 290" ',
     'xmlns="http://www.w3.org/2000/svg" ',
-    'role="img" aria-label="Five-colour rainbow: ',
+    'role="img" aria-label="五色の虹: ',
     sequence, '" ',
     'style="display:block;width:100%;max-width:700px;',
     'height:auto;margin:2rem auto;">',
@@ -310,11 +308,11 @@ draw_rainbow(
 ```
 
 
-## Research notes
+## 研究メモ：次に調べたいこと
 
-1. Does the source serialize pieces by board position, solver search order, or another rule?
-2. How many solutions share the same final five-piece combination despite different postures?
-3. How does the distribution compare with selecting five pieces uniformly at random?
-4. Should reversed colour sequences count as visually equivalent rainbows?
+1. 元データの記録順は、盤面上の位置、探索アルゴリズムの順番、それとも別の規則で決まっているのでしょうか？
+2. ピースの向きや位置が違っても、最後の5人の組み合わせが同じ解答は何件あるのでしょうか？
+3. 12人から無作為に5人を選んだ場合と比べると、登場頻度はどれくらい違うのでしょうか？
+4. 色の並びを逆にした虹は、見た目が同じ虹として数えるべきでしょうか？
 
-**Interpretation caution:** A skew in these results may reflect serialization or enumeration rather than any intrinsic property of pentomino tilings.
+**解釈するときの注意：** 登場頻度に偏りがあっても、それがペントミノの敷き詰め方そのものの性質とは限りません。解答の記録順や列挙方法による影響かもしれません。
