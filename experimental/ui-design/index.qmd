@@ -1,0 +1,32 @@
+---
+title: "Gomasu UI Design Kit"
+page-layout: full
+toc: false
+format:
+  html:
+    css: styles.css
+    include-after-body:
+      - text: '<script src="app.js" defer></script>'
+---
+
+::: {.design-lab}
+<div class="lab-intro"><p class="eyebrow">🧪 ひみつの実験室 · #81</p><h1>Gomasu UI Design Kit</h1><p>Same layout. Calmer look. More delightful details. Dad’s original 12 piece colours stay unchanged.</p></div>
+<div class="lab-toolbar" aria-label="Prototype controls">
+<label>Device <select id="device"><option value="tablet" selected>Tablet</option><option value="phone">Phone</option><option value="fluid">Fluid width</option></select></label>
+<label>Orientation <select id="orientation"><option value="portrait" selected>Portrait</option><option value="landscape">Landscape</option></select></label>
+<label>Belt <select id="belt"><option value="black" selected>黒帯</option><option value="white">白帯</option><option value="yellow">黄帯</option></select></label>
+<label>Language <select id="language"><option value="en" selected>English</option><option value="ja">日本語</option></select></label>
+<label>Appearance <select id="appearance"><option value="facelift" selected>Facelift</option><option value="original">Approx. original</option></select></label>
+<label>Puzzle state <select id="puzzle-state"><option value="playing" selected>In progress</option><option value="completed">Just completed</option><option value="revisit">Revisit completed</option></select></label>
+<label><input type="checkbox" id="used-hint"> Used hint</label><label><input type="checkbox" id="used-check"> Used check</label>
+</div>
+<div class="device-frame" id="device-frame"><main class="game" id="game">
+<header class="game-top"><button class="settings" aria-label="Settings"><img src="assets/icons/settings.svg" alt=""></button><div class="game-title">Pentomino 6×10</div></header>
+<div class="controls"><button class="action check" id="check-btn">Check</button><button class="action hint" id="hint-btn">Hint</button><button class="nav" aria-label="Previous puzzle"><img src="assets/icons/previous.svg" alt=""></button><button class="nav" aria-label="Next puzzle"><img src="assets/icons/next.svg" alt=""></button><span class="belt-label" id="belt-label">黒帯</span></div>
+<div class="meta"><output id="check-count">0</output><output id="hint-count">0</output><span class="puzzle-id">0672</span><span class="level">Level 6</span></div>
+<div class="board" id="board" aria-label="10 column by 6 row puzzle board"></div>
+<div class="lower-slot" id="lower-slot"><div class="piece-tray" id="piece-tray" aria-label="Remaining pieces"></div><div class="celebration" id="celebration" hidden><img class="confetti" src="assets/celebration/confetti.svg" alt=""><img class="rainbow" id="rainbow" src="assets/celebration/rainbow.svg" alt=""><div class="party-pieces" id="party-pieces"></div><img class="butterfly" src="assets/celebration/butterfly.svg" alt="Butterfly"><img class="caterpillar" src="assets/celebration/caterpillar.svg" alt="Caterpillar"><p class="celebration-message" id="celebration-message">よくできました！</p></div></div>
+</main></div>
+<p class="prototype-note">Visual prototype only. The example board follows the supplied screenshot’s horizontal 10×6 orientation and partial placement; this is not a playable puzzle engine. The celebration replaces only the lower piece tray, never the board or controls.</p>
+<section class="asset-guide"><h2>Asset library</h2><p>All backgrounds, icons, pieces and celebration illustrations are standalone SVGs in <code>assets/</code>. The mountain motifs are original editable vector interpretations of the design-board concept, not traced artwork.</p><div class="asset-gallery"><img src="assets/backgrounds/mountain-forest.svg" alt="Forest mountain motif"><img src="assets/backgrounds/golden-mountains.svg" alt="Golden mountain motif"><img src="assets/celebration/butterfly.svg" alt="Butterfly"><img src="assets/celebration/caterpillar.svg" alt="Caterpillar"></div></section>
+:::

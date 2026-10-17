@@ -1,0 +1,38 @@
+{
+  "palette": {
+    "paper": "#F5F3ED",
+    "surface": "#FFFEFA",
+    "ink": "#252B29",
+    "muted": "#58635C",
+    "line": "#D7DBD2",
+    "forest": "#335D4C",
+    "gold": "#E9C75B",
+    "empty": "#F1F0ED"
+  },
+  "pieceColors": {
+    "I": "#FDCFAB",
+    "F": "#FFADA6",
+    "L": "#FEE1A7",
+    "P": "#6BB091",
+    "N": "#D2E3AD",
+    "T": "#76E1D7",
+    "U": "#85D7EF",
+    "V": "#A9C7E9",
+    "W": "#CBBBE8",
+    "X": "#F0B6DF",
+    "Y": "#FFAFD0",
+    "Z": "#ECD2C1"
+  },
+  "beltColors": {
+    "white": "#FFFFFF",
+    "yellow": "#E9C75B",
+    "black": "#343A37"
+  },
+  "layout": {
+    "columns": 10,
+    "rows": 6,
+    "boardOrientation": "horizontal; never rotate",
+    "composition": "controls > metadata > board > remaining pieces OR celebration",
+    "tabletDefault": "portrait, black belt"
+  }
+}

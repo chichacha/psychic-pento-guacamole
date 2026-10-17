@@ -516,5 +516,12 @@
     "title": "おはなし | 五マスの人たち。",
     "section": "",
     "text": "自分の真ん中にはいる。でも、盤面の真ん中にいるとは限らない。"
+  },
+  {
+    "objectID": "experimental/ui-design/index.html",
+    "href": "experimental/ui-design/index.html",
+    "title": "Gomasu UI Design Kit",
+    "section": "",
+    "text": "🧪 ひみつの実験室 · #81\n\n\nGomasu UI Design Kit\n\n\nSame layout. Calmer look. More delightful details. Dad’s original 12 piece colours stay unchanged.\n\n\n\nDevice TabletPhoneFluid width Orientation PortraitLandscape Belt 黒帯白帯黄帯 Language English日本語 Appearance FaceliftApprox. original Puzzle state In progressJust completedRevisit completed  Used hint Used check\n\n\n\n\n\n\n\n\nPentomino 6×10\n\n\n\n\nCheck\n\n\nHint\n\n\n\n\n\n\n\n黒帯\n\n\n\n0\n\n\n0\n\n0672Level 6\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nよくできました！\n\n\n\n\n\n\nVisual prototype only. The example board follows the supplied screenshot’s horizontal 10×6 orientation and partial placement; this is not a playable puzzle engine. The celebration replaces only the lower piece tray, never the board or controls.\n\n\n\nAsset library\n\n\nAll backgrounds, icons, pieces and celebration illustrations are standalone SVGs in assets/. The mountain motifs are original editable vector interpretations of the design-board concept, not traced artwork."
   }
 ]
