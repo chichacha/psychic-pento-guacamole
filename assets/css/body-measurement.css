@@ -6,3 +6,8 @@
 .measurement-rank-bar{height:14px;border-radius:999px;display:block}
 .measurement-rank-row span:last-child{text-align:right;font-variant-numeric:tabular-nums}
 @media(max-width:580px){.measurement-rank-row{grid-template-columns:32px minmax(0,1fr) 80px}.measurement-rank-bar{grid-column:2/4;grid-row:2}}
+
+.measurement-sort-controls{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}
+.measurement-sort-controls button{border-radius:999px;padding:9px 16px;border:1px solid #b9aab4;background:#fff;color:#302b32;font:inherit;cursor:pointer}
+.measurement-sort-controls button[aria-pressed="true"]{background:#302b32;color:#fff}
+.measurement-sort-controls button:focus-visible{outline:3px solid #ffafd0;outline-offset:2px}
