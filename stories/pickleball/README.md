@@ -22,10 +22,10 @@ Don't silently trade away equal participation for a prettier partnership schedul
 | --- | --- | --- |
 | 01 | 5人なのに、コートは1面。 | How can five players share one doubles court fairly? |
 | 02 | もう一人、来ちゃった。 | What changes when six people want to play? |
-| 03 | ゴマス村ダブルス交流会。 | How can up to twelve villagers rotate across two courts? |
-| 04 | 負けても、もう一試合。 | How can a friendly singles tournament guarantee more play? |
+| 03 | 休憩席が足りません。 | Seven players and one court: three people must sit out. |
+| 04 | コートが増えました。 | Eight players unlock two courts and no one rests. |
 
-Only Episode 01 is drafted. The others are ideas, not published pages.
+Episodes 01–04 are drafted on the feature branch. Future ideas include twelve-player doubles and a friendly singles tournament.
 
 ## Mathematical notes
 
