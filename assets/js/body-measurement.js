@@ -160,7 +160,7 @@
         mini.appendChild(square);
       });
       const name=document.createElement("span");
-      name.textContent=person.name;
+      name.textContent=person.name_ja;
       button.append(mini,name);
       button.addEventListener("click",()=>choose(index));
       queue.appendChild(button);
