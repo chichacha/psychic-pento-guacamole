@@ -97,6 +97,26 @@ format:
 ```
 
 
+## ゴマス村の集合写真 📸
+
+身体測定のあと、みんなで記念撮影。
+
+写真家「みなさん、頭の高さをそろえてくださーい！」
+
+「身長が違うんですけど……」
+
+「では、踏み台を用意しましょう。」
+
+```{=html}
+<div class="photo-session" id="photo-session">
+  <p class="measurement-caption">ゴマス村・集合写真撮影会</p>
+  <div class="photo-scroller"><svg id="photo-svg" viewBox="0 0 1010 230" role="img" aria-label="12人のペントミノたちの集合写真"></svg></div>
+  <p class="photo-dialogue" id="photo-dialogue" aria-live="polite">写真家「みなさん、頭の高さをそろえてください！」</p>
+  <p class="measurement-note" id="photo-status">みんなの身長はバラバラ。どうすれば同じ高さになる？</p>
+  <button type="button" id="photo-level">踏み台を用意する！</button>
+</div>
+```
+
 ## 身長って、なんでしょう。
 
 まっすぐおじさんが立つと、身長は五マス。
@@ -124,3 +144,5 @@ format:
 <script src="../assets/js/body-measurement.js" defer></script>
 
 <script src="../assets/js/height-lineup.js" defer></script>
+
+<script src="../assets/js/photo-session.js" defer></script>
