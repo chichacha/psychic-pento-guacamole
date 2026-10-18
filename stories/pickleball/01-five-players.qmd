@@ -4,12 +4,22 @@ subtitle: "ゴマス村ピックルボール部 · 第1話"
 format:
   html:
     toc: false
-    page-layout: article
+    page-layout: full
+    css:
+      - ../../assets/css/story.css
 ---
+
+::: {.pento-stories .pickleball-story}
 
 [← ピックルボール部へ](index.qmd)
 
+::: {.pento-story-hero}
+<span class="pento-eyebrow">PICKLEBALL CLUB · EPISODE 01</span>
+
 # 5人なのに、コートは1面。 🏓
+
+<div class="pento-story-deck">5人でダブルス。1人はお休み。</div>
+:::
 
 今日はゴマス村のピックルボール日和。
 
@@ -277,3 +287,5 @@ format:
 ……6人目がやってきました。
 
 [← ピックルボール部へ](index.qmd)
+
+:::
