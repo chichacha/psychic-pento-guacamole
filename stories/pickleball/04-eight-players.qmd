@@ -4,12 +4,22 @@ subtitle: "ゴマス村ピックルボール部 · 第4話"
 format:
   html:
     toc: false
-    page-layout: article
+    page-layout: full
+    css:
+      - ../../assets/css/story.css
 ---
+
+::: {.pento-stories .pickleball-story}
 
 [← ピックルボール部へ](index.qmd) · [← 第3話](03-seven-players.qmd)
 
+::: {.pento-story-hero}
+<span class="pento-eyebrow">PICKLEBALL CLUB · EPISODE 04</span>
+
 # コートが増えました。 🎉🏓
+
+<div class="pento-story-deck">8人になったら、全員遊べる！</div>
+:::
 
 ゴマス村の広場に、白い線が引かれました。
 
@@ -139,3 +149,5 @@ format:
 「まだ、村には4人いますよね？」
 
 [← ピックルボール部へ](index.qmd)
+
+:::
