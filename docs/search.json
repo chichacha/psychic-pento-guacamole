@@ -613,7 +613,7 @@
     "href": "stories/index.html",
     "title": "おはなし | 五マスの人たち。",
     "section": "",
-    "text": "PENTOMINO · STORIES\n\n\n五つのマスから生まれた、12人のちょっと不思議な仲間たち。形を変えずに向きを変えたり、並んでみたり。数学の世界には、思いがけない事件がいっぱい。\n\n\n\n\nSTORY 001 · 人口調査\n\n\n12人しかいないのに、63人いるらしい。\n村の住人は12人のはず。ところが数え直すと18人、さらには63人!? いったい何が起きたのでしょう。\n調査に参加する →\n\n\n\nCOMING SOMEDAY\n\n\n自分の真ん中にはいる。でも、盤面の真ん中にいるとは限らない。"
+    "text": "PENTOMINO · STORIES\n\n\n五つのマスから生まれた、12人のちょっと不思議な仲間たち。形を変えずに向きを変えたり、並んでみたり。数学の世界には、思いがけない事件がいっぱい。\n\n\n\n\nSTORY 001 · 人口調査\n\n\n12人しかいないのに、63人いるらしい。\n村の住人は12人のはず。ところが数え直すと18人、さらには63人!? いったい何が起きたのでしょう。\n調査に参加する →\n\n\n\nSTORY 002 · 身体測定\n\n\n身長は何マスですか？\n年に一度の健康診断。12人の住民を測ってみよう。まっすぐおじさんが横になると、なぜか身長が縮む!?\n身体測定に参加する →\n\n\n\nCOMING SOMEDAY\n\n\n自分の真ん中にはいる。でも、盤面の真ん中にいるとは限らない。"
   },
   {
     "objectID": "stories/index.html#ペントミノ村の人口調査",
@@ -628,5 +628,40 @@
     "title": "おはなし | 五マスの人たち。",
     "section": "",
     "text": "自分の真ん中にはいる。でも、盤面の真ん中にいるとは限らない。"
+  },
+  {
+    "objectID": "stories/index.html#ゴマス村の身体測定",
+    "href": "stories/index.html#ゴマス村の身体測定",
+    "title": "おはなし | 五マスの人たち。",
+    "section": "",
+    "text": "身長は何マスですか？\n年に一度の健康診断。12人の住民を測ってみよう。まっすぐおじさんが横になると、なぜか身長が縮む!?\n身体測定に参加する →"
+  },
+  {
+    "objectID": "stories/body-measurement.html",
+    "href": "stories/body-measurement.html",
+    "title": "ゴマス村の身体測定",
+    "section": "",
+    "text": "STORY 002 · VILLAGE HEALTH CHECK\n\n\n\n身長は何マスですか？\n\n今日は年に一度の身体測定。\n村の12人が、保健室に集まりました。\n「はい、順番にどうぞ。身長と横幅を測ります。」\n「横幅も？」\n「この村では必要なんです。」\n\n\n\n\n気になる住民を呼んで、測定台に立ってもらいましょう。12人全員を測ると、先生から最後のお知らせがあります。\n\n\nゴマス村 保健室測定済み 0 / 12\n\n\n&lt;div class=\"measurement-stage\"&gt;\n  &lt;svg id=\"measurement-svg\" viewBox=\"0 0 340 330\" role=\"img\" aria-label=\"ペントミノの身長と横幅を測る図\"&gt;&lt;/svg&gt;\n  &lt;div class=\"measurement-reading\" id=\"measurement-reading\" aria-live=\"polite\"&gt;患者さんを選んでください。&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"measurement-panel\"&gt;\n  &lt;p class=\"measurement-caption\"&gt;診察室からのお知らせ&lt;/p&gt;\n  &lt;div class=\"measurement-dialogue\" id=\"measurement-dialogue\" aria-live=\"polite\"&gt;「次の方、どうぞー。」&lt;/div&gt;\n  &lt;div class=\"measurement-controls\"&gt;\n    &lt;button type=\"button\" id=\"measurement-turn\"&gt;横になってみる ↻&lt;/button&gt;\n    &lt;button type=\"button\" id=\"measurement-next\"&gt;次の患者さん →&lt;/button&gt;\n  &lt;/div&gt;\n  &lt;p class=\"measurement-note\"&gt;向きを変えると身長と横幅が入れ替わることがあります。五つのマスは増えません。&lt;/p&gt;\n&lt;/div&gt;\n\n\n待合室 — 名前を押すと呼び出せます\n\n\n\n\n\n&lt;h3&gt;全員、測定終了！&lt;/h3&gt;\n&lt;p&gt;先生は記録を見直しました。&lt;/p&gt;\n&lt;p&gt;「全員、体積は五マス分ですね。」&lt;/p&gt;\n&lt;p&gt;「それは最初からわかっていたのでは？」&lt;/p&gt;\n&lt;p&gt;「……では、次はオーブ検査です。」&lt;/p&gt;\n&lt;p&gt;「なんのために？」&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;「まだ決まっていません。」&lt;/strong&gt;&lt;/p&gt;\n\nこの身体測定室を動かすにはJavaScriptが必要です。12人の住民は全員、五つのマスでできています。\n\n\n\n\n「はい、背の低い順に並んでください。」\n「同じ身長だったら？」\n「横幅の小さい順です。」\n「それも同じだったら？」\n「……形のアルファベット順です。」\n「なんで？」\n「先生にもわかりません。」\n\n\nゴマス村・身長順の公式記録\n\n\n最初の姿勢で比較。順位は身長だけで決まり、同じ身長なら同順位。並び順は身長 → 横幅 → 形のアルファベット順です。\n\n\n\n\n\n\n\n\nまっすぐおじさんが立つと、身長は五マス。\nところが、横になると一マス。\n「先生、わたし、縮みました？」\n「いいえ。向きが変わっただけです。」\n「じゃあ、どちらが本当の身長ですか？」\n先生は、測定用紙を裏返しました。\n「……次の方、どうぞ。」\n\n小さな数学のメモ： この測定室では、各マスを一辺1の正方形として、今の向きでの縦方向の長さを「身長」、横方向の長さを「横幅」と呼びます。回転すると測定値は変わることがありますが、面積はいつでも5平方マスです。\n← おはなし一覧へ"
+  },
+  {
+    "objectID": "stories/body-measurement.html#次の患者さんどうぞ",
+    "href": "stories/body-measurement.html#次の患者さんどうぞ",
+    "title": "ゴマス村の身体測定",
+    "section": "",
+    "text": "気になる住民を呼んで、測定台に立ってもらいましょう。12人全員を測ると、先生から最後のお知らせがあります。\n\n\nゴマス村 保健室測定済み 0 / 12\n\n\n&lt;div class=\"measurement-stage\"&gt;\n  &lt;svg id=\"measurement-svg\" viewBox=\"0 0 340 330\" role=\"img\" aria-label=\"ペントミノの身長と横幅を測る図\"&gt;&lt;/svg&gt;\n  &lt;div class=\"measurement-reading\" id=\"measurement-reading\" aria-live=\"polite\"&gt;患者さんを選んでください。&lt;/div&gt;\n&lt;/div&gt;\n&lt;div class=\"measurement-panel\"&gt;\n  &lt;p class=\"measurement-caption\"&gt;診察室からのお知らせ&lt;/p&gt;\n  &lt;div class=\"measurement-dialogue\" id=\"measurement-dialogue\" aria-live=\"polite\"&gt;「次の方、どうぞー。」&lt;/div&gt;\n  &lt;div class=\"measurement-controls\"&gt;\n    &lt;button type=\"button\" id=\"measurement-turn\"&gt;横になってみる ↻&lt;/button&gt;\n    &lt;button type=\"button\" id=\"measurement-next\"&gt;次の患者さん →&lt;/button&gt;\n  &lt;/div&gt;\n  &lt;p class=\"measurement-note\"&gt;向きを変えると身長と横幅が入れ替わることがあります。五つのマスは増えません。&lt;/p&gt;\n&lt;/div&gt;\n\n\n待合室 — 名前を押すと呼び出せます\n\n\n\n\n\n&lt;h3&gt;全員、測定終了！&lt;/h3&gt;\n&lt;p&gt;先生は記録を見直しました。&lt;/p&gt;\n&lt;p&gt;「全員、体積は五マス分ですね。」&lt;/p&gt;\n&lt;p&gt;「それは最初からわかっていたのでは？」&lt;/p&gt;\n&lt;p&gt;「……では、次はオーブ検査です。」&lt;/p&gt;\n&lt;p&gt;「なんのために？」&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;「まだ決まっていません。」&lt;/strong&gt;&lt;/p&gt;\n\nこの身体測定室を動かすにはJavaScriptが必要です。12人の住民は全員、五つのマスでできています。"
+  },
+  {
+    "objectID": "stories/body-measurement.html#身長ってなんでしょう",
+    "href": "stories/body-measurement.html#身長ってなんでしょう",
+    "title": "ゴマス村の身体測定",
+    "section": "",
+    "text": "まっすぐおじさんが立つと、身長は五マス。\nところが、横になると一マス。\n「先生、わたし、縮みました？」\n「いいえ。向きが変わっただけです。」\n「じゃあ、どちらが本当の身長ですか？」\n先生は、測定用紙を裏返しました。\n「……次の方、どうぞ。」\n\n小さな数学のメモ： この測定室では、各マスを一辺1の正方形として、今の向きでの縦方向の長さを「身長」、横方向の長さを「横幅」と呼びます。回転すると測定値は変わることがありますが、面積はいつでも5平方マスです。\n← おはなし一覧へ"
+  },
+  {
+    "objectID": "stories/body-measurement.html#みんなで背の順",
+    "href": "stories/body-measurement.html#みんなで背の順",
+    "title": "ゴマス村の身体測定",
+    "section": "",
+    "text": "「はい、背の低い順に並んでください。」\n「同じ身長だったら？」\n「横幅の小さい順です。」\n「それも同じだったら？」\n「……形のアルファベット順です。」\n「なんで？」\n「先生にもわかりません。」\n\n\nゴマス村・身長順の公式記録\n\n\n最初の姿勢で比較。順位は身長だけで決まり、同じ身長なら同順位。並び順は身長 → 横幅 → 形のアルファベット順です。"
   }
 ]

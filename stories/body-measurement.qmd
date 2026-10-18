@@ -35,6 +35,7 @@ format:
 
 気になる住民を呼んで、測定台に立ってもらいましょう。**12人全員**を測ると、先生から最後のお知らせがあります。
 
+```{=html}
 <div class="measurement-app" id="measurement-app">
   <div class="measurement-top"><span>ゴマス村 保健室</span><span id="measurement-progress">測定済み 0 / 12</span></div>
   <div class="measurement-layout">
@@ -66,6 +67,7 @@ format:
   <noscript>この身体測定室を動かすにはJavaScriptが必要です。12人の住民は全員、五つのマスでできています。</noscript>
 </div>
 
+<<<<<<< Updated upstream
 ## みんなで背の順！
 
 「はい、背の低い順に並んでください。」
@@ -87,6 +89,9 @@ format:
   <p class="measurement-note">最初の姿勢で比較。順位は身長だけで決まり、同じ身長なら同順位。並び順は身長 → 横幅 → 形のアルファベット順です。</p>
   <div id="measurement-ranking-list" class="measurement-ranking-list"></div>
 </div>
+=======
+```
+>>>>>>> Stashed changes
 
 ## 身長って、なんでしょう。
 
