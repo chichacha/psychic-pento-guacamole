@@ -16,7 +16,7 @@ format:
 ::: {.pento-story-hero}
 <span class="pento-eyebrow">PICKLEBALL CLUB · EPISODE 01</span>
 
-# 5人なのに、コートは1面。 🏓
+# 5人なのに、コートは1面。 🥒
 
 <div class="pento-story-deck">5人でダブルス。1人はお休み。</div>
 :::
@@ -47,9 +47,13 @@ format:
 
 「じゃあ、誰が休むんですか？」
 
-「私はここにいます。」と、まんなかおじさん。
+「ぼくも遊びたいです。」と、まんなかおじさん。
 
-「それは知っています。」
+「もちろんです。」
+
+「でも、お休みの人は、おやつを食べてもいいですか？」
+
+「……まだ試合の話をしています。」
 
 「ぼくは休みたくないです！」とはみだしくん。
 
@@ -77,7 +81,7 @@ format:
 
 まんなかおじさんが聞きました。
 
-「……この時間は休憩に入りますか？」
+「……お休みの順番は、つまりおやつの順番ですか？」
 
 「**まだ試合が始まっていません。**」
 
@@ -130,7 +134,8 @@ format:
     <div class="gomasu-pb-net" aria-hidden="true">NET</div>
     <div class="gomasu-pb-team"><span class="gomasu-pb-team-label">チーム B</span><div data-role="team-b"></div></div>
   </div>
-  <p class="gomasu-pb-rest">☕ お休み：<strong data-role="rest"></strong></p>
+  <p class="gomasu-pb-rest">🥒 お休み：<strong data-role="rest"></strong></p>
+  <p class="gomasu-pb-snack" data-role="snack" aria-live="polite"></p>
   <div class="gomasu-pb-controls gomasu-pb-progress">
     <button type="button" data-action="reset">最初から ↺</button>
     <span data-role="summary" aria-live="polite"></span>
@@ -163,8 +168,14 @@ format:
 .gomasu-pb-team-label{font-size:.8rem;font-weight:700}
 .gomasu-pb-net{display:flex;align-items:center;justify-content:center;writing-mode:vertical-rl;letter-spacing:.2em;border-inline:2px dashed #fff;background:#507c74;color:white;font-size:.7rem}
 .gomasu-pb-players{display:flex;justify-content:center;flex-wrap:wrap;gap:.45rem}
-.gomasu-pb-player{display:inline-flex;align-items:center;justify-content:center;min-width:3rem;min-height:3rem;border-radius:12px;border:1px solid #ffffffaa;font-size:.88rem;font-weight:700}
-.gomasu-pb-player small{display:block;font-size:.68rem;font-weight:400}
+.gomasu-pb-player{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.2rem;min-width:5rem;color:#302b32}
+.gomasu-pb-avatar{width:72px;height:72px;display:block;overflow:visible;filter:drop-shadow(0 2px 1px #33443322)}
+.gomasu-pb-avatar .pento-tile{stroke:#302b32;stroke-width:.65;stroke-linejoin:round}
+.gomasu-pb-player-name{font-size:.69rem;font-weight:700;line-height:1.3;white-space:nowrap}
+.gomasu-pb-rest-avatar{display:flex;align-items:center;justify-content:center;gap:.7rem;flex-wrap:wrap}
+.gomasu-pb-rest-avatar .gomasu-pb-avatar{width:60px;height:60px}
+.gomasu-pb-snack{font-size:.84rem;margin:.3rem 0 0;text-align:center;min-height:1.5em}
+.gomasu-pb-snack strong{color:#765036}
 .gomasu-pb-rest{text-align:center;margin:.8rem 0}
 .gomasu-pb-progress{font-size:.86rem}
 .gomasu-pb-counts{margin-top:1.25rem}
@@ -175,7 +186,7 @@ format:
 .gomasu-pb-counts th:first-child,.gomasu-pb-counts td:first-child{text-align:left}
 .gomasu-pb-reveal{margin-top:1rem;padding:1rem;border-radius:12px;background:#eef7e9}
 .gomasu-pb-reveal[hidden]{display:none}
-@media(max-width:430px){.gomasu-pb{padding:.7rem}.gomasu-pb-player{min-width:2.4rem;min-height:2.6rem;font-size:.78rem}.gomasu-pb-controls{font-size:.86rem}.gomasu-pb-counts table{font-size:.72rem}}
+@media(max-width:430px){.gomasu-pb{padding:.7rem}.gomasu-pb-player{min-width:3.7rem}.gomasu-pb-avatar{width:54px;height:54px}.gomasu-pb-player-name{font-size:.58rem}.gomasu-pb-controls{font-size:.86rem}.gomasu-pb-counts table{font-size:.72rem}}
 </style>
 <script>
 (() => {
@@ -199,15 +210,64 @@ format:
   let current = 0;
   const el = role => root.querySelector('[data-role="' + role + '"]');
   const pairKey = (a,b) => [a,b].sort((x,y)=>x-y).join("-");
-  const badge = i => {
+  // Five squares per character, in their recognizable pentomino arrangement.
+  // SVG is generated locally; no external image requests are required.
+  const cells = {
+    X:[[1,0],[0,1],[1,1],[2,1],[1,2]],
+    I:[[1,0],[1,1],[1,2],[1,3],[1,4]],
+    U:[[0,0],[2,0],[0,1],[1,1],[2,1]],
+    T:[[0,0],[1,0],[2,0],[1,1],[1,2]],
+    Y:[[1,0],[1,1],[0,2],[1,2],[1,3]]
+  };
+  const ns = "http://www.w3.org/2000/svg";
+  const svgEl = (tag, attrs={}) => {
+    const node=document.createElementNS(ns,tag);
+    Object.entries(attrs).forEach(([key,value])=>node.setAttribute(key,String(value)));
+    return node;
+  };
+  function avatar(p, resting=false) {
+    const squares=cells[p.id];
+    const xs=squares.map(c=>c[0]), ys=squares.map(c=>c[1]);
+    const minX=Math.min(...xs), minY=Math.min(...ys);
+    const cols=Math.max(...xs)-minX+1, rows=Math.max(...ys)-minY+1;
+    const svg=svgEl("svg",{
+      viewBox:"-3 -3 "+(cols*18+6)+" "+(rows*18+6),
+      class:"gomasu-pb-avatar",role:"img",
+      "aria-label":p.name+"のペントミノ"
+    });
+    squares.forEach(([x,y])=>{
+      svg.append(svgEl("rect",{
+        x:(x-minX)*18+.5,y:(y-minY)*18+.5,width:17,height:17,rx:3,
+        fill:p.color,class:"pento-tile"
+      }));
+    });
+    // Place the expression on an occupied square, never in a hole.
+    const faceCell=p.id==="I"?[1,1]:p.id==="Y"?[1,1]:p.id==="U"?[1,1]:[1,1];
+    const fx=(faceCell[0]-minX)*18+9, fy=(faceCell[1]-minY)*18+9;
+    const ink="#302b32";
+    svg.append(svgEl("circle",{cx:fx-3.1,cy:fy-2,r:1.2,fill:ink}));
+    svg.append(svgEl("circle",{cx:fx+3.1,cy:fy-2,r:1.2,fill:ink}));
+    if(p.id==="X" && resting) {
+      svg.append(svgEl("ellipse",{cx:fx,cy:fy+3.8,rx:2.2,ry:2.8,fill:ink}));
+    } else {
+      svg.append(svgEl("path",{
+        d:"M "+(fx-3.2)+" "+(fy+2.7)+" Q "+fx+" "+(fy+6.8)+" "+(fx+3.2)+" "+(fy+2.7),
+        fill:"none",stroke:ink,"stroke-width":1.2,"stroke-linecap":"round"
+      }));
+    }
+    return svg;
+  }
+  const badge = (i,resting=false) => {
     const p=people[i];
-    const span=document.createElement("span");
-    span.className="gomasu-pb-player";
-    span.style.background=p.color;
-    span.textContent=p.id;
-    span.title=p.name;
-    span.setAttribute("aria-label",p.name+" ("+p.id+")");
-    return span;
+    const holder=document.createElement("span");
+    holder.className="gomasu-pb-player";
+    holder.title=p.name+" ("+p.id+")";
+    holder.append(avatar(p,resting));
+    const label=document.createElement("span");
+    label.className="gomasu-pb-player-name";
+    label.textContent=p.name;
+    holder.append(label);
+    return holder;
   };
   function render() {
     const round=rounds[current];
@@ -220,7 +280,17 @@ format:
       round.teams[index].forEach(i=>wrapper.append(badge(i)));
       target.append(wrapper);
     }
-    el("rest").textContent=people[round.rest].name+" ("+people[round.rest].id+")";
+    const resting=round.rest;
+    const restBox=document.createElement("span");
+    restBox.className="gomasu-pb-rest-avatar";
+    restBox.append(badge(resting,true));
+    const restText=document.createElement("span");
+    restText.textContent=people[resting].id==="X"?"おやつの時間！ 🍪":"ひとやすみ";
+    restBox.append(restText);
+    el("rest").replaceChildren(restBox);
+    el("snack").textContent=people[round.rest].id==="X"
+      ?"まんなかおじさん：「遊ぶのも好き。でも、おやつも好き。」 🍪"
+      :"まんなかおじさん：「ぼくのおやつ休憩は、まだですか？」";
     const played=Array(5).fill(0), rested=Array(5).fill(0);
     const partners=Array.from({length:5},()=>new Set());
     const opponents=Array.from({length:5},()=>new Map());
