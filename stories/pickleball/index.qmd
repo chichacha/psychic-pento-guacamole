@@ -4,12 +4,22 @@ subtitle: "5人なのに、コートは1面。"
 format:
   html:
     toc: false
-    page-layout: article
+    page-layout: full
+    css:
+      - ../../assets/css/story.css
 ---
+
+::: {.pento-stories .pickleball-story}
 
 [← おはなし一覧へ](../index.qmd)
 
+::: {.pento-story-hero}
+<span class="pento-eyebrow">STORIES · PICKLEBALL CLUB</span>
+
 # ゴマス村ピックルボール部 🏓
+
+<div class="pento-story-deck">だれが休む？ だれと組む？ それって公平？</div>
+:::
 
 ボールが一つ。コートが一面。
 
@@ -66,4 +76,6 @@ format:
 そのうえで、なるべく違う相手とペアになれるように考えます。
 
 数学の答えよりも、住人たちが楽しく遊べることが先です。
+:::
+
 :::
