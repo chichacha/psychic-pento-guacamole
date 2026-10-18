@@ -118,7 +118,7 @@ format:
 
 **下のボタンを押して、1試合ずつ確かめてみよう！**
 
-::: {=html}
+```{=html}
 <div class="gomasu-pb" id="gomasu-pb-five">
   <div class="gomasu-pb-controls">
     <button type="button" data-action="prev" aria-label="前の試合">← まえ</button>
@@ -147,6 +147,9 @@ format:
     <p>まんなかおじさん：「……次はおやつの順番もお願いします。」</p>
   </div>
 </div>
+
+```
+
 <style>
 .gomasu-pb{--pb-ink:#302b32;--pb-line:#d9d7d3;color:var(--pb-ink);max-width:740px;margin:1.5rem auto;padding:1rem;border:1px solid var(--pb-line);border-radius:18px;background:#fffdf8}
 .gomasu-pb *{box-sizing:border-box}
@@ -257,16 +260,16 @@ format:
   render();
 })();
 </script>
-:::
+
 
 ::: {.callout-note collapse="true"}
 ## 豆知識：なぜ5試合で足りるの？
 
 5人から2人を選ぶパートナーの組み合わせは、**10組**です。
 
-\[
+$$
 \binom{5}{2}=10
-\]
+$$
 
 ダブルス1試合には2組のパートナーが登場するので、5試合でちょうど10組。
 
