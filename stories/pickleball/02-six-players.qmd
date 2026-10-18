@@ -1,5 +1,5 @@
 ---
-title: "もう一人、来ちゃった。"
+title: "6人になったら、お休みは2人。"
 subtitle: "ゴマス村ピックルボール部 · 第2話"
 format:
   html:
@@ -11,133 +11,829 @@ format:
 
 ::: {.pento-stories .pickleball-story}
 
-[← ピックルボール部へ](index.qmd) · [← 第1話](01-five-players.qmd)
+[← ピックルボール部へ](index.qmd)
 
 ::: {.pento-story-hero}
 <span class="pento-eyebrow">PICKLEBALL CLUB · EPISODE 02</span>
 
-# もう一人、来ちゃった。 🏓
+# 6人になったら、お休みは2人。 🥒
 
-<div class="pento-story-deck">6人になったら、何が変わる？</div>
+<div class="pento-story-deck">6人でダブルス。1面しかないと、毎回2人がお休みです。</div>
 :::
 
-しきりやおばさんが、5人分の組み合わせ表を掲げました。
-
-「全員、4試合ずつ。お休みは1回ずつ。パートナーも全部ちがいます！」
-
-「完璧！」とはみだしくん。
-
-まんなかおじさんは、もうおやつを開けています。
-
-そのとき。
+そのときです。
 
 「楽しそう！ 私も入っていい？」
 
-こつこつおばさんが、パドルを持ってやってきました。
+6人目の **ぎゅっとくん** がやってきました。
 
-「もちろん！」と、ぎゅーおばさん。
+「もちろんです。」と、しきりやおばさん。
 
-しきりやおばさんの手が止まりました。
+「これで、もっとにぎやかですね。」と、ぎゅーおばさん。
 
-「……6人？」
+はみだしくんは、すぐに気づきました。
 
-「そう、6人！」
+「でも、コートは1面のままだよ？」
 
-「……表を、作り直します。」
+みんなで数えてみると、遊べるのは一度に4人。  
+**毎試合、2人がお休み**になります。
 
-まんなかおじさんが聞きました。
+「じゃあ、6人なら何試合やれば公平なんですか？」と、まっすぐおじさん。
 
-「今度はおやつを食べていてもいいですか？」
+しきりやおばさんは、すぐに紙を出しました。
 
-「今度は、**2人ずつ休めます**。」
+「1試合ごとに、お休みは2人です。  
+だから試合数が \(m\) のとき、お休みの席は全部で \(2m\) 個。  
+それを6人で公平に分けるには、\(2m \div 6 = m/3\) が整数でないといけません。」
 
-「それはいいですね。」
+「つまり……？」と、ぎゅっとくん。
 
-「ただし、3試合で全員1回ずつ休めるようになります。」
+「**3試合、6試合、9試合……みたいに、3の倍数がちょうどいい**んです。」
 
-はみだしくんは飛び跳ねました。
+まんなかおじさんが、うなずきました。
 
-「5試合から3試合！ 短くなった！」
+「なるほど。おやつ休憩も、ちゃんと平等なんですね。」
 
-ぎゅーおばさんが首をかしげました。
-
-「……でも、みんな2試合しか遊べないのよ？」
-
-「えっ。」
-
-「前は4試合できたのに？」
-
-「**公平に休めることと、たくさん遊べることは別です。**」
-
-しきりやおばさんは、新しい紙に大きく書きました。
-
-**3試合：全員2試合プレー・1試合お休み。**
-
-「じゃあ、6試合にしたら？」
-
-**6試合：全員4試合プレー・2試合お休み。**
-
-「それなら、もっと遊べる！」
-
-「でも、6人だと全員とペアになるのは難しいんです。」
-
-「どうして？」
-
-「ほかの5人全員と組むには、1人5試合必要です。でも、みんなが同じ回数遊ぶなら、試合数にも決まりがあるんです。」
-
-まんなかおじさんが、最後のおやつを持ち上げました。
-
-「つまり、ちょうどいい数は……」
-
-「**何を『ちょうどいい』と呼ぶかによります。**」
-
-「……おやつは6個ありました。」
-
-「それは最初からちょうどよかったですね。」
+「休憩のことしか考えていませんね。」と、しきりやおばさん。
 
 ---
 
-## みんなで考えてみよう
-
-::: {.callout-tip}
 ## 3試合と6試合、どっちがいい？
 
-- **3試合**なら、全員2回プレーして1回休む。短い交流会にぴったり。
-- **6試合**なら、全員4回プレーして2回休む。もっと遊びたい日にぴったり。
+- **3試合**なら、全員 **2回プレーして1回休む**。
+- **6試合**なら、全員 **4回プレーして2回休む**。
 
-どちらも、試合回数という意味では公平。
+どちらも公平です。  
+でも、**パートナーの出会い方**はちがいます。
 
-ただし、**休みの順番**や**同じ相手との組み合わせ**まで公平かどうかは、別に確かめる必要があります。
+6人から2人を選ぶパートナーの組み合わせは、
+
+$$
+\binom{6}{2} = 15
+$$
+
+あります。
+
+ところが、ダブルス1試合で登場するパートナーは **2組** だけ。  
+だから 15組を1回ずつ出したいなら、
+
+$$
+15 \div 2 = 7.5
+$$
+
+試合必要になります。
+
+**7.5試合はできません。**
+
+つまり、6人・1面のダブルスでは、
+
+- **全員が同じだけ休むこと** と
+- **全員と1回ずつペアになること**
+
+を、同時にきれいに実現するのはむずかしいのです。
+
+::: {.callout-tip}
+## 見くらべてみよう
+
+下のボタンで **3試合** と **6試合** を切り替えてみよう。
+
+- だれが何回休む？
+- だれとペアになった？
+- 15組のうち、何組まで出てきた？
+
+を見くらべてみよう。
 :::
 
+## しきりやおばさんの組み合わせ実験
+
+```{=html}
+<div class="gomasu-pb" id="gomasu-pb-six">
+
+  <div class="gomasu-pb-mode-switch" role="group" aria-label="試合数を選ぶ">
+    <button type="button" data-mode="short" class="is-active">3試合</button>
+    <button type="button" data-mode="long">6試合</button>
+  </div>
+
+  <p class="gomasu-pb-mode-caption" data-role="mode-caption" aria-live="polite"></p>
+
+  <div class="gomasu-pb-controls">
+    <button type="button" data-action="prev" aria-label="前の試合">← まえ</button>
+    <strong data-role="round" aria-live="polite">第1試合</strong>
+    <button type="button" data-action="next" aria-label="次の試合">つぎ →</button>
+  </div>
+
+  <div class="gomasu-pb-court" aria-label="ダブルスの組み合わせ">
+    <div class="gomasu-pb-team">
+      <span class="gomasu-pb-team-label">チーム A</span>
+      <div data-role="team-a"></div>
+    </div>
+    <div class="gomasu-pb-net" aria-hidden="true">NET</div>
+    <div class="gomasu-pb-team">
+      <span class="gomasu-pb-team-label">チーム B</span>
+      <div data-role="team-b"></div>
+    </div>
+  </div>
+
+  <div class="gomasu-pb-rest-block">
+    <p class="gomasu-pb-rest-label">🥒 お休み</p>
+    <div data-role="rest"></div>
+  </div>
+
+  <p class="gomasu-pb-snack" data-role="snack" aria-live="polite"></p>
+
+  <div class="gomasu-pb-stat-grid">
+    <div class="gomasu-pb-stat-card">
+      <strong data-role="pair-count">0 / 15</strong>
+      <span>出てきたパートナー組</span>
+    </div>
+    <div class="gomasu-pb-stat-card">
+      <strong data-role="rest-balance">-</strong>
+      <span>ここまでのお休み回数</span>
+    </div>
+  </div>
+
+  <div class="gomasu-pb-controls gomasu-pb-progress">
+    <button type="button" data-action="reset">最初から ↺</button>
+    <span data-role="summary" aria-live="polite"></span>
+  </div>
+
+  <div class="gomasu-pb-counts">
+    <h3>ここまでの記録</h3>
+    <p>各住人の「出場 / お休み」と、出会ったパートナーの数を数えます。</p>
+    <div data-role="counts"></div>
+  </div>
+
+  <div class="gomasu-pb-pair-board">
+    <h3>15組のパートナー</h3>
+    <p>出てきた組を色つきで表示します。まだ出ていない組は、うすく表示されます。</p>
+    <div data-role="pairs" class="gomasu-pb-pairs"></div>
+  </div>
+
+  <div class="gomasu-pb-reveal" data-role="reveal" hidden></div>
+</div>
+```
+
+<style>
+.gomasu-pb{
+  --pb-ink:#302b32;
+  --pb-line:#d9d7d3;
+  --pb-bg:#fffdf8;
+  --pb-court:#78b9a7;
+  --pb-court-dark:#507c74;
+  color:var(--pb-ink);
+  max-width:780px;
+  margin:1.5rem auto;
+  padding:1rem;
+  border:1px solid var(--pb-line);
+  border-radius:18px;
+  background:var(--pb-bg);
+}
+.gomasu-pb *{box-sizing:border-box}
+.gomasu-pb-controls{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:.5rem;
+  flex-wrap:wrap;
+}
+.gomasu-pb button{
+  border:1px solid #a7a5a1;
+  border-radius:999px;
+  background:white;
+  color:var(--pb-ink);
+  padding:.55rem .9rem;
+  cursor:pointer;
+  font:inherit;
+}
+.gomasu-pb button:hover:not(:disabled){background:#f5f0e6}
+.gomasu-pb button:focus-visible{
+  outline:3px solid #335d4c;
+  outline-offset:2px;
+}
+.gomasu-pb button:disabled{opacity:.35;cursor:not-allowed}
+
+.gomasu-pb-mode-switch{
+  display:flex;
+  gap:.55rem;
+  justify-content:center;
+  margin-bottom:.6rem;
+  flex-wrap:wrap;
+}
+.gomasu-pb-mode-switch button.is-active{
+  background:#335d4c;
+  color:white;
+  border-color:#335d4c;
+}
+.gomasu-pb-mode-caption{
+  margin:.2rem auto 1rem;
+  text-align:center;
+  font-size:.92rem;
+}
+
+.gomasu-pb-court{
+  display:grid;
+  grid-template-columns:1fr 2rem 1fr;
+  min-height:190px;
+  margin:1rem 0;
+  border:3px solid white;
+  outline:2px solid #4b9989;
+  border-radius:6px;
+  background:var(--pb-court);
+  overflow:hidden;
+}
+.gomasu-pb-team{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:.7rem;
+  padding:.7rem .3rem;
+  text-align:center;
+}
+.gomasu-pb-team-label{
+  font-size:.8rem;
+  font-weight:700;
+}
+.gomasu-pb-net{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  writing-mode:vertical-rl;
+  letter-spacing:.2em;
+  border-inline:2px dashed #fff;
+  background:var(--pb-court-dark);
+  color:white;
+  font-size:.7rem;
+}
+
+.gomasu-pb-players{
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  flex-wrap:wrap;
+  gap:.45rem;
+}
+.gomasu-pb-player{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:.2rem;
+  min-width:5rem;
+  color:#302b32;
+}
+.gomasu-pb-player-name{
+  font-size:.69rem;
+  font-weight:700;
+  line-height:1.3;
+  white-space:nowrap;
+}
+.gomasu-pb-avatar{
+  width:72px;
+  height:72px;
+  display:block;
+  overflow:visible;
+  filter:drop-shadow(0 2px 1px #33443322);
+}
+.gomasu-pb-avatar.is-small{
+  width:44px;
+  height:44px;
+}
+.gomasu-pb-avatar .pento-tile{
+  stroke:#302b32;
+  stroke-width:.65;
+  stroke-linejoin:round;
+}
+.gomasu-pb-avatar .pento-outline{
+  fill:none;
+  stroke:#302b32;
+  stroke-width:.55;
+  opacity:.28;
+}
+
+.gomasu-pb-rest-block{
+  margin:.8rem 0;
+  text-align:center;
+}
+.gomasu-pb-rest-label{
+  margin:0 0 .4rem;
+  font-weight:700;
+}
+.gomasu-pb-rest-avatars{
+  display:flex;
+  gap:.8rem;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+.gomasu-pb-rest-avatars .gomasu-pb-avatar{
+  width:60px;
+  height:60px;
+}
+.gomasu-pb-rest-avatars .gomasu-pb-player{
+  min-width:4.5rem;
+}
+
+.gomasu-pb-snack{
+  text-align:center;
+  margin:.8rem 0;
+  min-height:1.6em;
+  font-size:.92rem;
+}
+.gomasu-pb-stat-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:.7rem;
+  margin:1rem 0;
+}
+.gomasu-pb-stat-card{
+  border:1px solid var(--pb-line);
+  border-radius:12px;
+  background:white;
+  padding:.8rem;
+  text-align:center;
+}
+.gomasu-pb-stat-card strong{
+  display:block;
+  font-size:1.05rem;
+}
+.gomasu-pb-stat-card span{
+  display:block;
+  font-size:.8rem;
+  margin-top:.2rem;
+}
+
+.gomasu-pb-progress{
+  font-size:.88rem;
+}
+
+.gomasu-pb-counts{
+  margin-top:1.25rem;
+}
+.gomasu-pb-counts h3,
+.gomasu-pb-pair-board h3{
+  font-size:1.08rem;
+}
+.gomasu-pb-counts p,
+.gomasu-pb-pair-board p{
+  font-size:.88rem;
+}
+.gomasu-pb-counts table{
+  width:100%;
+  font-size:.82rem;
+  border-collapse:collapse;
+}
+.gomasu-pb-counts th,
+.gomasu-pb-counts td{
+  padding:.45rem .25rem;
+  text-align:center;
+  border-bottom:1px solid var(--pb-line);
+}
+.gomasu-pb-counts th:first-child,
+.gomasu-pb-counts td:first-child{
+  text-align:left;
+}
+
+.gomasu-pb-pair-board{
+  margin-top:1.25rem;
+}
+.gomasu-pb-pairs{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:.6rem;
+}
+.gomasu-pb-pair-card{
+  border:1px solid var(--pb-line);
+  border-radius:12px;
+  background:#f7f6f2;
+  padding:.45rem .3rem;
+  opacity:.42;
+  transition:opacity .2s ease, transform .2s ease, background .2s ease;
+}
+.gomasu-pb-pair-card.is-seen{
+  opacity:1;
+  background:#fff;
+}
+.gomasu-pb-pair-card.is-new{
+  outline:2px solid #335d4c;
+  outline-offset:1px;
+}
+.gomasu-pb-pair-card .gomasu-pb-players{
+  flex-wrap:nowrap;
+  gap:.15rem;
+}
+.gomasu-pb-pair-card .gomasu-pb-player{
+  min-width:0;
+  flex:1;
+}
+.gomasu-pb-pair-card .gomasu-pb-player-name{
+  font-size:.56rem;
+}
+.gomasu-pb-pair-label{
+  margin:.1rem 0 .25rem;
+  text-align:center;
+  font-size:.7rem;
+  color:#5d5d5d;
+}
+
+.gomasu-pb-reveal{
+  margin-top:1rem;
+  padding:1rem;
+  border-radius:12px;
+  background:#eef7e9;
+}
+.gomasu-pb-reveal[hidden]{display:none}
+
+@media (max-width: 560px){
+  .gomasu-pb-stat-grid{grid-template-columns:1fr}
+  .gomasu-pb-pairs{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width: 430px){
+  .gomasu-pb{padding:.7rem}
+  .gomasu-pb-player{min-width:3.7rem}
+  .gomasu-pb-avatar{width:54px;height:54px}
+  .gomasu-pb-player-name{font-size:.58rem}
+  .gomasu-pb-pair-card .gomasu-pb-avatar.is-small{width:36px;height:36px}
+  .gomasu-pb-counts table{font-size:.72rem}
+}
+</style>
+
+<script>
+(() => {
+  const root = document.getElementById("gomasu-pb-six");
+  if (!root || root.dataset.ready) return;
+  root.dataset.ready = "true";
+
+  const people = [
+    { id:"X", name:"まんなか", color:"#F0B6DF" },
+    { id:"I", name:"まっすぐ", color:"#FDCFAB" },
+    { id:"U", name:"ぎゅー", color:"#85D7EF" },
+    { id:"T", name:"しきりや", color:"#76E1D7" },
+    { id:"Y", name:"はみだし", color:"#FFAFD0" },
+    { id:"P", name:"ぎゅっと", color:"#6BB091" }
+  ];
+
+  const cells = {
+    X:[[1,0],[0,1],[1,1],[2,1],[1,2]],
+    I:[[1,0],[1,1],[1,2],[1,3],[1,4]],
+    U:[[0,0],[2,0],[0,1],[1,1],[2,1]],
+    T:[[0,0],[1,0],[2,0],[1,1],[1,2]],
+    Y:[[1,0],[1,1],[0,2],[1,2],[1,3]],
+    P:[[0,0],[1,0],[0,1],[1,1],[0,2]]
+  };
+
+  const schedules = {
+    short: {
+      label: "3試合",
+      description: "全員 2回出場・1回休憩。短い交流会にぴったり。",
+      rounds: [
+        { rest:[0,5], teams:[[1,2],[3,4]] }, // X,P rest
+        { rest:[1,3], teams:[[0,2],[5,4]] }, // I,T rest
+        { rest:[2,4], teams:[[0,3],[1,5]] }  // U,Y rest
+      ]
+    },
+    long: {
+      label: "6試合",
+      description: "全員 4回出場・2回休憩。もっと遊びたい日にぴったり。",
+      rounds: [
+        { rest:[0,5], teams:[[1,2],[3,4]] },
+        { rest:[1,3], teams:[[0,2],[5,4]] },
+        { rest:[2,4], teams:[[0,3],[1,5]] },
+        { rest:[0,5], teams:[[1,3],[2,4]] },
+        { rest:[1,3], teams:[[0,4],[2,5]] },
+        { rest:[2,4], teams:[[0,1],[3,5]] }
+      ]
+    }
+  };
+
+  let mode = "short";
+  let current = 0;
+
+  const ns = "http://www.w3.org/2000/svg";
+  const el = role => root.querySelector('[data-role="' + role + '"]');
+  const pairKey = (a,b) => [a,b].sort((x,y)=>x-y).join("-");
+
+  const allPairs = [];
+  for (let i = 0; i < people.length; i++) {
+    for (let j = i + 1; j < people.length; j++) {
+      allPairs.push([i, j]);
+    }
+  }
+
+  const svgEl = (tag, attrs={}) => {
+    const node = document.createElementNS(ns, tag);
+    Object.entries(attrs).forEach(([key, value]) => {
+      node.setAttribute(key, String(value));
+    });
+    return node;
+  };
+
+  function avatar(player, options = {}) {
+    const squares = cells[player.id];
+    const xs = squares.map(c => c[0]);
+    const ys = squares.map(c => c[1]);
+    const minX = Math.min(...xs), minY = Math.min(...ys);
+    const cols = Math.max(...xs) - minX + 1;
+    const rows = Math.max(...ys) - minY + 1;
+
+    const svg = svgEl("svg", {
+      viewBox: "-3 -3 " + (cols * 18 + 6) + " " + (rows * 18 + 6),
+      class: "gomasu-pb-avatar" + (options.small ? " is-small" : ""),
+      role: "img",
+      "aria-label": player.name + "のペントミノ"
+    });
+
+    squares.forEach(([x, y]) => {
+      svg.append(svgEl("rect", {
+        x: (x - minX) * 18 + .5,
+        y: (y - minY) * 18 + .5,
+        width: 17,
+        height: 17,
+        rx: 3,
+        fill: player.color,
+        class: "pento-tile"
+      }));
+    });
+
+    const faceLookup = {
+      X:[1,1],
+      I:[1,1],
+      U:[1,1],
+      T:[1,1],
+      Y:[1,1],
+      P:[0,1]
+    };
+
+    const [fxCell, fyCell] = faceLookup[player.id];
+    const fx = (fxCell - minX) * 18 + 9;
+    const fy = (fyCell - minY) * 18 + 9;
+    const ink = "#302b32";
+
+    svg.append(svgEl("circle", { cx: fx - 3.1, cy: fy - 2, r: 1.2, fill: ink }));
+    svg.append(svgEl("circle", { cx: fx + 3.1, cy: fy - 2, r: 1.2, fill: ink }));
+
+    if (options.snack) {
+      svg.append(svgEl("ellipse", { cx: fx, cy: fy + 3.8, rx: 2.2, ry: 2.8, fill: ink }));
+    } else {
+      svg.append(svgEl("path", {
+        d: "M " + (fx - 3.2) + " " + (fy + 2.7) + " Q " + fx + " " + (fy + 6.8) + " " + (fx + 3.2) + " " + (fy + 2.7),
+        fill: "none",
+        stroke: ink,
+        "stroke-width": 1.2,
+        "stroke-linecap": "round"
+      }));
+    }
+
+    return svg;
+  }
+
+  function badge(index, options = {}) {
+    const p = people[index];
+    const holder = document.createElement("span");
+    holder.className = "gomasu-pb-player";
+    holder.title = p.name + " (" + p.id + ")";
+    holder.append(avatar(p, options));
+
+    if (!options.iconOnly) {
+      const label = document.createElement("span");
+      label.className = "gomasu-pb-player-name";
+      label.textContent = p.name;
+      holder.append(label);
+    }
+
+    return holder;
+  }
+
+  function statsFor(rounds) {
+    const played = Array(people.length).fill(0);
+    const rested = Array(people.length).fill(0);
+    const partners = Array.from({ length: people.length }, () => new Set());
+    const seenPairs = new Set();
+
+    rounds.forEach(game => {
+      game.rest.forEach(i => rested[i]++);
+      game.teams.forEach(team => {
+        team.forEach(i => played[i]++);
+        partners[team[0]].add(team[1]);
+        partners[team[1]].add(team[0]);
+        seenPairs.add(pairKey(team[0], team[1]));
+      });
+    });
+
+    return { played, rested, partners, seenPairs };
+  }
+
+  function renderCounts(played, rested, partners) {
+    const table = document.createElement("table");
+    table.innerHTML = "<thead><tr><th>住人</th><th>出場</th><th>お休み</th><th>組んだ人数</th></tr></thead>";
+    const tbody = document.createElement("tbody");
+
+    people.forEach((p, i) => {
+      const tr = document.createElement("tr");
+      [p.id + " " + p.name, played[i], rested[i], partners[i].size + " / 5"].forEach(value => {
+        const td = document.createElement("td");
+        td.textContent = value;
+        tr.append(td);
+      });
+      tbody.append(tr);
+    });
+
+    table.append(tbody);
+    el("counts").replaceChildren(table);
+  }
+
+  function renderPairs(seenPairs, currentRoundPairs) {
+    const target = el("pairs");
+    const frag = document.createDocumentFragment();
+
+    allPairs.forEach(([a,b]) => {
+      const card = document.createElement("div");
+      const key = pairKey(a,b);
+      card.className = "gomasu-pb-pair-card";
+      if (seenPairs.has(key)) card.classList.add("is-seen");
+      if (currentRoundPairs.has(key)) card.classList.add("is-new");
+
+      const label = document.createElement("p");
+      label.className = "gomasu-pb-pair-label";
+      label.textContent = people[a].id + " + " + people[b].id;
+
+      const players = document.createElement("div");
+      players.className = "gomasu-pb-players";
+      players.append(badge(a, { small:true }));
+      players.append(badge(b, { small:true }));
+
+      card.append(label, players);
+      frag.append(card);
+    });
+
+    target.replaceChildren(frag);
+  }
+
+  function updateModeButtons() {
+    root.querySelectorAll("[data-mode]").forEach(btn => {
+      btn.classList.toggle("is-active", btn.dataset.mode === mode);
+    });
+  }
+
+  function render() {
+    const schedule = schedules[mode];
+    const rounds = schedule.rounds;
+    if (current > rounds.length - 1) current = rounds.length - 1;
+    if (current < 0) current = 0;
+
+    const round = rounds[current];
+
+    updateModeButtons();
+    el("mode-caption").textContent = schedule.description;
+    el("round").textContent = "第" + (current + 1) + "試合 / 全" + rounds.length + "試合";
+
+    [["team-a", 0], ["team-b", 1]].forEach(([role, teamIndex]) => {
+      const target = el(role);
+      target.replaceChildren();
+      const wrapper = document.createElement("div");
+      wrapper.className = "gomasu-pb-players";
+      round.teams[teamIndex].forEach(i => wrapper.append(badge(i)));
+      target.append(wrapper);
+    });
+
+    const restWrap = document.createElement("div");
+    restWrap.className = "gomasu-pb-rest-avatars";
+    round.rest.forEach(i => {
+      restWrap.append(badge(i, { snack: people[i].id === "X" }));
+    });
+    el("rest").replaceChildren(restWrap);
+
+    if (round.rest.includes(0)) {
+      el("snack").textContent = "まんなかおじさん：「やった。今日は、おやつ休憩があります。」 🍪";
+    } else {
+      el("snack").textContent = "まんなかおじさん：「次のお休み、ぼくですか？」";
+    }
+
+    const partial = statsFor(rounds.slice(0, current + 1));
+    renderCounts(partial.played, partial.rested, partial.partners);
+
+    const currentRoundPairs = new Set(round.teams.map(team => pairKey(team[0], team[1])));
+    renderPairs(partial.seenPairs, currentRoundPairs);
+
+    el("pair-count").textContent = partial.seenPairs.size + " / 15";
+    el("rest-balance").textContent = partial.rested.join("・");
+    el("summary").textContent = "ここまで " + (current + 1) + " / " + rounds.length + " 試合";
+
+    root.querySelector('[data-action="prev"]').disabled = current === 0;
+    root.querySelector('[data-action="next"]').disabled = current === rounds.length - 1;
+
+    const reveal = el("reveal");
+    const finished = current === rounds.length - 1;
+
+    if (!finished) {
+      reveal.hidden = true;
+      reveal.replaceChildren();
+      return;
+    }
+
+    const finalStats = statsFor(rounds);
+    const allRestEqual = finalStats.rested.every(n => n === finalStats.rested[0]);
+    const allPlayEqual = finalStats.played.every(n => n === finalStats.played[0]);
+
+    reveal.hidden = false;
+    reveal.replaceChildren();
+
+    const strong = document.createElement("strong");
+    strong.textContent = mode === "short" ? "🎉 3試合、終了！" : "🎉 6試合、終了！";
+    reveal.append(strong);
+
+    const p1 = document.createElement("p");
+    p1.innerHTML = mode === "short"
+      ? "全員が <strong>2回出場・1回休憩</strong>。休み方はきれいにそろいました。"
+      : "全員が <strong>4回出場・2回休憩</strong>。もっと遊べて、それでも公平です。";
+    reveal.append(p1);
+
+    const p2 = document.createElement("p");
+    p2.innerHTML = "出てきたパートナーは <strong>" + finalStats.seenPairs.size + " / 15組</strong>。"
+      + (mode === "short"
+        ? " 3試合では、まだまだ出会えていない組がたくさんあります。"
+        : " 6試合でも15組すべてはそろわず、3組はまだ出てきません。");
+    reveal.append(p2);
+
+    if (mode === "long") {
+      const unseen = allPairs
+        .filter(([a,b]) => !finalStats.seenPairs.has(pairKey(a,b)))
+        .map(([a,b]) => people[a].id + "+" + people[b].id)
+        .join("、");
+
+      const p3 = document.createElement("p");
+      p3.innerHTML = "今回まだ出ていない組は <strong>" + unseen + "</strong> です。";
+      reveal.append(p3);
+    }
+
+    const p4 = document.createElement("p");
+    p4.innerHTML = allRestEqual && allPlayEqual
+      ? "しきりやおばさん：「休みは公平。でも、パートナーの公平さとは別問題です。」"
+      : "しきりやおばさん：「まだ検討が必要ですね。」";
+    reveal.append(p4);
+  }
+
+  root.querySelectorAll("[data-mode]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      mode = btn.dataset.mode;
+      current = 0;
+      render();
+    });
+  });
+
+  root.querySelector('[data-action="prev"]').addEventListener("click", () => {
+    current = Math.max(0, current - 1);
+    render();
+  });
+
+  root.querySelector('[data-action="next"]').addEventListener("click", () => {
+    current = Math.min(schedules[mode].rounds.length - 1, current + 1);
+    render();
+  });
+
+  root.querySelector('[data-action="reset"]').addEventListener("click", () => {
+    current = 0;
+    render();
+  });
+
+  render();
+})();
+</script>
+
 ::: {.callout-note collapse="true"}
-## 豆知識：6人のパートナーは何組？
+## 豆知識：なぜ 3 の倍数試合なの？
 
-6人から2人を選ぶ方法は、
+6人・1面のダブルスでは、1試合ごとに **2人** が休みます。
 
-\[
-\binom{6}{2}=15
-\]
+試合数を \(m\) とすると、お休みの席は全部で \(2m\) 個。  
+これを6人で公平に分けたいので、
 
-全部で**15組**。
+$$
+\frac{2m}{6} = \frac{m}{3}
+$$
 
-ダブルス1試合には2組のパートナーがいるので、15組を1回ずつ登場させるには、**7.5試合**が必要になります。
+が整数になる必要があります。
 
-でも、半分だけ試合をすることはできません。
+つまり、**3試合・6試合・9試合…** のように、  
+**3の倍数の試合数** なら、全員が同じ回数だけ休めます。
 
-だから、すべてのペアを**ちょうど1回ずつ**登場させるのは不可能です。何試合か増やすか、組まないペアを残すか、どこかで同じペアを繰り返す必要があります。
+でも、パートナー組は全部で 15組。  
+1試合に出てくるパートナー組は 2組だけなので、
+
+$$
+15 \div 2 = 7.5
+$$
+
+となり、**15組を1回ずつきれいに出し切ることはできません。**
+
+ここが、5人のときとの大きなちがいです。
 :::
 
 ### 次回予告
 
-「……あの、私も遊んでいいですか？」
+「7人になったら、どうなるの？」
 
-しきりやおばさんは、鉛筆を置きました。
+ゴマス村ピックルボール部は、まだまだ続きます。
 
-「今度は何人ですか？」
-
-「7人です。」
-
-[第3話：休憩席が足りません。 →](03-seven-players.qmd)
+[← ピックルボール部へ](index.qmd)
 
 :::
