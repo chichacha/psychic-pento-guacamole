@@ -16,7 +16,7 @@ format:
 ::: {.pento-story-hero}
 <span class="pento-eyebrow">STORIES · PICKLEBALL CLUB</span>
 
-# ゴマス村ピックルボール部 🏓
+# ゴマス村ピックルボール部 🥒🎾
 
 <div class="pento-story-deck">だれが休む？ だれと組む？ それって公平？</div>
 :::
