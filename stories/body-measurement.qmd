@@ -66,8 +66,8 @@ format:
   </div>
   <noscript>この身体測定室を動かすにはJavaScriptが必要です。12人の住民は全員、五つのマスでできています。</noscript>
 </div>
+``` 
 
-<<<<<<< Updated upstream
 ## みんなで背の順！
 
 「はい、背の低い順に並んでください。」
@@ -84,14 +84,16 @@ format:
 
 「先生にもわかりません。」
 
+```{=html}
+
 <div class="measurement-ranking" id="measurement-ranking">
   <p class="measurement-caption">ゴマス村・身長順の公式記録</p>
   <p class="measurement-note">最初の姿勢で比較。順位は身長だけで決まり、同じ身長なら同順位。並び順は身長 → 横幅 → 形のアルファベット順です。</p>
   <div id="measurement-ranking-list" class="measurement-ranking-list"></div>
 </div>
-=======
+
 ```
->>>>>>> Stashed changes
+
 
 ## 身長って、なんでしょう。
 
