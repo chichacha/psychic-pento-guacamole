@@ -187,6 +187,15 @@ format:
 .gomasu-pb-reveal{margin-top:1rem;padding:1rem;border-radius:12px;background:#eef7e9}
 .gomasu-pb-reveal[hidden]{display:none}
 @media(max-width:430px){.gomasu-pb{padding:.7rem}.gomasu-pb-player{min-width:3.7rem}.gomasu-pb-avatar{width:54px;height:54px}.gomasu-pb-player-name{font-size:.58rem}.gomasu-pb-controls{font-size:.86rem}.gomasu-pb-counts table{font-size:.72rem}}
+.gomasu-pb-pair-gallery{max-width:740px;margin:1rem auto 2rem;padding:1rem}
+.gomasu-pb-pair-gallery .gomasu-pb-pairs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.7rem}
+.gomasu-pb-pair-gallery .gomasu-pb-pair{border:1px solid var(--pb-line);border-radius:12px;padding:.65rem .4rem;background:#fff}
+.gomasu-pb-pair-gallery .gomasu-pb-pair-label{text-align:center;font-size:.75rem;color:#666;margin:0 0 .3rem}
+.gomasu-pb-pair-gallery .gomasu-pb-players{flex-wrap:nowrap;gap:.2rem}
+.gomasu-pb-pair-gallery .gomasu-pb-player{min-width:0;flex:1}
+.gomasu-pb-pair-gallery .gomasu-pb-player-name{font-size:.65rem}
+.gomasu-pb-pair-gallery .gomasu-pb-avatar{width:62px;height:62px}
+@media(max-width:430px){.gomasu-pb-pair-gallery{padding:.7rem}.gomasu-pb-pair-gallery .gomasu-pb-pairs{gap:.35rem}.gomasu-pb-pair-gallery .gomasu-pb-pair{padding:.45rem .2rem}.gomasu-pb-pair-gallery .gomasu-pb-avatar{width:45px;height:45px}.gomasu-pb-pair-gallery .gomasu-pb-player-name{font-size:.55rem}}
 </style>
 <script>
 (() => {
@@ -328,6 +337,32 @@ format:
   root.querySelector('[data-action="next"]').addEventListener("click",()=>{current=Math.min(rounds.length-1,current+1);render();});
   root.querySelector('[data-action="reset"]').addEventListener("click",()=>{current=0;render();});
   render();
+  // Display the ten actual partner pairs, grouped in match order.
+  function renderPairGallery() {
+    const target=document.getElementById("gomasu-pb-pairs");
+    if (!target) return;
+    const fragment=document.createDocumentFragment();
+    rounds.forEach((game,roundIndex)=>{
+      game.teams.forEach((team,teamIndex)=>{
+        const card=document.createElement("div");
+        card.className="gomasu-pb-pair";
+        const label=document.createElement("p");
+        label.className="gomasu-pb-pair-label";
+        label.textContent="第"+(roundIndex+1)+"試合 · ペア"+(teamIndex+1);
+        const players=document.createElement("div");
+        players.className="gomasu-pb-players";
+        team.forEach(i=>players.append(badge(i)));
+        card.append(label,players);
+        fragment.append(card);
+      });
+    });
+    target.replaceChildren(fragment);
+  }
+  if (document.readyState==="loading") {
+    document.addEventListener("DOMContentLoaded",renderPairGallery,{once:true});
+  } else {
+    renderPairGallery();
+  }
 })();
 </script>
 
@@ -352,6 +387,18 @@ $$
 ただし、これは**組み合わせの公平さ**のお話。試合時間が違えば、実際のプレー時間まで等しくなるとは限りません。
 :::
 
+
+## 10組のパートナー、全員集合！ 🥒
+
+5試合で生まれた10組のペアを並べてみました。**同じペアは一度も登場しません。** 
+
+```{=html}
+<div class="gomasu-pb gomasu-pb-pair-gallery" aria-label="5試合で登場する全10組のパートナー">
+  <div class="gomasu-pb-pairs" id="gomasu-pb-pairs">
+    <p>10組のペアを表示しています…</p>
+  </div>
+</div>
+```
 
 ### 次回予告
 
