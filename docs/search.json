@@ -35,438 +35,102 @@
     "text": "人口調査の結果について、村のみなさんに聞いてみました。\nどうやら、言いたいことがあるようです。\n\n\n\n\n\n\n\n「で、結局、この村には何人いるの？」\n「……何を『一人』と数えるかによるんじゃ。」\n村の住民は12人。姿は63通り。\nどちらの記録も間違っていません。\nただ、数えているものが違ったのです。\n\n\n数学のメモ： ペントミノは五つの正方形を辺でつないだ形です。回転と反転を同一視する自由ペントミノは12種類、回転だけを同一視する片面ペントミノは18種類、向きを区別する固定ペントミノは63種類あります。\n← おはなし一覧へ"
   },
   {
-    "objectID": "research/solution/compare_6x10_solutions.html",
-    "href": "research/solution/compare_6x10_solutions.html",
-    "title": "Do Dad’s and Chi’s 6×10 pentomino solutions match?",
+    "objectID": "stories/body-measurement.html",
+    "href": "stories/body-measurement.html",
+    "title": "ゴマス村の身体測定",
     "section": "",
-    "text": "Can each of Dad’s 2,339 piece/posture/anchor encodings be matched to one of Chi’s 2,339 board-text solutions? Does the match require whole-board rotation or reflection?"
+    "text": "STORY 002 · VILLAGE HEALTH CHECK\n\n\n\n身長は何マスですか？\n\n今日は年に一度の身体測定。\n村の12人が、保健室に集まりました。\n「はい、順番にどうぞ。身長と横幅を測ります。」\n「横幅も？」\n「この村では必要なんです。」\n\n\n\n\n気になる住民を呼んで、測定台に立ってもらいましょう。12人全員を測ると、先生から最後のお知らせがあります。\n\n  ゴマス村 保健室測定済み 0 / 12\n  \n    \n      \n      患者さんを選んでください。\n    \n    \n      診察室からのお知らせ\n      「次の方、どうぞー。」\n      \n        横になってみる ↻\n        次の患者さん →\n      \n      向きを変えると身長と横幅が入れ替わることがあります。五つのマスは増えません。\n    \n  \n  待合室 — 名前を押すと呼び出せます\n  \n  \n    \n    先生は記録を見直しました。\n    「全員、体積は五マス分ですね。」\n    「それは最初からわかっていたのでは？」\n    「……では、次はオーブ検査です。」\n    「なんのために？」\n    「まだ決まっていません。」\n  \n  この身体測定室を動かすにはJavaScriptが必要です。12人の住民は全員、五つのマスでできています。\n\n\n\n\n「はい、背の低い順に並んでください。」\n「同じ身長だったら？」\n「横幅の小さい順です。」\n「それも同じだったら？」\n「……形のアルファベット順です。」\n「なんで？」\n「先生にもわかりません。」\n\n\n  ゴマス村・身長順の公式記録\n  最初の姿勢で比較。順位は身長だけで決まり、同じ身長なら同順位。並び順は身長 → 横幅 → 形のアルファベット順です。\n  身長順 ↕横幅順 ↔\n  身長で同順位、横幅で並び替えます。\n  \n\n\n\n\n\n身体測定のあと、みんなで記念撮影。\n写真家「みなさん、頭の高さをそろえてくださーい！」\n「身長が違うんですけど……」\n「では、踏み台を用意しましょう。」\n\n  ゴマス村・集合写真撮影会\n  \n  写真家「みなさん、頭の高さをそろえてください！」\n  みんなの身長はバラバラ。どうすれば同じ高さになる？\n  踏み台を用意する！\n\n\n\n\nまっすぐおじさんが立つと、身長は五マス。\nところが、横になると一マス。\n「先生、わたし、縮みました？」\n「いいえ。向きが変わっただけです。」\n「じゃあ、どちらが本当の身長ですか？」\n先生は、測定用紙を裏返しました。\n「……次の方、どうぞ。」\n\n小さな数学のメモ： この測定室では、各マスを一辺1の正方形として、今の向きでの縦方向の長さを「身長」、横方向の長さを「横幅」と呼びます。回転すると測定値は変わることがありますが、面積はいつでも5平方マスです。\n← おはなし一覧へ"
   },
   {
-    "objectID": "research/solution/compare_6x10_solutions.html#research-question",
-    "href": "research/solution/compare_6x10_solutions.html#research-question",
-    "title": "Do Dad’s and Chi’s 6×10 pentomino solutions match?",
+    "objectID": "stories/body-measurement.html#次の患者さんどうぞ",
+    "href": "stories/body-measurement.html#次の患者さんどうぞ",
+    "title": "ゴマス村の身体測定",
     "section": "",
-    "text": "Can each of Dad’s 2,339 piece/posture/anchor encodings be matched to one of Chi’s 2,339 board-text solutions? Does the match require whole-board rotation or reflection?"
+    "text": "気になる住民を呼んで、測定台に立ってもらいましょう。12人全員を測ると、先生から最後のお知らせがあります。\n\n  ゴマス村 保健室測定済み 0 / 12\n  \n    \n      \n      患者さんを選んでください。\n    \n    \n      診察室からのお知らせ\n      「次の方、どうぞー。」\n      \n        横になってみる ↻\n        次の患者さん →\n      \n      向きを変えると身長と横幅が入れ替わることがあります。五つのマスは増えません。\n    \n  \n  待合室 — 名前を押すと呼び出せます\n  \n  \n    \n    先生は記録を見直しました。\n    「全員、体積は五マス分ですね。」\n    「それは最初からわかっていたのでは？」\n    「……では、次はオーブ検査です。」\n    「なんのために？」\n    「まだ決まっていません。」\n  \n  この身体測定室を動かすにはJavaScriptが必要です。12人の住民は全員、五つのマスでできています。"
   },
   {
-    "objectID": "research/solution/compare_6x10_solutions.html#provenance-and-scope",
-    "href": "research/solution/compare_6x10_solutions.html#provenance-and-scope",
-    "title": "Do Dad’s and Chi’s 6×10 pentomino solutions match?",
-    "section": "Provenance and scope",
-    "text": "Provenance and scope\n\nDad’s data/solutions.csv: Group number, Level, Answer. Each Answer has twelve seven-character piece records.\nDad’s data/postures.json: five relative [row, col, z] cells for each posture ID.\nChi’s data/pentomino_solution.csv: multiple puzzle configurations; filter to dim == \"6×10\".\nBoth datasets currently contain 2,339 records for this configuration. Equal counts do not prove equal solution sets.\n\n\nData provenance — Chi’s solutions\n\nOriginal source: To be confirmed (external pentomino solution collection).\nCurrent dataset: Pentomino solutions CSV\nDate retrieved: October 11 2026 Sunday\nDataset: 33,008 solution records across multiple puzzle configurations, including 2,339 records for the 6×10 rectangle.\nNote: This dataset was collected independently of Dad’s solution database."
-  },
-  {
-    "objectID": "research/solution/compare_6x10_solutions.html#method",
-    "href": "research/solution/compare_6x10_solutions.html#method",
-    "title": "Do Dad’s and Chi’s 6×10 pentomino solutions match?",
-    "section": "Method",
-    "text": "Method\n\nDecode Dad’s Answer into twelve placements.\nExpand placements into sixty occupied cells using the posture database.\nValidate board bounds, no overlaps, and complete coverage.\nSerialize each solution as a row-major, 60-letter board string.\nCompare exact strings, then compare canonical strings across the four symmetries preserving a 6×10 rectangle (identity, left/right reflection, up/down reflection, 180° rotation).\nRetain all candidate matches and flag any non-unique relationships. Do not infer one-to-one matching from equal counts alone."
-  },
-  {
-    "objectID": "research/solution/compare_6x10_solutions.html#run-the-comparison",
-    "href": "research/solution/compare_6x10_solutions.html#run-the-comparison",
-    "title": "Do Dad’s and Chi’s 6×10 pentomino solutions match?",
-    "section": "Run the comparison",
-    "text": "Run the comparison\nRun from the repository root in RStudio. The script writes derived CSVs to data/derived/.\n\n\nCode\nsource(here::here(\"R\", \"match_6x10_solutions.R\"))\n\n\n# A tibble: 1 × 10\n  dad_solutions chi_solutions exact_pairs symmetry_candidate_pairs matched_dad\n          &lt;int&gt;         &lt;int&gt;       &lt;int&gt;                    &lt;int&gt;       &lt;int&gt;\n1          2339          2339        1142                     2339        2339\n# ℹ 5 more variables: matched_chi &lt;int&gt;, uniquely_matched_pairs &lt;int&gt;,\n#   ambiguous_candidate_pairs &lt;int&gt;, unmatched_dad &lt;int&gt;, unmatched_chi &lt;int&gt;\n\n\nCode\nsummary\n\n\nfunction (object, ...) \nUseMethod(\"summary\")\n&lt;bytecode: 0x10cd24ec0&gt;\n&lt;environment: namespace:base&gt;"
-  },
-  {
-    "objectID": "research/solution/compare_6x10_solutions.html#inspect-unmatched-or-ambiguous-records",
-    "href": "research/solution/compare_6x10_solutions.html#inspect-unmatched-or-ambiguous-records",
-    "title": "Do Dad’s and Chi’s 6×10 pentomino solutions match?",
-    "section": "Inspect unmatched or ambiguous records",
-    "text": "Inspect unmatched or ambiguous records\n\n\nCode\nlist(\n  unmatched_dad = nrow(unmatched_dad),\n  unmatched_chi = nrow(unmatched_chi),\n  ambiguous_candidates = sum(!crosswalk$unique_pair)\n)\n\n\n$unmatched_dad\n[1] 0\n\n$unmatched_chi\n[1] 0\n\n$ambiguous_candidates\n[1] 0\n\n\nCode\nlibrary(gt)\n\ncrosswalk |&gt;\n  slice_head(n = 10) |&gt;\n  select(group_number, sol_idx, match_type, unique_pair) |&gt;\n  gt() |&gt;\n  tab_header(\n    title = md(\"**Dad × Chi: Solution Crosswalk**\"),\n    subtitle = \"First 10 matched 6×10 pentomino solutions\"\n  ) |&gt;\n  cols_label(\n    group_number = \"Dad's Group\",\n    sol_idx = \"Chi's Solution\",\n    match_type = \"Match Type\",\n    unique_pair = \"Unique Match?\"\n  ) |&gt;\n  fmt(\n    columns = unique_pair,\n    fns = function(x) ifelse(x, \"✓ Yes\", \"No\")\n  ) |&gt;\n  opt_row_striping() |&gt;\n  tab_source_note(\n    source_note = \"Matching accounts for whole-board symmetry.\"\n  )\n\n\n\n\n\n\n\n\nDad × Chi: Solution Crosswalk\n\n\nFirst 10 matched 6×10 pentomino solutions\n\n\nDad's Group\nChi's Solution\nMatch Type\nUnique Match?\n\n\n\n\n#0001\n506\nsymmetry\n✓ Yes\n\n\n#0002\n501\nsymmetry\n✓ Yes\n\n\n#0003\n502\nsymmetry\n✓ Yes\n\n\n#0004\n507\nsymmetry\n✓ Yes\n\n\n#0005\n2032\nsymmetry\n✓ Yes\n\n\n#0006\n2104\nexact\n✓ Yes\n\n\n#0007\n2018\nexact\n✓ Yes\n\n\n#0008\n2033\nsymmetry\n✓ Yes\n\n\n#0009\n2017\nexact\n✓ Yes\n\n\n#0010\n2101\nsymmetry\n✓ Yes\n\n\n\nMatching accounts for whole-board symmetry."
-  },
-  {
-    "objectID": "research/solution/compare_6x10_solutions.html#findings",
-    "href": "research/solution/compare_6x10_solutions.html#findings",
-    "title": "Do Dad’s and Chi’s 6×10 pentomino solutions match?",
-    "section": "Findings",
-    "text": "Findings\nComplete after running the analysis. Distinguish exact matches, symmetry-equivalent matches, unmatched records, and ambiguous mappings."
-  },
-  {
-    "objectID": "research/solution/compare_6x10_solutions.html#caveats-and-follow-ups",
-    "href": "research/solution/compare_6x10_solutions.html#caveats-and-follow-ups",
-    "title": "Do Dad’s and Chi’s 6×10 pentomino solutions match?",
-    "section": "Caveats and follow-ups",
-    "text": "Caveats and follow-ups\n\nThe decoding assumes Dad’s JSON coordinates are [row_offset, col_offset, z] and anchors are encoded in tenths of a cell; validation will fail if this assumption is wrong.\nBoard symmetries here preserve 6×10 dimensions; 90° and 270° rotations would produce 10×6 boards.\nIf the source datasets were deduplicated using different symmetry conventions, multiple rows may share a canonical key.\nLevel describes Dad’s puzzle/hint progression and is not needed for whole-board equivalence.\nThis is research documentation, not a public story or a source of authoritative puzzle enumeration counts."
-  },
-  {
-    "objectID": "research/index.html",
-    "href": "research/index.html",
-    "title": "五マス研究室",
+    "objectID": "stories/body-measurement.html#みんなで背の順",
+    "href": "stories/body-measurement.html#みんなで背の順",
+    "title": "ゴマス村の身体測定",
     "section": "",
-    "text": "ペントミノは、たった5つの正方形からできています。\nでも、調べはじめると、疑問はどんどん増えていきます。\nなぜ、この形はここに来るのか？\nなぜ、同じ組み合わせが何度も現れるのか？\nそもそも、偶然ってなんだろう？\nここは、そんな疑問を持ち寄って、データを眺めたり、計算したり、ときどき予想を外したりする場所です。\n答えが見つからなくても、面白い疑問が見つかれば、それは立派な発見。"
+    "text": "「はい、背の低い順に並んでください。」\n「同じ身長だったら？」\n「横幅の小さい順です。」\n「それも同じだったら？」\n「……形のアルファベット順です。」\n「なんで？」\n「先生にもわかりません。」\n\n\n  ゴマス村・身長順の公式記録\n  最初の姿勢で比較。順位は身長だけで決まり、同じ身長なら同順位。並び順は身長 → 横幅 → 形のアルファベット順です。\n  身長順 ↕横幅順 ↔\n  身長で同順位、横幅で並び替えます。"
   },
   {
-    "objectID": "research/index.html#ようこそ五マス研究室へ",
-    "href": "research/index.html#ようこそ五マス研究室へ",
-    "title": "五マス研究室",
+    "objectID": "stories/body-measurement.html#ゴマス村の集合写真",
+    "href": "stories/body-measurement.html#ゴマス村の集合写真",
+    "title": "ゴマス村の身体測定",
     "section": "",
-    "text": "ペントミノは、たった5つの正方形からできています。\nでも、調べはじめると、疑問はどんどん増えていきます。\nなぜ、この形はここに来るのか？\nなぜ、同じ組み合わせが何度も現れるのか？\nそもそも、偶然ってなんだろう？\nここは、そんな疑問を持ち寄って、データを眺めたり、計算したり、ときどき予想を外したりする場所です。\n答えが見つからなくても、面白い疑問が見つかれば、それは立派な発見。"
+    "text": "身体測定のあと、みんなで記念撮影。\n写真家「みなさん、頭の高さをそろえてくださーい！」\n「身長が違うんですけど……」\n「では、踏み台を用意しましょう。」\n\n  ゴマス村・集合写真撮影会\n  \n  写真家「みなさん、頭の高さをそろえてください！」\n  みんなの身長はバラバラ。どうすれば同じ高さになる？\n  踏み台を用意する！"
   },
   {
-    "objectID": "research/index.html#研究ノート",
-    "href": "research/index.html#研究ノート",
-    "title": "五マス研究室",
-    "section": "研究ノート",
-    "text": "研究ノート\n\n🌈 五色の虹は、本当にランダムなのか？\n12人のペントミノから選ばれる5人。\n2,339個の解答データを調べてみたら、虹によく登場する人と、そうでもない人がいることがわかりました。\n順列と組み合わせを使って、虹の色にひそむ偏りを探ります。\n\n\n🌄 山は、数式でできている。\n波をひとつ描いて、もうひとつ重ねて、さらにもうひとつ。\nたった3つの波から、山の輪郭が生まれます。\n色や険しさ、霧の濃さを変えながら、ゴマス村の風景がどんな数式から生まれるのかを探ります。\n同じパズル番号なら、何度でも同じ山に会える。その秘密は、疑似乱数にありました。\n\n研究はつづく。たぶん、寄り道もしながら。"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "五マスの人たち。",
+    "objectID": "stories/body-measurement.html#身長ってなんでしょう",
+    "href": "stories/body-measurement.html#身長ってなんでしょう",
+    "title": "ゴマス村の身体測定",
     "section": "",
-    "text": "FIVE SQUARES. TWELVE PERSONALITIES.\n\n\n\nみんな、5つの四角でできています。\nまっすぐな人。曲がった人。\nちょっとずれた人。なぜか真ん中にいる人。\n全部で12人。\n\n本人たちは、いたって普通のつもりです。\n\n12人に会ってみる →\n\n12 SHAPES · 5 SQUARES EACH · EVERYONE IS DIFFERENT\n\n\n\n\n\nA LITTLE FAMILY HISTORY\n\n\n\n昔、父が木で作ったペントミノのパズル。\n妹と私は、それで遊びながら育ちました。\n遊ぶのは楽しい。\nでも、片づけるのが難しい。\nあと一つなのに、入らない。\nこっちを動かすと、あっちが入らない。\n結局、いつも一つだけ、盤の上に乗っかっていました。\nどうやら、これが我が家の正解だったようです。\nそれから何十年。\n木から陶器へ、そして3Dプリントへ。\n形は進化しました。\n片づけの腕前は、あまり進化しませんでした。\nこのパズルの話を読む →\n\n\n\n\nTHE BASIC FACTS\n\n\n\nペントミノは、5つの正方形を辺でつなげた形。\n回したり、裏返したりして同じになるものを一つと数えると、全部で12種類。\n12人とも材料は同じ。\nでも、形はそれぞれ違います。\nそして、ちょっとした性格の違いもあるようです。\n\n\n\n\nA VERY SATISFYING EQUATION\n\n\n5 × 12 = 60\n\n5マスずつ、12人で60マス。\n6 × 10にも、5 × 12にも、4 × 15にも。\n全員そろえば、いろいろな長方形になれます。\n\n問題は、誰がどこに入るか。\n\n\n\n\n12 PIECES · 60 SQUARES · ONE RECTANGLE\n\n\n\n12人が集まって、6 × 10の長方形。\n全員、ちゃんと入りました。\nでも、この並び方だけが正解ではありません。\n実は、ほかにもいろいろあります。\n\n\n\n\nひとりずつ登場 →\n\n\nもう一度 ↺\n\n\nこの並び方は、ときどき変わります。 12人にも、気分があるのかもしれません。\n\n\n\n\n\n\nMEET · ROTATE · DISCOVER\n\n\n\n回しても変わらない人がいます。\nひっくり返すと、別人みたいになる人もいます。\nなぜでしょう。\nまずは、会ってみてください。\n12人の仲間たち →\n\nSAME FIVE SQUARES. VERY DIFFERENT OPINIONS."
+    "text": "まっすぐおじさんが立つと、身長は五マス。\nところが、横になると一マス。\n「先生、わたし、縮みました？」\n「いいえ。向きが変わっただけです。」\n「じゃあ、どちらが本当の身長ですか？」\n先生は、測定用紙を裏返しました。\n「……次の方、どうぞ。」\n\n小さな数学のメモ： この測定室では、各マスを一辺1の正方形として、今の向きでの縦方向の長さを「身長」、横方向の長さを「横幅」と呼びます。回転すると測定値は変わることがありますが、面積はいつでも5平方マスです。\n← おはなし一覧へ"
   },
   {
-    "objectID": "index.html#片づけるだけのはずだった",
-    "href": "index.html#片づけるだけのはずだった",
-    "title": "五マスの人たち。",
+    "objectID": "research/mountain-generator/index.html",
+    "href": "research/mountain-generator/index.html",
+    "title": "山は、数式でできている。",
     "section": "",
-    "text": "昔、父が木で作ったペントミノのパズル。\n妹と私は、それで遊びながら育ちました。\n遊ぶのは楽しい。\nでも、片づけるのが難しい。\nあと一つなのに、入らない。\nこっちを動かすと、あっちが入らない。\n結局、いつも一つだけ、盤の上に乗っかっていました。\nどうやら、これが我が家の正解だったようです。\nそれから何十年。\n木から陶器へ、そして3Dプリントへ。\n形は進化しました。\n片づけの腕前は、あまり進化しませんでした。\nこのパズルの話を読む →"
+    "text": "山を描きたい。でも、山を一枚ずつ描く代わりに、数式に描いてもらうことはできるだろうか？\nここでは波を重ねて、山の輪郭をつくってみます。絵の才能は必要ありません。必要なのは、ちょっとした好奇心です。"
   },
   {
-    "objectID": "index.html#そもそもペントミノって",
-    "href": "index.html#そもそもペントミノって",
-    "title": "五マスの人たち。",
-    "section": "",
-    "text": "ペントミノは、5つの正方形を辺でつなげた形。\n回したり、裏返したりして同じになるものを一つと数えると、全部で12種類。\n12人とも材料は同じ。\nでも、形はそれぞれ違います。\nそして、ちょっとした性格の違いもあるようです。"
+    "objectID": "research/mountain-generator/index.html#波をひとつ描いてみる",
+    "href": "research/mountain-generator/index.html#波をひとつ描いてみる",
+    "title": "山は、数式でできている。",
+    "section": "1. 波をひとつ描いてみる。",
+    "text": "1. 波をひとつ描いてみる。\nまずは、横方向の位置を t = x / width で 0〜1 にそろえます。すると、画面が広くても狭くても同じ計算を使えます。\n\\[h_1(t) = A\\sin(2\\pi f_1t + \\phi_1)\\]\n\n  \n    波を描く実験 🌊\n    スライダーを動かすと、数式が描く線も変わります。\n  \n  \n  \n    振幅 A 48\n    周波数 f 1\n    位相 φ 0\n    位置 t 0.25\n  \n  \n  波を元に戻す ↺\n\n\n\n振幅（しんぷく / amplitude） \\(A\\)：波の高さ。数値を大きくすると、山は高く、谷は深くなる。\n周波数（しゅうはすう / frequency） \\(f_1\\)：横幅の中で波が何回繰り返されるか。数値を大きくすると、山と谷の数が増える。\n位相（いそう / phase） \\(\\phi_1\\)：波の始まる位置。数値を変えると、波の形や高さはそのままで、左右にずれる。\n\n波がゆっくり上下すると、大きくなだらかな丘になります。"
   },
   {
-    "objectID": "index.html#人なんとか収まりました",
-    "href": "index.html#人なんとか収まりました",
-    "title": "五マスの人たち。",
-    "section": "",
-    "text": "12人が集まって、6 × 10の長方形。\n全員、ちゃんと入りました。\nでも、この並び方だけが正解ではありません。\n実は、ほかにもいろいろあります。\n\n\n\n\nひとりずつ登場 →\n\n\nもう一度 ↺\n\n\nこの並び方は、ときどき変わります。 12人にも、気分があるのかもしれません。"
+    "objectID": "research/mountain-generator/index.html#波を重ねてみる",
+    "href": "research/mountain-generator/index.html#波を重ねてみる",
+    "title": "山は、数式でできている。",
+    "section": "2. 波を重ねてみる。",
+    "text": "2. 波を重ねてみる。\n次は、もっと細かい波を足してみましょう。\n最初の波 A は、大きくなだらかな丘。\nそこに、少し細かい波 B を重ねると、小さな丘や谷が生まれます。\nさらに、もっと細かい波 C を加えると、山の輪郭がでこぼこしてきます。\n実は、3つとも同じ sin() という数式。違うのは、波の高さ（振幅）と、繰り返す回数（周波数）だけです。\n大きな丘 ＋ 小さな丘 ＋ でこぼこ ＝ ちょっと山らしい形！\n\\[\nh(t) =\n\\underbrace{A\\sin(2\\pi f_1t+\\phi_1)}_{\\text{大きな丘}}\n+\n\\underbrace{B\\sin(2\\pi f_2t+\\phi_2)}_{\\text{小さな丘}}\n+\n\\underbrace{C\\sin(2\\pi f_3t+\\phi_3)}_{\\text{でこぼこ}}\n\\]\n大きな丘 + 小さな丘 + 細かなでこぼこ。 それぞれを別々に見てから、重ね合わせた形を観察できます。"
   },
   {
-    "objectID": "index.html#ところでこの12人",
-    "href": "index.html#ところでこの12人",
-    "title": "五マスの人たち。",
-    "section": "",
-    "text": "回しても変わらない人がいます。\nひっくり返すと、別人みたいになる人もいます。\nなぜでしょう。\nまずは、会ってみてください。\n12人の仲間たち →\n\nSAME FIVE SQUARES. VERY DIFFERENT OPINIONS."
+    "objectID": "research/mountain-generator/index.html#山の研究装置",
+    "href": "research/mountain-generator/index.html#山の研究装置",
+    "title": "山は、数式でできている。",
+    "section": "3. 山の研究装置 🧪",
+    "text": "3. 山の研究装置 🧪\n\n\n  \n\n    \n      \n        帯\n        \n          ⓘ\n          \n            帯の種類\n            山の色と凹凸の初期設定を切り替えます。数式の変数ではありません。\n          \n        \n      \n      \n        ⚪ 白帯\n        🟡 黄帯\n        ⚫ 黒帯\n      \n    \n\n    \n      \n        レベル\n        \n          ⓘ\n          \n            地形の複雑さ\n            レベルに応じて山の形を変化させます。数式の特定の一文字ではなく、生成ルールに関わる設定です。\n          \n        \n      \n      \n        \n        4\n      \n    \n\n    \n      \n        パズル番号\n        \n          ⓘ\n          \n            乱数の種（seed）\n            山の個性を決める番号。同じ番号と同じ設定なら、同じ風景を再現できます。位相 φ などの生成に利用します。\n          \n        \n      \n      \n    \n\n  \n\n  \n    \n    \n  \n\n  \n\n    \n      \n        大きな丘の高さ A\n        \n          ⓘ\n          \n            振幅 A（しんぷく）\n            大きな波の高さ。数値を大きくすると、山は高く、谷は深くなります。\n          \n        \n      \n      \n        \n        35\n      \n    \n\n    \n      \n        小さな丘の高さ B\n        \n          ⓘ\n          \n            振幅 B（しんぷく）\n            小さな波の高さ。数値を大きくすると、小さな丘や谷の影響が強くなります。\n          \n        \n      \n      \n        \n        14\n      \n    \n\n    \n      \n        細かな凹凸 C\n        \n          ⓘ\n          \n            振幅 C（しんぷく）\n            細かい波の高さ。数値を大きくすると、山の輪郭がでこぼこしてきます。\n          \n        \n      \n      \n        \n        5\n      \n    \n\n    \n      \n        小さな丘の数 f₂\n        \n          ⓘ\n          \n            周波数 f₂（しゅうはすう）\n            横幅の中で小さな波が何回繰り返されるか。数値を大きくすると、波の間隔が狭くなります。\n          \n        \n      \n      \n        \n        5\n      \n    \n\n    \n      \n        霧の濃さ mist\n        \n          ⓘ\n          \n            大気遠近法\n            山の形ではなく、色の見え方を変えます。遠くの山ほど空の色に近づけて、奥行きを表現します。\n          \n        \n      \n      \n        \n        35\n      \n    \n\n  \n\n  \n    どの波を見たい？\n     合成\n     大きな丘\n     小さな丘\n     細かな凹凸\n  \n\n  \n    初期値に戻す\n    別の山を見に行く ↗"
   },
   {
-    "objectID": "experimental/index.html",
-    "href": "experimental/index.html",
-    "title": "ひみつの実験室",
-    "section": "",
-    "text": "🧪 ここは、五マスの世界の実験室。\nお父さんが作ったペントミノの世界に、ちょっとした「もしも」を。\n「こんな動きがあったら？」「こんな演出はどう？」\nそんな思いつきを、まずは小さく作って試してみる場所です。\nお父さんに提案する前に、実物を作って見せちゃおう、という作戦。😏\n採用されるかどうかは、また別の話。\nここにあるものは、公式アプリの新機能ではありません。 あくまで、五マスの世界から生まれた非公式の実験です。"
+    "objectID": "research/mountain-generator/index.html#つの波から3つの山へ",
+    "href": "research/mountain-generator/index.html#つの波から3つの山へ",
+    "title": "山は、数式でできている。",
+    "section": "4. 3つの波から、3つの山へ。",
+    "text": "4. 3つの波から、3つの山へ。\nここまで、3つの波を足して、ひとつの山の輪郭をつくりました。\nでも、ゴマス村の風景には、山が1本しかないわけではありません。\n遠くの山、中くらいの距離の山、手前の山。\n実は、どの山も同じ数式から生まれています。\n違うのは、波の高さ、繰り返す回数、始まる位置。そして、画面の中での高さです。\nそれぞれの山の輪郭を、次のように呼ぶことにします。\n\n\\(h_{\\text{back}}(t)\\)：遠くの山（遠景）\n\\(h_{\\text{middle}}(t)\\)：中くらいの距離の山（中景）\n\\(h_{\\text{front}}(t)\\)：手前の山（前景）\n\nつまり、同じ数式を3回使って、3本の異なる輪郭をつくっているのです。\nそして、遠くの山から順番に描いて、手前の山を重ねます。\nここには、2種類の「重ねる」があります。\n\n波を足す：3つの波を計算で足して、1本の山の輪郭をつくる。\n山を重ねる：3本の輪郭をそれぞれ塗りつぶして、遠くから手前へ描く。\n\n波は数式の中で足し算。山は画面の上で重ね描き。\n似ているようで、ちょっと違います。"
   },
   {
-    "objectID": "experimental/index.html#実験001もっとわかりやすくできるかな",
-    "href": "experimental/index.html#実験001もっとわかりやすくできるかな",
-    "title": "ひみつの実験室",
-    "section": "🔬 実験001：もっとわかりやすくできるかな？",
-    "text": "🔬 実験001：もっとわかりやすくできるかな？\nきっかけ：お母さんが、操作方法でちょっと迷った。\nペントミノは楽しい。でも、遊び方がわからないと、楽しさにたどり着けない。\nだったら、説明を増やすより、実際に触って覚えられる場所を作ってみよう！\n\n🧩 まずは遊んでみよう！\nペントミノのピースを動かす、小さな練習場です。\nタップで、くるっ！ 90度回転。\nドラッグで、すいっ！ 好きな場所へ移動。\nフリックで、ぱたん！ ピースを裏返し。\n👉 ジェスチャーを練習する\n\n\n📖 ペントミノの遊び方\n「白帯」から「黒帯」まで。目指せ、ペントミノ名人！🥋\n操作のコツやヒントの使い方を、ゆっくり紹介します。\n日本語で読む\nRead in English"
+    "objectID": "research/mountain-generator/index.html#白帯から黒帯へ",
+    "href": "research/mountain-generator/index.html#白帯から黒帯へ",
+    "title": "山は、数式でできている。",
+    "section": "5. 白帯から黒帯へ。",
+    "text": "5. 白帯から黒帯へ。\n帯によって、山の色と険しさを変えることにしました。\n白帯は、青みがかった穏やかな山。黄帯は、あたたかな黄金色の丘。黒帯は、深い森の色をした険しい山。\n色だけでなく、細かな波の強さも変えています。\nただし、山の険しさは、本当のパズルの難易度を測定したものではありません。\nこれは、ゴマス村の風景を楽しくするためのデザイン上の約束です。\nレベルを変えると、山の輪郭も少しずつ変わります。\nここでは、3つの役割を分けています。\n\n帯：色のパレットと基本の険しさ\nレベル：山の形の変化\nパズル番号：再現可能な山の個性\n\nちなみに、この実験室ではレベルとパズル番号を自由に組み合わせられます。実際のパズルでは、問題番号ごとにレベルが決まっています。\n実験室だからこそ、同じ番号の山を、違うレベルで眺めてみることもできるのです。"
   },
   {
-    "objectID": "experimental/index.html#実験002クリアしたら何が起こる",
-    "href": "experimental/index.html#実験002クリアしたら何が起こる",
-    "title": "ひみつの実験室",
-    "section": "🎉 実験002：クリアしたら、何が起こる？",
-    "text": "🎉 実験002：クリアしたら、何が起こる？\n状態：🧪 試作公開中\nパズルが完成した！\nさて、五マスの仲間たちはどうやってお祝いする？\nヒントを使ったら、いもむしたちが登場。🐛\n答えをチェックしたら、ちょうちょがひらひら。🦋\nどちらも使わずにクリアしたら、お菓子の紙吹雪が大サービス！ 🍬\n最後にはめたピースや難易度を変えて、いろんな「おめでとう！」を実験してみよう。\n👉 お祝いシミュレーターで遊んでみる\nGitHubで実験の記録を見る"
+    "objectID": "research/mountain-generator/index.html#同じ山にもう一度会える",
+    "href": "research/mountain-generator/index.html#同じ山にもう一度会える",
+    "title": "山は、数式でできている。",
+    "section": "6. 同じ山に、もう一度会える？",
+    "text": "6. 同じ山に、もう一度会える？\n山の形を毎回完全にランダムに決めてしまうと、同じ風景にもう一度出会えるとは限りません。\nそこで、パズル番号を乱数の種（seed）に使います。\nこの種から疑似乱数（ぎじらんすう / pseudorandom numbers）をつくって、波の位相（いそう）を決めています。\n疑似乱数とは、ランダムに見えるけれど、決まった計算から生まれる数のこと。\n例えば、波の位相を決めるために、こんな計算を使っています。\nhash(seed * 101 + layer * 17 + component * 7919) * 2 * Math.PI\nここで、seed はパズル番号、layer は遠景・中景・前景の区別、component はどの波を計算しているかを表します。\n101、17、7919は、入力を混ぜ合わせるために選んだ数字。特別な山の法則ではありません。\n同じ番号・帯・レベル・設定なら、同じ風景を再現できます。\nMath.random() は使いません。\n偶然に見える。でも、偶然ではない。"
   },
   {
-    "objectID": "experimental/index.html#実験003霧が晴れたらゴマス村",
-    "href": "experimental/index.html#実験003霧が晴れたらゴマス村",
-    "title": "ひみつの実験室",
-    "section": "🌄 実験003：霧が晴れたら、ゴマス村。",
-    "text": "🌄 実験003：霧が晴れたら、ゴマス村。\n状態：🧪 iPhone画面のデザイン試作\nプレイ中は霧に包まれた山。完成すると霧が晴れ、景色がひらけます。\nヒントを使ったら雲がふわり。☁️\nチェックを使ったらカラスが飛んでくる。🐦‍⬛\nどちらも使わずに完成したら、虹がかかる。🌈\n完成したパズルはそのまま残して、最後のピースも一緒にお祝い！\n👉 iPhone お祝い画面を試してみる\nGitHub Issue #81 · 山の研究 #84"
+    "objectID": "research/mountain-generator/index.html#霧は何をしている",
+    "href": "research/mountain-generator/index.html#霧は何をしている",
+    "title": "山は、数式でできている。",
+    "section": "7. 霧は何をしている？",
+    "text": "7. 霧は何をしている？\n遠くの山ほど、背景に近い色になり、輪郭が淡くなる。\nこうした奥行きの表現を大気遠近法（たいきえんきんほう）といいます。\n霧は、山の形そのものを変えません。\n変えているのは、山の見え方です。\n同じ3本の山でも、色の重なり方を変えるだけで、ずいぶん違う風景になります。\nもちろん、霧の濃さはパズルの成績とは無関係です。"
   },
   {
-    "objectID": "experimental/index.html#そのほかただいま妄想中",
-    "href": "experimental/index.html#そのほかただいま妄想中",
-    "title": "ひみつの実験室",
-    "section": "🔮 そのほか、ただいま妄想中…",
-    "text": "🔮 そのほか、ただいま妄想中…\n五マスの仲間たちに服を着せてみたり、 カードに変身させてみたり、 新聞を発行してみたり。\nまだ形になっていないアイデアも、ここから少しずつ育てていきます。\n実験は、成功しても失敗しても、何かが残れば大成功。\n\n⚠️ この実験室は、予告なく変わったり、実験が突然なくなったりします。お父さんの公式アプリとは別の場所なので、どうぞ気楽にお楽しみください。"
-  },
-  {
-    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html",
-    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html",
-    "title": "Pentominoの遊び方",
-    "section": "",
-    "text": "形も向きも、ちょっとずつ違うピースたち。うまく収まる場所を探して、パズルを完成させましょう。\n「どこに置けばいいの？」「回したいのに動いちゃった！」——そんなときのための遊び方ガイドです。最初から全部読む必要はありません。困ったところだけ、のぞいてみてください。\n\n\n\n\n\n\n読むより先に、さわってみたい？\n\n\n\nまずは遊んでみよう！ で、タップ・スワイプ・フリックを練習できます。\n\n\n\n\nペントミノの基本操作は、たったの３つ！\nトン・すーっと・シュッ！ この３つを覚えれば、準備はばっちりです。\n\n\nまだ盤面にはめていないピースをトンッとタップ！\nピースが反時計回りに90度、くるっと回転します。\n一度で向きが合わなければ、もう一度。\nくるっ、くるっ。何度でも回してみましょう！\n\n\n\nピースに指を置いたまま、すーっと動かす。これがドラッグです。\n\n赤い輪郭：ピースをつかんでいるよ！\n青い輪郭：ここなら置けるよ！\n指を離す：その場所にピースを置きます。\n\nピースが置ける場所に近づくと、ピタッと吸い寄せられます。\nただし、ここでひとつ注意！\n青い輪郭＝正解！ ではありません。\n青は「ここに置けるよ」の合図。正解かどうかは、あとでチェックしてみましょう。\n\n\n\nピースをつかんで、シュッとすばやく払って指を離す！\nこれがフリック。ピースが鏡に映ったように、ぱたんと裏返ります。\n\n\n\n指の動き\nピースの変化\n\n\n\n\n← または → にシュッ！\n左右反転\n\n\n↑ または ↓ にシュッ！\n上下反転\n\n\n\n大丈夫。ピースが画面の外まで飛んでいくわけではありません。😄\n指を離した場所で、ぱたんと反転します。\n\nトンで回転。すーっと移動。シュッで反転！\nさあ、３つの指ワザを使って、ペントミノに挑戦してみましょう！ 🧩\n\n\n\n\n\n\nドラッグとフリック、どう違うの？\n\n\n\n違いは、指を離すときの速さ！\nゆっくり動かせばドラッグ（移動）、シュッと払えばフリック（反転） です。\nうまく区別されないときは、歯車マーク ⚙️ の「感度調整」を試してみてください。\n初期設定では、70 mm/秒 が判定の境目です。\n\n\n\n\n\n\nPentominoには、３つの難易度があります。最初から黒帯に挑む必要はありません！\n\n\nピースを動かして、はめる練習。\nピースは置く順番に並び、向きも最初から合っています。まずは「つかむ」「運ぶ」「置く」に慣れましょう。はじめての人におすすめです。\n\n\n\n回転と反転を使って、向きを合わせる練習。\nピースの順番は白帯と同じですが、向きはそろっていません。タップやフリックの出番です。\n\n\n\n自分で考えて、パズルを解きます。\nピースはアルファベット順で、向きもそろっていません。どこに何を置くか、腕の見せどころです。\n\n\n\n\n\n\n途中で帯を変えても大丈夫\n\n\n\n白帯・黄帯・黒帯の途中経過は別々に保存されます。気分に合わせて切り替えてください。\n\n\n\n\n\n\n\n\n今置いているピースが正しいかどうかを調べます。自信がなくなったら、遠慮なくチェック！\n正しく置けていれば減点されません。 ただし、間違いがある場合は減点の対象になります。\n\n\n\nどうしても先に進めないときは、ヒントを使いましょう。\nヒントを押すと、まず検査が行われ、間違った配置が取り除かれます。その後、まだ置いていないピースのうち、解答の後ろ側から順に１つを正しい場所へ置いてくれます。\n間違っていたピースの数＋ヒント１回分が減点されます。頼れる助っ人ですが、ちょっぴり代償もあります。\n\n\n\n\n問題は L1〜L10 の10レベル。全部で 2,339問 あります。なかなかの長旅です。😆\n画面の ← → ボタンで問題を切り替えます。\n\nポンと押す： １問ずつ移動\n１秒以上押し続ける： 約0.3秒ごとに10問ずつ移動\n３秒を超えて押し続ける： 約0.3秒ごとに100問ずつ移動\n\n問題番号は１〜2,339の範囲で切り替わります。\n\n\n\n\n\nレベル\n問題番号\n問題数\n\n\n\n\nL1\n1–7\n7\n\n\nL2\n8–40\n33\n\n\nL3\n41–156\n116\n\n\nL4\n157–395\n239\n\n\nL5\n396–668\n273\n\n\nL6\n669–1145\n477\n\n\nL7\n1146–1684\n539\n\n\nL8\n1685–2124\n440\n\n\nL9\n2125–2308\n184\n\n\nL10\n2309–2339\n31\n\n\n合計\n\n2,339\n\n\n\n\n\n\n\n画面上部の歯車マークを押すと、設定が開きます。パズル名を長押ししても開けます。\n言語： 日本語、English、Español、Français、Deutsch、한국어、简体中文、繁體中文の８言語から選べます。説明文も選んだ言語に切り替わります。\n完成の音： 完成時の音をオン・オフできます。\nはめ込みの合図： 機種によって振動か音のどちらかで知らせます。両方同時には鳴りません。\n難易度と履歴： 帯ごとに進み具合が保存されます。「履歴を消す」を押すと、その帯の記録だけを消せます。消す前に確認しましょう。\n感度調整： スワイプとフリックの判定の境目や、はめ込みの合図の長さ・強さを調整できます。\n\n\n\nこのアプリでは、解答を組み立てるとき、左上から順に空いた場所を埋めていきます。その列が埋まったら、右へ進みます。\n白帯と黄帯のピースが「置く順番」に並んでいるのは、この仕組みに合わせているから。ちゃんと理由があるんです。\n\n\n\n最初はピースが言うことを聞いてくれなくても、大丈夫。\nポン、すいっ、シュッ。 ３つの指ワザを覚えたら、あとは少しずつ。\nさあ、Pentominoの世界で遊んでみましょう！ 🧩\n\n\n\n\n\n\nこのガイドについて\n\n\n\nこのページは現行のアプリ説明をもとに、初めて遊ぶ人にも読みやすいよう書き直したものです。操作や採点の詳細は、アプリのバージョンによって変わる場合があります。"
-  },
-  {
-    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#まず覚えたい３つの指ワザ",
-    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#まず覚えたい３つの指ワザ",
-    "title": "Pentominoの遊び方",
-    "section": "",
-    "text": "ペントミノの基本操作は、たったの３つ！\nトン・すーっと・シュッ！ この３つを覚えれば、準備はばっちりです。\n\n\nまだ盤面にはめていないピースをトンッとタップ！\nピースが反時計回りに90度、くるっと回転します。\n一度で向きが合わなければ、もう一度。\nくるっ、くるっ。何度でも回してみましょう！\n\n\n\nピースに指を置いたまま、すーっと動かす。これがドラッグです。\n\n赤い輪郭：ピースをつかんでいるよ！\n青い輪郭：ここなら置けるよ！\n指を離す：その場所にピースを置きます。\n\nピースが置ける場所に近づくと、ピタッと吸い寄せられます。\nただし、ここでひとつ注意！\n青い輪郭＝正解！ ではありません。\n青は「ここに置けるよ」の合図。正解かどうかは、あとでチェックしてみましょう。\n\n\n\nピースをつかんで、シュッとすばやく払って指を離す！\nこれがフリック。ピースが鏡に映ったように、ぱたんと裏返ります。\n\n\n\n指の動き\nピースの変化\n\n\n\n\n← または → にシュッ！\n左右反転\n\n\n↑ または ↓ にシュッ！\n上下反転\n\n\n\n大丈夫。ピースが画面の外まで飛んでいくわけではありません。😄\n指を離した場所で、ぱたんと反転します。\n\nトンで回転。すーっと移動。シュッで反転！\nさあ、３つの指ワザを使って、ペントミノに挑戦してみましょう！ 🧩\n\n\n\n\n\n\nドラッグとフリック、どう違うの？\n\n\n\n違いは、指を離すときの速さ！\nゆっくり動かせばドラッグ（移動）、シュッと払えばフリック（反転） です。\nうまく区別されないときは、歯車マーク ⚙️ の「感度調整」を試してみてください。\n初期設定では、70 mm/秒 が判定の境目です。"
-  },
-  {
-    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#どの帯から始める",
-    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#どの帯から始める",
-    "title": "Pentominoの遊び方",
-    "section": "",
-    "text": "Pentominoには、３つの難易度があります。最初から黒帯に挑む必要はありません！\n\n\nピースを動かして、はめる練習。\nピースは置く順番に並び、向きも最初から合っています。まずは「つかむ」「運ぶ」「置く」に慣れましょう。はじめての人におすすめです。\n\n\n\n回転と反転を使って、向きを合わせる練習。\nピースの順番は白帯と同じですが、向きはそろっていません。タップやフリックの出番です。\n\n\n\n自分で考えて、パズルを解きます。\nピースはアルファベット順で、向きもそろっていません。どこに何を置くか、腕の見せどころです。\n\n\n\n\n\n\n途中で帯を変えても大丈夫\n\n\n\n白帯・黄帯・黒帯の途中経過は別々に保存されます。気分に合わせて切り替えてください。"
-  },
-  {
-    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#困ったときのお助けボタン",
-    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#困ったときのお助けボタン",
-    "title": "Pentominoの遊び方",
-    "section": "",
-    "text": "今置いているピースが正しいかどうかを調べます。自信がなくなったら、遠慮なくチェック！\n正しく置けていれば減点されません。 ただし、間違いがある場合は減点の対象になります。\n\n\n\nどうしても先に進めないときは、ヒントを使いましょう。\nヒントを押すと、まず検査が行われ、間違った配置が取り除かれます。その後、まだ置いていないピースのうち、解答の後ろ側から順に１つを正しい場所へ置いてくれます。\n間違っていたピースの数＋ヒント１回分が減点されます。頼れる助っ人ですが、ちょっぴり代償もあります。"
-  },
-  {
-    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#問題を選ぼう全部で2339問",
-    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#問題を選ぼう全部で2339問",
-    "title": "Pentominoの遊び方",
-    "section": "",
-    "text": "問題は L1〜L10 の10レベル。全部で 2,339問 あります。なかなかの長旅です。😆\n画面の ← → ボタンで問題を切り替えます。\n\nポンと押す： １問ずつ移動\n１秒以上押し続ける： 約0.3秒ごとに10問ずつ移動\n３秒を超えて押し続ける： 約0.3秒ごとに100問ずつ移動\n\n問題番号は１〜2,339の範囲で切り替わります。\n\n\n\n\n\nレベル\n問題番号\n問題数\n\n\n\n\nL1\n1–7\n7\n\n\nL2\n8–40\n33\n\n\nL3\n41–156\n116\n\n\nL4\n157–395\n239\n\n\nL5\n396–668\n273\n\n\nL6\n669–1145\n477\n\n\nL7\n1146–1684\n539\n\n\nL8\n1685–2124\n440\n\n\nL9\n2125–2308\n184\n\n\nL10\n2309–2339\n31\n\n\n合計\n\n2,339"
-  },
-  {
-    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#歯車マークの中には何がある",
-    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#歯車マークの中には何がある",
-    "title": "Pentominoの遊び方",
-    "section": "",
-    "text": "画面上部の歯車マークを押すと、設定が開きます。パズル名を長押ししても開けます。\n言語： 日本語、English、Español、Français、Deutsch、한국어、简体中文、繁體中文の８言語から選べます。説明文も選んだ言語に切り替わります。\n完成の音： 完成時の音をオン・オフできます。\nはめ込みの合図： 機種によって振動か音のどちらかで知らせます。両方同時には鳴りません。\n難易度と履歴： 帯ごとに進み具合が保存されます。「履歴を消す」を押すと、その帯の記録だけを消せます。消す前に確認しましょう。\n感度調整： スワイプとフリックの判定の境目や、はめ込みの合図の長さ・強さを調整できます。"
-  },
-  {
-    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#ちょっとだけパズルの裏話",
-    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#ちょっとだけパズルの裏話",
-    "title": "Pentominoの遊び方",
-    "section": "",
-    "text": "このアプリでは、解答を組み立てるとき、左上から順に空いた場所を埋めていきます。その列が埋まったら、右へ進みます。\n白帯と黄帯のピースが「置く順番」に並んでいるのは、この仕組みに合わせているから。ちゃんと理由があるんです。"
-  },
-  {
-    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#さいごに",
-    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#さいごに",
-    "title": "Pentominoの遊び方",
-    "section": "",
-    "text": "最初はピースが言うことを聞いてくれなくても、大丈夫。\nポン、すいっ、シュッ。 ３つの指ワザを覚えたら、あとは少しずつ。\nさあ、Pentominoの世界で遊んでみましょう！ 🧩\n\n\n\n\n\n\nこのガイドについて\n\n\n\nこのページは現行のアプリ説明をもとに、初めて遊ぶ人にも読みやすいよう書き直したものです。操作や採点の詳細は、アプリのバージョンによって変わる場合があります。"
-  },
-  {
-    "objectID": "experimental/celebration/index.html",
-    "href": "experimental/celebration/index.html",
-    "title": "お祝いシミュレーター",
-    "section": "",
-    "text": "🧪 SECRET LAB · EXPERIMENT 002ピースと遊び方で、お祝いが変わる。みんな、完成おめでとう！\n  \n    \n      ことば日本語English\n      最後に置いたピース\n      レベル1\n      Hint 回数0\n      Check 回数0\n      🎉 完成！\n      もう一回！\n      これは試作品です。実際のゲームとは接続していません。\n    \n    \n      \n      どんなお祝いになるかな？\n      \n      \n      \n      \n    \n  \n\n\n📖 お祝いのしくみを見る"
-  },
-  {
-    "objectID": "characters/index.html",
-    "href": "characters/index.html",
-    "title": "12人の仲間たち",
-    "section": "",
-    "text": "MEET THE PENTOMINOES · THE CAST OF TWELVE\n\n\n\nみんな、5つの四角でできています。\nまっすぐな人。曲がった人。\nちょっとはみ出す人。真ん中が好きな人。\n形も性格も、いろいろです。\n本人たちは、いたって普通のつもりです。\n\n12人とも、面積は同じ。 でも、向きを変えたり、ひっくり返したりすると……？\n\n\n↻ ⇋ ボタンを押して、くるくる、ひっくり返してみてください。\n\n\n\n12人を呼んでいます…\n\n\n\n\nA SMALL OBSERVATION\n\n\n\n同じ5マスなのに、向きの種類は人それぞれ。\n8通りの人もいれば、4通りの人も。\n2通りの人もいます。\nそして、Xおじさんは1通り。\n回っても、回っても、同じ形。\n本人は、ちゃんと回っています。\n\n\n← ホームに戻る"
-  },
-  {
-    "objectID": "characters/index.html#回っても変わらない人がいます",
-    "href": "characters/index.html#回っても変わらない人がいます",
-    "title": "12人の仲間たち",
-    "section": "",
-    "text": "同じ5マスなのに、向きの種類は人それぞれ。\n8通りの人もいれば、4通りの人も。\n2通りの人もいます。\nそして、Xおじさんは1通り。\n回っても、回っても、同じ形。\n本人は、ちゃんと回っています。"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "このサイトについて",
-    "section": "",
-    "text": "ABOUT THIS LITTLE PROJECT\n\n\n\nむかしむかし、といっても、そんなに昔ではないころ。\n父が、木でペントミノのパズルを作りました。\n5つの四角をつなげた、12種類のピース。\n妹と私は、そのパズルで遊びながら育ちました。\n遊ぶのは楽しい。\nでも、ひとつ問題がありました。\nきれいに並べて、しまえない。\nあと一つなのに、入らない。\nこっちを動かすと、あっちが入らない。\n結局、いつも一つだけ、盤の上にちょこんと乗っかっていました。\n片づいているような、片づいていないような。\nでも、それが我が家では普通の光景でした。\nどうやら、これが我が家の正解だったようです。\n\n\nその後、母がペントミノを陶器で作りました。\n今度は、小さなアート作品です。\nさらに時がたち、父は3Dプリンターでもペントミノを作りました。\n木になっても、陶器になっても、プラスチックになっても。\n形は、やっぱり同じ12種類。\nそして、問題も同じでした。\nやっぱり、きれいにしまえない。\nペントミノは、なかなか手ごわいのです。\n\n\n\nそこで父は考えました。\nちゃんと片づけられるように、解答集を作ろうか。\nでも、答えをそのまま見せてしまったら、パズルの楽しさがなくなってしまう。\n自分で考えて、試して、やっと最後の一つが収まる。\nその瞬間こそが、面白いのです。\nだったら、答えではなく、ヒントをあげたらどうだろう？\nそうして生まれたのが、\n\n\nAmazonで本を見る ↗\n答えを教えるのではなく、答えにたどり着く楽しさを残すための本です。\n\n\n\n\nそんなペントミノを、今度は少し違う角度から眺めてみました。\nまっすぐな人。\n曲がった人。\n角が好きな人。\nちょっと、はみ出す人。\n同じ5つの四角なのに、なんだか性格が違うように見えてきます。\n気づいたら、12種類の形に、12人分の名前がついていました。\n父はパズルの解き方を考えています。\n私は、パズルの住人たちのことを考えています。\nどちらも、同じ5つの四角から始まりました。\n\n\n\n12人の仲間たちに会ったり、形を回したり、ひっくり返したり。\nどうして向きの種類が違うのか。\nどうして同じ形に見えるのか。\nどうやったら、みんなで60マスの長方形に収まるのか。\n数学のふしぎを、遊びながら少しずつ探していきます。\nちなみに、形とマス目の数は本物です。\n名前と性格は、創作です。\n本人たちに確認は取っていません。\n12人に会う →\n\n\nFIVE SQUARES. TWELVE PERSONALITIES.\n\n何十年たっても、まだ遊べる。\n今度こそ、12人全員、きれいに収まるでしょうか。\nそれとも、また誰かが一人だけ、外にいるのでしょうか。"
-  },
-  {
-    "objectID": "about.html#木から陶器へそして3dプリントへ",
-    "href": "about.html#木から陶器へそして3dプリントへ",
-    "title": "このサイトについて",
-    "section": "",
-    "text": "その後、母がペントミノを陶器で作りました。\n今度は、小さなアート作品です。\nさらに時がたち、父は3Dプリンターでもペントミノを作りました。\n木になっても、陶器になっても、プラスチックになっても。\n形は、やっぱり同じ12種類。\nそして、問題も同じでした。\nやっぱり、きれいにしまえない。\nペントミノは、なかなか手ごわいのです。"
-  },
-  {
-    "objectID": "about.html#答えを教えるだけじゃつまらない",
-    "href": "about.html#答えを教えるだけじゃつまらない",
-    "title": "このサイトについて",
-    "section": "",
-    "text": "そこで父は考えました。\nちゃんと片づけられるように、解答集を作ろうか。\nでも、答えをそのまま見せてしまったら、パズルの楽しさがなくなってしまう。\n自分で考えて、試して、やっと最後の一つが収まる。\nその瞬間こそが、面白いのです。\nだったら、答えではなく、ヒントをあげたらどうだろう？\nそうして生まれたのが、\n\n\nAmazonで本を見る ↗\n答えを教えるのではなく、答えにたどり着く楽しさを残すための本です。"
-  },
-  {
-    "objectID": "about.html#そして12人が生まれました",
-    "href": "about.html#そして12人が生まれました",
-    "title": "このサイトについて",
-    "section": "",
-    "text": "そんなペントミノを、今度は少し違う角度から眺めてみました。\nまっすぐな人。\n曲がった人。\n角が好きな人。\nちょっと、はみ出す人。\n同じ5つの四角なのに、なんだか性格が違うように見えてきます。\n気づいたら、12種類の形に、12人分の名前がついていました。\n父はパズルの解き方を考えています。\n私は、パズルの住人たちのことを考えています。\nどちらも、同じ5つの四角から始まりました。"
-  },
-  {
-    "objectID": "about.html#このサイトでできること",
-    "href": "about.html#このサイトでできること",
-    "title": "このサイトについて",
-    "section": "",
-    "text": "12人の仲間たちに会ったり、形を回したり、ひっくり返したり。\nどうして向きの種類が違うのか。\nどうして同じ形に見えるのか。\nどうやったら、みんなで60マスの長方形に収まるのか。\n数学のふしぎを、遊びながら少しずつ探していきます。\nちなみに、形とマス目の数は本物です。\n名前と性格は、創作です。\n本人たちに確認は取っていません。\n12人に会う →\n\n\nFIVE SQUARES. TWELVE PERSONALITIES.\n\n何十年たっても、まだ遊べる。\n今度こそ、12人全員、きれいに収まるでしょうか。\nそれとも、また誰かが一人だけ、外にいるのでしょうか。"
-  },
-  {
-    "objectID": "experimental/celebration/how-it-works.html",
-    "href": "experimental/celebration/how-it-works.html",
-    "title": "お祝いのしくみ",
-    "section": "",
-    "text": "← お祝いシミュレーターに戻る"
-  },
-  {
-    "objectID": "experimental/celebration/how-it-works.html#まずは４つのお祝い",
-    "href": "experimental/celebration/how-it-works.html#まずは４つのお祝い",
-    "title": "お祝いのしくみ",
-    "section": "まずは、４つのお祝い",
-    "text": "まずは、４つのお祝い\nシミュレーターでは、Hint を使ったか？ と Check を使ったか？ の２つを見ています。\n\n\n\n\n\n\n\n\n\nHint\nCheck\nお祝いのことば\n登場するもの\n\n\n\n\n0\n0\nひらめいた！\n🍬 キャンディが大サービス（46個）\n\n\n1回以上\n0\n助けてもらって、できた！\n🐛 いもむし + キャンディ（20個）\n\n\n0\n1回以上\nたしかめながら、できた！\n🦋 ちょうちょ + キャンディ（20個）\n\n\n1回以上\n1回以上\nじっくり、できた！\n🐛 いもむし + 🦋 ちょうちょ + キャンディ（20個）\n\n\n\nどの組み合わせでも「完成おめでとう！」 という気持ちは同じ。ヒントやチェックを使ったからといって、失敗ではありません。"
-  },
-  {
-    "objectID": "experimental/celebration/how-it-works.html#javascript-はどうやって決めるの",
-    "href": "experimental/celebration/how-it-works.html#javascript-はどうやって決めるの",
-    "title": "お祝いのしくみ",
-    "section": "JavaScript はどうやって決めるの？",
-    "text": "JavaScript はどうやって決めるの？\n次の図は、assets/js/celebration.js の celebrate() が行っている分岐を、読みやすくしたものです。\n\n\n\n\n\nflowchart TD\n    A[\"🎉 完成ボタンを押す\"] --&gt; B{\"Hint は 1回以上？\"}\n    B --&gt;|いいえ| C{\"Check は 1回以上？\"}\n    B --&gt;|はい| D{\"Check は 1回以上？\"}\n    C --&gt;|いいえ| E[\"🍬 ひらめいた！&lt;br/&gt;キャンディ 46個\"]\n    C --&gt;|はい| F[\"🦋 たしかめながら、できた！&lt;br/&gt;ちょうちょ + キャンディ 20個\"]\n    D --&gt;|いいえ| G[\"🐛 助けてもらって、できた！&lt;br/&gt;いもむし + キャンディ 20個\"]\n    D --&gt;|はい| H[\"🐛🦋 じっくり、できた！&lt;br/&gt;両方 + キャンディ 20個\"]\n    classDef decision fill:#fff5e9,stroke:#c69c83,color:#34302e\n    classDef result fill:#f3f7f0,stroke:#7a9e8c,color:#34302e\n    class B,C,D decision\n    class E,F,G,H result\n\n\n\n\n\n\nここで大事なのは、回数そのものではなく、0回か1回以上かでメッセージが決まること。たとえば Hint が1回でも8回でも、Check が0回なら「助けてもらって、できた！」になります。\nコードの中心は、こんな考え方です。\nconst perfect = hints === 0 && checks === 0;\n\nconst messageKey = perfect\n  ? \"brilliant\"\n  : hints &gt; 0 && checks &gt; 0\n  ? \"both\"\n  : hints &gt; 0\n  ? \"caterpillars\"\n  : \"butterflies\";\nこれは理解のために変数名を読みやすくした抜粋です。実際のコードでは h、c、key という名前を使っています。"
-  },
-  {
-    "objectID": "experimental/celebration/how-it-works.html#ことばと演出は別々に決まる",
-    "href": "experimental/celebration/how-it-works.html#ことばと演出は別々に決まる",
-    "title": "お祝いのしくみ",
-    "section": "ことばと演出は、別々に決まる",
-    "text": "ことばと演出は、別々に決まる\n「どのことばを表示するか」を決めたあと、JavaScript は演出を作ります。\n\nHint が1回以上 → 地面にいもむしが登場。最大5匹まで表示し、それ以上は +3 のように残りの数を示します。\nCheck が1回以上 → 空中にちょうちょが登場。こちらも最大5匹まで描画します。\nHint も Check も0回 → キャンディの数が20個から46個に増えます。\nどの場合も → キャンディの色は12人のペントミノの色から選ばれます。\n\n\n\n\n\n\n\nレベルを変えると？\n\n\n\nレベルはメッセージを変えません。キャンディの形の種類を変えます。\n\n\n\nレベル\nキャンディの形\n\n\n\n\n1–3\n四角\n\n\n4–6\n四角・丸\n\n\n7–8\n四角・丸・ひし形\n\n\n9–10\n四角・丸・ひし形・キャンディ型"
-  },
-  {
-    "objectID": "experimental/celebration/how-it-works.html#最後に置いたピースは",
-    "href": "experimental/celebration/how-it-works.html#最後に置いたピースは",
-    "title": "お祝いのしくみ",
-    "section": "最後に置いたピースは？",
-    "text": "最後に置いたピースは？\n「最後に置いたピース」を選ぶと、画面中央の五マスのキャラクターが変わります。\nJavaScript は5つの正方形をSVGで描き、その上に小さな目と口をつけます。色と名前は data/characters.json から読み込みます。つまり、キャラクターを選んでも Hint × Check の判定は変わりません。"
-  },
-  {
-    "objectID": "experimental/celebration/how-it-works.html#ことばはどこに書いてある",
-    "href": "experimental/celebration/how-it-works.html#ことばはどこに書いてある",
-    "title": "お祝いのしくみ",
-    "section": "ことばはどこに書いてある？",
-    "text": "ことばはどこに書いてある？\nお祝いの日本語と英語は、JavaScript の中に直接書き込むのではなく、data/celebration.json にまとめています。\n\"brilliant\": {\n  \"ja\": \"ひらめいた！\",\n  \"en\": \"Brilliant!\"\n}\nJavaScript が brilliant などのメッセージキーを選び、選択中の言語に対応する文章を取り出します。翻訳がない場合は、設定された英語の文章にフォールバックします。"
-  },
-  {
-    "objectID": "experimental/celebration/how-it-works.html#ファイルたちの役割",
-    "href": "experimental/celebration/how-it-works.html#ファイルたちの役割",
-    "title": "お祝いのしくみ",
-    "section": "ファイルたちの役割",
-    "text": "ファイルたちの役割\n\n\n\n\n\nflowchart TB\n    Q[\"index.qmd&lt;br/&gt;画面・操作パネル\"] --&gt; J[\"celebration.js&lt;br/&gt;条件を判断して絵を作る\"]\n    M[\"celebration.json&lt;br/&gt;ことば・設定\"] --&gt; J\n    C[\"characters.json&lt;br/&gt;12人の名前・色\"] --&gt; J\n    J --&gt; V[\"画面のキャラクター・ことば・演出\"]\n    S[\"celebration.css&lt;br/&gt;見た目・アニメーション\"] --&gt; V\n    classDef data fill:#fff2df,stroke:#c7a178,color:#34302e\n    classDef code fill:#e9f3f4,stroke:#7da8ac,color:#34302e\n    classDef view fill:#f1edf9,stroke:#9d91ba,color:#34302e\n    class M,C data\n    class J code\n    class Q,S,V view\n\n\n\n\n\n\n\n\n\nファイル\nひとことで言うと\n\n\n\n\nexperimental/celebration/index.qmd\nシミュレーターの画面を用意する\n\n\nassets/js/celebration.js\n入力を読み、条件を判断し、絵とことばを表示する\n\n\ndata/celebration.json\n日本語・英語の文章や表示上限を保存する\n\n\ndata/characters.json\n12人の色と名前を保存する\n\n\nassets/css/celebration.css\n配置、重なり順、動きを決める"
-  },
-  {
-    "objectID": "experimental/celebration/how-it-works.html#もう一回を押すと",
-    "href": "experimental/celebration/how-it-works.html#もう一回を押すと",
-    "title": "お祝いのしくみ",
-    "section": "「もう一回！」を押すと？",
-    "text": "「もう一回！」を押すと？\n「完成！」と「もう一回！」は、どちらも celebrate() を呼び出します。現在の設定を読み直し、前の演出を消して、新しいキャンディやちょうちょを作り直します。\n一方、スライダーやキャラクターを変更したときは、いったんプレビューをリセットします。新しい設定で「完成！」を押してみてください。"
-  },
-  {
-    "objectID": "experimental/celebration/how-it-works.html#次の実験は",
-    "href": "experimental/celebration/how-it-works.html#次の実験は",
-    "title": "お祝いのしくみ",
-    "section": "次の実験は？ 🌈",
-    "text": "次の実験は？ 🌈\n実験003：五マスのにじ では、Hint も Check も使わずに完成したとき、５色の虹をキャラクターの後ろに出すアイデアを探っています。これはまだこの実験002には入っていません。\n\n🎉 お祝いシミュレーターで遊ぶ\n← ひみつの実験室へ"
-  },
-  {
-    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html",
-    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html",
-    "title": "How to Play Pentomino",
-    "section": "",
-    "text": "Five little squares. So many possible shapes. And one very important question: where does this piece go?\nPentomino is a puzzle about finding the right place and the right orientation for each piece. Sometimes a piece needs a little turn. Sometimes it needs a flip. And sometimes it seems determined to be difficult. 😆\nThis guide is here when you need a hand. You don’t have to read it all before playing. Jump to whatever you’re curious about.\n\n\n\n\n\n\nWould you rather try it than read about it?\n\n\n\nHead over to Let’s Play! — Gesture Practice to practice tapping, dragging, and flicking with a piece. The interactive tutorial is currently in Japanese.\n\n\n\n\nJust three gestures to get you started!\nTap, draaaag, flick! Master these three moves, and you’re ready to play.\n\n\nTap a piece that hasn’t been placed on the board to rotate it 90° counterclockwise.\nNot quite the right angle? Tap again. And again. Round it goes!\n\n\n\nTouch and hold a piece, then drag it slowly to move it around.\n\nRed outline: You’ve got hold of the piece!\nBlue outline: Here’s a spot where it can go!\nRelease your finger: Place the piece there.\n\nBring the piece near a valid spot on the board, and it’ll snap right into position.\nBut there’s one little catch!\nBlue doesn’t mean you’ve solved it!\nIt simply means the piece fits in that spot. You can check whether it’s the correct placement later.\n\n\n\nGrab a piece, then give it a quick flick and release your finger!\nThe piece flips like a mirror image.\n\n\n\nFlick direction\nWhat happens\n\n\n\n\n← Left or → Right\nFlip horizontally (mirror left to right)\n\n\n↑ Up or ↓ Down\nFlip vertically (mirror top to bottom)\n\n\n\nDon’t worry! Your piece won’t go flying off the screen. 😄\nIt flips right where you release it.\n\n\n\n\n\n\nDrag or flick? What’s the difference?\n\n\n\nIt’s all about speed when you release your finger!\nDrag slowly to move a piece. Flick quickly to flip it.\nIf the app keeps mistaking one for the other, try adjusting the gesture sensitivity under the gear icon ⚙️.\nThe default threshold is 70 mm/second.\n\n\n\nTap to rotate. Drag to move. Flick to flip!\nThree little moves. A whole world of puzzles! 🧩\n\n\n\n\nPentomino has three difficulty modes. No need to earn a black belt on your first day!\n\n\nPractice picking up, moving, and placing pieces.\nThe pieces are presented in placement order, with their orientations already set correctly. You can concentrate on getting comfortable with the controls.\nBest place to start if you’re new.\n\n\n\nPractice rotating and flipping pieces into position.\nThe pieces still appear in placement order, but this time their orientations aren’t prepared for you. You’ll need your tap and flick skills!\n\n\n\nFigure out the solution for yourself.\nThe pieces appear in alphabetical order, and their orientations aren’t preset. You’ll decide which piece goes where — and how it should face.\n\n\n\n\n\n\nYou can change belts whenever you like\n\n\n\nYour progress is saved separately for each belt. Switch modes to suit your mood without losing your place in the others.\n\n\n\n\n\n\n\n\nTap Check to see whether your placed pieces are correct.\nThere’s no point deduction if everything you’ve placed is correct. Incorrect placements, however, may cost points.\n\n\n\nSometimes the pieces simply refuse to cooperate. That’s what Hint is for.\nWhen you request a hint, the app first checks the board and removes incorrectly placed pieces. Then it places one remaining piece in its correct position, working backward from the end of the solution’s placement order.\nThe point deduction covers the number of incorrectly placed pieces plus one hint. Helpful? Absolutely. Free? Not quite! 😉\n\n\n\n\nThere are 10 levels, L1 through L10, with 2,339 puzzles altogether. That’s enough to keep even a dedicated puzzle fan busy for a while.\nUse the ← and → buttons to move between puzzles:\n\nTap: move one puzzle at a time.\nHold for at least 1 second: move by 10 puzzles, roughly every 0.3 seconds.\nKeep holding beyond 3 seconds: move by 100 puzzles, roughly every 0.3 seconds.\n\nPuzzle numbers stay within the range 1–2,339.\n\n\n\n\n\nLevel\nPuzzle numbers\nNumber of puzzles\n\n\n\n\nL1\n1–7\n7\n\n\nL2\n8–40\n33\n\n\nL3\n41–156\n116\n\n\nL4\n157–395\n239\n\n\nL5\n396–668\n273\n\n\nL6\n669–1145\n477\n\n\nL7\n1146–1684\n539\n\n\nL8\n1685–2124\n440\n\n\nL9\n2125–2308\n184\n\n\nL10\n2309–2339\n31\n\n\nTotal\n\n2,339\n\n\n\n\n\n\n\nTap the gear icon at the top of the screen to open Settings. You can also press and hold the puzzle title.\nLanguage: Choose from Japanese, English, Spanish, French, German, Korean, Simplified Chinese, or Traditional Chinese. The instructions change to match your selection.\nCompletion sound: Turn the sound played when you finish a puzzle on or off.\nPlacement feedback: Depending on your device, the app uses either vibration or sound to signal a placement — not both at once.\nDifficulty and history: Progress is stored separately for each belt. Clear History removes the record for the currently selected belt only. Make sure that’s what you want before clearing it.\nSensitivity: Adjust the threshold that separates a swipe from a flick, along with the duration or strength of placement feedback.\n\n\n\nThere’s a reason the pieces arrive in a particular order in White and Yellow Belt modes.\nWhen the app constructs a solution, it fills available spaces beginning at the top left, moving through a column before proceeding to the right. The beginner modes follow that placement order to help you learn.\nSo yes, there is a method to the madness. Your puzzle pieces aren’t entirely making it up as they go!\n\n\n\nIf your first attempt looks like a pile of misplaced shapes, you’re in good company.\nRemember the three moves: tap to rotate, swipe to move, flick to flip.\nThen experiment. Try another angle. Ask for a hint if you need one. Most importantly, have fun discovering where those five-square pieces belong. 🧩\n\n\n\n\n\n\nAbout this guide\n\n\n\nThis is a friendlier English adaptation of the current Japanese app instructions. Features, controls, and scoring details may change between app versions. The interactive gesture tutorial linked above is a separate prototype and may not perfectly match the app’s gesture sensitivity."
-  },
-  {
-    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#three-little-moves-to-master",
-    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#three-little-moves-to-master",
-    "title": "How to Play Pentomino",
-    "section": "",
-    "text": "Just three gestures to get you started!\nTap, draaaag, flick! Master these three moves, and you’re ready to play.\n\n\nTap a piece that hasn’t been placed on the board to rotate it 90° counterclockwise.\nNot quite the right angle? Tap again. And again. Round it goes!\n\n\n\nTouch and hold a piece, then drag it slowly to move it around.\n\nRed outline: You’ve got hold of the piece!\nBlue outline: Here’s a spot where it can go!\nRelease your finger: Place the piece there.\n\nBring the piece near a valid spot on the board, and it’ll snap right into position.\nBut there’s one little catch!\nBlue doesn’t mean you’ve solved it!\nIt simply means the piece fits in that spot. You can check whether it’s the correct placement later.\n\n\n\nGrab a piece, then give it a quick flick and release your finger!\nThe piece flips like a mirror image.\n\n\n\nFlick direction\nWhat happens\n\n\n\n\n← Left or → Right\nFlip horizontally (mirror left to right)\n\n\n↑ Up or ↓ Down\nFlip vertically (mirror top to bottom)\n\n\n\nDon’t worry! Your piece won’t go flying off the screen. 😄\nIt flips right where you release it.\n\n\n\n\n\n\nDrag or flick? What’s the difference?\n\n\n\nIt’s all about speed when you release your finger!\nDrag slowly to move a piece. Flick quickly to flip it.\nIf the app keeps mistaking one for the other, try adjusting the gesture sensitivity under the gear icon ⚙️.\nThe default threshold is 70 mm/second.\n\n\n\nTap to rotate. Drag to move. Flick to flip!\nThree little moves. A whole world of puzzles! 🧩"
-  },
-  {
-    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#choose-your-belt",
-    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#choose-your-belt",
-    "title": "How to Play Pentomino",
-    "section": "",
-    "text": "Pentomino has three difficulty modes. No need to earn a black belt on your first day!\n\n\nPractice picking up, moving, and placing pieces.\nThe pieces are presented in placement order, with their orientations already set correctly. You can concentrate on getting comfortable with the controls.\nBest place to start if you’re new.\n\n\n\nPractice rotating and flipping pieces into position.\nThe pieces still appear in placement order, but this time their orientations aren’t prepared for you. You’ll need your tap and flick skills!\n\n\n\nFigure out the solution for yourself.\nThe pieces appear in alphabetical order, and their orientations aren’t preset. You’ll decide which piece goes where — and how it should face.\n\n\n\n\n\n\nYou can change belts whenever you like\n\n\n\nYour progress is saved separately for each belt. Switch modes to suit your mood without losing your place in the others."
-  },
-  {
-    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#a-little-help-when-youre-stuck",
-    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#a-little-help-when-youre-stuck",
-    "title": "How to Play Pentomino",
-    "section": "",
-    "text": "Tap Check to see whether your placed pieces are correct.\nThere’s no point deduction if everything you’ve placed is correct. Incorrect placements, however, may cost points.\n\n\n\nSometimes the pieces simply refuse to cooperate. That’s what Hint is for.\nWhen you request a hint, the app first checks the board and removes incorrectly placed pieces. Then it places one remaining piece in its correct position, working backward from the end of the solution’s placement order.\nThe point deduction covers the number of incorrectly placed pieces plus one hint. Helpful? Absolutely. Free? Not quite! 😉"
-  },
-  {
-    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#pick-a-puzzle-2339-to-explore",
-    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#pick-a-puzzle-2339-to-explore",
-    "title": "How to Play Pentomino",
-    "section": "",
-    "text": "There are 10 levels, L1 through L10, with 2,339 puzzles altogether. That’s enough to keep even a dedicated puzzle fan busy for a while.\nUse the ← and → buttons to move between puzzles:\n\nTap: move one puzzle at a time.\nHold for at least 1 second: move by 10 puzzles, roughly every 0.3 seconds.\nKeep holding beyond 3 seconds: move by 100 puzzles, roughly every 0.3 seconds.\n\nPuzzle numbers stay within the range 1–2,339.\n\n\n\n\n\nLevel\nPuzzle numbers\nNumber of puzzles\n\n\n\n\nL1\n1–7\n7\n\n\nL2\n8–40\n33\n\n\nL3\n41–156\n116\n\n\nL4\n157–395\n239\n\n\nL5\n396–668\n273\n\n\nL6\n669–1145\n477\n\n\nL7\n1146–1684\n539\n\n\nL8\n1685–2124\n440\n\n\nL9\n2125–2308\n184\n\n\nL10\n2309–2339\n31\n\n\nTotal\n\n2,339"
-  },
-  {
-    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#whats-behind-the-gear-icon",
-    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#whats-behind-the-gear-icon",
-    "title": "How to Play Pentomino",
-    "section": "",
-    "text": "Tap the gear icon at the top of the screen to open Settings. You can also press and hold the puzzle title.\nLanguage: Choose from Japanese, English, Spanish, French, German, Korean, Simplified Chinese, or Traditional Chinese. The instructions change to match your selection.\nCompletion sound: Turn the sound played when you finish a puzzle on or off.\nPlacement feedback: Depending on your device, the app uses either vibration or sound to signal a placement — not both at once.\nDifficulty and history: Progress is stored separately for each belt. Clear History removes the record for the currently selected belt only. Make sure that’s what you want before clearing it.\nSensitivity: Adjust the threshold that separates a swipe from a flick, along with the duration or strength of placement feedback."
-  },
-  {
-    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#a-peek-behind-the-puzzle",
-    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#a-peek-behind-the-puzzle",
-    "title": "How to Play Pentomino",
-    "section": "",
-    "text": "There’s a reason the pieces arrive in a particular order in White and Yellow Belt modes.\nWhen the app constructs a solution, it fills available spaces beginning at the top left, moving through a column before proceeding to the right. The beginner modes follow that placement order to help you learn.\nSo yes, there is a method to the madness. Your puzzle pieces aren’t entirely making it up as they go!"
-  },
-  {
-    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#ready-to-give-it-a-go",
-    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#ready-to-give-it-a-go",
-    "title": "How to Play Pentomino",
-    "section": "",
-    "text": "If your first attempt looks like a pile of misplaced shapes, you’re in good company.\nRemember the three moves: tap to rotate, swipe to move, flick to flip.\nThen experiment. Try another angle. Ask for a hint if you need one. Most importantly, have fun discovering where those five-square pieces belong. 🧩\n\n\n\n\n\n\nAbout this guide\n\n\n\nThis is a friendlier English adaptation of the current Japanese app instructions. Features, controls, and scoring details may change between app versions. The interactive gesture tutorial linked above is a separate prototype and may not perfectly match the app’s gesture sensitivity."
-  },
-  {
-    "objectID": "experimental/gesture-tutorial/index.html",
-    "href": "experimental/gesture-tutorial/index.html",
-    "title": "まずは遊んでみよう！",
-    "section": "",
-    "text": "説明を読むより、まずはひとつ動かしてみよう！\n指一本で遊べます。ここでは、ピースを 回す・動かす・ひっくり返す 練習をします。失敗しても大丈夫。何度でも試せます。"
-  },
-  {
-    "objectID": "experimental/gesture-tutorial/index.html#できたらパズルに挑戦",
-    "href": "experimental/gesture-tutorial/index.html#できたらパズルに挑戦",
-    "title": "まずは遊んでみよう！",
-    "section": "できたら、パズルに挑戦！ 🎉",
-    "text": "できたら、パズルに挑戦！ 🎉\nまずは 初心者（白帯） から。うまくいかなくても、ゆっくりで大丈夫です。\nパズルで遊ぶ · 📖 くわしい遊び方： 日本語 / English"
-  },
-  {
-    "objectID": "experimental/victory-scene/index.html",
-    "href": "experimental/victory-scene/index.html",
-    "title": "霧が晴れたら、ゴマス村。",
-    "section": "",
-    "text": "お父さんのペントミノアプリには、12種類の色とりどりのピースが登場します。\nでも、今の画面では、白帯・黄帯・黒帯ごとの単色の背景が強く主張していて、本来主役であるはずのピースよりも、背景の色のほうが目立っているように感じます。\nそこで、背景をもう少し明るく、やわらかな色合いにして、数式から生まれる山の風景をさりげなく取り入れてみたいと考えました。\n主役はペントミノ。背景は、その魅力を引き立てる舞台です。\nそこで、今回のアイデアを言葉だけでなく、実際に見て、触って確かめられるように、iPhoneサイズの試作品を作ってみました。\n「こんな雰囲気に変えてみたらどうだろう？」を試すための実験です。\nまだ完成形ではありません。お父さんだけでなく、お母さんやあっちゃんにも見てもらって、感想やアイデアを聞いてみたいと思っています。\n「こっちの色が好き！」「山はもっと控えめがいい」「今のままのほうがいい！」など、どんな意見でも大歓迎。\nゴマス村のデザイン会議、開催中です。🌈🏔️"
-  },
-  {
-    "objectID": "experimental/victory-scene/index.html#この実験は何を変えたい",
-    "href": "experimental/victory-scene/index.html#この実験は何を変えたい",
-    "title": "霧が晴れたら、ゴマス村。",
-    "section": "",
-    "text": "お父さんのペントミノアプリには、12種類の色とりどりのピースが登場します。\nでも、今の画面では、白帯・黄帯・黒帯ごとの単色の背景が強く主張していて、本来主役であるはずのピースよりも、背景の色のほうが目立っているように感じます。\nそこで、背景をもう少し明るく、やわらかな色合いにして、数式から生まれる山の風景をさりげなく取り入れてみたいと考えました。\n主役はペントミノ。背景は、その魅力を引き立てる舞台です。\nそこで、今回のアイデアを言葉だけでなく、実際に見て、触って確かめられるように、iPhoneサイズの試作品を作ってみました。\n「こんな雰囲気に変えてみたらどうだろう？」を試すための実験です。\nまだ完成形ではありません。お父さんだけでなく、お母さんやあっちゃんにも見てもらって、感想やアイデアを聞いてみたいと思っています。\n「こっちの色が好き！」「山はもっと控えめがいい」「今のままのほうがいい！」など、どんな意見でも大歓迎。\nゴマス村のデザイン会議、開催中です。🌈🏔️"
-  },
-  {
-    "objectID": "experimental/victory-scene/index.html#まずは触ってみよう",
-    "href": "experimental/victory-scene/index.html#まずは触ってみよう",
-    "title": "霧が晴れたら、ゴマス村。",
-    "section": "🧪 まずは触ってみよう",
-    "text": "🧪 まずは触ってみよう\n帯・パズル番号・最後のピース・ヒント・チェックの回数を変えて、「プレイ中」と「完成！」を見比べてみてください。\n画面の順序は変えません。 上にタイトルと操作ボタン、その下に6×10の盤面、さらに下にお祝いの領域を残します。山の背景は画面全体に広がり、プレイ中と完成後で霧の濃さが変わります。\n\n  \n    🧪 実験のつまみ\n    帯 ⚪ 白帯🟡 黄帯⚫ 黒帯\n    パズル番号 \n    最後のピース FXILPNTUVWYZ\n    ヒント 0\n    チェック 0\n    ▶ プレイ中🌈 完成！\n    ヒント → 雲 ☁️ ／ チェック → カラス 🐦‍⬛ ／ どちらも0回 → 虹 🌈\n    プレイ中は #0672 の途中経過を参考にした未完成の盤面と残りのピース、完成後は完成配置の見本を表示します。番号を変えても実際の解答には切り替わりません。\n  \n  \n    \n      \n      ⚙\n      Pentomino 6x10\n      \n        CheckHint◀▶\n        White Belt\n      \n      -1-10043Level 3\n      \n      \n        \n        \n        Made it!F\n        霧の向こうに、山がある。"
-  },
-  {
-    "objectID": "experimental/victory-scene/index.html#デザインの提案書",
-    "href": "experimental/victory-scene/index.html#デザインの提案書",
-    "title": "霧が晴れたら、ゴマス村。",
-    "section": "🎨 デザインの提案書",
-    "text": "🎨 デザインの提案書\n\n1. なぜ背景を変えたいの？\nパズルのアプリでいちばん見てほしいのは、12種類の色を持つペントミノのピースです。 背景を少し明るく、やわらかくすると、盤面の色と形に視線が集まりやすくなるのではないか、と考えました。\n白帯・黄帯・黒帯の違いは残します。 ただし、画面全体を強い単色で塗り分けるのではなく、空と山の淡い配色で表現する方針です。\n\n\n\n帯\n背景のイメージ\n山の表情\n\n\n\n\n⚪ 白帯\n霧がかった淡い青\nなだらか\n\n\n🟡 黄帯\nやわらかなクリーム・金色\n少し変化のある丘\n\n\n⚫ 黒帯\n明るい灰緑と深緑\n細かな凹凸のある山\n\n\n\n黒帯でも、背景を真っ黒にする必要はありません。難しさは山の輪郭で表し、盤面の読みやすさを優先します。\n\n\n2. 山は毎回同じ？\nパズル番号を乱数の種（seed）として、遠景・中景・前景の3本の山を生成します。\n同じパズル番号と帯・生成設定なら、同じ山が再現されます。番号が変わると風景も変わります。山はパズルの難易度を計算した結果ではなく、その問題に添えられた小さな景色です。\n数式と実験は 研究室「山は、数式でできている。」 にまとめました（#84）。\n\n\n3. プレイ中と完成後で、何が変わる？\n\n\n\n\nプレイ中\n完成後\n\n\n\n\n山\n霧を濃くして目立たせない\n霧が少し晴れ、輪郭が見える\n\n\n盤面\nいつもどおり操作できる\n完成した配置をそのまま表示\n\n\nお祝い\nまだ表示しない\n最後のピースのキャラクターが登場\n\n\n空\n静かな風景\n虹・雲・カラスが登場\n\n\n\n大切なのは、完成時に別の山を生成しないこと。プレイしていた風景の霧が晴れるから、同じ場所で完成した気持ちになります。\n\n\n4. 新しいお祝いのルール（案）\n\nヒント0回・チェック0回：空に虹がかかる 🌈\nヒントを使った：使った回数に応じて雲が増える ☁️\nチェックを使った：使った回数に応じてカラスが増える 🐦‍⬛\nどの完成でも：最後に置いたピースのキャラクターが登場し、お祝いは画面に残る\n\n雲やカラスは「失敗」の印ではありません。その問題をどう解いたかを、空の景色にしてみる遊びです。ヒントやチェックを使っても、完成はちゃんとおめでたい。\n\n\n5. ほかのペントミノアプリでも使える？\n今回の山の背景は、6×10専用のイラストではありません。数式から風景を生成する仕組みなので、ほかのペントミノアプリにも応用できるのではないかと考えています。\n例えば、Pentomino 6×10・Pentomino 4×15・Pentomino 4×5×3。パズルの形や問題数は違っても、白帯・黄帯・黒帯という共通の仕組みがあります。\n山の生成ルールと帯ごとの配色を共通化すれば、アプリごと・問題ごとに背景画像を一から作る必要がありません。同じ仕組みを使いながら、それぞれの問題に固有の風景を持たせられます。\nまた、パズル番号はアプリごとに管理されるため、アプリの種類とパズル番号を組み合わせて山の種（seed）を決めれば、例えば6×10の43番と4×15の43番に別々の風景を割り当てることもできます。\n\n\n6. iPhone以外の画面でも使える？\nもうひとつの利点は、画面サイズに合わせて山を描き直せることです。\n一枚の背景画像を引き伸ばすのではなく、画面の幅や高さに合わせて山の輪郭を計算します。iPhoneだけでなく、iPadなどのタブレットや、ほかの画面サイズにも応用できます。\nただし、どんな画面でも同じような景色に見えるように、山の座標や縦横比、盤面・ボタンとの重なり方を工夫する必要があります。同じ問題の山らしさを保ちながら、表示領域に合わせて描くことが目標です。\n目指すのは、一枚の背景画像ではなく、ペントミノアプリ共通で使える「風景を描く仕組み」です。 まずは6×10で試し、よさそうならほかのアプリや画面サイズにも広げてみたいと思っています。🌄\n\n\n7. 変えないもの\n\nタイトル・設定・Check・Hint・前後移動・帯・レベル・問題番号の基本的な配置\n6×10の盤面が上、祝いの領域が下という画面構成\n12種類のピースの色と形、ゲームのルール\nパズル番号に対応する実際の解答データ\n\n\n\n8. Unity で実装するなら（将来の相談）\n背景の山は盤面やボタンとは別の描画レイヤーに置き、文字とピースのコントラストを確保したいです。山の生成に必要な入力は、少なくともアプリの種類・パズル番号・帯・描画サイズ。霧の濃さはプレイ状態で変えます。\n山の形を再生成せずに霧だけ変えられるようにすれば、完成時の演出もシンプルになります。キャラクターや虹・雲・カラスは別の前景レイヤーに分けると、後から変更しやすくなります。\n今すぐアプリに組み込むという話ではありません。 まずは画面の印象と遊び心を比較して、よさそうなら Unity 向けの仕様に落とし込む、という順番です。"
-  },
-  {
-    "objectID": "experimental/victory-scene/index.html#この試作の現在地",
-    "href": "experimental/victory-scene/index.html#この試作の現在地",
-    "title": "霧が晴れたら、ゴマス村。",
-    "section": "この試作の現在地",
-    "text": "この試作の現在地\nこのページは完成したデザインではなく、検討用の試作品です。山を画面全体の背景として描き、盤面と操作ボタンをその手前に置いています。山の配置・霧の濃さ・文字の読みやすさは、これから調整します。\nまた、プレイ中と完成後の盤面は、それぞれスクリーンショットを参考にした固定の見本です。パズル番号を変えても実際の解答配置には切り替わりません。ヒント・チェックの回数も実際のゲーム記録とは連動していません。"
-  },
-  {
-    "objectID": "experimental/victory-scene/index.html#関連する実験と記録",
-    "href": "experimental/victory-scene/index.html#関連する実験と記録",
-    "title": "霧が晴れたら、ゴマス村。",
-    "section": "関連する実験と記録",
-    "text": "関連する実験と記録\n\n研究室：山は、数式でできている。 — 山の生成の仕組み\n実験002：お祝いシミュレーター — 以前のお祝い演出の実験\nIssue #81：UI facelift — このデザイン検討\nIssue #84：山の生成 — 数式と再現可能な風景"
+    "objectID": "research/mountain-generator/index.html#おわりに",
+    "href": "research/mountain-generator/index.html#おわりに",
+    "title": "山は、数式でできている。",
+    "section": "おわりに",
+    "text": "おわりに\nひとつの波から始めて、3つの波を足してみる。\nできた輪郭を3本重ねて、色をつける。\nそこに、パズル番号から生まれた疑似乱数と、少しの霧を加える。\nすると、数式から風景が生まれました。\nもちろん、これは地質学的な山のシミュレーションではありません。\n数式を使った、ちょっと不思議な風景のデザインです。\nゴマス村の山は、今日も計算されています。🌄\nひみつの実験室では、こうした発見をゲームの背景に応用できるか試しています（UI facelift issue #81）。\n役に立つかどうかは、調べてから考えよう。 🌈"
   },
   {
     "objectID": "research/five-colour-rainbow/index.html",
@@ -546,67 +210,438 @@
     "text": "研究メモ：次に調べたいこと\n\n元データの記録順は、盤面上の位置、探索アルゴリズムの順番、それとも別の規則で決まっているのでしょうか？\nピースの向きや位置が違っても、最後の5人の組み合わせが同じ解答は何件あるのでしょうか？\n12人から無作為に5人を選んだ場合と比べると、登場頻度はどれくらい違うのでしょうか？\n色の並びを逆にした虹は、見た目が同じ虹として数えるべきでしょうか？\n\n解釈するときの注意： 登場頻度に偏りがあっても、それがペントミノの敷き詰め方そのものの性質とは限りません。解答の記録順や列挙方法による影響かもしれません。"
   },
   {
-    "objectID": "research/mountain-generator/index.html",
-    "href": "research/mountain-generator/index.html",
-    "title": "山は、数式でできている。",
+    "objectID": "experimental/victory-scene/index.html",
+    "href": "experimental/victory-scene/index.html",
+    "title": "霧が晴れたら、ゴマス村。",
     "section": "",
-    "text": "山を描きたい。でも、山を一枚ずつ描く代わりに、数式に描いてもらうことはできるだろうか？\nここでは波を重ねて、山の輪郭をつくってみます。絵の才能は必要ありません。必要なのは、ちょっとした好奇心です。"
+    "text": "お父さんのペントミノアプリには、12種類の色とりどりのピースが登場します。\nでも、今の画面では、白帯・黄帯・黒帯ごとの単色の背景が強く主張していて、本来主役であるはずのピースよりも、背景の色のほうが目立っているように感じます。\nそこで、背景をもう少し明るく、やわらかな色合いにして、数式から生まれる山の風景をさりげなく取り入れてみたいと考えました。\n主役はペントミノ。背景は、その魅力を引き立てる舞台です。\nそこで、今回のアイデアを言葉だけでなく、実際に見て、触って確かめられるように、iPhoneサイズの試作品を作ってみました。\n「こんな雰囲気に変えてみたらどうだろう？」を試すための実験です。\nまだ完成形ではありません。お父さんだけでなく、お母さんやあっちゃんにも見てもらって、感想やアイデアを聞いてみたいと思っています。\n「こっちの色が好き！」「山はもっと控えめがいい」「今のままのほうがいい！」など、どんな意見でも大歓迎。\nゴマス村のデザイン会議、開催中です。🌈🏔️"
   },
   {
-    "objectID": "research/mountain-generator/index.html#波をひとつ描いてみる",
-    "href": "research/mountain-generator/index.html#波をひとつ描いてみる",
-    "title": "山は、数式でできている。",
-    "section": "1. 波をひとつ描いてみる。",
-    "text": "1. 波をひとつ描いてみる。\nまずは、横方向の位置を t = x / width で 0〜1 にそろえます。すると、画面が広くても狭くても同じ計算を使えます。\n\\[h_1(t) = A\\sin(2\\pi f_1t + \\phi_1)\\]\n\n  \n    波を描く実験 🌊\n    スライダーを動かすと、数式が描く線も変わります。\n  \n  \n  \n    振幅 A 48\n    周波数 f 1\n    位相 φ 0\n    位置 t 0.25\n  \n  \n  波を元に戻す ↺\n\n\n\n振幅（しんぷく / amplitude） \\(A\\)：波の高さ。数値を大きくすると、山は高く、谷は深くなる。\n周波数（しゅうはすう / frequency） \\(f_1\\)：横幅の中で波が何回繰り返されるか。数値を大きくすると、山と谷の数が増える。\n位相（いそう / phase） \\(\\phi_1\\)：波の始まる位置。数値を変えると、波の形や高さはそのままで、左右にずれる。\n\n波がゆっくり上下すると、大きくなだらかな丘になります。"
+    "objectID": "experimental/victory-scene/index.html#この実験は何を変えたい",
+    "href": "experimental/victory-scene/index.html#この実験は何を変えたい",
+    "title": "霧が晴れたら、ゴマス村。",
+    "section": "",
+    "text": "お父さんのペントミノアプリには、12種類の色とりどりのピースが登場します。\nでも、今の画面では、白帯・黄帯・黒帯ごとの単色の背景が強く主張していて、本来主役であるはずのピースよりも、背景の色のほうが目立っているように感じます。\nそこで、背景をもう少し明るく、やわらかな色合いにして、数式から生まれる山の風景をさりげなく取り入れてみたいと考えました。\n主役はペントミノ。背景は、その魅力を引き立てる舞台です。\nそこで、今回のアイデアを言葉だけでなく、実際に見て、触って確かめられるように、iPhoneサイズの試作品を作ってみました。\n「こんな雰囲気に変えてみたらどうだろう？」を試すための実験です。\nまだ完成形ではありません。お父さんだけでなく、お母さんやあっちゃんにも見てもらって、感想やアイデアを聞いてみたいと思っています。\n「こっちの色が好き！」「山はもっと控えめがいい」「今のままのほうがいい！」など、どんな意見でも大歓迎。\nゴマス村のデザイン会議、開催中です。🌈🏔️"
   },
   {
-    "objectID": "research/mountain-generator/index.html#波を重ねてみる",
-    "href": "research/mountain-generator/index.html#波を重ねてみる",
-    "title": "山は、数式でできている。",
-    "section": "2. 波を重ねてみる。",
-    "text": "2. 波を重ねてみる。\n次は、もっと細かい波を足してみましょう。\n最初の波 A は、大きくなだらかな丘。\nそこに、少し細かい波 B を重ねると、小さな丘や谷が生まれます。\nさらに、もっと細かい波 C を加えると、山の輪郭がでこぼこしてきます。\n実は、3つとも同じ sin() という数式。違うのは、波の高さ（振幅）と、繰り返す回数（周波数）だけです。\n大きな丘 ＋ 小さな丘 ＋ でこぼこ ＝ ちょっと山らしい形！\n\\[\nh(t) =\n\\underbrace{A\\sin(2\\pi f_1t+\\phi_1)}_{\\text{大きな丘}}\n+\n\\underbrace{B\\sin(2\\pi f_2t+\\phi_2)}_{\\text{小さな丘}}\n+\n\\underbrace{C\\sin(2\\pi f_3t+\\phi_3)}_{\\text{でこぼこ}}\n\\]\n大きな丘 + 小さな丘 + 細かなでこぼこ。 それぞれを別々に見てから、重ね合わせた形を観察できます。"
+    "objectID": "experimental/victory-scene/index.html#まずは触ってみよう",
+    "href": "experimental/victory-scene/index.html#まずは触ってみよう",
+    "title": "霧が晴れたら、ゴマス村。",
+    "section": "🧪 まずは触ってみよう",
+    "text": "🧪 まずは触ってみよう\n帯・パズル番号・最後のピース・ヒント・チェックの回数を変えて、「プレイ中」と「完成！」を見比べてみてください。\n画面の順序は変えません。 上にタイトルと操作ボタン、その下に6×10の盤面、さらに下にお祝いの領域を残します。山の背景は画面全体に広がり、プレイ中と完成後で霧の濃さが変わります。\n\n  \n    🧪 実験のつまみ\n    帯 ⚪ 白帯🟡 黄帯⚫ 黒帯\n    パズル番号 \n    最後のピース FXILPNTUVWYZ\n    ヒント 0\n    チェック 0\n    ▶ プレイ中🌈 完成！\n    ヒント → 雲 ☁️ ／ チェック → カラス 🐦‍⬛ ／ どちらも0回 → 虹 🌈\n    プレイ中は #0672 の途中経過を参考にした未完成の盤面と残りのピース、完成後は完成配置の見本を表示します。番号を変えても実際の解答には切り替わりません。\n  \n  \n    \n      \n      ⚙\n      Pentomino 6x10\n      \n        CheckHint◀▶\n        White Belt\n      \n      -1-10043Level 3\n      \n      \n        \n        \n        Made it!F\n        霧の向こうに、山がある。"
   },
   {
-    "objectID": "research/mountain-generator/index.html#山の研究装置",
-    "href": "research/mountain-generator/index.html#山の研究装置",
-    "title": "山は、数式でできている。",
-    "section": "3. 山の研究装置 🧪",
-    "text": "3. 山の研究装置 🧪\n\n\n  \n\n    \n      \n        帯\n        \n          ⓘ\n          \n            帯の種類\n            山の色と凹凸の初期設定を切り替えます。数式の変数ではありません。\n          \n        \n      \n      \n        ⚪ 白帯\n        🟡 黄帯\n        ⚫ 黒帯\n      \n    \n\n    \n      \n        レベル\n        \n          ⓘ\n          \n            地形の複雑さ\n            レベルに応じて山の形を変化させます。数式の特定の一文字ではなく、生成ルールに関わる設定です。\n          \n        \n      \n      \n        \n        4\n      \n    \n\n    \n      \n        パズル番号\n        \n          ⓘ\n          \n            乱数の種（seed）\n            山の個性を決める番号。同じ番号と同じ設定なら、同じ風景を再現できます。位相 φ などの生成に利用します。\n          \n        \n      \n      \n    \n\n  \n\n  \n    \n    \n  \n\n  \n\n    \n      \n        大きな丘の高さ A\n        \n          ⓘ\n          \n            振幅 A（しんぷく）\n            大きな波の高さ。数値を大きくすると、山は高く、谷は深くなります。\n          \n        \n      \n      \n        \n        35\n      \n    \n\n    \n      \n        小さな丘の高さ B\n        \n          ⓘ\n          \n            振幅 B（しんぷく）\n            小さな波の高さ。数値を大きくすると、小さな丘や谷の影響が強くなります。\n          \n        \n      \n      \n        \n        14\n      \n    \n\n    \n      \n        細かな凹凸 C\n        \n          ⓘ\n          \n            振幅 C（しんぷく）\n            細かい波の高さ。数値を大きくすると、山の輪郭がでこぼこしてきます。\n          \n        \n      \n      \n        \n        5\n      \n    \n\n    \n      \n        小さな丘の数 f₂\n        \n          ⓘ\n          \n            周波数 f₂（しゅうはすう）\n            横幅の中で小さな波が何回繰り返されるか。数値を大きくすると、波の間隔が狭くなります。\n          \n        \n      \n      \n        \n        5\n      \n    \n\n    \n      \n        霧の濃さ mist\n        \n          ⓘ\n          \n            大気遠近法\n            山の形ではなく、色の見え方を変えます。遠くの山ほど空の色に近づけて、奥行きを表現します。\n          \n        \n      \n      \n        \n        35\n      \n    \n\n  \n\n  \n    どの波を見たい？\n     合成\n     大きな丘\n     小さな丘\n     細かな凹凸\n  \n\n  \n    初期値に戻す\n    別の山を見に行く ↗"
+    "objectID": "experimental/victory-scene/index.html#デザインの提案書",
+    "href": "experimental/victory-scene/index.html#デザインの提案書",
+    "title": "霧が晴れたら、ゴマス村。",
+    "section": "🎨 デザインの提案書",
+    "text": "🎨 デザインの提案書\n\n1. なぜ背景を変えたいの？\nパズルのアプリでいちばん見てほしいのは、12種類の色を持つペントミノのピースです。 背景を少し明るく、やわらかくすると、盤面の色と形に視線が集まりやすくなるのではないか、と考えました。\n白帯・黄帯・黒帯の違いは残します。 ただし、画面全体を強い単色で塗り分けるのではなく、空と山の淡い配色で表現する方針です。\n\n\n\n帯\n背景のイメージ\n山の表情\n\n\n\n\n⚪ 白帯\n霧がかった淡い青\nなだらか\n\n\n🟡 黄帯\nやわらかなクリーム・金色\n少し変化のある丘\n\n\n⚫ 黒帯\n明るい灰緑と深緑\n細かな凹凸のある山\n\n\n\n黒帯でも、背景を真っ黒にする必要はありません。難しさは山の輪郭で表し、盤面の読みやすさを優先します。\n\n\n2. 山は毎回同じ？\nパズル番号を乱数の種（seed）として、遠景・中景・前景の3本の山を生成します。\n同じパズル番号と帯・生成設定なら、同じ山が再現されます。番号が変わると風景も変わります。山はパズルの難易度を計算した結果ではなく、その問題に添えられた小さな景色です。\n数式と実験は 研究室「山は、数式でできている。」 にまとめました（#84）。\n\n\n3. プレイ中と完成後で、何が変わる？\n\n\n\n\nプレイ中\n完成後\n\n\n\n\n山\n霧を濃くして目立たせない\n霧が少し晴れ、輪郭が見える\n\n\n盤面\nいつもどおり操作できる\n完成した配置をそのまま表示\n\n\nお祝い\nまだ表示しない\n最後のピースのキャラクターが登場\n\n\n空\n静かな風景\n虹・雲・カラスが登場\n\n\n\n大切なのは、完成時に別の山を生成しないこと。プレイしていた風景の霧が晴れるから、同じ場所で完成した気持ちになります。\n\n\n4. 新しいお祝いのルール（案）\n\nヒント0回・チェック0回：空に虹がかかる 🌈\nヒントを使った：使った回数に応じて雲が増える ☁️\nチェックを使った：使った回数に応じてカラスが増える 🐦‍⬛\nどの完成でも：最後に置いたピースのキャラクターが登場し、お祝いは画面に残る\n\n雲やカラスは「失敗」の印ではありません。その問題をどう解いたかを、空の景色にしてみる遊びです。ヒントやチェックを使っても、完成はちゃんとおめでたい。\n\n\n5. ほかのペントミノアプリでも使える？\n今回の山の背景は、6×10専用のイラストではありません。数式から風景を生成する仕組みなので、ほかのペントミノアプリにも応用できるのではないかと考えています。\n例えば、Pentomino 6×10・Pentomino 4×15・Pentomino 4×5×3。パズルの形や問題数は違っても、白帯・黄帯・黒帯という共通の仕組みがあります。\n山の生成ルールと帯ごとの配色を共通化すれば、アプリごと・問題ごとに背景画像を一から作る必要がありません。同じ仕組みを使いながら、それぞれの問題に固有の風景を持たせられます。\nまた、パズル番号はアプリごとに管理されるため、アプリの種類とパズル番号を組み合わせて山の種（seed）を決めれば、例えば6×10の43番と4×15の43番に別々の風景を割り当てることもできます。\n\n\n6. iPhone以外の画面でも使える？\nもうひとつの利点は、画面サイズに合わせて山を描き直せることです。\n一枚の背景画像を引き伸ばすのではなく、画面の幅や高さに合わせて山の輪郭を計算します。iPhoneだけでなく、iPadなどのタブレットや、ほかの画面サイズにも応用できます。\nただし、どんな画面でも同じような景色に見えるように、山の座標や縦横比、盤面・ボタンとの重なり方を工夫する必要があります。同じ問題の山らしさを保ちながら、表示領域に合わせて描くことが目標です。\n目指すのは、一枚の背景画像ではなく、ペントミノアプリ共通で使える「風景を描く仕組み」です。 まずは6×10で試し、よさそうならほかのアプリや画面サイズにも広げてみたいと思っています。🌄\n\n\n7. 変えないもの\n\nタイトル・設定・Check・Hint・前後移動・帯・レベル・問題番号の基本的な配置\n6×10の盤面が上、祝いの領域が下という画面構成\n12種類のピースの色と形、ゲームのルール\nパズル番号に対応する実際の解答データ\n\n\n\n8. Unity で実装するなら（将来の相談）\n背景の山は盤面やボタンとは別の描画レイヤーに置き、文字とピースのコントラストを確保したいです。山の生成に必要な入力は、少なくともアプリの種類・パズル番号・帯・描画サイズ。霧の濃さはプレイ状態で変えます。\n山の形を再生成せずに霧だけ変えられるようにすれば、完成時の演出もシンプルになります。キャラクターや虹・雲・カラスは別の前景レイヤーに分けると、後から変更しやすくなります。\n今すぐアプリに組み込むという話ではありません。 まずは画面の印象と遊び心を比較して、よさそうなら Unity 向けの仕様に落とし込む、という順番です。"
   },
   {
-    "objectID": "research/mountain-generator/index.html#つの波から3つの山へ",
-    "href": "research/mountain-generator/index.html#つの波から3つの山へ",
-    "title": "山は、数式でできている。",
-    "section": "4. 3つの波から、3つの山へ。",
-    "text": "4. 3つの波から、3つの山へ。\nここまで、3つの波を足して、ひとつの山の輪郭をつくりました。\nでも、ゴマス村の風景には、山が1本しかないわけではありません。\n遠くの山、中くらいの距離の山、手前の山。\n実は、どの山も同じ数式から生まれています。\n違うのは、波の高さ、繰り返す回数、始まる位置。そして、画面の中での高さです。\nそれぞれの山の輪郭を、次のように呼ぶことにします。\n\n\\(h_{\\text{back}}(t)\\)：遠くの山（遠景）\n\\(h_{\\text{middle}}(t)\\)：中くらいの距離の山（中景）\n\\(h_{\\text{front}}(t)\\)：手前の山（前景）\n\nつまり、同じ数式を3回使って、3本の異なる輪郭をつくっているのです。\nそして、遠くの山から順番に描いて、手前の山を重ねます。\nここには、2種類の「重ねる」があります。\n\n波を足す：3つの波を計算で足して、1本の山の輪郭をつくる。\n山を重ねる：3本の輪郭をそれぞれ塗りつぶして、遠くから手前へ描く。\n\n波は数式の中で足し算。山は画面の上で重ね描き。\n似ているようで、ちょっと違います。"
+    "objectID": "experimental/victory-scene/index.html#この試作の現在地",
+    "href": "experimental/victory-scene/index.html#この試作の現在地",
+    "title": "霧が晴れたら、ゴマス村。",
+    "section": "この試作の現在地",
+    "text": "この試作の現在地\nこのページは完成したデザインではなく、検討用の試作品です。山を画面全体の背景として描き、盤面と操作ボタンをその手前に置いています。山の配置・霧の濃さ・文字の読みやすさは、これから調整します。\nまた、プレイ中と完成後の盤面は、それぞれスクリーンショットを参考にした固定の見本です。パズル番号を変えても実際の解答配置には切り替わりません。ヒント・チェックの回数も実際のゲーム記録とは連動していません。"
   },
   {
-    "objectID": "research/mountain-generator/index.html#白帯から黒帯へ",
-    "href": "research/mountain-generator/index.html#白帯から黒帯へ",
-    "title": "山は、数式でできている。",
-    "section": "5. 白帯から黒帯へ。",
-    "text": "5. 白帯から黒帯へ。\n帯によって、山の色と険しさを変えることにしました。\n白帯は、青みがかった穏やかな山。黄帯は、あたたかな黄金色の丘。黒帯は、深い森の色をした険しい山。\n色だけでなく、細かな波の強さも変えています。\nただし、山の険しさは、本当のパズルの難易度を測定したものではありません。\nこれは、ゴマス村の風景を楽しくするためのデザイン上の約束です。\nレベルを変えると、山の輪郭も少しずつ変わります。\nここでは、3つの役割を分けています。\n\n帯：色のパレットと基本の険しさ\nレベル：山の形の変化\nパズル番号：再現可能な山の個性\n\nちなみに、この実験室ではレベルとパズル番号を自由に組み合わせられます。実際のパズルでは、問題番号ごとにレベルが決まっています。\n実験室だからこそ、同じ番号の山を、違うレベルで眺めてみることもできるのです。"
+    "objectID": "experimental/victory-scene/index.html#関連する実験と記録",
+    "href": "experimental/victory-scene/index.html#関連する実験と記録",
+    "title": "霧が晴れたら、ゴマス村。",
+    "section": "関連する実験と記録",
+    "text": "関連する実験と記録\n\n研究室：山は、数式でできている。 — 山の生成の仕組み\n実験002：お祝いシミュレーター — 以前のお祝い演出の実験\nIssue #81：UI facelift — このデザイン検討\nIssue #84：山の生成 — 数式と再現可能な風景"
   },
   {
-    "objectID": "research/mountain-generator/index.html#同じ山にもう一度会える",
-    "href": "research/mountain-generator/index.html#同じ山にもう一度会える",
-    "title": "山は、数式でできている。",
-    "section": "6. 同じ山に、もう一度会える？",
-    "text": "6. 同じ山に、もう一度会える？\n山の形を毎回完全にランダムに決めてしまうと、同じ風景にもう一度出会えるとは限りません。\nそこで、パズル番号を乱数の種（seed）に使います。\nこの種から疑似乱数（ぎじらんすう / pseudorandom numbers）をつくって、波の位相（いそう）を決めています。\n疑似乱数とは、ランダムに見えるけれど、決まった計算から生まれる数のこと。\n例えば、波の位相を決めるために、こんな計算を使っています。\nhash(seed * 101 + layer * 17 + component * 7919) * 2 * Math.PI\nここで、seed はパズル番号、layer は遠景・中景・前景の区別、component はどの波を計算しているかを表します。\n101、17、7919は、入力を混ぜ合わせるために選んだ数字。特別な山の法則ではありません。\n同じ番号・帯・レベル・設定なら、同じ風景を再現できます。\nMath.random() は使いません。\n偶然に見える。でも、偶然ではない。"
+    "objectID": "experimental/gesture-tutorial/index.html",
+    "href": "experimental/gesture-tutorial/index.html",
+    "title": "まずは遊んでみよう！",
+    "section": "",
+    "text": "説明を読むより、まずはひとつ動かしてみよう！\n指一本で遊べます。ここでは、ピースを 回す・動かす・ひっくり返す 練習をします。失敗しても大丈夫。何度でも試せます。"
   },
   {
-    "objectID": "research/mountain-generator/index.html#霧は何をしている",
-    "href": "research/mountain-generator/index.html#霧は何をしている",
-    "title": "山は、数式でできている。",
-    "section": "7. 霧は何をしている？",
-    "text": "7. 霧は何をしている？\n遠くの山ほど、背景に近い色になり、輪郭が淡くなる。\nこうした奥行きの表現を大気遠近法（たいきえんきんほう）といいます。\n霧は、山の形そのものを変えません。\n変えているのは、山の見え方です。\n同じ3本の山でも、色の重なり方を変えるだけで、ずいぶん違う風景になります。\nもちろん、霧の濃さはパズルの成績とは無関係です。"
+    "objectID": "experimental/gesture-tutorial/index.html#できたらパズルに挑戦",
+    "href": "experimental/gesture-tutorial/index.html#できたらパズルに挑戦",
+    "title": "まずは遊んでみよう！",
+    "section": "できたら、パズルに挑戦！ 🎉",
+    "text": "できたら、パズルに挑戦！ 🎉\nまずは 初心者（白帯） から。うまくいかなくても、ゆっくりで大丈夫です。\nパズルで遊ぶ · 📖 くわしい遊び方： 日本語 / English"
   },
   {
-    "objectID": "research/mountain-generator/index.html#おわりに",
-    "href": "research/mountain-generator/index.html#おわりに",
-    "title": "山は、数式でできている。",
-    "section": "おわりに",
-    "text": "おわりに\nひとつの波から始めて、3つの波を足してみる。\nできた輪郭を3本重ねて、色をつける。\nそこに、パズル番号から生まれた疑似乱数と、少しの霧を加える。\nすると、数式から風景が生まれました。\nもちろん、これは地質学的な山のシミュレーションではありません。\n数式を使った、ちょっと不思議な風景のデザインです。\nゴマス村の山は、今日も計算されています。🌄\nひみつの実験室では、こうした発見をゲームの背景に応用できるか試しています（UI facelift issue #81）。\n役に立つかどうかは、調べてから考えよう。 🌈"
+    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html",
+    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html",
+    "title": "How to Play Pentomino",
+    "section": "",
+    "text": "Five little squares. So many possible shapes. And one very important question: where does this piece go?\nPentomino is a puzzle about finding the right place and the right orientation for each piece. Sometimes a piece needs a little turn. Sometimes it needs a flip. And sometimes it seems determined to be difficult. 😆\nThis guide is here when you need a hand. You don’t have to read it all before playing. Jump to whatever you’re curious about.\n\n\n\n\n\n\nWould you rather try it than read about it?\n\n\n\nHead over to Let’s Play! — Gesture Practice to practice tapping, dragging, and flicking with a piece. The interactive tutorial is currently in Japanese.\n\n\n\n\nJust three gestures to get you started!\nTap, draaaag, flick! Master these three moves, and you’re ready to play.\n\n\nTap a piece that hasn’t been placed on the board to rotate it 90° counterclockwise.\nNot quite the right angle? Tap again. And again. Round it goes!\n\n\n\nTouch and hold a piece, then drag it slowly to move it around.\n\nRed outline: You’ve got hold of the piece!\nBlue outline: Here’s a spot where it can go!\nRelease your finger: Place the piece there.\n\nBring the piece near a valid spot on the board, and it’ll snap right into position.\nBut there’s one little catch!\nBlue doesn’t mean you’ve solved it!\nIt simply means the piece fits in that spot. You can check whether it’s the correct placement later.\n\n\n\nGrab a piece, then give it a quick flick and release your finger!\nThe piece flips like a mirror image.\n\n\n\nFlick direction\nWhat happens\n\n\n\n\n← Left or → Right\nFlip horizontally (mirror left to right)\n\n\n↑ Up or ↓ Down\nFlip vertically (mirror top to bottom)\n\n\n\nDon’t worry! Your piece won’t go flying off the screen. 😄\nIt flips right where you release it.\n\n\n\n\n\n\nDrag or flick? What’s the difference?\n\n\n\nIt’s all about speed when you release your finger!\nDrag slowly to move a piece. Flick quickly to flip it.\nIf the app keeps mistaking one for the other, try adjusting the gesture sensitivity under the gear icon ⚙️.\nThe default threshold is 70 mm/second.\n\n\n\nTap to rotate. Drag to move. Flick to flip!\nThree little moves. A whole world of puzzles! 🧩\n\n\n\n\nPentomino has three difficulty modes. No need to earn a black belt on your first day!\n\n\nPractice picking up, moving, and placing pieces.\nThe pieces are presented in placement order, with their orientations already set correctly. You can concentrate on getting comfortable with the controls.\nBest place to start if you’re new.\n\n\n\nPractice rotating and flipping pieces into position.\nThe pieces still appear in placement order, but this time their orientations aren’t prepared for you. You’ll need your tap and flick skills!\n\n\n\nFigure out the solution for yourself.\nThe pieces appear in alphabetical order, and their orientations aren’t preset. You’ll decide which piece goes where — and how it should face.\n\n\n\n\n\n\nYou can change belts whenever you like\n\n\n\nYour progress is saved separately for each belt. Switch modes to suit your mood without losing your place in the others.\n\n\n\n\n\n\n\n\nTap Check to see whether your placed pieces are correct.\nThere’s no point deduction if everything you’ve placed is correct. Incorrect placements, however, may cost points.\n\n\n\nSometimes the pieces simply refuse to cooperate. That’s what Hint is for.\nWhen you request a hint, the app first checks the board and removes incorrectly placed pieces. Then it places one remaining piece in its correct position, working backward from the end of the solution’s placement order.\nThe point deduction covers the number of incorrectly placed pieces plus one hint. Helpful? Absolutely. Free? Not quite! 😉\n\n\n\n\nThere are 10 levels, L1 through L10, with 2,339 puzzles altogether. That’s enough to keep even a dedicated puzzle fan busy for a while.\nUse the ← and → buttons to move between puzzles:\n\nTap: move one puzzle at a time.\nHold for at least 1 second: move by 10 puzzles, roughly every 0.3 seconds.\nKeep holding beyond 3 seconds: move by 100 puzzles, roughly every 0.3 seconds.\n\nPuzzle numbers stay within the range 1–2,339.\n\n\n\n\n\nLevel\nPuzzle numbers\nNumber of puzzles\n\n\n\n\nL1\n1–7\n7\n\n\nL2\n8–40\n33\n\n\nL3\n41–156\n116\n\n\nL4\n157–395\n239\n\n\nL5\n396–668\n273\n\n\nL6\n669–1145\n477\n\n\nL7\n1146–1684\n539\n\n\nL8\n1685–2124\n440\n\n\nL9\n2125–2308\n184\n\n\nL10\n2309–2339\n31\n\n\nTotal\n\n2,339\n\n\n\n\n\n\n\nTap the gear icon at the top of the screen to open Settings. You can also press and hold the puzzle title.\nLanguage: Choose from Japanese, English, Spanish, French, German, Korean, Simplified Chinese, or Traditional Chinese. The instructions change to match your selection.\nCompletion sound: Turn the sound played when you finish a puzzle on or off.\nPlacement feedback: Depending on your device, the app uses either vibration or sound to signal a placement — not both at once.\nDifficulty and history: Progress is stored separately for each belt. Clear History removes the record for the currently selected belt only. Make sure that’s what you want before clearing it.\nSensitivity: Adjust the threshold that separates a swipe from a flick, along with the duration or strength of placement feedback.\n\n\n\nThere’s a reason the pieces arrive in a particular order in White and Yellow Belt modes.\nWhen the app constructs a solution, it fills available spaces beginning at the top left, moving through a column before proceeding to the right. The beginner modes follow that placement order to help you learn.\nSo yes, there is a method to the madness. Your puzzle pieces aren’t entirely making it up as they go!\n\n\n\nIf your first attempt looks like a pile of misplaced shapes, you’re in good company.\nRemember the three moves: tap to rotate, swipe to move, flick to flip.\nThen experiment. Try another angle. Ask for a hint if you need one. Most importantly, have fun discovering where those five-square pieces belong. 🧩\n\n\n\n\n\n\nAbout this guide\n\n\n\nThis is a friendlier English adaptation of the current Japanese app instructions. Features, controls, and scoring details may change between app versions. The interactive gesture tutorial linked above is a separate prototype and may not perfectly match the app’s gesture sensitivity."
+  },
+  {
+    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#three-little-moves-to-master",
+    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#three-little-moves-to-master",
+    "title": "How to Play Pentomino",
+    "section": "",
+    "text": "Just three gestures to get you started!\nTap, draaaag, flick! Master these three moves, and you’re ready to play.\n\n\nTap a piece that hasn’t been placed on the board to rotate it 90° counterclockwise.\nNot quite the right angle? Tap again. And again. Round it goes!\n\n\n\nTouch and hold a piece, then drag it slowly to move it around.\n\nRed outline: You’ve got hold of the piece!\nBlue outline: Here’s a spot where it can go!\nRelease your finger: Place the piece there.\n\nBring the piece near a valid spot on the board, and it’ll snap right into position.\nBut there’s one little catch!\nBlue doesn’t mean you’ve solved it!\nIt simply means the piece fits in that spot. You can check whether it’s the correct placement later.\n\n\n\nGrab a piece, then give it a quick flick and release your finger!\nThe piece flips like a mirror image.\n\n\n\nFlick direction\nWhat happens\n\n\n\n\n← Left or → Right\nFlip horizontally (mirror left to right)\n\n\n↑ Up or ↓ Down\nFlip vertically (mirror top to bottom)\n\n\n\nDon’t worry! Your piece won’t go flying off the screen. 😄\nIt flips right where you release it.\n\n\n\n\n\n\nDrag or flick? What’s the difference?\n\n\n\nIt’s all about speed when you release your finger!\nDrag slowly to move a piece. Flick quickly to flip it.\nIf the app keeps mistaking one for the other, try adjusting the gesture sensitivity under the gear icon ⚙️.\nThe default threshold is 70 mm/second.\n\n\n\nTap to rotate. Drag to move. Flick to flip!\nThree little moves. A whole world of puzzles! 🧩"
+  },
+  {
+    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#choose-your-belt",
+    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#choose-your-belt",
+    "title": "How to Play Pentomino",
+    "section": "",
+    "text": "Pentomino has three difficulty modes. No need to earn a black belt on your first day!\n\n\nPractice picking up, moving, and placing pieces.\nThe pieces are presented in placement order, with their orientations already set correctly. You can concentrate on getting comfortable with the controls.\nBest place to start if you’re new.\n\n\n\nPractice rotating and flipping pieces into position.\nThe pieces still appear in placement order, but this time their orientations aren’t prepared for you. You’ll need your tap and flick skills!\n\n\n\nFigure out the solution for yourself.\nThe pieces appear in alphabetical order, and their orientations aren’t preset. You’ll decide which piece goes where — and how it should face.\n\n\n\n\n\n\nYou can change belts whenever you like\n\n\n\nYour progress is saved separately for each belt. Switch modes to suit your mood without losing your place in the others."
+  },
+  {
+    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#a-little-help-when-youre-stuck",
+    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#a-little-help-when-youre-stuck",
+    "title": "How to Play Pentomino",
+    "section": "",
+    "text": "Tap Check to see whether your placed pieces are correct.\nThere’s no point deduction if everything you’ve placed is correct. Incorrect placements, however, may cost points.\n\n\n\nSometimes the pieces simply refuse to cooperate. That’s what Hint is for.\nWhen you request a hint, the app first checks the board and removes incorrectly placed pieces. Then it places one remaining piece in its correct position, working backward from the end of the solution’s placement order.\nThe point deduction covers the number of incorrectly placed pieces plus one hint. Helpful? Absolutely. Free? Not quite! 😉"
+  },
+  {
+    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#pick-a-puzzle-2339-to-explore",
+    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#pick-a-puzzle-2339-to-explore",
+    "title": "How to Play Pentomino",
+    "section": "",
+    "text": "There are 10 levels, L1 through L10, with 2,339 puzzles altogether. That’s enough to keep even a dedicated puzzle fan busy for a while.\nUse the ← and → buttons to move between puzzles:\n\nTap: move one puzzle at a time.\nHold for at least 1 second: move by 10 puzzles, roughly every 0.3 seconds.\nKeep holding beyond 3 seconds: move by 100 puzzles, roughly every 0.3 seconds.\n\nPuzzle numbers stay within the range 1–2,339.\n\n\n\n\n\nLevel\nPuzzle numbers\nNumber of puzzles\n\n\n\n\nL1\n1–7\n7\n\n\nL2\n8–40\n33\n\n\nL3\n41–156\n116\n\n\nL4\n157–395\n239\n\n\nL5\n396–668\n273\n\n\nL6\n669–1145\n477\n\n\nL7\n1146–1684\n539\n\n\nL8\n1685–2124\n440\n\n\nL9\n2125–2308\n184\n\n\nL10\n2309–2339\n31\n\n\nTotal\n\n2,339"
+  },
+  {
+    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#whats-behind-the-gear-icon",
+    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#whats-behind-the-gear-icon",
+    "title": "How to Play Pentomino",
+    "section": "",
+    "text": "Tap the gear icon at the top of the screen to open Settings. You can also press and hold the puzzle title.\nLanguage: Choose from Japanese, English, Spanish, French, German, Korean, Simplified Chinese, or Traditional Chinese. The instructions change to match your selection.\nCompletion sound: Turn the sound played when you finish a puzzle on or off.\nPlacement feedback: Depending on your device, the app uses either vibration or sound to signal a placement — not both at once.\nDifficulty and history: Progress is stored separately for each belt. Clear History removes the record for the currently selected belt only. Make sure that’s what you want before clearing it.\nSensitivity: Adjust the threshold that separates a swipe from a flick, along with the duration or strength of placement feedback."
+  },
+  {
+    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#a-peek-behind-the-puzzle",
+    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#a-peek-behind-the-puzzle",
+    "title": "How to Play Pentomino",
+    "section": "",
+    "text": "There’s a reason the pieces arrive in a particular order in White and Yellow Belt modes.\nWhen the app constructs a solution, it fills available spaces beginning at the top left, moving through a column before proceeding to the right. The beginner modes follow that placement order to help you learn.\nSo yes, there is a method to the madness. Your puzzle pieces aren’t entirely making it up as they go!"
+  },
+  {
+    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#ready-to-give-it-a-go",
+    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_en.html#ready-to-give-it-a-go",
+    "title": "How to Play Pentomino",
+    "section": "",
+    "text": "If your first attempt looks like a pile of misplaced shapes, you’re in good company.\nRemember the three moves: tap to rotate, swipe to move, flick to flip.\nThen experiment. Try another angle. Ask for a hint if you need one. Most importantly, have fun discovering where those five-square pieces belong. 🧩\n\n\n\n\n\n\nAbout this guide\n\n\n\nThis is a friendlier English adaptation of the current Japanese app instructions. Features, controls, and scoring details may change between app versions. The interactive gesture tutorial linked above is a separate prototype and may not perfectly match the app’s gesture sensitivity."
+  },
+  {
+    "objectID": "experimental/celebration/how-it-works.html",
+    "href": "experimental/celebration/how-it-works.html",
+    "title": "お祝いのしくみ",
+    "section": "",
+    "text": "← お祝いシミュレーターに戻る"
+  },
+  {
+    "objectID": "experimental/celebration/how-it-works.html#まずは４つのお祝い",
+    "href": "experimental/celebration/how-it-works.html#まずは４つのお祝い",
+    "title": "お祝いのしくみ",
+    "section": "まずは、４つのお祝い",
+    "text": "まずは、４つのお祝い\nシミュレーターでは、Hint を使ったか？ と Check を使ったか？ の２つを見ています。\n\n\n\n\n\n\n\n\n\nHint\nCheck\nお祝いのことば\n登場するもの\n\n\n\n\n0\n0\nひらめいた！\n🍬 キャンディが大サービス（46個）\n\n\n1回以上\n0\n助けてもらって、できた！\n🐛 いもむし + キャンディ（20個）\n\n\n0\n1回以上\nたしかめながら、できた！\n🦋 ちょうちょ + キャンディ（20個）\n\n\n1回以上\n1回以上\nじっくり、できた！\n🐛 いもむし + 🦋 ちょうちょ + キャンディ（20個）\n\n\n\nどの組み合わせでも「完成おめでとう！」 という気持ちは同じ。ヒントやチェックを使ったからといって、失敗ではありません。"
+  },
+  {
+    "objectID": "experimental/celebration/how-it-works.html#javascript-はどうやって決めるの",
+    "href": "experimental/celebration/how-it-works.html#javascript-はどうやって決めるの",
+    "title": "お祝いのしくみ",
+    "section": "JavaScript はどうやって決めるの？",
+    "text": "JavaScript はどうやって決めるの？\n次の図は、assets/js/celebration.js の celebrate() が行っている分岐を、読みやすくしたものです。\n\n\n\n\n\nflowchart TD\n    A[\"🎉 完成ボタンを押す\"] --&gt; B{\"Hint は 1回以上？\"}\n    B --&gt;|いいえ| C{\"Check は 1回以上？\"}\n    B --&gt;|はい| D{\"Check は 1回以上？\"}\n    C --&gt;|いいえ| E[\"🍬 ひらめいた！&lt;br/&gt;キャンディ 46個\"]\n    C --&gt;|はい| F[\"🦋 たしかめながら、できた！&lt;br/&gt;ちょうちょ + キャンディ 20個\"]\n    D --&gt;|いいえ| G[\"🐛 助けてもらって、できた！&lt;br/&gt;いもむし + キャンディ 20個\"]\n    D --&gt;|はい| H[\"🐛🦋 じっくり、できた！&lt;br/&gt;両方 + キャンディ 20個\"]\n    classDef decision fill:#fff5e9,stroke:#c69c83,color:#34302e\n    classDef result fill:#f3f7f0,stroke:#7a9e8c,color:#34302e\n    class B,C,D decision\n    class E,F,G,H result\n\n\n\n\n\n\nここで大事なのは、回数そのものではなく、0回か1回以上かでメッセージが決まること。たとえば Hint が1回でも8回でも、Check が0回なら「助けてもらって、できた！」になります。\nコードの中心は、こんな考え方です。\nconst perfect = hints === 0 && checks === 0;\n\nconst messageKey = perfect\n  ? \"brilliant\"\n  : hints &gt; 0 && checks &gt; 0\n  ? \"both\"\n  : hints &gt; 0\n  ? \"caterpillars\"\n  : \"butterflies\";\nこれは理解のために変数名を読みやすくした抜粋です。実際のコードでは h、c、key という名前を使っています。"
+  },
+  {
+    "objectID": "experimental/celebration/how-it-works.html#ことばと演出は別々に決まる",
+    "href": "experimental/celebration/how-it-works.html#ことばと演出は別々に決まる",
+    "title": "お祝いのしくみ",
+    "section": "ことばと演出は、別々に決まる",
+    "text": "ことばと演出は、別々に決まる\n「どのことばを表示するか」を決めたあと、JavaScript は演出を作ります。\n\nHint が1回以上 → 地面にいもむしが登場。最大5匹まで表示し、それ以上は +3 のように残りの数を示します。\nCheck が1回以上 → 空中にちょうちょが登場。こちらも最大5匹まで描画します。\nHint も Check も0回 → キャンディの数が20個から46個に増えます。\nどの場合も → キャンディの色は12人のペントミノの色から選ばれます。\n\n\n\n\n\n\n\nレベルを変えると？\n\n\n\nレベルはメッセージを変えません。キャンディの形の種類を変えます。\n\n\n\nレベル\nキャンディの形\n\n\n\n\n1–3\n四角\n\n\n4–6\n四角・丸\n\n\n7–8\n四角・丸・ひし形\n\n\n9–10\n四角・丸・ひし形・キャンディ型"
+  },
+  {
+    "objectID": "experimental/celebration/how-it-works.html#最後に置いたピースは",
+    "href": "experimental/celebration/how-it-works.html#最後に置いたピースは",
+    "title": "お祝いのしくみ",
+    "section": "最後に置いたピースは？",
+    "text": "最後に置いたピースは？\n「最後に置いたピース」を選ぶと、画面中央の五マスのキャラクターが変わります。\nJavaScript は5つの正方形をSVGで描き、その上に小さな目と口をつけます。色と名前は data/characters.json から読み込みます。つまり、キャラクターを選んでも Hint × Check の判定は変わりません。"
+  },
+  {
+    "objectID": "experimental/celebration/how-it-works.html#ことばはどこに書いてある",
+    "href": "experimental/celebration/how-it-works.html#ことばはどこに書いてある",
+    "title": "お祝いのしくみ",
+    "section": "ことばはどこに書いてある？",
+    "text": "ことばはどこに書いてある？\nお祝いの日本語と英語は、JavaScript の中に直接書き込むのではなく、data/celebration.json にまとめています。\n\"brilliant\": {\n  \"ja\": \"ひらめいた！\",\n  \"en\": \"Brilliant!\"\n}\nJavaScript が brilliant などのメッセージキーを選び、選択中の言語に対応する文章を取り出します。翻訳がない場合は、設定された英語の文章にフォールバックします。"
+  },
+  {
+    "objectID": "experimental/celebration/how-it-works.html#ファイルたちの役割",
+    "href": "experimental/celebration/how-it-works.html#ファイルたちの役割",
+    "title": "お祝いのしくみ",
+    "section": "ファイルたちの役割",
+    "text": "ファイルたちの役割\n\n\n\n\n\nflowchart TB\n    Q[\"index.qmd&lt;br/&gt;画面・操作パネル\"] --&gt; J[\"celebration.js&lt;br/&gt;条件を判断して絵を作る\"]\n    M[\"celebration.json&lt;br/&gt;ことば・設定\"] --&gt; J\n    C[\"characters.json&lt;br/&gt;12人の名前・色\"] --&gt; J\n    J --&gt; V[\"画面のキャラクター・ことば・演出\"]\n    S[\"celebration.css&lt;br/&gt;見た目・アニメーション\"] --&gt; V\n    classDef data fill:#fff2df,stroke:#c7a178,color:#34302e\n    classDef code fill:#e9f3f4,stroke:#7da8ac,color:#34302e\n    classDef view fill:#f1edf9,stroke:#9d91ba,color:#34302e\n    class M,C data\n    class J code\n    class Q,S,V view\n\n\n\n\n\n\n\n\n\nファイル\nひとことで言うと\n\n\n\n\nexperimental/celebration/index.qmd\nシミュレーターの画面を用意する\n\n\nassets/js/celebration.js\n入力を読み、条件を判断し、絵とことばを表示する\n\n\ndata/celebration.json\n日本語・英語の文章や表示上限を保存する\n\n\ndata/characters.json\n12人の色と名前を保存する\n\n\nassets/css/celebration.css\n配置、重なり順、動きを決める"
+  },
+  {
+    "objectID": "experimental/celebration/how-it-works.html#もう一回を押すと",
+    "href": "experimental/celebration/how-it-works.html#もう一回を押すと",
+    "title": "お祝いのしくみ",
+    "section": "「もう一回！」を押すと？",
+    "text": "「もう一回！」を押すと？\n「完成！」と「もう一回！」は、どちらも celebrate() を呼び出します。現在の設定を読み直し、前の演出を消して、新しいキャンディやちょうちょを作り直します。\n一方、スライダーやキャラクターを変更したときは、いったんプレビューをリセットします。新しい設定で「完成！」を押してみてください。"
+  },
+  {
+    "objectID": "experimental/celebration/how-it-works.html#次の実験は",
+    "href": "experimental/celebration/how-it-works.html#次の実験は",
+    "title": "お祝いのしくみ",
+    "section": "次の実験は？ 🌈",
+    "text": "次の実験は？ 🌈\n実験003：五マスのにじ では、Hint も Check も使わずに完成したとき、５色の虹をキャラクターの後ろに出すアイデアを探っています。これはまだこの実験002には入っていません。\n\n🎉 お祝いシミュレーターで遊ぶ\n← ひみつの実験室へ"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "このサイトについて",
+    "section": "",
+    "text": "ABOUT THIS LITTLE PROJECT\n\n\n\nむかしむかし、といっても、そんなに昔ではないころ。\n父が、木でペントミノのパズルを作りました。\n5つの四角をつなげた、12種類のピース。\n妹と私は、そのパズルで遊びながら育ちました。\n遊ぶのは楽しい。\nでも、ひとつ問題がありました。\nきれいに並べて、しまえない。\nあと一つなのに、入らない。\nこっちを動かすと、あっちが入らない。\n結局、いつも一つだけ、盤の上にちょこんと乗っかっていました。\n片づいているような、片づいていないような。\nでも、それが我が家では普通の光景でした。\nどうやら、これが我が家の正解だったようです。\n\n\nその後、母がペントミノを陶器で作りました。\n今度は、小さなアート作品です。\nさらに時がたち、父は3Dプリンターでもペントミノを作りました。\n木になっても、陶器になっても、プラスチックになっても。\n形は、やっぱり同じ12種類。\nそして、問題も同じでした。\nやっぱり、きれいにしまえない。\nペントミノは、なかなか手ごわいのです。\n\n\n\nそこで父は考えました。\nちゃんと片づけられるように、解答集を作ろうか。\nでも、答えをそのまま見せてしまったら、パズルの楽しさがなくなってしまう。\n自分で考えて、試して、やっと最後の一つが収まる。\nその瞬間こそが、面白いのです。\nだったら、答えではなく、ヒントをあげたらどうだろう？\nそうして生まれたのが、\n\n\nAmazonで本を見る ↗\n答えを教えるのではなく、答えにたどり着く楽しさを残すための本です。\n\n\n\n\nそんなペントミノを、今度は少し違う角度から眺めてみました。\nまっすぐな人。\n曲がった人。\n角が好きな人。\nちょっと、はみ出す人。\n同じ5つの四角なのに、なんだか性格が違うように見えてきます。\n気づいたら、12種類の形に、12人分の名前がついていました。\n父はパズルの解き方を考えています。\n私は、パズルの住人たちのことを考えています。\nどちらも、同じ5つの四角から始まりました。\n\n\n\n12人の仲間たちに会ったり、形を回したり、ひっくり返したり。\nどうして向きの種類が違うのか。\nどうして同じ形に見えるのか。\nどうやったら、みんなで60マスの長方形に収まるのか。\n数学のふしぎを、遊びながら少しずつ探していきます。\nちなみに、形とマス目の数は本物です。\n名前と性格は、創作です。\n本人たちに確認は取っていません。\n12人に会う →\n\n\nFIVE SQUARES. TWELVE PERSONALITIES.\n\n何十年たっても、まだ遊べる。\n今度こそ、12人全員、きれいに収まるでしょうか。\nそれとも、また誰かが一人だけ、外にいるのでしょうか。"
+  },
+  {
+    "objectID": "about.html#木から陶器へそして3dプリントへ",
+    "href": "about.html#木から陶器へそして3dプリントへ",
+    "title": "このサイトについて",
+    "section": "",
+    "text": "その後、母がペントミノを陶器で作りました。\n今度は、小さなアート作品です。\nさらに時がたち、父は3Dプリンターでもペントミノを作りました。\n木になっても、陶器になっても、プラスチックになっても。\n形は、やっぱり同じ12種類。\nそして、問題も同じでした。\nやっぱり、きれいにしまえない。\nペントミノは、なかなか手ごわいのです。"
+  },
+  {
+    "objectID": "about.html#答えを教えるだけじゃつまらない",
+    "href": "about.html#答えを教えるだけじゃつまらない",
+    "title": "このサイトについて",
+    "section": "",
+    "text": "そこで父は考えました。\nちゃんと片づけられるように、解答集を作ろうか。\nでも、答えをそのまま見せてしまったら、パズルの楽しさがなくなってしまう。\n自分で考えて、試して、やっと最後の一つが収まる。\nその瞬間こそが、面白いのです。\nだったら、答えではなく、ヒントをあげたらどうだろう？\nそうして生まれたのが、\n\n\nAmazonで本を見る ↗\n答えを教えるのではなく、答えにたどり着く楽しさを残すための本です。"
+  },
+  {
+    "objectID": "about.html#そして12人が生まれました",
+    "href": "about.html#そして12人が生まれました",
+    "title": "このサイトについて",
+    "section": "",
+    "text": "そんなペントミノを、今度は少し違う角度から眺めてみました。\nまっすぐな人。\n曲がった人。\n角が好きな人。\nちょっと、はみ出す人。\n同じ5つの四角なのに、なんだか性格が違うように見えてきます。\n気づいたら、12種類の形に、12人分の名前がついていました。\n父はパズルの解き方を考えています。\n私は、パズルの住人たちのことを考えています。\nどちらも、同じ5つの四角から始まりました。"
+  },
+  {
+    "objectID": "about.html#このサイトでできること",
+    "href": "about.html#このサイトでできること",
+    "title": "このサイトについて",
+    "section": "",
+    "text": "12人の仲間たちに会ったり、形を回したり、ひっくり返したり。\nどうして向きの種類が違うのか。\nどうして同じ形に見えるのか。\nどうやったら、みんなで60マスの長方形に収まるのか。\n数学のふしぎを、遊びながら少しずつ探していきます。\nちなみに、形とマス目の数は本物です。\n名前と性格は、創作です。\n本人たちに確認は取っていません。\n12人に会う →\n\n\nFIVE SQUARES. TWELVE PERSONALITIES.\n\n何十年たっても、まだ遊べる。\n今度こそ、12人全員、きれいに収まるでしょうか。\nそれとも、また誰かが一人だけ、外にいるのでしょうか。"
+  },
+  {
+    "objectID": "characters/index.html",
+    "href": "characters/index.html",
+    "title": "12人の仲間たち",
+    "section": "",
+    "text": "MEET THE PENTOMINOES · THE CAST OF TWELVE\n\n\n\nみんな、5つの四角でできています。\nまっすぐな人。曲がった人。\nちょっとはみ出す人。真ん中が好きな人。\n形も性格も、いろいろです。\n本人たちは、いたって普通のつもりです。\n\n12人とも、面積は同じ。 でも、向きを変えたり、ひっくり返したりすると……？\n\n\n↻ ⇋ ボタンを押して、くるくる、ひっくり返してみてください。\n\n\n\n12人を呼んでいます…\n\n\n\n\nA SMALL OBSERVATION\n\n\n\n同じ5マスなのに、向きの種類は人それぞれ。\n8通りの人もいれば、4通りの人も。\n2通りの人もいます。\nそして、Xおじさんは1通り。\n回っても、回っても、同じ形。\n本人は、ちゃんと回っています。\n\n\n← ホームに戻る"
+  },
+  {
+    "objectID": "characters/index.html#回っても変わらない人がいます",
+    "href": "characters/index.html#回っても変わらない人がいます",
+    "title": "12人の仲間たち",
+    "section": "",
+    "text": "同じ5マスなのに、向きの種類は人それぞれ。\n8通りの人もいれば、4通りの人も。\n2通りの人もいます。\nそして、Xおじさんは1通り。\n回っても、回っても、同じ形。\n本人は、ちゃんと回っています。"
+  },
+  {
+    "objectID": "experimental/celebration/index.html",
+    "href": "experimental/celebration/index.html",
+    "title": "お祝いシミュレーター",
+    "section": "",
+    "text": "🧪 SECRET LAB · EXPERIMENT 002ピースと遊び方で、お祝いが変わる。みんな、完成おめでとう！\n  \n    \n      ことば日本語English\n      最後に置いたピース\n      レベル1\n      Hint 回数0\n      Check 回数0\n      🎉 完成！\n      もう一回！\n      これは試作品です。実際のゲームとは接続していません。\n    \n    \n      \n      どんなお祝いになるかな？\n      \n      \n      \n      \n    \n  \n\n\n📖 お祝いのしくみを見る"
+  },
+  {
+    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html",
+    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html",
+    "title": "Pentominoの遊び方",
+    "section": "",
+    "text": "形も向きも、ちょっとずつ違うピースたち。うまく収まる場所を探して、パズルを完成させましょう。\n「どこに置けばいいの？」「回したいのに動いちゃった！」——そんなときのための遊び方ガイドです。最初から全部読む必要はありません。困ったところだけ、のぞいてみてください。\n\n\n\n\n\n\n読むより先に、さわってみたい？\n\n\n\nまずは遊んでみよう！ で、タップ・スワイプ・フリックを練習できます。\n\n\n\n\nペントミノの基本操作は、たったの３つ！\nトン・すーっと・シュッ！ この３つを覚えれば、準備はばっちりです。\n\n\nまだ盤面にはめていないピースをトンッとタップ！\nピースが反時計回りに90度、くるっと回転します。\n一度で向きが合わなければ、もう一度。\nくるっ、くるっ。何度でも回してみましょう！\n\n\n\nピースに指を置いたまま、すーっと動かす。これがドラッグです。\n\n赤い輪郭：ピースをつかんでいるよ！\n青い輪郭：ここなら置けるよ！\n指を離す：その場所にピースを置きます。\n\nピースが置ける場所に近づくと、ピタッと吸い寄せられます。\nただし、ここでひとつ注意！\n青い輪郭＝正解！ ではありません。\n青は「ここに置けるよ」の合図。正解かどうかは、あとでチェックしてみましょう。\n\n\n\nピースをつかんで、シュッとすばやく払って指を離す！\nこれがフリック。ピースが鏡に映ったように、ぱたんと裏返ります。\n\n\n\n指の動き\nピースの変化\n\n\n\n\n← または → にシュッ！\n左右反転\n\n\n↑ または ↓ にシュッ！\n上下反転\n\n\n\n大丈夫。ピースが画面の外まで飛んでいくわけではありません。😄\n指を離した場所で、ぱたんと反転します。\n\nトンで回転。すーっと移動。シュッで反転！\nさあ、３つの指ワザを使って、ペントミノに挑戦してみましょう！ 🧩\n\n\n\n\n\n\nドラッグとフリック、どう違うの？\n\n\n\n違いは、指を離すときの速さ！\nゆっくり動かせばドラッグ（移動）、シュッと払えばフリック（反転） です。\nうまく区別されないときは、歯車マーク ⚙️ の「感度調整」を試してみてください。\n初期設定では、70 mm/秒 が判定の境目です。\n\n\n\n\n\n\nPentominoには、３つの難易度があります。最初から黒帯に挑む必要はありません！\n\n\nピースを動かして、はめる練習。\nピースは置く順番に並び、向きも最初から合っています。まずは「つかむ」「運ぶ」「置く」に慣れましょう。はじめての人におすすめです。\n\n\n\n回転と反転を使って、向きを合わせる練習。\nピースの順番は白帯と同じですが、向きはそろっていません。タップやフリックの出番です。\n\n\n\n自分で考えて、パズルを解きます。\nピースはアルファベット順で、向きもそろっていません。どこに何を置くか、腕の見せどころです。\n\n\n\n\n\n\n途中で帯を変えても大丈夫\n\n\n\n白帯・黄帯・黒帯の途中経過は別々に保存されます。気分に合わせて切り替えてください。\n\n\n\n\n\n\n\n\n今置いているピースが正しいかどうかを調べます。自信がなくなったら、遠慮なくチェック！\n正しく置けていれば減点されません。 ただし、間違いがある場合は減点の対象になります。\n\n\n\nどうしても先に進めないときは、ヒントを使いましょう。\nヒントを押すと、まず検査が行われ、間違った配置が取り除かれます。その後、まだ置いていないピースのうち、解答の後ろ側から順に１つを正しい場所へ置いてくれます。\n間違っていたピースの数＋ヒント１回分が減点されます。頼れる助っ人ですが、ちょっぴり代償もあります。\n\n\n\n\n問題は L1〜L10 の10レベル。全部で 2,339問 あります。なかなかの長旅です。😆\n画面の ← → ボタンで問題を切り替えます。\n\nポンと押す： １問ずつ移動\n１秒以上押し続ける： 約0.3秒ごとに10問ずつ移動\n３秒を超えて押し続ける： 約0.3秒ごとに100問ずつ移動\n\n問題番号は１〜2,339の範囲で切り替わります。\n\n\n\n\n\nレベル\n問題番号\n問題数\n\n\n\n\nL1\n1–7\n7\n\n\nL2\n8–40\n33\n\n\nL3\n41–156\n116\n\n\nL4\n157–395\n239\n\n\nL5\n396–668\n273\n\n\nL6\n669–1145\n477\n\n\nL7\n1146–1684\n539\n\n\nL8\n1685–2124\n440\n\n\nL9\n2125–2308\n184\n\n\nL10\n2309–2339\n31\n\n\n合計\n\n2,339\n\n\n\n\n\n\n\n画面上部の歯車マークを押すと、設定が開きます。パズル名を長押ししても開けます。\n言語： 日本語、English、Español、Français、Deutsch、한국어、简体中文、繁體中文の８言語から選べます。説明文も選んだ言語に切り替わります。\n完成の音： 完成時の音をオン・オフできます。\nはめ込みの合図： 機種によって振動か音のどちらかで知らせます。両方同時には鳴りません。\n難易度と履歴： 帯ごとに進み具合が保存されます。「履歴を消す」を押すと、その帯の記録だけを消せます。消す前に確認しましょう。\n感度調整： スワイプとフリックの判定の境目や、はめ込みの合図の長さ・強さを調整できます。\n\n\n\nこのアプリでは、解答を組み立てるとき、左上から順に空いた場所を埋めていきます。その列が埋まったら、右へ進みます。\n白帯と黄帯のピースが「置く順番」に並んでいるのは、この仕組みに合わせているから。ちゃんと理由があるんです。\n\n\n\n最初はピースが言うことを聞いてくれなくても、大丈夫。\nポン、すいっ、シュッ。 ３つの指ワザを覚えたら、あとは少しずつ。\nさあ、Pentominoの世界で遊んでみましょう！ 🧩\n\n\n\n\n\n\nこのガイドについて\n\n\n\nこのページは現行のアプリ説明をもとに、初めて遊ぶ人にも読みやすいよう書き直したものです。操作や採点の詳細は、アプリのバージョンによって変わる場合があります。"
+  },
+  {
+    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#まず覚えたい３つの指ワザ",
+    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#まず覚えたい３つの指ワザ",
+    "title": "Pentominoの遊び方",
+    "section": "",
+    "text": "ペントミノの基本操作は、たったの３つ！\nトン・すーっと・シュッ！ この３つを覚えれば、準備はばっちりです。\n\n\nまだ盤面にはめていないピースをトンッとタップ！\nピースが反時計回りに90度、くるっと回転します。\n一度で向きが合わなければ、もう一度。\nくるっ、くるっ。何度でも回してみましょう！\n\n\n\nピースに指を置いたまま、すーっと動かす。これがドラッグです。\n\n赤い輪郭：ピースをつかんでいるよ！\n青い輪郭：ここなら置けるよ！\n指を離す：その場所にピースを置きます。\n\nピースが置ける場所に近づくと、ピタッと吸い寄せられます。\nただし、ここでひとつ注意！\n青い輪郭＝正解！ ではありません。\n青は「ここに置けるよ」の合図。正解かどうかは、あとでチェックしてみましょう。\n\n\n\nピースをつかんで、シュッとすばやく払って指を離す！\nこれがフリック。ピースが鏡に映ったように、ぱたんと裏返ります。\n\n\n\n指の動き\nピースの変化\n\n\n\n\n← または → にシュッ！\n左右反転\n\n\n↑ または ↓ にシュッ！\n上下反転\n\n\n\n大丈夫。ピースが画面の外まで飛んでいくわけではありません。😄\n指を離した場所で、ぱたんと反転します。\n\nトンで回転。すーっと移動。シュッで反転！\nさあ、３つの指ワザを使って、ペントミノに挑戦してみましょう！ 🧩\n\n\n\n\n\n\nドラッグとフリック、どう違うの？\n\n\n\n違いは、指を離すときの速さ！\nゆっくり動かせばドラッグ（移動）、シュッと払えばフリック（反転） です。\nうまく区別されないときは、歯車マーク ⚙️ の「感度調整」を試してみてください。\n初期設定では、70 mm/秒 が判定の境目です。"
+  },
+  {
+    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#どの帯から始める",
+    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#どの帯から始める",
+    "title": "Pentominoの遊び方",
+    "section": "",
+    "text": "Pentominoには、３つの難易度があります。最初から黒帯に挑む必要はありません！\n\n\nピースを動かして、はめる練習。\nピースは置く順番に並び、向きも最初から合っています。まずは「つかむ」「運ぶ」「置く」に慣れましょう。はじめての人におすすめです。\n\n\n\n回転と反転を使って、向きを合わせる練習。\nピースの順番は白帯と同じですが、向きはそろっていません。タップやフリックの出番です。\n\n\n\n自分で考えて、パズルを解きます。\nピースはアルファベット順で、向きもそろっていません。どこに何を置くか、腕の見せどころです。\n\n\n\n\n\n\n途中で帯を変えても大丈夫\n\n\n\n白帯・黄帯・黒帯の途中経過は別々に保存されます。気分に合わせて切り替えてください。"
+  },
+  {
+    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#困ったときのお助けボタン",
+    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#困ったときのお助けボタン",
+    "title": "Pentominoの遊び方",
+    "section": "",
+    "text": "今置いているピースが正しいかどうかを調べます。自信がなくなったら、遠慮なくチェック！\n正しく置けていれば減点されません。 ただし、間違いがある場合は減点の対象になります。\n\n\n\nどうしても先に進めないときは、ヒントを使いましょう。\nヒントを押すと、まず検査が行われ、間違った配置が取り除かれます。その後、まだ置いていないピースのうち、解答の後ろ側から順に１つを正しい場所へ置いてくれます。\n間違っていたピースの数＋ヒント１回分が減点されます。頼れる助っ人ですが、ちょっぴり代償もあります。"
+  },
+  {
+    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#問題を選ぼう全部で2339問",
+    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#問題を選ぼう全部で2339問",
+    "title": "Pentominoの遊び方",
+    "section": "",
+    "text": "問題は L1〜L10 の10レベル。全部で 2,339問 あります。なかなかの長旅です。😆\n画面の ← → ボタンで問題を切り替えます。\n\nポンと押す： １問ずつ移動\n１秒以上押し続ける： 約0.3秒ごとに10問ずつ移動\n３秒を超えて押し続ける： 約0.3秒ごとに100問ずつ移動\n\n問題番号は１〜2,339の範囲で切り替わります。\n\n\n\n\n\nレベル\n問題番号\n問題数\n\n\n\n\nL1\n1–7\n7\n\n\nL2\n8–40\n33\n\n\nL3\n41–156\n116\n\n\nL4\n157–395\n239\n\n\nL5\n396–668\n273\n\n\nL6\n669–1145\n477\n\n\nL7\n1146–1684\n539\n\n\nL8\n1685–2124\n440\n\n\nL9\n2125–2308\n184\n\n\nL10\n2309–2339\n31\n\n\n合計\n\n2,339"
+  },
+  {
+    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#歯車マークの中には何がある",
+    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#歯車マークの中には何がある",
+    "title": "Pentominoの遊び方",
+    "section": "",
+    "text": "画面上部の歯車マークを押すと、設定が開きます。パズル名を長押ししても開けます。\n言語： 日本語、English、Español、Français、Deutsch、한국어、简体中文、繁體中文の８言語から選べます。説明文も選んだ言語に切り替わります。\n完成の音： 完成時の音をオン・オフできます。\nはめ込みの合図： 機種によって振動か音のどちらかで知らせます。両方同時には鳴りません。\n難易度と履歴： 帯ごとに進み具合が保存されます。「履歴を消す」を押すと、その帯の記録だけを消せます。消す前に確認しましょう。\n感度調整： スワイプとフリックの判定の境目や、はめ込みの合図の長さ・強さを調整できます。"
+  },
+  {
+    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#ちょっとだけパズルの裏話",
+    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#ちょっとだけパズルの裏話",
+    "title": "Pentominoの遊び方",
+    "section": "",
+    "text": "このアプリでは、解答を組み立てるとき、左上から順に空いた場所を埋めていきます。その列が埋まったら、右へ進みます。\n白帯と黄帯のピースが「置く順番」に並んでいるのは、この仕組みに合わせているから。ちゃんと理由があるんです。"
+  },
+  {
+    "objectID": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#さいごに",
+    "href": "experimental/gesture-tutorial/gomasu_friendly_guide_ja.html#さいごに",
+    "title": "Pentominoの遊び方",
+    "section": "",
+    "text": "最初はピースが言うことを聞いてくれなくても、大丈夫。\nポン、すいっ、シュッ。 ３つの指ワザを覚えたら、あとは少しずつ。\nさあ、Pentominoの世界で遊んでみましょう！ 🧩\n\n\n\n\n\n\nこのガイドについて\n\n\n\nこのページは現行のアプリ説明をもとに、初めて遊ぶ人にも読みやすいよう書き直したものです。操作や採点の詳細は、アプリのバージョンによって変わる場合があります。"
+  },
+  {
+    "objectID": "experimental/index.html",
+    "href": "experimental/index.html",
+    "title": "ひみつの実験室",
+    "section": "",
+    "text": "🧪 ここは、五マスの世界の実験室。\nお父さんが作ったペントミノの世界に、ちょっとした「もしも」を。\n「こんな動きがあったら？」「こんな演出はどう？」\nそんな思いつきを、まずは小さく作って試してみる場所です。\nお父さんに提案する前に、実物を作って見せちゃおう、という作戦。😏\n採用されるかどうかは、また別の話。\nここにあるものは、公式アプリの新機能ではありません。 あくまで、五マスの世界から生まれた非公式の実験です。"
+  },
+  {
+    "objectID": "experimental/index.html#実験001もっとわかりやすくできるかな",
+    "href": "experimental/index.html#実験001もっとわかりやすくできるかな",
+    "title": "ひみつの実験室",
+    "section": "🔬 実験001：もっとわかりやすくできるかな？",
+    "text": "🔬 実験001：もっとわかりやすくできるかな？\nきっかけ：お母さんが、操作方法でちょっと迷った。\nペントミノは楽しい。でも、遊び方がわからないと、楽しさにたどり着けない。\nだったら、説明を増やすより、実際に触って覚えられる場所を作ってみよう！\n\n🧩 まずは遊んでみよう！\nペントミノのピースを動かす、小さな練習場です。\nタップで、くるっ！ 90度回転。\nドラッグで、すいっ！ 好きな場所へ移動。\nフリックで、ぱたん！ ピースを裏返し。\n👉 ジェスチャーを練習する\n\n\n📖 ペントミノの遊び方\n「白帯」から「黒帯」まで。目指せ、ペントミノ名人！🥋\n操作のコツやヒントの使い方を、ゆっくり紹介します。\n日本語で読む\nRead in English"
+  },
+  {
+    "objectID": "experimental/index.html#実験002クリアしたら何が起こる",
+    "href": "experimental/index.html#実験002クリアしたら何が起こる",
+    "title": "ひみつの実験室",
+    "section": "🎉 実験002：クリアしたら、何が起こる？",
+    "text": "🎉 実験002：クリアしたら、何が起こる？\n状態：🧪 試作公開中\nパズルが完成した！\nさて、五マスの仲間たちはどうやってお祝いする？\nヒントを使ったら、いもむしたちが登場。🐛\n答えをチェックしたら、ちょうちょがひらひら。🦋\nどちらも使わずにクリアしたら、お菓子の紙吹雪が大サービス！ 🍬\n最後にはめたピースや難易度を変えて、いろんな「おめでとう！」を実験してみよう。\n👉 お祝いシミュレーターで遊んでみる\nGitHubで実験の記録を見る"
+  },
+  {
+    "objectID": "experimental/index.html#実験003霧が晴れたらゴマス村",
+    "href": "experimental/index.html#実験003霧が晴れたらゴマス村",
+    "title": "ひみつの実験室",
+    "section": "🌄 実験003：霧が晴れたら、ゴマス村。",
+    "text": "🌄 実験003：霧が晴れたら、ゴマス村。\n状態：🧪 iPhone画面のデザイン試作\nプレイ中は霧に包まれた山。完成すると霧が晴れ、景色がひらけます。\nヒントを使ったら雲がふわり。☁️\nチェックを使ったらカラスが飛んでくる。🐦‍⬛\nどちらも使わずに完成したら、虹がかかる。🌈\n完成したパズルはそのまま残して、最後のピースも一緒にお祝い！\n👉 iPhone お祝い画面を試してみる\nGitHub Issue #81 · 山の研究 #84"
+  },
+  {
+    "objectID": "experimental/index.html#そのほかただいま妄想中",
+    "href": "experimental/index.html#そのほかただいま妄想中",
+    "title": "ひみつの実験室",
+    "section": "🔮 そのほか、ただいま妄想中…",
+    "text": "🔮 そのほか、ただいま妄想中…\n五マスの仲間たちに服を着せてみたり、 カードに変身させてみたり、 新聞を発行してみたり。\nまだ形になっていないアイデアも、ここから少しずつ育てていきます。\n実験は、成功しても失敗しても、何かが残れば大成功。\n\n⚠️ この実験室は、予告なく変わったり、実験が突然なくなったりします。お父さんの公式アプリとは別の場所なので、どうぞ気楽にお楽しみください。"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "五マスの人たち。",
+    "section": "",
+    "text": "FIVE SQUARES. TWELVE PERSONALITIES.\n\n\n\nみんな、5つの四角でできています。\nまっすぐな人。曲がった人。\nちょっとずれた人。なぜか真ん中にいる人。\n全部で12人。\n\n本人たちは、いたって普通のつもりです。\n\n12人に会ってみる →\n\n12 SHAPES · 5 SQUARES EACH · EVERYONE IS DIFFERENT\n\n\n\n\n\nA LITTLE FAMILY HISTORY\n\n\n\n昔、父が木で作ったペントミノのパズル。\n妹と私は、それで遊びながら育ちました。\n遊ぶのは楽しい。\nでも、片づけるのが難しい。\nあと一つなのに、入らない。\nこっちを動かすと、あっちが入らない。\n結局、いつも一つだけ、盤の上に乗っかっていました。\nどうやら、これが我が家の正解だったようです。\nそれから何十年。\n木から陶器へ、そして3Dプリントへ。\n形は進化しました。\n片づけの腕前は、あまり進化しませんでした。\nこのパズルの話を読む →\n\n\n\n\nTHE BASIC FACTS\n\n\n\nペントミノは、5つの正方形を辺でつなげた形。\n回したり、裏返したりして同じになるものを一つと数えると、全部で12種類。\n12人とも材料は同じ。\nでも、形はそれぞれ違います。\nそして、ちょっとした性格の違いもあるようです。\n\n\n\n\nA VERY SATISFYING EQUATION\n\n\n5 × 12 = 60\n\n5マスずつ、12人で60マス。\n6 × 10にも、5 × 12にも、4 × 15にも。\n全員そろえば、いろいろな長方形になれます。\n\n問題は、誰がどこに入るか。\n\n\n\n\n12 PIECES · 60 SQUARES · ONE RECTANGLE\n\n\n\n12人が集まって、6 × 10の長方形。\n全員、ちゃんと入りました。\nでも、この並び方だけが正解ではありません。\n実は、ほかにもいろいろあります。\n\n\n\n\nひとりずつ登場 →\n\n\nもう一度 ↺\n\n\nこの並び方は、ときどき変わります。 12人にも、気分があるのかもしれません。\n\n\n\n\n\n\nMEET · ROTATE · DISCOVER\n\n\n\n回しても変わらない人がいます。\nひっくり返すと、別人みたいになる人もいます。\nなぜでしょう。\nまずは、会ってみてください。\n12人の仲間たち →\n\nSAME FIVE SQUARES. VERY DIFFERENT OPINIONS."
+  },
+  {
+    "objectID": "index.html#片づけるだけのはずだった",
+    "href": "index.html#片づけるだけのはずだった",
+    "title": "五マスの人たち。",
+    "section": "",
+    "text": "昔、父が木で作ったペントミノのパズル。\n妹と私は、それで遊びながら育ちました。\n遊ぶのは楽しい。\nでも、片づけるのが難しい。\nあと一つなのに、入らない。\nこっちを動かすと、あっちが入らない。\n結局、いつも一つだけ、盤の上に乗っかっていました。\nどうやら、これが我が家の正解だったようです。\nそれから何十年。\n木から陶器へ、そして3Dプリントへ。\n形は進化しました。\n片づけの腕前は、あまり進化しませんでした。\nこのパズルの話を読む →"
+  },
+  {
+    "objectID": "index.html#そもそもペントミノって",
+    "href": "index.html#そもそもペントミノって",
+    "title": "五マスの人たち。",
+    "section": "",
+    "text": "ペントミノは、5つの正方形を辺でつなげた形。\n回したり、裏返したりして同じになるものを一つと数えると、全部で12種類。\n12人とも材料は同じ。\nでも、形はそれぞれ違います。\nそして、ちょっとした性格の違いもあるようです。"
+  },
+  {
+    "objectID": "index.html#人なんとか収まりました",
+    "href": "index.html#人なんとか収まりました",
+    "title": "五マスの人たち。",
+    "section": "",
+    "text": "12人が集まって、6 × 10の長方形。\n全員、ちゃんと入りました。\nでも、この並び方だけが正解ではありません。\n実は、ほかにもいろいろあります。\n\n\n\n\nひとりずつ登場 →\n\n\nもう一度 ↺\n\n\nこの並び方は、ときどき変わります。 12人にも、気分があるのかもしれません。"
+  },
+  {
+    "objectID": "index.html#ところでこの12人",
+    "href": "index.html#ところでこの12人",
+    "title": "五マスの人たち。",
+    "section": "",
+    "text": "回しても変わらない人がいます。\nひっくり返すと、別人みたいになる人もいます。\nなぜでしょう。\nまずは、会ってみてください。\n12人の仲間たち →\n\nSAME FIVE SQUARES. VERY DIFFERENT OPINIONS."
+  },
+  {
+    "objectID": "research/index.html",
+    "href": "research/index.html",
+    "title": "五マス研究室",
+    "section": "",
+    "text": "ペントミノは、たった5つの正方形からできています。\nでも、調べはじめると、疑問はどんどん増えていきます。\nなぜ、この形はここに来るのか？\nなぜ、同じ組み合わせが何度も現れるのか？\nそもそも、偶然ってなんだろう？\nここは、そんな疑問を持ち寄って、データを眺めたり、計算したり、ときどき予想を外したりする場所です。\n答えが見つからなくても、面白い疑問が見つかれば、それは立派な発見。"
+  },
+  {
+    "objectID": "research/index.html#ようこそ五マス研究室へ",
+    "href": "research/index.html#ようこそ五マス研究室へ",
+    "title": "五マス研究室",
+    "section": "",
+    "text": "ペントミノは、たった5つの正方形からできています。\nでも、調べはじめると、疑問はどんどん増えていきます。\nなぜ、この形はここに来るのか？\nなぜ、同じ組み合わせが何度も現れるのか？\nそもそも、偶然ってなんだろう？\nここは、そんな疑問を持ち寄って、データを眺めたり、計算したり、ときどき予想を外したりする場所です。\n答えが見つからなくても、面白い疑問が見つかれば、それは立派な発見。"
+  },
+  {
+    "objectID": "research/index.html#研究ノート",
+    "href": "research/index.html#研究ノート",
+    "title": "五マス研究室",
+    "section": "研究ノート",
+    "text": "研究ノート\n\n🌈 五色の虹は、本当にランダムなのか？\n12人のペントミノから選ばれる5人。\n2,339個の解答データを調べてみたら、虹によく登場する人と、そうでもない人がいることがわかりました。\n順列と組み合わせを使って、虹の色にひそむ偏りを探ります。\n\n\n🌄 山は、数式でできている。\n波をひとつ描いて、もうひとつ重ねて、さらにもうひとつ。\nたった3つの波から、山の輪郭が生まれます。\n色や険しさ、霧の濃さを変えながら、ゴマス村の風景がどんな数式から生まれるのかを探ります。\n同じパズル番号なら、何度でも同じ山に会える。その秘密は、疑似乱数にありました。\n\n研究はつづく。たぶん、寄り道もしながら。"
+  },
+  {
+    "objectID": "research/solution/compare_6x10_solutions.html",
+    "href": "research/solution/compare_6x10_solutions.html",
+    "title": "Do Dad’s and Chi’s 6×10 pentomino solutions match?",
+    "section": "",
+    "text": "Can each of Dad’s 2,339 piece/posture/anchor encodings be matched to one of Chi’s 2,339 board-text solutions? Does the match require whole-board rotation or reflection?"
+  },
+  {
+    "objectID": "research/solution/compare_6x10_solutions.html#research-question",
+    "href": "research/solution/compare_6x10_solutions.html#research-question",
+    "title": "Do Dad’s and Chi’s 6×10 pentomino solutions match?",
+    "section": "",
+    "text": "Can each of Dad’s 2,339 piece/posture/anchor encodings be matched to one of Chi’s 2,339 board-text solutions? Does the match require whole-board rotation or reflection?"
+  },
+  {
+    "objectID": "research/solution/compare_6x10_solutions.html#provenance-and-scope",
+    "href": "research/solution/compare_6x10_solutions.html#provenance-and-scope",
+    "title": "Do Dad’s and Chi’s 6×10 pentomino solutions match?",
+    "section": "Provenance and scope",
+    "text": "Provenance and scope\n\nDad’s data/solutions.csv: Group number, Level, Answer. Each Answer has twelve seven-character piece records.\nDad’s data/postures.json: five relative [row, col, z] cells for each posture ID.\nChi’s data/pentomino_solution.csv: multiple puzzle configurations; filter to dim == \"6×10\".\nBoth datasets currently contain 2,339 records for this configuration. Equal counts do not prove equal solution sets.\n\n\nData provenance — Chi’s solutions\n\nOriginal source: To be confirmed (external pentomino solution collection).\nCurrent dataset: Pentomino solutions CSV\nDate retrieved: October 11 2026 Sunday\nDataset: 33,008 solution records across multiple puzzle configurations, including 2,339 records for the 6×10 rectangle.\nNote: This dataset was collected independently of Dad’s solution database."
+  },
+  {
+    "objectID": "research/solution/compare_6x10_solutions.html#method",
+    "href": "research/solution/compare_6x10_solutions.html#method",
+    "title": "Do Dad’s and Chi’s 6×10 pentomino solutions match?",
+    "section": "Method",
+    "text": "Method\n\nDecode Dad’s Answer into twelve placements.\nExpand placements into sixty occupied cells using the posture database.\nValidate board bounds, no overlaps, and complete coverage.\nSerialize each solution as a row-major, 60-letter board string.\nCompare exact strings, then compare canonical strings across the four symmetries preserving a 6×10 rectangle (identity, left/right reflection, up/down reflection, 180° rotation).\nRetain all candidate matches and flag any non-unique relationships. Do not infer one-to-one matching from equal counts alone."
+  },
+  {
+    "objectID": "research/solution/compare_6x10_solutions.html#run-the-comparison",
+    "href": "research/solution/compare_6x10_solutions.html#run-the-comparison",
+    "title": "Do Dad’s and Chi’s 6×10 pentomino solutions match?",
+    "section": "Run the comparison",
+    "text": "Run the comparison\nRun from the repository root in RStudio. The script writes derived CSVs to data/derived/.\n\n\nCode\nsource(here::here(\"R\", \"match_6x10_solutions.R\"))\n\n\n# A tibble: 1 × 10\n  dad_solutions chi_solutions exact_pairs symmetry_candidate_pairs matched_dad\n          &lt;int&gt;         &lt;int&gt;       &lt;int&gt;                    &lt;int&gt;       &lt;int&gt;\n1          2339          2339        1142                     2339        2339\n# ℹ 5 more variables: matched_chi &lt;int&gt;, uniquely_matched_pairs &lt;int&gt;,\n#   ambiguous_candidate_pairs &lt;int&gt;, unmatched_dad &lt;int&gt;, unmatched_chi &lt;int&gt;\n\n\nCode\nsummary\n\n\nfunction (object, ...) \nUseMethod(\"summary\")\n&lt;bytecode: 0x10cd24ec0&gt;\n&lt;environment: namespace:base&gt;"
+  },
+  {
+    "objectID": "research/solution/compare_6x10_solutions.html#inspect-unmatched-or-ambiguous-records",
+    "href": "research/solution/compare_6x10_solutions.html#inspect-unmatched-or-ambiguous-records",
+    "title": "Do Dad’s and Chi’s 6×10 pentomino solutions match?",
+    "section": "Inspect unmatched or ambiguous records",
+    "text": "Inspect unmatched or ambiguous records\n\n\nCode\nlist(\n  unmatched_dad = nrow(unmatched_dad),\n  unmatched_chi = nrow(unmatched_chi),\n  ambiguous_candidates = sum(!crosswalk$unique_pair)\n)\n\n\n$unmatched_dad\n[1] 0\n\n$unmatched_chi\n[1] 0\n\n$ambiguous_candidates\n[1] 0\n\n\nCode\nlibrary(gt)\n\ncrosswalk |&gt;\n  slice_head(n = 10) |&gt;\n  select(group_number, sol_idx, match_type, unique_pair) |&gt;\n  gt() |&gt;\n  tab_header(\n    title = md(\"**Dad × Chi: Solution Crosswalk**\"),\n    subtitle = \"First 10 matched 6×10 pentomino solutions\"\n  ) |&gt;\n  cols_label(\n    group_number = \"Dad's Group\",\n    sol_idx = \"Chi's Solution\",\n    match_type = \"Match Type\",\n    unique_pair = \"Unique Match?\"\n  ) |&gt;\n  fmt(\n    columns = unique_pair,\n    fns = function(x) ifelse(x, \"✓ Yes\", \"No\")\n  ) |&gt;\n  opt_row_striping() |&gt;\n  tab_source_note(\n    source_note = \"Matching accounts for whole-board symmetry.\"\n  )\n\n\n\n\n\n\n\n\nDad × Chi: Solution Crosswalk\n\n\nFirst 10 matched 6×10 pentomino solutions\n\n\nDad's Group\nChi's Solution\nMatch Type\nUnique Match?\n\n\n\n\n#0001\n506\nsymmetry\n✓ Yes\n\n\n#0002\n501\nsymmetry\n✓ Yes\n\n\n#0003\n502\nsymmetry\n✓ Yes\n\n\n#0004\n507\nsymmetry\n✓ Yes\n\n\n#0005\n2032\nsymmetry\n✓ Yes\n\n\n#0006\n2104\nexact\n✓ Yes\n\n\n#0007\n2018\nexact\n✓ Yes\n\n\n#0008\n2033\nsymmetry\n✓ Yes\n\n\n#0009\n2017\nexact\n✓ Yes\n\n\n#0010\n2101\nsymmetry\n✓ Yes\n\n\n\nMatching accounts for whole-board symmetry."
+  },
+  {
+    "objectID": "research/solution/compare_6x10_solutions.html#findings",
+    "href": "research/solution/compare_6x10_solutions.html#findings",
+    "title": "Do Dad’s and Chi’s 6×10 pentomino solutions match?",
+    "section": "Findings",
+    "text": "Findings\nComplete after running the analysis. Distinguish exact matches, symmetry-equivalent matches, unmatched records, and ambiguous mappings."
+  },
+  {
+    "objectID": "research/solution/compare_6x10_solutions.html#caveats-and-follow-ups",
+    "href": "research/solution/compare_6x10_solutions.html#caveats-and-follow-ups",
+    "title": "Do Dad’s and Chi’s 6×10 pentomino solutions match?",
+    "section": "Caveats and follow-ups",
+    "text": "Caveats and follow-ups\n\nThe decoding assumes Dad’s JSON coordinates are [row_offset, col_offset, z] and anchors are encoded in tenths of a cell; validation will fail if this assumption is wrong.\nBoard symmetries here preserve 6×10 dimensions; 90° and 270° rotations would produce 10×6 boards.\nIf the source datasets were deduplicated using different symmetry conventions, multiple rows may share a canonical key.\nLevel describes Dad’s puzzle/hint progression and is not needed for whole-board equivalence.\nThis is research documentation, not a public story or a source of authoritative puzzle enumeration counts."
   },
   {
     "objectID": "stories/index.html",
@@ -623,13 +658,6 @@
     "text": "12人しかいないのに、63人いるらしい。\n村の住人は12人のはず。ところが数え直すと18人、さらには63人!? いったい何が起きたのでしょう。\n調査に参加する →"
   },
   {
-    "objectID": "stories/index.html#まんなかおじさん真ん中にいない疑惑",
-    "href": "stories/index.html#まんなかおじさん真ん中にいない疑惑",
-    "title": "おはなし | 五マスの人たち。",
-    "section": "",
-    "text": "自分の真ん中にはいる。でも、盤面の真ん中にいるとは限らない。"
-  },
-  {
     "objectID": "stories/index.html#ゴマス村の身体測定",
     "href": "stories/index.html#ゴマス村の身体測定",
     "title": "おはなし | 五マスの人たち。",
@@ -637,38 +665,10 @@
     "text": "身長は何マスですか？\n年に一度の健康診断。12人の住民を測ってみよう。まっすぐおじさんが横になると、なぜか身長が縮む!?\n身体測定に参加する →"
   },
   {
-    "objectID": "stories/body-measurement.html",
-    "href": "stories/body-measurement.html",
-    "title": "ゴマス村の身体測定",
+    "objectID": "stories/index.html#まんなかおじさん真ん中にいない疑惑",
+    "href": "stories/index.html#まんなかおじさん真ん中にいない疑惑",
+    "title": "おはなし | 五マスの人たち。",
     "section": "",
-    "text": "STORY 002 · VILLAGE HEALTH CHECK\n\n\n\n身長は何マスですか？\n\n今日は年に一度の身体測定。\n村の12人が、保健室に集まりました。\n「はい、順番にどうぞ。身長と横幅を測ります。」\n「横幅も？」\n「この村では必要なんです。」\n\n\n\n\n気になる住民を呼んで、測定台に立ってもらいましょう。12人全員を測ると、先生から最後のお知らせがあります。\n\n  ゴマス村 保健室測定済み 0 / 12\n  \n    \n      \n      患者さんを選んでください。\n    \n    \n      診察室からのお知らせ\n      「次の方、どうぞー。」\n      \n        横になってみる ↻\n        次の患者さん →\n      \n      向きを変えると身長と横幅が入れ替わることがあります。五つのマスは増えません。\n    \n  \n  待合室 — 名前を押すと呼び出せます\n  \n  \n    \n    先生は記録を見直しました。\n    「全員、体積は五マス分ですね。」\n    「それは最初からわかっていたのでは？」\n    「……では、次はオーブ検査です。」\n    「なんのために？」\n    「まだ決まっていません。」\n  \n  この身体測定室を動かすにはJavaScriptが必要です。12人の住民は全員、五つのマスでできています。\n\n\n\n\n「はい、背の低い順に並んでください。」\n「同じ身長だったら？」\n「横幅の小さい順です。」\n「それも同じだったら？」\n「……形のアルファベット順です。」\n「なんで？」\n「先生にもわかりません。」\n\n\n  ゴマス村・身長順の公式記録\n  最初の姿勢で比較。順位は身長だけで決まり、同じ身長なら同順位。並び順は身長 → 横幅 → 形のアルファベット順です。\n  身長順 ↕横幅順 ↔\n  身長で同順位、横幅で並び替えます。\n  \n\n\n\n\n\n身体測定のあと、みんなで記念撮影。\n写真家「みなさん、頭の高さをそろえてくださーい！」\n「身長が違うんですけど……」\n「では、踏み台を用意しましょう。」\n\n  ゴマス村・集合写真撮影会\n  \n  写真家「みなさん、頭の高さをそろえてください！」\n  みんなの身長はバラバラ。どうすれば同じ高さになる？\n  踏み台を用意する！\n\n\n\n\nまっすぐおじさんが立つと、身長は五マス。\nところが、横になると一マス。\n「先生、わたし、縮みました？」\n「いいえ。向きが変わっただけです。」\n「じゃあ、どちらが本当の身長ですか？」\n先生は、測定用紙を裏返しました。\n「……次の方、どうぞ。」\n\n小さな数学のメモ： この測定室では、各マスを一辺1の正方形として、今の向きでの縦方向の長さを「身長」、横方向の長さを「横幅」と呼びます。回転すると測定値は変わることがありますが、面積はいつでも5平方マスです。\n← おはなし一覧へ"
-  },
-  {
-    "objectID": "stories/body-measurement.html#次の患者さんどうぞ",
-    "href": "stories/body-measurement.html#次の患者さんどうぞ",
-    "title": "ゴマス村の身体測定",
-    "section": "",
-    "text": "気になる住民を呼んで、測定台に立ってもらいましょう。12人全員を測ると、先生から最後のお知らせがあります。\n\n  ゴマス村 保健室測定済み 0 / 12\n  \n    \n      \n      患者さんを選んでください。\n    \n    \n      診察室からのお知らせ\n      「次の方、どうぞー。」\n      \n        横になってみる ↻\n        次の患者さん →\n      \n      向きを変えると身長と横幅が入れ替わることがあります。五つのマスは増えません。\n    \n  \n  待合室 — 名前を押すと呼び出せます\n  \n  \n    \n    先生は記録を見直しました。\n    「全員、体積は五マス分ですね。」\n    「それは最初からわかっていたのでは？」\n    「……では、次はオーブ検査です。」\n    「なんのために？」\n    「まだ決まっていません。」\n  \n  この身体測定室を動かすにはJavaScriptが必要です。12人の住民は全員、五つのマスでできています。"
-  },
-  {
-    "objectID": "stories/body-measurement.html#身長ってなんでしょう",
-    "href": "stories/body-measurement.html#身長ってなんでしょう",
-    "title": "ゴマス村の身体測定",
-    "section": "",
-    "text": "まっすぐおじさんが立つと、身長は五マス。\nところが、横になると一マス。\n「先生、わたし、縮みました？」\n「いいえ。向きが変わっただけです。」\n「じゃあ、どちらが本当の身長ですか？」\n先生は、測定用紙を裏返しました。\n「……次の方、どうぞ。」\n\n小さな数学のメモ： この測定室では、各マスを一辺1の正方形として、今の向きでの縦方向の長さを「身長」、横方向の長さを「横幅」と呼びます。回転すると測定値は変わることがありますが、面積はいつでも5平方マスです。\n← おはなし一覧へ"
-  },
-  {
-    "objectID": "stories/body-measurement.html#みんなで背の順",
-    "href": "stories/body-measurement.html#みんなで背の順",
-    "title": "ゴマス村の身体測定",
-    "section": "",
-    "text": "「はい、背の低い順に並んでください。」\n「同じ身長だったら？」\n「横幅の小さい順です。」\n「それも同じだったら？」\n「……形のアルファベット順です。」\n「なんで？」\n「先生にもわかりません。」\n\n\n  ゴマス村・身長順の公式記録\n  最初の姿勢で比較。順位は身長だけで決まり、同じ身長なら同順位。並び順は身長 → 横幅 → 形のアルファベット順です。\n  身長順 ↕横幅順 ↔\n  身長で同順位、横幅で並び替えます。"
-  },
-  {
-    "objectID": "stories/body-measurement.html#ゴマス村の集合写真",
-    "href": "stories/body-measurement.html#ゴマス村の集合写真",
-    "title": "ゴマス村の身体測定",
-    "section": "",
-    "text": "身体測定のあと、みんなで記念撮影。\n写真家「みなさん、頭の高さをそろえてくださーい！」\n「身長が違うんですけど……」\n「では、踏み台を用意しましょう。」\n\n  ゴマス村・集合写真撮影会\n  \n  写真家「みなさん、頭の高さをそろえてください！」\n  みんなの身長はバラバラ。どうすれば同じ高さになる？\n  踏み台を用意する！"
+    "text": "自分の真ん中にはいる。でも、盤面の真ん中にいるとは限らない。"
   }
 ]
