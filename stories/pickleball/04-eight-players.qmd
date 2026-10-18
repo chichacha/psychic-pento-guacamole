@@ -16,7 +16,7 @@ format:
 ::: {.pento-story-hero}
 <span class="pento-eyebrow">PICKLEBALL CLUB · EPISODE 04</span>
 
-# コートが増えました。 🎉🏓
+# コートが増えました。 🎉🥒
 
 <div class="pento-story-deck">8人になったら、全員遊べる！</div>
 :::
@@ -35,7 +35,7 @@ format:
 
 「こんにちはー！」
 
-かどっこおばさんが、ラケットを持って角から現れました。
+かどっこおばさんが、パドルを持って角から現れました。
 
 「私も入っていい？」
 
