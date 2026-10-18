@@ -4,12 +4,22 @@ subtitle: "ゴマス村ピックルボール部 · 第2話"
 format:
   html:
     toc: false
-    page-layout: article
+    page-layout: full
+    css:
+      - ../../assets/css/story.css
 ---
+
+::: {.pento-stories .pickleball-story}
 
 [← ピックルボール部へ](index.qmd) · [← 第1話](01-five-players.qmd)
 
+::: {.pento-story-hero}
+<span class="pento-eyebrow">PICKLEBALL CLUB · EPISODE 02</span>
+
 # もう一人、来ちゃった。 🏓
+
+<div class="pento-story-deck">6人になったら、何が変わる？</div>
+:::
 
 しきりやおばさんが、5人分の組み合わせ表を掲げました。
 
@@ -129,3 +139,5 @@ format:
 「7人です。」
 
 [第3話：休憩席が足りません。 →](03-seven-players.qmd)
+
+:::
