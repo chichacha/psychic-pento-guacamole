@@ -32,6 +32,18 @@ format:
 [調査に参加する →](population-census.qmd){.pento-story-link}
 :::
 
+::: {.pento-story-card}
+<span class="pento-eyebrow">STORY 002 · 身体測定</span>
+
+## [ゴマス村の身体測定](body-measurement.qmd)
+
+**身長は何マスですか？**
+
+年に一度の健康診断。12人の住民を測ってみよう。まっすぐおじさんが横になると、なぜか身長が縮む!?
+
+[身体測定に参加する →](body-measurement.qmd){.pento-story-link}
+:::
+
 ::: {.pento-story-card .pento-story-card--future}
 <span class="pento-eyebrow">COMING SOMEDAY</span>
 

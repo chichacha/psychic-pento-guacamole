@@ -1,0 +1,148 @@
+---
+title: "ゴマス村の身体測定"
+subtitle: "身長は何マスですか？"
+format:
+  html:
+    toc: false
+    page-layout: full
+    css:
+      - ../assets/css/story.css
+      - ../assets/css/body-measurement.css
+---
+
+::: {.pento-stories .measurement-story}
+
+::: {.pento-story-hero}
+<span class="pento-eyebrow">STORY 002 · VILLAGE HEALTH CHECK</span>
+
+# ゴマス村の身体測定。
+
+<div class="pento-story-deck">身長は何マスですか？</div>
+
+今日は年に一度の身体測定。
+
+村の12人が、保健室に集まりました。
+
+「はい、順番にどうぞ。身長と横幅を測ります。」
+
+「横幅も？」
+
+「この村では必要なんです。」
+
+:::
+
+## 次の患者さん、どうぞ。
+
+気になる住民を呼んで、測定台に立ってもらいましょう。**12人全員**を測ると、先生から最後のお知らせがあります。
+
+```{=html}
+<div class="measurement-app" id="measurement-app">
+  <div class="measurement-top"><span>ゴマス村 保健室</span><span id="measurement-progress">測定済み 0 / 12</span></div>
+  <div class="measurement-layout">
+    <div class="measurement-stage">
+      <svg id="measurement-svg" viewBox="0 0 340 330" role="img" aria-label="ペントミノの身長と横幅を測る図"></svg>
+      <div class="measurement-reading" id="measurement-reading" aria-live="polite">患者さんを選んでください。</div>
+    </div>
+    <div class="measurement-panel">
+      <p class="measurement-caption">診察室からのお知らせ</p>
+      <div class="measurement-dialogue" id="measurement-dialogue" aria-live="polite">「次の方、どうぞー。」</div>
+      <div class="measurement-controls">
+        <button type="button" id="measurement-turn">横になってみる ↻</button>
+        <button type="button" id="measurement-next">次の患者さん →</button>
+      </div>
+      <p class="measurement-note">向きを変えると身長と横幅が入れ替わることがあります。五つのマスは増えません。</p>
+    </div>
+  </div>
+  <p class="measurement-caption">待合室 — 名前を押すと呼び出せます</p>
+  <div id="measurement-queue" class="measurement-queue" role="group" aria-label="12人の患者さん"></div>
+  <div class="measurement-finale" id="measurement-finale" hidden aria-live="polite">
+    <h3>全員、測定終了！</h3>
+    <p>先生は記録を見直しました。</p>
+    <p>「全員、体積は五マス分ですね。」</p>
+    <p>「それは最初からわかっていたのでは？」</p>
+    <p>「……では、次はオーブ検査です。」</p>
+    <p>「なんのために？」</p>
+    <p><strong>「まだ決まっていません。」</strong></p>
+  </div>
+  <noscript>この身体測定室を動かすにはJavaScriptが必要です。12人の住民は全員、五つのマスでできています。</noscript>
+</div>
+``` 
+
+## みんなで背の順！
+
+「はい、背の低い順に並んでください。」
+
+「同じ身長だったら？」
+
+「横幅の小さい順です。」
+
+「それも同じだったら？」
+
+「……形のアルファベット順です。」
+
+「なんで？」
+
+「先生にもわかりません。」
+
+```{=html}
+
+<div class="measurement-ranking" id="measurement-ranking">
+  <p class="measurement-caption">ゴマス村・身長順の公式記録</p>
+  <p class="measurement-note">最初の姿勢で比較。順位は身長だけで決まり、同じ身長なら同順位。並び順は身長 → 横幅 → 形のアルファベット順です。</p>
+  <div class="measurement-sort-controls" role="group" aria-label="並び替え"><button type="button" id="sort-height" aria-pressed="true">身長順 ↕</button><button type="button" id="sort-width" aria-pressed="false">横幅順 ↔</button></div>
+  <p id="measurement-sort-note" class="measurement-note" aria-live="polite">身長で同順位、横幅で並び替えます。</p>
+  <div id="measurement-ranking-list" class="measurement-ranking-list"></div>
+</div>
+
+```
+
+
+## ゴマス村の集合写真 📸
+
+身体測定のあと、みんなで記念撮影。
+
+写真家「みなさん、頭の高さをそろえてくださーい！」
+
+「身長が違うんですけど……」
+
+「では、踏み台を用意しましょう。」
+
+```{=html}
+<div class="photo-session" id="photo-session">
+  <p class="measurement-caption">ゴマス村・集合写真撮影会</p>
+  <div class="photo-scroller"><svg id="photo-svg" viewBox="0 0 1010 230" role="img" aria-label="12人のペントミノたちの集合写真"></svg></div>
+  <p class="photo-dialogue" id="photo-dialogue" aria-live="polite">写真家「みなさん、頭の高さをそろえてください！」</p>
+  <p class="measurement-note" id="photo-status">みんなの身長はバラバラ。どうすれば同じ高さになる？</p>
+  <button type="button" id="photo-level">踏み台を用意する！</button>
+</div>
+```
+
+## 身長って、なんでしょう。
+
+まっすぐおじさんが立つと、身長は五マス。
+
+ところが、横になると一マス。
+
+「先生、わたし、縮みました？」
+
+「いいえ。向きが変わっただけです。」
+
+「じゃあ、どちらが本当の身長ですか？」
+
+先生は、測定用紙を裏返しました。
+
+「……次の方、どうぞ。」
+
+::: {.pento-story-footnote}
+**小さな数学のメモ：** この測定室では、各マスを一辺1の正方形として、今の向きでの縦方向の長さを「身長」、横方向の長さを「横幅」と呼びます。回転すると測定値は変わることがありますが、面積はいつでも5平方マスです。
+
+[← おはなし一覧へ](index.qmd)
+:::
+
+:::
+
+<script src="../assets/js/body-measurement.js" defer></script>
+
+<script src="../assets/js/height-lineup.js" defer></script>
+
+<script src="../assets/js/photo-session.js" defer></script>
