@@ -30,6 +30,13 @@
     const t=element("text",{x,y,fill,"font-size":size,"text-anchor":"middle"});
     t.textContent=text;
   }
+  function faceIndex(cells) {
+    const top=Math.min(...cells.map(c=>c[1]));
+    const center=(Math.min(...cells.map(c=>c[0]))+Math.max(...cells.map(c=>c[0])))/2;
+    return cells.map((c,i)=>({x:c[0],y:c[1],i}))
+      .filter(c=>c.y===top)
+      .sort((a,b)=>Math.abs(a.x-center)-Math.abs(b.x-center)||a.x-b.x)[0].i;
+  }
   function draw(people) {
     const unit=15, slot=83, floor=178;
     svg.setAttribute("viewBox","0 0 1010 230");
@@ -50,10 +57,12 @@
       }
       const top=bottom-height*unit;
       cells.forEach(([x,y])=>element("rect",{x:left+x*unit,y:top+y*unit,width:unit-1,height:unit-1,rx:2,fill:p.color,stroke:"#615760","stroke-width":0.9}));
-      const eyeY=top+unit*0.42;
-      element("circle",{cx:left+width*unit/2-4,cy:eyeY,r:1.7,fill:"#3d363c"});
-      element("circle",{cx:left+width*unit/2+4,cy:eyeY,r:1.7,fill:"#3d363c"});
-      element("path",{d:"M "+(left+width*unit/2-3)+" "+(eyeY+4)+" q 3 4 6 0",fill:"none",stroke:"#3d363c","stroke-width":1});
+      // Place the entire face inside a real, topmost occupied square.
+      const [hx,hy]=cells[faceIndex(cells)];
+      const cx=left+(hx+0.5)*unit, cy=top+(hy+0.5)*unit;
+      element("circle",{cx:cx-2.6,cy:cy-1.4,r:1.15,fill:"#3d363c"});
+      element("circle",{cx:cx+2.6,cy:cy-1.4,r:1.15,fill:"#3d363c"});
+      element("path",{d:"M "+(cx-2.5)+" "+(cy+2)+" Q "+cx+" "+(cy+5)+" "+(cx+2.5)+" "+(cy+2),fill:"none",stroke:"#3d363c","stroke-width":0.9,"stroke-linecap":"round"});
       say(13+i*slot+slot/2,196,p.shape, "#554c53",13);
       say(13+i*slot+slot/2,212,steps+"段", "#73666a",11);
     });

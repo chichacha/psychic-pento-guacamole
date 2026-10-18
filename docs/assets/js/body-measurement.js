@@ -63,6 +63,22 @@
     for(let i=0;i<turns;i++) cells = rotate(cells);
     return cells;
   }
+  // Pick the topmost occupied square; ties go to the square nearest body center.
+  // Keep its identity through rotation, so the face stays on the same square.
+  function faceIndex(cells) {
+    const top = Math.min(...cells.map(c => c[1]));
+    const center = (Math.min(...cells.map(c => c[0])) + Math.max(...cells.map(c => c[0]))) / 2;
+    return cells.map((c,i) => ({x:c[0],y:c[1],i}))
+      .filter(c => c.y === top)
+      .sort((a,b) => Math.abs(a.x-center)-Math.abs(b.x-center) || a.x-b.x)[0].i;
+  }
+  function drawFace(x,y,unit) {
+    const cx=x+unit/2, cy=y+unit/2;
+    const gap=unit*0.12;
+    el("circle",{cx:cx-gap,cy:cy-unit*0.09,r:unit*0.045,fill:"#42353d"});
+    el("circle",{cx:cx+gap,cy:cy-unit*0.09,r:unit*0.045,fill:"#42353d"});
+    el("path",{d:"M "+(cx-gap)+" "+(cy+unit*0.08)+" Q "+cx+" "+(cy+unit*0.20)+" "+(cx+gap)+" "+(cy+unit*0.08),fill:"none",stroke:"#42353d","stroke-width":unit*0.035,"stroke-linecap":"round"});
+  }
   function dimensions(cells) {
     return {
       width:Math.max(...cells.map(([x]) => x))+1,
@@ -97,6 +113,10 @@
     cells.forEach(([x,y]) => {
       el("rect",{x:left+x*unit,y:top+y*unit,width:unit-2,height:unit-2,rx:5,fill:person.color,stroke:"#665d67","stroke-width":1.4});
     });
+    const head=faceIndex(shapes[person.shape]);
+    // The chosen original square follows the rotation, but the eyes stay upright.
+    const [faceX,faceY]=cells[head];
+    drawFace(left+faceX*unit,top+faceY*unit,unit);
     // Height arrow
     el("line",{x1:314,y1:top,x2:314,y2:280,stroke:"#8c6683","stroke-width":2});
     label(height+"マス",275,top-10,13);
