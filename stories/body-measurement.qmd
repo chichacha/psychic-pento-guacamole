@@ -1,0 +1,93 @@
+---
+title: "ゴマス村の身体測定"
+subtitle: "身長は何マスですか？"
+format:
+  html:
+    toc: false
+    page-layout: full
+    css:
+      - ../assets/css/story.css
+      - ../assets/css/body-measurement.css
+---
+
+::: {.pento-stories .measurement-story}
+
+::: {.pento-story-hero}
+<span class="pento-eyebrow">STORY 002 · VILLAGE HEALTH CHECK</span>
+
+# ゴマス村の身体測定。
+
+<div class="pento-story-deck">身長は何マスですか？</div>
+
+今日は年に一度の身体測定。
+
+村の12人が、保健室に集まりました。
+
+「はい、順番にどうぞ。身長と横幅を測ります。」
+
+「横幅も？」
+
+「この村では必要なんです。」
+
+:::
+
+## 次の患者さん、どうぞ。
+
+気になる住民を呼んで、測定台に立ってもらいましょう。**12人全員**を測ると、先生から最後のお知らせがあります。
+
+<div class="measurement-app" id="measurement-app">
+  <div class="measurement-top"><span>ゴマス村 保健室</span><span id="measurement-progress">測定済み 0 / 12</span></div>
+  <div class="measurement-layout">
+    <div class="measurement-stage">
+      <svg id="measurement-svg" viewBox="0 0 340 330" role="img" aria-label="ペントミノの身長と横幅を測る図"></svg>
+      <div class="measurement-reading" id="measurement-reading" aria-live="polite">患者さんを選んでください。</div>
+    </div>
+    <div class="measurement-panel">
+      <p class="measurement-caption">診察室からのお知らせ</p>
+      <div class="measurement-dialogue" id="measurement-dialogue" aria-live="polite">「次の方、どうぞー。」</div>
+      <div class="measurement-controls">
+        <button type="button" id="measurement-turn">横になってみる ↻</button>
+        <button type="button" id="measurement-next">次の患者さん →</button>
+      </div>
+      <p class="measurement-note">向きを変えると身長と横幅が入れ替わることがあります。五つのマスは増えません。</p>
+    </div>
+  </div>
+  <p class="measurement-caption">待合室 — 名前を押すと呼び出せます</p>
+  <div id="measurement-queue" class="measurement-queue" role="group" aria-label="12人の患者さん"></div>
+  <div class="measurement-finale" id="measurement-finale" hidden aria-live="polite">
+    <h3>全員、測定終了！</h3>
+    <p>先生は記録を見直しました。</p>
+    <p>「全員、体積は五マス分ですね。」</p>
+    <p>「それは最初からわかっていたのでは？」</p>
+    <p>「……では、次はオーブ検査です。」</p>
+    <p>「なんのために？」</p>
+    <p><strong>「まだ決まっていません。」</strong></p>
+  </div>
+  <noscript>この身体測定室を動かすにはJavaScriptが必要です。12人の住民は全員、五つのマスでできています。</noscript>
+</div>
+
+## 身長って、なんでしょう。
+
+まっすぐおじさんが立つと、身長は五マス。
+
+ところが、横になると一マス。
+
+「先生、わたし、縮みました？」
+
+「いいえ。向きが変わっただけです。」
+
+「じゃあ、どちらが本当の身長ですか？」
+
+先生は、測定用紙を裏返しました。
+
+「……次の方、どうぞ。」
+
+::: {.pento-story-footnote}
+**小さな数学のメモ：** この測定室では、各マスを一辺1の正方形として、今の向きでの縦方向の長さを「身長」、横方向の長さを「横幅」と呼びます。回転すると測定値は変わることがありますが、面積はいつでも5平方マスです。
+
+[← おはなし一覧へ](index.qmd)
+:::
+
+:::
+
+<script src="../assets/js/body-measurement.js" defer></script>
