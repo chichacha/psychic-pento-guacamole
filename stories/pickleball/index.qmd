@@ -31,6 +31,90 @@ format:
 
 ゴマス村の住人たちは、今日も遊びながら考えます。
 
+
+## ちいさなコートの地図 🥒
+
+実はコートの真ん中には **キッチン（Kitchen）** があります。どこかな？ 押してみよう。
+
+```{=html}
+<div class="pb-map" id="pb-map-index">
+  <div class="pb-map-buttons" role="group" aria-label="コートの場所を選ぶ">
+    <button type="button" data-select="all" aria-pressed="true">全体</button>
+    <button type="button" data-select="kitchen" aria-pressed="false">🥒 キッチン</button>
+    <button type="button" data-select="service" aria-pressed="false">サーブエリア</button>
+    <button type="button" data-select="net" aria-pressed="false">ネット</button>
+  </div>
+  <div data-role="picture" class="pb-map-picture"></div>
+  <p data-role="message" aria-live="polite">コートは幅20フィート × 長さ44フィート。シングルスもダブルスも同じ大きさです。</p>
+  <small>公式のコート寸法に比例した図。周囲の安全スペースは含みません。</small>
+  <noscript>コートは20 × 44フィート。キッチンはネットの両側7フィートずつです。</noscript>
+</div>
+```
+
+<style>
+.pb-map{margin:1.3rem auto 2rem;max-width:650px;padding:1rem;border:1px solid #d7dbd2;background:#fffdf8;border-radius:18px;color:#222725;text-align:center}
+.pb-map-buttons{display:flex;justify-content:center;flex-wrap:wrap;gap:.4rem}
+.pb-map-buttons button{border:1px solid #a8b6ad;background:white;color:#222725;border-radius:999px;padding:.5rem .8rem;font:inherit;cursor:pointer}
+.pb-map-buttons button[aria-pressed=true]{background:#335d4c;color:white}
+.pb-map-buttons button:focus-visible{outline:3px solid #335d4c;outline-offset:2px}
+.pb-map-picture{max-width:300px;margin:1rem auto}
+.pb-map-picture svg{display:block;width:100%;height:auto}
+.pb-map-picture .zone{transition:fill .18s}
+.pb-map-picture[data-selected=kitchen] .kitchen{fill:#f5ad62}
+.pb-map-picture[data-selected=service] .service{fill:#8cbfe0}
+.pb-map-picture[data-selected=net] .net{stroke:#eb6e48;stroke-width:5}
+.pb-map [data-role=message]{min-height:3em;font-size:.91rem;max-width:48ch;margin:.7rem auto}
+.pb-map small{font-size:.72rem;opacity:.75}
+@media(prefers-reduced-motion:reduce){.pb-map-picture .zone{transition:none}}
+</style>
+<script>
+(() => {
+ const root=document.getElementById("pb-map-index");
+ if(!root||root.dataset.ready)return;
+ root.dataset.ready="true";
+ const svgNS="http://www.w3.org/2000/svg";
+ const svg=document.createElementNS(svgNS,"svg");
+ svg.setAttribute("viewBox","0 0 240 448");
+ svg.setAttribute("role","img");
+ svg.setAttribute("aria-label","20フィート × 44フィートのコートと7フィートずつのキッチン");
+ // Scale: 8 SVG units/ft; 160 x 352 = 20 x 44 feet.
+ svg.innerHTML=[
+ '<rect x="30" y="34" width="180" height="380" rx="12" fill="#eaf1e9"/>',
+ '<rect class="zone service" x="40" y="42" width="160" height="120" fill="#b5d9cd"/>',
+ '<rect class="zone kitchen" x="40" y="162" width="160" height="56" fill="#f6dcad"/>',
+ '<rect class="zone kitchen" x="40" y="218" width="160" height="56" fill="#f6dcad"/>',
+ '<rect class="zone service" x="40" y="274" width="160" height="120" fill="#b5d9cd"/>',
+ '<rect x="40" y="42" width="160" height="352" fill="none" stroke="white" stroke-width="2.5"/>',
+ '<path d="M40 162H200 M40 274H200 M120 42V162 M120 274V394" fill="none" stroke="white" stroke-width="2.5"/>',
+ '<path class="net" d="M34 218H206" stroke="#335d4c" stroke-width="3" stroke-dasharray="4 3"/>',
+ '<g fill="#244236" text-anchor="middle" font-family="sans-serif" font-size="11">',
+ '<text x="80" y="105">SERVICE</text><text x="160" y="105">SERVICE</text>',
+ '<text x="80" y="336">SERVICE</text><text x="160" y="336">SERVICE</text>',
+ '<text x="120" y="192" font-weight="bold">KITCHEN</text>',
+ '<text x="120" y="248" font-weight="bold">KITCHEN</text>',
+ '<text x="120" y="24">20 ft / 6.10 m</text>',
+ '<text x="218" y="218" transform="rotate(90 218 218)">44 ft / 13.41 m</text>',
+ '<text x="120" y="431">7 ft + 7 ft = 14 ft</text></g>'
+ ].join("");
+ const picture=root.querySelector(".pb-map-picture");
+ picture.append(svg);
+ const descriptions={
+ all:"コートは幅20フィート × 長さ44フィート。シングルスもダブルスも同じ大きさです。",
+ kitchen:"🥒 キッチンはネットの両側7フィートずつのノンボレーゾーン。中や境界線に触れながらボレーはできません。",
+ service:"サーブエリアはキッチンの外側。ひと区画は幅10フィート × 奥行15フィートです。",
+ net:"ネットの高さは端で36インチ、中央で34インチ。コートを2つに分けています。"
+ };
+ root.querySelectorAll("[data-select]").forEach(button=>{
+ button.addEventListener("click",()=>{
+ const key=button.dataset.select;
+ picture.dataset.selected=key;
+ root.querySelector('[data-role="message"]').textContent=descriptions[key];
+ root.querySelectorAll("[data-select]").forEach(b=>b.setAttribute("aria-pressed",String(b===button)));
+ });
+ });
+})();
+</script>
+
 ## おはなし
 
 ### 第1話：5人なのに、コートは1面。
