@@ -146,41 +146,35 @@ ul.task-list li input[type="checkbox"] {
 <section id="次の患者さんどうぞ" class="level2">
 <h2 data-anchor-id="次の患者さんどうぞ">次の患者さん、どうぞ。</h2>
 <p>気になる住民を呼んで、測定台に立ってもらいましょう。<strong>12人全員</strong>を測ると、先生から最後のお知らせがあります。</p>
-<div id="measurement-app" class="measurement-app">
-<div class="measurement-top">
-<span>ゴマス村 保健室</span><span id="measurement-progress">測定済み 0 / 12</span>
-</div>
-<div class="measurement-layout">
-<pre><code>&lt;div class="measurement-stage"&gt;
-  &lt;svg id="measurement-svg" viewBox="0 0 340 330" role="img" aria-label="ペントミノの身長と横幅を測る図"&gt;&lt;/svg&gt;
-  &lt;div class="measurement-reading" id="measurement-reading" aria-live="polite"&gt;患者さんを選んでください。&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="measurement-panel"&gt;
-  &lt;p class="measurement-caption"&gt;診察室からのお知らせ&lt;/p&gt;
-  &lt;div class="measurement-dialogue" id="measurement-dialogue" aria-live="polite"&gt;「次の方、どうぞー。」&lt;/div&gt;
-  &lt;div class="measurement-controls"&gt;
-    &lt;button type="button" id="measurement-turn"&gt;横になってみる ↻&lt;/button&gt;
-    &lt;button type="button" id="measurement-next"&gt;次の患者さん →&lt;/button&gt;
-  &lt;/div&gt;
-  &lt;p class="measurement-note"&gt;向きを変えると身長と横幅が入れ替わることがあります。五つのマスは増えません。&lt;/p&gt;
-&lt;/div&gt;</code></pre>
-</div>
-<p class="measurement-caption">
-待合室 — 名前を押すと呼び出せます
-</p>
-<div id="measurement-queue" class="measurement-queue" role="group" aria-label="12人の患者さん">
-
-</div>
-<div id="measurement-finale" class="measurement-finale" hidden="" aria-live="polite">
-<pre><code>&lt;h3&gt;全員、測定終了！&lt;/h3&gt;
-&lt;p&gt;先生は記録を見直しました。&lt;/p&gt;
-&lt;p&gt;「全員、体積は五マス分ですね。」&lt;/p&gt;
-&lt;p&gt;「それは最初からわかっていたのでは？」&lt;/p&gt;
-&lt;p&gt;「……では、次はオーブ検査です。」&lt;/p&gt;
-&lt;p&gt;「なんのために？」&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;「まだ決まっていません。」&lt;/strong&gt;&lt;/p&gt;</code></pre>
-</div>
-<p><noscript>この身体測定室を動かすにはJavaScriptが必要です。12人の住民は全員、五つのマスでできています。</noscript></p>
+<div class="measurement-app" id="measurement-app">
+  <div class="measurement-top"><span>ゴマス村 保健室</span><span id="measurement-progress">測定済み 0 / 12</span></div>
+  <div class="measurement-layout">
+    <div class="measurement-stage">
+      <svg id="measurement-svg" viewbox="0 0 340 330" role="img" aria-label="ペントミノの身長と横幅を測る図"></svg>
+      <div class="measurement-reading" id="measurement-reading" aria-live="polite">患者さんを選んでください。</div>
+    </div>
+    <div class="measurement-panel">
+      <p class="measurement-caption">診察室からのお知らせ</p>
+      <div class="measurement-dialogue" id="measurement-dialogue" aria-live="polite">「次の方、どうぞー。」</div>
+      <div class="measurement-controls">
+        <button type="button" id="measurement-turn">横になってみる ↻</button>
+        <button type="button" id="measurement-next">次の患者さん →</button>
+      </div>
+      <p class="measurement-note">向きを変えると身長と横幅が入れ替わることがあります。五つのマスは増えません。</p>
+    </div>
+  </div>
+  <p class="measurement-caption">待合室 — 名前を押すと呼び出せます</p>
+  <div id="measurement-queue" class="measurement-queue" role="group" aria-label="12人の患者さん"></div>
+  <div class="measurement-finale" id="measurement-finale" hidden="" aria-live="polite">
+    <h3>全員、測定終了！</h3>
+    <p>先生は記録を見直しました。</p>
+    <p>「全員、体積は五マス分ですね。」</p>
+    <p>「それは最初からわかっていたのでは？」</p>
+    <p>「……では、次はオーブ検査です。」</p>
+    <p>「なんのために？」</p>
+    <p><strong>「まだ決まっていません。」</strong></p>
+  </div>
+  <noscript>この身体測定室を動かすにはJavaScriptが必要です。12人の住民は全員、五つのマスでできています。</noscript>
 </div>
 </section>
 <section id="みんなで背の順" class="level2">
@@ -192,17 +186,13 @@ ul.task-list li input[type="checkbox"] {
 <p>「……形のアルファベット順です。」</p>
 <p>「なんで？」</p>
 <p>「先生にもわかりません。」</p>
-<div id="measurement-ranking" class="measurement-ranking">
-<p class="measurement-caption">
-ゴマス村・身長順の公式記録
-</p>
-<p class="measurement-note">
-最初の姿勢で比較。順位は身長だけで決まり、同じ身長なら同順位。並び順は身長 → 横幅 → 形のアルファベット順です。
-</p>
-<div id="measurement-ranking-list" class="measurement-ranking-list">
 
+<div class="measurement-ranking" id="measurement-ranking">
+  <p class="measurement-caption">ゴマス村・身長順の公式記録</p>
+  <p class="measurement-note">最初の姿勢で比較。順位は身長だけで決まり、同じ身長なら同順位。並び順は身長 → 横幅 → 形のアルファベット順です。</p>
+  <div id="measurement-ranking-list" class="measurement-ranking-list"></div>
 </div>
-</div>
+
 </section>
 <section id="身長ってなんでしょう" class="level2">
 <h2 data-anchor-id="身長ってなんでしょう">身長って、なんでしょう。</h2>
