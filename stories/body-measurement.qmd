@@ -89,6 +89,8 @@ format:
 <div class="measurement-ranking" id="measurement-ranking">
   <p class="measurement-caption">ゴマス村・身長順の公式記録</p>
   <p class="measurement-note">最初の姿勢で比較。順位は身長だけで決まり、同じ身長なら同順位。並び順は身長 → 横幅 → 形のアルファベット順です。</p>
+  <div class="measurement-sort-controls" role="group" aria-label="並び替え"><button type="button" id="sort-height" aria-pressed="true">身長順 ↕</button><button type="button" id="sort-width" aria-pressed="false">横幅順 ↔</button></div>
+  <p id="measurement-sort-note" class="measurement-note" aria-live="polite">身長で同順位、横幅で並び替えます。</p>
   <div id="measurement-ranking-list" class="measurement-ranking-list"></div>
 </div>
 
