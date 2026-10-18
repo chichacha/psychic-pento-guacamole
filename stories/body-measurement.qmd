@@ -113,3 +113,5 @@ format:
 :::
 
 <script src="../assets/js/body-measurement.js" defer></script>
+
+<script src="../assets/js/height-lineup.js" defer></script>
