@@ -50,6 +50,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../assets/css/style.css">
 <link rel="stylesheet" href="../../research/research.css">
@@ -143,7 +172,7 @@ ul.task-list li input[type="checkbox"] {
 <p>「やったー！ これでみんな遊べる？」とはみだしくん。</p>
 <p>「まだ7人ですよ。」と、しきりやおばさん。</p>
 <p>「こんにちはー！」</p>
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD かどっこおばさんが、パドルを持って角から現れました。 ======= かどっこおばさんが、パドルを持ってやってきました。 &gt;&gt;&gt;&gt;&gt;&gt;&gt; origin/feature/pickleball-story-series</p>
+<p>かどっこおばさんが、パドルを持ってやってきました。</p>
 <p>「私も入っていい？」</p>
 <p>「<strong>ちょうど8人！</strong> 4人ずつ、2面でダブルスができます。」と、しきりやおばさん。</p>
 <p>「つまり、お休みはゼロ！」とはみだしくん。</p>
@@ -202,9 +231,13 @@ ul.task-list li input[type="checkbox"] {
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>8人から2人を選ぶ組み合わせは、</p>
-<p>$ =28 $</p>
+<p><span class="math display">\[
+\binom{8}{2}=28
+\]</span></p>
 <p>2面でダブルスをすると、1ラウンドで4組のペアが登場します。</p>
-<p>$ 28 = 7 $</p>
+<p><span class="math display">\[
+28 \div 4 = 7
+\]</span></p>
 <p>そして8人の場合は、実際に<strong>7ラウンドで28組を重複なく登場させる組み合わせ表</strong>を作れます。</p>
 <p>もちろん、これはパートナーの組み合わせの話。対戦相手のバランスや試合時間まで自動的に公平になるわけではありません。</p>
 </div>
