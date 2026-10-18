@@ -91,6 +91,185 @@ format:
 **公平に遊ぶことが先。ペアを変えるのは、その次。**
 :::
 
+
+## しきりやおばさんの組み合わせ表
+
+「できました。5試合で、みんな4回ずつ遊べます。」
+
+「パートナーも変わるんですか？」
+
+「はい。しかも、**ほかの4人全員と、1回ずつペア**になれます。」
+
+「対戦相手は？」
+
+「**ほかの4人全員と、2回ずつ対戦**します。」
+
+「……本当に？」
+
+**下のボタンを押して、1試合ずつ確かめてみよう！**
+
+::: {=html}
+<div class="gomasu-pb" id="gomasu-pb-five">
+  <div class="gomasu-pb-controls">
+    <button type="button" data-action="prev" aria-label="前の試合">← まえ</button>
+    <strong data-role="round" aria-live="polite">第1試合 / 全5試合</strong>
+    <button type="button" data-action="next" aria-label="次の試合">つぎ →</button>
+  </div>
+  <div class="gomasu-pb-court" aria-label="ダブルスの組み合わせ">
+    <div class="gomasu-pb-team"><span class="gomasu-pb-team-label">チーム A</span><div data-role="team-a"></div></div>
+    <div class="gomasu-pb-net" aria-hidden="true">NET</div>
+    <div class="gomasu-pb-team"><span class="gomasu-pb-team-label">チーム B</span><div data-role="team-b"></div></div>
+  </div>
+  <p class="gomasu-pb-rest">☕ お休み：<strong data-role="rest"></strong></p>
+  <div class="gomasu-pb-controls gomasu-pb-progress">
+    <button type="button" data-action="reset">最初から ↺</button>
+    <span data-role="summary" aria-live="polite"></span>
+  </div>
+  <div class="gomasu-pb-counts">
+    <h3>ここまでの記録</h3>
+    <p>各住人の「出場 / お休み」と、出会ったパートナーの数を数えます。</p>
+    <div data-role="counts"></div>
+  </div>
+  <div class="gomasu-pb-reveal" data-role="reveal" hidden>
+    <strong>🎉 5試合、終了！</strong>
+    <p>全員が <strong>4回出場・1回休憩</strong>。パートナーは全員と1回ずつ、対戦相手は全員と2回ずつ！</p>
+    <p>しきりやおばさん：「ほら、ちゃんと公平でしょう？」</p>
+    <p>まんなかおじさん：「……次はおやつの順番もお願いします。」</p>
+  </div>
+</div>
+<style>
+.gomasu-pb{--pb-ink:#302b32;--pb-line:#d9d7d3;color:var(--pb-ink);max-width:740px;margin:1.5rem auto;padding:1rem;border:1px solid var(--pb-line);border-radius:18px;background:#fffdf8}
+.gomasu-pb *{box-sizing:border-box}
+.gomasu-pb-controls{display:flex;align-items:center;justify-content:space-between;gap:.5rem;flex-wrap:wrap}
+.gomasu-pb button{border:1px solid #a7a5a1;border-radius:999px;background:white;color:var(--pb-ink);padding:.55rem .85rem;cursor:pointer;font:inherit}
+.gomasu-pb button:hover:not(:disabled){background:#f5f0e6}
+.gomasu-pb button:focus-visible{outline:3px solid #335d4c;outline-offset:2px}
+.gomasu-pb button:disabled{opacity:.35;cursor:not-allowed}
+.gomasu-pb-court{display:grid;grid-template-columns:1fr 2rem 1fr;min-height:175px;margin:1rem 0;border:3px solid white;outline:2px solid #4b9989;border-radius:6px;background:#78b9a7;overflow:hidden}
+.gomasu-pb-team{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.6rem;padding:.7rem .3rem;text-align:center}
+.gomasu-pb-team-label{font-size:.8rem;font-weight:700}
+.gomasu-pb-net{display:flex;align-items:center;justify-content:center;writing-mode:vertical-rl;letter-spacing:.2em;border-inline:2px dashed #fff;background:#507c74;color:white;font-size:.7rem}
+.gomasu-pb-players{display:flex;justify-content:center;flex-wrap:wrap;gap:.45rem}
+.gomasu-pb-player{display:inline-flex;align-items:center;justify-content:center;min-width:3rem;min-height:3rem;border-radius:12px;border:1px solid #ffffffaa;font-size:.88rem;font-weight:700}
+.gomasu-pb-player small{display:block;font-size:.68rem;font-weight:400}
+.gomasu-pb-rest{text-align:center;margin:.8rem 0}
+.gomasu-pb-progress{font-size:.86rem}
+.gomasu-pb-counts{margin-top:1.25rem}
+.gomasu-pb-counts h3{font-size:1.1rem}
+.gomasu-pb-counts p{font-size:.88rem}
+.gomasu-pb-counts table{width:100%;font-size:.82rem;border-collapse:collapse}
+.gomasu-pb-counts th,.gomasu-pb-counts td{padding:.45rem .25rem;text-align:center;border-bottom:1px solid var(--pb-line)}
+.gomasu-pb-counts th:first-child,.gomasu-pb-counts td:first-child{text-align:left}
+.gomasu-pb-reveal{margin-top:1rem;padding:1rem;border-radius:12px;background:#eef7e9}
+.gomasu-pb-reveal[hidden]{display:none}
+@media(max-width:430px){.gomasu-pb{padding:.7rem}.gomasu-pb-player{min-width:2.4rem;min-height:2.6rem;font-size:.78rem}.gomasu-pb-controls{font-size:.86rem}.gomasu-pb-counts table{font-size:.72rem}}
+</style>
+<script>
+(() => {
+  const root = document.getElementById("gomasu-pb-five");
+  if (!root || root.dataset.ready) return;
+  root.dataset.ready = "true";
+  const people = [
+    { id:"X", name:"まんなか", color:"#F0B6DF" },
+    { id:"I", name:"まっすぐ", color:"#FDCFAB" },
+    { id:"U", name:"ぎゅー", color:"#85D7EF" },
+    { id:"T", name:"しきりや", color:"#76E1D7" },
+    { id:"Y", name:"はみだし", color:"#FFAFD0" }
+  ];
+  // Cyclic whist schedule for five players.
+  // Round r: rest r, partner (r+1,r-1) and (r+2,r-2), modulo 5.
+  const mod = n => (n + 5) % 5;
+  const rounds = people.map((_,r) => ({
+    rest:r,
+    teams:[[mod(r+1),mod(r-1)],[mod(r+2),mod(r-2)]]
+  }));
+  let current = 0;
+  const el = role => root.querySelector('[data-role="' + role + '"]');
+  const pairKey = (a,b) => [a,b].sort((x,y)=>x-y).join("-");
+  const badge = i => {
+    const p=people[i];
+    const span=document.createElement("span");
+    span.className="gomasu-pb-player";
+    span.style.background=p.color;
+    span.textContent=p.id;
+    span.title=p.name;
+    span.setAttribute("aria-label",p.name+" ("+p.id+")");
+    return span;
+  };
+  function render() {
+    const round=rounds[current];
+    el("round").textContent="第"+(current+1)+"試合 / 全5試合";
+    for(const [index,role] of ["team-a","team-b"].entries()){
+      const target=el(role);
+      target.replaceChildren();
+      const wrapper=document.createElement("div");
+      wrapper.className="gomasu-pb-players";
+      round.teams[index].forEach(i=>wrapper.append(badge(i)));
+      target.append(wrapper);
+    }
+    el("rest").textContent=people[round.rest].name+" ("+people[round.rest].id+")";
+    const played=Array(5).fill(0), rested=Array(5).fill(0);
+    const partners=Array.from({length:5},()=>new Set());
+    const opponents=Array.from({length:5},()=>new Map());
+    for(const game of rounds.slice(0,current+1)){
+      rested[game.rest]++;
+      for(const team of game.teams){
+        team.forEach(i=>played[i]++);
+        partners[team[0]].add(team[1]); partners[team[1]].add(team[0]);
+      }
+      for(const a of game.teams[0])for(const b of game.teams[1]){
+        opponents[a].set(b,(opponents[a].get(b)||0)+1);
+        opponents[b].set(a,(opponents[b].get(a)||0)+1);
+      }
+    }
+    const table=document.createElement("table");
+    table.innerHTML="<thead><tr><th>住人</th><th>出場</th><th>お休み</th><th>組んだ人数</th></tr></thead>";
+    const tbody=document.createElement("tbody");
+    people.forEach((p,i)=>{
+      const tr=document.createElement("tr");
+      [p.id+" "+p.name,played[i],rested[i],partners[i].size+" / 4"].forEach(value=>{
+        const td=document.createElement("td");td.textContent=value;tr.append(td);
+      });
+      tbody.append(tr);
+    });
+    table.append(tbody);
+    el("counts").replaceChildren(table);
+    el("summary").textContent="ここまで "+(current+1)+" / 5 試合";
+    root.querySelector('[data-action="prev"]').disabled=current===0;
+    root.querySelector('[data-action="next"]').disabled=current===rounds.length-1;
+    const finished=current===rounds.length-1;
+    const valid=played.every(n=>n===4)&&rested.every(n=>n===1)&&partners.every(s=>s.size===4)&&opponents.every(m=>m.size===4&&[...m.values()].every(n=>n===2));
+    el("reveal").hidden=!(finished&&valid);
+  }
+  root.querySelector('[data-action="prev"]').addEventListener("click",()=>{current=Math.max(0,current-1);render();});
+  root.querySelector('[data-action="next"]').addEventListener("click",()=>{current=Math.min(rounds.length-1,current+1);render();});
+  root.querySelector('[data-action="reset"]').addEventListener("click",()=>{current=0;render();});
+  render();
+})();
+</script>
+:::
+
+::: {.callout-note collapse="true"}
+## 豆知識：なぜ5試合で足りるの？
+
+5人から2人を選ぶパートナーの組み合わせは、**10組**です。
+
+\[
+\binom{5}{2}=10
+\]
+
+ダブルス1試合には2組のパートナーが登場するので、5試合でちょうど10組。
+
+この組み合わせ表では、**10組すべてが1回ずつ**登場します。
+
+さらに、1試合で対戦相手の組み合わせは4組。5試合では延べ20組になります。10通りの相手ペアが**2回ずつ**対戦するように並べられています。
+
+こうしたバランスのよいダブルスの組み合わせは、英語で *whist tournament* と呼ばれることがあります。
+
+ただし、これは**組み合わせの公平さ**のお話。試合時間が違えば、実際のプレー時間まで等しくなるとは限りません。
+:::
+
+
 ### 次回予告
 
 「楽しそう！ 私も入っていい？」
