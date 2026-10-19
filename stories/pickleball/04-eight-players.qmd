@@ -25,9 +25,13 @@ format:
 
 **2面目のコートができたのです。**
 
-「やったー！ これでみんな遊べる？」とはみだしくん。
+「やったー！」とはみだしくん。
 
-「まだ7人ですよ。」と、しきりやおばさん。
+「これで、みんな遊べる？」と、ぎゅーおばさん。
+
+「まだ7人です。」と、しきりやおばさん。
+
+そのとき、
 
 「こんにちはー！」
 
@@ -35,65 +39,731 @@ format:
 
 「私も入っていい？」
 
-「**ちょうど8人！** 4人ずつ、2面でダブルスができます。」と、しきりやおばさん。
+しきりやおばさんは、すぐに数えました。
 
-「つまり、お休みはゼロ！」とはみだしくん。
+「いち、に、さん、し、ご、ろく、しち、はち。  
+**ちょうど8人です。**」
 
-まんなかおじさんは、少し残念そうでした。
+「ということは？」とはみだしくん。
 
-「……おやつ休憩もゼロですか？」
+「**4人ずつ、2面で同時にダブルスができます。  
+つまり、今日は全員出場です。**」
 
-「休みたい人は、休んでもいいんですよ。」と、ぎゅーおばさん。
+「お休みはゼロ……？」と、まんなかおじさん。
 
-「でも、そうすると7人に戻ります。」と、しきりやおばさん。
+「大きなお休みはゼロですね。」と、ぎゅーおばさん。
 
-まんなかおじさんは、パドルを持ち直しました。
+「でも、片方のコートが先に終わいたら、4人は少し待つことになります。」と、しきりやおばさん。
 
-「……じゃあ、先に遊びましょう。」
+まんなかおじさんの顔が、少し明るくなりました。
 
-「その前に！」と、しきりやおばさん。
+「……それは休憩に入りますか？」
 
-「今度は**誰と組むか**です。8人なら28通り。7ラウンドで全員と1回ずつ組めます。」
+「場合によります。」
 
-しきりやおばさんは、新しい組み合わせ表を広げました。
+「よかったような、よくないような。」
+
+しきりやおばさんは、紙を広げました。
+
+「そして今度は、**誰と組むか**を考えます。」
+
+「また表ですか？」とはみだしくん。
+
+「8人なら、2人組の作り方は **28通り**。  
+2面でダブルスをすれば、1ラウンドで **4組** のペアができます。」
+
+「つまり？」と、かどっこおばさん。
+
+「**7ラウンドで、全員がほかの7人全員と1回ずつペアになれるんです。**」
 
 「すごい！」とはみだしくん。
 
-そして、さっそくコートに走っていきました。
-
-「……表も見てください。」
-
-誰も戻ってきません。
-
-まんなかおじさんが言いました。
-
-「最初のペアだけ決めて、まず遊びませんか？」
+「じゃあ、最初の組だけ決めて、まず遊びましょう。」と、まんなかおじさん。
 
 しきりやおばさんは、少し考えました。
 
-「……そうですね。」
+「……それがよさそうですね。」
 
-8人全員が、2面のコートに入りました。
+8人全員が、2面のコートへ走り出しました。
+
 ---
 
 ## みんなで考えてみよう
 
 **8人・2面なら、全員が同時に遊べます。**
 
-5人から7人までは「だれがお休みする？」が大問題でした。
+5人から7人までは「だれがお休みする？」が大問題でした。  
+でも、8人になると、その問題はいったん消えます。
 
-8人になると、その問題はいったん消えます。
+その代わり、今度のテーマは **パートナーの組み方** です。
 
 ::: {.callout-tip}
 ## 8人になると、何が変わる？
 
-- **7人・1面：** 4人プレー、3人お休み。
-- **8人・2面：** 8人プレー、0人お休み。
+- **7人・1面：** 4人プレー、3人お休み
+- **8人・2面：** 8人プレー、0人お休み
 
-1人増えただけなのに、コートも増えたことで、**同時に遊べる人数が2倍**になりました。
+1人増えただけなのに、コートも増えたことで、  
+**同時に遊べる人数が2倍** になりました。
 
-ただし、2面目が使えることが条件です！
+そして、7ラウンドあれば、**全員が全員と1回ずつペア** になれます。
 :::
+
+## しきりやおばさんの 7ラウンド表
+
+下のボタンで、1ラウンドずつ見てみよう。
+
+- コートA と コートB に分かれてプレーします
+- 毎ラウンド、4組のペアが登場します
+- 7ラウンド終わると、**28組すべて** がそろいます
+
+```{=html}
+<div class="gomasu-pb" id="gomasu-pb-eight">
+  <div class="gomasu-pb-controls">
+    <button type="button" data-action="prev" aria-label="前のラウンド">← まえ</button>
+    <strong data-role="round" aria-live="polite">第1ラウンド / 全7ラウンド</strong>
+    <button type="button" data-action="next" aria-label="次のラウンド">つぎ →</button>
+  </div>
+
+  <p class="gomasu-pb-mode-caption" data-role="caption" aria-live="polite"></p>
+
+  <div class="gomasu-pb-two-courts">
+    <section class="gomasu-pb-court-card">
+      <h3>コート A</h3>
+      <div class="gomasu-pb-court">
+        <div class="gomasu-pb-team">
+          <span class="gomasu-pb-team-label">チーム A</span>
+          <div data-role="team-a"></div>
+        </div>
+        <div class="gomasu-pb-net" aria-hidden="true">NET</div>
+        <div class="gomasu-pb-team">
+          <span class="gomasu-pb-team-label">チーム B</span>
+          <div data-role="team-b"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="gomasu-pb-court-card">
+      <h3>コート B</h3>
+      <div class="gomasu-pb-court">
+        <div class="gomasu-pb-team">
+          <span class="gomasu-pb-team-label">チーム C</span>
+          <div data-role="team-c"></div>
+        </div>
+        <div class="gomasu-pb-net" aria-hidden="true">NET</div>
+        <div class="gomasu-pb-team">
+          <span class="gomasu-pb-team-label">チーム D</span>
+          <div data-role="team-d"></div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <p class="gomasu-pb-rest-note" data-role="rest-note" aria-live="polite"></p>
+
+  <div class="gomasu-pb-stat-grid">
+    <div class="gomasu-pb-stat-card">
+      <strong data-role="pair-count">0 / 28</strong>
+      <span>出てきたパートナー組</span>
+    </div>
+    <div class="gomasu-pb-stat-card">
+      <strong data-role="play-count">0 / 7</strong>
+      <span>全員の出場ラウンド数</span>
+    </div>
+  </div>
+
+  <div class="gomasu-pb-controls gomasu-pb-progress">
+    <button type="button" data-action="reset">最初から ↺</button>
+    <span data-role="summary" aria-live="polite"></span>
+  </div>
+
+  <div class="gomasu-pb-counts">
+    <h3>ここまでの記録</h3>
+    <p>各住人が、だれと何人組んだかを数えます。</p>
+    <div data-role="counts"></div>
+  </div>
+
+  <div class="gomasu-pb-pair-board">
+    <h3>28組のパートナー</h3>
+    <p>出てきた組は色つきで表示されます。今のラウンドの4組は、少し強調されます。</p>
+    <div data-role="pairs" class="gomasu-pb-pairs"></div>
+  </div>
+
+  <div class="gomasu-pb-reveal" data-role="reveal" hidden></div>
+</div>
+```
+
+<style>
+.gomasu-pb{
+  --pb-ink:#302b32;
+  --pb-line:#d9d7d3;
+  --pb-bg:#fffdf8;
+  --pb-court:#78b9a7;
+  --pb-court-dark:#507c74;
+  color:var(--pb-ink);
+  max-width:920px;
+  margin:1.5rem auto;
+  padding:1rem;
+  border:1px solid var(--pb-line);
+  border-radius:18px;
+  background:var(--pb-bg);
+}
+.gomasu-pb *{box-sizing:border-box}
+
+.gomasu-pb-controls{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:.5rem;
+  flex-wrap:wrap;
+}
+.gomasu-pb button{
+  border:1px solid #a7a5a1;
+  border-radius:999px;
+  background:white;
+  color:var(--pb-ink);
+  padding:.55rem .9rem;
+  cursor:pointer;
+  font:inherit;
+}
+.gomasu-pb button:hover:not(:disabled){background:#f5f0e6}
+.gomasu-pb button:focus-visible{
+  outline:3px solid #335d4c;
+  outline-offset:2px;
+}
+.gomasu-pb button:disabled{opacity:.35;cursor:not-allowed}
+
+.gomasu-pb-mode-caption{
+  margin:.35rem auto 1rem;
+  text-align:center;
+  font-size:.92rem;
+}
+
+.gomasu-pb-two-courts{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:1rem;
+  margin:1rem 0;
+}
+.gomasu-pb-court-card h3{
+  margin:0 0 .45rem;
+  font-size:1.02rem;
+  text-align:center;
+}
+.gomasu-pb-court{
+  display:grid;
+  grid-template-columns:1fr 2rem 1fr;
+  min-height:190px;
+  border:3px solid white;
+  outline:2px solid #4b9989;
+  border-radius:6px;
+  background:var(--pb-court);
+  overflow:hidden;
+}
+.gomasu-pb-team{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:.7rem;
+  padding:.7rem .3rem;
+  text-align:center;
+}
+.gomasu-pb-team-label{
+  font-size:.8rem;
+  font-weight:700;
+}
+.gomasu-pb-net{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  writing-mode:vertical-rl;
+  letter-spacing:.2em;
+  border-inline:2px dashed #fff;
+  background:var(--pb-court-dark);
+  color:white;
+  font-size:.7rem;
+}
+
+.gomasu-pb-players{
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  flex-wrap:wrap;
+  gap:.45rem;
+}
+.gomasu-pb-player{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:.2rem;
+  min-width:5rem;
+  color:#302b32;
+}
+.gomasu-pb-player-name{
+  font-size:.69rem;
+  font-weight:700;
+  line-height:1.3;
+  white-space:nowrap;
+}
+.gomasu-pb-avatar{
+  width:72px;
+  height:72px;
+  display:block;
+  overflow:visible;
+  filter:drop-shadow(0 2px 1px #33443322);
+}
+.gomasu-pb-avatar.is-small{
+  width:42px;
+  height:42px;
+}
+.gomasu-pb-avatar .pento-tile{
+  stroke:#302b32;
+  stroke-width:.65;
+  stroke-linejoin:round;
+}
+
+.gomasu-pb-rest-note{
+  text-align:center;
+  margin:.85rem 0;
+  min-height:1.6em;
+  font-size:.92rem;
+}
+
+.gomasu-pb-stat-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:.7rem;
+  margin:1rem 0;
+}
+.gomasu-pb-stat-card{
+  border:1px solid var(--pb-line);
+  border-radius:12px;
+  background:white;
+  padding:.8rem;
+  text-align:center;
+}
+.gomasu-pb-stat-card strong{
+  display:block;
+  font-size:1.05rem;
+}
+.gomasu-pb-stat-card span{
+  display:block;
+  font-size:.8rem;
+  margin-top:.2rem;
+}
+
+.gomasu-pb-progress{
+  font-size:.88rem;
+}
+
+.gomasu-pb-counts{
+  margin-top:1.25rem;
+}
+.gomasu-pb-counts h3,
+.gomasu-pb-pair-board h3{
+  font-size:1.08rem;
+}
+.gomasu-pb-counts p,
+.gomasu-pb-pair-board p{
+  font-size:.88rem;
+}
+.gomasu-pb-counts table{
+  width:100%;
+  font-size:.82rem;
+  border-collapse:collapse;
+}
+.gomasu-pb-counts th,
+.gomasu-pb-counts td{
+  padding:.45rem .25rem;
+  text-align:center;
+  border-bottom:1px solid var(--pb-line);
+}
+.gomasu-pb-counts th:first-child,
+.gomasu-pb-counts td:first-child{
+  text-align:left;
+}
+
+.gomasu-pb-pair-board{
+  margin-top:1.25rem;
+}
+.gomasu-pb-pairs{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:.55rem;
+}
+.gomasu-pb-pair-card{
+  border:1px solid var(--pb-line);
+  border-radius:12px;
+  background:#f7f6f2;
+  padding:.4rem .25rem;
+  opacity:.38;
+  transition:opacity .2s ease, background .2s ease;
+}
+.gomasu-pb-pair-card.is-seen{
+  opacity:1;
+  background:#fff;
+}
+.gomasu-pb-pair-card.is-new{
+  outline:2px solid #335d4c;
+  outline-offset:1px;
+}
+.gomasu-pb-pair-card .gomasu-pb-players{
+  flex-wrap:nowrap;
+  gap:.12rem;
+}
+.gomasu-pb-pair-card .gomasu-pb-player{
+  min-width:0;
+  flex:1;
+}
+.gomasu-pb-pair-card .gomasu-pb-player-name{
+  font-size:.54rem;
+}
+.gomasu-pb-pair-label{
+  margin:.05rem 0 .2rem;
+  text-align:center;
+  font-size:.68rem;
+  color:#5d5d5d;
+}
+
+.gomasu-pb-reveal{
+  margin-top:1rem;
+  padding:1rem;
+  border-radius:12px;
+  background:#eef7e9;
+}
+.gomasu-pb-reveal[hidden]{display:none}
+
+@media (max-width: 760px){
+  .gomasu-pb-two-courts{grid-template-columns:1fr}
+}
+@media (max-width: 620px){
+  .gomasu-pb-pairs{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media (max-width: 560px){
+  .gomasu-pb-stat-grid{grid-template-columns:1fr}
+}
+@media (max-width: 430px){
+  .gomasu-pb{padding:.7rem}
+  .gomasu-pb-player{min-width:3.7rem}
+  .gomasu-pb-avatar{width:54px;height:54px}
+  .gomasu-pb-player-name{font-size:.58rem}
+  .gomasu-pb-pair-card .gomasu-pb-avatar.is-small{width:34px;height:34px}
+  .gomasu-pb-pairs{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .gomasu-pb-counts table{font-size:.72rem}
+}
+</style>
+
+<script>
+(() => {
+  const root = document.getElementById("gomasu-pb-eight");
+  if (!root || root.dataset.ready) return;
+  root.dataset.ready = "true";
+
+  const people = [
+    { id:"X", name:"まんなか", color:"#F0B6DF" },
+    { id:"I", name:"まっすぐ", color:"#FDCFAB" },
+    { id:"U", name:"ぎゅー", color:"#85D7EF" },
+    { id:"T", name:"しきりや", color:"#76E1D7" },
+    { id:"Y", name:"はみだし", color:"#FFAFD0" },
+    { id:"P", name:"ぎゅっと", color:"#6BB091" },
+    { id:"N", name:"ずらし", color:"#D2E3AD" },
+    { id:"V", name:"かどっこ", color:"#A9C7E9" }
+  ];
+
+  const cells = {
+    X:[[1,0],[0,1],[1,1],[2,1],[1,2]],
+    I:[[1,0],[1,1],[1,2],[1,3],[1,4]],
+    U:[[0,0],[2,0],[0,1],[1,1],[2,1]],
+    T:[[0,0],[1,0],[2,0],[1,1],[1,2]],
+    Y:[[1,0],[1,1],[0,2],[1,2],[1,3]],
+    P:[[0,0],[1,0],[0,1],[1,1],[0,2]],
+    N:[[0,0],[1,0],[1,1],[2,1],[2,2]],
+    V:[[0,0],[0,1],[0,2],[1,2],[2,2]]
+  };
+
+  // 7 rounds covering all 28 partner pairs exactly once
+  const rounds = [
+    { courtA:[[0,7],[1,6]], courtB:[[2,5],[3,4]] },
+    { courtA:[[0,6],[7,5]], courtB:[[1,4],[2,3]] },
+    { courtA:[[0,5],[6,4]], courtB:[[7,3],[1,2]] },
+    { courtA:[[0,4],[5,3]], courtB:[[6,2],[7,1]] },
+    { courtA:[[0,3],[4,2]], courtB:[[5,1],[6,7]] },
+    { courtA:[[0,2],[3,1]], courtB:[[4,7],[5,6]] },
+    { courtA:[[0,1],[2,7]], courtB:[[3,6],[4,5]] }
+  ];
+
+  const microRestNotes = [
+    "もしコートAが少し早く終わけば、その4人は次のラウンドまでちょっとひと休みできます。",
+    "もしコートBが先に終わけば、その4人は少しだけ待ち時間があります。",
+    "2面あっても、終わるタイミングは毎回ぴったり同じとは限りません。",
+    "まんなかおじさんは、こういう小さな待ち時間も見逃しません。",
+    "今日は全員出場。でも、“小休止” は試合の長さしだいで生まれることがあります。",
+    "大きなお休みはゼロでも、小さな休憩はゼロとは限りません。",
+    "しきりやおばさん『ペアは公平。待ち時間は、また別問題です。』"
+  ];
+
+  let current = 0;
+
+  const ns = "http://www.w3.org/2000/svg";
+  const el = role => root.querySelector('[data-role="' + role + '"]');
+  const pairKey = (a,b) => [a,b].sort((x,y)=>x-y).join("-");
+
+  const allPairs = [];
+  for (let i = 0; i < people.length; i++) {
+    for (let j = i + 1; j < people.length; j++) {
+      allPairs.push([i, j]);
+    }
+  }
+
+  const svgEl = (tag, attrs={}) => {
+    const node = document.createElementNS(ns, tag);
+    Object.entries(attrs).forEach(([key, value]) => {
+      node.setAttribute(key, String(value));
+    });
+    return node;
+  };
+
+  function avatar(player, options = {}) {
+    const squares = cells[player.id];
+    const xs = squares.map(c => c[0]);
+    const ys = squares.map(c => c[1]);
+    const minX = Math.min(...xs), minY = Math.min(...ys);
+    const cols = Math.max(...xs) - minX + 1;
+    const rows = Math.max(...ys) - minY + 1;
+
+    const svg = svgEl("svg", {
+      viewBox: "-3 -3 " + (cols * 18 + 6) + " " + (rows * 18 + 6),
+      class: "gomasu-pb-avatar" + (options.small ? " is-small" : ""),
+      role: "img",
+      "aria-label": player.name + "のペントミノ"
+    });
+
+    squares.forEach(([x, y]) => {
+      svg.append(svgEl("rect", {
+        x: (x - minX) * 18 + .5,
+        y: (y - minY) * 18 + .5,
+        width: 17,
+        height: 17,
+        rx: 3,
+        fill: player.color,
+        class: "pento-tile"
+      }));
+    });
+
+    const faceLookup = {
+      X:[1,1],
+      I:[1,1],
+      U:[1,1],
+      T:[1,1],
+      Y:[1,1],
+      P:[0,1],
+      N:[1,1],
+      V:[0,1]
+    };
+
+    const [fxCell, fyCell] = faceLookup[player.id];
+    const fx = (fxCell - minX) * 18 + 9;
+    const fy = (fyCell - minY) * 18 + 9;
+    const ink = "#302b32";
+
+    svg.append(svgEl("circle", { cx: fx - 3.1, cy: fy - 2, r: 1.2, fill: ink }));
+    svg.append(svgEl("circle", { cx: fx + 3.1, cy: fy - 2, r: 1.2, fill: ink }));
+
+    if (options.snack) {
+      svg.append(svgEl("ellipse", { cx: fx, cy: fy + 3.8, rx: 2.2, ry: 2.8, fill: ink }));
+    } else {
+      svg.append(svgEl("path", {
+        d: "M " + (fx - 3.2) + " " + (fy + 2.7) + " Q " + fx + " " + (fy + 6.8) + " " + (fx + 3.2) + " " + (fy + 2.7),
+        fill: "none",
+        stroke: ink,
+        "stroke-width": 1.2,
+        "stroke-linecap": "round"
+      }));
+    }
+
+    return svg;
+  }
+
+  function badge(index, options = {}) {
+    const p = people[index];
+    const holder = document.createElement("span");
+    holder.className = "gomasu-pb-player";
+    holder.title = p.name + " (" + p.id + ")";
+    holder.append(avatar(p, options));
+
+    if (!options.iconOnly) {
+      const label = document.createElement("span");
+      label.className = "gomasu-pb-player-name";
+      label.textContent = p.name;
+      holder.append(label);
+    }
+
+    return holder;
+  }
+
+  function renderCourt(role1, role2, pair1, pair2) {
+    const target1 = el(role1);
+    const target2 = el(role2);
+
+    const wrap1 = document.createElement("div");
+    wrap1.className = "gomasu-pb-players";
+    pair1.forEach(i => wrap1.append(badge(i, { snack: i === 0 && current === rounds.length - 1 })));
+
+    const wrap2 = document.createElement("div");
+    wrap2.className = "gomasu-pb-players";
+    pair2.forEach(i => wrap2.append(badge(i)));
+
+    target1.replaceChildren(wrap1);
+    target2.replaceChildren(wrap2);
+  }
+
+  function statsFor(partialRounds) {
+    const played = Array(people.length).fill(0);
+    const partners = Array.from({ length: people.length }, () => new Set());
+    const seenPairs = new Set();
+
+    partialRounds.forEach(round => {
+      [round.courtA, round.courtB].forEach(match => {
+        match.forEach(pair => {
+          pair.forEach(i => played[i]++);
+          partners[pair[0]].add(pair[1]);
+          partners[pair[1]].add(pair[0]);
+          seenPairs.add(pairKey(pair[0], pair[1]));
+        });
+      });
+    });
+
+    return { played, partners, seenPairs };
+  }
+
+  function renderCounts(played, partners) {
+    const table = document.createElement("table");
+    table.innerHTML = "<thead><tr><th>住人</th><th>出場</th><th>組んだ人数</th></tr></thead>";
+    const tbody = document.createElement("tbody");
+
+    people.forEach((p, i) => {
+      const tr = document.createElement("tr");
+      [p.id + " " + p.name, played[i], partners[i].size + " / 7"].forEach(value => {
+        const td = document.createElement("td");
+        td.textContent = value;
+        tr.append(td);
+      });
+      tbody.append(tr);
+    });
+
+    table.append(tbody);
+    el("counts").replaceChildren(table);
+  }
+
+  function renderPairs(seenPairs, currentPairs) {
+    const target = el("pairs");
+    const frag = document.createDocumentFragment();
+
+    allPairs.forEach(([a,b]) => {
+      const card = document.createElement("div");
+      const key = pairKey(a,b);
+      card.className = "gomasu-pb-pair-card";
+      if (seenPairs.has(key)) card.classList.add("is-seen");
+      if (currentPairs.has(key)) card.classList.add("is-new");
+
+      const label = document.createElement("p");
+      label.className = "gomasu-pb-pair-label";
+      label.textContent = people[a].id + " + " + people[b].id;
+
+      const players = document.createElement("div");
+      players.className = "gomasu-pb-players";
+      players.append(badge(a, { small:true }));
+      players.append(badge(b, { small:true }));
+
+      card.append(label, players);
+      frag.append(card);
+    });
+
+    target.replaceChildren(frag);
+  }
+
+  function render() {
+    const round = rounds[current];
+    el("round").textContent = "第" + (current + 1) + "ラウンド / 全7ラウンド";
+    el("caption").textContent =
+      "このラウンドでは、4組の新しいペアが登場します。7ラウンドで28組すべてがそろいます。";
+
+    renderCourt("team-a", "team-b", round.courtA[0], round.courtA[1]);
+    renderCourt("team-c", "team-d", round.courtB[0], round.courtB[1]);
+
+    el("rest-note").textContent = microRestNotes[current];
+
+    const partial = statsFor(rounds.slice(0, current + 1));
+    renderCounts(partial.played, partial.partners);
+
+    const currentPairs = new Set([
+      pairKey(round.courtA[0][0], round.courtA[0][1]),
+      pairKey(round.courtA[1][0], round.courtA[1][1]),
+      pairKey(round.courtB[0][0], round.courtB[0][1]),
+      pairKey(round.courtB[1][0], round.courtB[1][1])
+    ]);
+    renderPairs(partial.seenPairs, currentPairs);
+
+    el("pair-count").textContent = partial.seenPairs.size + " / 28";
+    el("play-count").textContent = (current + 1) + " / 7";
+    el("summary").textContent = "ここまで " + (current + 1) + " / 7 ラウンド";
+
+    root.querySelector('[data-action="prev"]').disabled = current === 0;
+    root.querySelector('[data-action="next"]').disabled = current === rounds.length - 1;
+
+    const reveal = el("reveal");
+    const finished = current === rounds.length - 1;
+
+    if (!finished) {
+      reveal.hidden = true;
+      reveal.replaceChildren();
+      return;
+    }
+
+    reveal.hidden = false;
+    reveal.replaceChildren();
+
+    const strong = document.createElement("strong");
+    strong.textContent = "🎉 7ラウンド、完了！";
+    reveal.append(strong);
+
+    const p1 = document.createElement("p");
+    p1.innerHTML = "全員が <strong>7ラウンドすべて出場</strong>。大きなお休みはありません。";
+    reveal.append(p1);
+
+    const p2 = document.createElement("p");
+    p2.innerHTML = "そして、出てきたパートナーは <strong>28 / 28組</strong>。全員がほかの7人全員と、1回ずつペアになれました。";
+    reveal.append(p2);
+
+    const p3 = document.createElement("p");
+    p3.innerHTML = "ただし、試合が終わるタイミングまで完全に同じとは限りません。片方のコートが早く終わけば、その4人には少しだけ待ち時間が生まれます。";
+    reveal.append(p3);
+
+    const p4 = document.createElement("p");
+    p4.innerHTML = "まんなかおじさん：「その時間は、おやつ休憩に入りますか？」";
+    reveal.append(p4);
+  }
+
+  root.querySelector('[data-action="prev"]').addEventListener("click", () => {
+    current = Math.max(0, current - 1);
+    render();
+  });
+
+  root.querySelector('[data-action="next"]').addEventListener("click", () => {
+    current = Math.min(rounds.length - 1, current + 1);
+    render();
+  });
+
+  root.querySelector('[data-action="reset"]').addEventListener("click", () => {
+    current = 0;
+    render();
+  });
+
+  render();
+})();
+</script>
 
 ::: {.callout-note collapse="true"}
 ## 豆知識：28組を7ラウンドで
@@ -104,15 +774,21 @@ $$
 \binom{8}{2}=28
 $$
 
-2面でダブルスをすると、1ラウンドで4組のペアが登場します。
+あります。
+
+2面でダブルスをすると、1ラウンドで登場するパートナーは **4組**。
 
 $$
 28 \div 4 = 7
 $$
 
-そして8人の場合は、実際に**7ラウンドで28組を重複なく登場させる組み合わせ表**を作れます。
+だから、7ラウンドあれば、理論上は28組すべてを出せます。
 
-もちろん、これはパートナーの組み合わせの話。対戦相手のバランスや試合時間まで自動的に公平になるわけではありません。
+そして8人の場合は、実際に  
+**7ラウンドで28組を重複なく登場させる組み合わせ表** を作れます。
+
+ただし、これは **パートナーの公平さ** の話。  
+対戦相手の強さ、試合時間、片方のコートが先に終わるかどうか、まで自動的に公平になるわけではありません。
 :::
 
 ### 次回予告：ゼロ、ゼロ、ツー？
