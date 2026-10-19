@@ -68,50 +68,18 @@ format:
 </div>
 ``` 
 
-## みんなで背の順！
-
-測定が終わると、先生は全員を並ばせることにしました。
-
-「はい、背の低い順に並んでください。」
-
-「同じ身長だったら？」
-
-「横幅の小さい順です。」
-
-「それも同じだったら？」
-
-「……形のアルファベット順です。」
-
-「なんで？」
-
-「全員を一列に並べるには、何か決めないといけませんからね。」
-
-```{=html}
-
-<div class="measurement-ranking" id="measurement-ranking">
-  <p class="measurement-caption">ゴマス村・身長順の公式記録</p>
-  <p class="measurement-note">最初の姿勢で比較。順位は身長だけで決まり、同じ身長なら同順位。並び順は身長 → 横幅 → 形のアルファベット順です。</p>
-  <div class="measurement-sort-controls" role="group" aria-label="並び替え"><button type="button" id="sort-height" aria-pressed="true">身長順 ↕</button><button type="button" id="sort-width" aria-pressed="false">横幅順 ↔</button></div>
-  <p id="measurement-sort-note" class="measurement-note" aria-live="polite">身長で同順位、横幅で並び替えます。</p>
-  <div id="measurement-ranking-list" class="measurement-ranking-list"></div>
-</div>
-
-```
-
 
 ## ゴマス村の集合写真 📸
 
-背の順が決まったところで、今度は記念撮影です。
+身体測定が終わったところで、今度は記念撮影です。
 
 写真家「みなさん、頭の高さをそろえてくださーい！」
 
-「せっかく背の順に並んだのに？」
+「でも、みんな背の高さが違いますよ？」
 
-「写真では、そろっていたほうがいいんです。」
+「ご安心ください。踏み台を用意しました！」
 
-「じゃあ、なんのために並んだんですか？」
-
-「……では、踏み台を用意しましょう。」
+ところが、踏み台を並べてみると、今度は足元がでこぼこになりました。
 
 ```{=html}
 <div class="photo-session" id="photo-session">
