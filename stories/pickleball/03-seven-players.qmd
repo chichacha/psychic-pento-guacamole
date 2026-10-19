@@ -1,0 +1,338 @@
+---
+title: "休憩席が足りません。"
+subtitle: "ゴマス村ピックルボール部 · 第3話"
+format:
+  html:
+    toc: false
+    page-layout: full
+    css:
+      - ../../assets/css/story.css
+---
+
+::: {.pento-stories .pickleball-story}
+
+[← ピックルボール部へ](index.qmd) · [← 第2話](02-six-players.qmd)
+
+::: {.pento-story-hero}
+<span class="pento-eyebrow">PICKLEBALL CLUB · EPISODE 03</span>
+
+# 休憩席が足りません。🥒
+
+<div class="pento-story-deck">7人なのに、椅子は2つ。 🪑🪑</div>
+:::
+
+6人分の組み合わせ表が完成した、そのとき。
+
+「こんにちは。まだ入れますか？」
+
+ずらしくんが、コートのすみに立っていました。
+
+「もちろん！」と、ぎゅーおばさん。
+
+しきりやおばさんは、紙を裏返しました。
+
+「……また作り直しですね。」
+
+まんなかおじさんは、コートの横を見ていました。
+
+「それより、椅子が2つしかありません。」
+
+7人でダブルス。遊べるのは4人。**休むのは3人。**
+
+椅子は2つ。
+
+「ぼくは立っていてもいいですよ。」と、ずらしくん。
+
+「それじゃ休めないでしょう。」と、まんなかおじさん。
+
+「でも、みんなが遊べればいいです。」
+
+しきりやおばさんが言いました。
+
+「大事なのは、全員が同じ回数遊ぶことです。」
+
+「同じ回数、座れることも大事です。」と、まんなかおじさん。
+
+「……おやつのためですか？」
+
+「それもあります。」
+
+しきりやおばさんは、紙に大きく **7** と書きました。
+
+「全員が公平に遊ぶには、最低7試合です。」
+
+「7試合!?」とはみだしくん。
+
+「1人4試合。お休みは3回ずつ。」
+
+まんなかおじさんは、椅子を見つめました。
+
+「でも、椅子は2つですよね。」
+
+しきりやおばさんも、椅子を見ました。
+
+「……椅子の順番も考えましょう。」
+
+ずらしくんが、向こうの空き地を指さしました。
+
+「そもそも、みんなで遊べる場所が増えたら？」
+
+しきりやおばさんは、空き地を見ました。
+
+「コートが、もう1面あれば……」
+
+まだ、ただの空き地です。
+
+---
+
+## みんなで考えてみよう
+
+5人では毎試合1人、6人では2人、7人では3人がお休み。
+
+**人数が増えても、コートが1面なら同時に遊べるのは4人だけ。**
+
+::: {.callout-tip}
+## 7人が同じ回数だけ遊ぶには？
+
+7試合すると、出場枠は全部で **7 × 4 = 28枠**。
+
+7人で分ければ、**全員4試合ずつ**。
+
+お休み枠は **7 × 3 = 21枠**。こちらも7人で分けて、**全員3回ずつ**。
+
+これが、7人・1面のコートで、全員が同じ回数遊ぶための最短のまとまったローテーションです。
+:::
+
+## 椅子取りローテーションを見てみよう 🪑
+
+しきりやおばさんは、出場だけでなく、**座って休める回数**まで公平にすることにしました。
+
+ボタンを押して、7試合の変化を見てみよう。
+
+```{=html}
+<div class="gomasu-pb-seven" id="gomasu-pb-seven">
+  <div class="pb7-controls">
+    <button type="button" data-action="prev">← まえ</button>
+    <strong data-role="round" aria-live="polite">第1試合 / 全7試合</strong>
+    <button type="button" data-action="next">つぎ →</button>
+  </div>
+  <div class="pb7-court" aria-label="ピックルボールのコート">
+    <div class="pb7-side"><span>チーム A</span><div class="pb7-players" data-role="team-a"></div></div>
+    <div class="pb7-net" aria-hidden="true">NET</div>
+    <div class="pb7-side"><span>チーム B</span><div class="pb7-players" data-role="team-b"></div></div>
+  </div>
+  <div class="pb7-break">
+    <strong>お休みエリア：椅子は2つ 🪑🪑</strong>
+    <div class="pb7-seats">
+      <div class="pb7-seat"><span>🪑 座れた！</span><div data-role="seat-a"></div></div>
+      <div class="pb7-seat"><span>🪑 座れた！</span><div data-role="seat-b"></div></div>
+      <div class="pb7-seat pb7-standing"><span>👣 立ち休憩…</span><div data-role="standing"></div></div>
+    </div>
+    <p class="pb7-bubble" data-role="bubble" aria-live="polite"></p>
+  </div>
+  <div class="pb7-controls"><button type="button" data-action="reset">最初から ↺</button><span data-role="progress"></span></div>
+  <div class="pb7-stat"><strong data-role="count">2 / 21 組</strong><span>ここまでに登場したパートナーの組み合わせ</span></div>
+  <h3>7試合の出場・休憩カレンダー</h3>
+  <p class="pb7-explain">緑は出場、🪑 は座って休憩、👣 は立って休憩。今見ている試合の列を強調しています。</p>
+  <div class="pb7-table-wrap" data-role="attendance"></div>
+  <div class="pb7-result" data-role="result" hidden></div>
+  <h3>21組のパートナー図鑑</h3>
+  <p class="pb7-explain">登場したペアが色づきます。7試合で14組まで登場します。</p>
+  <div class="pb7-pair-grid" data-role="pairs"></div>
+</div>
+```
+
+<style>
+.gomasu-pb-seven{--pb7-ink:#302b32;--pb7-line:#d9d7d3;color:var(--pb7-ink);max-width:780px;margin:1.5rem auto;padding:1rem;background:#fffdf8;border:1px solid var(--pb7-line);border-radius:18px}
+.gomasu-pb-seven *{box-sizing:border-box}
+.gomasu-pb-seven button{font:inherit;border:1px solid #a7a5a1;border-radius:999px;background:#fff;padding:.55rem .9rem;color:inherit;cursor:pointer}
+.gomasu-pb-seven button:hover:not(:disabled){background:#f5f0e6}
+.gomasu-pb-seven button:focus-visible{outline:3px solid #335d4c;outline-offset:2px}
+.gomasu-pb-seven button:disabled{opacity:.35;cursor:not-allowed}
+.pb7-controls{display:flex;justify-content:space-between;align-items:center;gap:.5rem;flex-wrap:wrap;font-size:.88rem}
+.pb7-court{display:grid;grid-template-columns:minmax(0,1fr) 1.8rem minmax(0,1fr);background:#78b9a7;outline:2px solid #4b9989;border:3px solid white;border-radius:8px;min-height:200px;margin:1rem 0;overflow:hidden}
+.pb7-side{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:.65rem;padding:1rem .2rem;font-weight:700;font-size:.8rem;text-align:center}
+.pb7-net{display:flex;align-items:center;justify-content:center;writing-mode:vertical-rl;letter-spacing:.15em;border-inline:2px dashed #fff;background:#507c74;color:white;font-size:.7rem}
+.pb7-players{display:flex;justify-content:center;gap:.5rem;flex-wrap:wrap}
+.pb7-person{display:flex;flex-direction:column;align-items:center;gap:.15rem;min-width:3.3rem;text-align:center}
+.pb7-avatar{width:62px;height:72px;display:block;overflow:visible;filter:drop-shadow(0 2px 1px #33443322)}
+.pb7-name{font-size:.69rem;font-weight:700;white-space:nowrap}
+.pb7-break{text-align:center;margin:1.1rem 0}
+.pb7-seats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.5rem;margin:.7rem auto}
+.pb7-seat{background:#f5f1e6;border:1px solid var(--pb7-line);border-radius:13px;padding:.6rem .2rem;display:flex;flex-direction:column;align-items:center;gap:.3rem}
+.pb7-seat>span{font-size:.73rem;font-weight:700}
+.pb7-standing{background:#fcefe9;border-style:dashed}
+.pb7-bubble{min-height:2.2em;font-size:.85rem;margin:.6rem auto}
+.pb7-stat{background:#eaf6ef;border-radius:12px;padding:.8rem;text-align:center;margin:1rem auto;display:flex;gap:.5rem;flex-direction:column}
+.pb7-stat strong{font-size:1.2rem}
+.pb7-stat span{font-size:.8rem}
+.gomasu-pb-seven h3{font-size:1.05rem;margin-top:1.4rem}
+.pb7-explain{font-size:.86rem}
+.pb7-table-wrap{overflow-x:auto}
+.pb7-table{width:100%;border-collapse:separate;border-spacing:3px;text-align:center;font-size:.75rem;min-width:420px}
+.pb7-table th,.pb7-table td{padding:.4rem .2rem;border-radius:5px}
+.pb7-table thead th{background:#f0eee8}
+.pb7-table th:first-child{text-align:left;white-space:nowrap}
+.pb7-table td{background:#eee}
+.pb7-table td.is-playing{background:#b1dfc2}
+.pb7-table td.is-seated{background:#f8e5aa}
+.pb7-table td.is-standing{background:#f4c4ad}
+.pb7-table .is-current{outline:2px solid #335d4c;outline-offset:-2px}
+.pb7-table tfoot th,.pb7-table tfoot td{font-weight:700;background:#f3f0e8;font-size:.68rem}
+.pb7-result{background:#eef7e9;border-radius:12px;padding:1rem;margin:1rem 0;font-size:.9rem}
+.pb7-result[hidden]{display:none}
+.pb7-pair-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.5rem}
+.pb7-pair{border:1px solid var(--pb7-line);border-radius:11px;padding:.5rem .3rem;text-align:center;opacity:.38;background:#f4f2ec}
+.pb7-pair.is-seen{opacity:1;background:#fff}
+.pb7-pair.is-current{outline:2px solid #335d4c;outline-offset:0}
+.pb7-pair-icons{display:flex;align-items:center;justify-content:center;gap:.25rem}
+.pb7-pair .pb7-avatar{width:42px;height:46px}
+.pb7-pair .pb7-name{font-size:.6rem}
+.pb7-pair-label{font-size:.7rem;font-weight:700;margin-bottom:.2rem}
+@media(max-width:550px){.pb7-avatar{width:50px;height:58px}.pb7-name{font-size:.6rem}.pb7-pair-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.pb7-seats{gap:.25rem}.pb7-seat{padding:.45rem .1rem}.pb7-seat>span{font-size:.61rem}.gomasu-pb-seven{padding:.7rem}.pb7-pair .pb7-avatar{width:35px;height:40px}}
+</style>
+<script>
+(() => {
+  const root=document.getElementById('gomasu-pb-seven');
+  if(!root||root.dataset.ready)return;
+  root.dataset.ready='true';
+  const people=[
+    {id:'X',name:'まんなか',color:'#F0B6DF'},
+    {id:'I',name:'まっすぐ',color:'#FDCFAB'},
+    {id:'U',name:'ぎゅー',color:'#85D7EF'},
+    {id:'T',name:'しきりや',color:'#76E1D7'},
+    {id:'Y',name:'はみだし',color:'#FFAFD0'},
+    {id:'P',name:'ぎゅっと',color:'#6BB091'},
+    {id:'N',name:'ずらし',color:'#D2E3AD'}
+  ];
+  const cells={
+    X:[[1,0],[0,1],[1,1],[2,1],[1,2]],
+    I:[[1,0],[1,1],[1,2],[1,3],[1,4]],
+    U:[[0,0],[2,0],[0,1],[1,1],[2,1]],
+    T:[[0,0],[1,0],[2,0],[1,1],[1,2]],
+    Y:[[1,0],[1,1],[0,2],[1,2],[1,3]],
+    P:[[0,0],[1,0],[0,1],[1,1],[0,2]],
+    N:[[0,0],[0,1],[1,1],[1,2],[1,3]]
+  };
+  const mod=n=>(n+700)%7;
+  // In round r, r stands; r+3 and r-3 sit; the other four play.
+  // All 14 partner pairs are distinct; every person plays four rounds.
+  const rounds=people.map((_,r)=>({
+    standing:r,
+    seats:[mod(r+3),mod(r-3)],
+    teams:[[mod(r+1),mod(r-1)],[mod(r+2),mod(r-2)]]
+  }));
+  const byRole=role=>root.querySelector('[data-role="'+role+'"]');
+  const ns='http://www.w3.org/2000/svg';
+  const svgElement=(tag,attrs={})=>{
+    const el=document.createElementNS(ns,tag);
+    Object.entries(attrs).forEach(([k,v])=>el.setAttribute(k,String(v)));
+    return el;
+  };
+  function avatar(p,snack=false){
+    const cs=cells[p.id],xs=cs.map(x=>x[0]),ys=cs.map(x=>x[1]);
+    const minX=Math.min(...xs),minY=Math.min(...ys),w=Math.max(...xs)-minX+1,h=Math.max(...ys)-minY+1;
+    const svg=svgElement('svg',{viewBox:'-3 -3 '+(w*18+6)+' '+(h*18+6),class:'pb7-avatar',role:'img','aria-label':p.name+'のペントミノ'});
+    cs.forEach(([x,y])=>svg.append(svgElement('rect',{x:(x-minX)*18+.5,y:(y-minY)*18+.5,width:17,height:17,rx:3,fill:p.color,stroke:'#302b32','stroke-width':.65})));
+    const face={X:[1,1],I:[1,1],U:[1,1],T:[1,1],Y:[1,1],P:[0,1],N:[1,1]}[p.id];
+    const fx=(face[0]-minX)*18+9,fy=(face[1]-minY)*18+9;
+    svg.append(svgElement('circle',{cx:fx-3,cy:fy-2,r:1.2,fill:'#302b32'}));
+    svg.append(svgElement('circle',{cx:fx+3,cy:fy-2,r:1.2,fill:'#302b32'}));
+    if(snack){svg.append(svgElement('ellipse',{cx:fx,cy:fy+3.8,rx:2.1,ry:2.7,fill:'#302b32'}));}
+    else{svg.append(svgElement('path',{d:`M ${fx-3} ${fy+2.8} Q ${fx} ${fy+7} ${fx+3} ${fy+2.8}`,fill:'none',stroke:'#302b32','stroke-width':1.2,'stroke-linecap':'round'}));}
+    return svg;
+  }
+  function badge(i,snack=false){
+    const p=people[i],box=document.createElement('span');box.className='pb7-person';
+    box.append(avatar(p,snack));
+    const name=document.createElement('span');name.className='pb7-name';name.textContent=p.name;box.append(name);
+    return box;
+  }
+  const pairKey=(a,b)=>[a,b].sort((x,y)=>x-y).join('-');
+  const allPairs=[];
+  for(let a=0;a<7;a++)for(let b=a+1;b<7;b++)allPairs.push([a,b]);
+  let current=0;
+  function render(){
+    const game=rounds[current];
+    byRole('round').textContent='第'+(current+1)+'試合 / 全7試合';
+    for(const [k,role] of ['team-a','team-b'].entries())byRole(role).replaceChildren(...game.teams[k].map(i=>badge(i)));
+    byRole('seat-a').replaceChildren(badge(game.seats[0],game.seats[0]===0));
+    byRole('seat-b').replaceChildren(badge(game.seats[1],game.seats[1]===0));
+    byRole('standing').replaceChildren(badge(game.standing,game.standing===0));
+    const xInSeats=game.seats.includes(0),xStanding=game.standing===0;
+    byRole('bubble').textContent=xInSeats?'まんなかおじさん：「座って食べるおやつは格別です。🍪」':xStanding?'まんなかおじさん：「立ち食いのおやつも、悪くないです。🍪」':'まんなかおじさん：「次のおやつ休憩は、いつですか？」';
+    byRole('progress').textContent='ここまで '+(current+1)+' / 7 試合';
+    root.querySelector('[data-action="prev"]').disabled=current===0;
+    root.querySelector('[data-action="next"]').disabled=current===6;
+    const played=Array(7).fill(0),seated=Array(7).fill(0),stood=Array(7).fill(0),seen=new Set();
+    rounds.slice(0,current+1).forEach(g=>{
+      g.teams.flat().forEach(i=>played[i]++);
+      g.seats.forEach(i=>seated[i]++);
+      stood[g.standing]++;
+      g.teams.forEach(t=>seen.add(pairKey(...t)));
+    });
+    byRole('count').textContent=seen.size+' / 21 組';
+    const table=document.createElement('table');table.className='pb7-table';
+    const thead=document.createElement('thead'),hr=document.createElement('tr');
+    ['住人',...rounds.map((_,i)=>String(i+1)),'出場','座','立'].forEach((v,j)=>{const th=document.createElement('th');th.textContent=v;if(j===current+1)th.className='is-current';hr.append(th)});thead.append(hr);table.append(thead);
+    const tbody=document.createElement('tbody');
+    people.forEach((p,i)=>{
+      const tr=document.createElement('tr'),name=document.createElement('th');name.textContent=p.id+' '+p.name;tr.append(name);
+      rounds.forEach((g,r)=>{
+        const td=document.createElement('td');
+        if(g.standing===i){td.textContent='👣';td.className='is-standing';}
+        else if(g.seats.includes(i)){td.textContent='🪑';td.className='is-seated';}
+        else{td.textContent='●';td.className='is-playing';}
+        if(r===current)td.classList.add('is-current');tr.append(td);
+      });
+      [played[i],seated[i],stood[i]].forEach(n=>{const td=document.createElement('td');td.textContent=n;tr.append(td)});
+      tbody.append(tr);
+    });table.append(tbody);byRole('attendance').replaceChildren(table);
+    const pairs=document.createDocumentFragment(),roundPairs=new Set(game.teams.map(t=>pairKey(...t)));
+    allPairs.forEach(([a,b])=>{
+      const key=pairKey(a,b),card=document.createElement('div');card.className='pb7-pair';
+      if(seen.has(key))card.classList.add('is-seen');if(roundPairs.has(key))card.classList.add('is-current');
+      const label=document.createElement('div');label.className='pb7-pair-label';label.textContent=people[a].id+' + '+people[b].id;
+      const icons=document.createElement('div');icons.className='pb7-pair-icons';icons.append(badge(a),badge(b));card.append(label,icons);pairs.append(card);
+    });byRole('pairs').replaceChildren(pairs);
+    const result=byRole('result');result.hidden=current!==6;
+    if(current===6){result.textContent='🎉 全7試合終了！ 全員4回出場・3回休憩（座って2回、立って1回）。14組のパートナーが登場し、重複はありません。しきりやおばさん：「椅子の不公平も解決しました！」';}
+  }
+  root.querySelector('[data-action="prev"]').addEventListener('click',()=>{current=Math.max(0,current-1);render()});
+  root.querySelector('[data-action="next"]').addEventListener('click',()=>{current=Math.min(6,current+1);render()});
+  root.querySelector('[data-action="reset"]').addEventListener('click',()=>{current=0;render()});
+  render();
+})();
+</script>
+
+::: {.callout-note collapse="true"}
+## 豆知識：パートナー全員制覇は？
+
+7人のペアは全部で
+
+$$
+\binom{7}{2}=21
+$$
+
+組あります。
+
+7試合で登場するパートナーは、延べ **14組**。
+
+この組み合わせ表なら、その14組はすべて違うペアです。でも、残り7組はまだ登場していません。
+
+**同じ回数遊べる**ことと、**全員とペアになれる**ことは、別の目標です。
+:::
+
+### 次回予告
+
+「みんなー！ コート、もう1面使えるって！」
+
+しきりやおばさんが振り向きました。
+
+「でも、まだ7人しか……」
+
+「もう1人、来てます！」
+
+[第4話：コートが増えました。 →](04-eight-players.qmd)
+
+:::

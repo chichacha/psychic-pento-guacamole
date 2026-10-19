@@ -1,0 +1,411 @@
+---
+title: "5人なのに、コートは1面。"
+subtitle: "ゴマス村ピックルボール部 · 第1話"
+format:
+  html:
+    toc: false
+    page-layout: full
+    css:
+      - ../../assets/css/story.css
+---
+
+::: {.pento-stories .pickleball-story}
+
+[← ピックルボール部へ](index.qmd)
+
+::: {.pento-story-hero}
+<span class="pento-eyebrow">PICKLEBALL CLUB · EPISODE 01</span>
+
+# 5人なのに、コートは1面。 🥒
+
+<div class="pento-story-deck">5人でダブルス。1人はお休み。</div>
+:::
+
+今日はゴマス村のピックルボール日和。
+
+まんなかおじさん、まっすぐおじさん、ぎゅーおばさん、しきりやおばさん、はみだしくんが、コートに集まりました。
+
+「ダブルスをしましょう！」と、しきりやおばさん。
+
+「ダブルスって？」とはみだしくん。
+
+「2人対2人で遊ぶことです。」
+
+「じゃあ、ぼくはどっちのチーム？」
+
+しきりやおばさんは、みんなを数えました。
+
+「いち、に、さん、し、ご……」
+
+「**5人いますね。**」
+
+「いいことじゃない？」と、ぎゅーおばさん。
+
+「ダブルスで遊べるのは、一度に4人なんです。」
+
+みんな、しばらく黙りました。
+
+「じゃあ、誰が休むんですか？」
+
+「ぼくも遊びたいです。」と、まんなかおじさん。
+
+「もちろんです。」
+
+「でも、お休みの人は、おやつを食べてもいいですか？」
+
+「……まだ試合の話をしています。」
+
+「ぼくは休みたくないです！」とはみだしくん。
+
+「まだ誰も休めとは言っていません。」
+
+ぎゅーおばさんが言いました。
+
+「順番に休めばいいじゃない。」
+
+「でも、ぼくだけ2回休むのは嫌です。」
+
+「それなら、**全員が同じ回数だけ休む**ようにしましょう。」
+
+しきりやおばさんは紙を取り出しました。
+
+「5試合すれば、毎回1人ずつ、ちょうど全員が1回お休みできます。」
+
+「なるほど！」と、まっすぐおじさん。
+
+「それから、毎回ちがう人と組んでみたいです。」
+
+「それも考えてみましょう。」
+
+しきりやおばさんは、また紙に何かを書き始めました。
+
+まんなかおじさんが聞きました。
+
+「……お休みの順番は、つまりおやつの順番ですか？」
+
+「**まだ試合が始まっていません。**」
+
+---
+
+## みんなで考えてみよう
+
+5人でダブルスをすると、毎回**4人がプレーして、1人がお休み**です。
+
+5試合なら、お休みの席は全部で5つ。
+
+だから、5人が1回ずつ休むことができます。
+
+::: {.callout-tip}
+## きみなら、どう順番を決める？
+
+まずは、だれも2回休まないように、5人のお休み順を考えてみよう。
+
+そのあとで、同じ人とばかりペアにならない組み合わせを考えてみよう。
+
+**公平に遊ぶことが先。ペアを変えるのは、その次。**
+:::
+
+
+## しきりやおばさんの組み合わせ表
+
+「できました。5試合で、みんな4回ずつ遊べます。」
+
+「パートナーも変わるんですか？」
+
+「はい。しかも、**ほかの4人全員と、1回ずつペア**になれます。」
+
+「対戦相手は？」
+
+「**ほかの4人全員と、2回ずつ対戦**します。」
+
+「……本当に？」
+
+**下のボタンを押して、1試合ずつ確かめてみよう！**
+
+```{=html}
+<div class="gomasu-pb" id="gomasu-pb-five">
+  <div class="gomasu-pb-controls">
+    <button type="button" data-action="prev" aria-label="前の試合">← まえ</button>
+    <strong data-role="round" aria-live="polite">第1試合 / 全5試合</strong>
+    <button type="button" data-action="next" aria-label="次の試合">つぎ →</button>
+  </div>
+  <div class="gomasu-pb-court" aria-label="ダブルスの組み合わせ">
+    <div class="gomasu-pb-team"><span class="gomasu-pb-team-label">チーム A</span><div data-role="team-a"></div></div>
+    <div class="gomasu-pb-net" aria-hidden="true">NET</div>
+    <div class="gomasu-pb-team"><span class="gomasu-pb-team-label">チーム B</span><div data-role="team-b"></div></div>
+  </div>
+  <p class="gomasu-pb-rest">🥒 お休み：<strong data-role="rest"></strong></p>
+  <p class="gomasu-pb-snack" data-role="snack" aria-live="polite"></p>
+  <div class="gomasu-pb-controls gomasu-pb-progress">
+    <button type="button" data-action="reset">最初から ↺</button>
+    <span data-role="summary" aria-live="polite"></span>
+  </div>
+  <div class="gomasu-pb-counts">
+    <h3>ここまでの記録</h3>
+    <p>各住人の「出場 / お休み」と、出会ったパートナーの数を数えます。</p>
+    <div data-role="counts"></div>
+  </div>
+  <div class="gomasu-pb-reveal" data-role="reveal" hidden>
+    <strong>🎉 5試合、終了！</strong>
+    <p>全員が <strong>4回出場・1回休憩</strong>。パートナーは全員と1回ずつ、対戦相手は全員と2回ずつ！</p>
+    <p>しきりやおばさん：「ほら、ちゃんと公平でしょう？」</p>
+    <p>まんなかおじさん：「……次はおやつの順番もお願いします。」</p>
+  </div>
+</div>
+
+```
+
+<style>
+.gomasu-pb{--pb-ink:#302b32;--pb-line:#d9d7d3;color:var(--pb-ink);max-width:740px;margin:1.5rem auto;padding:1rem;border:1px solid var(--pb-line);border-radius:18px;background:#fffdf8}
+.gomasu-pb *{box-sizing:border-box}
+.gomasu-pb-controls{display:flex;align-items:center;justify-content:space-between;gap:.5rem;flex-wrap:wrap}
+.gomasu-pb button{border:1px solid #a7a5a1;border-radius:999px;background:white;color:var(--pb-ink);padding:.55rem .85rem;cursor:pointer;font:inherit}
+.gomasu-pb button:hover:not(:disabled){background:#f5f0e6}
+.gomasu-pb button:focus-visible{outline:3px solid #335d4c;outline-offset:2px}
+.gomasu-pb button:disabled{opacity:.35;cursor:not-allowed}
+.gomasu-pb-court{display:grid;grid-template-columns:1fr 2rem 1fr;min-height:175px;margin:1rem 0;border:3px solid white;outline:2px solid #4b9989;border-radius:6px;background:#78b9a7;overflow:hidden}
+.gomasu-pb-team{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.6rem;padding:.7rem .3rem;text-align:center}
+.gomasu-pb-team-label{font-size:.8rem;font-weight:700}
+.gomasu-pb-net{display:flex;align-items:center;justify-content:center;writing-mode:vertical-rl;letter-spacing:.2em;border-inline:2px dashed #fff;background:#507c74;color:white;font-size:.7rem}
+.gomasu-pb-players{display:flex;justify-content:center;flex-wrap:wrap;gap:.45rem}
+.gomasu-pb-player{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.2rem;min-width:5rem;color:#302b32}
+.gomasu-pb-avatar{width:72px;height:72px;display:block;overflow:visible;filter:drop-shadow(0 2px 1px #33443322)}
+.gomasu-pb-avatar .pento-tile{stroke:#302b32;stroke-width:.65;stroke-linejoin:round}
+.gomasu-pb-player-name{font-size:.69rem;font-weight:700;line-height:1.3;white-space:nowrap}
+.gomasu-pb-rest-avatar{display:flex;align-items:center;justify-content:center;gap:.7rem;flex-wrap:wrap}
+.gomasu-pb-rest-avatar .gomasu-pb-avatar{width:60px;height:60px}
+.gomasu-pb-snack{font-size:.84rem;margin:.3rem 0 0;text-align:center;min-height:1.5em}
+.gomasu-pb-snack strong{color:#765036}
+.gomasu-pb-rest{text-align:center;margin:.8rem 0}
+.gomasu-pb-progress{font-size:.86rem}
+.gomasu-pb-counts{margin-top:1.25rem}
+.gomasu-pb-counts h3{font-size:1.1rem}
+.gomasu-pb-counts p{font-size:.88rem}
+.gomasu-pb-counts table{width:100%;font-size:.82rem;border-collapse:collapse}
+.gomasu-pb-counts th,.gomasu-pb-counts td{padding:.45rem .25rem;text-align:center;border-bottom:1px solid var(--pb-line)}
+.gomasu-pb-counts th:first-child,.gomasu-pb-counts td:first-child{text-align:left}
+.gomasu-pb-reveal{margin-top:1rem;padding:1rem;border-radius:12px;background:#eef7e9}
+.gomasu-pb-reveal[hidden]{display:none}
+@media(max-width:430px){.gomasu-pb{padding:.7rem}.gomasu-pb-player{min-width:3.7rem}.gomasu-pb-avatar{width:54px;height:54px}.gomasu-pb-player-name{font-size:.58rem}.gomasu-pb-controls{font-size:.86rem}.gomasu-pb-counts table{font-size:.72rem}}
+.gomasu-pb-pair-gallery{max-width:740px;margin:1rem auto 2rem;padding:1rem}
+.gomasu-pb-pair-gallery .gomasu-pb-pairs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.7rem}
+.gomasu-pb-pair-gallery .gomasu-pb-pair{border:1px solid var(--pb-line);border-radius:12px;padding:.65rem .4rem;background:#fff}
+.gomasu-pb-pair-gallery .gomasu-pb-pair-label{text-align:center;font-size:.75rem;color:#666;margin:0 0 .3rem}
+.gomasu-pb-pair-gallery .gomasu-pb-players{flex-wrap:nowrap;gap:.2rem}
+.gomasu-pb-pair-gallery .gomasu-pb-player{min-width:0;flex:1}
+.gomasu-pb-pair-gallery .gomasu-pb-player-name{font-size:.65rem}
+.gomasu-pb-pair-gallery .gomasu-pb-avatar{width:62px;height:62px}
+@media(max-width:430px){.gomasu-pb-pair-gallery{padding:.7rem}.gomasu-pb-pair-gallery .gomasu-pb-pairs{gap:.35rem}.gomasu-pb-pair-gallery .gomasu-pb-pair{padding:.45rem .2rem}.gomasu-pb-pair-gallery .gomasu-pb-avatar{width:45px;height:45px}.gomasu-pb-pair-gallery .gomasu-pb-player-name{font-size:.55rem}}
+</style>
+<script>
+(() => {
+  const root = document.getElementById("gomasu-pb-five");
+  if (!root || root.dataset.ready) return;
+  root.dataset.ready = "true";
+  const people = [
+    { id:"X", name:"まんなか", color:"#F0B6DF" },
+    { id:"I", name:"まっすぐ", color:"#FDCFAB" },
+    { id:"U", name:"ぎゅー", color:"#85D7EF" },
+    { id:"T", name:"しきりや", color:"#76E1D7" },
+    { id:"Y", name:"はみだし", color:"#FFAFD0" }
+  ];
+  // Cyclic whist schedule for five players.
+  // Round r: rest r, partner (r+1,r-1) and (r+2,r-2), modulo 5.
+  const mod = n => (n + 5) % 5;
+  const rounds = people.map((_,r) => ({
+    rest:r,
+    teams:[[mod(r+1),mod(r-1)],[mod(r+2),mod(r-2)]]
+  }));
+  let current = 0;
+  const el = role => root.querySelector('[data-role="' + role + '"]');
+  const pairKey = (a,b) => [a,b].sort((x,y)=>x-y).join("-");
+  // Five squares per character, in their recognizable pentomino arrangement.
+  // SVG is generated locally; no external image requests are required.
+  const cells = {
+    X:[[1,0],[0,1],[1,1],[2,1],[1,2]],
+    I:[[1,0],[1,1],[1,2],[1,3],[1,4]],
+    U:[[0,0],[2,0],[0,1],[1,1],[2,1]],
+    T:[[0,0],[1,0],[2,0],[1,1],[1,2]],
+    Y:[[1,0],[1,1],[0,2],[1,2],[1,3]]
+  };
+  const ns = "http://www.w3.org/2000/svg";
+  const svgEl = (tag, attrs={}) => {
+    const node=document.createElementNS(ns,tag);
+    Object.entries(attrs).forEach(([key,value])=>node.setAttribute(key,String(value)));
+    return node;
+  };
+  function avatar(p, resting=false) {
+    const squares=cells[p.id];
+    const xs=squares.map(c=>c[0]), ys=squares.map(c=>c[1]);
+    const minX=Math.min(...xs), minY=Math.min(...ys);
+    const cols=Math.max(...xs)-minX+1, rows=Math.max(...ys)-minY+1;
+    const svg=svgEl("svg",{
+      viewBox:"-3 -3 "+(cols*18+6)+" "+(rows*18+6),
+      class:"gomasu-pb-avatar",role:"img",
+      "aria-label":p.name+"のペントミノ"
+    });
+    squares.forEach(([x,y])=>{
+      svg.append(svgEl("rect",{
+        x:(x-minX)*18+.5,y:(y-minY)*18+.5,width:17,height:17,rx:3,
+        fill:p.color,class:"pento-tile"
+      }));
+    });
+    // Place the expression on an occupied square, never in a hole.
+    const faceCell=p.id==="I"?[1,1]:p.id==="Y"?[1,1]:p.id==="U"?[1,1]:[1,1];
+    const fx=(faceCell[0]-minX)*18+9, fy=(faceCell[1]-minY)*18+9;
+    const ink="#302b32";
+    svg.append(svgEl("circle",{cx:fx-3.1,cy:fy-2,r:1.2,fill:ink}));
+    svg.append(svgEl("circle",{cx:fx+3.1,cy:fy-2,r:1.2,fill:ink}));
+    if(p.id==="X" && resting) {
+      svg.append(svgEl("ellipse",{cx:fx,cy:fy+3.8,rx:2.2,ry:2.8,fill:ink}));
+    } else {
+      svg.append(svgEl("path",{
+        d:"M "+(fx-3.2)+" "+(fy+2.7)+" Q "+fx+" "+(fy+6.8)+" "+(fx+3.2)+" "+(fy+2.7),
+        fill:"none",stroke:ink,"stroke-width":1.2,"stroke-linecap":"round"
+      }));
+    }
+    return svg;
+  }
+  const badge = (i,resting=false) => {
+    const p=people[i];
+    const holder=document.createElement("span");
+    holder.className="gomasu-pb-player";
+    holder.title=p.name+" ("+p.id+")";
+    holder.append(avatar(p,resting));
+    const label=document.createElement("span");
+    label.className="gomasu-pb-player-name";
+    label.textContent=p.name;
+    holder.append(label);
+    return holder;
+  };
+  function render() {
+    const round=rounds[current];
+    el("round").textContent="第"+(current+1)+"試合 / 全5試合";
+    for(const [index,role] of ["team-a","team-b"].entries()){
+      const target=el(role);
+      target.replaceChildren();
+      const wrapper=document.createElement("div");
+      wrapper.className="gomasu-pb-players";
+      round.teams[index].forEach(i=>wrapper.append(badge(i)));
+      target.append(wrapper);
+    }
+    const resting=round.rest;
+    const restBox=document.createElement("span");
+    restBox.className="gomasu-pb-rest-avatar";
+    restBox.append(badge(resting,true));
+    const restText=document.createElement("span");
+    restText.textContent=people[resting].id==="X"?"おやつの時間！ 🍪":"ひとやすみ";
+    restBox.append(restText);
+    el("rest").replaceChildren(restBox);
+    el("snack").textContent=people[round.rest].id==="X"
+      ?"まんなかおじさん：「遊ぶのも好き。でも、おやつも好き。」 🍪"
+      :"まんなかおじさん：「ぼくのおやつ休憩は、まだですか？」";
+    const played=Array(5).fill(0), rested=Array(5).fill(0);
+    const partners=Array.from({length:5},()=>new Set());
+    const opponents=Array.from({length:5},()=>new Map());
+    for(const game of rounds.slice(0,current+1)){
+      rested[game.rest]++;
+      for(const team of game.teams){
+        team.forEach(i=>played[i]++);
+        partners[team[0]].add(team[1]); partners[team[1]].add(team[0]);
+      }
+      for(const a of game.teams[0])for(const b of game.teams[1]){
+        opponents[a].set(b,(opponents[a].get(b)||0)+1);
+        opponents[b].set(a,(opponents[b].get(a)||0)+1);
+      }
+    }
+    const table=document.createElement("table");
+    table.innerHTML="<thead><tr><th>住人</th><th>出場</th><th>お休み</th><th>組んだ人数</th></tr></thead>";
+    const tbody=document.createElement("tbody");
+    people.forEach((p,i)=>{
+      const tr=document.createElement("tr");
+      [p.id+" "+p.name,played[i],rested[i],partners[i].size+" / 4"].forEach(value=>{
+        const td=document.createElement("td");td.textContent=value;tr.append(td);
+      });
+      tbody.append(tr);
+    });
+    table.append(tbody);
+    el("counts").replaceChildren(table);
+    el("summary").textContent="ここまで "+(current+1)+" / 5 試合";
+    root.querySelector('[data-action="prev"]').disabled=current===0;
+    root.querySelector('[data-action="next"]').disabled=current===rounds.length-1;
+    const finished=current===rounds.length-1;
+    const valid=played.every(n=>n===4)&&rested.every(n=>n===1)&&partners.every(s=>s.size===4)&&opponents.every(m=>m.size===4&&[...m.values()].every(n=>n===2));
+    el("reveal").hidden=!(finished&&valid);
+  }
+  root.querySelector('[data-action="prev"]').addEventListener("click",()=>{current=Math.max(0,current-1);render();});
+  root.querySelector('[data-action="next"]').addEventListener("click",()=>{current=Math.min(rounds.length-1,current+1);render();});
+  root.querySelector('[data-action="reset"]').addEventListener("click",()=>{current=0;render();});
+  render();
+  // Display the ten actual partner pairs, grouped in match order.
+  function renderPairGallery() {
+    const target=document.getElementById("gomasu-pb-pairs");
+    if (!target) return;
+    const fragment=document.createDocumentFragment();
+    rounds.forEach((game,roundIndex)=>{
+      game.teams.forEach((team,teamIndex)=>{
+        const card=document.createElement("div");
+        card.className="gomasu-pb-pair";
+        const label=document.createElement("p");
+        label.className="gomasu-pb-pair-label";
+        label.textContent="第"+(roundIndex+1)+"試合 · ペア"+(teamIndex+1);
+        const players=document.createElement("div");
+        players.className="gomasu-pb-players";
+        team.forEach(i=>players.append(badge(i)));
+        card.append(label,players);
+        fragment.append(card);
+      });
+    });
+    target.replaceChildren(fragment);
+  }
+  if (document.readyState==="loading") {
+    document.addEventListener("DOMContentLoaded",renderPairGallery,{once:true});
+  } else {
+    renderPairGallery();
+  }
+})();
+</script>
+
+
+::: {.callout-note collapse="true"}
+## 豆知識：なぜ5試合で足りるの？
+
+5人から2人を選ぶパートナーの組み合わせは、**10組**です。
+
+$$
+\binom{5}{2}=10
+$$
+
+ダブルス1試合には2組のパートナーが登場するので、5試合でちょうど10組。
+
+この組み合わせ表では、**10組すべてが1回ずつ**登場します。
+
+さらに、1試合で対戦相手の組み合わせは4組。5試合では延べ20組になります。10通りの相手ペアが**2回ずつ**対戦するように並べられています。
+
+こうしたバランスのよいダブルスの組み合わせは、英語で *whist tournament* と呼ばれることがあります。
+
+ただし、これは**組み合わせの公平さ**のお話。試合時間が違えば、実際のプレー時間まで等しくなるとは限りません。
+:::
+
+
+## 10組のパートナー、全員集合！ 🥒
+
+5試合で生まれた10組のペアを並べてみました。**同じペアは一度も登場しません。** 
+
+```{=html}
+<div class="gomasu-pb gomasu-pb-pair-gallery" aria-label="5試合で登場する全10組のパートナー">
+  <div class="gomasu-pb-pairs" id="gomasu-pb-pairs">
+    <p>10組のペアを表示しています…</p>
+  </div>
+</div>
+```
+
+### 次回予告
+
+「楽しそう！ 私も入っていい？」
+
+……6人目がやってきました。
+
+[← ピックルボール部へ](index.qmd)
+
+:::

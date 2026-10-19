@@ -13,7 +13,7 @@ format:
 ::: {.pento-stories .measurement-story}
 
 ::: {.pento-story-hero}
-<span class="pento-eyebrow">STORY 002 · VILLAGE HEALTH CHECK</span>
+<span class="pento-eyebrow">STORIES · GOMASU VILLAGE</span>
 
 # ゴマス村の身体測定。
 

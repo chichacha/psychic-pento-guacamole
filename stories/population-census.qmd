@@ -15,7 +15,7 @@ format:
 ::: {.pento-stories .census-story}
 
 ::: {.pento-story-hero}
-<span class="pento-eyebrow">STORY 001 · PENTOMINO VILLAGE</span>
+<span class="pento-eyebrow">STORIES · GOMASU VILLAGE</span>
 
 # ペントミノ村の人口調査。
 
