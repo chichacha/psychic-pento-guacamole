@@ -23,7 +23,7 @@ format:
 ::: {.pento-story-card}
 <span class="pento-eyebrow">STORY 001 · 人口調査</span>
 
-## [ペントミノ村の人口調査](population-census.qmd)
+## [ゴマス村の人口調査](population-census.qmd)
 
 **12人しかいないのに、63人いるらしい。**
 
@@ -44,13 +44,26 @@ format:
 [身体測定に参加する →](body-measurement.qmd){.pento-story-link}
 :::
 
-::: {.pento-story-card .pento-story-card--future}
-<span class="pento-eyebrow">COMING SOMEDAY</span>
+::: {.pento-story-card}
+<span class="pento-eyebrow">STORY 003 · ピックルボール部 🥒</span>
 
-## まんなかおじさん、真ん中にいない疑惑。
+## [ゴマス村ピックルボール部](pickleball/index.qmd)
 
-自分の真ん中にはいる。でも、盤面の真ん中にいるとは限らない。
+**遊びたい人、休みたい人、数えたい人。**
+
+5人でダブルスを始めたら、1人余った。
+6人、7人、8人と仲間が増えて、問題も増えていく。
+
+だれが休む？ だれと組む？ それって公平？
+
+おやつ休憩が気になるまんなかおじさんと、
+組み合わせに厳しいしきりやおばさん。
+
+全4話の、ちょっとおかしな数学とスポーツのおはなし。
+
+[ピックルボール部をのぞく →](pickleball/index.qmd){.pento-story-link}
 :::
 
 :::
 :::
+
