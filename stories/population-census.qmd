@@ -17,11 +17,11 @@ format:
 ::: {.pento-story-hero}
 <span class="pento-eyebrow">STORIES · GOMASU VILLAGE</span>
 
-# ペントミノ村の人口調査。
+# ゴマス村の人口調査。
 
 <div class="pento-story-deck">12人しかいないのに、63人いるらしい。</div>
 
-ペントミノ村には、五つのマスでできた12人の住民が暮らしています。
+ゴマス村には、五つのマスでできた12人の住民が暮らしています。
 
 みんな形も性格も、ちょっとずつ違います。
 
@@ -43,7 +43,7 @@ format:
 
 同じ村を、三つのルールで数えてみます。下のボタンを押して、住民の数がどう変わるか見てください。
 
-::: {.census-interactive aria-label="ペントミノ村の人口調査"}
+::: {.census-interactive aria-label="ゴマス村の人口調査"}
 <div class="census-topline"><span>THE GREAT PENTOMINO CENSUS</span><span id="census-mode-label">FREE · 12</span></div>
 <div class="census-total" aria-live="polite"><span id="census-count">12</span><span class="census-unit">人？</span></div>
 <div class="census-controls" role="group" aria-label="数え方を選ぶ">
@@ -95,7 +95,7 @@ X型のまんなかおじさんは、90度回しても、裏返しても、見�
 どうやら、言いたいことがあるようです。
 
 <section class="census-chat-section" aria-labelledby="census-chat-title">
-  <h3 id="census-chat-title">五マス村・住民の声</h3>
+  <h3 id="census-chat-title">ゴマス村・住民の声</h3>
   <div id="census-chat" class="census-chat-grid" aria-label="住民たちのコメント"></div>
 </section>
 
