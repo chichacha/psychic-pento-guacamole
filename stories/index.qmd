@@ -64,6 +64,17 @@ format:
 [ピックルボール部をのぞく →](pickleball/index.qmd){.pento-story-link}
 :::
 
-:::
+::: {.pento-story-card}
+<span class="pento-eyebrow">きのこ観察 · 🍄</span>
+
+## [ゴマス村のきのこ観察会](mushroom-foraging/index.qmd)
+
+**傘の模様は、だれが決める？**
+
+色とりどりのきのこを発見！傘の形や水玉模様を変えて、村だけのきのこをデザインしよう。
+
+[きのこデザイン工房へ →](mushroom-foraging/index.qmd){.pento-story-link}
 :::
 
+:::
+:::
