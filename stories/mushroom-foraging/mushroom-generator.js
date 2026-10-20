@@ -4,14 +4,14 @@
   if (!root) return;
   const svg = document.getElementById("mushroom-svg");
   const ns = "http://www.w3.org/2000/svg";
-  const palette = { I:"#FDCFAB", F:"#FFADA6", L:"#FEE1A7", P:"#6BB091", N:"#D2E3AD", T:"#76E1D7", U:"#85D7EF", V:"#A9C7E9", W:"#CBBBE8", X:"#F0B6DF", Y:"#FFAFD0", Z:"#ECD2C1" };
+  const names = { I:"まっすぐおじさん", F:"くねくねちゃん", L:"のびのびちゃん", P:"ぎゅっとくん", N:"ずらしくん", T:"しきりやおばさん", U:"ぎゅーおばさん", V:"かどっこおばさん", W:"こつこつおばさん", X:"まんなかおじさん", Y:"はみだしくん", Z:"つなぎおばさん" };\n  const palette = { I:"#FDCFAB", F:"#FFADA6", L:"#FEE1A7", P:"#6BB091", N:"#D2E3AD", T:"#76E1D7", U:"#85D7EF", V:"#A9C7E9", W:"#CBBBE8", X:"#F0B6DF", Y:"#FFAFD0", Z:"#ECD2C1" };
   const defaults = {piece:"P",pattern:"dots",profile:"bell",width:165,height:78,stem:92,tilt:0,density:16};
   let seed = 42;
   const controls = {};
   for (const name of Object.keys(defaults)) controls[name] = document.getElementById("mushroom-" + name);
   Object.entries(palette).forEach(([name,color]) => {
     const option = document.createElement("option");
-    option.value = name; option.textContent = name + " · " + color;
+    option.value = name; option.textContent = name + " · " + names[name];
     controls.piece.append(option);
   });
   function node(tag, attrs={}, parent=svg) {
@@ -26,7 +26,7 @@
   function capPath(w,h,profile) {
     const l=180-w/2, r=180+w/2, y=172, top=y-h;
     if(profile==="cone") return `M${l} ${y} Q${l+9} ${y-9} 180 ${top} Q${r-9} ${y-9} ${r} ${y} Z`;
-    if(profile==="flat") return `M${l} ${y} Q180 ${top+15} ${r} ${y} Q180 ${y+7} ${l} ${y} Z`;
+    if(profile==="dented") return `M${l} ${y} C${l+6} ${top+18} ${180-w*.27} ${top-5} 180 ${top+13} C${180+w*.27} ${top-5} ${r-6} ${top+18} ${r} ${y} Z`;\n    if(profile==="flat") return `M${l} ${y} Q180 ${top+15} ${r} ${y} Q180 ${y+7} ${l} ${y} Z`;
     if(profile==="dome") return `M${l} ${y} C${l} ${top+12} ${r} ${top+12} ${r} ${y} Z`;
     return `M${l} ${y} C${l+10} ${top+12} ${180-w*.20} ${top} 180 ${top} C${180+w*.20} ${top} ${r-10} ${top+12} ${r} ${y} Z`;
   }
@@ -46,10 +46,34 @@
     node("path",{d:path},clip);
     const decoration=node("g",{"clip-path":"url(#mushroom-cap-clip)"},group);
     if(["dots","speckles","stars"].includes(s.pattern)) {
-      for(let i=0;i<s.density;i++) {
-        const x=180+(random(i,1)-.5)*s.width*.92;
-        const y=172-s.height*(.10+random(i,2)*.88);
-        const radius=s.pattern==="speckles"?1.3+random(i,3)*2.1:3+random(i,3)*5;
+      // Stratified sampling: one jittered candidate per grid cell, then
+      // test against the actual SVG cap outline. This prevents bunching and
+      // avoids wasting spots outside a narrow or dented cap.
+      const columns=Math.max(4,Math.ceil(Math.sqrt(s.density*s.width/s.height)));
+      const rows=Math.max(3,Math.ceil(s.density/columns*1.8));
+      const candidates=[];
+      for(let row=0;row<rows;row++) for(let col=0;col<columns;col++) {
+        const i=row*columns+col;
+        candidates.push({
+          x:180-s.width/2+(col+.18+.64*random(i,1))*s.width/columns,
+          y:172-s.height+(row+.18+.64*random(i,2))*s.height/rows,
+          rank:random(i,4)
+        });
+      }
+      const capElement=clip.firstElementChild;
+      const inside=(x,y)=>capElement.isPointInFill(new DOMPoint(x,y));
+      const valid=candidates.filter(p=>inside(p.x,p.y)).sort((a,b)=>a.rank-b.rank);
+      // If a cap is unusually narrow, supplement with a finer jittered grid.
+      if(valid.length<s.density) {
+        for(let i=0;i<400 && valid.length<s.density;i++) {
+          const x=180-s.width/2+random(i,8)*s.width;
+          const y=172-s.height+random(i,9)*s.height;
+          if(inside(x,y) && valid.every(p=>Math.hypot(p.x-x,p.y-y)>8)) valid.push({x,y});
+        }
+      }
+      valid.slice(0,s.density).forEach((p,i)=>{
+        const x=p.x, y=p.y;
+        const radius=s.pattern==="speckles"?1.2+random(i,3)*1.8:2.5+random(i,3)*3.3;
         if(s.pattern==="stars") {
           const points=Array.from({length:8},(_,j)=>{
             const angle=j*Math.PI/4-Math.PI/2, rr=j%2?radius*.38:radius;
@@ -57,7 +81,7 @@
           }).join(" ");
           node("polygon",{points,fill:"#fffdf3",opacity:.92},decoration);
         } else node("circle",{cx:x,cy:y,r:radius,fill:"#fffdf3",opacity:.9},decoration);
-      }
+      });
     } else if(s.pattern==="stripes") {
       for(let i=-9;i<=9;i++) node("line",{x1:180+i*17-35,y1:50,x2:180+i*17+35,y2:190,stroke:"#fffdf3","stroke-width":5,opacity:.8},decoration);
     } else if(s.pattern==="bands") {
@@ -66,7 +90,7 @@
     node("ellipse",{cx:172,cy:203,rx:3.5,ry:4.8,fill:"#302b32"},group);
     node("ellipse",{cx:188,cy:203,rx:3.5,ry:4.8,fill:"#302b32"},group);
     node("path",{d:"M175 215 Q180 220 185 215",fill:"none",stroke:"#8c665b","stroke-width":2,"stroke-linecap":"round"},group);
-    document.getElementById("mushroom-caption").textContent=`${s.piece}色のきのこ。傘の幅 ${s.width}、高さ ${s.height}。本人はまだ名前を決めていません。`;
+    document.getElementById("mushroom-caption").textContent=`${names[s.piece]}色のきのこ。傘の幅 ${s.width}、高さ ${s.height}。本人はまだ名前を決めていません。`;
   }
   Object.values(controls).forEach(el=>el.addEventListener("input",render));
   function reset(){for(const [key,value] of Object.entries(defaults)) controls[key].value=value;seed=42;render();}
