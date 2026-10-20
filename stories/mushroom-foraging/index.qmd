@@ -54,7 +54,7 @@ format:
     </select></label>
     <label>傘の形 · Cap profile <select id="mushroom-profile">
       <option value="bell">鐘形 · Bell</option>
-      <option value="dome">丸形 · Dome</option>
+      <option value="dome">丸形 · Dome</option>\n      <option value="dented">くぼみ · Dented cap</option>
       <option value="cone">円錐形 · Cone</option>
       <option value="flat">平ら · Flat</option>
     </select></label>
