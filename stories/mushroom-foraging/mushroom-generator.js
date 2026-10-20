@@ -42,12 +42,14 @@
     const stemBottom = groundY, stemTop = groundY - s.stem;
     // Cap coordinates are authored around y=172; translate the entire cap
     // (including gills, spots, and clipping) to meet the changing stem top.
-    const capGroup = node("g", { transform: `translate(0 ${stemTop - 172})` }, group);
+    const gillsGroup = node("g", { transform: `translate(0 ${stemTop - 172})` }, group);
 
-    node("ellipse", { cx: 180, cy: 172, rx: s.width / 2, ry: 14, fill: "#e4c9b6", stroke: "#ad9286", "stroke-width": 1.5 }, capGroup);
-    for (let i = -6; i <= 6; i++) node("line", { x1: 180, y1: 172, x2: 180 + i * s.width / 14, y2: 180, stroke: "#b9968e", "stroke-width": .9 }, capGroup);
+    node("ellipse", { cx: 180, cy: 172, rx: s.width / 2, ry: 14, fill: "#e4c9b6", stroke: "#ad9286", "stroke-width": 1.5 }, gillsGroup);
+    for (let i = -6; i <= 6; i++) node("line", { x1: 180, y1: 172, x2: 180 + i * s.width / 14, y2: 180, stroke: "#b9968e", "stroke-width": .9 }, gillsGroup);
     // Layering: gills behind, stem in front of gills, cap in front of stem.
     node("path", { d: `M166 ${stemTop - 4} Q157 ${stemTop + s.stem * .48} 163 ${stemBottom} Q180 ${stemBottom + 10} 197 ${stemBottom} Q189 ${stemTop + s.stem * .45} 194 ${stemTop - 4} Z`, fill: "#f7e8cf", stroke: "#aa9384", "stroke-width": 2 }, group);
+    // Separate sibling groups enforce SVG paint order: gills, stem, cap.
+    const capGroup = node("g", { transform: `translate(0 ${stemTop - 172})` }, group);
     const path = capPath(s.width, s.height, s.profile);
     node("path", { d: path, fill: palette[s.piece], stroke: "#806f70", "stroke-width": 2 }, capGroup);
     const defs = node("defs", {}, capGroup), clip = node("clipPath", { id: "mushroom-cap-clip" }, defs);
