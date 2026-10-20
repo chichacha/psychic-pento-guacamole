@@ -1,0 +1,95 @@
+---
+title: "ゴマス村のきのこ観察会"
+subtitle: "傘の模様は、だれが決める？"
+format:
+  html:
+    toc: false
+    page-layout: full
+    css:
+      - ../../assets/css/story.css
+      - mushroom.css
+---
+
+::: {.pento-stories .mushroom-story}
+
+::: {.pento-story-hero}
+<span class="pento-eyebrow">GOMASU VILLAGE · MUSHROOM FIELD NOTES</span>
+
+# ゴマス村のきのこ観察会 🍄
+
+庭に、見慣れないきのこが生えていました。
+
+「傘を持っているのに、雨の日もここにいるんですね。」
+
+「それ、傘じゃなくて頭じゃない？」
+
+「……本人に聞いてみましょう。」
+
+きのこは答えませんでした。
+
+代わりに、村の12人は**きのこデザイン工房**を開くことにしました。
+
+:::
+
+## きのこデザイン工房
+
+傘の形、模様、色を変えて、ゴマス村だけのきのこを作ってみよう。
+
+```{=html}
+<section class="mushroom-app" id="mushroom-app" aria-label="きのこデザイン工房">
+  <div class="mushroom-stage">
+    <div class="mushroom-stage-heading"><span>GOMASU LANDSCAPE WORKSHOP</span><span>🍄 001</span></div>
+    <svg id="mushroom-svg" viewBox="0 0 360 320" role="img" aria-label="カスタマイズできるきのこのイラスト"></svg>
+    <p id="mushroom-caption" aria-live="polite">きのこを育てています。</p>
+  </div>
+  <div class="mushroom-controls">
+    <label>傘の色 · Gomasu colour <select id="mushroom-piece"></select></label>
+    <label>模様 · Pattern <select id="mushroom-pattern">
+      <option value="dots">水玉 · Polka dots</option>
+      <option value="speckles">斑点 · Speckles</option>
+      <option value="stripes">しま · Stripes</option>
+      <option value="bands">帯 · Bands</option>
+      <option value="stars">星 · Stars</option>
+      <option value="plain">無地 · Plain</option>
+    </select></label>
+    <label>傘の形 · Cap profile <select id="mushroom-profile">
+      <option value="bell">鐘形 · Bell</option>
+      <option value="dome">丸形 · Dome</option>
+      <option value="cone">円錐形 · Cone</option>
+      <option value="flat">平ら · Flat</option>
+    </select></label>
+    <label>傘の幅 · Cap width <output id="out-width"></output><input id="mushroom-width" type="range" min="75" max="230" value="165"></label>
+    <label>傘の高さ · Cap height <output id="out-height"></output><input id="mushroom-height" type="range" min="30" max="115" value="78"></label>
+    <label>柄の長さ · Stem length <output id="out-stem"></output><input id="mushroom-stem" type="range" min="50" max="125" value="92"></label>
+    <label>傾き · Tilt <output id="out-tilt"></output><input id="mushroom-tilt" type="range" min="-22" max="22" value="0"></label>
+    <label>模様の数 · Pattern density <output id="out-density"></output><input id="mushroom-density" type="range" min="3" max="45" value="16"></label>
+    <div class="mushroom-actions"><button type="button" id="mushroom-shuffle">模様をシャッフル ↻</button><button type="button" id="mushroom-reset">最初から</button><button type="button" id="mushroom-download">SVGを保存 ↓</button></div>
+  </div>
+</section>
+```
+
+## きのこの部位 · Mushroom anatomy
+
+| English | 日本語 | どこ？ |
+|---|---|---|
+| Cap / Pileus | 傘（かさ） | 上の部分 |
+| Cap margin | 傘の縁（かさのふち） | 傘の外側 |
+| Gills / Lamellae | ひだ | 傘の裏の放射状の板 |
+| Stem / Stipe | 柄（え） | 傘を支える部分 |
+| Ring / Annulus | つば | 種類によって柄につく輪 |
+| Spores | 胞子（ほうし） | 繁殖にかかわる細胞 |
+| Mycelium | 菌糸体（きんしたい） | 地中などに広がる菌糸のネットワーク |
+
+すべてのきのこに、ひだやつばがあるわけではありません。
+
+::: {.pento-story-footnote}
+**観察の約束：** 野生のきのこは観察と写真撮影だけ。食べられるかどうかを見た目で判断したり、試食したりしません。
+
+**小さな数学のメモ：** 同じ形でも、幅・高さ・曲率・模様の数を変えると、まったく違う表情になります。この工房のきのこは幾何学から生まれた架空のキャラクターです。
+
+[← おはなし一覧へ](../index.qmd)
+:::
+
+:::
+
+<script src="mushroom-generator.js" defer></script>
