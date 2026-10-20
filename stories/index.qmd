@@ -65,15 +65,15 @@ format:
 :::
 
 ::: {.pento-story-card}
-<span class="pento-eyebrow">きのこ観察 · 🍄</span>
+<span class="pento-eyebrow">雨の季節 · ☔🍄</span>
 
-## [ゴマス村のきのこ観察会](mushroom-foraging/index.qmd)
+## [ゴマス村の雨宿り計画](mushroom-foraging/index.qmd)
 
-**傘の模様は、だれが決める？**
+**雨宿りのはずが、なぜかきのこができました。**
 
-色とりどりのきのこを発見！傘の形や水玉模様を変えて、村だけのきのこをデザインしよう。
+突然の大雨。12人が入れる雨宿り場所を作るはずが、傘の形や色、模様の会議が止まらない。あなたも傘工房で設計してみよう。
 
-[きのこデザイン工房へ →](mushroom-foraging/index.qmd){.pento-story-link}
+[雨宿りの傘を設計する →](mushroom-foraging/index.qmd){.pento-story-link}
 :::
 
 :::
