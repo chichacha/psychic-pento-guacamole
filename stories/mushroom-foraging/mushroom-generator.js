@@ -26,6 +26,10 @@
   }
   function capPath(w, h, profile) {
     const l = 180 - w / 2, r = 180 + w / 2, y = 172, top = y - h;
+    if (profile === "umbrella") return `M${l} ${y} Q${l+15} ${top+2} 180 ${top} Q${r-15} ${top+2} ${r} ${y} Q180 ${y-14} ${l} ${y} Z`;
+    if (profile === "funnel") return `M${l} ${y} C${l+8} ${top+7} ${180-w*.25} ${top+4} 180 ${top+25} C${180+w*.25} ${top+4} ${r-8} ${top+7} ${r} ${y} Z`;
+    if (profile === "wavy") return `M${l} ${y} C${l+5} ${top+25} ${180-w*.32} ${top-8} ${180-w*.16} ${top+5} S${180+w*.12} ${top-10} 180 ${top+4} S${r-16} ${top+8} ${r} ${y} Z`;
+    if (profile === "scalloped") return `M${l} ${y} C${l+8} ${top+14} ${r-8} ${top+14} ${r} ${y} Q${r-w*.10} ${y+9} ${r-w*.20} ${y} Q${r-w*.30} ${y+9} ${r-w*.40} ${y} Q180 ${y+9} ${l+w*.40} ${y} Q${l+w*.30} ${y+9} ${l+w*.20} ${y} Q${l+w*.10} ${y+9} ${l} ${y} Z`;
     if (profile === "cone") return `M${l} ${y} Q${l + 9} ${y - 9} 180 ${top} Q${r - 9} ${y - 9} ${r} ${y} Z`;
     if (profile === "dented") return `M${l} ${y} C${l + 6} ${top + 18} ${180 - w * .27} ${top - 5} 180 ${top + 13} C${180 + w * .27} ${top - 5} ${r - 6} ${top + 18} ${r} ${y} Z`; 
     if (profile === "flat") return `M${l} ${y} Q180 ${top + 15} ${r} ${y} Q180 ${y + 7} ${l} ${y} Z`;
@@ -109,6 +113,26 @@
           node("polygon", { points, fill: "#fffdf3", opacity: .92 }, decoration);
         } else node("circle", { cx: x, cy: y, r: radius, fill: "#fffdf3", opacity: .9 }, decoration);
       });
+    } else if (["diamonds", "hearts", "rings", "scales"].includes(s.pattern)) {
+      // Regular repeating textile-like motifs, clipped to the cap.
+      const cols = Math.max(3, Math.round(Math.sqrt(s.density * s.width / s.height)));
+      const rows = Math.max(2, Math.ceil(s.density / cols));
+      const dx = s.width / (cols + .4), dy = s.height / (rows + .4);
+      for (let row = 0; row < rows; row++) for (let col = 0; col < cols; col++) {
+        const i = row * cols + col;
+        const x = 180 + (col - (cols-1)/2 + (row%2 ? .5 : 0)) * dx;
+        const y = 172 - s.height/2 + (row - (rows-1)/2) * dy;
+        const size = Math.min(dx, dy) * (.22 + random(i, 7) * .055);
+        if (s.pattern === "diamonds") {
+          node("polygon", { points: `${x},${y-size} ${x+size*.72},${y} ${x},${y+size} ${x-size*.72},${y}`, fill: "#fffdf3", opacity: .9 }, decoration);
+        } else if (s.pattern === "hearts") {
+          node("path", { d: `M${x} ${y+size} C${x-size*1.8} ${y-size*.25} ${x-size*.85} ${y-size*1.35} ${x} ${y-size*.55} C${x+size*.85} ${y-size*1.35} ${x+size*1.8} ${y-size*.25} ${x} ${y+size} Z`, fill: "#fffdf3", opacity: .93 }, decoration);
+        } else if (s.pattern === "rings") {
+          node("circle", { cx:x, cy:y, r:size, fill:"none", stroke:"#fffdf3", "stroke-width":Math.max(1.6,size*.38), opacity:.93 }, decoration);
+        } else {
+          node("path", { d:`M${x-size} ${y-size*.4} Q${x} ${y+size*1.2} ${x+size} ${y-size*.4}`, fill:"none", stroke:"#fffdf3", "stroke-width":Math.max(2,size*.45), "stroke-linecap":"round", opacity:.88 }, decoration);
+        }
+      }
     } else if (s.pattern === "stripes") {
       for (let i = -9; i <= 9; i++) node("line", { x1: 180 + i * 17 - 35, y1: 50, x2: 180 + i * 17 + 35, y2: 190, stroke: "#fffdf3", "stroke-width": 5, opacity: .8 }, decoration);
     } else if (s.pattern === "bands") {
