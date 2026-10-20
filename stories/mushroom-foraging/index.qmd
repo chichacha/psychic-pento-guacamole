@@ -1,0 +1,184 @@
+---
+title: "ゴマス村の雨宿り計画"
+subtitle: "雨宿りのはずが、なぜかきのこができました。"
+format:
+  html:
+    toc: false
+    page-layout: full
+    css:
+      - ../../assets/css/story.css
+      - mushroom.css
+---
+
+::: {.pento-stories .mushroom-story}
+
+::: {.pento-story-hero}
+<span class="pento-eyebrow">GOMASU VILLAGE · RAINY SEASON</span>
+
+# ゴマス村の雨宿り計画 ☔🍄
+
+**雨宿りのはずが、なぜかきのこができました。**
+
+ゴマス村に、雨の季節がやってきました。
+
+ある日、突然の大雨。
+
+12人は、小さなきのこの下に集まりました。
+
+「せまい。」
+
+「みんなで一緒に、入れないね。」
+
+「じゃあ、大きくしよう。」
+
+こうして、ゴマス村の雨宿り計画が始まりました。
+
+「傘は、もっと広いほうがいい。」
+
+「高さも必要だね。」
+
+「柄は長めがいいんじゃない？」
+
+「えっ、水玉より、しま模様？」
+
+「……。」
+
+話し合いは、なかなか進みません。
+
+傘の形、幅、高さ、色、模様。
+
+決めることは、山ほどありました。
+
+**そして、なぜか柄の会議がいちばん長引きました。**
+
+
+:::
+
+
+
+```{=html}
+<section class="mushroom-app" id="mushroom-app" aria-label="きのこデザイン工房">
+  <div class="mushroom-stage">
+    <div class="mushroom-stage-heading"><span>GOMASU LANDSCAPE WORKSHOP</span><span>🍄 001</span></div>
+    <svg id="mushroom-svg" viewBox="0 0 360 320" role="img" aria-label="カスタマイズできるきのこのイラスト"></svg>
+    <p id="mushroom-caption" aria-live="polite">きのこを育てています。</p>
+  </div>
+  <div class="mushroom-controls">
+    <label>傘の色 · Gomasu colour <select id="mushroom-piece"></select></label>
+    <label>模様 · Pattern <select id="mushroom-pattern">
+      <option value="dots">水玉 · Polka dots</option>
+      <option value="speckles">斑点 · Speckles</option>
+      <option value="stripes">しま · Stripes</option>
+      <option value="bands">帯 · Bands</option>
+      <option value="stars">星 · Stars</option>
+      <option value="diamonds">ひし形 · Diamonds</option>
+      <option value="hearts">ハート · Hearts</option>
+      <option value="rings">輪っか · Rings</option>
+      <option value="scales">うろこ · Scales</option>
+      <option value="plain">無地 · Plain</option>
+    </select></label>
+    <label>傘の形 · Cap profile <select id="mushroom-profile">
+      <option value="bell">鐘形 · Bell</option>
+      <option value="dome">丸形 · Dome</option>
+      <option value="dented">くぼみ · Dented cap</option>
+      <option value="cone">円錐形 · Cone</option>
+      <option value="flat">平ら · Flat</option>
+      <option value="umbrella">日傘 · Umbrella</option>
+      <option value="funnel">じょうご · Funnel</option>
+      <option value="wavy">波うち · Wavy</option>
+      <option value="scalloped">ひらひら · Scalloped</option>
+    </select></label>
+    <label>傘の幅 · Cap width <output id="out-width"></output><input id="mushroom-width" type="range" min="75" max="230" value="165"></label>
+    <label>傘の高さ · Cap height <output id="out-height"></output><input id="mushroom-height" type="range" min="30" max="115" value="78"></label>
+    <label>柄の長さ · Stem length <output id="out-stem"></output><input id="mushroom-stem" type="range" min="50" max="125" value="92"></label>
+    <label>傾き · Tilt <output id="out-tilt"></output><input id="mushroom-tilt" type="range" min="-22" max="22" value="0"></label>
+    <label>模様の数 · Pattern density <output id="out-density"></output><input id="mushroom-density" type="range" min="3" max="45" value="16"></label>
+    <div class="mushroom-actions"><button type="button" id="mushroom-shuffle">模様をシャッフル ↻</button><button type="button" id="mushroom-reset">最初から</button><button type="button" id="mushroom-download">SVGを保存 ↓</button></div>
+  </div>
+</section>
+```
+
+
+## 工事完了。そして。
+
+ついに、雨宿りの傘が完成しました。
+
+大きな傘。立派な柄。こだわりの模様。
+
+12人、全員入れる……はずです。
+
+ところが。
+
+雨がやみました。
+
+「……。」
+
+「まあ、次の雨に使えばいいよ。」
+
+こうして、ゴマス村には、大きな傘が一本立つことになりました。
+
+次の日、少し大きくなっていました。
+
+「……成長してない？」
+
+「気のせいです。」
+
+**誰も、きのこだとは認めていません。**
+
+---
+
+## きのこの部位 · Mushroom anatomy
+
+ところで、みんなが作った「傘」は、きのこのどの部分なのでしょう？
+
+| English | 日本語 | どこ？ |
+|---|---|---|
+| Cap / Pileus | 傘（かさ） | きのこの上の部分 |
+| Cap margin | 傘の縁（かさのふち） | 傘の外側 |
+| Gills / Lamellae | ひだ | 傘の裏にある放射状の板 |
+| Stem / Stipe | 柄（え） | 傘を支える部分 |
+| Ring / Annulus | つば | 種類によって柄につく輪 |
+| Spores | 胞子（ほうし） | 繁殖にかかわる細胞 |
+| Mycelium | 菌糸体（きんしたい） | 地中などに広がる菌糸のネットワーク |
+
+すべてのきのこに、ひだやつばがあるわけではありません。
+
+::: {.callout-note}
+## ゴマス村の、どうでもいい大発見。🔎
+
+**柄は、え？ がら？**
+
+きのこの**柄（え）**は、傘を支える部分。
+
+水玉やしま模様の**柄（がら）**は、デザインのこと。
+
+つまり、同じ「柄」でも、読み方も意味も違います。
+
+さらに英語では……
+
+- **Stipe** — きのこの柄（え）
+- **Stripe** — しま模様
+
+たった一文字、**r** が増えるだけ。
+
+「柄を長くしよう。」
+
+「しま模様を長くするの？」
+
+どうやら、会議が長引いた理由がわかってきました。
+
+**役に立つかどうかは、調べてから考えよう。**
+:::
+
+::: {.pento-story-footnote}
+**観察の約束：** 野生のきのこは観察と写真撮影だけ。食べられるかどうかを見た目で判断したり、試食したりしません。
+
+**小さな数学のメモ：** 傘の幅、高さ、曲率、模様の配置。少し数字を変えるだけで、まったく違う形が生まれます。この工房のきのこは、幾何学から生まれた架空のキャラクターです。
+:::
+
+[← おはなし一覧へ](../index.qmd)
+:::
+
+:::
+
+<script src="mushroom-generator.js" defer></script>
