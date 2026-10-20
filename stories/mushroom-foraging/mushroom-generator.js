@@ -4,7 +4,8 @@
   if (!root) return;
   const svg = document.getElementById("mushroom-svg");
   const ns = "http://www.w3.org/2000/svg";
-  const names = { I: "まっすぐおじさん", F: "くねくねちゃん", L: "のびのびちゃん", P: "ぎゅっとくん", N: "ずらしくん", T: "しきりやおばさん", U: "ぎゅーおばさん", V: "かどっこおばさん", W: "こつこつおばさん", X: "まんなかおじさん", Y: "はみだしくん", Z: "つなぎおばさん" }; \n  const palette = { I: "#FDCFAB", F: "#FFADA6", L: "#FEE1A7", P: "#6BB091", N: "#D2E3AD", T: "#76E1D7", U: "#85D7EF", V: "#A9C7E9", W: "#CBBBE8", X: "#F0B6DF", Y: "#FFAFD0", Z: "#ECD2C1" };
+  const names = { I: "まっすぐおじさん", F: "くねくねちゃん", L: "のびのびちゃん", P: "ぎゅっとくん", N: "ずらしくん", T: "しきりやおばさん", U: "ぎゅーおばさん", V: "かどっこおばさん", W: "こつこつおばさん", X: "まんなかおじさん", Y: "はみだしくん", Z: "つなぎおばさん" }; 
+  const palette = { I: "#FDCFAB", F: "#FFADA6", L: "#FEE1A7", P: "#6BB091", N: "#D2E3AD", T: "#76E1D7", U: "#85D7EF", V: "#A9C7E9", W: "#CBBBE8", X: "#F0B6DF", Y: "#FFAFD0", Z: "#ECD2C1" };
   const defaults = { piece: "P", pattern: "dots", profile: "bell", width: 165, height: 78, stem: 92, tilt: 0, density: 16 };
   let seed = 42;
   const controls = {};
@@ -26,7 +27,8 @@
   function capPath(w, h, profile) {
     const l = 180 - w / 2, r = 180 + w / 2, y = 172, top = y - h;
     if (profile === "cone") return `M${l} ${y} Q${l + 9} ${y - 9} 180 ${top} Q${r - 9} ${y - 9} ${r} ${y} Z`;
-    if (profile === "dented") return `M${l} ${y} C${l + 6} ${top + 18} ${180 - w * .27} ${top - 5} 180 ${top + 13} C${180 + w * .27} ${top - 5} ${r - 6} ${top + 18} ${r} ${y} Z`; \n    if (profile === "flat") return `M${l} ${y} Q180 ${top + 15} ${r} ${y} Q180 ${y + 7} ${l} ${y} Z`;
+    if (profile === "dented") return `M${l} ${y} C${l + 6} ${top + 18} ${180 - w * .27} ${top - 5} 180 ${top + 13} C${180 + w * .27} ${top - 5} ${r - 6} ${top + 18} ${r} ${y} Z`; 
+    if (profile === "flat") return `M${l} ${y} Q180 ${top + 15} ${r} ${y} Q180 ${y + 7} ${l} ${y} Z`;
     if (profile === "dome") return `M${l} ${y} C${l} ${top + 12} ${r} ${top + 12} ${r} ${y} Z`;
     return `M${l} ${y} C${l + 10} ${top + 12} ${180 - w * .20} ${top} 180 ${top} C${180 + w * .20} ${top} ${r - 10} ${top + 12} ${r} ${y} Z`;
   }
@@ -45,7 +47,23 @@
     const defs = node("defs", {}, group), clip = node("clipPath", { id: "mushroom-cap-clip" }, defs);
     node("path", { d: path }, clip);
     const decoration = node("g", { "clip-path": "url(#mushroom-cap-clip)" }, group);
-    if (["speckles", "stars"].includes(s.pattern)) {
+    if (s.pattern === "dots") {
+      // Regular, centered polka-dot lattice. Only the radius changes with seed.
+      // The cap clipPath trims dots at the curved edge.
+      const columns = Math.max(3, Math.round(Math.sqrt(s.density * s.width / s.height)));
+      const rows = Math.max(2, Math.ceil(s.density / columns));
+      const stepX = s.width / (columns + 0.4);
+      const stepY = s.height / (rows + 0.4);
+      let i = 0;
+      for (let row = 0; row < rows; row++) {
+        for (let col = 0; col < columns; col++) {
+          const x = 180 + (col - (columns - 1) / 2) * stepX;
+          const y = 172 - s.height / 2 + (row - (rows - 1) / 2) * stepY;
+          const radius = Math.min(stepX, stepY) * (0.16 + 0.09 * random(i++, 3));
+          node("circle", { cx: x, cy: y, r: radius, fill: "#fffdf3", opacity: .92 }, decoration);
+        }
+      }
+    } else if (["speckles", "stars"].includes(s.pattern)) {
       // Stratified sampling: one jittered candidate per grid cell, then
       // test against the actual SVG cap outline. This prevents bunching and
       // avoids wasting spots outside a narrow or dented cap.
