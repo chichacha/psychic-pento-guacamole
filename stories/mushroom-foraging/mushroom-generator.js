@@ -52,7 +52,8 @@
     node("path", { d: path }, clip);
     const decoration = node("g", { "clip-path": "url(#mushroom-cap-clip)" }, capGroup);
     if (s.pattern === "dots") {
-      // Staggered polka-dot lattice: odd rows shift half a column.\n      // Positions stay fixed; only dot radii change with seed.
+      // Staggered polka-dot lattice: odd rows shift half a column.
+      // Positions stay fixed; only dot radii change with seed.
       // The cap clipPath trims dots at the curved edge.
       const columns = Math.max(3, Math.round(Math.sqrt(s.density * s.width / s.height)));
       const rows = Math.max(2, Math.ceil(s.density / columns));
@@ -109,7 +110,8 @@
     } else if (s.pattern === "bands") {
       for (let i = 0; i < 5; i++) node("path", { d: `M${180 - s.width / 2} ${170 - i * 19} Q180 ${143 - i * 19} ${180 + s.width / 2} ${170 - i * 19}`, fill: "none", stroke: "#fffdf3", "stroke-width": 5, opacity: .8 }, decoration);
     }
-    const faceY = stemTop + s.stem * .44;\n    node("ellipse", { cx: 172, cy: faceY, rx: 3.5, ry: 4.8, fill: "#302b32" }, group);
+    const faceY = stemTop + s.stem * .44;
+    node("ellipse", { cx: 172, cy: faceY, rx: 3.5, ry: 4.8, fill: "#302b32" }, group);
     node("ellipse", { cx: 188, cy: faceY, rx: 3.5, ry: 4.8, fill: "#302b32" }, group);
     node("path", { d: `M175 ${faceY+12} Q180 ${faceY+17} 185 ${faceY+12}`, fill: "none", stroke: "#8c665b", "stroke-width": 2, "stroke-linecap": "round" }, group);
     document.getElementById("mushroom-caption").textContent = `${names[s.piece]}色のきのこ。傘の幅 ${s.width}、高さ ${s.height}。本人はまだ名前を決めていません。`;
