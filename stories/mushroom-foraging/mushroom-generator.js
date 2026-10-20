@@ -36,19 +36,23 @@
     const s = Object.fromEntries(Object.entries(controls).map(([k, el]) => [k, el.type === "range" ? Number(el.value) : el.value]));
     for (const name of ["width", "height", "stem", "tilt", "density"]) document.getElementById("out-" + name).textContent = s[name] + (name === "tilt" ? "°" : "");
     svg.replaceChildren();
-    node("ellipse", { cx: 180, cy: 286, rx: 76, ry: 8, fill: "#a6a09b", opacity: .17 });
-    const group = node("g", { transform: `rotate(${s.tilt} 180 190)` });
-    const stemTop = 172, stemBottom = stemTop + s.stem;
+    node("ellipse", { cx: 180, cy: 272, rx: 76, ry: 8, fill: "#a6a09b", opacity: .17 });
+    const groundY = 264;
+    const group = node("g", { transform: `rotate(${s.tilt} 180 ${groundY})` });
+    const stemBottom = groundY, stemTop = groundY - s.stem;
+    // Cap coordinates are authored around y=172; translate the entire cap
+    // (including gills, spots, and clipping) to meet the changing stem top.
+    const capGroup = node("g", { transform: `translate(0 ${stemTop - 172})` }, group);
     node("path", { d: `M166 ${stemTop - 4} Q157 ${stemTop + s.stem * .48} 163 ${stemBottom} Q180 ${stemBottom + 10} 197 ${stemBottom} Q189 ${stemTop + s.stem * .45} 194 ${stemTop - 4} Z`, fill: "#f7e8cf", stroke: "#aa9384", "stroke-width": 2 }, group);
-    node("ellipse", { cx: 180, cy: 172, rx: s.width / 2, ry: 14, fill: "#e4c9b6", stroke: "#ad9286", "stroke-width": 1.5 }, group);
-    for (let i = -6; i <= 6; i++) node("line", { x1: 180, y1: 172, x2: 180 + i * s.width / 14, y2: 180, stroke: "#b9968e", "stroke-width": .9 }, group);
+    node("ellipse", { cx: 180, cy: 172, rx: s.width / 2, ry: 14, fill: "#e4c9b6", stroke: "#ad9286", "stroke-width": 1.5 }, capGroup);
+    for (let i = -6; i <= 6; i++) node("line", { x1: 180, y1: 172, x2: 180 + i * s.width / 14, y2: 180, stroke: "#b9968e", "stroke-width": .9 }, capGroup);
     const path = capPath(s.width, s.height, s.profile);
-    node("path", { d: path, fill: palette[s.piece], stroke: "#806f70", "stroke-width": 2 }, group);
-    const defs = node("defs", {}, group), clip = node("clipPath", { id: "mushroom-cap-clip" }, defs);
+    node("path", { d: path, fill: palette[s.piece], stroke: "#806f70", "stroke-width": 2 }, capGroup);
+    const defs = node("defs", {}, capGroup), clip = node("clipPath", { id: "mushroom-cap-clip" }, defs);
     node("path", { d: path }, clip);
-    const decoration = node("g", { "clip-path": "url(#mushroom-cap-clip)" }, group);
+    const decoration = node("g", { "clip-path": "url(#mushroom-cap-clip)" }, capGroup);
     if (s.pattern === "dots") {
-      // Regular, centered polka-dot lattice. Only the radius changes with seed.
+      // Staggered polka-dot lattice: odd rows shift half a column.\n      // Positions stay fixed; only dot radii change with seed.
       // The cap clipPath trims dots at the curved edge.
       const columns = Math.max(3, Math.round(Math.sqrt(s.density * s.width / s.height)));
       const rows = Math.max(2, Math.ceil(s.density / columns));
@@ -57,7 +61,7 @@
       let i = 0;
       for (let row = 0; row < rows; row++) {
         for (let col = 0; col < columns; col++) {
-          const x = 180 + (col - (columns - 1) / 2) * stepX;
+          const x = 180 + (col - (columns - 1) / 2 + (row % 2 ? 0.5 : 0)) * stepX;
           const y = 172 - s.height / 2 + (row - (rows - 1) / 2) * stepY;
           const radius = Math.min(stepX, stepY) * (0.16 + 0.09 * random(i++, 3));
           node("circle", { cx: x, cy: y, r: radius, fill: "#fffdf3", opacity: .92 }, decoration);
@@ -105,9 +109,9 @@
     } else if (s.pattern === "bands") {
       for (let i = 0; i < 5; i++) node("path", { d: `M${180 - s.width / 2} ${170 - i * 19} Q180 ${143 - i * 19} ${180 + s.width / 2} ${170 - i * 19}`, fill: "none", stroke: "#fffdf3", "stroke-width": 5, opacity: .8 }, decoration);
     }
-    node("ellipse", { cx: 172, cy: 203, rx: 3.5, ry: 4.8, fill: "#302b32" }, group);
-    node("ellipse", { cx: 188, cy: 203, rx: 3.5, ry: 4.8, fill: "#302b32" }, group);
-    node("path", { d: "M175 215 Q180 220 185 215", fill: "none", stroke: "#8c665b", "stroke-width": 2, "stroke-linecap": "round" }, group);
+    const faceY = stemTop + s.stem * .44;\n    node("ellipse", { cx: 172, cy: faceY, rx: 3.5, ry: 4.8, fill: "#302b32" }, group);
+    node("ellipse", { cx: 188, cy: faceY, rx: 3.5, ry: 4.8, fill: "#302b32" }, group);
+    node("path", { d: `M175 ${faceY+12} Q180 ${faceY+17} 185 ${faceY+12}`, fill: "none", stroke: "#8c665b", "stroke-width": 2, "stroke-linecap": "round" }, group);
     document.getElementById("mushroom-caption").textContent = `${names[s.piece]}色のきのこ。傘の幅 ${s.width}、高さ ${s.height}。本人はまだ名前を決めていません。`;
   }
   Object.values(controls).forEach(el => el.addEventListener("input", render));
