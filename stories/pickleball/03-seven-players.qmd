@@ -45,55 +45,29 @@ format:
 
 ---
 
-## みんなで考えてみよう
+## 7人で、何試合すれば公平？
 
-5人では毎試合1人、6人では2人、7人では3人がお休み。
+コートは1面。ダブルスなので、**1試合に出られるのは4人**。残りの3人はお休みです。
 
-**人数が増えても、コートが1面なら同時に遊べるのは4人だけ。**
+「じゃあ、全員が同じ回数遊ぶには？」
 
-::: {.callout-tip}
-## 7人が同じ回数だけ遊ぶには？
+しきりやおばさんは、予定表を広げました。
 
-まずは **「人数」ではなく「延べ出場回数」** を数えてみましょう。
+「**みんなで合計7試合** やってみましょう。」
 
-1試合に出られるのは4人。7試合なら、**4人 × 7試合 = 延べ28回の出場** です。同じ人が別の試合に出たら、そのたびに1回と数えます。
+「えっ、1人7試合も？」と、はみだしくん。
 
-7人で公平に分けると、**28 ÷ 7 = 1人4試合**。
+「違います。**7人で交代しながら、全部で7試合** です。」
 
-では、お休みは？ 毎試合3人が休むので、**3人 × 7試合 = 延べ21回の休憩**。こちらは **21 ÷ 7 = 1人3回** です。
+7試合が終わるころには、**全員が4試合に出場して、3試合はお休み**。しかも、3回のお休みのうち **2回は椅子に座れて、1回は立ち休憩** にできるそうです。
 
-**28も21も、違う人が28人・21人いるという意味ではありません。** 7人が何度も出場・休憩する回数の合計です。
-
-### 7試合を色で数えてみよう
-
-下の1行が1試合。緑の4マスが出場、黄色の3マスがお休みです。**これは人数の割り振りを示す図で、誰が出るかは下のローテーションで確認できます。**
-
-```{=html}
-<div class="pb7-count-visual" aria-label="7試合の出場と休憩の枠数">
-  <div class="pb7-count-grid">
-    <div class="pb7-count-head">試合</div><div class="pb7-count-head">4人が出場 ＋ 3人がお休み</div>
-    <div class="pb7-count-row-label">1</div><div class="pb7-count-row"><span class="play"></span><span class="play"></span><span class="play"></span><span class="play"></span><span class="rest"></span><span class="rest"></span><span class="rest"></span></div>
-    <div class="pb7-count-row-label">2</div><div class="pb7-count-row"><span class="play"></span><span class="play"></span><span class="play"></span><span class="play"></span><span class="rest"></span><span class="rest"></span><span class="rest"></span></div>
-    <div class="pb7-count-row-label">3</div><div class="pb7-count-row"><span class="play"></span><span class="play"></span><span class="play"></span><span class="play"></span><span class="rest"></span><span class="rest"></span><span class="rest"></span></div>
-    <div class="pb7-count-row-label">4</div><div class="pb7-count-row"><span class="play"></span><span class="play"></span><span class="play"></span><span class="play"></span><span class="rest"></span><span class="rest"></span><span class="rest"></span></div>
-    <div class="pb7-count-row-label">5</div><div class="pb7-count-row"><span class="play"></span><span class="play"></span><span class="play"></span><span class="play"></span><span class="rest"></span><span class="rest"></span><span class="rest"></span></div>
-    <div class="pb7-count-row-label">6</div><div class="pb7-count-row"><span class="play"></span><span class="play"></span><span class="play"></span><span class="play"></span><span class="rest"></span><span class="rest"></span><span class="rest"></span></div>
-    <div class="pb7-count-row-label">7</div><div class="pb7-count-row"><span class="play"></span><span class="play"></span><span class="play"></span><span class="play"></span><span class="rest"></span><span class="rest"></span><span class="rest"></span></div>
-  </div>
-  <p class="pb7-count-legend"><span class="pb7-count-key play"></span> 出場：延べ28回 <span class="pb7-count-key rest"></span> 休憩：延べ21回</p>
-</div>
-```
-
-**なぜ7試合？** 1試合ごとに出場回数が4ずつ増えます。4、8、12、16、20、24……は7人で同じ回数に分けられません。**28になる7試合目**が、全員同じ回数だけ遊べる最初の区切りです。
-
-椅子は2つなので、毎試合のお休み3人のうち **2人が座り、1人が立ちます**。7試合を通して、全員が **4回出場・2回着席・1回立ち休憩** になります。
-:::
+本当にそんな順番が作れるのでしょうか？
 
 ## 椅子取りローテーションを見てみよう 🪑
 
-しきりやおばさんは、出場だけでなく、**座って休める回数**まで公平にすることにしました。
+試合の順番と、椅子の順番。どちらも公平になるでしょうか？
 
-ボタンを押して、7試合の変化を見てみよう。
+**「つぎ →」を押して、7試合を順番に見てみよう。** 7試合はみんなで行う試合の総数です。
 
 ```{=html}
 <div class="gomasu-pb-seven" id="gomasu-pb-seven">
@@ -117,28 +91,14 @@ format:
     <p class="pb7-bubble" data-role="bubble" aria-live="polite"></p>
   </div>
   <div class="pb7-controls"><button type="button" data-action="reset">最初から ↺</button><span data-role="progress"></span></div>
-  <div class="pb7-stat"><strong data-role="count">2 / 21 組</strong><span>21組は「7人から作れるペアの総数」。ここまでに登場した重複しないペアを数えています（休憩21回とは別の数です）。</span></div>
   <h3>7試合の出場・休憩カレンダー</h3>
-  <p class="pb7-explain">緑は出場、🪑 は座って休憩、👣 は立って休憩。今見ている試合の列を強調しています。</p>
+  <p class="pb7-explain">緑の ● は出場、🪑 は座ってお休み、👣 は立ってお休み。列の1〜7は試合の順番です。右端の「出場・座・立」は、7試合すべてを終えたときの合計です。</p>
   <div class="pb7-table-wrap" data-role="attendance"></div>
   <div class="pb7-result" data-role="result" hidden></div>
-  <h3>21組のパートナー図鑑</h3>
-  <p class="pb7-explain">登場したペアが色づきます。7試合で14組まで登場します。</p>
-  <div class="pb7-pair-grid" data-role="pairs"></div>
 </div>
 ```
 
 <style>
-.pb7-count-visual{max-width:480px;margin:1rem auto;padding:.75rem;border:1px solid #d9d7d3;border-radius:12px;background:#fffdf8}
-.pb7-count-grid{display:grid;grid-template-columns:2.5rem minmax(0,1fr);gap:.3rem .5rem;align-items:center}
-.pb7-count-head{font-size:.75rem;font-weight:700;text-align:center}
-.pb7-count-row-label{text-align:center;font-size:.8rem}
-.pb7-count-row{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:3px}
-.pb7-count-row span{height:20px;border-radius:3px}
-.pb7-count-row .play,.pb7-count-key.play{background:#b1dfc2}
-.pb7-count-row .rest,.pb7-count-key.rest{background:#f8e5aa}
-.pb7-count-legend{display:flex;justify-content:center;align-items:center;gap:.4rem;flex-wrap:wrap;font-size:.8rem;margin:.65rem 0 0}
-.pb7-count-key{width:12px;height:12px;display:inline-block;border-radius:2px;margin-left:.35rem}
 .gomasu-pb-seven{--pb7-ink:#302b32;--pb7-line:#d9d7d3;color:var(--pb7-ink);max-width:780px;margin:1.5rem auto;padding:1rem;background:#fffdf8;border:1px solid var(--pb7-line);border-radius:18px}
 .gomasu-pb-seven *{box-sizing:border-box}
 .gomasu-pb-seven button{font:inherit;border:1px solid #a7a5a1;border-radius:999px;background:#fff;padding:.55rem .9rem;color:inherit;cursor:pointer}
@@ -159,9 +119,6 @@ format:
 .pb7-seat>span{font-size:.73rem;font-weight:700}
 .pb7-standing{background:#fcefe9;border-style:dashed}
 .pb7-bubble{min-height:2.2em;font-size:.85rem;margin:.6rem auto}
-.pb7-stat{background:#eaf6ef;border-radius:12px;padding:.8rem;text-align:center;margin:1rem auto;display:flex;gap:.5rem;flex-direction:column}
-.pb7-stat strong{font-size:1.2rem}
-.pb7-stat span{font-size:.8rem}
 .gomasu-pb-seven h3{font-size:1.05rem;margin-top:1.4rem}
 .pb7-explain{font-size:.86rem}
 .pb7-table-wrap{overflow-x:auto}
@@ -177,15 +134,7 @@ format:
 .pb7-table tfoot th,.pb7-table tfoot td{font-weight:700;background:#f3f0e8;font-size:.68rem}
 .pb7-result{background:#eef7e9;border-radius:12px;padding:1rem;margin:1rem 0;font-size:.9rem}
 .pb7-result[hidden]{display:none}
-.pb7-pair-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.5rem}
-.pb7-pair{border:1px solid var(--pb7-line);border-radius:11px;padding:.5rem .3rem;text-align:center;opacity:.38;background:#f4f2ec}
-.pb7-pair.is-seen{opacity:1;background:#fff}
-.pb7-pair.is-current{outline:2px solid #335d4c;outline-offset:0}
-.pb7-pair-icons{display:flex;align-items:center;justify-content:center;gap:.25rem}
-.pb7-pair .pb7-avatar{width:42px;height:46px}
-.pb7-pair .pb7-name{font-size:.6rem}
-.pb7-pair-label{font-size:.7rem;font-weight:700;margin-bottom:.2rem}
-@media(max-width:550px){.pb7-avatar{width:50px;height:58px}.pb7-name{font-size:.6rem}.pb7-pair-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.pb7-seats{gap:.25rem}.pb7-seat{padding:.45rem .1rem}.pb7-seat>span{font-size:.61rem}.gomasu-pb-seven{padding:.7rem}.pb7-pair .pb7-avatar{width:35px;height:40px}}
+@media(max-width:550px){.pb7-avatar{width:50px;height:58px}.pb7-name{font-size:.6rem}.pb7-seats{gap:.25rem}.pb7-seat{padding:.45rem .1rem}.pb7-seat>span{font-size:.61rem}.gomasu-pb-seven{padding:.7rem}}
 </style>
 <script>
 (() => {
@@ -212,7 +161,7 @@ format:
   };
   const mod=n=>(n+700)%7;
   // In round r, r stands; r+3 and r-3 sit; the other four play.
-  // All 14 partner pairs are distinct; every person plays four rounds.
+  // Each player plays four rounds, sits twice, and stands once.
   const rounds=people.map((_,r)=>({
     standing:r,
     seats:[mod(r+3),mod(r-3)],
@@ -244,9 +193,6 @@ format:
     const name=document.createElement('span');name.className='pb7-name';name.textContent=p.name;box.append(name);
     return box;
   }
-  const pairKey=(a,b)=>[a,b].sort((x,y)=>x-y).join('-');
-  const allPairs=[];
-  for(let a=0;a<7;a++)for(let b=a+1;b<7;b++)allPairs.push([a,b]);
   let current=0;
   function render(){
     const game=rounds[current];
@@ -260,14 +206,12 @@ format:
     byRole('progress').textContent='ここまで '+(current+1)+' / 7 試合';
     root.querySelector('[data-action="prev"]').disabled=current===0;
     root.querySelector('[data-action="next"]').disabled=current===6;
-    const played=Array(7).fill(0),seated=Array(7).fill(0),stood=Array(7).fill(0),seen=new Set();
-    rounds.slice(0,current+1).forEach(g=>{
+    const played=Array(7).fill(0),seated=Array(7).fill(0),stood=Array(7).fill(0);
+    rounds.forEach(g=>{
       g.teams.flat().forEach(i=>played[i]++);
       g.seats.forEach(i=>seated[i]++);
       stood[g.standing]++;
-      g.teams.forEach(t=>seen.add(pairKey(...t)));
     });
-    byRole('count').textContent=seen.size+' / 21 組';
     const table=document.createElement('table');table.className='pb7-table';
     const thead=document.createElement('thead'),hr=document.createElement('tr');
     ['住人',...rounds.map((_,i)=>String(i+1)),'出場','座','立'].forEach((v,j)=>{const th=document.createElement('th');th.textContent=v;if(j===current+1)th.className='is-current';hr.append(th)});thead.append(hr);table.append(thead);
@@ -284,15 +228,8 @@ format:
       [played[i],seated[i],stood[i]].forEach(n=>{const td=document.createElement('td');td.textContent=n;tr.append(td)});
       tbody.append(tr);
     });table.append(tbody);byRole('attendance').replaceChildren(table);
-    const pairs=document.createDocumentFragment(),roundPairs=new Set(game.teams.map(t=>pairKey(...t)));
-    allPairs.forEach(([a,b])=>{
-      const key=pairKey(a,b),card=document.createElement('div');card.className='pb7-pair';
-      if(seen.has(key))card.classList.add('is-seen');if(roundPairs.has(key))card.classList.add('is-current');
-      const label=document.createElement('div');label.className='pb7-pair-label';label.textContent=people[a].id+' + '+people[b].id;
-      const icons=document.createElement('div');icons.className='pb7-pair-icons';icons.append(badge(a),badge(b));card.append(label,icons);pairs.append(card);
-    });byRole('pairs').replaceChildren(pairs);
     const result=byRole('result');result.hidden=current!==6;
-    if(current===6){result.textContent='🎉 全7試合終了！ 全員4回出場・3回休憩（座って2回、立って1回）。14組のパートナーが登場し、重複はありません。しきりやおばさん：「椅子の不公平も解決しました！」';}
+    if(current===6){result.textContent='🎉 7試合すべて終了！ 7人全員が4試合に出場して、3回お休み（椅子に2回、立って1回）。まんなかおじさん：「これで安心しておやつが食べられます。🍪」';}
   }
   root.querySelector('[data-action="prev"]').addEventListener('click',()=>{current=Math.max(0,current-1);render()});
   root.querySelector('[data-action="next"]').addEventListener('click',()=>{current=Math.min(6,current+1);render()});
@@ -302,23 +239,14 @@ format:
 </script>
 
 ::: {.callout-note collapse="true"}
-## 別の数え方：パートナーは何組できる？
+## 豆知識：どうして7試合？
 
-さっきの「休憩21回」とは別のお話です。今度は **誰と誰が組むか** を数えます。Aさん＋BさんとBさん＋Aさんは同じペアとして数えます。
+1試合に出られるのは4人。試合が終わるたびに、出場した回数の合計は4回ずつ増えます。
 
-7人から2人を選ぶと、違うペアは全部で
+7人に同じ回数ずつ分けられる最初のタイミングが、**7試合目**です。
 
-$$
-\binom{7}{2}=21
-$$
+7試合で終わりという意味ではありません。そのあとも遊べます。さらに7試合続ければ、全員8試合ずつ出場できます。
 
-組あります。これは **21組の異なるペア** という意味で、延べ休憩21回とは関係ありません。
-
-ダブルスでは1試合に2組のペアが登場するので、7試合で登場するパートナーは延べ **7 × 2 = 14組**。
-
-この組み合わせ表なら、その14組はすべて違うペアです。でも、残り7組はまだ登場していません。
-
-**同じ回数遊べる**ことと、**全員とペアになれる**ことは、別の目標です。
 :::
 
 ### 次回予告
