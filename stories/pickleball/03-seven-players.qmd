@@ -94,13 +94,39 @@ format:
 ::: {.callout-tip}
 ## 7人が同じ回数だけ遊ぶには？
 
-7試合すると、出場枠は全部で **7 × 4 = 28枠**。
+まずは **「人数」ではなく「延べ出場回数」** を数えてみましょう。
 
-7人で分ければ、**全員4試合ずつ**。
+1試合に出られるのは4人。7試合なら、**4人 × 7試合 = 延べ28回の出場** です。同じ人が別の試合に出たら、そのたびに1回と数えます。
 
-お休み枠は **7 × 3 = 21枠**。こちらも7人で分けて、**全員3回ずつ**。
+7人で公平に分けると、**28 ÷ 7 = 1人4試合**。
 
-これが、7人・1面のコートで、全員が同じ回数遊ぶための最短のまとまったローテーションです。
+では、お休みは？ 毎試合3人が休むので、**3人 × 7試合 = 延べ21回の休憩**。こちらは **21 ÷ 7 = 1人3回** です。
+
+**28も21も、違う人が28人・21人いるという意味ではありません。** 7人が何度も出場・休憩する回数の合計です。
+
+### 7試合を色で数えてみよう
+
+下の1行が1試合。緑の4マスが出場、黄色の3マスがお休みです。**これは人数の割り振りを示す図で、誰が出るかは下のローテーションで確認できます。**
+
+```{=html}
+<div class="pb7-count-visual" aria-label="7試合の出場と休憩の枠数">
+  <div class="pb7-count-grid">
+    <div class="pb7-count-head">試合</div><div class="pb7-count-head">4人が出場 ＋ 3人がお休み</div>
+    <div class="pb7-count-row-label">1</div><div class="pb7-count-row"><span class="play"></span><span class="play"></span><span class="play"></span><span class="play"></span><span class="rest"></span><span class="rest"></span><span class="rest"></span></div>
+    <div class="pb7-count-row-label">2</div><div class="pb7-count-row"><span class="play"></span><span class="play"></span><span class="play"></span><span class="play"></span><span class="rest"></span><span class="rest"></span><span class="rest"></span></div>
+    <div class="pb7-count-row-label">3</div><div class="pb7-count-row"><span class="play"></span><span class="play"></span><span class="play"></span><span class="play"></span><span class="rest"></span><span class="rest"></span><span class="rest"></span></div>
+    <div class="pb7-count-row-label">4</div><div class="pb7-count-row"><span class="play"></span><span class="play"></span><span class="play"></span><span class="play"></span><span class="rest"></span><span class="rest"></span><span class="rest"></span></div>
+    <div class="pb7-count-row-label">5</div><div class="pb7-count-row"><span class="play"></span><span class="play"></span><span class="play"></span><span class="play"></span><span class="rest"></span><span class="rest"></span><span class="rest"></span></div>
+    <div class="pb7-count-row-label">6</div><div class="pb7-count-row"><span class="play"></span><span class="play"></span><span class="play"></span><span class="play"></span><span class="rest"></span><span class="rest"></span><span class="rest"></span></div>
+    <div class="pb7-count-row-label">7</div><div class="pb7-count-row"><span class="play"></span><span class="play"></span><span class="play"></span><span class="play"></span><span class="rest"></span><span class="rest"></span><span class="rest"></span></div>
+  </div>
+  <p class="pb7-count-legend"><span class="pb7-count-key play"></span> 出場：延べ28回 <span class="pb7-count-key rest"></span> 休憩：延べ21回</p>
+</div>
+```
+
+**なぜ7試合？** 1試合ごとに出場回数が4ずつ増えます。4、8、12、16、20、24……は7人で同じ回数に分けられません。**28になる7試合目**が、全員同じ回数だけ遊べる最初の区切りです。
+
+椅子は2つなので、毎試合のお休み3人のうち **2人が座り、1人が立ちます**。7試合を通して、全員が **4回出場・2回着席・1回立ち休憩** になります。
 :::
 
 ## 椅子取りローテーションを見てみよう 🪑
@@ -131,7 +157,7 @@ format:
     <p class="pb7-bubble" data-role="bubble" aria-live="polite"></p>
   </div>
   <div class="pb7-controls"><button type="button" data-action="reset">最初から ↺</button><span data-role="progress"></span></div>
-  <div class="pb7-stat"><strong data-role="count">2 / 21 組</strong><span>ここまでに登場したパートナーの組み合わせ</span></div>
+  <div class="pb7-stat"><strong data-role="count">2 / 21 組</strong><span>21組は「7人から作れるペアの総数」。ここまでに登場した重複しないペアを数えています（休憩21回とは別の数です）。</span></div>
   <h3>7試合の出場・休憩カレンダー</h3>
   <p class="pb7-explain">緑は出場、🪑 は座って休憩、👣 は立って休憩。今見ている試合の列を強調しています。</p>
   <div class="pb7-table-wrap" data-role="attendance"></div>
@@ -143,6 +169,16 @@ format:
 ```
 
 <style>
+.pb7-count-visual{max-width:480px;margin:1rem auto;padding:.75rem;border:1px solid #d9d7d3;border-radius:12px;background:#fffdf8}
+.pb7-count-grid{display:grid;grid-template-columns:2.5rem minmax(0,1fr);gap:.3rem .5rem;align-items:center}
+.pb7-count-head{font-size:.75rem;font-weight:700;text-align:center}
+.pb7-count-row-label{text-align:center;font-size:.8rem}
+.pb7-count-row{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:3px}
+.pb7-count-row span{height:20px;border-radius:3px}
+.pb7-count-row .play,.pb7-count-key.play{background:#b1dfc2}
+.pb7-count-row .rest,.pb7-count-key.rest{background:#f8e5aa}
+.pb7-count-legend{display:flex;justify-content:center;align-items:center;gap:.4rem;flex-wrap:wrap;font-size:.8rem;margin:.65rem 0 0}
+.pb7-count-key{width:12px;height:12px;display:inline-block;border-radius:2px;margin-left:.35rem}
 .gomasu-pb-seven{--pb7-ink:#302b32;--pb7-line:#d9d7d3;color:var(--pb7-ink);max-width:780px;margin:1.5rem auto;padding:1rem;background:#fffdf8;border:1px solid var(--pb7-line);border-radius:18px}
 .gomasu-pb-seven *{box-sizing:border-box}
 .gomasu-pb-seven button{font:inherit;border:1px solid #a7a5a1;border-radius:999px;background:#fff;padding:.55rem .9rem;color:inherit;cursor:pointer}
@@ -306,17 +342,19 @@ format:
 </script>
 
 ::: {.callout-note collapse="true"}
-## 豆知識：パートナー全員制覇は？
+## 別の数え方：パートナーは何組できる？
 
-7人のペアは全部で
+さっきの「休憩21回」とは別のお話です。今度は **誰と誰が組むか** を数えます。Aさん＋BさんとBさん＋Aさんは同じペアとして数えます。
+
+7人から2人を選ぶと、違うペアは全部で
 
 $$
 \binom{7}{2}=21
 $$
 
-組あります。
+組あります。これは **21組の異なるペア** という意味で、延べ休憩21回とは関係ありません。
 
-7試合で登場するパートナーは、延べ **14組**。
+ダブルスでは1試合に2組のペアが登場するので、7試合で登場するパートナーは延べ **7 × 2 = 14組**。
 
 この組み合わせ表なら、その14組はすべて違うペアです。でも、残り7組はまだ登場していません。
 
