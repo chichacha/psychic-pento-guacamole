@@ -25,89 +25,49 @@ format:
 
 「こんにちは。まだ入れますか？」
 
-ずらしくんが、コートのすみに立っていました。
+ずらしくんがやってきました。
 
 「もちろん！」と、ぎゅーおばさん。
 
-しきりやおばさんは、紙を裏返しました。
-
-「……また作り直しですね。」
-
-まんなかおじさんは、コートの横を見ていました。
-
-「それより、椅子が2つしかありません。」
-
 7人でダブルス。遊べるのは4人。**休むのは3人。**
 
-椅子は2つ。
+ところが、椅子は2つしかありません。
 
-「ぼくは立っていてもいいですよ。」と、ずらしくん。
+「……1人、立ちっぱなしですか？」と、まんなかおじさん。
 
-「それじゃ休めないでしょう。」と、まんなかおじさん。
+「順番に交代すれば大丈夫！」と、しきりやおばさん。
 
-「でも、みんなが遊べればいいです。」
+「椅子も交代ですよね？」
 
-しきりやおばさんが言いました。
+「……もちろんです。」
 
-「大事なのは、全員が同じ回数遊ぶことです。」
-
-「同じ回数、座れることも大事です。」と、まんなかおじさん。
-
-「……おやつのためですか？」
-
-「それもあります。」
-
-しきりやおばさんは、紙に大きく **7** と書きました。
-
-「全員が公平に遊ぶには、最低7試合です。」
-
-「7試合!?」とはみだしくん。
-
-「1人4試合。お休みは3回ずつ。」
-
-まんなかおじさんは、椅子を見つめました。
-
-「でも、椅子は2つですよね。」
-
-しきりやおばさんも、椅子を見ました。
-
-「……椅子の順番も考えましょう。」
-
-ずらしくんが、向こうの空き地を指さしました。
-
-「そもそも、みんなで遊べる場所が増えたら？」
-
-しきりやおばさんは、空き地を見ました。
-
-「コートが、もう1面あれば……」
-
-まだ、ただの空き地です。
+こうして、ピックルボール部は試合より先に、椅子の順番を決めることになりました。
 
 ---
 
-## みんなで考えてみよう
+## 7人で、何試合すれば公平？
 
-5人では毎試合1人、6人では2人、7人では3人がお休み。
+コートは1面。ダブルスなので、**1試合に出られるのは4人**。残りの3人はお休みです。
 
-**人数が増えても、コートが1面なら同時に遊べるのは4人だけ。**
+「じゃあ、全員が同じ回数遊ぶには？」
 
-::: {.callout-tip}
-## 7人が同じ回数だけ遊ぶには？
+しきりやおばさんは、予定表を広げました。
 
-7試合すると、出場枠は全部で **7 × 4 = 28枠**。
+「**みんなで合計7試合** やってみましょう。」
 
-7人で分ければ、**全員4試合ずつ**。
+「えっ、1人7試合も？」と、はみだしくん。
 
-お休み枠は **7 × 3 = 21枠**。こちらも7人で分けて、**全員3回ずつ**。
+「違います。**7人で交代しながら、全部で7試合** です。」
 
-これが、7人・1面のコートで、全員が同じ回数遊ぶための最短のまとまったローテーションです。
-:::
+7試合が終わるころには、**全員が4試合に出場して、3試合はお休み**。しかも、3回のお休みのうち **2回は椅子に座れて、1回は立ち休憩** にできるそうです。
+
+本当にそんな順番が作れるのでしょうか？
 
 ## 椅子取りローテーションを見てみよう 🪑
 
-しきりやおばさんは、出場だけでなく、**座って休める回数**まで公平にすることにしました。
+試合の順番と、椅子の順番。どちらも公平になるでしょうか？
 
-ボタンを押して、7試合の変化を見てみよう。
+**「つぎ →」を押して、7試合を順番に見てみよう。** 7試合はみんなで行う試合の総数です。
 
 ```{=html}
 <div class="gomasu-pb-seven" id="gomasu-pb-seven">
@@ -131,14 +91,10 @@ format:
     <p class="pb7-bubble" data-role="bubble" aria-live="polite"></p>
   </div>
   <div class="pb7-controls"><button type="button" data-action="reset">最初から ↺</button><span data-role="progress"></span></div>
-  <div class="pb7-stat"><strong data-role="count">2 / 21 組</strong><span>ここまでに登場したパートナーの組み合わせ</span></div>
   <h3>7試合の出場・休憩カレンダー</h3>
-  <p class="pb7-explain">緑は出場、🪑 は座って休憩、👣 は立って休憩。今見ている試合の列を強調しています。</p>
+  <p class="pb7-explain">緑の ● は出場、🪑 は座ってお休み、👣 は立ってお休み。列の1〜7は試合の順番です。右端の「出場・座・立」は、7試合すべてを終えたときの合計です。</p>
   <div class="pb7-table-wrap" data-role="attendance"></div>
   <div class="pb7-result" data-role="result" hidden></div>
-  <h3>21組のパートナー図鑑</h3>
-  <p class="pb7-explain">登場したペアが色づきます。7試合で14組まで登場します。</p>
-  <div class="pb7-pair-grid" data-role="pairs"></div>
 </div>
 ```
 
@@ -163,9 +119,6 @@ format:
 .pb7-seat>span{font-size:.73rem;font-weight:700}
 .pb7-standing{background:#fcefe9;border-style:dashed}
 .pb7-bubble{min-height:2.2em;font-size:.85rem;margin:.6rem auto}
-.pb7-stat{background:#eaf6ef;border-radius:12px;padding:.8rem;text-align:center;margin:1rem auto;display:flex;gap:.5rem;flex-direction:column}
-.pb7-stat strong{font-size:1.2rem}
-.pb7-stat span{font-size:.8rem}
 .gomasu-pb-seven h3{font-size:1.05rem;margin-top:1.4rem}
 .pb7-explain{font-size:.86rem}
 .pb7-table-wrap{overflow-x:auto}
@@ -181,15 +134,7 @@ format:
 .pb7-table tfoot th,.pb7-table tfoot td{font-weight:700;background:#f3f0e8;font-size:.68rem}
 .pb7-result{background:#eef7e9;border-radius:12px;padding:1rem;margin:1rem 0;font-size:.9rem}
 .pb7-result[hidden]{display:none}
-.pb7-pair-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.5rem}
-.pb7-pair{border:1px solid var(--pb7-line);border-radius:11px;padding:.5rem .3rem;text-align:center;opacity:.38;background:#f4f2ec}
-.pb7-pair.is-seen{opacity:1;background:#fff}
-.pb7-pair.is-current{outline:2px solid #335d4c;outline-offset:0}
-.pb7-pair-icons{display:flex;align-items:center;justify-content:center;gap:.25rem}
-.pb7-pair .pb7-avatar{width:42px;height:46px}
-.pb7-pair .pb7-name{font-size:.6rem}
-.pb7-pair-label{font-size:.7rem;font-weight:700;margin-bottom:.2rem}
-@media(max-width:550px){.pb7-avatar{width:50px;height:58px}.pb7-name{font-size:.6rem}.pb7-pair-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.pb7-seats{gap:.25rem}.pb7-seat{padding:.45rem .1rem}.pb7-seat>span{font-size:.61rem}.gomasu-pb-seven{padding:.7rem}.pb7-pair .pb7-avatar{width:35px;height:40px}}
+@media(max-width:550px){.pb7-avatar{width:50px;height:58px}.pb7-name{font-size:.6rem}.pb7-seats{gap:.25rem}.pb7-seat{padding:.45rem .1rem}.pb7-seat>span{font-size:.61rem}.gomasu-pb-seven{padding:.7rem}}
 </style>
 <script>
 (() => {
@@ -216,7 +161,7 @@ format:
   };
   const mod=n=>(n+700)%7;
   // In round r, r stands; r+3 and r-3 sit; the other four play.
-  // All 14 partner pairs are distinct; every person plays four rounds.
+  // Each player plays four rounds, sits twice, and stands once.
   const rounds=people.map((_,r)=>({
     standing:r,
     seats:[mod(r+3),mod(r-3)],
@@ -248,9 +193,6 @@ format:
     const name=document.createElement('span');name.className='pb7-name';name.textContent=p.name;box.append(name);
     return box;
   }
-  const pairKey=(a,b)=>[a,b].sort((x,y)=>x-y).join('-');
-  const allPairs=[];
-  for(let a=0;a<7;a++)for(let b=a+1;b<7;b++)allPairs.push([a,b]);
   let current=0;
   function render(){
     const game=rounds[current];
@@ -264,14 +206,12 @@ format:
     byRole('progress').textContent='ここまで '+(current+1)+' / 7 試合';
     root.querySelector('[data-action="prev"]').disabled=current===0;
     root.querySelector('[data-action="next"]').disabled=current===6;
-    const played=Array(7).fill(0),seated=Array(7).fill(0),stood=Array(7).fill(0),seen=new Set();
-    rounds.slice(0,current+1).forEach(g=>{
+    const played=Array(7).fill(0),seated=Array(7).fill(0),stood=Array(7).fill(0);
+    rounds.forEach(g=>{
       g.teams.flat().forEach(i=>played[i]++);
       g.seats.forEach(i=>seated[i]++);
       stood[g.standing]++;
-      g.teams.forEach(t=>seen.add(pairKey(...t)));
     });
-    byRole('count').textContent=seen.size+' / 21 組';
     const table=document.createElement('table');table.className='pb7-table';
     const thead=document.createElement('thead'),hr=document.createElement('tr');
     ['住人',...rounds.map((_,i)=>String(i+1)),'出場','座','立'].forEach((v,j)=>{const th=document.createElement('th');th.textContent=v;if(j===current+1)th.className='is-current';hr.append(th)});thead.append(hr);table.append(thead);
@@ -288,15 +228,8 @@ format:
       [played[i],seated[i],stood[i]].forEach(n=>{const td=document.createElement('td');td.textContent=n;tr.append(td)});
       tbody.append(tr);
     });table.append(tbody);byRole('attendance').replaceChildren(table);
-    const pairs=document.createDocumentFragment(),roundPairs=new Set(game.teams.map(t=>pairKey(...t)));
-    allPairs.forEach(([a,b])=>{
-      const key=pairKey(a,b),card=document.createElement('div');card.className='pb7-pair';
-      if(seen.has(key))card.classList.add('is-seen');if(roundPairs.has(key))card.classList.add('is-current');
-      const label=document.createElement('div');label.className='pb7-pair-label';label.textContent=people[a].id+' + '+people[b].id;
-      const icons=document.createElement('div');icons.className='pb7-pair-icons';icons.append(badge(a),badge(b));card.append(label,icons);pairs.append(card);
-    });byRole('pairs').replaceChildren(pairs);
     const result=byRole('result');result.hidden=current!==6;
-    if(current===6){result.textContent='🎉 全7試合終了！ 全員4回出場・3回休憩（座って2回、立って1回）。14組のパートナーが登場し、重複はありません。しきりやおばさん：「椅子の不公平も解決しました！」';}
+    if(current===6){result.textContent='🎉 7試合すべて終了！ 7人全員が4試合に出場して、3回お休み（椅子に2回、立って1回）。まんなかおじさん：「これで安心しておやつが食べられます。🍪」';}
   }
   root.querySelector('[data-action="prev"]').addEventListener('click',()=>{current=Math.max(0,current-1);render()});
   root.querySelector('[data-action="next"]').addEventListener('click',()=>{current=Math.min(6,current+1);render()});
@@ -306,21 +239,14 @@ format:
 </script>
 
 ::: {.callout-note collapse="true"}
-## 豆知識：パートナー全員制覇は？
+## 豆知識：どうして7試合？
 
-7人のペアは全部で
+1試合に出られるのは4人。試合が終わるたびに、出場した回数の合計は4回ずつ増えます。
 
-$$
-\binom{7}{2}=21
-$$
+7人に同じ回数ずつ分けられる最初のタイミングが、**7試合目**です。
 
-組あります。
+7試合で終わりという意味ではありません。そのあとも遊べます。さらに7試合続ければ、全員8試合ずつ出場できます。
 
-7試合で登場するパートナーは、延べ **14組**。
-
-この組み合わせ表なら、その14組はすべて違うペアです。でも、残り7組はまだ登場していません。
-
-**同じ回数遊べる**ことと、**全員とペアになれる**ことは、別の目標です。
 :::
 
 ### 次回予告

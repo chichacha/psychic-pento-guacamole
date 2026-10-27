@@ -50,35 +50,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../../assets/css/style.css">
 <link rel="stylesheet" href="../../research/research.css">
@@ -169,61 +140,31 @@ window.Quarto = {
 </div>
 <p>6人分の組み合わせ表が完成した、そのとき。</p>
 <p>「こんにちは。まだ入れますか？」</p>
-<p>ずらしくんが、コートのすみに立っていました。</p>
+<p>ずらしくんがやってきました。</p>
 <p>「もちろん！」と、ぎゅーおばさん。</p>
-<p>しきりやおばさんは、紙を裏返しました。</p>
-<p>「……また作り直しですね。」</p>
-<p>まんなかおじさんは、コートの横を見ていました。</p>
-<p>「それより、椅子が2つしかありません。」</p>
 <p>7人でダブルス。遊べるのは4人。<strong>休むのは3人。</strong></p>
-<p>椅子は2つ。</p>
-<p>「ぼくは立っていてもいいですよ。」と、ずらしくん。</p>
-<p>「それじゃ休めないでしょう。」と、まんなかおじさん。</p>
-<p>「でも、みんなが遊べればいいです。」</p>
-<p>しきりやおばさんが言いました。</p>
-<p>「大事なのは、全員が同じ回数遊ぶことです。」</p>
-<p>「同じ回数、座れることも大事です。」と、まんなかおじさん。</p>
-<p>「……おやつのためですか？」</p>
-<p>「それもあります。」</p>
-<p>しきりやおばさんは、紙に大きく <strong>7</strong> と書きました。</p>
-<p>「全員が公平に遊ぶには、最低7試合です。」</p>
-<p>「7試合!?」とはみだしくん。</p>
-<p>「1人4試合。お休みは3回ずつ。」</p>
-<p>まんなかおじさんは、椅子を見つめました。</p>
-<p>「でも、椅子は2つですよね。」</p>
-<p>しきりやおばさんも、椅子を見ました。</p>
-<p>「……椅子の順番も考えましょう。」</p>
-<p>ずらしくんが、向こうの空き地を指さしました。</p>
-<p>「そもそも、みんなで遊べる場所が増えたら？」</p>
-<p>しきりやおばさんは、空き地を見ました。</p>
-<p>「コートが、もう1面あれば……」</p>
-<p>まだ、ただの空き地です。</p>
+<p>ところが、椅子は2つしかありません。</p>
+<p>「……1人、立ちっぱなしですか？」と、まんなかおじさん。</p>
+<p>「順番に交代すれば大丈夫！」と、しきりやおばさん。</p>
+<p>「椅子も交代ですよね？」</p>
+<p>「……もちろんです。」</p>
+<p>こうして、ピックルボール部は試合より先に、椅子の順番を決めることになりました。</p>
 <hr>
-<section id="みんなで考えてみよう" class="level2">
-<h2 data-anchor-id="みんなで考えてみよう">みんなで考えてみよう</h2>
-<p>5人では毎試合1人、6人では2人、7人では3人がお休み。</p>
-<p><strong>人数が増えても、コートが1面なら同時に遊べるのは4人だけ。</strong></p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-7人が同じ回数だけ遊ぶには？
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>7試合すると、出場枠は全部で <strong>7 × 4 = 28枠</strong>。</p>
-<p>7人で分ければ、<strong>全員4試合ずつ</strong>。</p>
-<p>お休み枠は <strong>7 × 3 = 21枠</strong>。こちらも7人で分けて、<strong>全員3回ずつ</strong>。</p>
-<p>これが、7人・1面のコートで、全員が同じ回数遊ぶための最短のまとまったローテーションです。</p>
-</div>
-</div>
+<section id="人で何試合すれば公平" class="level2">
+<h2 data-anchor-id="人で何試合すれば公平">7人で、何試合すれば公平？</h2>
+<p>コートは1面。ダブルスなので、<strong>1試合に出られるのは4人</strong>。残りの3人はお休みです。</p>
+<p>「じゃあ、全員が同じ回数遊ぶには？」</p>
+<p>しきりやおばさんは、予定表を広げました。</p>
+<p>「<strong>みんなで合計7試合</strong> やってみましょう。」</p>
+<p>「えっ、1人7試合も？」と、はみだしくん。</p>
+<p>「違います。<strong>7人で交代しながら、全部で7試合</strong> です。」</p>
+<p>7試合が終わるころには、<strong>全員が4試合に出場して、3試合はお休み</strong>。しかも、3回のお休みのうち <strong>2回は椅子に座れて、1回は立ち休憩</strong> にできるそうです。</p>
+<p>本当にそんな順番が作れるのでしょうか？</p>
 </section>
 <section id="椅子取りローテーションを見てみよう" class="level2">
 <h2 data-anchor-id="椅子取りローテーションを見てみよう">椅子取りローテーションを見てみよう 🪑</h2>
-<p>しきりやおばさんは、出場だけでなく、<strong>座って休める回数</strong>まで公平にすることにしました。</p>
-<p>ボタンを押して、7試合の変化を見てみよう。</p>
+<p>試合の順番と、椅子の順番。どちらも公平になるでしょうか？</p>
+<p><strong>「つぎ →」を押して、7試合を順番に見てみよう。</strong> 7試合はみんなで行う試合の総数です。</p>
 <div class="gomasu-pb-seven" id="gomasu-pb-seven">
   <div class="pb7-controls">
     <button type="button" data-action="prev">← まえ</button>
@@ -245,14 +186,10 @@ window.Quarto = {
     <p class="pb7-bubble" data-role="bubble" aria-live="polite"></p>
   </div>
   <div class="pb7-controls"><button type="button" data-action="reset">最初から ↺</button><span data-role="progress"></span></div>
-  <div class="pb7-stat"><strong data-role="count">2 / 21 組</strong><span>ここまでに登場したパートナーの組み合わせ</span></div>
   <h3>7試合の出場・休憩カレンダー</h3>
-  <p class="pb7-explain">緑は出場、🪑 は座って休憩、👣 は立って休憩。今見ている試合の列を強調しています。</p>
+  <p class="pb7-explain">緑の ● は出場、🪑 は座ってお休み、👣 は立ってお休み。列の1〜7は試合の順番です。右端の「出場・座・立」は、7試合すべてを終えたときの合計です。</p>
   <div class="pb7-table-wrap" data-role="attendance"></div>
   <div class="pb7-result" data-role="result" hidden=""></div>
-  <h3>21組のパートナー図鑑</h3>
-  <p class="pb7-explain">登場したペアが色づきます。7試合で14組まで登場します。</p>
-  <div class="pb7-pair-grid" data-role="pairs"></div>
 </div>
 <style>
 .gomasu-pb-seven{--pb7-ink:#302b32;--pb7-line:#d9d7d3;color:var(--pb7-ink);max-width:780px;margin:1.5rem auto;padding:1rem;background:#fffdf8;border:1px solid var(--pb7-line);border-radius:18px}
@@ -275,9 +212,6 @@ window.Quarto = {
 .pb7-seat>span{font-size:.73rem;font-weight:700}
 .pb7-standing{background:#fcefe9;border-style:dashed}
 .pb7-bubble{min-height:2.2em;font-size:.85rem;margin:.6rem auto}
-.pb7-stat{background:#eaf6ef;border-radius:12px;padding:.8rem;text-align:center;margin:1rem auto;display:flex;gap:.5rem;flex-direction:column}
-.pb7-stat strong{font-size:1.2rem}
-.pb7-stat span{font-size:.8rem}
 .gomasu-pb-seven h3{font-size:1.05rem;margin-top:1.4rem}
 .pb7-explain{font-size:.86rem}
 .pb7-table-wrap{overflow-x:auto}
@@ -293,15 +227,7 @@ window.Quarto = {
 .pb7-table tfoot th,.pb7-table tfoot td{font-weight:700;background:#f3f0e8;font-size:.68rem}
 .pb7-result{background:#eef7e9;border-radius:12px;padding:1rem;margin:1rem 0;font-size:.9rem}
 .pb7-result[hidden]{display:none}
-.pb7-pair-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.5rem}
-.pb7-pair{border:1px solid var(--pb7-line);border-radius:11px;padding:.5rem .3rem;text-align:center;opacity:.38;background:#f4f2ec}
-.pb7-pair.is-seen{opacity:1;background:#fff}
-.pb7-pair.is-current{outline:2px solid #335d4c;outline-offset:0}
-.pb7-pair-icons{display:flex;align-items:center;justify-content:center;gap:.25rem}
-.pb7-pair .pb7-avatar{width:42px;height:46px}
-.pb7-pair .pb7-name{font-size:.6rem}
-.pb7-pair-label{font-size:.7rem;font-weight:700;margin-bottom:.2rem}
-@media(max-width:550px){.pb7-avatar{width:50px;height:58px}.pb7-name{font-size:.6rem}.pb7-pair-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.pb7-seats{gap:.25rem}.pb7-seat{padding:.45rem .1rem}.pb7-seat>span{font-size:.61rem}.gomasu-pb-seven{padding:.7rem}.pb7-pair .pb7-avatar{width:35px;height:40px}}
+@media(max-width:550px){.pb7-avatar{width:50px;height:58px}.pb7-name{font-size:.6rem}.pb7-seats{gap:.25rem}.pb7-seat{padding:.45rem .1rem}.pb7-seat>span{font-size:.61rem}.gomasu-pb-seven{padding:.7rem}}
 </style>
 <script>
 (() => {
@@ -328,7 +254,7 @@ window.Quarto = {
   };
   const mod=n=>(n+700)%7;
   // In round r, r stands; r+3 and r-3 sit; the other four play.
-  // All 14 partner pairs are distinct; every person plays four rounds.
+  // Each player plays four rounds, sits twice, and stands once.
   const rounds=people.map((_,r)=>({
     standing:r,
     seats:[mod(r+3),mod(r-3)],
@@ -360,9 +286,6 @@ window.Quarto = {
     const name=document.createElement('span');name.className='pb7-name';name.textContent=p.name;box.append(name);
     return box;
   }
-  const pairKey=(a,b)=>[a,b].sort((x,y)=>x-y).join('-');
-  const allPairs=[];
-  for(let a=0;a<7;a++)for(let b=a+1;b<7;b++)allPairs.push([a,b]);
   let current=0;
   function render(){
     const game=rounds[current];
@@ -376,14 +299,12 @@ window.Quarto = {
     byRole('progress').textContent='ここまで '+(current+1)+' / 7 試合';
     root.querySelector('[data-action="prev"]').disabled=current===0;
     root.querySelector('[data-action="next"]').disabled=current===6;
-    const played=Array(7).fill(0),seated=Array(7).fill(0),stood=Array(7).fill(0),seen=new Set();
-    rounds.slice(0,current+1).forEach(g=>{
+    const played=Array(7).fill(0),seated=Array(7).fill(0),stood=Array(7).fill(0);
+    rounds.forEach(g=>{
       g.teams.flat().forEach(i=>played[i]++);
       g.seats.forEach(i=>seated[i]++);
       stood[g.standing]++;
-      g.teams.forEach(t=>seen.add(pairKey(...t)));
     });
-    byRole('count').textContent=seen.size+' / 21 組';
     const table=document.createElement('table');table.className='pb7-table';
     const thead=document.createElement('thead'),hr=document.createElement('tr');
     ['住人',...rounds.map((_,i)=>String(i+1)),'出場','座','立'].forEach((v,j)=>{const th=document.createElement('th');th.textContent=v;if(j===current+1)th.className='is-current';hr.append(th)});thead.append(hr);table.append(thead);
@@ -400,15 +321,8 @@ window.Quarto = {
       [played[i],seated[i],stood[i]].forEach(n=>{const td=document.createElement('td');td.textContent=n;tr.append(td)});
       tbody.append(tr);
     });table.append(tbody);byRole('attendance').replaceChildren(table);
-    const pairs=document.createDocumentFragment(),roundPairs=new Set(game.teams.map(t=>pairKey(...t)));
-    allPairs.forEach(([a,b])=>{
-      const key=pairKey(a,b),card=document.createElement('div');card.className='pb7-pair';
-      if(seen.has(key))card.classList.add('is-seen');if(roundPairs.has(key))card.classList.add('is-current');
-      const label=document.createElement('div');label.className='pb7-pair-label';label.textContent=people[a].id+' + '+people[b].id;
-      const icons=document.createElement('div');icons.className='pb7-pair-icons';icons.append(badge(a),badge(b));card.append(label,icons);pairs.append(card);
-    });byRole('pairs').replaceChildren(pairs);
     const result=byRole('result');result.hidden=current!==6;
-    if(current===6){result.textContent='🎉 全7試合終了！ 全員4回出場・3回休憩（座って2回、立って1回）。14組のパートナーが登場し、重複はありません。しきりやおばさん：「椅子の不公平も解決しました！」';}
+    if(current===6){result.textContent='🎉 7試合すべて終了！ 7人全員が4試合に出場して、3回お休み（椅子に2回、立って1回）。まんなかおじさん：「これで安心しておやつが食べられます。🍪」';}
   }
   root.querySelector('[data-action="prev"]').addEventListener('click',()=>{current=Math.max(0,current-1);render()});
   root.querySelector('[data-action="next"]').addEventListener('click',()=>{current=Math.min(6,current+1);render()});
@@ -417,25 +331,20 @@ window.Quarto = {
 })();
 </script>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-豆知識：パートナー全員制覇は？
+豆知識：どうして7試合？
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>7人のペアは全部で</p>
-<p><span class="math display">\[
-\binom{7}{2}=21
-\]</span></p>
-<p>組あります。</p>
-<p>7試合で登場するパートナーは、延べ <strong>14組</strong>。</p>
-<p>この組み合わせ表なら、その14組はすべて違うペアです。でも、残り7組はまだ登場していません。</p>
-<p><strong>同じ回数遊べる</strong>ことと、<strong>全員とペアになれる</strong>ことは、別の目標です。</p>
+<p>1試合に出られるのは4人。試合が終わるたびに、出場した回数の合計は4回ずつ増えます。</p>
+<p>7人に同じ回数ずつ分けられる最初のタイミングが、<strong>7試合目</strong>です。</p>
+<p>7試合で終わりという意味ではありません。そのあとも遊べます。さらに7試合続ければ、全員8試合ずつ出場できます。</p>
 </div>
 </div>
 </div>
