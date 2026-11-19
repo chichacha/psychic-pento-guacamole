@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff9f2">
+  <meta name="description" content="五マスの仲間が、ちょっとだけ立体に。Three.jsで遊ぶ小さな3D実験。">
+  <title>五マスの人たち。｜ちいさな3D実験</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans JP", system-ui, sans-serif;
+      color: #302b32;
+      background: #fff9f2;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; }
+    body { overflow: hidden; }
+    button { font: inherit; }
+    #world { position: fixed; inset: 0; overflow: hidden; }
+    #world canvas { display: block; width: 100%; height: 100%; touch-action: none; }
+    .intro {
+      position: fixed; top: max(20px, env(safe-area-inset-top)); left: 20px;
+      max-width: min(370px, calc(100vw - 40px));
+      padding: 18px 21px; background: rgba(255,255,255,.84);
+      border: 1px solid rgba(76,52,62,.1); border-radius: 22px;
+      backdrop-filter: blur(14px); box-shadow: 0 12px 42px rgba(73,45,64,.07);
+      pointer-events: none;
+    }
+    .eyebrow { margin: 0 0 7px; color: #945c79; font-size: 11px; font-weight: 800; letter-spacing: .13em; }
+    h1 { margin: 0 0 7px; font-size: clamp(20px,3.8vw,28px); letter-spacing: -.04em; }
+    .intro p:last-child { margin: 0; font-size: 13px; line-height: 1.8; color: #6b5964; }
+    .character-card {
+      position: fixed; bottom: max(22px, env(safe-area-inset-bottom)); left: 20px;
+      width: min(340px, calc(100vw - 40px));
+      padding: 16px 20px; background: rgba(255,255,255,.88);
+      border: 1px solid rgba(76,52,62,.11); border-radius: 20px;
+      box-shadow: 0 12px 42px rgba(73,45,64,.08); backdrop-filter: blur(14px);
+      pointer-events: none;
+    }
+    .character-card strong { display: block; font-size: 18px; margin-bottom: 3px; }
+    .character-card p { font-size: 13px; margin: 0; line-height: 1.7; color: #6b5964; }
+    .character-card .help { font-size: 11px; margin-top: 7px; color: #8a7780; }
+    .actions { position: fixed; right: 20px; bottom: max(22px, env(safe-area-inset-bottom)); }
+    .actions button {
+      cursor: pointer; border: 1px solid #e9d8dd; border-radius: 999px;
+      padding: 11px 16px; color: #563947; background: #fff;
+      box-shadow: 0 6px 20px rgba(73,45,64,.09);
+    }
+    .actions button:hover, .actions button:focus-visible { background: #fff0f4; }
+    .status {
+      position: fixed; left: 50%; top: 50%; transform: translate(-50%,-50%);
+      width: min(80vw,360px); text-align: center; line-height: 1.8;
+      padding: 12px 18px; background: rgba(255,255,255,.9); border-radius: 14px;
+      font-size: 13px; pointer-events: none;
+    }
+    .status[hidden] { display: none; }
+    @media (max-width: 600px) {
+      .intro { left: 12px; top: max(12px, env(safe-area-inset-top)); padding: 13px 16px; }
+      .intro p:last-child { font-size: 12px; }
+      .character-card { left: 12px; bottom: max(12px,env(safe-area-inset-bottom)); width: min(235px,calc(100vw - 142px)); padding: 12px 14px; }
+      .character-card strong { font-size: 15px; }
+      .character-card p { font-size: 11px; }
+      .character-card .help { font-size: 10px; }
+      .actions { right: 12px; bottom: max(12px,env(safe-area-inset-bottom)); }
+      .actions button { font-size: 11px; padding: 10px; }
+    }
+  </style>
+  <!-- Keep the core package and addons on the same pinned Three.js version. -->
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <main>
+    <div id="world" aria-label="五マスの人たちの立体実験。ドラッグで回転、スクロールやピンチで拡大縮小。" role="img"></div>
+    <section class="intro" aria-labelledby="page-title">
+      <p class="eyebrow">🧪 ひみつの実験室 / 3D EXPERIMENT</p>
+      <h1 id="page-title">五マスの人たち、立体になる。</h1>
+      <p>五つの四角のまま、ちょっとだけ奥行きができました。ぐるっと見て、そっとタップしてみよう。</p>
+    </section>
+    <section class="character-card" aria-live="polite">
+      <strong id="name">まんなかおじさん</strong>
+      <p id="quote">「ここにいるよ。」</p>
+      <p class="help" id="hint">👆 タップすると、何か起こるかも。</p>
+    </section>
+    <div class="actions"><button id="reset-camera" type="button" aria-label="カメラを最初の位置に戻す">↺ カメラを戻す</button></div>
+    <p id="status" class="status" role="status">ただいま立体を準備中…</p>
+  </main>
+  <script type="module">
+    import * as THREE from "three";
+    import { OrbitControls } from "three/addons/controls/OrbitControls.js";
+
+    const mount = document.getElementById("world");
+    const status = document.getElementById("status");
+    const nameEl = document.getElementById("name");
+    const quoteEl = document.getElementById("quote");
+    const hintEl = document.getElementById("hint");
+
+    const scene = new THREE.Scene();
+    scene.background = new THREE.Color("#fff9f2");
+    scene.fog = new THREE.Fog("#fff9f2", 13, 25);
+
+    const camera = new THREE.PerspectiveCamera(37, 1, 0.1, 50);
+    const initialCameraPosition = new THREE.Vector3(5.2, 4.5, 8.5);
+    const initialTarget = new THREE.Vector3(0, 1.55, 0);
+    camera.position.copy(initialCameraPosition);
+
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+    renderer.shadowMap.enabled = true;
+    renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+    renderer.outputColorSpace = THREE.SRGBColorSpace;
+    mount.appendChild(renderer.domElement);
+
+    const controls = new OrbitControls(camera, renderer.domElement);
+    controls.target.copy(initialTarget);
+    controls.enableDamping = true;
+    controls.enablePan = false;
+    controls.minDistance = 4;
+    controls.maxDistance = 13;
+    controls.minPolarAngle = 0.25;
+    controls.maxPolarAngle = Math.PI / 2 - 0.04;
+    controls.update();
+
+    const ambient = new THREE.HemisphereLight("#ffffff", "#d8b7ad", 2.2);
+    scene.add(ambient);
+
+    const sun = new THREE.DirectionalLight("#ffffff", 3.2);
+    sun.position.set(-3.5, 8, 5);
+    sun.castShadow = true;
+    sun.shadow.mapSize.set(1024, 1024);
+    sun.shadow.camera.left = -7;
+    sun.shadow.camera.right = 7;
+    sun.shadow.camera.top = 7;
+    sun.shadow.camera.bottom = -7;
+    sun.shadow.bias = -0.0005;
+    scene.add(sun);
+
+    const ground = new THREE.Mesh(
+      new THREE.CircleGeometry(6.2, 96),
+      new THREE.MeshStandardMaterial({ color: "#f4e7e1", roughness: 1 })
+    );
+    ground.rotation.x = -Math.PI / 2;
+    ground.receiveShadow = true;
+    scene.add(ground);
+
+    const clickable = [];
+    let villager = null;
+    let reactedAt = -100;
+    const clock = new THREE.Clock();
+    const pointer = new THREE.Vector2();
+    const raycaster = new THREE.Raycaster();
+
+    // Official posture coordinates are [row, column, z].
+    // A five-cell silhouette is placed upright in the XY plane; Z supplies thickness.
+    function buildVillager(character, cells) {
+      if (!Array.isArray(cells) || cells.length !== 5 || cells.some(cell => cell.length < 2)) {
+        throw new Error("Expected an official five-cell posture.");
+      }
+
+      const rows = cells.map(cell => cell[0]);
+      const columns = cells.map(cell => cell[1]);
+      const maxRow = Math.max(...rows);
+      const middleColumn = (Math.min(...columns) + Math.max(...columns)) / 2;
+      const spacing = 1.04;
+      const body = new THREE.Group();
+
+      const blockGeometry = new THREE.BoxGeometry(0.98, 0.98, 0.34);
+      const blockMaterial = new THREE.MeshStandardMaterial({
+        color: character.color, roughness: 0.62, metalness: 0
+      });
+      const outlineMaterial = new THREE.LineBasicMaterial({
+        color: "#77525f", transparent: true, opacity: 0.22
+      });
+      const outlineGeometry = new THREE.EdgesGeometry(blockGeometry);
+
+      for (const [row, column] of cells) {
+        const x = (column - middleColumn) * spacing;
+        const y = (maxRow - row) * spacing + 0.5;
+        const block = new THREE.Mesh(blockGeometry, blockMaterial);
+        block.position.set(x, y, 0);
+        block.castShadow = true;
+        block.receiveShadow = true;
+        body.add(block);
+        clickable.push(block);
+
+        const edges = new THREE.LineSegments(outlineGeometry, outlineMaterial);
+        edges.position.copy(block.position);
+        edges.scale.setScalar(1.001);
+        body.add(edges);
+      }
+
+      // The central X square is the natural face position.
+      const centerRow = (Math.min(...rows) + maxRow) / 2;
+      const centerColumn = middleColumn;
+      const centerX = 0;
+      const centerY = (maxRow - centerRow) * spacing + 0.5;
+      const dark = new THREE.MeshBasicMaterial({ color: "#45313c" });
+      const eyeGeometry = new THREE.SphereGeometry(0.072, 14, 12);
+      for (const offset of [-0.17, 0.17]) {
+        const eye = new THREE.Mesh(eyeGeometry, dark);
+        eye.position.set(centerX + offset, centerY + 0.07, 0.19);
+        eye.scale.z = 0.45;
+        body.add(eye);
+      }
+      const smile = new THREE.CatmullRomCurve3([
+        new THREE.Vector3(centerX - 0.13, centerY - 0.10, 0.196),
+        new THREE.Vector3(centerX, centerY - 0.16, 0.20),
+        new THREE.Vector3(centerX + 0.13, centerY - 0.10, 0.196)
+      ]);
+      body.add(new THREE.Mesh(new THREE.TubeGeometry(smile, 14, 0.012, 6, false), dark));
+
+      const root = new THREE.Group();
+      root.add(body);
+      scene.add(root);
+      return root;
+    }
+
+    // Keep the real Gomasu definitions as the source of truth, not duplicated JS coordinates.
+    async function loadGomasu() {
+      try {
+        const [charactersResponse, posturesResponse] = await Promise.all([
+          fetch("../../data/characters.json"),
+          fetch("../../data/postures.json")
+        ]);
+        if (!charactersResponse.ok || !posturesResponse.ok) {
+          throw new Error("Could not load canonical character/posture JSON.");
+        }
+        const [characters, postures] = await Promise.all([
+          charactersResponse.json(), posturesResponse.json()
+        ]);
+        const character = characters.find(entry => entry.shape === "X");
+        if (!character || !postures.X00) throw new Error("X / X00 not found.");
+        villager = buildVillager(character, postures.X00);
+        nameEl.textContent = character.name_ja;
+        quoteEl.textContent = character.quote;
+        status.hidden = true;
+      } catch (error) {
+        console.error(error);
+        status.textContent = "データを読み込めませんでした。ローカルではHTTPサーバーから開いてください。";
+      }
+    }
+
+    function hitTest(clientX, clientY) {
+      const bounds = renderer.domElement.getBoundingClientRect();
+      pointer.x = ((clientX - bounds.left) / bounds.width) * 2 - 1;
+      pointer.y = -((clientY - bounds.top) / bounds.height) * 2 + 1;
+      raycaster.setFromCamera(pointer, camera);
+      return raycaster.intersectObjects(clickable, false).length > 0;
+    }
+
+    let pointerStart = null;
+    renderer.domElement.addEventListener("pointerdown", event => {
+      pointerStart = { x: event.clientX, y: event.clientY };
+    });
+    renderer.domElement.addEventListener("pointerup", event => {
+      if (!villager || !pointerStart) return;
+      const travel = Math.hypot(event.clientX - pointerStart.x, event.clientY - pointerStart.y);
+      pointerStart = null;
+      if (travel > 8 || !hitTest(event.clientX, event.clientY)) return;
+      reactedAt = clock.getElapsedTime();
+      hintEl.textContent = "✨ ちゃんと向きを変えているんだよ。";
+    });
+    renderer.domElement.addEventListener("pointercancel", () => { pointerStart = null; });
+    renderer.domElement.addEventListener("pointermove", event => {
+      if (!villager || event.buttons) return;
+      renderer.domElement.style.cursor = hitTest(event.clientX, event.clientY) ? "pointer" : "grab";
+    });
+
+    document.getElementById("reset-camera").addEventListener("click", () => {
+      camera.position.copy(initialCameraPosition);
+      controls.target.copy(initialTarget);
+      controls.update();
+    });
+
+    function resize() {
+      const width = mount.clientWidth || window.innerWidth;
+      const height = mount.clientHeight || window.innerHeight;
+      camera.aspect = width / height;
+      camera.updateProjectionMatrix();
+      renderer.setSize(width, height, false);
+    }
+    window.addEventListener("resize", resize);
+    resize();
+
+    function animate() {
+      requestAnimationFrame(animate);
+      const t = clock.getElapsedTime();
+      if (villager) {
+        const sinceReaction = t - reactedAt;
+        const reaction = sinceReaction >= 0 ? Math.exp(-sinceReaction * 2.4) * Math.sin(sinceReaction * 17) * 0.22 : 0;
+        villager.position.y = 0.08 + Math.sin(t * 1.8) * 0.07;
+        villager.rotation.z = Math.sin(t * 1.1) * 0.022 + reaction;
+      }
+      controls.update();
+      renderer.render(scene, camera);
+    }
+    animate();
+    loadGomasu();
+  </script>
+</body>
+</html>
