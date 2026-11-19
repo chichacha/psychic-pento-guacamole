@@ -7,6 +7,8 @@ project:
   resources:
     - data/
     - assets/
+    # Keep the unlinked 3D experiment in the rendered GitHub Pages site.
+    - experimental/gomasu-3d/
 
 website:
   title: "五マスの人たち。"
